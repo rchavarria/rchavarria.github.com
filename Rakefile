@@ -8,10 +8,10 @@ ssh_user       = "user@domain.com"
 ssh_port       = "22"
 document_root  = "~/website.com/"
 rsync_delete   = false
-deploy_default = "push"
+deploy_default = "rsync"
 
 # This will be configured for you when you run config_deploy
-deploy_branch  = "master"
+deploy_branch  = "gh-pages"
 
 ## -- Misc Configs -- ##
 
@@ -248,13 +248,31 @@ multitask :push do
   puts "\n## copying #{public_dir} to #{deploy_dir}"
   cp_r "#{public_dir}/.", deploy_dir
   cd "#{deploy_dir}" do
-    system "git add ."
+	
+	#
+	# hack para poder comitear en el curro
+	#
+	system "git remote add access_from_indra https://rchavarria@github.com/rchavarria/rchavarria.github.com.git"
+    #
+	#
+	#
+	
+	system "git add ."
     system "git add -u"
     puts "\n## Commiting: Site updated at #{Time.now.utc}"
     message = "Site updated at #{Time.now.utc}"
     system "git commit -m \"#{message}\""
     puts "\n## Pushing generated #{deploy_dir} website"
-    system "git push origin #{deploy_branch} --force"
+    
+	#
+	# Antiguo comando para hacer push a la rama master donde desplegar
+	#
+	#system "git push origin #{deploy_branch} --force"
+    system "git push access_from_indra #{deploy_branch} --force"
+	#
+	#
+	#
+	
     puts "\n## Github Pages deploy complete"
   end
 end
