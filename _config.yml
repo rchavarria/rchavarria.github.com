@@ -5,7 +5,7 @@
 url: http://rchavarria.github.com
 title: R. Chavarria's Blog
 subtitle: Blogging like a hacker about Software Development
-author: Ruben Chavarria
+author: Rub&eacute;n Chavarr&iacute;a
 simple_search: http://google.com/search
 description:
 
@@ -39,9 +39,9 @@ pygments: false # default python pygments have been replaced by pygments.rb
 paginate: 10          # Posts per page on the blog index
 pagination_dir: blog  # Directory base for pagination URLs eg. /blog/page/2/
 recent_posts: 5       # Posts in the sidebar Recent Posts section
-excerpt_link: "Read on &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
+excerpt_link: "Continuar leyendo &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
 
-titlecase: true       # Converts page and post titles to titlecase
+titlecase: false       # Converts page and post titles to titlecase
 
 # list each of the sidebar modules you want to include, in the order you want them to appear.
 # To add custom asides, create files in /source/_includes/custom/asides/ and add them to the list like 'custom/asides/custom_aside_name.html'
@@ -64,10 +64,10 @@ github_show_profile_link: true
 github_skip_forks: true
 
 # Twitter
-twitter_user:
+twitter_user: rchavarriat
 twitter_tweet_count: 4
-twitter_show_replies: false
-twitter_follow_button: true
+twitter_show_replies: true
+twitter_follow_button: false
 twitter_show_follower_count: false
 twitter_tweet_button: true
 
@@ -85,15 +85,15 @@ pinboard_user:
 pinboard_count: 3
 
 # Delicious
-delicious_user:
-delicious_count: 3
+delicious_user: rchavarriat
+delicious_count: 5
 
 # Disqus Comments
-disqus_short_name:
+disqus_short_name: rchavarria-github-com
 disqus_show_comment_count: false
 
 # Google Analytics
-google_analytics_tracking_id:
+google_analytics_tracking_id: UA-36829645-1
 
 # Facebook Like
 facebook_like: false

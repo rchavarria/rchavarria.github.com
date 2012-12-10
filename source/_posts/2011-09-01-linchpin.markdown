@@ -1,0 +1,56 @@
+
+---
+layout: page
+title: "Linchpin"
+date: 2011-09-01 09:01
+author: Rubén Chavarría
+categories: 
+- personal
+- book reviews
+comments: true
+published: true
+footer: false
+sidebar: true
+---
+
+<h4>Linchpin: are you indispensable?</h4>
+
+<h5>Seth Godin</h5>
+
+<h2>Por qué lo he leído</h2>
+
+{% img right http://ecx.images-amazon.com/images/I/51OjKKuo-fL._BO2,204,203,200_PIsitb-sticker-arrow-click,TopRight,35,-76_AA300_SH20_OU01_.jpg 300 300 Linchpin %}
+
+Suelo leer a Alberto Peña <a href="http://blog.plagelao.com/">"plagelao"</a>, y en su viejo blog leí su post sobre <a href="http://plagelao.blogspot.com/2011/02/resistencia.html">La Resistencia</a>. Así fue como descubrí el libro. Yo tambien siento cada día esa "resistencia", ese miedo a conseguir lo que quiero, por lo que decidí darle una oportunidad al libro en cuanto tuviera tiempo, y lo he tenido antes de lo que yo me esperaba.
+
+<!-- more -->
+
+<h2>Qué esperaba</h2>
+
+Me esperaba una serie de consejos para mejorar en mi trabajo, y quizá en mi vida personal, al estilo auto-ayuda.
+<blockquote>Eres indispensable?</blockquote>
+Solo el título ya te hace pensar que seguramente no estás haciendo todo lo posible para ser mejor mañana de lo que eres hoy.
+<h2>Qué encontré</h2>
+La verdad es que sí, al principio parece un libro de auto-ayuda. Repite una y otra vez los mismos conceptos, para que los asimiles una y otra vez.
+
+Según fuí avanzando en el libro, fui conectando las ideas y todo empezó a tomar otra forma. Muchos consejos y sabiduría comprimida, pero nada de sentimiento de inferioridad que se encuentra en los libros puros de auto-ayuda.
+<h2>Conclusiones</h2>
+El libro en general me ha gustado bastante, pero me ha dejado con la miel en los labios. Claro, al final no hay un método claro para hacerte indispensable, y por supuesto el camino no es fácil, pero el libro viene acompañado de inifinidad de referencias y casos reales. Es con la lectura de estos casos reales donde uno entiende a qué se refiere el autor con eso de ser indispensable: eres original? eres generoso? no tienes miedo a triunfar? eres adaptable?
+
+Aquí dejo unos cuantos consejos para ayudaros a ser mejores, sacados del libro:
+<ul>
+	<li>Cualquier persona es un genio, no las 24h del día, pero seguro que en algún momento has hecho alguna genialidad</li>
+	<li>Para ser indispensable, debes hacer "trabajo emocinal" (emotional labor): es aquello que haces por tus sensaciones y sentimientos, no algo físico.</li>
+	<li>No es beneficioso establecer una carrera haciendo algo escrito en un manual, lo beneficioso es hacer algo diferente.</li>
+	<li>Se un artista (creativo, apasionado, generoso). No lo hagas por dinero, hazlo porque quieres, y quieres ayudar a los demás.</li>
+</ul>
+<h2>Pasajes que quiero recordar de este libro</h2>
+Estas son algunas de las citas que puedes encontrar en el libro, todas son traducciones libres, lo siento si no se corresponden exactamente con lo que quiere decir el autor.
+<blockquote>Un genio es alguien que mira donde otros están paralizados y es capaz de poner el mundo en funcionamiento de nuevo.</blockquote>
+<blockquote>El empleado indispensable trae consigo humanidad, comunicación y arte a su empresa.</blockquote>
+<blockquote>Lo que el mercado busca ahora es alguien: excepcional, generoso, artista, que conecte gente (clientes) con ideas.</blockquote>
+<blockquote>Un trabajador brillante, es brillante durante pequeños momentos, el resto del tiempo hace trabajo que cualquiera puede hacer.</blockquote>
+<blockquote>Arte es cualquiercosa que sea creativa, apasionada y personal. Arte es un regalo personal que cambia al receptor. Arte es el producto del "trabajo emocinal".</blockquote>
+<blockquote>Pasión es el deseo, la insistencia y la voluntad de dar un regalo.</blockquote>
+<blockquote>La disciplina de entregar, producir ("to ship") es esencial para ser indispensable a largo plazo.</blockquote>
+<blockquote>Los verdaderos regalos, los generosos no demandan reciprocidad, y el mejor regalo es un regalo de tu arte.</blockquote>
