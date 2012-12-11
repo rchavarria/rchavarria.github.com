@@ -17,7 +17,7 @@ sidebar: true
 
 <h5>Paul Davies</h5>
 
-{% img right http://rchavarria.files.wordpress.com/2011/04/god-and-the-new-physics.jpg 242 376 God and the new physics %}
+{% img right /images/wordpress/god-and-the-new-physics.jpg 242 376 God and the new physics %}
 
 <h2>Por qué lo he leído</h2>
 

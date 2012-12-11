@@ -79,5 +79,5 @@ task.addPropertyChangeListener(
 
 En el siguiente enlace es posible ver una aplicación demostrando lo aprendido. Si se desea descargar el código fuente en forma de proyecto de NetBeans: <a href="http://kenai.com/projects/rchavarria/downloads/download/fibonacci%252FFibonacciCalculator%2520NB%2520project.zip"><strong>FibonacciWorker NetBeans project</strong></a>.
 
-<a href="http://kenai.com/projects/rchavarria/downloads/download/fibonacci%252Flaunch.jnlp"><img class="aligncenter size-full wp-image-87" title="Ejecutar FibonacciCalculator" src="http://rchavarria.files.wordpress.com/2010/01/launch.png" alt="" width="88" height="23" /></a>
+<a href="http://kenai.com/projects/rchavarria/downloads/download/fibonacci%252Flaunch.jnlp"><img class="center" title="Ejecutar FibonacciCalculator" src="/images/wordpress/launch.png" alt="" width="88" height="23" /></a>
 <div id="_mcePaste" style="overflow:hidden;position:absolute;left:-10000px;top:285px;width:1px;height:1px;">http://rchavarria.wordpress.com/2010/01/08/swingworker-en-java-5/</div>

@@ -24,7 +24,7 @@ sidebar: true
 
 <h2>Por qué lo he leído</h2>
 
-{% img right http://rchavarria.files.wordpress.com/2011/03/apprenticeship_patterns-228x300.jpg 228 300 Apprenticeship patterns %}
+{% img right /images/wordpress/apprenticeship_patterns-228x300.jpg 228 300 Apprenticeship patterns %}
 
 La razón es bien sencilla, ni recomendaciones, ni hablando con un amigo, ni nada. Expontáneamente, leyendo el <a href="http://jacegu.eu/libros/apprenticeship-patterns/">blog de Javier Acero</a> en mi cuenta de google reader pensé que podría ser interesante. Me pareció un título muy sugerente.
 
@@ -53,7 +53,7 @@ Podríamos decir que los capítulos están organizados en orden de aprendizaje.
 
 <h2>Conclusiones</h2>
 
-Durante mi lectura fui tomando notas, ideas, conceptos que me parecieron muy interesantes. Es una lista muy larga para escribirla aquí, así que mejor dejo un enlace a un sencillo archivo de texto: <a href="http://rchavarria.files.wordpress.com/2011/03/notas-sobre-apprentice-patterns.pdf">Notas sobre Apprentice Patterns</a>.
+Durante mi lectura fui tomando notas, ideas, conceptos que me parecieron muy interesantes. Es una lista muy larga para escribirla aquí, así que mejor dejo un enlace a un sencillo archivo de texto: <a href="/images/wordpress/notas-sobre-apprentice-patterns.pdf">Notas sobre Apprentice Patterns</a>.
 
 Como resultado de su lectura, fuí apuntando distintas acciones que podría ir llevando a cabo para ser mejor profesional. Una de ellas es <a href="/readings">la lista de lectura</a>, y entre otras, en el libro podrás encontrar:
 

@@ -27,11 +27,11 @@ En esta entrada veremos el uso básico de `GridBagLayout`, si se desea profundiz
 
 Lo primero de todo veamos qué se puede conseguir con este gestor de layout:
 
-{% img center http://rchavarria.files.wordpress.com/2009/12/gridbaglayout-frame1.png 250 142 Ventana usando `GridBagLayout` %}
+{% img center /images/wordpress/gridbaglayout-frame1.png 250 142 Ventana usando `GridBagLayout` %}
 
 `GridBagLayout` coloca los componentes en una serie de filas y columnas, permite a los componentes ocupar varias filas y/o columnas y las filas y las columnas no tienen porque tener la misma altura o anchura. Finalmente, `GridBagLayout` calcula estas alturas y anchuras dependiendo de los atributos preferredSize de los componentes. En la siguiente imagen podemos el diseño de cada una de las celdas en las que se divide `GridBagLayout`:
 
-{% img center http://rchavarria.files.wordpress.com/2009/12/gridbaglayout-design.png 172 124 Diseñando un panel con GridBagLayout %}
+{% img center /images/wordpress/gridbaglayout-design.png 172 124 Diseñando un panel con GridBagLayout %}
 
 Los componentes indican a `GridBagLayout` sus restricciones mediante un objeto del tipo `GridBagConstraints`. En esta primera entrada estudiaremos las restricciones básicas y dejaremos para la siguiente parámetros más avanzados que nos permitirán diseñar la posición y comportamiento de los componentes con máxima flexibilidad.
 

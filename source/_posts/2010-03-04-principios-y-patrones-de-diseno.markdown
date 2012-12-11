@@ -78,7 +78,7 @@ sidebar: true
 
 <span style="color:#000000;">Representando en una gráfica las dos métricas anteriores (I en el eje de abscisas -x-, A en el de ordenadas -y-), obtenemos un gráfico como el siguiente (lo podéis encontrar en la página 26 del <a href="http://www.objectmentor.com/resources/articles/Principles_and_Patterns.pdf">documento</a>):</span>
 
-{% img center http://rchavarria.files.wordpress.com/2010/03/i-vs-a.png 296 300 I vs A %}
+{% img center /images/wordpress/i-vs-a.png 296 300 I vs A %}
 
 <span style="color:#000000;">El lugar óptimo donde nos interesa situar a nuestros paquetes es la línea central, donde las dos métricas anteriores están equilibradas. La métrica de distancia nos indica lo lejos o cerca que nos encontramos de ella:</span>
 

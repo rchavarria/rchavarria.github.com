@@ -19,7 +19,7 @@ sidebar: true
 
 <h2>Por qué lo he leído</h2>
 
-{% img right http://rchavarria.files.wordpress.com/2011/03/dormir-sin-lagrimas.jpg 174 300 Dormir sin lagrimas %}
+{% img right /images/wordpress/dormir-sin-lagrimas.jpg 174 300 Dormir sin lagrimas %}
 
 Dentro de muy poquito voy a ser padre primerizo de un niño, y como buen padre (y muy influenciado por la mejor madre) decidí leer algún libro relacionado con los bebés, para tener alguna idea de qué nos vamos a encontrar.
 
