@@ -158,8 +158,13 @@ En Stack Overflow, un comentario a la respuesta donde encontré la solución sug
 puede causar problemas debido al classloader.
 
 Pero he investigado un poco el tema, y parece que el comentario es erróneo, al menos para el
-uso de los enumerados que estoy exponiendo aquí. Aquí os dejo unos cuantos enlaces a 
-recursos que confirman que la última solución es correcta:
+uso de los enumerados que estoy exponiendo aquí. Según el 
+[ejemplo 8.9.2-1 de la especificación del java](http://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#d5e12253),
+primero se inicializan los valores del enumerado, luego la variable estática y finalmente
+se ejecuta el bloque de código estático, estando ya todos los valores del enumerado 
+inicializados.
+
+Aquí os dejo unos cuantos enlaces a que confirman que la última solución es correcta:
 
 * [Bootstrapping static fields within enums](http://blog.deepincode.com/2006/12/bootstrapping-static-fields-within-enums) y en enlace encontrado en ese mismo post: [Type Safe Enumerations in Java 5.0](http://blog.deepincode.com/2006/11/type-safe-enumerations-in-java-50) (buscar al final de este último post).
 * Otro hilo de Stack Overflow, [When are these class and subclass static blocks executed (for an Enum)?](http://stackoverflow.com/questions/6827987/when-are-these-class-and-subclass-static-blocks-executed-for-an-enum) que me lleva al recurso definitivo: 
