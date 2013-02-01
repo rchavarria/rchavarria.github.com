@@ -1,0 +1,72 @@
+
+---
+layout: page
+title: "Scrum y XP desde las trincheras"
+date: 2012-07-06 06:06
+author: Rubén Chavarría
+categories: 
+- book reviews
+- agile
+comments: true
+published: true
+footer: false
+sidebar: true
+---
+
+<h4>Scrum y XP desde las trincheras</h4>
+
+<h5>Henrik Kniberg</h5>
+
+{% img right http://www.infoq.com/resource/minibooks/scrum-xp-from-the-trenches/en/cover/coverlandingpage.JPG 174 265 Scrum y XP desde las trincheras %}
+
+<h2>Por qué lo he leído</h2>
+
+Estaba un poco cansado de leer libros técnicos, y me apetecía leer alguno más práctico, como si estuviera leyendo un caso de éxito o algo así. También me apetecía introducirme más de lleno en las metodologías ágiles, y un amigo me comentó que desde que leyó <a href="http://www.infoq.com/minibooks/scrum-xp-from-the-trenches">Scrum y XP desde las trincheras</a>, su visión del desarrollo del software cambió totalmente.
+
+<!-- more -->
+
+<h2>Qué esperaba</h2>
+
+Esperaba una descripción de los elementos que componen <a href="es.wikipedia.org/wiki/Scrum" title="Scrum">Scrum</a>, o de las prácticas que define <a href="es.wikipedia.org/wiki/Programación_extrema">XP</a>. Y también una visión práctica de las mismas. 
+Tenía muy buenas referencias del libro, y tenía ganas de conocer de primera mano todas las bonanzas que había escuchado sobre las metodologías ágiles.
+
+<h2>Qué encontré</h2>
+
+Encontré una serie de anécdotas, y una descripción de un caso real de aplicación de Scrum y XP en una empresa. Un testimonio sin igual. 
+El autor expone su propia experiencia trabajando con Scrum y XP, metodologías o mejores prácticas del mundo ágil que nos proporciona una idea de lo que nos podríamos encontrar si lo quisiéramos aplicar en nuestra empresa.
+
+<h2>Conclusiones</h2>
+
+Un fantástico testimonio que todo el que quiera conocer un caso real y exitoso de aplicación de metodologías ágiles debería leer.
+Sin duda, éste es un libro que no te deberías perder.
+Además, está disponible para su descarga gratuita en varios idiomas, entre ellos el español (enlace de descarga de <a href="http://www.infoq.com/minibooks/scrum-xp-from-the-trenches">Scrum y XP desde las trincheras</a>). La verdad es que se agradece que existan versiones en español de libros tan interesantes como éste.
+
+<h2>Pasajes que quiero recordar de este libro</h2>
+
+<blockquote>el dueño del producto debe concentrarse en los objetivos del negocio, no en escribir historias con orientacion tecnica</blockquote>
+
+<blockquote>otras personas aparte del dueño del producto pueden añadir historias a la pila del producto, pero no pueden asignarles orden de importancia (cometido exclusivo del dueño de producto) ni pueden establecer estimaciones (cometido exclusivo del equipo)</blockquote>
+
+<blockquote>la planificación del sprint es una reunión crítica, la más importante de Scrum</blockquote>
+
+<blockquote>cada historia de usuario depende de tres variables: estimación (proporcionada por el equipo), alcance e importancia (proporcionadas por el dueño del producto)</blockquote>
+
+<blockquote>es responsabilidad del equipo mantener la calidad del sistema bajo toda circunstancia, y no es negociable nunca</blockquote>
+
+<blockquote>la estimación es una labor de equipo, todo el equipo debe involucrarse en estimar cada historia</blockquote>
+
+<blockquote>¡ sienta al equipo junto !</blockquote>
+
+<blockquote>en la retrospectiva, cada persona tiene una oportunidad de decir, sin ser interrumpida, qué ha ido bien, qué podría haber ido mejor y qué piensan que debería hacerse diferente en el próximo sprint</blockquote>
+
+<blockquote> fase de pruebas es dura, probablemente la más dura del ciclo del desarrollo de sw. la sensación es definitivamente 'no agil'. no podemos liberarnos de ella, pero si minimizar la cantidad de tiempo necesario</blockquote>
+
+<blockquote>casi siempre es más barato producir menos, pero hacerlo estable, que producir muchísimo y luego tener que hacer parches de emergencia</blockquote>
+
+<h2>Otras lecturas y enlaces relacionadas</h2>
+
+<ol>
+<li><a href="http://blog.crisp.se/author/henrikkniberg">Blog de Henrik Kniberg</a></li>
+<li><a href="http://agilemanifesto.org/iso/es">Manifiesto ágil</a> (english: <a href="http://agilemanifesto.org/">Agile Manifesto</a>)</li>
+<li><a href="http://www.kleer.la/e-books">Introducción a la Agilidad y Scrum</a></li>
+</ol>

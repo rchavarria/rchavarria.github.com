@@ -1,0 +1,174 @@
+
+---
+layout: page
+title: "Uso de JPA, hibernate y derby"
+date: 2011-05-19 09:44
+author: Rubén Chavarría
+categories: 
+- derby
+- apache
+- base de datos
+- jpa
+- hibernate
+comments: true
+published: true
+footer: false
+sidebar: true
+---
+
+<div style="margin:2%; padding:2%; background-color:#E0E0E0; ">
+  <p>Este post pertenece a mi antiguo blog en <a href="http://rchavarria.wordpress.com">wordpress</a>, pero decidí pasarme a github:pages por las siguientes <a href="/blog/2012/12/03/por-que-cambie-mi-blog-en-wordpress-com">razones</a></p>
+</div>
+
+Tengo una pequeña aplicación en la que uso Apache Derby como base de datos para guardar los datos.
+
+Hasta ahora, estaba utilizando el patrón DAO para guardar los datos que quería hacer persistentes en la aplicación. Cada clase DAO se encargaba de crear, borrar, editar y actualizar un tipo de datos. Estas operaciones las hacía mediante SQL puro y duro. No es que el modelo de datos que utilizo sea muy complicado, pero es tedioso editar consultas SQL para cada tipo de dato que quieres persistir.
+
+Así pues, decidí que debería utilizar algo un poco más elaborado. Java dispone de la Java Persistence API, así que, ¿porqué no usarla? Y este post describe los primeros pasos a dar para utilizar JPA en una aplicación.
+
+<!-- more -->
+
+JPA es una definición, por sí sola no hace nada, necesita de una implementación para realizar realmente el trabajo. Existen varias implementaciones (ver <a title="Comparativa implementaciones JPA" href="http://terrazadearavaca.blogspot.com/2008/12/jpa-implementations-comparison.html">comparativa</a>). De todas ellas he elegido Hibernate. Puede que no sea la mejor, puede que no sea la más rápida o la más eficiente, pero creo que es la más conocida y la referencia para el resto de implementaciones.
+
+<h2>El ejemplo, paso a paso</h2>
+
+Nuestro ejemplo va a consistir en algo muy (pero que muy) sencillo, pero que nos va a permitir aprender cómo configurar hibernate con nuestra base de datos derby. Nuestros datos a guardar van a ser objetos de la clase Person, que va a tener un nombre. No va a haber relaciones con ningún otro objeto, así que sólo exisitirá una tabla en la base de datos. Más sencillo, imposible.
+
+<h3>Datos que serán persistentes</h3>
+
+Como ya hemos visto, sólo vamos a persistir objetos de la clase Person, la cual tendrá un campo id, que funcionará como la clave principal de la tabla, y un campo name, el nombre de la persona. A continuación vemos el código de esta clase:
+{% codeblock Definir persistencia de datos %}
+package es.rct.jpa.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
+public class Person {
+    @Id
+    @GeneratedValue
+    private long id;
+    private String name;
+
+    public void setName(final String name) {this.name = name;}
+    public String getName() {return name;}
+    public void setId(final long id) {this.id = id;}
+    public long getId() {return id;}
+}
+{% endcodeblock %}
+
+De esta clase vamos a destacar 3 anotaciones, pertenecientes a JPA. Las podemos encontrar en el paquete javax.persistence:
+
+<ul>
+	<li>Entity: indica que esta clase es una entidad, lo cual significa que esta clase tiene correspondencia con una tabla en la base de datos.</li>
+	<li>Id: indica qué campo de la clase va a ser utilizado como clave primaria de la tabla representada por la entidad.</li>
+	<li>GeneratedValue: indica que la clave va a ser generada automáticamente por el motor de persistencia (hibernate)</li>
+</ul>
+
+<h3>Dependencias de Maven</h3>
+
+Para poder usar Derby como base de datos y Hibernate como implementación de JPA, debemos incluir las siguientes dependencias en nuestro fichero pom.xml de configuración de maven:
+
+<script src="http://gist.github.com/4194334.js"></script>
+
+Las versiones de las dependencias pueden variar. Aquí aparecen las que yo personalmente he utilizado.
+
+<h3>Configurar JPA / Hibernate / Derby</h3>
+
+Para configurar JPA, debemos escribir la configuracion en un fichero llamado persistence.xml, 
+en un directory META-INF, accesible desde el directorio de trabajo de nuestra aplicación. 
+Yo lo he creado en src/main/resources/META-INF/persistence.xml, ya que maven empaqueta el 
+contenido del directorio src/main/resources en el jar de la aplicación, con lo que tenemos 
+el resultado deseado.
+
+El contenido del fichero de configuración JPA es el siguiente:
+
+<script src="http://gist.github.com/4194389.js"></script>
+
+De este fichero xml podemos destacar las siguientes etiquetas:
+
+<ul>
+	<li>persistence-unit, atributo name: define una unidad de persistencia, es obligatorio darle un nombre, para poder crear un EntityManager en nuestra aplicación. El EntityManager es el encargado de manejar la persistencia de nuestros datos.</li>
+	<li>provider: aquí indicamos que queremos usar Hibernate como implementación de JPA</li>
+	<li>class: debe existir una etiqueta class por cada clase que queramos persistir, es decir, una por cada entidad que formará nuestra unidad de persistencia.</li>
+	<li>Dentro de las etiquetas properties, definimos propiedades propietarias de la implementación JPA. De entre ellas cabe destacar:</li>
+</ul>
+<ol>
+	<li>hibernate.connection.url: define la URL de conexión a la base de datos. Aquí estamos configurando Derby como base de datos. Estamos creando una base de datos llamada "testing-jpa" en memoria (no en disco).</li>
+	<li>hibernate.dialect: configuramos Hibernate para que "hable" con Derby</li>
+</ol>
+
+<h3>Crear un test para probar el funcionamiento</h3>
+
+Ahora sólo queda crear nuestro código para almacenar algunos objetos del tipo Person.
+
+Primero, debemos crear un objeto EntityManager, que manejará todo lo relacionado con la persistencia: transacciones, guardar datos, actualizarlos, borrarlos, etc.
+
+{% codeblock %}
+EntityManagerFactory emf = Persistence.createEntityManagerFactory(&quot;test-jpa&quot;);
+EntityManager em = emf.createEntityManager();
+{% endcodeblock %}
+
+Una vez terminemos de utilizar nuestro EntityManager, debemos cerrarlo:
+
+{% codeblock %}
+em.close();
+emf.close();
+{% endcodeblock %}
+
+Ahora ya disponemos de un objeto "em" para poder persistir objetos de tipo Person:
+
+{% codeblock %}
+private void insertSomeData() {
+    Person p = new Person();
+    p.setName(&quot;person 01&quot;);
+    Person p1 = new Person();
+    p1.setName(&quot;person 02&quot;);
+
+    em.getTransaction().begin();
+    em.persist(p);
+    em.persist(p1);
+    em.getTransaction().commit();
+}
+{% endcodeblock %}
+
+Para poder guardar los datos en base de datos, debemos arrancar una transacción, llamar al método "persist" y terminar la transacción. Si queremos indicar que ha habido un error durante la transacción, y no queremos llevarla a cabo, llamaríamos al método "rollback" en lugar del método "commit".
+
+Para comprobar que realmente hemos almacenado los objetos en la base de datos, sólo tenemos que buscarlos por identificador. Ya que sólo hemos almacenado 2 objetos, y son los 2 primeros, los ids serán 1 y 2 respectivamente:
+
+{% codeblock Insertar datos %}
+private void listInsertedData() {
+    em.getTransaction().begin();
+    for (long i = 1; i &lt;= 2; i++) {
+        Person pFinded = em.find(Person.class, new Long(i));
+        System.out.println(&quot;Id: &quot; + i + &quot;, name: &quot; + pFinded.getName());
+    }
+    em.getTransaction().commit();
+}
+{% endcodeblock %}
+
+<h2>Código fuente del ejemplo</h2>
+
+Puedes descargar/ver el código fuente en este repositorio de github: <a title="Repositorio github con la solucion" href="https://github.com/rchavarria/JPAHibernateDerby">https://github.com/rchavarria/JPAHibernateDerby</a>
+
+<h2>Referencias</h2>
+
+Si quieres profundizar en el tema, aquí dejo unos enlaces que me han sido de gran ayuda.
+<ol>
+<li>
+<a href="http://www.davidmarco.es/blog/entrada.php?id=144">Excelente tutorial de JPA</a>
+</li>
+<li>
+<a href="http://wiki.apache.org/db-derby/InMemoryBackEndPrimer">Configuración de Derby para trabajar en memoria</a>
+</li>
+<li>
+<a href="http://eskatos.wordpress.com/2009/10/26/unit-test-jpa-entities-with-in-memory-derby">Configuración de JPA para usar Hibernate</a>
+</li>
+<li>
+<a href="http://docs.jboss.org/hibernate/entitymanager/3.5/reference/en/html_single/#architecture-javase">Hibernate en entornos JavaSE</a>
+</li>
+<li>
+<a href="http://terrazadearavaca.blogspot.com/2008/12/jpa-implementations-comparison.html">Comparativa de implementaciones de JPA</a>
+</li>
+</ol>

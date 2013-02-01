@@ -8,8 +8,12 @@ ssh_user       = "user@domain.com"
 ssh_port       = "22"
 document_root  = "~/website.com/"
 rsync_delete   = false
+<<<<<<< HEAD
 rsync_args     = ""  # Any extra arguments to pass to rsync
 deploy_default = "rsync"
+=======
+deploy_default = "push"
+>>>>>>> 44cc6b1bf5cf92e6ee86bca59be23d7a927cd9cb
 
 # This will be configured for you when you run config_deploy
 deploy_branch  = "gh-pages"
@@ -252,13 +256,21 @@ multitask :push do
   puts "\n## copying #{public_dir} to #{deploy_dir}"
   cp_r "#{public_dir}/.", deploy_dir
   cd "#{deploy_dir}" do
-    system "git add ."
+	system "git add ."
     system "git add -u"
     puts "\n## Commiting: Site updated at #{Time.now.utc}"
     message = "Site updated at #{Time.now.utc}"
     system "git commit -m \"#{message}\""
     puts "\n## Pushing generated #{deploy_dir} website"
-    system "git push origin #{deploy_branch} --force"
+    
+    puts "\n## para poder desplegar en Indra debes ejecutar los siguientes comandos"
+    puts "##"
+    puts "## debe existir el remote octopress apuntando a: https://github.com/rchavarria/rchavarria.github.com.git"
+    puts "##"
+    puts "cd _deploy"
+    puts "git push octopress master"
+    puts "cd .."
+
     puts "\n## Github Pages deploy complete"
   end
 end

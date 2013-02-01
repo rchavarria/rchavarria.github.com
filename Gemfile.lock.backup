@@ -2,9 +2,13 @@ GEM
   remote: http://rubygems.org/
   specs:
     RedCloth (4.2.9)
+<<<<<<< HEAD
+=======
+    RedCloth (4.2.9-x86-mingw32)
     albino (1.3.3)
       posix-spawn (>= 0.3.6)
     blankslate (2.1.2.4)
+>>>>>>> 44cc6b1bf5cf92e6ee86bca59be23d7a927cd9cb
     chunky_png (1.2.5)
     classifier (1.3.3)
       fast-stemmer (>= 1.0.0)
