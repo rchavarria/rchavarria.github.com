@@ -12,7 +12,7 @@ rsync_args     = ""  # Any extra arguments to pass to rsync
 deploy_default = "push"
 
 # This will be configured for you when you run config_deploy
-deploy_branch  = "gh-pages"
+deploy_branch  = "master"
 
 ## -- Misc Configs -- ##
 
@@ -259,13 +259,17 @@ multitask :push do
     system "git commit -m \"#{message}\""
     puts "\n## Pushing generated #{deploy_dir} website"
     
-    puts "\n## para poder desplegar en Indra debes ejecutar los siguientes comandos"
-    puts "##"
-    puts "## debe existir el remote octopress apuntando a: https://github.com/rchavarria/rchavarria.github.com.git"
-    puts "##"
-    puts "cd _deploy"
-    puts "git push octopress master"
-    puts "cd .."
+    # linux at home deployment
+    system "git push origin #{deploy_branch} --force"
+
+    # deploy at workplace
+    #puts "\n## para poder desplegar en Indra debes ejecutar los siguientes comandos"
+    #puts "##"
+    #puts "## debe existir el remote octopress apuntando a: https://github.com/rchavarria/rchavarria.github.com.git"
+    #puts "##"
+    #puts "cd _deploy"
+    #puts "git push octopress master"
+    #puts "cd .."
 
     puts "\n## Github Pages deploy complete"
   end

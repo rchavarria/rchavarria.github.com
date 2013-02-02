@@ -25,7 +25,7 @@ personalizar los valores a los cuales son transformados los enumerados.
 
 Partiremos del siguiente código describiendo tres valores en un enumerado:
 
-``` 
+``` java
 public enum States {
 	EVERYTHING_IS_OK,
 	SOMETHING_WENT_WRONG,
@@ -51,7 +51,7 @@ Formatear es sencillo, y directo. Podemos declarar un campo `value` donde almace
 valor al cual queremos transformar el enumerado, y podemos sobreescribir el método
 `toString()` de la siguiente manera:
 
-```
+``` java
 public enum States {
 	EVERYTHING_IS_OK("green"),
 	SOMETHING_WENT_WRONG("yellow"),
@@ -80,7 +80,7 @@ más apropiadas:
 
 La primera solución que le viene a uno a la cabeza es usar sentencias `if`. 
 
-```
+``` java
 [...]
 public static States fromString(String fromValue) {
 	if("green".equals(fromValue)) {

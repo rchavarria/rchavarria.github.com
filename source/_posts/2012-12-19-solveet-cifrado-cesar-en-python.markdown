@@ -54,7 +54,7 @@ a mi método usando `map`.
 Lo descubrí gracias a la solución de [climens](http://www.solveet.com/exercises/Cifrado-Cesar/145/solution-1052),
 y aprovechando lo aprendido, mi solución ahora quedaría así:
 
-```
+``` python
 from string import ascii_lowercase as alphabet
 
 def shift(character, offset):
