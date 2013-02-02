@@ -8,12 +8,8 @@ ssh_user       = "user@domain.com"
 ssh_port       = "22"
 document_root  = "~/website.com/"
 rsync_delete   = false
-<<<<<<< HEAD
 rsync_args     = ""  # Any extra arguments to pass to rsync
-deploy_default = "rsync"
-=======
 deploy_default = "push"
->>>>>>> 44cc6b1bf5cf92e6ee86bca59be23d7a927cd9cb
 
 # This will be configured for you when you run config_deploy
 deploy_branch  = "gh-pages"
