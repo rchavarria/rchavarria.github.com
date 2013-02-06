@@ -13,10 +13,11 @@ que es mi pasión y es a lo que me dedico.
 Me puedes encontrar en los siguientes sitios:
 
 - En twitter, como [rchavarriat](http://twitter.com/rchavarriat)
-- En linkedin, como [Rubén Chavarría](http://es.linkedin.com/in/rubenchavarria)
-- En worpress, mi antiguo blog, como [rchavarria](http://rchavarria.wordpress.com)
+- En LinkedIn, como [Rubén Chavarría](http://es.linkedin.com/in/rubenchavarria)
+- En wordpress, mi antiguo blog, como [rchavarria](http://rchavarria.wordpress.com)
 
 Puedes encontrar cosas que hago en los siguientes sitios:
 
 - En github, como [rchavarria](http://github.com/rchavarria)
 - En solveet, como [rchavarriat](http://www.solveet.com/rchavarriat)
+- En codecademy, en mi página de [projectos](http://rchavarria.github.com/pet-projects).
