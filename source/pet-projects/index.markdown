@@ -20,7 +20,7 @@ Let's start, from more recent to older projects:
 ## [A simple drawing tool](http://j.mp/V9SP9b)
 
 <!-- 445x416 -->
-[{% img left images/codecademy/simple-drawing-tool.png 250 233 'Simple drawing tool' %}](http://j.mp/V9SP9b)
+[{% img left /images/codecademy/simple-drawing-tool.png 250 233 'Simple drawing tool' %}](http://j.mp/V9SP9b)
 
 *Created in February, 2013*
 
@@ -33,7 +33,7 @@ with a bit of javascript.
 ## [Palindrome phrase validation](http://j.mp/WwwSM1)
 
 <!-- 599x206 -->
-[{% img right images/codecademy/palindrome-phrase-validation.png 300 103 'Palindrome phrase validation' %}](http://j.mp/WwwSM1)
+[{% img right /images/codecademy/palindrome-phrase-validation.png 300 103 'Palindrome phrase validation' %}](http://j.mp/WwwSM1)
 
 *Created in January, 2013*
 
@@ -44,7 +44,7 @@ email validation form, that can be done by html5.
 ## [Icon editor](http://j.mp/NS39tI)
 
 <!-- 908x562 -->
-[{% img left images/codecademy/icon-editor.png 301 187 'Icon editor' %}](http://j.mp/NS39tI)
+[{% img left /images/codecademy/icon-editor.png 301 187 'Icon editor' %}](http://j.mp/NS39tI)
 
 *Created in 2012*
 
