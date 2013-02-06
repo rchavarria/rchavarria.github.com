@@ -260,16 +260,16 @@ multitask :push do
     puts "\n## Pushing generated #{deploy_dir} website"
     
     # linux at home deployment
-    system "git push origin #{deploy_branch} --force"
+    #system "git push origin #{deploy_branch} --force"
 
     # deploy at workplace
-    #puts "\n## para poder desplegar en Indra debes ejecutar los siguientes comandos"
-    #puts "##"
-    #puts "## debe existir el remote octopress apuntando a: https://github.com/rchavarria/rchavarria.github.com.git"
-    #puts "##"
-    #puts "cd _deploy"
-    #puts "git push octopress master"
-    #puts "cd .."
+    puts "\n## para poder desplegar en Indra debes ejecutar los siguientes comandos"
+    puts "##"
+    puts "## debe existir el remote octopress apuntando a: https://github.com/rchavarria/rchavarria.github.com.git"
+    puts "##"
+    puts "cd _deploy"
+    puts "git push octopress master"
+    puts "cd .."
 
     puts "\n## Github Pages deploy complete"
   end
