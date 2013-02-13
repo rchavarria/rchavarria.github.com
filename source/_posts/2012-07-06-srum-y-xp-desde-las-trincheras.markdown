@@ -1,4 +1,3 @@
-
 ---
 layout: page
 title: "Scrum y XP desde las trincheras"

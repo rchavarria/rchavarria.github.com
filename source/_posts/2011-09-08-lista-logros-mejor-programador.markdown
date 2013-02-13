@@ -1,4 +1,3 @@
-
 ---
 layout: page
 title: "Lista de logros para ser mejor programador"

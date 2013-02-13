@@ -1,4 +1,3 @@
-
 ---
 layout: page
 title: "Por qu&eacute; cambi&eacute; mi blog en wordpress.com"

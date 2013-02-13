@@ -1,4 +1,3 @@
-
 ---
 layout: page
 title: "Agile principles, patterns and practices in C#"

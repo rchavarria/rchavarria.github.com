@@ -1,4 +1,3 @@
-
 ---
 layout: page
 title: "[microtip] git: ramas locales y remotas"

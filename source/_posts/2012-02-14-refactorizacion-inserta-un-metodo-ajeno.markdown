@@ -1,4 +1,3 @@
-
 ---
 layout: page
 title: "Refactorizacion: inserta un m&eacute;todo ajeno"

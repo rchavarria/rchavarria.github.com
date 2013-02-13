@@ -1,4 +1,3 @@
-
 ---
 layout: page
 title: "God and the new physics"

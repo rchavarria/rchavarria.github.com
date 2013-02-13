@@ -1,5 +1,4 @@
-﻿
----
+﻿---
 layout: page
 title: "Post inicial del blog"
 date: 2012-11-28 10:10

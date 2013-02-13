@@ -1,4 +1,3 @@
-
 ---
 layout: page
 title: "Nikola Tesla: el genio al que le robaron la luz"

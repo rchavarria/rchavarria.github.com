@@ -1,4 +1,3 @@
-
 ---
 layout: page
 title: "Uso de GridBagLayout (y II)"

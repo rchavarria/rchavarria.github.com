@@ -1,4 +1,3 @@
-
 ---
 layout: page
 title: "Buenos programadores merecen mejores salarios"

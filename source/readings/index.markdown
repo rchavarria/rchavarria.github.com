@@ -20,7 +20,7 @@ Así que, aquí está mi Lista de Lectura:
 
 ## Estoy leyendo
 
-- [Agile estimating and planning](http://www.amazon.com/Agile-Estimating-Planning-Mike-Cohn/dp/0131479415), de Mike Cohn
+- [La meta: un proceso de mejora contínua](http://www.casadellibro.com/libro-la-meta-un-proceso-de-mejora-continua-3-ed/9788479787189/1054992), de Eliyahu M. Goldratt
 
 ## Tengo pensado leer
 
@@ -29,7 +29,6 @@ Así que, aquí está mi Lista de Lectura:
 - [Snow crash](http://www.amazon.com/Snow-Crash-Bantam-Spectra-Book/dp/0553380958), de Neal Stephenson
 - [Test driven development: by example](http://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530), de Kent Beck
 - [Software craftsmanship: the new imperative](http://www.amazon.com/Software-Craftsmanship-Imperative-Pete-McBreen/dp/0201733862), de Pete McBreen
-- [La meta: un proceso de mejora contínua](http://www.casadellibro.com/libro-la-meta-un-proceso-de-mejora-continua-3-ed/9788479787189/1054992), de Eliyahu M. Goldratt
 - [Extreme programming explained](http://www.amazon.com/Extreme-Programming-Explained-Embrace-Change/dp/0201616416), de Kent Beck
 - [The Psycology of Computer Programming](http://www.amazon.com/exec/obidos/ASIN/0932633420/codihorr-20), de Gerald M. Weingerg
 - [Bitter Java](http://books.google.co.in/books?id=U5dXq7FzvcIC), de Bruce A. Tate
@@ -40,6 +39,7 @@ Así que, aquí está mi Lista de Lectura:
 
 ## He leído
 
+- [Agile estimating and planning](blog/2013/02/13/agile-estimating-and-planning/), de Mike Cohn ~ *Febrero 2013*
 - [Agile principles, patterns and practices in C#](http://rchavarria.wordpress.com/2012/11/22/agile-principles-patterns-and-practices-in-c), de Robert C. Martin ~ *Noviembre 2012*
 - [En el principio... fue la linea de comandos](http://rchavarria.wordpress.com/2012/10/25/en-el-principio-fue-la-linea-de-comandos), de Neal Stephenson ~ *Octubre 2012*
 - [Lean software development: an agile toolkit](http://rchavarria.wordpress.com/2012/10/10/lean-software-development), de Mary y Tom Poppendieck ~ *Septiembre 2012*

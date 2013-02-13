@@ -1,4 +1,3 @@
-
 ---
 layout: page
 title: "Refactoring: improving the design of existing code"

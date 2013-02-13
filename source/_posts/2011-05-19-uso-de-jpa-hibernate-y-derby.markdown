@@ -1,4 +1,3 @@
-
 ---
 layout: page
 title: "Uso de JPA, hibernate y derby"

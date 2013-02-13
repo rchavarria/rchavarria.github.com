@@ -1,4 +1,3 @@
-
 ---
 layout: page
 title: "Mi retrospectiva de la XPWeek 2011"

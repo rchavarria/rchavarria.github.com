@@ -1,4 +1,3 @@
-
 ---
 layout: page
 title: "Principios y patrones de dise&ntilde;o"

@@ -1,4 +1,3 @@
-
 ---
 layout: page
 title: "Aprende EJB en 21 d&iacute;as"

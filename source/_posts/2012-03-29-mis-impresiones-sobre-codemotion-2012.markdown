@@ -1,4 +1,3 @@
-
 ---
 layout: page
 title: "Mis impresiones sobre Codemotion 2012"

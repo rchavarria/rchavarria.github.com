@@ -1,4 +1,3 @@
-
 ---
 layout: page
 title: "SwingWorker en Java 5"

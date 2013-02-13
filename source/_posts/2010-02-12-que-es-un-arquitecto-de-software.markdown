@@ -1,4 +1,3 @@
-
 ---
 layout: page
 title: "Qu&eacute; es un arquitecto de software?"

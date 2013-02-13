@@ -1,4 +1,3 @@
-
 ---
 layout: page
 title: "Uso avanzado de SwingWorker"

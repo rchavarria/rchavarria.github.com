@@ -1,4 +1,3 @@
-
 ---
 layout: page
 title: "En el principio... fue la l&iacute;nea de comandos"
