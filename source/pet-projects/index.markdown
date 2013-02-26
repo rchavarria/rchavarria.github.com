@@ -8,14 +8,25 @@ footer: true
 ---
 
 This is a page where I would like to maintain a list of Codecademy projects I do, just
-to be able to remember and show my javascript, html and css skills. 
+to be able to remember and show my javascript, html and css skills. Also, I will include
+other projects, such as screencasts or little web applications (specially grails apps).
 
 At the beginning, projects won't be very complex, but I hope they'll be getting more
 and more complex over time. Feel free to post any comment or send a link to your own
 Codecademy projects. They have an [APIs track](www.codecademy.com/tracks/apis) where
 you can practice codig for well know API's (youtube, soundtrack, twilio).
 
-Let's start, from more recent to older projects:
+## [Screencast: Nicomachus cube numbers](http://vimeo.com/rchavarria/screencast-nicomachus-cube-numbers)
+
+*Created in February, 2013*
+
+Screencast showing how I solve the "Nicomachus cube numbers" problem described in 
+solveet.com (Spanish). I recorded a screencast because I found it really interesting how 
+loops can be simplified in ruby with the method 'inject', and I wanted to actually see 
+how a loop becomes a one-liner, and it is very beautiful, isn't it?
+
+<!-- 500x372 -->
+<iframe src="http://player.vimeo.com/video/60433026" width="500" height="372" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 
 ## [A simple drawing tool](http://j.mp/V9SP9b)
 
@@ -53,3 +64,13 @@ icon using a few colors.
 
 It is not a professional tool, so please, don't be too much rude with me, it's only a
 small pet project, I'm learning.
+
+## [Screencast: kata tennis](http://vimeo.com/rchavarria/screencast-kata-tennis)
+
+*Created in August, 2012*
+
+A screencast showing how I performed the kata [Kata tennis](http://codingdojo.org/cgi-bin/wiki.pl?KataTennis)
+
+<!-- 500x375 -->
+<iframe src="http://player.vimeo.com/video/47076178" width="400" height="300" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+
