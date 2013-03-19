@@ -16,6 +16,21 @@ and more complex over time. Feel free to post any comment or send a link to your
 Codecademy projects. They have an [APIs track](www.codecademy.com/tracks/apis) where
 you can practice codig for well know API's (youtube, soundtrack, twilio).
 
+## [Plan the trip of your dreams](http://j.mp/125TtYn)
+
+<!-- 436x339 -->
+[{% img right /images/codecademy/plan-trip-dreams.png 282 220 'Plan the trip of your dreams' %}](http://j.mp/125TtYn)
+
+*Created in March, 2013*
+
+In this project I show the use of two jQuery UI widgets: [datepicker](http://jqueryui.com/datepicker/) 
+and [autocomplete](http://jqueryui.com/autocomplete/). Both are really easy to use, and even it 
+is not too complicated to customize, see 
+[how to customize datepicker](http://www.hongkiat.com/blog/jquery-ui-datepicker/). And with a 
+little CSS you can get amazing backgrounds.
+
+&nbsp;
+
 ## [Screencast: Nicomachus cube numbers](http://vimeo.com/rchavarria/screencast-nicomachus-cube-numbers)
 
 *Created in February, 2013*
