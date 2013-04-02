@@ -20,11 +20,20 @@ Así que, aquí está mi Lista de Lectura:
 
 ## Estoy leyendo
 
+<!--
+		Como ganar amigos e influir sobre las personas, de Dale Carnegie
+		(http://www.amazon.es/dp/8493664928)
+
+		* encontrado en el blog de Angel, Vivir al máximo: http://viviralmaximo.net/invierte-en-ti-mismo
+		* pero tb recomendado por un blog que sigo: http://henrikwarne.com/2012/08/22/top-5-surprises-when-starting-out-as-a-software-developer/
+-->
+
 - [La meta: un proceso de mejora contínua](http://www.casadellibro.com/libro-la-meta-un-proceso-de-mejora-continua-3-ed/9788479787189/1054992), de Eliyahu M. Goldratt
 
 ## Tengo pensado leer
 
 - [Agile software development](http://www.amazon.com/Agile-Software-Development-Alistair-Cockburn/dp/0201699699), de Alistair Cockburn
+- [The Passionate Programmer](http://pragprog.com/book/cfcar2/the-passionate-programmer), de Chad Fowler
 - [The art of Unix programming](http://www.catb.org/esr/writings/taoup), de Eric S. Raymond
 - [Snow crash](http://www.amazon.com/Snow-Crash-Bantam-Spectra-Book/dp/0553380958), de Neal Stephenson
 - [Test driven development: by example](http://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530), de Kent Beck
