@@ -13,7 +13,7 @@ que es mi pasión y es a lo que me dedico.
 Me puedes encontrar en los siguientes sitios:
 
 - En twitter, como [rchavarriat](http://twitter.com/rchavarriat)
-- En LinkedIn, como [Rubén Chavarría](http://es.linkedin.com/in/rubenchavarria)
+- En LinkedIn, como [Rubén Chavarría](http://es.linkedin.com/in/rchavarriat)
 - En wordpress, mi antiguo blog, como [rchavarria](http://rchavarria.wordpress.com)
 
 Puedes encontrar cosas que hago en los siguientes sitios:
