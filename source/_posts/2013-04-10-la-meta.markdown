@@ -1,0 +1,115 @@
+---
+layout: page
+title: "La meta"
+date: 2013-04-10 10:06
+author: Rubén Chavarría
+comments: true
+categories: 
+- personal
+- book reviews
+- agile
+- lean
+published: true
+footer: false
+sidebar: true
+---
+
+#### La meta
+
+##### Eliyahu Goldratt
+
+{% img right http://ecx.images-amazon.com/images/I/51E50P52AXL._SY300_.jpg 195 300 La meta %}
+
+## Por qué lo he leído
+
+Nunca había oído hablar de este libro, pero cuando asistí a la CAS2012, el año pasado en Cáceres,
+varias personas que allí conocí ([Roberto](https://twitter.com/rferlei) y 
+[Ana](https://twitter.com/anuskiaranda)) me hablaron maravillas de él, así que decidí
+ponerlo en la lista de libros a leer.
+
+<!-- more -->
+
+## Qué esperaba
+
+Bueno, en realidad ya me habían contado de qué iba el libro, así que ya llevaba una buena idea
+de lo que se iba a tratar. Y tenía bastantes buenas espectativas.
+
+## Qué encontre
+
+Encontré un magnífico libro. La verdad es que es muy ameno y divertido. También es intrigante
+ir leyendo cómo el autor va relatando a través del protagonista un proceso de descubrimiento de
+soluciones a todos sus problemas. 
+
+La verdad es que se hace muy fácil de leer y comprender los principios Lean y la teoría de las
+restricciones a través de la historia contada a través del protagonista.
+
+## Conclusiones
+
+El libro me ha encantado, aunque me hubiera gustado mucho más haberlo leído un tiempo atrás, ya
+que trabajé en una fábrica como Ingeniero de Desarrollo (para desarrollar nuevos productos). Por
+lo menos ha sido divertido revivir experiencias de aquel trabajo, ya que muchos de los principios
+(y problemas también) expuestos en el libro ya los viví en mis propias carnes. 
+
+Así pues, este es un libro recomendado sobre todo a todos aquellos interesados en mejorar procesos
+de producción. No parece un tema muy de desarrollo de software, que es a lo que me dedico, pero
+estos principios son la base de las metodologías Lean, y por ende, Agile. Además, es un libro
+que se lee relativamente rápido, y, de verdad, es muy divertido, así que tampoco cuesta tanto.
+
+## Pasajes que quiero recordar de este libro
+
+> Comprar a precios económicos no es la meta.
+
+> La meta no es vender, hay veces que se vende perdiendo dinero o con márgenes ínfimos.
+
+> Qué es lo que la gente piensa que son las metas: compras baratas, contratación de gente adecuada,
+tecnología punta, fabricacón de bienes de calidad, venta de bienes de calidad,
+conquista tasa de mercado, comunciaciones o cumplimiento de los deseos del cliente.
+Pero esos son medios para alcanzar la meta.
+
+> La calidad sola, es importante, pero no es la meta.
+
+> Tecnologia, es importatne, pero no es la meta.
+
+> Trabajar no es sinónimo de ganar dinero.
+
+> Ésta es la meta: ganar dinero aumentando los beneficios netos y al mismo tiempo el rendimiento
+de la inversión (ROI) y la liquidez.
+
+> Parámetros que expresan la meta y que permiten establecer procedimientos operativos para 
+dirigir la fábrica: ingresos, inventarios y gastos de operación.
+
+> Una fabrica, en la que todo el mundo produce ininterrumpidamente, es muy poco productiva.
+
+> Una regla que expresa la relación entre cuellos de botella y los demas recursos: equilibrar 
+el flujo, no la capacidad.
+
+> El grado de utilización de un recuros 'no-cuello' de botella no vendrá dado por su propia
+capacidad sino por alguna otra restricción del sistema.
+
+> Se pueden distinguir 4 tipos de tiempos desde que el material entra en la fábrica hasta 
+que sale de ella: de preparación, de proceso, en cola y de espera.
+
+> Tres consejos sobre cómo dirigir: Saber convencer a otras personas, desprender las capas 
+de la práctica común y vencer la resistencia al cambio.
+
+> Nunca des las respuestas, solo plantea las preguntas.
+
+> ¿Qué cabmiar? ¿Hacia qué cambiar? ¿Cómo provocar el cambio? Basicamente estamos pidiendo
+las habiliades fundamentales que uno debería esperar de un directivo.
+
+## Conceptos
+
+* Productividad: significa hacer las cosas de tal manera que, en el caso de la empresa, ésta 
+se aproxime lo más posible a su meta. Todo aquello que lleve a una compañía más cerca de su meta
+es productivo, todo aquello que no la lleve es imprductivo.
+
+* Ingresos: tasa de generacion de dinero a traves de las ventas.
+
+* Inventario: todo el dinero que el sistema ha invertido en adquierrir cosas que pretende vender.
+
+* Gastos de operación: todo el dienro que el sistema gasta para convertir el inventario en ingresos netos.
+
+
+## Otras lecturas y enlaces relacionadas
+
+* [Lean software development](/blog/2012/10/10/lean-software-development/), de Mary y Tom Poppendiek.
