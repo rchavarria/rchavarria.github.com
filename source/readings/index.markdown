@@ -32,8 +32,10 @@ Así que, aquí está mi Lista de Lectura:
 
 ## Tengo pensado leer
 
-- [Agile software development](http://www.amazon.com/Agile-Software-Development-Alistair-Cockburn/dp/0201699699), de Alistair Cockburn
 - [The Passionate Programmer](http://pragprog.com/book/cfcar2/the-passionate-programmer), de Chad Fowler
+- [Agile software development](http://www.amazon.com/Agile-Software-Development-Alistair-Cockburn/dp/0201699699), de Alistair Cockburn
+- [UML Distilled](http://www.amazon.es/gp/product/0321193687/ref=as_li_tf_tl?ie=UTF8&camp=3626&creative=24790&creativeASIN=0321193687&linkCode=as2&tag=wwwjaviergarz-21), de Chad Fowler
+<!-- visto en blog de javier garzás: http://www.javiergarzas.com/2013/04/que-es-uml-diagramas-uml.html -->
 - [The art of Unix programming](http://www.catb.org/esr/writings/taoup), de Eric S. Raymond
 - [Snow crash](http://www.amazon.com/Snow-Crash-Bantam-Spectra-Book/dp/0553380958), de Neal Stephenson
 - [Test driven development: by example](http://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530), de Kent Beck

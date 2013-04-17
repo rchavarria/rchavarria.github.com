@@ -113,3 +113,5 @@ es productivo, todo aquello que no la lleve es imprductivo.
 ## Otras lecturas y enlaces relacionadas
 
 * [Lean software development](/blog/2012/10/10/lean-software-development/), de Mary y Tom Poppendiek.
+* [Roberto Hens](https://plus.google.com/105077077543737057709) también lo ha leído, y esto es lo que le parece: 
+[Kanban, el origen](http://robertohens.blogspot.com.es/2013/04/Kanban-el-Origen-The-Goal.html).
