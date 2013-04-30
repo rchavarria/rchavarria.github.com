@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Notas sobre un video de marketing online"
-date: 2013-04-17 15:06
+date: 2013-04-17 06:15
 author: Rubén Chavarría
 comments: true
 categories: 
