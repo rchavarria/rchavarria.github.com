@@ -16,6 +16,21 @@ and more complex over time. Feel free to post any comment or send a link to your
 Codecademy projects. They have an [APIs track](www.codecademy.com/tracks/apis) where
 you can practice codig for well know API's (youtube, soundtrack, twilio).
 
+## [Build a storefront](http://kcy.me/l13j)
+
+<!-- 400x228 -->
+[{% img left /images/codecademy/storefront.png 400 228 'Build a storefront' %}](http://kcy.me/l13j)
+
+*Created in May, 2013*
+
+In this project I build a digital storefront, a place where I show a screenshot and a brief
+description of other pet-projects. 
+
+Each project apears with a smooth animation just as a lot of other web applications that shows
+you some advertisements.
+
+&nbsp;
+
 ## [Plan the trip of your dreams](http://j.mp/125TtYn)
 
 <!-- 436x339 -->
