@@ -32,6 +32,23 @@ Así que aquí está mi Lista de Lectura:
 
 ## Tengo pensado leer
 
+<!--
+
+	añadir a la lista, recomendas por https://twitter.com/rubenbpv/status/337895178717257728
+
+		The five dysfunctions of a team, Patrick Lencioni, recomendado por @joserra_diaz y @rubenbpv
+				http://www.amazon.com/The-Five-Dysfunctions-Team-Leadership/dp/0787960756
+				https://en.wikipedia.org/wiki/The_Five_Dysfunctions_of_a_Team
+
+		teamwork is an individual skill, christopher M. Avery, Meri Aaron Walker, Erin O'Toole, 
+			recomendado por @joserra_diaz y @rubenbpv
+				http://www.amazon.com/Teamwork-Is-Individual-Skill-Responsibility/dp/1576751554
+
+		the culture game, daniel mezick, , recomendado por @joserra_diaz y @rubenbpv
+				http://www.amazon.com/The-Culture-Game-Tools-Manager/dp/0984875301/
+				
+-->
+
 - [The Passionate Programmer](http://pragprog.com/book/cfcar2/the-passionate-programmer), de Chad Fowler
 - [Agile software development](http://www.amazon.com/Agile-Software-Development-Alistair-Cockburn/dp/0201699699), de Alistair Cockburn
 - [UML Distilled](http://www.amazon.es/gp/product/0321193687/ref=as_li_tf_tl?ie=UTF8&camp=3626&creative=24790&creativeASIN=0321193687&linkCode=as2&tag=wwwjaviergarz-21), de Martin Fowler
