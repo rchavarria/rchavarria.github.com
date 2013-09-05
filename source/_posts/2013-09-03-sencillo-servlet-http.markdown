@@ -58,7 +58,7 @@ de la aplicación web, `web.xml`. Esto es posible mediante la anotación `@WebSe
 Suponiendo que queremos que el servlet responda cuando el usuario visite la dirección
 `/SimpleHttpServlet`, la signatura de la clase de nuestro servlet quedaría:
 
-```
+``` java
 @WebServlet(urlPatterns = {"/SimpleHttpServlet"})
 public class HttpServletDemo extends HttpServlet {
     //...
@@ -70,7 +70,7 @@ El objetivo de la demo es ver cómo configurar un servlet HTTP mediante anotacio
 por lo que la respuesta proporcionada por él es lo más sencilla posible: obtiene
 un `writer` de la respuesta HTTP y escribe un sencillo mensaje en texto plano.
 
-```
+``` java
 PrintWriter out = response.getWriter();
 try{
     out.println("<h2>");
