@@ -29,9 +29,9 @@ Lista de posts:
 - [Un sencillo servlet HTTP](/blog/2013/09/03/sencillo-servlet-http): En este post veremos 
 que crear un servlet en Java EE 6 es sincillísimo, y que incluso no es necesario
 contar con un archivo descriptor de la aplicación web.
-- Acceder a los datos de un formulario desde un servlet: Es posible acceder a datos
-enviados por el usuario en la petición HTTP desde un servlet. En este post veremos 
-cómo.  
+- [Acceder a los datos de un formulario desde un servlet](/blog/2013/09/13/servlet-lee-parametros):
+Es posible acceder a datos enviados por el usuario en la petición HTTP desde un servlet. 
+En este post veremos cómo.  
 
 <!--
 	http://theopentutorials.com/examples/java-ee/servlet/get-all-parameters-in-html-form-using-getparameternames/
