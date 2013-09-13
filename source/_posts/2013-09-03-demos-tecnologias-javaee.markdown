@@ -24,6 +24,8 @@ web.
 Comenzaré con temas y aplicaciones muy sencillas, que prácticamente no tienen sentido
 en el Mundo Real™, pero que me permitirán ir adentrándome en todo el mundo Java EE.
 
+<!-- more -->
+
 Lista de posts:
 
 - [Un sencillo servlet HTTP](/blog/2013/09/03/sencillo-servlet-http): En este post veremos 
