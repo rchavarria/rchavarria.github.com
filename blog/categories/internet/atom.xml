@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: internet | R. Chavarria's Blog]]></title>
+  <link href="http://rchavarria.github.com/blog/categories/internet/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.com/"/>
+  <updated>2013-09-16T22:41:11+02:00</updated>
+  <id>http://rchavarria.github.com/</id>
+  <author>
+    <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Refactoring: improving the design of existing code]]></title>
+    <link href="http://rchavarria.github.com/blog/2012/01/25/refactoring-improving-the-design-of-existing-code/"/>
+    <updated>2012-01-25T01:25:00+01:00</updated>
+    <id>http://rchavarria.github.com/blog/2012/01/25/refactoring-improving-the-design-of-existing-code</id>
+    <content type="html"><![CDATA[<h4>Refactoring: improving the design of existing code</h4>
+
+
+
+
+<h5>Martin Fowler, Kent Beck, John Brant, William Opdyke, Don Roberts</h5>
+
+
+
+
+<h2>Por qué lo he leído</h2>
+
+
+<p><img class="right" src="http://martinfowler.com/refactoringBook.jpg" width="300" height="383" title="Refactoring: improving the design of existing code" ></p>
+
+<p>El título me pareció sugerente. Me gusta que el código que utilizo, el código que escribo o el código que leo, tenga muy buena apariencia, sea legible, sencillo y, por qué no, sea bonito.</p>
+
+<p>No soporto ver clases mal identadas, o con nombres que no significan nada. Lo odio. Y siempre he pensado que refactorizar el código ayuda a conseguir todo esto.</p>
+
+<!-- more -->
+
+
+
+
+<h2>Qué esperaba</h2>
+
+
+<p>Evidentemente, según el título, esperaba un manual, una guía, sobre cómo refactorizar. Esperaba que el libro me enseñara a refactorizar, a mejorar las refactorizaciones que hago en mi día a día.</p>
+
+<p>Teniendo a Martin Fowler como autor principal, esperaba una descripción de experiencias, una demostración de veteranía, de la que poder beneficiarme y aprovechar esa sabiduría para mejorar en mi trabajo.</p>
+
+<h2>Qué encontré</h2>
+
+
+<p>Encontré un catálogo de acciones de refactorización. Muchas de las refactorizaciones descritas en el libro son sencillas, otras ya las practicaba sin conocerlas formalmente y otras estoy seguro de que me resultarán muy útiles de aquí en adelante.</p>
+
+<h2>Conclusiones</h2>
+
+
+<p>El libro me ha resultado un poco denso, y a veces muy lento, incluso llegó un momento en el que estuve a punto de dejar de leer.</p>
+
+<p>Cada acción de refactorizar está muy detallada. Esto hace que leerlo sea un poco aburrido, pero como referencia no tiene precio.</p>
+
+<p>Como ya he dicho antes, muchas refactorizaciones ya las estaba realizando personalmente, pero ni las había categorizado, ni les había puesto nombre. Por esto mismo, no he encontrado muchas refactorizaciones desconocidas para mí, pero al mismo tiempo me ha permitido categorizar, catalogar, varias refactorizaciones que estaba realizando. De las refactorizaciones nuevas, tengo pensado escribir sobre alguna de ellas.</p>
+
+<p>Sin duda, es un libro a tener en cuenta para cualquier desarrollador software, tanto como para su lectura como para tenerlo de referencia. Totalmente recomendado.</p>
+
+<h2>Pasajes que quiero recordar de este libro</h2>
+
+
+<blockquote>El primer paso, es construir un conjunto sólido de tests para el código que se va a refactorizar.</blockquote>
+
+
+<blockquote>En la mayoría de los casos, un método debería residir donde los datos que el método usa.</blockquote>
+
+
+<blockquote>Para refactorizar, lo mejor es pasito a pasito, lo que lleva a cometer menos errores.</blockquote>
+
+
+<blockquote>La lección más importante del ejemplo es el ritmo del refactor: test, cambio pequeño, test, cambio pequeño, test, ...</blockquote>
+
+
+<blockquote>¿Por qué refactorizar? Mejora el diseño del software, hace el software más fácil de mantener, ayuda a encontrar errores, ayuda a programar más rápido.</blockquote>
+
+
+<blockquote>¿Cuándo no refactorizar? Cuando es necesario empezar desde cero, o cuando estás cerca de una entrega.</blockquote>
+
+
+<blockquote>Cuando los testers encuentran un bug, hay que hacer dos cosas: arreglarlo y crear un test que te asegure de que el bug no volverá a aparecer.</blockquote>
+
+
+<blockquote>El estilo que yo sigo es el de fijarme en todas las cosas que la clase puede hacer y pruebo cada una de ellas para todas las condiciones que pueden hacer que la clase falle. No es lo mismo que testear cada uno de los métodos públicos. Los tests deben de exponer cierto riesgo.</blockquote>
+
+
+<blockquote>La repetición es la raiz de todos los males del software.</blockquote>
+
+
+<blockquote>(Las sentencias de protección indican: esto es raro, haz algo y sal de aquí) La sentencia de protección o retorna de la función o lanza una excepción, nunca debería dejar seguir ejecutando el método.</blockquote>
+
+
+<blockquote>A veces, se da por supuesto algo y se escribe un comentario. Es mejor hacer explícita lo asumido creando una sencia assert.</blockquote>
+
+
+<blockquote>Mi experiencia me dice que conforme refactorizar se va convirtiendo en una rutina, deja de ser una sobrecarga y comienza a ser algo esencial</blockquote>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Lista de logros para ser mejor programador]]></title>
+    <link href="http://rchavarria.github.com/blog/2011/09/08/lista-logros-mejor-programador/"/>
+    <updated>2011-09-08T09:08:00+02:00</updated>
+    <id>http://rchavarria.github.com/blog/2011/09/08/lista-logros-mejor-programador</id>
+    <content type="html"><![CDATA[<div style="margin:2%; padding:2%; background-color:#E0E0E0; ">
+  <p>Este post pertenece a mi antiguo blog en <a href="http://rchavarria.wordpress.com">wordpress</a>, pero decidí pasarme a github:pages por las siguientes <a href="http://rchavarria.github.com/blog/2012/12/03/por-que-cambie-mi-blog-en-wordpress-com">razones</a></p>
+</div>
+
+
+<p>Me he permitido copiar el título del post del blog donde encontré la idea para escribir el mío propio: <a title="Lista de logros para ser mejor programador" href="http://kinisoftware.com/blog/2011/08/17/lista-de-logros-para-ser-un-mejor-programador/">Lista de logros para ser mejor programador</a> (que a su vez fue inspirado por <a href="http://jasonrudolph.com/blog/2011/08/09/programming-achievements-how-to-level-up-as-a-developer/">Jason Rudolph</a>) y espero que la palabra se extienda y poco a poco se cree toda una marea de programadores que queremos mejorar.</p>
+
+<!-- more -->
+
+
+<p>La idea original es hacer públicos una serie de logros que se quieren conseguir como programador. Yo he hecho lo propio y he comenzado haciendo un fork del gist original de Jason: <a title="https://gist.github.com/1189847" href="https://gist.github.com/1189847">https://gist.github.com/1189847</a></p>
+
+<p>Me gusta mucho la idea de exponer, de publicar las metas que uno quiere conseguir. Eso hace que te esfuerces más por llegar a ellas, por hacerlas realidad. Espero que hacerlas públicas me ayude, y también que inspire a otros profesionales del desarrollo del software para tomar iniciativas similares.</p>
+
+<p>Yo en particular no estoy de acuerdo con todas las metas de Jason, por lo que iré modificando mi gist con mis propias metas. Puede que no sean tan ambiciosas como las de Jason, puede que sean menos concretas. Pero serán las mías.</p>
+
+<p>Como bonus, me gustaría compartir un enlace relacionado con el aprendizaje perpetuo. En <a href="http://www.etnassoft.com/2011/07/14/tu-no-sabes-programar/">Tú no sabes programar</a> encontré varios de las metas con las que empezar a personalizar mi gist de logros para ser mejor desarrollador: patrones y principios de diseño, metodologías y disciplinas de desarrollo, herramientas, ...</p>
+
+<h3>Enlaces relacionados:</h3>
+
+
+
+
+<ul>
+    <li><a href="http://jasonrudolph.com/blog/2011/08/09/programming-achievements-how-to-level-up-as-a-developer/">Post original</a></li>
+    <li><a href="https://gist.github.com/1133830">Gist original</a></li>
+    <li><a href="http://kinisoftware.com/blog/2011/08/17/lista-de-logros-para-ser-un-mejor-programador/">Post inspirador</a></li>
+    <li><a href="https://gist.github.com/1189847">Mi propio gist</a></li>
+    <li><a href="http://www.etnassoft.com/2011/07/14/tu-no-sabes-programar/">Material para aprender</a></li>
+</ul>
+
+
+
+
+<h3>¿Qué es un gist?</h3>
+
+
+
+
+<div>Traducción libre de la página de <a href="https://gists.github.com">gists de github</a>:</div>
+
+
+
+
+<blockquote>
+<div>Gist es una forma sencilla de compartir con otros pequeños archivos de ejemplo. Todos los gists son repositorios git, por lo que son automáticamente versionados, pueden ser duplicados y usados como un repositorio git.</div></blockquote>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Heisenbugs]]></title>
+    <link href="http://rchavarria.github.com/blog/2011/02/24/heisengugs/"/>
+    <updated>2011-02-24T02:24:00+01:00</updated>
+    <id>http://rchavarria.github.com/blog/2011/02/24/heisengugs</id>
+    <content type="html"><![CDATA[<blockquote>¡Bien! Ya tengo mi nueva funcionalidad implementada. La aplicación va a ser de lo mejorcito con lo que acabo de desarrollar. Llevo depurando este código toda la tarde. ¿Qué puede fallar? He recorrido instrucción por instrucción y todo se ejecuta según lo previsto.
+
+Lanzo la aplicación ...
+
+¡WTF! ¡Un null pointer! ¡No puede ser! si lo he depurado miles de veces.</blockquote>
+
+
+<p>¿Nunca os habéis encontrado con un error de este tipo?</p>
+
+<!-- more -->
+
+
+<p>Yo muchas veces, pero no se me había ocurrido ponerle nombre. Hace poco, mientras leía <a href="http://www.amazon.com/Java-Concurrency-Practice-Brian-Goetz/dp/0321349601">Java concurrency in practice</a> de Brian Goetz (y otros autores) encontré el nombre, y me gustó tanto que decidí escribir sobre ello. Mucho tiempo después aquí está la entrada.</p>
+
+<p>El nombre en cuestión es <strong>heisenbug. </strong>Me gustó mucho porque mezcla con sentido del humor los conceptos de <em>bug</em> (estoy hablando de un error en una aplicación, ¿recuerdas?) y <em> Heisenberg</em>. La mezcla de este segundo concepto es lo que me hizo gracia: se refiere a un bug que aparentemente no somos capaces de reproducirlo, por lo que no podemos conocer dónde se está produciendo, es decir, su <em>posición. </em>Es similar al <a title="principio de incertidumbre" href="http://es.wikipedia.org/wiki/Relaci%C3%B3n_de_indeterminaci%C3%B3n_de_Heisenberg">principio de incertidumbre</a> de <a title="Werner Heisenberg" href="http://es.wikipedia.org/wiki/Werner_Heisenberg">Werner Heisenberg</a>, que en palabras llanas dice:</p>
+
+<blockquote>No se puede determinar, en términos de la física clásica, simultáneamente y con precisión arbitraria, ciertos pares de variables físicas, como son, por ejemplo, la posición y el momento lineal de una partícula (digamos un electrón).</blockquote>
+
+
+<p>En realidad, el problema siempre ha estado ahí, pero no se dieron las condiciones adecuadas para que el error <em>apareciera</em>, es decir, no hemos sido capaces de conocer su <em>posición</em>.</p>
+
+<p>No viene a cuento, pero <a href="http://www.microsiervos.com">Microsiervos </a>lleva una temporada publicando términos que podrían incluirse en un <em><a href="http://www.microsiervos.com/archivo/microciervadas-varias/geekccionario-04.html">geekcionario</a></em>, entre los cuales podría encajar <em>heisenbug.</em></p>
+
+<p>Nota: Los autores de <em>Java concurrency in practice</em> son: Brian Goetz, Tim Peierls, Joshua Bloch, Joseph Bowbeer, David Holmes, Doug Lea.</p>
+]]></content>
+  </entry>
+  
+</feed>

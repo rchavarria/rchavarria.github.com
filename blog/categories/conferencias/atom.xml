@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: conferencias | R. Chavarria's Blog]]></title>
+  <link href="http://rchavarria.github.com/blog/categories/conferencias/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.com/"/>
+  <updated>2013-09-16T22:41:11+02:00</updated>
+  <id>http://rchavarria.github.com/</id>
+  <author>
+    <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Mis impresiones sobre Codemotion 2012]]></title>
+    <link href="http://rchavarria.github.com/blog/2012/03/29/mis-impresiones-sobre-codemotion-2012/"/>
+    <updated>2012-03-29T03:29:00+02:00</updated>
+    <id>http://rchavarria.github.com/blog/2012/03/29/mis-impresiones-sobre-codemotion-2012</id>
+    <content type="html"><![CDATA[<p>Como más de 1000 personas, este fin de semana he estado en <a href="http://codemotion.es">Codemotion 2012</a>. Durante estos días he leído algunas impresiones y me gustaría aportar mi granito de arena.</p>
+
+<p>Lo primero que me sorprendió fue la cantidad de gente muy joven que acudió al evento (digo muy joven porque eran claramente más jóvenes que yo, pero me sigo considerando joven), creo que el 40% o más serían estudiantes de universidad. Esto, por un lado me alegra muchísimo, y por otro lado me da mucho vértigo: cuánta gente con ganas de aprender y mucho más tiempo que yo para ello, wow!</p>
+
+<!-- more -->
+
+
+<p>El lugar, la <a href="www.eui.upm.es">Escuela de Informática</a> de la <a href="http://www.upm.es/">Universidad Politécnica de Madrid</a>, creo que se quedó un poco pequeño para la cantidad de gente que fuimos, pero no me pareció muy grave. Es más, no esperaba tanta gente. Además, ya no recordaba lo estrechos que son los asientos para los estudiantes. Qué incómodo! Y la de horas que he pasado en aulas similares!.</p>
+
+<p>La organización me pareció bastante buena. Está claro que siempre habrá algo que mejorar (dos días de ponencias en lugar de siete tracks me parece una muy buena mejora) pero la organización de un evento de este tamaño debe ser complicadísimo. Mis felicitaciones a los organizadores, a los voluntarios por hacer posible el evento y a los patrocinadores por permitirme no pagar todo lo que obtuve: comida, camiseta, libreta, charlas, gente técnicamente excelente, ...</p>
+
+<p>Y por último, me gustaría destacar lo que me gustó de las charlas a las que asistí. En mis notas tengo apuntadas impresiones buenas y malas, pero con lo difícil que debe ser preparar unas charlas del nivel de las que asistí, no me creo con derecho a criticar a los ponentes, así que ahí va:</p>
+
+<ol>
+    <li><strong><a href="http://codemotion.es/talks#t991">Aplicaciones nativas con HTML5 y JavaScript en Windows 8</a></strong>, de <a href="http://twitter.com/@borisarm">Boris Armenta</a>: me pareció que Boris se preparó la charla muy bien, a conciencia, con ejemplos preparados, y en mi opinión expuso las ideas de una forma muy clara.</li>
+    <li><strong><a href="http://codemotion.es/talks#t82">Despegando con grails y desplegando en la nube</a></strong>, de <a href="http://twitter.com/@gmamenl">Mamen González</a>: a esta llegué tarde, por lo que me perdí la parte de la charla que hablaba de grails, pero me pareció una charla muy visual, muy cuidada y una exposición muy fluida.</li>
+    <li><strong><a href="http://codemotion.es/talks#t999">HTML5 o cómo será la web del futuro</a></strong>, de <a href="http://twitter.com/@VictorSanchez">Víctor Sánchez</a>: Víctor me pareció muy ilusionado y apasionado con la charla, me gustó mucho. Creo que fué una presentación muy gráfica, como no podía ser de otra forma tratándose de HTML5.</li>
+    <li><strong><a href="http://codemotion.es/talks#t188">Monetización de aplicaciones móviles</a></strong>, de <a href="http://es.linkedin.com/in/currorueda">Curro Rueda Álvarez</a>: una presentación sencilla y un ponente fantástico, como si de un Steve Jobs se tratara, Curro conquistó a la audiencia con ejemplos claros, historias para no dormir y un grandísimo humor.</li>
+    <li><strong><a href="http://codemotion.es/talks#t93">Effective Java</a></strong>, de <a href="http://twitter.com/@lantoli">Leo Antolí</a>: fue una charla muy técnica que me agradó mucho, y aunque he leido el libro me enseñó cosas nuevas.</li>
+    <li><strong><a href="http://codemotion.es/talks#t139">¡Mira mamá! ¡Sin cables!</a></strong>, de <a href="http://twitter.com/@sefford">Saúl Díaz</a>: empezó un poco nervioso pero su exposición fue mejorando con el tiempo. Hizo unas demos impresionantes, pero impresionantes.</li>
+    <li><strong><a href="http://codemotion.es/talks#t6">¿Por qué metodologías ágiles?</a></strong>, de <a href="http://twitter.com/@jjballano">Jesús J. Ballano</a> y <a href="https://twitter.com/#!/1uptalent">Germán del Zotto</a>: una charla filosófica y muy motivadora que me sirvió para recordarme que las metodologías ágiles son la mejor alternativa a las metodologías tradicionales de desarrollo de software (aunque no haya balas de plata).</li>
+    <li><strong><a href="http://codemotion.es/talks#t229">Construyendo un ecosistema para desarrolladores</a></strong>, de <a href="http://twitter.com/@david_bonilla">David Bonilla</a>: fui a esta charla sólo por el mero hecho de ver a David en directo, y no me defraudó. Pasión, entrega, cambios de ritmo en la exposición, preparación, expectáculo, humor (y hamor). La guinda del pastel para un día espectacular.</li>
+</ol>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mi retrospectiva de la XPWeek 2011]]></title>
+    <link href="http://rchavarria.github.com/blog/2011/10/03/mi-retrospectiva-de-la-xpweek-2011/"/>
+    <updated>2011-10-03T10:03:00+02:00</updated>
+    <id>http://rchavarria.github.com/blog/2011/10/03/mi-retrospectiva-de-la-xpweek-2011</id>
+    <content type="html"><![CDATA[<p>El lunes 19 asistí como oyente al día de conferencia que formó parte de la <a href="xpweek.es/?page_id=2">XPWeek</a>. Fue una lástima que no pudiera asistir a ninguno de los cursos sobre TDD que se impartieron en los días siguientes :-(.</p>
+
+<p>Hacía mucho tiempo, mucho, que no participaba en alguna conferencia así, y la experiencia me encantó (pienso seguir hacer proposiciones indecentes a mi empresa para poder asistir a todas aquellas que pueda).</p>
+
+<p>Me encantó poder conocer en persona a <a href="http://twitter.com/#!/carlosble">Carlos Blé</a>, ver en vivo y en directo a <a href="http://twitter.com/#!/jmbeas">Jose Manuel Beas</a> (la lástima es que se me escapó y no pude presentarme, otra vez será). De <a href="http://twitter.com/#!/eamodeorubio">Enrique Amodeo</a> también había oído hablar, y me gustó mucho su presentación. De los demás ponentes no tenía referencias, pero sentí la pasión que tienen sobre el mundo del software. Encantado de conoceros.</p>
+
+<!-- more -->
+
+
+<p>Las presentaciones fueron las siguientes:</p>
+
+<ul>
+    <li>TDD con el stack Objective-C, por Alejandro Pérez, <a href="http://www.slideshare.net/AlejandroGarca8/xpweek2011-tdd-con-objectivec">diapositivas</a>, <a href="http://www.adictosaltrabajo.com/detalle-noticia.php?noticia=330">más material</a></li>
+    <li>9 rules to better OO, por Sebastián Hermida, <a href="http://nueve-reglas-para-un-mejor-oo.heroku.com/presenter#1">diapositivas</a></li>
+    <li>BDD de fuera a dentro, por Luismi Cavallé, <a href="http://www.slideshare.net/cavalle/bdd-defueraadentro/69">diapositivas</a></li>
+    <li>CoffeeScript, por Guillermo Pascual, diapositivas</li>
+    <li>No metodologías, por León, diapositivas</li>
+    <li>CSS orientado a objetos, por Enrique Amodeo, diapositivas</li>
+    <li>BDD y arquitectura Javascript, por Carlos Benítez, diapositivas</li>
+    <li>Testing con Spring 3, por Israel Alcázar, <a href="http://www.slideshare.net/israelalcazar/xpweek-testing-con-spring-3">diapositivas</a></li>
+</ul>
+
+
+<p>(Sigo atento a que los ponentes vayan colgando sus diapositivas, y algún que otro vídeo que se grabó).</p>
+
+<p>La sensación general con la que me quedo de la conferencia es positiva. No necesitaba que nadie me convenciera de las virtudes de TDD y BDD, pero ver que se pueden llevar a cabo con muy distintas tecnologías, y conocer a gente apasionada por ellas, me motivó bastante para seguir intentando seguir estas metodologías y continuar atrayendo a mis compañeros hacia ellas.</p>
+
+<p>Pero (sí, lo siento, tengo un "pero") eché de menos que se hablara más de metodologías ágiles, más acerca de las metodologías en general. Tengo la sensación de que sólo se habló de TDD y BDD, aunque sé que hubo una charla sobre metodologías en general, que tuvimos tiempo de hablar con quien quisiéramos de lo que quisiéramos, pero, no sé, es una sensación, y tengo claro que me encantaría repetir.</p>
+
+<p>De la conferencia me llevo unos contactos (<a href="http://twitter.com/#!/fperezsorrosal">@fperezsorrosal</a>, <a href="http://twitter.com/#!/jalbertopaz">@jalbertopaz</a>), unos cuantos fans de groovy (<a href="http://twitter.com/#!/yurenaghm">@yurenaghm</a>, <a href="http://twitter.com/#!/JuanmaGomeR">@juanmagomer</a> y <a href="http://twitter.com/#!/ArturoHerrero">@arturoherrero</a>) y las ganas de volver a ser parte de eventos como éste.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: blog | R. Chavarria's Blog]]></title>
+  <link href="http://rchavarria.github.com/blog/categories/blog/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.com/"/>
+  <updated>2013-09-16T22:41:11+02:00</updated>
+  <id>http://rchavarria.github.com/</id>
+  <author>
+    <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Por qu&eacute; cambi&eacute; mi blog en wordpress.com]]></title>
+    <link href="http://rchavarria.github.com/blog/2012/12/03/por-que-cambie-mi-blog-en-wordpress-com/"/>
+    <updated>2012-12-03T09:44:00+01:00</updated>
+    <id>http://rchavarria.github.com/blog/2012/12/03/por-que-cambie-mi-blog-en-wordpress-com</id>
+    <content type="html"><![CDATA[<p>Desde que leí el post de <a href="http://arturoherrero.com/about">Arturo Herrero</a>,
+<a href="http://arturoherrero.com/2010/12/20/blogging-like-a-hacker">Blogging like a hacker</a>,
+siempre me ha picado el gusanillo de hacer algo similar.</p>
+
+<p>Arturo habla de <a href="http://cloudhead.io/toto">toto</a> y <a href="http://heroku.com">heroku</a>,
+mientras que yo estoy usando <a href="http://jekyllrb.com">jekyll</a>, <a href="http://pages.github.com">github:pages</a> y
+<a href="http://octopress.org/docs">octopress</a>, pero básicamente se trata de lo mismo: de bloguear
+como si estuvieras escribiendo código.</p>
+
+<p>La gota que colmó el vaso fué cuando me encontré un mensaje del administrador de wordpress
+diciéndome que había violado alguno de los términos y condiciones de su <em>contrato</em>
+(llamémoslo así).</p>
+
+<!-- more -->
+
+
+<p><img class="center" src="/images/wordpress/wordpress-message.png" width="720" height="152"></p>
+
+<p>En este mensaje básicamente me vienen a decir que no cumplo lo que wordpress dice en su Terms of Service
+o en su Advertising policy, pero no especifican nada más.</p>
+
+<p>Por el párrafo posterior, creo entender que wordpress piensa que uso mi blog para hacer publicidad
+a otras empresas.</p>
+
+<p>La verdad es que últimamente estaba publicando muchos posts de recopilación de enlaces, <em>enlaces de los
+martes</em>, le llamaba yo (y le voy a seguir llamando):</p>
+
+<ul>
+<li><a href="http://rchavarria.wordpress.com/2012/11/27/enlaces-de-los-martes-27-11-2012">Enlaces del 27 de noviembre de 2012</a></li>
+<li><a href="http://rchavarria.wordpress.com/2012/11/06/enlaces-de-los-martes-06-11-2012">Enlaces del 6 de noviembre de 2012</a></li>
+</ul>
+
+
+<p>Y así unos cuantos post más.</p>
+
+<p>Escribí a wordpress comentando la situación, y parece que me entendieron y que decidieron desbloquearlo,
+pero esto fué a los 2 días, así que me imagino que si antes tenía pocas visitas al blog (una media no
+superior a 20 diarias), después de este bloqueo temporal, no me va a querer leer ni Rita.</p>
+
+<p>Si esto no fuera suficiente, las visitas al blog se han desplomado (si es que se puede considerar
+desplome caer desde prácticamente cero), y para muestra, una imagen de las visitas de los últimos
+días. Como referencia diré que el día en que wordpress decidión bloquear mi blog fue el dia 27 de noviembre.</p>
+
+<p><img class="center" src="/images/wordpress/wordpress-visits.png" width="524" height="226"></p>
+
+<p>Por estas quejas, y sobretodo, porque me apetece bloguear como un hacker, bienvenido a mi <em>nuevo</em> blog.
+Ahora sólo queda migrar los artículos del antiguo a éste. Uff! Qué pereza. Poco a poco amigo.</p>
+]]></content>
+  </entry>
+  
+</feed>

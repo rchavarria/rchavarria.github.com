@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: python | R. Chavarria's Blog]]></title>
+  <link href="http://rchavarria.github.com/blog/categories/python/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.com/"/>
+  <updated>2013-09-16T22:41:11+02:00</updated>
+  <id>http://rchavarria.github.com/</id>
+  <author>
+    <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[solveet: cifrado cesar en python]]></title>
+    <link href="http://rchavarria.github.com/blog/2012/12/19/solveet-cifrado-cesar-en-python/"/>
+    <updated>2012-12-19T12:31:00+01:00</updated>
+    <id>http://rchavarria.github.com/blog/2012/12/19/solveet-cifrado-cesar-en-python</id>
+    <content type="html"><![CDATA[<p>Me gusta resolver problemas de programación regularmente para mejorar como programdor, y para ello uso
+la página <a href="http://solveet.com">Solveet</a>. El problema que he solucionado esta semana es el del
+<a href="http://www.solveet.com/exercises/Cifrado-Cesar/145">Cifrado César</a>, y está englobado en la iniciativa
+<a href="http://12meses12katas.com/">12meses12katas</a> en la me gusta participar.</p>
+
+<p>El <em>cifrado César</em> es muy simple: es un tipo de cifrado por sustitución en el que una letra en el texto
+original es reemplazada por otra letra que se encuentra un número fijo de posiciones más adelante
+en el alfabeto.</p>
+
+<p>Decidí usar <strong>python</strong> para este problema porque quería profundizar un poco más en este lenguaje, que lo
+tengo muy verde y he escuchado maravillas de él, pero gracias a la solución del problema he aprendido
+un par de cosas del lenguaje: uso de la función <code>map</code>, y las funciones <code>str.maketrans</code> y <code>str.translate</code>.</p>
+
+<!-- more -->
+
+
+<h2>Primera aproximación</h2>
+
+<p>Debido a mi poco conocimiento del lenguaje, mi
+<a href="http://www.solveet.com/exercises/Cifrado-Cesar/145/solution-1076">primera aproximación</a>
+al problema no es muy elegante, y tampoco usa muchas de las fortalezas de python. La verdad es que es
+una solución más al estilo de un lenguaje que conozco bastante mejor, Java.</p>
+
+<p>Así pues, una vez publiqué mi solución, decidí echarle un vistazo a soluciones de otros usuarios.
+Encontré varias en python, y de ellas aprendí un par de cosas:</p>
+
+<h2>Uso de la función <code>map</code></h2>
+
+<p>Python proporciona la función <code>map(function, iterable, ...)</code>
+(<a href="http://docs.python.org/3.3/library/functions.html#map">documentación</a>), la cual llama a la función
+<code>function</code> para cada uno de los elementos de <code>iterable</code> (se pueden usar uno o varios iterables).</p>
+
+<p>En un principio había pensado usar esta función. <code>function</code> sería el método que realiza el cifrado
+carácter a carácter e <code>iterable</code> sería la cadena de texto a cifrar. Pero el método que cifra necesita
+otro argumento, el desplazamiento, y no fuí capaz de averiguar por mí mismo cómo pasar este argumento
+a mi método usando <code>map</code>.</p>
+
+<p>Lo descubrí gracias a la solución de <a href="http://www.solveet.com/exercises/Cifrado-Cesar/145/solution-1052">climens</a>,
+y aprovechando lo aprendido, mi solución ahora quedaría así:</p>
+
+<p>``` python
+from string import ascii_lowercase as alphabet</p>
+
+<p>def shift(character, offset):</p>
+
+<pre><code>index = alphabet.find(character)
+if(index &lt; 0): return character
+return alphabet[(index + offset) % len(alphabet)]
+</code></pre>
+
+<p>def cipher(message, offset):</p>
+
+<pre><code>ciphered = map(shift, message, [offset] * len(message))
+return "".join(ciphered)
+</code></pre>
+
+<p>def decipher(message, offset):</p>
+
+<pre><code>return cipher(message, -1 * offset)
+</code></pre>
+
+<h1>simple tests</h1>
+
+<p>assert "ibm" == cipher("hal", 1)
+assert "hal" == decipher("ibm", 1)
+```</p>
+
+<p>El <em>truco</em> está en que a la función <code>map</code> le paso dos <code>iterables</code>: la cadena de texto, y un array de enteros
+de la misma longitud y cuyos elementos son todos iguales, el desplazamiento. <strong>¡Qué sencillo ahora que lo
+sé!</strong></p>
+
+<h2>Funciones <code>str.maketrans</code> y <code>str.translate</code></h2>
+
+<p>Desconocía completamente la existencia de estas dos funciones, pero parecen haber sido diseñadas exclusivamente
+para el <em>cifrado César</em>. Las descubrí gracias a la solución de
+<a href="http://www.solveet.com/exercises/Cifrado-Cesar/145/solution-1038">drabor</a></p>
+
+<p><code>str.maketrans</code> (<a href="http://docs.python.org/3.3/library/stdtypes.html#str.maketrans">documentación</a>)
+crea un mapa para ser usado en <code>str.translate</code>
+(<a href="http://docs.python.org/3.3/library/stdtypes.html#str.translate">documentación</a>),
+y ésta, al ser llamada sobre una cadena de caracteres, devuelve otra cadena donde cada carácter ha sido
+<em>transladado</em> según el mapa creado con <code>maketrans</code>.</p>
+
+<p>Ahora sólo hace falta crear el mapa. Uso dos iterables: el alfabeto original, y el alfabeto transladado tantas
+posiciones como diga el desplazamiento del cifrado. De esta forma, con desplazamiento <code>1</code>, la letra <code>a</code>
+corresponderá con la <code>b</code> y así sucesivamente. Pero todo ese trabajo lo hará <code>translate</code>, no nosotros.</p>
+
+<p>Así queda la solución:</p>
+
+<p>```
+from string import ascii_lowercase as alphabet</p>
+
+<p>def cipher(message, offset):</p>
+
+<pre><code>dictionary_mapping = str.maketrans(alphabet, alphabet[offset:] + alphabet[:offset])
+return message.translate(dictionary_mapping)
+</code></pre>
+
+<p>def decipher(message, offset):</p>
+
+<pre><code>return cipher(message, -1 * offset)
+</code></pre>
+
+<h1>simple tests</h1>
+
+<p>assert "ibm" == cipher("hal", 1)
+assert "hal" == decipher("ibm", 1)
+```</p>
+
+<h2>Conclusión</h2>
+
+<p>Cualquiera de las dos soluciones me parece mucho mejor que la mía inicial, y me parecía que debía compartir
+lo aprendido al solucionar este problema.</p>
+
+<p>Y tú, ¿Conoces python? ¿Te apetece participar en <a href="http://solveet.com">solveet</a>?
+¿Tienes alguna sugerencia para mejorar estas soluciones? Deja algún comentario. Si es respetuoso,
+será bienvenido.</p>
+]]></content>
+  </entry>
+  
+</feed>

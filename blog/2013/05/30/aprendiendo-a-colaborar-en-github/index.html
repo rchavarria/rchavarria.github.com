@@ -1,0 +1,396 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Aprendiendo a colaborar en github - R. Chavarria's Blog</title>
+  <meta name="author" content="Rub&eacute;n Chavarr&iacute;a">
+
+  
+  <meta name="description" content="Recientemente, hablando con mi amigo David sobre un
+proyectillo que llevamos a medias (estamos empezando, espero que podamos tener algo
+publicable &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://rchavarria.github.com/blog/2013/05/30/aprendiendo-a-colaborar-en-github/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="R. Chavarria's Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36829645-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">R. Chavarria's Blog</a></h1>
+  
+    <h2>Blogging like a hacker about Software Development</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:rchavarria.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Aprendiendo a colaborar en github</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-30T08:45:00+02:00" pubdate data-updated="true">May 30<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Recientemente, hablando con mi amigo <a href="http://twitter.com/dagarfol">David</a> sobre un
+proyectillo que llevamos a medias (estamos empezando, espero que podamos tener algo
+publicable pronto), salió el tema de cómo empezar a colaborar con
+amigos/compañeros/quien-sea con <a href="http://git-scm.com/">git</a> en <a href="http://github.com">github</a>.</p>
+
+<p>Yo le comenté que era bastante sencillo comenzar, pero de boquilla se pueden decir
+muchas cosas (la mayoría mentira), así que para que no se quede en agua de borrajas,
+en este post encontrarás 5 comandos y acciones básicas para comenzar a
+trabajar en equipo con git y github.</p>
+
+<!-- more -->
+
+
+<h2>¿Qué necesito?</h2>
+
+<p>Lo primero que se necesita es tener una cuenta en github. Si no tienes una, uno puede
+<a href="https://github.com/users">registrarse</a> fácilmente. Es como crearse una cuenta de correo.</p>
+
+<p><img class="center" src="/images/2013/github-overview.jpg"></p>
+
+<p>Después, es necesario que <a href="http://git-scm.com/downloads">descargues e instales git</a>
+en el ordenador donde vayas a trabajar. En windows es tan sencillo como instalar cualquier
+otro programa, así que no hay excusa para parar aquí.</p>
+
+<p>Para configurar git y poder usarlo con github, debemos configurarlo. Para ayudarnos, los
+chicos de github se han currado una aplicación,
+<a href="https://help.github.com/articles/set-up-git">Github for Windows</a>. También se puede
+<a href="https://help.github.com/articles/set-up-git#platform-linux">configurar github en linux</a>.</p>
+
+<h2>Obtener el código fuente</h2>
+
+<p>Para comenzar a colaborar, necesitas un repositorio donde esté almacenado el código fuente
+sobre el cual vais a trabajar. Dos formas muy comunes de crear un repositorio en tu
+cuenta de github son:</p>
+
+<ol>
+<li><a href="https://help.github.com/articles/create-a-repo">Crear un repositorio desde cero</a>.</li>
+<li><a href="https://help.github.com/articles/fork-a-repo">Copiar el repositorio de otra persona (fork)</a>.</li>
+</ol>
+
+
+<p>Con tu repositorio en github, ya puedes <em>descargarlo</em> a tu máquina de trabajo. En realidad
+lo que vas a hacer es una copia entera y completamente funcional del repositorio en github.</p>
+
+<figure class='code'><figcaption><span>Clonando un repositorio </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git clone https://github.com/username/Spoon-Knife.git</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Esto creará un directorio llamado <code>Spoon-Knife</code> donde se encuentra el repositorio completo.</p>
+
+<h2>Modificar ficheros y subir los cambios</h2>
+
+<p>Ya podemos realizar los cambios que queramos al código fuente.</p>
+
+<p>Para subir estos cambios al repositorio de github, debemos seguir varios pasos:</p>
+
+<ol>
+<li>Añadir los fichero nuevos al área temporal de git llamada <code>stage</code> para poder hacer <code>commit</code>
+al repositorio (existen más opciones para este comando, pero el más básico es éste):</li>
+</ol>
+
+
+<figure class='code'><figcaption><span>Añadiendo ficheros al área de stage </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git add .</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>Hacer <code>commit</code> de esos cambios. De esta forma, nuestro repositorio ya contendrá los cambios,
+sólo hará falta incorporarlos al repositorio de github (repositorio remoto):</li>
+</ol>
+
+
+<figure class='code'><figcaption><span>Commiteando ficheros al repositorio local </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git commit -m "Mensaje del commit"</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>Subir los cambios del repositorio local al repositorio remoto (github). El comando más básico
+para ello es el siguiente:</li>
+</ol>
+
+
+<figure class='code'><figcaption><span>Sincronizando con el repositorio remoto </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git push</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Si vamos a nuestro repositorio en github veremos cómo aparecen los commits que hicimos en nuestro
+repositorio local. BIEN!</p>
+
+<h2>Descargar cambios del repositorio de github</h2>
+
+<p>Con el siguiente comando (esta es su sintaxis más sencilla) podrás incorporar los cambios que haya
+en el repositorio remoto de github a tu repositorio local:</p>
+
+<figure class='code'><figcaption><span>Sincronizando el repositorio local con cambios del remoto </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git pull</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Esta es su sintaxis más sencilla. Para avanzar en este aspecto, tendría que hablar de
+<a href="http://gitref.org/remotes/">remotes</a>, pero es un concepto bastante extenso y quedaría un
+post muy largo.</p>
+
+<h2>Compartir nuestros cambios con los compañeros</h2>
+
+<p>De acuerdo, ya tenemos nuestros cambios en nuestro repositorio local y los hemos subido a nuestro
+repositorio remoto en github. Existe una forma muy sencilla en github de informar a nuestros compañeros
+de que hemos hecho cambios, los llamados
+<a href="https://help.github.com/articles/using-pull-requests">Pull Request</a>.</p>
+
+<p><img class="right" src="/images/2013/github-pull-request.jpg"></p>
+
+<p>Mediante un Pull Request estás indicando a un compañero que le quieres pasar unos cambios que
+tú has hecho. Ahora tu compañero deberá decidir si acepta los cambios y él incorporará esos
+cambios a su repositorio remoto</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Rub&eacute;n Chavarr&iacute;a</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-30T08:45:00+02:00" pubdate data-updated="true">May 30<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/learning/'>learning</a>, <a class='category' href='/blog/categories/tools/'>tools</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rchavarria.github.com/blog/2013/05/30/aprendiendo-a-colaborar-en-github/" data-via="rchavarriat" data-counturl="http://rchavarria.github.com/blog/2013/05/30/aprendiendo-a-colaborar-en-github/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/04/30/save-informaticos/" title="Previous Post: Save InformaticOS, mi primer open space">&laquo; Save InformaticOS, mi primer open space</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2013/09/03/demos-tecnologias-javaee/" title="Next Post: Demos de tecnologías Java EE">Demos de tecnologías Java EE &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/09/13/servlet-lee-parametros/">Leer parámetros desde un servlet</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/03/sencillo-servlet-http/">Un sencillo servlet HTTP</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/03/demos-tecnologias-javaee/">Demos de tecnologías Java EE</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/05/30/aprendiendo-a-colaborar-en-github/">Aprendiendo a colaborar en github</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/04/30/save-informaticos/">Save InformaticOS, mi primer open space</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("rchavarriat", 4, true);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/rchavarriat">@rchavarriat</a></p>
+  
+</section>
+
+
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/rchavarriat?count=5&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/rchavarriat">My Delicious Bookmarks &raquo;</a></p>
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Rub&eacute;n Chavarr&iacute;a -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'rchavarria-github-com';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://rchavarria.github.com/blog/2013/05/30/aprendiendo-a-colaborar-en-github/';
+        var disqus_url = 'http://rchavarria.github.com/blog/2013/05/30/aprendiendo-a-colaborar-en-github/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

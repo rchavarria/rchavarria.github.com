@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Java EE | R. Chavarria's Blog]]></title>
+  <link href="http://rchavarria.github.com/blog/categories/java-ee/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.com/"/>
+  <updated>2013-09-16T22:41:11+02:00</updated>
+  <id>http://rchavarria.github.com/</id>
+  <author>
+    <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Leer parámetros desde un servlet]]></title>
+    <link href="http://rchavarria.github.com/blog/2013/09/13/servlet-lee-parametros/"/>
+    <updated>2013-09-13T12:39:00+02:00</updated>
+    <id>http://rchavarria.github.com/blog/2013/09/13/servlet-lee-parametros</id>
+    <content type="html"><![CDATA[<div style="margin:2%; padding:2%; background-color:#E0E0E0; ">
+    Find a lightweight English version of this post directly in the <a href="https://github.com/rchavarria/javaee-6-demos/tree/master/request-parameters">source code repository</a>.
+</div>
+
+
+<p>En este post veremos cómo un servlet puede leer los parámetros que vienen
+encapsulados en la petición HTTP que realiza un usuario a nuestra aplicación web.
+La configuración de dicho servlet la haremos mediante anotaciones para tener un
+proyecto más sencillo.</p>
+
+<p>Se puede ver el código fuente de la demostración en el directorio
+<a href="https://github.com/rchavarria/javaee-6-demos/tree/master/request-parameters"><code>request-parameters</code></a>
+del repositorio de las demos en github.</p>
+
+<!-- more -->
+
+
+<h2>Demo</h2>
+
+<p>La demostración va a ser muy sencilla: crearemos en servlet, lo configuraremos
+para que responda cuando un usuario envíe los campos de un formulario de login,
+y haremos que responda con una página HTML que incluye una lista con los valores
+de los campos de dicho formulario.</p>
+
+<p>Para ejecutar la demo, simplemente hay que descargase el código fuente y ejecutar
+<code>mvn jetty:run</code> desde el directorio raiz de la demo. Visitar la página de login
+<a href="http://localhost:8080/login.html">http://localhost:8080/login.html</a>, introducir
+unos valores cualquiera y enviar los datos del formulario. Veremos el resultado
+que devuelve el servlet al leer los parámetros de la petición HTTP que hemos
+enviado al servidor.</p>
+
+<p><img class="center" src="/images/2013/request-parameters.png" title="Respuesta del servlet" ></p>
+
+<h2>Dependencias</h2>
+
+<p>Para esta demostración usaremos <a href="http://maven.apache.org/">Apache Maven</a> para
+la gestión de dependencias. Esto nos facilitará enormemente nuestra labor de
+programación. Si echamos un vistazo al fichero <code>pom.xml</code> de la demo, podremos
+ver que solamente existe una dependencia externa, <code>javax-servlet-api</code>, que es
+la que nos permitirá crear nuestro servlet.</p>
+
+<h2>Página de login</h2>
+
+<p><img class="right" src="/images/2013/login-form.png" title="Respuesta del servlet" ></p>
+
+<p>La entrada a nuestra demo será la página de login, la cual contiene un formulario
+muy simple, con dos campos principales: email del usuario y contraseña.</p>
+
+<p>En el código HTML de la página, se ha establecido la acción del formulario a
+<code>RequestParametersServlet</code>. Ésta va a ser la URL a la que nuestro servlet deberá responder.</p>
+
+<p>``` html
+<form action="RequestParametersServlet"></p>
+
+<pre><code>&lt;input type="text" name="email" placeholder="Email address" autofocus /&gt;
+&lt;input type="password" name="password" placeholder="Password" /&gt;
+
+&lt;button type="submit"&gt;Log me in&lt;/button&gt;
+</code></pre>
+
+<p></form>
+```</p>
+
+<h2>El servlet</h2>
+
+<p>Nuestro servlet se trata de un servlet HTTP, luego heredará de <code>javax.servlet.http.HttpServlet</code>.
+Lo configuraremos mediante anotaciones, con <code>@WebServlet</code>. Y retornará un sencillo
+código HTML que mostrará al usuario el valor de los parámetros enviados desde el
+formulario de login.</p>
+
+<p>La definión del servlet quedaría así:</p>
+
+<p>``` java
+@WebServlet(urlPatterns = {"/RequestParametersServlet"})
+public class RequestParametersServletDemo extends HttpServlet {</p>
+
+<pre><code>//...
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Mientras que el código que lee los parámetros de la petición HTTP estaría agrupado en un
+método con esta pinta:</p>
+
+<p>``` java
+private String outputParametersList(HttpServletRequest request) {</p>
+
+<pre><code>Enumeration&lt;String&gt; names = request.getParameterNames();
+if(!names.hasMoreElements()) return "";
+
+StringBuilder sb = new StringBuilder();
+
+sb.append("&lt;ul&gt;");
+while(names.hasMoreElements()) {
+    String name = names.nextElement();
+    String value = request.getParameter(name);
+
+    sb.append("&lt;li&gt;");
+    sb.append(name + ": " + value);
+    sb.append("&lt;/li&gt;");
+}
+sb.append("&lt;/ul&gt;");
+
+return sb.toString();
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Para echar un ojo al código fuente, visitar el directorio
+<a href="https://github.com/rchavarria/javaee-6-demos/tree/master/request-parameters"><code>request-parameters</code></a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Un sencillo servlet HTTP]]></title>
+    <link href="http://rchavarria.github.com/blog/2013/09/03/sencillo-servlet-http/"/>
+    <updated>2013-09-03T13:41:00+02:00</updated>
+    <id>http://rchavarria.github.com/blog/2013/09/03/sencillo-servlet-http</id>
+    <content type="html"><![CDATA[<div style="margin:2%; padding:2%; background-color:#E0E0E0; ">
+    Find a lightweight English version of this post directly in the <a href="https://github.com/rchavarria/javaee-6-demos/tree/master/simple-http-servlet">source code repository</a>.
+</div>
+
+
+<p>En este post veremos cómo crear un sencillo servlet HTTP. La configuración de dicho
+servlet la haremos mediante anotaciones, y así veremos cómo Java EE 6 puede
+ahorrarnos a los desarrolladores cierto trabajo con ficheros XML de configuración.</p>
+
+<p>Se puede ver el código fuente de la demostración en el directorio
+<a href="https://github.com/rchavarria/javaee-6-demos/tree/master/simple-http-servlet"><code>simple-http-servlet</code></a>
+del repositorio de las demos en github.</p>
+
+<!-- more -->
+
+
+<h2>Demo</h2>
+
+<p>La demostración va a ser muy sencilla: crearemos en servlet, lo configuraremos
+para que responda cuando un usuario visite una página web en concreto, y haremos
+que responda de una forma muy, pero que muy sencilla.</p>
+
+<p>Para ejecutar la demo, simplemente hay que descargase el código fuente y ejecutar
+<code>mvn jetty:run</code> desde el directorio raiz de la demo. Ya se puede ver el resultado
+del servlet visitando
+<a href="http://localhost:8080/SimpleHttpServlet">http://localhost:8080/SimpleHttpServlet</a>.</p>
+
+<p><img class="center" src="/images/2013/simple-http-servlet.png" title="Respuesta del servlet" ></p>
+
+<h2>Dependencias</h2>
+
+<p>Para esta demostración usaremos <a href="http://maven.apache.org/">Apache Maven</a> para
+la gestión de dependencias. Esto nos facilitará enormemente nuestra labor de
+programación. Si echamos un vistazo al fichero <code>pom.xml</code> de la demo, podremos
+ver que solamente existe una dependencia externa, <code>javax-servlet-api</code>, que es
+la que nos permitirá crear nuestro servlet.</p>
+
+<h2>El servlet</h2>
+
+<p>Como ya he comentado antes, se trata de un servlet HTTP, luego nuestro servlet
+heredará de <code>javax.servlet.http.HttpServlet</code>.</p>
+
+<p>Java EE 6 nos permite configurar los servlets sin hacer uso del fichero descriptor
+de la aplicación web, <code>web.xml</code>. Esto es posible mediante la anotación <code>@WebServlet</code>.
+Suponiendo que queremos que el servlet responda cuando el usuario visite la dirección
+<code>/SimpleHttpServlet</code>, la signatura de la clase de nuestro servlet quedaría:</p>
+
+<p>``` java
+@WebServlet(urlPatterns = {"/SimpleHttpServlet"})
+public class HttpServletDemo extends HttpServlet {</p>
+
+<pre><code>//...
+</code></pre>
+
+<p>}
+```</p>
+
+<h3>Respuesta del servlet</h3>
+
+<p>El objetivo de la demo es ver cómo configurar un servlet HTTP mediante anotaciones,
+por lo que la respuesta proporcionada por él es lo más sencilla posible: obtiene
+un <code>writer</code> de la respuesta HTTP y escribe un sencillo mensaje en texto plano.</p>
+
+<p>``` java
+PrintWriter out = response.getWriter();
+try{</p>
+
+<pre><code>out.println("&lt;h2&gt;");
+out.println("This servlet has been configured simply by: ");
+out.println("@WebServlet(urlPatterns = {\"/SimpleHttpServlet\"})");
+out.println("&lt;/h2&gt;");
+</code></pre>
+
+<p>} finally {</p>
+
+<pre><code>out.close();
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Para echar un ojo al código fuente, visitar el directorio
+<a href="https://github.com/rchavarria/javaee-6-demos/tree/master/simple-http-servlet"><code>simple-http-servlet</code></a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Demos de tecnologías Java EE]]></title>
+    <link href="http://rchavarria.github.com/blog/2013/09/03/demos-tecnologias-javaee/"/>
+    <updated>2013-09-03T12:55:00+02:00</updated>
+    <id>http://rchavarria.github.com/blog/2013/09/03/demos-tecnologias-javaee</id>
+    <content type="html"><![CDATA[<p>Este post va a servir de índice o tabla de contenidos para una serie de post que
+me gustaría ir escribiendo poco a poco, sin prisa pero sin pausa, que el blog ya
+lleva mucho tiempo si actualizarse y hay que darle vida.</p>
+
+<p>Estos posts van a tratar sobre tecnologías Java EE, de cómo usar estas tecnologías
+en nuestros proyectos software y de cómo estas tecnologías nos permiten crear
+aplicaciones. Intentaré que estas aplicaciones estén más orientadas a las aplicaciones
+web.</p>
+
+<p>Comenzaré con temas y aplicaciones muy sencillas, que prácticamente no tienen sentido
+en el Mundo Real™, pero que me permitirán ir adentrándome en todo el mundo Java EE.</p>
+
+<!-- more -->
+
+
+<p>Lista de posts:</p>
+
+<ul>
+<li><a href="/blog/2013/09/03/sencillo-servlet-http">Un sencillo servlet HTTP</a>: En este post veremos
+que crear un servlet en Java EE 6 es sincillísimo, y que incluso no es necesario
+contar con un archivo descriptor de la aplicación web.</li>
+<li><a href="/blog/2013/09/13/servlet-lee-parametros">Acceder a los datos de un formulario desde un servlet</a>:
+Es posible acceder a datos enviados por el usuario en la petición HTTP desde un servlet.
+En este post veremos cómo.</li>
+</ul>
+
+
+<!--
+    http://theopentutorials.com/examples/java-ee/servlet/get-all-parameters-in-html-form-using-getparameternames/
+    https://baurdotnet.wordpress.com/2011/01/31/getting-a-request-parameter-in-a-servlet/
+    
+    ampliarlo mediante un ejemplo de cómo enviar un archivo?  
+-->
+
+
+<ul>
+<li>Servlet listeners: Veremos el uso que le podemos dar a los distintos listeners asociados
+a los servlets y su ciclo de vida: ServletContextListener,
+ServletContextAttributeListener, ServletRequestListener y HttpSessionListener.</li>
+<li>Crear una EJB sin estado: Aquí crearemos una EJB local sin estado y accederemos a
+ella a través de un servlet, que será quien responda al usuario de nuestra aplicación.</li>
+<li>Crear una EJB remota: En esta ocasión crearemos una EJB sin estado y remota, de forma
+que se pueda acceder a ella desde una aplicación cliente, que también la desarrollaremos.</li>
+</ul>
+
+
+<p>Más adelante ya iré viendo por dónde seguirían las demos: páginas JSPs,
+filtros para los servlets, logging, datos en la sesión, redirección...</p>
+
+<!-- 
+    Por donde seguir?
+
+    http://www3.ntu.edu.sg/home/ehchua/programming/java/JavaServlets.html
+    http://www.journaldev.com/1877/java-servlet-tutorial-with-examples-for-beginners
+    http://www.journaldev.com/1997/servlet-example-in-java-with-database-connection-and-log4j-integration
+    http://www.journaldev.com/1933/java-servlet-filter-example-tutorial
+
+-->
+
+]]></content>
+  </entry>
+  
+</feed>

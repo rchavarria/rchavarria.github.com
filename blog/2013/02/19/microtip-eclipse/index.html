@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>[microtip] eclipse: Detail Formatters - R. Chavarria's Blog</title>
+  <meta name="author" content="Rub&eacute;n Chavarr&iacute;a">
+
+  
+  <meta name="description" content="[microtip] eclipse: Detail Formatters Feb 19th, 2013 A través del post de Kinisoftware:
+A la caza del bug en eclipse
+me encontré con un link muy &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://rchavarria.github.com/blog/2013/02/19/microtip-eclipse/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="R. Chavarria's Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36829645-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">R. Chavarria's Blog</a></h1>
+  
+    <h2>Blogging like a hacker about Software Development</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:rchavarria.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article role="article">
+  
+  <header>
+    <h1 class="entry-title">[microtip] eclipse: Detail Formatters</h1>
+    <p class="meta">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-19T17:19:00+01:00" pubdate data-updated="true">Feb 19<span>th</span>, 2013</time></p>
+  </header>
+  
+  <p>A través del post de <a href="http://twitter.com/kinisoftware">Kinisoftware</a>:
+<a href="http://kinisoftware.com/2013/02/a-la-caza-del-bug-en-eclipse/">A la caza del bug en eclipse</a>
+me encontré con un link muy recomendable, si trabajas con Eclipse como IDE:
+<a href="http://eclipsesource.com/blogs/2013/01/08/effective-java-debugging-with-eclipse/">Effective Java debugging with Eclipse</a>.</p>
+
+<p>En ese link aparecen multitud de consejos sobre cómo hacer debug en eclipse de una manera
+mucho más productiva. Entre estos consejos están los <em>Detail Formatters</em>, para formatear
+de una forma mucho más avanzada que con un simple <code>toString()</code> aquellas clases que desees.</p>
+
+<!-- more -->
+
+
+<p>En un primer momento, me parecieron muy útiles, pero no profundicé en ellos. Pensé que
+cada vez que iniciara la depuración de una aplicación, debía crearme los Detail
+Formatters que deseaba, y me pareció muy laborioso.</p>
+
+<p>Pero no es así, estos formatters se guardan en tus preferencias, y los puedes
+editar siempre que quieras. Los encontrarás en el menú <code>Window</code> > <code>Preferences</code>.
+Y dentro de preferencias, en <code>Java</code> > <code>Debug</code> > <code>Detail Formatters</code>.</p>
+
+<h2>Buscando una excusa</h2>
+
+<p>Una vez que me convencí de su utilidad, había que crear alguno, ¿no?. Actualmente
+me encuentro con que trabajo bastante con el tipo de Java <code>java.awt.geom.Rectangle2D</code>,
+y la verdad es que no me gusta nada cómo Eclipse me muestra este tipo de datos
+en una sesión de debugging.</p>
+
+<p><img class="center" src="/images/2013/rectangle2d-without-detail-formatter.png" width="804" height="151" title="Rectangle2D sin detail formatter" ></p>
+
+<h2>Crear un detail formatter</h2>
+
+<p>Manos a la obra. Primero, establecemos un punto de ruptura donde podamos ver en la vista
+<em>Variables</em> una variable de la clase deseada, en este caso de <code>java.awt.geom.Rectangle2D</code>.</p>
+
+<p>Pinchamos con el botón derecho del ratón y seleccionamos la opción <em>New Detail Formatter&#8230;</em>.</p>
+
+<p>Ahora tenemos a nuestra disposición una ventana donde podemos introducir código Java de forma
+que retorne una <code>String</code> con la representación que nosotros queramos. Yo he usado el siguiente
+código:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="n">java</span><span class="o">.</span><span class="na">text</span><span class="o">.</span><span class="na">NumberFormat</span> <span class="n">nf</span> <span class="o">=</span>
+</span><span class='line'>    <span class="n">java</span><span class="o">.</span><span class="na">text</span><span class="o">.</span><span class="na">NumberFormat</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="n">java</span><span class="o">.</span><span class="na">util</span><span class="o">.</span><span class="na">Locale</span><span class="o">.</span><span class="na">ENGLISH</span><span class="o">);</span>
+</span><span class='line'><span class="n">nf</span><span class="o">.</span><span class="na">setMaximumFractionDigits</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
+</span><span class='line'><span class="n">nf</span><span class="o">.</span><span class="na">setGroupingUsed</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">return</span>
+</span><span class='line'>    <span class="s">&quot;x: &quot;</span> <span class="o">+</span> <span class="n">nf</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">getX</span><span class="o">())</span> <span class="o">+</span> <span class="s">&quot;\n&quot;</span> <span class="o">+</span>
+</span><span class='line'>    <span class="s">&quot;y: &quot;</span> <span class="o">+</span> <span class="n">nf</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">getY</span><span class="o">())</span> <span class="o">+</span> <span class="s">&quot;\n&quot;</span> <span class="o">+</span>
+</span><span class='line'>    <span class="s">&quot;w: &quot;</span> <span class="o">+</span> <span class="n">nf</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">getWidth</span><span class="o">())</span> <span class="o">+</span> <span class="s">&quot;\n&quot;</span> <span class="o">+</span>
+</span><span class='line'>    <span class="s">&quot;h: &quot;</span> <span class="o">+</span> <span class="n">nf</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">getHeight</span><span class="o">());</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Y éste es el resultado, para mi gusto, mucho más compacto y directo:</p>
+
+<p><img class="center" src="/images/2013/rectangle2d-using-detail-formatter.png" width="548" height="116" title="Rectangle2D usando detail formatter" ></p>
+
+<h2>Conclusión</h2>
+
+<p>En cualquier proyecto nos podemos encontrar con clases que no podremos modificar (frameworks,
+librerías, código legacy, &#8230;). Pero no nos tenemos que conformar con sus tristes y aburridos
+métodos <code>toString()</code>. Podemos escribir nuestro propio código para formatear estos tipos de datos.
+Y lo mejor de todo, podemos reutilizarlo, ya que nuestros formatters se guardan como preferencias
+de nuestro IDE favorito.</p>
+
+  
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/09/13/servlet-lee-parametros/">Leer parámetros desde un servlet</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/03/sencillo-servlet-http/">Un sencillo servlet HTTP</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/03/demos-tecnologias-javaee/">Demos de tecnologías Java EE</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/05/30/aprendiendo-a-colaborar-en-github/">Aprendiendo a colaborar en github</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/04/30/save-informaticos/">Save InformaticOS, mi primer open space</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("rchavarriat", 4, true);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/rchavarriat">@rchavarriat</a></p>
+  
+</section>
+
+
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/rchavarriat?count=5&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/rchavarriat">My Delicious Bookmarks &raquo;</a></p>
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Rub&eacute;n Chavarr&iacute;a -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'rchavarria-github-com';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://rchavarria.github.com/blog/2013/02/19/microtip-eclipse/';
+        var disqus_url = 'http://rchavarria.github.com/blog/2013/02/19/microtip-eclipse/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

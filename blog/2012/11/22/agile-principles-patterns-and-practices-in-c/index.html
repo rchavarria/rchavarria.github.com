@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Agile principles, patterns and practices in C# - R. Chavarria's Blog</title>
+  <meta name="author" content="Rub&eacute;n Chavarr&iacute;a">
+
+  
+  <meta name="description" content="Agile principles, patterns and practices in C# Nov 22nd, 2012 Agile principles, patterns and practices in C# Robert C. Martin Por qué lo he leído Lo &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://rchavarria.github.com/blog/2012/11/22/agile-principles-patterns-and-practices-in-c/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="R. Chavarria's Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36829645-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">R. Chavarria's Blog</a></h1>
+  
+    <h2>Blogging like a hacker about Software Development</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:rchavarria.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article role="article">
+  
+  <header>
+    <h1 class="entry-title">Agile principles, patterns and practices in C#</h1>
+    <p class="meta">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-11-22T11:22:00+01:00" pubdate data-updated="true">Nov 22<span>nd</span>, 2012</time></p>
+  </header>
+  
+  <h4>Agile principles, patterns and practices in C#</h4>
+
+
+
+
+<h5>Robert C. Martin</h5>
+
+
+<p><img class="right" src="http://vig-fp.prenhall.com/bigcovers/0131857258.jpg" width="300" height="222" title="Agile principles, patterns and practices" ></p>
+
+<h2>Por qué lo he leído</h2>
+
+
+<p>Lo he leido porque me he encontrado referencias a este libro en libros anteriores que he leído, en blogs sobre desarrollo de software que suelo leer y en otros muchos sitios relacionados con el software. Si encuentro tantas referencias, será por algo, ¿no? Además, el autor es muy conocido y valorado, así que no había excusa para no leerlo.</p>
+
+<!-- more -->
+
+
+
+
+<h2>Qué esperaba</h2>
+
+
+<p>Me esperaba un libro de <em>Uncle Bob™</em>. Ya he leído alguno del mismo autor, y me gusta su estilo. Algunas veces me parece un poco extremista, pero creo que es así porque cree en lo que hace y eso es lo que predica. Cuando creo que exagera, no le hago mucho caso y sigo hacia adelante, ya está.</p>
+
+<p>Esperaba una descripción de las metodologías ágiles aplicadas al momento de escribir software y encontré &#8230;</p>
+
+<h2>Qué encontré</h2>
+
+
+<p>&#8230; un pedazo de ladrillo! Me asusté cuando vi la extensión del libro, pero enseguida entendí el porqué. El libro está lleno de diagramas <a href="http://es.wikipedia.org/wiki/Lenguaje_Unificado_de_Modelado">UML</a> y de código fuente (primero los tests, por supuesto). Así que es normal que sea tan largo.</p>
+
+<p>En cuanto al contenido, me gustó mucho la descripción que hace de muchos patrones de diseño, (incluso he aprendido alguno que no conocía). En el libro también podrás encontrar una descripción detallada de los principios <a href="http://es.wikipedia.org/wiki/SOLID_(object-oriented_design)">SOLID</a> y de otros principios sobre cómo organizar y empaquetar los distintos componentes de tu aplicación (clases, paquetes, namespaces, lo que sea).</p>
+
+<h2>Conclusiones</h2>
+
+
+<p>Aunque el libro sea muy extenso, me ha gustado por varias razones:</p>
+
+<ul>
+    <li>He aprendido nuevos patrones de diseño.</li>
+    <li>He podido profundizar sobre el patrón Model-View-Controller (ver enlaces más abajo).</li>
+    <li>He encontrado una descripción muy detallada de los principios <a href="http://es.wikipedia.org/wiki/SOLID_(object-oriented_design)">SOLID.</a></li>
+</ul>
+
+
+<h2>Pasajes que quiero recordar de este libro</h2>
+
+
+<blockquote>Un módulo que es difícil de cambiar, está roto y necesita ser arreglado, aunque funcione.</blockquote>
+
+
+<blockquote>Un módulo que no comunica está roto y necesita ser arreglado.</blockquote>
+
+
+<blockquote>Cuanto más conocen los programadores sobre <em>todo</em> el proyecto, más sano y más informado está el equipo que lo desarrolla.</blockquote>
+
+
+<blockquote>Es el <em>big picture</em> lo que mantiene unido el sistema. Es la visión del sistema lo que hace obvia la localización y la forma de los módulos individuales. Si la forma de un módulo es inconsistente con la <em>metáfora</em>, es el módulo quien está mal, no la metáfora.</blockquote>
+
+
+<blockquote>Al final, el código fuente <em>es</em> el diseño.</blockquote>
+
+
+<blockquote>Se sabe que el software se está pudriendo cuando empieza a mostrar alguno de los siguientes síntomas: rigidez, fragilidad, inmovilidad, viscosidad, complejidad innecesaria, repetición innecesaria u opacidad.</blockquote>
+
+
+<blockquote>El elemento más volatil en los proyectos software son los requisitos. Vivimos en un mundo de requisitos cambiantes, y nuestro trabajo es estar seguros de que nuestros software puede sobrevivir a esos cambios, así que no culpes a los requisitos cambiantes por los fallos en el software.</blockquote>
+
+
+<blockquote>Los principios SOLID: <strong>S</strong>ingle responsability principle, <strong>O</strong>pen close principle, <strong>L</strong>iskov substitution principle, <strong>I</strong>nterface segregation principle, <strong>D</strong>ependency inversion principle.</blockquote>
+
+
+<blockquote>Un motivo de cambio es un motivo de cambio sólo cuando el cambio ocurre, mientras tanto no.</blockquote>
+
+
+<blockquote><em>Strategy </em>and <em>Template method</em> son las formas más comunes de satisfacer Open closed principle. Estos patrones representan una clara separación de la funcionalidad genérica de la implementación detallada de esa funcionalidad.</blockquote>
+
+
+<blockquote><em>Fool me once, shame on you. Fool me twice, shame on me.</em> Inicialmente, escribimos nuestro código pensando que no va a cambiar. Cuando ocurre un cambio, implementamos abstraciones que nos protegen de futuros cambios de esa misma naturaleza.</blockquote>
+
+
+<blockquote>Liskov substitution principle nos lleva a una importante conclusión: un modelo, visto aisladamente, no puede ser validado significativamente. La validez de un modelo puede ser expresado solo en términos de sus clientes.</blockquote>
+
+
+<blockquote>Liskov substitution principle clarifica que en la programación orientada a objetos, una relación de herencia pertenece al comportamiento que puede ser asumido y que los clientes dependen de este comportamiento, lo contrario de lo que normalmente se cree, que la herencia pertenece al estado</blockquote>
+
+
+<blockquote>El diseño de grandes sistemas depende críticamente de un buen diseño de componentes (paquetes, entregables, &#8230;), de esta forma, los equipos individuales puede enfocarse en componentes aislados en lugar de preocuparse por el sistema completo.</blockquote>
+
+
+<blockquote>Las interfaces pertenecen al cliente que las usa, no a la implementación. El enlace lógico entre el cliente y el interfaz es más fuerte que la relación entre el interfaz y sus implementaciones. Es tan fuerte que no tiene sentido desplegar el cliente sin el interfaz, pero sí que lo tiene desplegar el interfaz sin sus implementaciones.</blockquote>
+
+
+
+
+<h2>Otras lecturas y enlaces relacionadas</h2>
+
+
+<ul>
+    <li>[pdf] <a href="http://www.objectmentor.com/resources/articles/TheHumbleDialogBox.pdf">The humble dialog box</a>: cómo separar la lógica de negocio de la interfaz gráfica, de Michael Feathers.</li>
+    <li><a href="http://www.martinfowler.com/eaaDev/ModelViewPresenter.html">Patrón model-view-presenter</a>: artículo de Martin Fowler que me llevó a éste de <a href="http://www.martinfowler.com/eaaDev/uiArchs.html">Arquitecturas GUI</a>.</li>
+    <li><a href="http://apagayvuelveaencender.blogspot.com.es/2012/11/metodologias-agiles-me-las-creo-o-no-me.html">Metodologías ágiles: ¿me las creo o no me las creo?</a>: excelente post de <a href="http://twitter.com/andres_viedma">Andrés Viedma</a> que me viene ni al pelo como enlace relacionado con el libro y donde se explican los cuatro principios del desarrollo de software ágil</li>
+    <li>Hace ya un tiempo, leí sobre <a href="/blog/2010/03/04/principios-y-patrones-de-diseno/">principios y patrones de diseño</a></li>
+</ul>
+
+
+  
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/09/13/servlet-lee-parametros/">Leer parámetros desde un servlet</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/03/sencillo-servlet-http/">Un sencillo servlet HTTP</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/03/demos-tecnologias-javaee/">Demos de tecnologías Java EE</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/05/30/aprendiendo-a-colaborar-en-github/">Aprendiendo a colaborar en github</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/04/30/save-informaticos/">Save InformaticOS, mi primer open space</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("rchavarriat", 4, true);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/rchavarriat">@rchavarriat</a></p>
+  
+</section>
+
+
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/rchavarriat?count=5&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/rchavarriat">My Delicious Bookmarks &raquo;</a></p>
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Rub&eacute;n Chavarr&iacute;a -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'rchavarria-github-com';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://rchavarria.github.com/blog/2012/11/22/agile-principles-patterns-and-practices-in-c/';
+        var disqus_url = 'http://rchavarria.github.com/blog/2012/11/22/agile-principles-patterns-and-practices-in-c/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

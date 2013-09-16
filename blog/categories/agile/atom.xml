@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: agile | R. Chavarria's Blog]]></title>
+  <link href="http://rchavarria.github.com/blog/categories/agile/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.com/"/>
+  <updated>2013-09-16T22:41:11+02:00</updated>
+  <id>http://rchavarria.github.com/</id>
+  <author>
+    <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[La meta]]></title>
+    <link href="http://rchavarria.github.com/blog/2013/04/10/la-meta/"/>
+    <updated>2013-04-10T10:06:00+02:00</updated>
+    <id>http://rchavarria.github.com/blog/2013/04/10/la-meta</id>
+    <content type="html"><![CDATA[<h4>La meta</h4>
+
+<h5>Eliyahu Goldratt</h5>
+
+<p><img class="right" src="http://ecx.images-amazon.com/images/I/51E50P52AXL.<em>SY300</em>.jpg" width="195" height="300" title="La meta" ></p>
+
+<h2>Por qué lo he leído</h2>
+
+<p>Nunca había oído hablar de este libro, pero cuando asistí a la CAS2012, el año pasado en Cáceres,
+varias personas que allí conocí (<a href="https://twitter.com/rferlei">Roberto</a> y
+<a href="https://twitter.com/anuskiaranda">Ana</a>) me hablaron maravillas de él, así que decidí
+ponerlo en la lista de libros a leer.</p>
+
+<!-- more -->
+
+
+<h2>Qué esperaba</h2>
+
+<p>Bueno, en realidad ya me habían contado de qué iba el libro, así que ya llevaba una buena idea
+de lo que se iba a tratar. Y tenía bastantes buenas espectativas.</p>
+
+<h2>Qué encontre</h2>
+
+<p>Encontré un magnífico libro. La verdad es que es muy ameno y divertido. También es intrigante
+ir leyendo cómo el autor va relatando a través del protagonista un proceso de descubrimiento de
+soluciones a todos sus problemas.</p>
+
+<p>La verdad es que se hace muy fácil de leer y comprender los principios Lean y la teoría de las
+restricciones a través de la historia contada a través del protagonista.</p>
+
+<h2>Conclusiones</h2>
+
+<p>El libro me ha encantado, aunque me hubiera gustado mucho más haberlo leído un tiempo atrás, ya
+que trabajé en una fábrica como Ingeniero de Desarrollo (para desarrollar nuevos productos). Por
+lo menos ha sido divertido revivir experiencias de aquel trabajo, ya que muchos de los principios
+(y problemas también) expuestos en el libro ya los viví en mis propias carnes.</p>
+
+<p>Así pues, este es un libro recomendado sobre todo a todos aquellos interesados en mejorar procesos
+de producción. No parece un tema muy de desarrollo de software, que es a lo que me dedico, pero
+estos principios son la base de las metodologías Lean, y por ende, Agile. Además, es un libro
+que se lee relativamente rápido, y, de verdad, es muy divertido, así que tampoco cuesta tanto.</p>
+
+<h2>Pasajes que quiero recordar de este libro</h2>
+
+<blockquote><p>Comprar a precios económicos no es la meta.</p>
+
+<p>La meta no es vender, hay veces que se vende perdiendo dinero o con márgenes ínfimos.</p>
+
+<p>Qué es lo que la gente piensa que son las metas: compras baratas, contratación de gente adecuada,
+tecnología punta, fabricacón de bienes de calidad, venta de bienes de calidad,
+conquista tasa de mercado, comunciaciones o cumplimiento de los deseos del cliente.
+Pero esos son medios para alcanzar la meta.</p>
+
+<p>La calidad sola, es importante, pero no es la meta.</p>
+
+<p>Tecnologia, es importatne, pero no es la meta.</p>
+
+<p>Trabajar no es sinónimo de ganar dinero.</p>
+
+<p>Ésta es la meta: ganar dinero aumentando los beneficios netos y al mismo tiempo el rendimiento
+de la inversión (ROI) y la liquidez.</p>
+
+<p>Parámetros que expresan la meta y que permiten establecer procedimientos operativos para
+dirigir la fábrica: ingresos, inventarios y gastos de operación.</p>
+
+<p>Una fabrica, en la que todo el mundo produce ininterrumpidamente, es muy poco productiva.</p>
+
+<p>Una regla que expresa la relación entre cuellos de botella y los demas recursos: equilibrar
+el flujo, no la capacidad.</p>
+
+<p>El grado de utilización de un recuros 'no-cuello' de botella no vendrá dado por su propia
+capacidad sino por alguna otra restricción del sistema.</p>
+
+<p>Se pueden distinguir 4 tipos de tiempos desde que el material entra en la fábrica hasta
+que sale de ella: de preparación, de proceso, en cola y de espera.</p>
+
+<p>Tres consejos sobre cómo dirigir: Saber convencer a otras personas, desprender las capas
+de la práctica común y vencer la resistencia al cambio.</p>
+
+<p>Nunca des las respuestas, solo plantea las preguntas.</p>
+
+<p>¿Qué cabmiar? ¿Hacia qué cambiar? ¿Cómo provocar el cambio? Basicamente estamos pidiendo
+las habiliades fundamentales que uno debería esperar de un directivo.</p></blockquote>
+
+<h2>Conceptos</h2>
+
+<ul>
+<li><p>Productividad: significa hacer las cosas de tal manera que, en el caso de la empresa, ésta
+se aproxime lo más posible a su meta. Todo aquello que lleve a una compañía más cerca de su meta
+es productivo, todo aquello que no la lleve es imprductivo.</p></li>
+<li><p>Ingresos: tasa de generacion de dinero a traves de las ventas.</p></li>
+<li><p>Inventario: todo el dinero que el sistema ha invertido en adquierrir cosas que pretende vender.</p></li>
+<li><p>Gastos de operación: todo el dienro que el sistema gasta para convertir el inventario en ingresos netos.</p></li>
+</ul>
+
+
+<h2>Otras lecturas y enlaces relacionadas</h2>
+
+<ul>
+<li><a href="/blog/2012/10/10/lean-software-development/">Lean software development</a>, de Mary y Tom Poppendiek.</li>
+<li><a href="https://plus.google.com/105077077543737057709">Roberto Hens</a> también lo ha leído, y esto es lo que le parece:
+<a href="http://robertohens.blogspot.com.es/2013/04/Kanban-el-Origen-The-Goal.html">Kanban, el origen</a>.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Agile estimating and planning]]></title>
+    <link href="http://rchavarria.github.com/blog/2013/02/13/agile-estimating-and-planning/"/>
+    <updated>2013-02-13T13:08:00+01:00</updated>
+    <id>http://rchavarria.github.com/blog/2013/02/13/agile-estimating-and-planning</id>
+    <content type="html"><![CDATA[<h4>Agile estimating and planning</h4>
+
+<h5>Mike Cohn</h5>
+
+<p><img class="right" src="http://www.mcwherter.net/Portals/McWherter/9780131479418.jpg" width="245" height="324" title="Agile estimating and planning" ></p>
+
+<h2>Por qué lo he leído</h2>
+
+<p>últimamente estoy leyendo muchos libros relacionados con las metodologías ágiles, y en muchos de ellos se hacía referencia a este libro, así que pensé que debía ser un libro imprescindible. Y así es.</p>
+
+<!-- more -->
+
+
+<h2>Qué esperaba</h2>
+
+<p>Esperaba encontrar muchas técnicas de estimación, métricas para controlar que una planificación no se desvía del plan inicial y cosas así.</p>
+
+<p>También esperaba encontrar una serie de consejos a aplicar a la hora de hacer las estimaciones, y la verdad es que el libro no me ha defraudado para nada.</p>
+
+<h2>Qué encontre</h2>
+
+<p>Encontré todo eso y mucho más. Descubrí nuevos conceptos (ver último apartado) y conocí de primera mano técnicas que hasta ahora solo había conocido por encima, como los diagramas <em>burndown</em>, para registrar los puntos de historia que se han implementado en una iteración.</p>
+
+<h2>Conclusiones</h2>
+
+<p>El libro me ha encantado. Creo que es una lectura obligatoria para cualquier persona que esté relacionada con las planificaciones de los proyectos software. Estoy seguro de que aprendería muchísimas cosas. Claro, que si eres desarrollador también te conviene conocer las técnicas explicadas en este libro.</p>
+
+<p>Una cosa que me ha gustado muchísimo es que al final de cada capítulo hay un resumen exponiendo las ideas principales del capítulo. Muy útil por si tienes que ojearlo una vez leído.</p>
+
+<h2>Pasajes que quiero recordar de este libro</h2>
+
+<blockquote><p>En 1981, Barry Boehm dibujó su primera versión del <a href="https://raw.github.com/tapichu/scrum/gh-pages/img/03%20-%20cono%20de%20incertidumbre.png"><em>cono de incertidumbre</em></a>. La imagen del enlace muestra los rangos iniciales de incertidumbre en diferentes puntos de un proceso de desarrollo secuencial ("en cascada")</p>
+
+<p>El "cono de incertidumbre" se va estrechando conforme el proyecto va avanzando.</p>
+
+<p>Un plan <em>ágil</em> is aquel que no es que no queramos cambiar, sino que estamos ansiosos de hacerlo, y queremos
+cambiarlo porque eso significa que hemos aprendido algo o que hemos sorteado una dificultad.</p>
+
+<p>Las funcionalidades son la unidad de valor para el cliente, y no las actividades, aunque nosotros
+planificamos basándonos en actividades, por eso muchos proyectos fallan.</p>
+
+<p>La multitarea se convierte en un problema para los proyectos planificados tradicionalmente porque
+incentiva enfocarse en la máxima utilzizacion de todos los individuos en lugar de mantener un margen
+suficiente para poder manejar la variabilidad típica de las tareas de los proyectos software.</p>
+
+<p>Un equipo <em>ágil</em> trabaja como una unidad, no hay espacio para la mentalidad "ahí lo dejo y ya está". Un
+buen equipo <em>ágil</em> debe tener una mentalidad de estamos todos juntos en esto.</p>
+
+<p>Las <em>historias de usuario</em> son una técnica poco pesada para expresar los requisitos del software.</p>
+
+<p>Los equipos ágiles planifican a tres niveles: release, iteración y dia. <strong>release</strong>: determina el alcance,
+las fechas y los recursos de un proyecto. <strong>iteración</strong>: identfica tareas de alta prioridad que el equipo
+debería realizar en la siguiente iteración. <strong>dia</strong>: coordina el trabajo y sincroniza los esfuerzos
+del dia a dia.</p>
+
+<p>Los proyectos se deberían ver como una forma de generar un flujo de nuevas capacidades y conocimientos,
+conocimientos sobre el producto y sobre el proyecto (equipo, tecnología, personas, ...)</p>
+
+<p>Al igual que en los restaurantes las medidas de las raciones son relativas entre sí, en el mundo software
+sólo necesito saber si una funcionalidad es mayor o menor respecto a otra.</p>
+
+<p>Además de saber que las estimaciones son más fiables si son indicadas por aquellos que realizarán la tarea,
+las estimaciones son aún mejores si se basan en la colaboración del equipo al completo.</p>
+
+<p>Las tres formas más comunes de dar una estimación son: opinión de un experto, analogía y disgregación (o
+dividir una tarea en otras más pequeñas).</p>
+
+<p>La cantidad de tiempo que llevará implementar una funcionalidad es función de su tamaño (puntos historia) y
+el ratio de progreso del equipo (velocidad)</p>
+
+<p>Se deben tener en cuenta cuatro factores a la hora de priorizar tareas: valor de las funcionalidades, coste
+del desarrollo, nuevo conocimiento que generará y riesgos que eliminará la realización de la tarea.</p>
+
+<p>Kano (link al torpedo este, con imagen y todo si es posible) nos da una forma de separar funcionalidades en tres categorías: indispensables,
+lineales y excitantes/sorprendentes.</p>
+
+<p>Entregar un subconjunto coherente de todas las capas de una funcionalidad is siempre mejor que entregar
+una capa entera pero sin conexión con el resto de ellas.</p>
+
+<p>Así como un corazón bate a un ritmo regular que mantienen el cuerpo funcionando, un duración de iteración
+fija proporciona una constante que ayuda a establecer un ritmo de desarrollo y entregas ~ Simon Baker</p>
+
+<p>Un <em>buffer</em> es un margen de error alrededor de una estimación. Hay dos tipos de buffers: de funcionalidad
+(un 25-40% de las funcionalidades son opcionales) y de planificación (se añade un 30% de tiempo a lo que
+creo que me va a costar).</p>
+
+<p>Un buffer de planificación no es un alargamiento consciente. Las personas alargan conscientemente sus
+estimaciones si creen que se les reprochará no terminar a tiempo. Un buffer es un margen de seguridad
+necesario que sumar al conjunto de estimaciones.</p>
+
+<p>Algo que el autor encuentra muy útil como trabajo a realizar antes de una iteración son las <em>condiciones de
+satisfacción</em> de las historias de usuario a desarrollar en dicha iteración por parte del cliente.</p>
+
+<p>Un <em>release burndown chart</em> muestra la cantidad de trabajo que queda por realizar al inicio de cada iteración.
+Esto se convierte en un indicador visual de cómo y a qué velocidad se está acercando el equipo al objetivo
+del proyecto.</p>
+
+<p>La variabilidad es parte da cada estimación. No importa cuánto esfuerzo se ponga en mejorarlas, un equipo nunca
+será capaz de estimar perfectamente.</p>
+
+<p>No gestionar la velocidad individualmente. Se debe incentivar siempre que sea posible que todos los miembros
+del equipo trabajen como un todo, como un único equipo.</p>
+
+<p>Las estimaciones y planificaciones ágiles funcionan porque se separan las estimaciones de tamaño y de duración:
+puntos historia * velocidad = duración</p>
+
+<p>Las planficaciones tradicionales se enfocan en las tareas para crear el producto, mientras que las planificaciones
+ágiles se centran en las funcionalidades que desea el usuario.</p>
+
+<p>Cuando creamos un plan al principio de un proyecto y no lo actualizamos con los nuevos conocimiento adquiridos,
+estamos perdiendo la oportunidad de sincronizar nuestro proyecto con la realidad.</p></blockquote>
+
+<h2>Conceptos</h2>
+
+<ul>
+<li><a href="http://gzurita.blogspot.com.es/2006/07/idea-valiosa-el-cono-de-incertidumbre.html">Cono de incertidumbre</a></li>
+<li><a href="http://ow.ly/hFQSx">Velocidad</a></li>
+<li><a href="www.youtube.com/watch?v=lGXLe9RiJyY">Commitment-driven iteration planning</a>:
+Una aproximación guiado por el compromiso is una alternativa a la
+planificación de la iteración. El equipo va añadiendo historias a la iteración de una en una mientras que ellos
+se puedan comprometer a entregarlas. Las historias son seleccionadas, descompuestas en tareas y éstas estimadas.
+De una en una. En la aproximación de planificar basándose en la velocidad, se eligen un conjunto de historias
+cuyas estimaciones sean iguales o menores que la velocidad del equipo.</li>
+<li><a href="http://stackoverflow.com/a/3700855/1111676">Condiciones de satisfacción</a></li>
+<li><a href="https://www.google.es/search?q=burndown+bar+chart&amp;tbm=isch">burndown bar chart</a></li>
+</ul>
+
+
+<h2>Otras lecturas y enlaces relacionadas</h2>
+
+<ul>
+<li><a href="http://jmbeas.es/guias/">Guía de conceptos ágiles</a></li>
+<li><a href="http://twitter.com/joserra_diaz/">Jose Ramón Díaz</a>, de <a href="http://www.agilar.org/">Agilar</a>,
+habla de <a href="http://najaraba.blogspot.com.es/2013/02/la-estimacion-agil-de-proyectos-puntos.html">estimaciones ágiles</a>
+en su blog.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Agile principles, patterns and practices in C#]]></title>
+    <link href="http://rchavarria.github.com/blog/2012/11/22/agile-principles-patterns-and-practices-in-c/"/>
+    <updated>2012-11-22T11:22:00+01:00</updated>
+    <id>http://rchavarria.github.com/blog/2012/11/22/agile-principles-patterns-and-practices-in-c</id>
+    <content type="html"><![CDATA[<h4>Agile principles, patterns and practices in C#</h4>
+
+
+
+
+<h5>Robert C. Martin</h5>
+
+
+<p><img class="right" src="http://vig-fp.prenhall.com/bigcovers/0131857258.jpg" width="300" height="222" title="Agile principles, patterns and practices" ></p>
+
+<h2>Por qué lo he leído</h2>
+
+
+<p>Lo he leido porque me he encontrado referencias a este libro en libros anteriores que he leído, en blogs sobre desarrollo de software que suelo leer y en otros muchos sitios relacionados con el software. Si encuentro tantas referencias, será por algo, ¿no? Además, el autor es muy conocido y valorado, así que no había excusa para no leerlo.</p>
+
+<!-- more -->
+
+
+
+
+<h2>Qué esperaba</h2>
+
+
+<p>Me esperaba un libro de <em>Uncle Bob™</em>. Ya he leído alguno del mismo autor, y me gusta su estilo. Algunas veces me parece un poco extremista, pero creo que es así porque cree en lo que hace y eso es lo que predica. Cuando creo que exagera, no le hago mucho caso y sigo hacia adelante, ya está.</p>
+
+<p>Esperaba una descripción de las metodologías ágiles aplicadas al momento de escribir software y encontré ...</p>
+
+<h2>Qué encontré</h2>
+
+
+<p>... un pedazo de ladrillo! Me asusté cuando vi la extensión del libro, pero enseguida entendí el porqué. El libro está lleno de diagramas <a href="http://es.wikipedia.org/wiki/Lenguaje_Unificado_de_Modelado">UML</a> y de código fuente (primero los tests, por supuesto). Así que es normal que sea tan largo.</p>
+
+<p>En cuanto al contenido, me gustó mucho la descripción que hace de muchos patrones de diseño, (incluso he aprendido alguno que no conocía). En el libro también podrás encontrar una descripción detallada de los principios <a href="http://es.wikipedia.org/wiki/SOLID_(object-oriented_design)">SOLID</a> y de otros principios sobre cómo organizar y empaquetar los distintos componentes de tu aplicación (clases, paquetes, namespaces, lo que sea).</p>
+
+<h2>Conclusiones</h2>
+
+
+<p>Aunque el libro sea muy extenso, me ha gustado por varias razones:</p>
+
+<ul>
+    <li>He aprendido nuevos patrones de diseño.</li>
+    <li>He podido profundizar sobre el patrón Model-View-Controller (ver enlaces más abajo).</li>
+    <li>He encontrado una descripción muy detallada de los principios <a href="http://es.wikipedia.org/wiki/SOLID_(object-oriented_design)">SOLID.</a></li>
+</ul>
+
+
+<h2>Pasajes que quiero recordar de este libro</h2>
+
+
+<blockquote>Un módulo que es difícil de cambiar, está roto y necesita ser arreglado, aunque funcione.</blockquote>
+
+
+<blockquote>Un módulo que no comunica está roto y necesita ser arreglado.</blockquote>
+
+
+<blockquote>Cuanto más conocen los programadores sobre <em>todo</em> el proyecto, más sano y más informado está el equipo que lo desarrolla.</blockquote>
+
+
+<blockquote>Es el <em>big picture</em> lo que mantiene unido el sistema. Es la visión del sistema lo que hace obvia la localización y la forma de los módulos individuales. Si la forma de un módulo es inconsistente con la <em>metáfora</em>, es el módulo quien está mal, no la metáfora.</blockquote>
+
+
+<blockquote>Al final, el código fuente <em>es</em> el diseño.</blockquote>
+
+
+<blockquote>Se sabe que el software se está pudriendo cuando empieza a mostrar alguno de los siguientes síntomas: rigidez, fragilidad, inmovilidad, viscosidad, complejidad innecesaria, repetición innecesaria u opacidad.</blockquote>
+
+
+<blockquote>El elemento más volatil en los proyectos software son los requisitos. Vivimos en un mundo de requisitos cambiantes, y nuestro trabajo es estar seguros de que nuestros software puede sobrevivir a esos cambios, así que no culpes a los requisitos cambiantes por los fallos en el software.</blockquote>
+
+
+<blockquote>Los principios SOLID: <strong>S</strong>ingle responsability principle, <strong>O</strong>pen close principle, <strong>L</strong>iskov substitution principle, <strong>I</strong>nterface segregation principle, <strong>D</strong>ependency inversion principle.</blockquote>
+
+
+<blockquote>Un motivo de cambio es un motivo de cambio sólo cuando el cambio ocurre, mientras tanto no.</blockquote>
+
+
+<blockquote><em>Strategy </em>and <em>Template method</em> son las formas más comunes de satisfacer Open closed principle. Estos patrones representan una clara separación de la funcionalidad genérica de la implementación detallada de esa funcionalidad.</blockquote>
+
+
+<blockquote><em>Fool me once, shame on you. Fool me twice, shame on me.</em> Inicialmente, escribimos nuestro código pensando que no va a cambiar. Cuando ocurre un cambio, implementamos abstraciones que nos protegen de futuros cambios de esa misma naturaleza.</blockquote>
+
+
+<blockquote>Liskov substitution principle nos lleva a una importante conclusión: un modelo, visto aisladamente, no puede ser validado significativamente. La validez de un modelo puede ser expresado solo en términos de sus clientes.</blockquote>
+
+
+<blockquote>Liskov substitution principle clarifica que en la programación orientada a objetos, una relación de herencia pertenece al comportamiento que puede ser asumido y que los clientes dependen de este comportamiento, lo contrario de lo que normalmente se cree, que la herencia pertenece al estado</blockquote>
+
+
+<blockquote>El diseño de grandes sistemas depende críticamente de un buen diseño de componentes (paquetes, entregables, ...), de esta forma, los equipos individuales puede enfocarse en componentes aislados en lugar de preocuparse por el sistema completo.</blockquote>
+
+
+<blockquote>Las interfaces pertenecen al cliente que las usa, no a la implementación. El enlace lógico entre el cliente y el interfaz es más fuerte que la relación entre el interfaz y sus implementaciones. Es tan fuerte que no tiene sentido desplegar el cliente sin el interfaz, pero sí que lo tiene desplegar el interfaz sin sus implementaciones.</blockquote>
+
+
+
+
+<h2>Otras lecturas y enlaces relacionadas</h2>
+
+
+<ul>
+    <li>[pdf] <a href="http://www.objectmentor.com/resources/articles/TheHumbleDialogBox.pdf">The humble dialog box</a>: cómo separar la lógica de negocio de la interfaz gráfica, de Michael Feathers.</li>
+    <li><a href="http://www.martinfowler.com/eaaDev/ModelViewPresenter.html">Patrón model-view-presenter</a>: artículo de Martin Fowler que me llevó a éste de <a href="http://www.martinfowler.com/eaaDev/uiArchs.html">Arquitecturas GUI</a>.</li>
+    <li><a href="http://apagayvuelveaencender.blogspot.com.es/2012/11/metodologias-agiles-me-las-creo-o-no-me.html">Metodologías ágiles: ¿me las creo o no me las creo?</a>: excelente post de <a href="http://twitter.com/andres_viedma">Andrés Viedma</a> que me viene ni al pelo como enlace relacionado con el libro y donde se explican los cuatro principios del desarrollo de software ágil</li>
+    <li>Hace ya un tiempo, leí sobre <a href="http://rchavarria.github.com/blog/2010/03/04/principios-y-patrones-de-diseno/">principios y patrones de diseño</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mi experiencia en la CAS2012]]></title>
+    <link href="http://rchavarria.github.com/blog/2012/11/08/mi-experiencia-en-la-cas2012/"/>
+    <updated>2012-11-08T10:08:00+01:00</updated>
+    <id>http://rchavarria.github.com/blog/2012/11/08/mi-experiencia-en-la-cas2012</id>
+    <content type="html"><![CDATA[<p>Más vale tarde que nunca. Tenía ganas de escribir mi experiencia en la <a href="http://conferencia2012.agile-spain.org/"><strong>CAS2012</strong></a> (mi primera CAS) pero todavía no había encontrado el hueco. Supongo que quería leer alguna experiencia de otros asistentes, o será mi alter ego perezoso, quién sabe.</p>
+
+<p>La verdad es que volví de <a href="http://es.wikipedia.org/wiki/C%C3%A1ceres">Cáceres</a> encantadísimo, motivadísimo, y cualquier otro adjetivo que termine en <em>-ísimo</em>. ¡Qué pasada! Como ya he dicho antes, ésta ha sido mi primera CAS, y espero que se repita cada año. Sé que será difícil, pero lo intentaré.</p>
+
+<!-- more -->
+
+
+<p>Aunque fuera mi primera CAS, no me sentí para nada un extraño. Todo lo contrario, el ambiente que respiré fue de un profundo compañerismo. Era como si todos supiéramos que estábamos allí por algo, y creo que así era. Yo, al menos, acudí a la CAS porque sentía (y siento) una cierta atracción por el mundo agile, y en Cáceres noté esto mismo en todos y cada uno de los asistentes. <a href="https://twitter.com/jmbeas">Jose Manuel Beas</a> dijo que la palabra que más estaba escuchando era <strong>confianza</strong>. Yo creo que la que más escuché fue <strong>tribu</strong>. Y así me sentí yo, como perteneciente a una <strong>tribu</strong>.</p>
+
+<p>Después de estos sentimentalismos me gustaría agradecer a la organización de la CAS su duro trabajo, la acertada elección del lugar de celebración del evento, la visita guiada por la ciudad, la organización de la cena, ... tantas cosas. Los agradecimientos también a los patrocinadores, sin los cuales el evento no habría sido posible. Muchas gracias a todos por darnos este <strong>eventazo</strong>.</p>
+
+<p>No se puede hablar de este tipo de eventos sin mencionar a la gente. Fuí a la CAS sin conocer a nadie, sólo, a la aventura, pero con ganas de conocer a profesionales que admiro por su trabajo. Y así pude conocer a gente como <a href="https://twitter.com/kinisoftware">@kinisoftware</a>, <a href="https://twitter.com/ialcazar">@ialcazar</a>, <a href="https://twitter.com/xquesada">@xquesada</a>, <a href="https://twitter.com/oyabun">@oyabun</a> y <a href="https://twitter.com/alejandropgarci">@alejandropgarci</a>. Y también tuve el placer de conocer a gente que antes no conocía como <a href="https://twitter.com/anuskiaranda">@anuskiaranda</a>, <a href="https://twitter.com/rferlei">@rferlei</a>, <a href="https://twitter.com/maicatrinidad">@maicatrinidad</a>, <a href="https://twitter.com/FPerezP">@FPerezP</a>, <a href="https://twitter.com/drobur">@drobur</a>, <a href="https://twitter.com/masaKmaeda">@masaKmaeda</a>, <a href="http://es.linkedin.com/in/joaoggama">Joao Gama</a>, <a href="https://twitter.com/eidrien">@eidrien</a>. ¡Me alegro de haberos conocido!</p>
+
+<p>Y por último, unas cuantas frases escuchadas en las charlas a las que asistí que me gustaría destacar, no están todas las mejores, pero son las que más me impactaron y me gustaría recordar:</p>
+
+<blockquote>Abre tu mente, abraza el cambio, haz un esfuerzo <strong>consciente</strong> de no rechazar cambios de forma instintiva. ~ <em>Masa K Maeda</em></blockquote>
+
+
+<blockquote>La tiranía de la <a href="http://en.wikipedia.org/wiki/J_curve">curva J</a>, al inicio de la introducción de un cambio, todo irá a peor. ~ <em>Rodrigo Corral</em></blockquote>
+
+
+<blockquote>Los desarrolladores son los <strong>únicos</strong> agentes de oxidación del software, ya que son los únicos que lo modifican. ~ <em>Alejandro Pérez</em></blockquote>
+
+
+<blockquote>Deja que las personas sean creativas, da libertad al equipo para ser creativo. ~ <em>Luis Fraile</em></blockquote>
+
+
+<blockquote>Mejor cuanto más caliente es la comunicación: cara a cara -&gt; videoconferencia -&gt; teléfono -&gt; chat -&gt; mail -&gt; nada ~ <em>Israel Alcázar</em></blockquote>
+
+
+<blockquote>Los beneficios en la empresa son una consecuencia de los trabajadores, porqué no aportarles: transparencia, compromiso, confianza, autonomía, respeto. ~ <em>Jose Ramón Díaz</em></blockquote>
+
+
+
+
+<p>Si quieres conocer más, en el siguiente <a href="https://docs.google.com/document/d/1SOxDNJd0c_14W2J1ZCyDEJp6NVYc1F5UQRpL7WyjoGo/edit">documento</a> se están recopilando enlaces y recursos sobre la CAS2012.</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Lean software development]]></title>
+    <link href="http://rchavarria.github.com/blog/2012/10/10/lean-software-development/"/>
+    <updated>2012-10-10T10:10:00+02:00</updated>
+    <id>http://rchavarria.github.com/blog/2012/10/10/lean-software-development</id>
+    <content type="html"><![CDATA[<h4>Lean software development</h4>
+
+
+
+
+<h5>Mary Poppendieck, Tom Poppendiek:</h5>
+
+
+<p><img class="right" src="http://www.poppendieck.com/images/Agiletoolkit.jpg" width="250" height="332" title="Lean software development" ></p>
+
+<h2>Por qué lo he leído</h2>
+
+
+<p>Después de leer <a href="http://rchavarria.wordpress.com/2012/07/06/scrum-y-xp-desde-las-trincheras/">Scrum y XP desde las trincheras</a>, me quedé con ganas de leer algún libro más de temática Agile, de desarrollo de software siguiendo prácticas lean. Me llaman mucho la atención las metodologías ágiles de desarrollo de software, y creo que son una buena alternativa a las metodologías tradicionales (aunque voy descubriendo otras como <a href="http://www.javiergarzas.com/2012/09/metodologia-gil-fdd-1.html">FDD</a> que parecen igualmente interesantes).</p>
+
+<p>Busqué un libro <em>antiguo</em>, alguno donde pudiera leer los inicios de estas metodologías, para así poder contextualizar todo lo que escucho y leo de las metodologías ágiles a diario.</p>
+
+<!-- more -->
+
+
+
+
+<h2>Qué esperaba</h2>
+
+
+<p>Esperaba un libro dedicado exclusivamente al software, que expusiera ideas que podían parecer pasadas de moda, pero que siguieran de actualidad en algún sentido.</p>
+
+<p>No había oído nunca nada de los autores, así que tampoco me había formado grandes espectativas, simplemente, quería conocer los inicios de las metodologías ágiles.</p>
+
+<h2>Qué encontré</h2>
+
+
+<p>Me encontré un libro muy útil, y aunque es de hace bastantes años (para tratar sobre desarrollo de software), es de total actualidad. De hecho, me sorprende que todavía haya empresas, personas, organizaciones, que no hayan oido hablar de los conceptos que se hablan en el libro.</p>
+
+<h2>Conclusiones</h2>
+
+
+<p>Me sorprendió mucho que el origen de las metodologías ágiles esté en la industria de la manufactura. Me parece difícil que una metodología haya pasado de esa industria a la del desarrollo del software. Pero como indican los autores (y es la idea principal del libro), no se pueden transladar <strong>prácticas</strong> de un entorno a otro, hay que transladar <strong>principios</strong> (ideas) y crear las nuevas prácticas para el nuevo entorno.</p>
+
+<p>Y es de lo que trata este libro, de exponer una serie de herramientas, un <em>toolkit</em>, para ayudar a comprender y a transladar una serie de principios, que está demostrado que funcionan en una industria, al desarrollo del software.</p>
+
+<h2>Otras lecturas y enlaces relacionadas</h2>
+
+
+<ul>
+    <li><a href="http://www.amazon.com/Lean-Software-Development-Agile-Toolkit/dp/0321150783">Lean software development</a>, en Amazon</li>
+    <li><a href="es.wikipedia.org/wiki/Lean_software_development">Lean software development</a>, en la Wikipedia (español)</li>
+    <li>Web de los autores del libro, los <a href="http://www.poppendieck.com">Poppendieck</a></li>
+</ul>
+
+
+<h2>Pasajes que quiero recordar de este libro</h2>
+
+
+<blockquote>Los siete principios del pensamiento Lean:
+<ol>
+    <li>Elimina desperdicios</li>
+    <li>Amplifica el aprendizaje</li>
+    <li>Decide tan tarde como sea posible</li>
+    <li>Entrega tan rápido como sea posible</li>
+    <li>Fortalece al equipo</li>
+    <li>Trabajar para que haya integridad</li>
+    <li>Centrarse en el todo</li>
+</ol>
+</blockquote>
+
+
+<blockquote>Cualquier cosa que no crea valor para el cliente es desperdicio. Y, sí, los defectos (bugs, incidencias, ...) son desperdicion.</blockquote>
+
+
+<blockquote>Es difícil encontrar control sin realimentación (feedback), porque la realimentación de mucho mejor control y determinismo que complicados procesos de control con algoritmos predefinidos.</blockquote>
+
+
+<blockquote>En la mayoría de los casos, incrementar la realimentación, en lugar de reducirla con rigurosos procesos secuenciales, es la forma más efectiva de lidiar con entornos y proyectos de desarrollo de software en problemas.</blockquote>
+
+
+<blockquote><em>Set-based software development</em>: se desarrollan varias alternativas, se comunican las restricciones (en lugar de las soluciones) y se deja que la solución emerja cumpliendo todas las restricciones.</blockquote>
+
+
+<blockquote>Retrasar decisiones irreversibles mientras se reduce la incertidumbre tiene valor económico. Esto lleva a tomar mejores decisiones, limita los riesgos, ayuda a gestionar la complejidad, reduce el desperdicio y hace felices a los clientes.</blockquote>
+
+
+<blockquote>Los procesos de desarrollo ágiles se pueden entender como la creación de opciones que permiten retrasar las decisiones hasta que las necesidades del cliente son mejor entendidas y haya menos riesgo.</blockquote>
+
+
+<blockquote>Los marines planifican, pero no predicen. Comprenden la esencia de las situaciones, buscan simplificar las suposiciones y alternan aproximaciones. Cuando entran en una misión, la estructura organizativa se diluye, y aquellos que están en el frente, quienes tienen acceso a la información más directa, son los responsables de tomar las decisiones.</blockquote>
+
+
+<blockquote>El principio 'entrega tan rápido como sea posible' complemente a 'decide tan tarde como sea posible'. Cuanto más rápido entregues, más podrás retrasar tus decisiones.</blockquote>
+
+
+<blockquote>(hablando de los <em>pull systems</em>) en lugar de planificar, sistemas como Kanban consiguen que los jefes no intervengan porque cada persona sabe qué hacer en cada momento.</blockquote>
+
+
+<blockquote>Creemos que transferir prácticas de un entorno a otro es, casi siempre, un error. En lugar de ello, uno debe entender los principios fundamentales detrás de las prácticas y transformar esos principios en nuevas prácticas para el nuevo entorno.</blockquote>
+
+
+<blockquote>El mejor modo de mantener el conocimiento sobre un sistema y que sea mantenible es entregar, junto con el código, un conjunto de tests automáticos, complementados por un modelo superficial de alto nivel creado al final del esfuerzo inicial de desarrollo.</blockquote>
+
+
+<blockquote>Integridad conceptual significa que los conceptos centrales de un sistema son vistos contínuos, como un todo cohesionado. La clave para alcanzarla es la efectividad en los mecanismos de comunicación desarrollados por los grupos que conforman el sistema según se van tomando las decisiones que afectan al resto de grupos.</blockquote>
+
+
+<blockquote>¿De dónde ha tomado la genete la idea de que todo buen diseño ocurre al inicio de un proyecto? Mucha gente encargada de desarrollar productos entiende que los grandes diseños evolucionan con el tiempo.</blockquote>
+
+
+<blockquote>¿Refactorizar es rehacer el trabajo? Mejorar un diseño durante el proceso de desarrollo no es rehacer el trabajo, es una buena práctica de diseño.</blockquote>
+
+
+<blockquote>Los tests proporcionan una base en la que apoyarse para que los desarrolladores realizen cambios a lo largo de todo el proceso de desarrollo.</blockquote>
+
+
+<blockquote>La metodologías tradicionales de desarrollo software tienen la manía de medir tareas complejas y desestructuradas a través de partir la tarea en otras más pequeñas. La forma de estar seguro de que todo está medido es mediante agregación, es decir, mover la medida a un nivel superior, no a un nivel inferior.</blockquote>
+
+
+<blockquote>Un contrato con precio fijado donde el vendedor espera obtener beneficios de los cambios pedidos, combinado con mecanismos rigurosos de aceptación de cambios para controlar el gasto, puede doblar aproximadamente el coste y tiempo que se tarda en desarrollar un proyecto a la vez que produce un resultado de pésima calidad.</blockquote>
+
+
+<blockquote>Un contrato de precio flexible está diseñado para lidiar con la incertidumbre y complejidad, pero esto no elimina el riesgo, sino que lo traslada del vendedor al cliente.</blockquote>
+
+
+<h2></h2>
+
+]]></content>
+  </entry>
+  
+</feed>

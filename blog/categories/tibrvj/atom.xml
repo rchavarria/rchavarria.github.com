@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: tibrvj | R. Chavarria's Blog]]></title>
+  <link href="http://rchavarria.github.com/blog/categories/tibrvj/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.com/"/>
+  <updated>2013-09-16T22:41:11+02:00</updated>
+  <id>http://rchavarria.github.com/</id>
+  <author>
+    <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[TibrvException[error=901,message=Library not found: tibrvj]]]></title>
+    <link href="http://rchavarria.github.com/blog/2012/01/13/tibrvexception-error-901-message-library-not-found-tibrvj/"/>
+    <updated>2012-01-13T13:01:00+01:00</updated>
+    <id>http://rchavarria.github.com/blog/2012/01/13/tibrvexception-error-901-message-library-not-found-tibrvj</id>
+    <content type="html"><![CDATA[<div style="margin:2%; padding:2%; background-color:#E0E0E0; ">
+  <p>Este post pertenece a mi antiguo blog en <a href="http://rchavarria.wordpress.com">wordpress</a>, pero decidí pasarme a github:pages por las siguientes <a href="http://rchavarria.github.com/blog/2012/12/03/por-que-cambie-mi-blog-en-wordpress-com">razones</a></p>
+</div>
+
+
+
+
+<p>Actualmente, en el trabajo estamos utilizando TIBCO Rendezvous como herramienta de mensajería entre nuestras aplicaciones java, y recientemente me he encontrado con un problema. En este post voy a hablar de dicho problema, así que si no te interesa el tema, ya has terminado de leer el artículo :-)</p>
+
+
+
+
+<!-- more -->
+
+
+
+
+<h2>Problema</h2>
+
+
+
+
+<p>El problema es el siguiente: no soy capaz de que nuestras aplicaciones carguen la librería para poder comunicarse. Más concretamente, estoy obteniendo la siguiente excepción:</p>
+
+
+<p>```
+[...]
+Caused by: TibrvException[error=901,message=Library not found: tibrvj]</p>
+
+<pre><code>at com.tibco.tibrv.Tibrv.loadLib(Tibrv.java:474)
+at com.tibco.tibrv.Tibrv.open(Tibrv.java:275)
+</code></pre>
+
+<p>[...]
+```</p>
+
+<p>Antes de nada, voy a contextualizar este error:<br />
+El entorno de trabajo es un Windows 7, con procesador Inter de 64 bits, la versión de Tibco Rendezvous es la 8.2 y tengo instalada una JDK de java versión 1.6.0_17.</p>
+
+
+<p>Googleando el error no llego a ninguna solución en concreto, sólo conversaciónes acerca del classpath de la aplicación. Pero me he dado cuenta de que se deben dar unas condiciones:</p>
+
+<ul>
+<li>El fichero <code>tibrvj.jar</code> debe estar accesible en el classpath de la aplicación</li>
+<li>La variable de entorno <code>PATH</code> debe contener (entre otros) este valor: <code>%TIBRV_HOME%\bin</code>. Siendo <code>TIBRV_HOME</code> el directorio de instalación de Tibco Rendezvous, por ejemplo y en mi caso es: <code>"C:\tibco\tibrv\8.2"</code></li>
+</ul>
+
+
+<p>Cumplo todas estas condiciones, pero sigo teniendo el error.</p>
+
+
+<p>La excepción salta cuando en mi aplicación intento cargar la librería Tibrv mediante el código: <code>Tibrv.open(Tibrv.IMPL_NATIVE);</code></p>
+
+<p>Como no puedo ver el código interno de la implementación de Tibco, intento cargar la librería al más bajo nivel, mediante: <code>System.loadLibrary("tibrvj");</code></p>
+
+<p>La librería debería cargar, ya que previamente he comprobado que el fichero <code>tibrvj.dll</code> está accesible a la aplicación, ya que ese fichero está localizado en el directorio <code>%TIBRV_HOME%\bin</code>, incluido en la variable de entorno <code>PATH</code>, y lo puedo comprobar dentro de mi aplicación java leyendo el valor de la variable de sistema <code>java.library.path</code>.</p>
+
+
+<p>Al ejecutar el código <code>System.loadLibrary("tibrvj");</code> obtengo la siguiente excepción:</p>
+
+
+<p>```
+[...]
+Exception in thread &quot;main&quot; java.lang.UnsatisfiedLinkError: C:\TIBCO\tibrv\8.2\bin\tibrvj.dll: Can't load AMD 64-bit .dll on a IA 32-bit platform</p>
+
+<pre><code>at java.lang.ClassLoader$NativeLibrary.load(Native Method)
+at java.lang.ClassLoader.loadLibrary0(ClassLoader.java:1758)
+at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1683)
+at java.lang.Runtime.loadLibrary0(Runtime.java:823)
+at java.lang.System.loadLibrary(System.java:1028)
+</code></pre>
+
+<p>[...]
+```</p>
+
+<p>Bueno, ya tengo una pista. Resulta que estoy intentando cargar una librería desarrollada para 64bits en una plataforma (java, supongo) que es de 32bits. Luego, voy a comprobar mi versión instalada de java y si no es de 64bits tendré que instalar una de 64bits.</p>
+
+
+<p>Compruebo mi versión de java:</p>
+
+
+<p><code>
+C:\&amp;gt;java -version
+java version &amp;quot;1.6.0_17&amp;quot;
+Java(TM) SE Runtime Environment (build 1.6.0_17-b04)
+Java HotSpot(TM) Client VM (build 14.3-b01, mixed mode, sharing)
+</code></p>
+
+<p><strong>(FAIL)</strong> No indica nada de que sea java de 64bits, por lo que supongo que será de 32.</p>
+
+
+<h2>Solución</h2>
+
+
+<p>Descargo la última versión de java 1.6 de 64bits, la instalo y vuelvo a comprobar la versión instalada:</p>
+
+
+<p><code>
+C:\&amp;gt;java -version
+java version &amp;quot;1.6.0_29&amp;quot;
+Java(TM) SE Runtime Environment (build 1.6.0_29-b11)
+Java HotSpot(TM) 64-Bit Server VM (build 20.4-b02, mixed mode)
+</code></p>
+
+<p>Bien! ya tengo instalada una versión de java de 64bits.</p>
+
+
+
+
+<p>Pruebo mi aplicación, ..., FUNCIONA!</p>
+
+
+
+
+<h2>Conclusión</h2>
+
+
+
+
+<p>Todas las soluciones que encontré se centraban solamente en corregir las variables de entorno <code>PATH</code> y <code>CLASSPATH</code>, pero estas soluciones no eran suficientes para mí. Al menos, al acotar el problema mucho más y llegando al un nivel más bajo de abstracción obtuve una pista que me indicó que debería asegurarme de usar una versión de 64bits de java. Una vez instalada la versión correcta del JDK/JRE de java, todo funcionó.</p>
+
+
+<p>Espero que esta información sea de utilidad a todos aquellos que tienen el problema de encontrarse con la excepción: <code>TibrvException[error=901,message=Library not found: tibrvj]</code></p>
+
+<p>El código completo usado para demostrar este error se puede encontrar aquí:</p>
+
+
+<p>```
+import com.tibco.tibrv.Tibrv;
+import com.tibco.tibrv.TibrvException;</p>
+
+<p>public class TibrvLoaderTest {</p>
+
+<pre><code>public static void main(String[] args) {
+    new TibrvLoaderTest().start();
+}
+private void start() {
+    printClasspath();
+    printLibraryPath();
+    testLoadLibrary();
+    openTibrvjLibrary();
+}
+private void printClasspath() {
+    String cp = System.getProperty(&amp;quot;java.class.path&amp;quot;);
+    for(String cpElement : cp.split(&amp;quot;;&amp;quot;)){
+        System.out.println(&amp;quot;Classpath element: &amp;quot; + cpElement);
+    }
+}
+private void printLibraryPath() {
+    String lp = System.getProperty(&amp;quot;java.library.path&amp;quot;);
+    for(String lpElement : lp.split(&amp;quot;;&amp;quot;)){
+        System.out.println(&amp;quot;Library path element: &amp;quot; + lpElement);
+    }
+}
+private void testLoadLibrary() {
+    System.loadLibrary(&amp;quot;tibrvj&amp;quot;);
+}
+private void openTibrvjLibrary() {
+    try {
+        Tibrv.open(Tibrv.IMPL_NATIVE);
+    } catch (TibrvException e) {
+        throw new RuntimeException(&amp;quot;Can't load Tibrv&amp;quot;, e);
+    }
+}
+</code></pre>
+
+<p>}
+```</p>
+]]></content>
+  </entry>
+  
+</feed>

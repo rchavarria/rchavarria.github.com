@@ -1,0 +1,491 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Usar apache derby como base de datos - R. Chavarria's Blog</title>
+  <meta name="author" content="Rub&eacute;n Chavarr&iacute;a">
+
+  
+  <meta name="description" content="Usar apache derby como base de datos Jun 24th, 2010 Este post pertenece a mi antiguo blog en wordpress, pero decidí pasarme a github:pages por las &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://rchavarria.github.com/blog/2010/06/24/usar-apache-derby-como-base-de-datos/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="R. Chavarria's Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36829645-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">R. Chavarria's Blog</a></h1>
+  
+    <h2>Blogging like a hacker about Software Development</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:rchavarria.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article role="article">
+  
+  <header>
+    <h1 class="entry-title">Usar apache derby como base de datos</h1>
+    <p class="meta">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-06-24T09:44:00+02:00" pubdate data-updated="true">Jun 24<span>th</span>, 2010</time></p>
+  </header>
+  
+  <div style="margin:2%; padding:2%; background-color:#E0E0E0; ">
+  <p>Este post pertenece a mi antiguo blog en <a href="http://rchavarria.wordpress.com">wordpress</a>, pero decidí pasarme a github:pages por las siguientes <a href="/blog/2012/12/03/por-que-cambie-mi-blog-en-wordpress-com">razones</a></p>
+</div>
+
+
+<p>En este post vamos a aprender a usar <a href="http://db.apache.org/derby/">Apache Derby</a> como base de datos para nuestra aplicación Java. Seguiremos paso por paso un ejemplo de uso muy sencillo.</p>
+
+<!-- more -->
+
+
+
+
+<h2>Instalación</h2>
+
+
+<p>Lo primero que deberemos hacer es descargar la última versión de Apache Derby: <a href="http://db.apache.org/derby/derby_downloads.html">página de descarga</a>. La descarga recomendada sería la distribución binaria, que incluye las librerías, documentación y herramientas de ayuda.</p>
+
+<p>Acto seguido descomprimimos la distribución a un directorio de nuestra elección, por ejemplo:</p>
+
+<pre>C:\Archivos de programa\Java\derby-10.6
+</pre>
+
+
+<p>Para poder usar derby, deberemos configurar nuestro entorno, es decir, deberemos establecer ciertas variables de entorno con los valores adecuados para poder ejecutar derby en nuestro PC. Suponiendo que vamos a usar Windows como sistema operativo, deberemos establecer las siguientes variables de entorno:</p>
+
+<pre>set DERBY_HOME=C:\Archivos de programa\Java\derby-10.6
+set PATH=%DERBY_HOME%\bin;%PATH%
+</pre>
+
+
+<p>De esta forma conseguiremos tener accesibles los ejecutables de las herramientas proporcionadas por derby.</p>
+
+<p>A partir de ahora, para poder utilizar derby en nuestros programas Java, sólo será necesario tener accesible la librería <em>derby.jar</em> en el classpath de nuestro programa.</p>
+
+<h2>Código de ejemplo</h2>
+
+
+<p>De acuerdo, ya sabemos lo que tenemos que hacer para poder usar derby. Pero, ¿cómo lo usamos?. A continuación vamos a estudiar varios fragmentos de código que nos permitirán crear una base de datos, crear una sencilla tabla en nuestra base de datos, insertar datos y realizar consultas. Para ello se presupone un conocimiento básico de lenguaje SQL. Si quieres aprender un poco más sobre él puedes aprender un poco en <a href="http://www.w3schools.com/sql/">SQL Tutorial de W3C</a>.</p>
+
+<h3>Crear una base de datos</h3>
+
+
+
+
+<figure class='code'><figcaption><span>Crear una base de datos programáticamente </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>import java.sql.Connection;
+</span><span class='line'>import java.sql.DriverManager;
+</span><span class='line'>import java.sql.Statement;
+</span><span class='line'>
+</span><span class='line'>public class CreateDataBase {
+</span><span class='line'>
+</span><span class='line'>  public static void main(String[] args) {
+</span><span class='line'>    String driver = &quot;org.apache.derby.jdbc.EmbeddedDriver&quot;;
+</span><span class='line'>    String dbName = &quot;/DerbyDB/ExampleDB&quot;;
+</span><span class='line'>    String dbParam = &quot;create=true&quot;; //la base de datos se creará si no existe todavía
+</span><span class='line'>    String connectionURL = &quot;jdbc:derby:&quot; + dbName + &quot;;&quot; + dbParam;
+</span><span class='line'>    Connection conn = null;
+</span><span class='line'>
+</span><span class='line'>    try{
+</span><span class='line'>      Class.forName(driver);
+</span><span class='line'>    } catch(java.lang.ClassNotFoundException e) {
+</span><span class='line'>      e.printStackTrace();
+</span><span class='line'>    }
+</span><span class='line'>
+</span><span class='line'>    try {
+</span><span class='line'>      conn = DriverManager.getConnection(connectionURL);
+</span><span class='line'>
+</span><span class='line'>      Statement st = conn.createStatement();
+</span><span class='line'>      String sqlCreateTableUsers =
+</span><span class='line'>             &quot;CREATE TABLE users ( &quot; +
+</span><span class='line'>             &quot;FirstName VARCHAR(20) NOT NULL, &quot; +
+</span><span class='line'>             &quot;LastName VARCHAR(20) NOT NULL, &quot; +
+</span><span class='line'>             &quot;idUser INTEGER NOT NULL CONSTRAINT idUser_PK PRIMARY KEY &quot; +
+</span><span class='line'>             &quot;)&quot;;
+</span><span class='line'>      // la sentencia SQL crea una tabla con 3 campos
+</span><span class='line'>      st.execute(sqlCreateTableUsers);
+</span><span class='line'>
+</span><span class='line'>      System.out.println(&quot;La base de datos '&quot; + dbName + &quot;' se ha creado correctamente&quot;);
+</span><span class='line'>    }  catch (Throwable e)  {
+</span><span class='line'>      System.out.println(&quot;Error al crear la base de datos '&quot; + dbName + &quot;'&quot;);
+</span><span class='line'>      e.printStackTrace();
+</span><span class='line'>    } finally {
+</span><span class='line'>      try { conn.close(); }
+</span><span class='line'>      catch (Throwable t){}
+</span><span class='line'>    }
+</span><span class='line'>  }
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Para ejecutar scripts SQL y realizar otras consultas, derby proporciona la herramienta <em>ij</em>, el uso de la cual lo podemos aprender de la siguiente guía: <a href="http://db.apache.org/derby/docs/10.6/getstart/">getting started with derby 10.6 (inglés)</a>.
+Como el nombre de la base de datos es <em>/DerbyDB/ExampleDB</em>, la base de datos será creada en el directorio</p>
+
+<pre>C:\DerbyDB\ExampleDB</pre>
+
+
+<h3>Insertar datos</h3>
+
+
+<p>Con el siguiente código seremos capaces de introducir datos en nuestra tabla:</p>
+
+<figure class='code'><figcaption><span>Insertar datos </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>String driver = &quot;org.apache.derby.jdbc.EmbeddedDriver&quot;;
+</span><span class='line'>String dbName = &quot;/DerbyDB/ExampleDB&quot;;
+</span><span class='line'>String connectionURL = &quot;jdbc:derby:&quot; + dbName;
+</span><span class='line'>Connection conn = null;
+</span><span class='line'>
+</span><span class='line'>try{
+</span><span class='line'>  Class.forName(driver);
+</span><span class='line'>} catch(java.lang.ClassNotFoundException e) {
+</span><span class='line'>  e.printStackTrace();
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>try {
+</span><span class='line'>  conn = DriverManager.getConnection(connectionURL);
+</span><span class='line'>
+</span><span class='line'>  Statement st = conn.createStatement();
+</span><span class='line'>  st.executeUpdate(&quot;INSERT INTO users VALUES('Jose', 'Olmedo', 1)&quot;);
+</span><span class='line'>  st.executeUpdate(&quot;INSERT INTO users VALUES('Maria', 'Hoz', 2)&quot;);
+</span><span class='line'>
+</span><span class='line'>  System.out.println(&quot;Se han insertado dos registros&quot;);
+</span><span class='line'>} catch (Throwable e)  {
+</span><span class='line'>  System.out.println(&quot;Ha fallado la insercion de dos registros&quot;);
+</span><span class='line'>  e.printStackTrace();
+</span><span class='line'>} finally {
+</span><span class='line'>  try { conn.close(); }
+</span><span class='line'>  catch (Throwable t){}
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<h3>Realizar consultas</h3>
+
+
+<p>Con el siguiente código, realizamos una consulta a nuestra tabla y mostramos por consola la información en ella almacenada:</p>
+
+<figure class='code'><figcaption><span>Realizar consultas </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>String driver = &quot;org.apache.derby.jdbc.EmbeddedDriver&quot;;
+</span><span class='line'>String dbName = &quot;/DerbyDB/ExampleDB&quot;;
+</span><span class='line'>String connectionURL = &quot;jdbc:derby:&quot; + dbName;
+</span><span class='line'>Connection conn = null;
+</span><span class='line'>
+</span><span class='line'>try{
+</span><span class='line'>  Class.forName(driver);
+</span><span class='line'>} catch(java.lang.ClassNotFoundException e) {
+</span><span class='line'>  e.printStackTrace();
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>try {
+</span><span class='line'>  conn = DriverManager.getConnection(connectionURL);
+</span><span class='line'>
+</span><span class='line'>  Statement st = conn.createStatement();
+</span><span class='line'>  ResultSet rs=st.executeQuery(&quot;SELECT * FROM users&quot;);
+</span><span class='line'>  while (rs.next()){
+</span><span class='line'>    Integer idUser = rs.getInt(&quot;idUser&quot;);
+</span><span class='line'>    String first = rs.getString(&quot;FirstName&quot;);
+</span><span class='line'>    String last = rs.getString(&quot;LastName&quot;);
+</span><span class='line'>    System.out.println(idUser + &quot; se llama: &quot; + first + &quot; &quot; + last);
+</span><span class='line'>  }
+</span><span class='line'>  rs.close();
+</span><span class='line'>} catch (Throwable e)  {
+</span><span class='line'>  System.out.println(&quot;Ha fallado la consulta de datos&quot;);
+</span><span class='line'>  e.printStackTrace();
+</span><span class='line'>} finally {
+</span><span class='line'>  try { conn.close(); }
+</span><span class='line'>  catch (Throwable t){}
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Espero que este post os sirva para poder utilizar derby como base de datos.</p>
+
+<div id="_mcePaste" style="overflow:hidden;position:absolute;left:-10000px;top:1232px;width:1px;height:1px;"><!--[if gte mso 9]&gt;  Normal 0 21   false false false        MicrosoftInternetExplorer4  &lt;![endif]--><!--[if gte mso 9]&gt;   &lt;![endif]--><!--  /* Style Definitions */  p.MsoNormal, li.MsoNormal, div.MsoNormal  {mso-style-parent:"";   margin:0cm;   margin-bottom:.0001pt;  mso-pagination:widow-orphan;  font-size:12.0pt;   font-family:"Times New Roman";  mso-fareast-font-family:"Times New Roman";} a:link, span.MsoHyperlink   {color:blue;  text-decoration:underline;  text-underline:single;} a:visited, span.MsoHyperlinkFollowed  {color:purple;  text-decoration:underline;  text-underline:single;} @page Section1  {size:612.0pt 792.0pt;  margin:70.85pt 3.0cm 70.85pt 3.0cm;   mso-header-margin:36.0pt;   mso-footer-margin:36.0pt;   mso-paper-source:0;} div.Section1   {page:Section1;} --><!--[if gte mso 10]&gt; &lt;!   /* Style Definitions */  table.MsoNormalTable   {mso-style-name:&quot;Tabla normal&quot;;   mso-tstyle-rowband-size:0;  mso-tstyle-colband-size:0;  mso-style-noshow:yes;   mso-style-parent:&quot;&quot;;  mso-padding-alt:0cm 5.4pt 0cm 5.4pt;  mso-para-margin:0cm;  mso-para-margin-bottom:.0001pt;   mso-pagination:widow-orphan;  font-size:10.0pt;   font-family:&quot;Times New Roman&quot;;  mso-ansi-language:#0400;  mso-fareast-language:#0400;   mso-bidi-language:#0400;} --> <!--[endif]-->
+<p class="MsoNormal">Para ejecutar scripts sql y realizar otras consultas contra una bbdd derby, existe la herramienta ij. El uso de esta herramienta lo podemos aprender de la siguiente guía: <a href="http://db.apache.org/derby/docs/10.6/getstart/">getting started with derby 10.6 (ingles)</a>.</p>
+
+</div>
+
+
+  
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/09/13/servlet-lee-parametros/">Leer parámetros desde un servlet</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/03/sencillo-servlet-http/">Un sencillo servlet HTTP</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/03/demos-tecnologias-javaee/">Demos de tecnologías Java EE</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/05/30/aprendiendo-a-colaborar-en-github/">Aprendiendo a colaborar en github</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/04/30/save-informaticos/">Save InformaticOS, mi primer open space</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("rchavarriat", 4, true);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/rchavarriat">@rchavarriat</a></p>
+  
+</section>
+
+
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/rchavarriat?count=5&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/rchavarriat">My Delicious Bookmarks &raquo;</a></p>
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Rub&eacute;n Chavarr&iacute;a -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'rchavarria-github-com';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://rchavarria.github.com/blog/2010/06/24/usar-apache-derby-como-base-de-datos/';
+        var disqus_url = 'http://rchavarria.github.com/blog/2010/06/24/usar-apache-derby-como-base-de-datos/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

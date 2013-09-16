@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: tools | R. Chavarria's Blog]]></title>
+  <link href="http://rchavarria.github.com/blog/categories/tools/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.com/"/>
+  <updated>2013-09-16T22:41:11+02:00</updated>
+  <id>http://rchavarria.github.com/</id>
+  <author>
+    <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Aprendiendo a colaborar en github]]></title>
+    <link href="http://rchavarria.github.com/blog/2013/05/30/aprendiendo-a-colaborar-en-github/"/>
+    <updated>2013-05-30T08:45:00+02:00</updated>
+    <id>http://rchavarria.github.com/blog/2013/05/30/aprendiendo-a-colaborar-en-github</id>
+    <content type="html"><![CDATA[<p>Recientemente, hablando con mi amigo <a href="http://twitter.com/dagarfol">David</a> sobre un
+proyectillo que llevamos a medias (estamos empezando, espero que podamos tener algo
+publicable pronto), salió el tema de cómo empezar a colaborar con
+amigos/compañeros/quien-sea con <a href="http://git-scm.com/">git</a> en <a href="http://github.com">github</a>.</p>
+
+<p>Yo le comenté que era bastante sencillo comenzar, pero de boquilla se pueden decir
+muchas cosas (la mayoría mentira), así que para que no se quede en agua de borrajas,
+en este post encontrarás 5 comandos y acciones básicas para comenzar a
+trabajar en equipo con git y github.</p>
+
+<!-- more -->
+
+
+<h2>¿Qué necesito?</h2>
+
+<p>Lo primero que se necesita es tener una cuenta en github. Si no tienes una, uno puede
+<a href="https://github.com/users">registrarse</a> fácilmente. Es como crearse una cuenta de correo.</p>
+
+<p><img class="center" src="/images/2013/github-overview.jpg"></p>
+
+<p>Después, es necesario que <a href="http://git-scm.com/downloads">descargues e instales git</a>
+en el ordenador donde vayas a trabajar. En windows es tan sencillo como instalar cualquier
+otro programa, así que no hay excusa para parar aquí.</p>
+
+<p>Para configurar git y poder usarlo con github, debemos configurarlo. Para ayudarnos, los
+chicos de github se han currado una aplicación,
+<a href="https://help.github.com/articles/set-up-git">Github for Windows</a>. También se puede
+<a href="https://help.github.com/articles/set-up-git#platform-linux">configurar github en linux</a>.</p>
+
+<h2>Obtener el código fuente</h2>
+
+<p>Para comenzar a colaborar, necesitas un repositorio donde esté almacenado el código fuente
+sobre el cual vais a trabajar. Dos formas muy comunes de crear un repositorio en tu
+cuenta de github son:</p>
+
+<ol>
+<li><a href="https://help.github.com/articles/create-a-repo">Crear un repositorio desde cero</a>.</li>
+<li><a href="https://help.github.com/articles/fork-a-repo">Copiar el repositorio de otra persona (fork)</a>.</li>
+</ol>
+
+
+<p>Con tu repositorio en github, ya puedes <em>descargarlo</em> a tu máquina de trabajo. En realidad
+lo que vas a hacer es una copia entera y completamente funcional del repositorio en github.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Clonando un repositorio </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>git clone https://github.com/username/Spoon-Knife.git
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Esto creará un directorio llamado <code>Spoon-Knife</code> donde se encuentra el repositorio completo.</p>
+
+<h2>Modificar ficheros y subir los cambios</h2>
+
+<p>Ya podemos realizar los cambios que queramos al código fuente.</p>
+
+<p>Para subir estos cambios al repositorio de github, debemos seguir varios pasos:</p>
+
+<ol>
+<li>Añadir los fichero nuevos al área temporal de git llamada <code>stage</code> para poder hacer <code>commit</code>
+al repositorio (existen más opciones para este comando, pero el más básico es éste):</li>
+</ol>
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Añadiendo ficheros al área de stage </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>git add . 
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ol>
+<li>Hacer <code>commit</code> de esos cambios. De esta forma, nuestro repositorio ya contendrá los cambios,
+sólo hará falta incorporarlos al repositorio de github (repositorio remoto):</li>
+</ol>
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Commiteando ficheros al repositorio local </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>git commit -m "Mensaje del commit"
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ol>
+<li>Subir los cambios del repositorio local al repositorio remoto (github). El comando más básico
+para ello es el siguiente:</li>
+</ol>
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Sincronizando con el repositorio remoto </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>git push
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Si vamos a nuestro repositorio en github veremos cómo aparecen los commits que hicimos en nuestro
+repositorio local. BIEN!</p>
+
+<h2>Descargar cambios del repositorio de github</h2>
+
+<p>Con el siguiente comando (esta es su sintaxis más sencilla) podrás incorporar los cambios que haya
+en el repositorio remoto de github a tu repositorio local:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Sincronizando el repositorio local con cambios del remoto </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>git pull
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Esta es su sintaxis más sencilla. Para avanzar en este aspecto, tendría que hablar de
+<a href="http://gitref.org/remotes/">remotes</a>, pero es un concepto bastante extenso y quedaría un
+post muy largo.</p>
+
+<h2>Compartir nuestros cambios con los compañeros</h2>
+
+<p>De acuerdo, ya tenemos nuestros cambios en nuestro repositorio local y los hemos subido a nuestro
+repositorio remoto en github. Existe una forma muy sencilla en github de informar a nuestros compañeros
+de que hemos hecho cambios, los llamados
+<a href="https://help.github.com/articles/using-pull-requests">Pull Request</a>.</p>
+
+<p><img class="right" src="/images/2013/github-pull-request.jpg"></p>
+
+<p>Mediante un Pull Request estás indicando a un compañero que le quieres pasar unos cambios que
+tú has hecho. Ahora tu compañero deberá decidir si acepta los cambios y él incorporará esos
+cambios a su repositorio remoto</p>
+]]></content>
+  </entry>
+  
+</feed>

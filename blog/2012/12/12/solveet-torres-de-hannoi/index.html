@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>solveet: Torres de Hannoi - R. Chavarria's Blog</title>
+  <meta name="author" content="Rub&eacute;n Chavarr&iacute;a">
+
+  
+  <meta name="description" content="solveet: Torres de Hannoi Dec 12th, 2012 Simplemente para practicar y mejorar mis habilidades como programador, me gusta resolver problemas
+de &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://rchavarria.github.com/blog/2012/12/12/solveet-torres-de-hannoi/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="R. Chavarria's Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36829645-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">R. Chavarria's Blog</a></h1>
+  
+    <h2>Blogging like a hacker about Software Development</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:rchavarria.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article role="article">
+  
+  <header>
+    <h1 class="entry-title">solveet: Torres de Hannoi</h1>
+    <p class="meta">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-12-12T09:35:00+01:00" pubdate data-updated="true">Dec 12<span>th</span>, 2012</time></p>
+  </header>
+  
+  <p>Simplemente para practicar y mejorar mis habilidades como programador, me gusta resolver problemas
+de programación regularmente. Hace un tiempo conocí la página <a href="http://solveet.com">Solveet</a>, y desde
+entonces intento aportar semanalmente alguna que otra solución a los problemas propuestos por otros
+profesionales del desarrollo software.</p>
+
+<p><img class="right" src="http://upload.wikimedia.org/wikipedia/commons/6/60/Tower_of_Hanoi_4.gif" width="320" height="125" title="By André Karwath aka Aka, Own work, CC-BY-SA-2.5, via Wikimedia Commons" ></p>
+
+<p>El problema que he solucionado esta semana es el de las
+<a href="http://www.solveet.com/exercises/Torres-de-Hannoi/72">Torres de Hannoi</a>, todo un clásico en el
+desarrollo software, y en este post intento describir detalladamente cómo he llegado a mi solución.</p>
+
+<!-- more -->
+
+
+<h2>Introducción</h2>
+
+<p>El punto de partida ha sido esta entrada en la wikipedia acerca de las
+<a href="http://es.wikipedia.org/wiki/Torres_de_Han%C3%B3i">Torres de Hannoi</a> donde explica de una forma muy
+básica la forma de solucionarlo. Ahora sólo hay que implementarlo.</p>
+
+<p>Decidí solucionar el problema en javascript, para aprender más sobre este lenguaje, y decidí solucionar
+el problema de forma iterativa, ya que me pareció más sencilla que la forma recursiva. Y ya que estoy
+practicando, intenté llegar a la solución definitiva practicando TDD.</p>
+
+<p>Puedes ver mi solución publicada en <a href="http://www.solveet.com/exercises/Torres-de-Hannoi/72/solution-1051">solveet</a>,
+así como el código completo de la solución y los tests en este repositorio de
+<a href="https://github.com/rchavarria/solveet-problems/tree/master/hannoi-js">github</a>.</p>
+
+<h2>Manos a la obra</h2>
+
+<p>La parte más fácil es mover el anillo más pequeño. Éste hay que moverlo siempre en los pasos impares,
+y siguiendo siempre un de estas dos secuencias:</p>
+
+<ul>
+<li>Si el número de anillos es impar, hay que moverlo a las siguientes torres o varillas:
+destino -> auxiliar -> origen, y así indefinidamente</li>
+<li>Si el número de anillos es par, la secuencia será: auxiliar -> destino -> origen, &#8230;</li>
+</ul>
+
+
+<h2>Movimientos en los pasos pares</h2>
+
+<p>En los pasos pares hay que mover los anillos que no son el anillo más pequeño. El anillo a mover dependerá
+del número de anillos de los que conste el problema.</p>
+
+<p>Al utilizar TDD, he ido descubriendo poco a poco cómo escoger el anillo a mover y dónde moverlo:</p>
+
+<ul>
+<li>1 anillo: no hace falta mover otros anillos ya que con un movimiento está solucionado.</li>
+<li>2 anillos: solo es posible mover el anillo más grande a la torre destino, ya que el anillo más pequeño lo
+habremos movido en el primer movimiento a la torre auxiliar.</li>
+<li>3 anillos: desarrollando manualmente todos los movimientos, el anillo a mover es aquel que no está en la
+torre destino y que tampoco es el anillo más pequeño.</li>
+<li>4 anillos: desarrollando otra vez manualmente todos los movimientos, el anillo a mover es el menor anillo
+(sin ser el más pequeño) y se deberá mover a la única torre posible. Esta torre la sabremos porque es aquella
+torre que no contiene ni el anillo más pequeño ni el anillo a mover.</li>
+</ul>
+
+
+<p>A partir de los 4 anillos, la solución ya funciona con cualquier número de anillos.</p>
+
+<h4>Reconocimientos</h4>
+
+<ul>
+<li>Imagen By André Karwath aka Aka (Own work) <a href="http://creativecommons.org/licenses/by-sa/2.5">CC-BY-SA-2.5</a>, via <a href="http://commons.wikimedia.org/wiki/File%3ATower_of_Hanoi_4.gif">Wikimedia Commons</a></li>
+</ul>
+
+
+  
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/09/13/servlet-lee-parametros/">Leer parámetros desde un servlet</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/03/sencillo-servlet-http/">Un sencillo servlet HTTP</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/03/demos-tecnologias-javaee/">Demos de tecnologías Java EE</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/05/30/aprendiendo-a-colaborar-en-github/">Aprendiendo a colaborar en github</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/04/30/save-informaticos/">Save InformaticOS, mi primer open space</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("rchavarriat", 4, true);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/rchavarriat">@rchavarriat</a></p>
+  
+</section>
+
+
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/rchavarriat?count=5&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/rchavarriat">My Delicious Bookmarks &raquo;</a></p>
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Rub&eacute;n Chavarr&iacute;a -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'rchavarria-github-com';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://rchavarria.github.com/blog/2012/12/12/solveet-torres-de-hannoi/';
+        var disqus_url = 'http://rchavarria.github.com/blog/2012/12/12/solveet-torres-de-hannoi/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

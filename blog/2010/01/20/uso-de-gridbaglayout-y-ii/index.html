@@ -1,0 +1,450 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Uso de GridBagLayout (y II) - R. Chavarria's Blog</title>
+  <meta name="author" content="Rub&eacute;n Chavarr&iacute;a">
+
+  
+  <meta name="description" content="Uso de GridBagLayout (y II) Jan 20th, 2010 Este post pertenece a mi antiguo blog en wordpress, pero decidí pasarme a github:pages por las siguientes &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://rchavarria.github.com/blog/2010/01/20/uso-de-gridbaglayout-y-ii/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="R. Chavarria's Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36829645-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">R. Chavarria's Blog</a></h1>
+  
+    <h2>Blogging like a hacker about Software Development</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:rchavarria.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article role="article">
+  
+  <header>
+    <h1 class="entry-title">Uso de GridBagLayout (y II)</h1>
+    <p class="meta">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-01-20T07:54:00+01:00" pubdate data-updated="true">Jan 20<span>th</span>, 2010</time></p>
+  </header>
+  
+  <div style="margin:2%; padding:2%; background-color:#E0E0E0; ">
+  <p>Este post pertenece a mi antiguo blog en <a href="http://rchavarria.wordpress.com">wordpress</a>, pero decidí pasarme a github:pages por las siguientes <a href="/blog/2012/12/03/por-que-cambie-mi-blog-en-wordpress-com">razones</a></p>
+</div>
+
+
+<p>Antes de leer esta entrada deberías leer <a title="Uso de GridBagLayout (I)" href="/blog/2009/12/21/uso-de-gridbaglayout-i" target="_self">Uso de GridBagLayout (I)</a>, si no lo has hecho ya.</p>
+
+<p>Veamos algunos parámetros que nos permitirán configurar cómo se verán nuestros componentes con más flexibilidad que la conseguida con los parámetros vistos en el post anterior:</p>
+
+<!-- more -->
+
+
+<h2>fill</h2>
+
+<p>Define la forma en la que el componente crecerá o no cuando se cambie el tamaño del panel al que pertenece. Los valores posibles están definidas como constantes en <code>GridBagConstraints</code> y son:</p>
+
+<ul>
+    <li><code>NONE</code>: valor por defecto. Indica que el componente no cambiará su tamaño.</li>
+    <li><code>HORIZONTAL</code>: hará crecer el componente hasta completar el tamaño horizontal de la celda o celdas donde se encuentra el componente.</li>
+    <li><code>VERTICAL</code>: igual que <code>HORIZONTAL</code> pero en sentido vertical.</li>
+</ul>
+
+
+<h2>anchor</h2>
+
+<p>Este parámetro se utiliza cuando el componente es más pequeño que su área de dibujo - la celda o celdas donde yace el componente - e indica el lugar al que el componente quedará fijado cuando se modifique el tamaño del panel. Los valores están definidos como constantes en <code>GridBadConstraints</code>. Podemos ver los valores y el lugar donde el componente quedará fijado en la siguiente tabla:</p>
+
+<div style="display: block; margin: 0 auto">
+<table style="text-align:center;border:solid black;background-color:#f0f0f0;">
+<tbody>
+<tr>
+<td>FIRST_LINE_START</td>
+<td>PAGE_START</td>
+<td>FIRST_LINE_END</td>
+</tr>
+<tr>
+<td>LINE_START</td>
+<td>CENTER</td>
+<td>LINE_END</td>
+</tr>
+<tr>
+<td>LAST_LINE_START</td>
+<td>PAGE_END</td>
+<td>LAST_LINE_END</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<h2>weightx y weighty</h2>
+
+<p>Estos parámetros especifican cómo distribuir el espacio entre las columnas - weightx -  y las filas - weighty -. Los valores que pueden tomar varían entre 0.0 y 1.0, siendo 1.0 el de más peso, lo que indicaría que ese componente ocuparía el mayor espacio posible. Si no se indica lo contrario, ambos parámetros toman el valor 0.0, lo que indica a <code>GridBagLayout</code> que el espacio extra al cambiar el tamaño al panel se dibujará entre el borde de las fila y columnas y el borde del contenedor, dejando un espacio libre entre ellos.</p>
+
+<p>Ahora veamos el código que genera el panel con el gestor <code>GridBagLayout</code>:</p>
+
+<figure class='code'><figcaption><span>Generando el panel </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>package es.rchavarria.gridbaglayouthowto;
+</span><span class='line'>
+</span><span class='line'>public class GridBagLayoutDemo extends javax.swing.JPanel {
+</span><span class='line'>  public GridBagLayoutDemo() {
+</span><span class='line'>    initComponents();
+</span><span class='line'>  }
+</span><span class='line'>
+</span><span class='line'> private void initComponents() {
+</span><span class='line'>   java.awt.GridBagConstraints gridBagConstraints;
+</span><span class='line'>
+</span><span class='line'>   btn5 = new javax.swing.JButton();
+</span><span class='line'>   btn1 = new javax.swing.JButton();
+</span><span class='line'>   btn2 = new javax.swing.JButton();
+</span><span class='line'>   btn4 = new javax.swing.JButton();
+</span><span class='line'>   btn6 = new javax.swing.JButton();
+</span><span class='line'>   btn3 = new javax.swing.JButton();
+</span><span class='line'>
+</span><span class='line'>   setLayout(new java.awt.GridBagLayout());
+</span><span class='line'>
+</span><span class='line'>   btn1.setText(&quot;btn 01&quot;);
+</span><span class='line'>   add(btn1, new java.awt.GridBagConstraints());
+</span><span class='line'>
+</span><span class='line'>   btn2.setText(&quot;btn 02&quot;);
+</span><span class='line'>   gridBagConstraints = new java.awt.GridBagConstraints();
+</span><span class='line'>   gridBagConstraints.gridwidth = 2;
+</span><span class='line'>   add(btn2, gridBagConstraints);
+</span><span class='line'>
+</span><span class='line'>   btn3.setText(&quot;btn 03&quot;);
+</span><span class='line'>   gridBagConstraints = new java.awt.GridBagConstraints();
+</span><span class='line'>   gridBagConstraints.gridx = 0;
+</span><span class='line'>   gridBagConstraints.gridy = 1;
+</span><span class='line'>   add(btn3, gridBagConstraints);
+</span><span class='line'>
+</span><span class='line'>   btn4.setText(&quot;btn 04&quot;);
+</span><span class='line'>   gridBagConstraints = new java.awt.GridBagConstraints();
+</span><span class='line'>   gridBagConstraints.gridx = 0;
+</span><span class='line'>   gridBagConstraints.gridy = 2;
+</span><span class='line'>   gridBagConstraints.fill = java.awt.GridBagConstraints.VERTICAL;
+</span><span class='line'>   gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTH;
+</span><span class='line'>   add(btn4, gridBagConstraints);
+</span><span class='line'>
+</span><span class='line'>   btn5.setText(&quot;btn 05&quot;);
+</span><span class='line'>   gridBagConstraints = new java.awt.GridBagConstraints();
+</span><span class='line'>   gridBagConstraints.gridx = 2;
+</span><span class='line'>   gridBagConstraints.gridy = 3;
+</span><span class='line'>   gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+</span><span class='line'>   add(btn5, gridBagConstraints);
+</span><span class='line'>
+</span><span class='line'>   btn6.setText(&quot;large btn&quot;);
+</span><span class='line'>   gridBagConstraints = new java.awt.GridBagConstraints();
+</span><span class='line'>   gridBagConstraints.gridx = 1;
+</span><span class='line'>   gridBagConstraints.gridy = 1;
+</span><span class='line'>   gridBagConstraints.gridwidth = 2;
+</span><span class='line'>   gridBagConstraints.gridheight = 2;
+</span><span class='line'>   gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+</span><span class='line'>   gridBagConstraints.weightx = 1.0;
+</span><span class='line'>   gridBagConstraints.weighty = 1.0;
+</span><span class='line'>   add(btn6, gridBagConstraints);
+</span><span class='line'> }
+</span><span class='line'>
+</span><span class='line'> private javax.swing.JButton btn1;
+</span><span class='line'> private javax.swing.JButton btn2;
+</span><span class='line'> private javax.swing.JButton btn3;
+</span><span class='line'> private javax.swing.JButton btn4;
+</span><span class='line'> private javax.swing.JButton btn5;
+</span><span class='line'> private javax.swing.JButton btn6;
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Mediante las líneas del código del tipo: <code>add(componente, gridBagConstraint);</code> se especifican las restricciones para cada componente. Es posible utilizar el mismo objeto para especificar las restricciones pero es recomendable utilizar distintas instancias.</p>
+
+<p>Para ver el resultado de este código, simplemente podemos probarlo mediante la siguiente clase:</p>
+
+<figure class='code'><figcaption><span>Codigo de prueba </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>package es.rchavarria.gridbaglayouthowto;
+</span><span class='line'>
+</span><span class='line'>import javax.swing.JFrame;
+</span><span class='line'>import javax.swing.SwingUtilities;
+</span><span class='line'>
+</span><span class='line'>public class RunDemo {
+</span><span class='line'>public static void main(String[] args) {
+</span><span class='line'>  SwingUtilities.invokeLater(new Runnable() {
+</span><span class='line'>    public void run() {
+</span><span class='line'>      JFrame frm = new JFrame(&quot;GridBagLayout HowTo&quot;);
+</span><span class='line'>      frm.getContentPane().add(new GridBagLayoutDemo());
+</span><span class='line'>      frm.pack();
+</span><span class='line'>      frm.setVisible(true);
+</span><span class='line'>    }
+</span><span class='line'>  });
+</span><span class='line'>}
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+  
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/09/13/servlet-lee-parametros/">Leer parámetros desde un servlet</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/03/sencillo-servlet-http/">Un sencillo servlet HTTP</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/03/demos-tecnologias-javaee/">Demos de tecnologías Java EE</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/05/30/aprendiendo-a-colaborar-en-github/">Aprendiendo a colaborar en github</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/04/30/save-informaticos/">Save InformaticOS, mi primer open space</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("rchavarriat", 4, true);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/rchavarriat">@rchavarriat</a></p>
+  
+</section>
+
+
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/rchavarriat?count=5&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/rchavarriat">My Delicious Bookmarks &raquo;</a></p>
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Rub&eacute;n Chavarr&iacute;a -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'rchavarria-github-com';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://rchavarria.github.com/blog/2010/01/20/uso-de-gridbaglayout-y-ii/';
+        var disqus_url = 'http://rchavarria.github.com/blog/2010/01/20/uso-de-gridbaglayout-y-ii/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

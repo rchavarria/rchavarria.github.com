@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: eclipse | R. Chavarria's Blog]]></title>
+  <link href="http://rchavarria.github.com/blog/categories/eclipse/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.com/"/>
+  <updated>2013-09-16T22:41:11+02:00</updated>
+  <id>http://rchavarria.github.com/</id>
+  <author>
+    <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[[microtip] eclipse: Detail Formatters]]></title>
+    <link href="http://rchavarria.github.com/blog/2013/02/19/microtip-eclipse/"/>
+    <updated>2013-02-19T17:19:00+01:00</updated>
+    <id>http://rchavarria.github.com/blog/2013/02/19/microtip-eclipse</id>
+    <content type="html"><![CDATA[<p>A través del post de <a href="http://twitter.com/kinisoftware">Kinisoftware</a>:
+<a href="http://kinisoftware.com/2013/02/a-la-caza-del-bug-en-eclipse/">A la caza del bug en eclipse</a>
+me encontré con un link muy recomendable, si trabajas con Eclipse como IDE:
+<a href="http://eclipsesource.com/blogs/2013/01/08/effective-java-debugging-with-eclipse/">Effective Java debugging with Eclipse</a>.</p>
+
+<p>En ese link aparecen multitud de consejos sobre cómo hacer debug en eclipse de una manera
+mucho más productiva. Entre estos consejos están los <em>Detail Formatters</em>, para formatear
+de una forma mucho más avanzada que con un simple <code>toString()</code> aquellas clases que desees.</p>
+
+<!-- more -->
+
+
+<p>En un primer momento, me parecieron muy útiles, pero no profundicé en ellos. Pensé que
+cada vez que iniciara la depuración de una aplicación, debía crearme los Detail
+Formatters que deseaba, y me pareció muy laborioso.</p>
+
+<p>Pero no es así, estos formatters se guardan en tus preferencias, y los puedes
+editar siempre que quieras. Los encontrarás en el menú <code>Window</code> > <code>Preferences</code>.
+Y dentro de preferencias, en <code>Java</code> > <code>Debug</code> > <code>Detail Formatters</code>.</p>
+
+<h2>Buscando una excusa</h2>
+
+<p>Una vez que me convencí de su utilidad, había que crear alguno, ¿no?. Actualmente
+me encuentro con que trabajo bastante con el tipo de Java <code>java.awt.geom.Rectangle2D</code>,
+y la verdad es que no me gusta nada cómo Eclipse me muestra este tipo de datos
+en una sesión de debugging.</p>
+
+<p><img class="center" src="/images/2013/rectangle2d-without-detail-formatter.png" width="804" height="151" title="Rectangle2D sin detail formatter" ></p>
+
+<h2>Crear un detail formatter</h2>
+
+<p>Manos a la obra. Primero, establecemos un punto de ruptura donde podamos ver en la vista
+<em>Variables</em> una variable de la clase deseada, en este caso de <code>java.awt.geom.Rectangle2D</code>.</p>
+
+<p>Pinchamos con el botón derecho del ratón y seleccionamos la opción <em>New Detail Formatter...</em>.</p>
+
+<p>Ahora tenemos a nuestra disposición una ventana donde podemos introducir código Java de forma
+que retorne una <code>String</code> con la representación que nosotros queramos. Yo he usado el siguiente
+código:</p>
+
+<p>``` java
+java.text.NumberFormat nf =</p>
+
+<pre><code>java.text.NumberFormat.getInstance(java.util.Locale.ENGLISH);
+</code></pre>
+
+<p>nf.setMaximumFractionDigits(2);
+nf.setGroupingUsed(false);</p>
+
+<p>return</p>
+
+<pre><code>"x: " + nf.format(getX()) + "\n" +
+"y: " + nf.format(getY()) + "\n" +
+"w: " + nf.format(getWidth()) + "\n" +
+"h: " + nf.format(getHeight());
+</code></pre>
+
+<p>```</p>
+
+<p>Y éste es el resultado, para mi gusto, mucho más compacto y directo:</p>
+
+<p><img class="center" src="/images/2013/rectangle2d-using-detail-formatter.png" width="548" height="116" title="Rectangle2D usando detail formatter" ></p>
+
+<h2>Conclusión</h2>
+
+<p>En cualquier proyecto nos podemos encontrar con clases que no podremos modificar (frameworks,
+librerías, código legacy, ...). Pero no nos tenemos que conformar con sus tristes y aburridos
+métodos <code>toString()</code>. Podemos escribir nuestro propio código para formatear estos tipos de datos.
+Y lo mejor de todo, podemos reutilizarlo, ya que nuestros formatters se guardan como preferencias
+de nuestro IDE favorito.</p>
+]]></content>
+  </entry>
+  
+</feed>

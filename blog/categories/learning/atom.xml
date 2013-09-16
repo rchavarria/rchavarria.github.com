@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: learning | R. Chavarria's Blog]]></title>
+  <link href="http://rchavarria.github.com/blog/categories/learning/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.com/"/>
+  <updated>2013-09-16T22:41:11+02:00</updated>
+  <id>http://rchavarria.github.com/</id>
+  <author>
+    <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Aprendiendo a colaborar en github]]></title>
+    <link href="http://rchavarria.github.com/blog/2013/05/30/aprendiendo-a-colaborar-en-github/"/>
+    <updated>2013-05-30T08:45:00+02:00</updated>
+    <id>http://rchavarria.github.com/blog/2013/05/30/aprendiendo-a-colaborar-en-github</id>
+    <content type="html"><![CDATA[<p>Recientemente, hablando con mi amigo <a href="http://twitter.com/dagarfol">David</a> sobre un
+proyectillo que llevamos a medias (estamos empezando, espero que podamos tener algo
+publicable pronto), salió el tema de cómo empezar a colaborar con
+amigos/compañeros/quien-sea con <a href="http://git-scm.com/">git</a> en <a href="http://github.com">github</a>.</p>
+
+<p>Yo le comenté que era bastante sencillo comenzar, pero de boquilla se pueden decir
+muchas cosas (la mayoría mentira), así que para que no se quede en agua de borrajas,
+en este post encontrarás 5 comandos y acciones básicas para comenzar a
+trabajar en equipo con git y github.</p>
+
+<!-- more -->
+
+
+<h2>¿Qué necesito?</h2>
+
+<p>Lo primero que se necesita es tener una cuenta en github. Si no tienes una, uno puede
+<a href="https://github.com/users">registrarse</a> fácilmente. Es como crearse una cuenta de correo.</p>
+
+<p><img class="center" src="/images/2013/github-overview.jpg"></p>
+
+<p>Después, es necesario que <a href="http://git-scm.com/downloads">descargues e instales git</a>
+en el ordenador donde vayas a trabajar. En windows es tan sencillo como instalar cualquier
+otro programa, así que no hay excusa para parar aquí.</p>
+
+<p>Para configurar git y poder usarlo con github, debemos configurarlo. Para ayudarnos, los
+chicos de github se han currado una aplicación,
+<a href="https://help.github.com/articles/set-up-git">Github for Windows</a>. También se puede
+<a href="https://help.github.com/articles/set-up-git#platform-linux">configurar github en linux</a>.</p>
+
+<h2>Obtener el código fuente</h2>
+
+<p>Para comenzar a colaborar, necesitas un repositorio donde esté almacenado el código fuente
+sobre el cual vais a trabajar. Dos formas muy comunes de crear un repositorio en tu
+cuenta de github son:</p>
+
+<ol>
+<li><a href="https://help.github.com/articles/create-a-repo">Crear un repositorio desde cero</a>.</li>
+<li><a href="https://help.github.com/articles/fork-a-repo">Copiar el repositorio de otra persona (fork)</a>.</li>
+</ol>
+
+
+<p>Con tu repositorio en github, ya puedes <em>descargarlo</em> a tu máquina de trabajo. En realidad
+lo que vas a hacer es una copia entera y completamente funcional del repositorio en github.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Clonando un repositorio </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>git clone https://github.com/username/Spoon-Knife.git
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Esto creará un directorio llamado <code>Spoon-Knife</code> donde se encuentra el repositorio completo.</p>
+
+<h2>Modificar ficheros y subir los cambios</h2>
+
+<p>Ya podemos realizar los cambios que queramos al código fuente.</p>
+
+<p>Para subir estos cambios al repositorio de github, debemos seguir varios pasos:</p>
+
+<ol>
+<li>Añadir los fichero nuevos al área temporal de git llamada <code>stage</code> para poder hacer <code>commit</code>
+al repositorio (existen más opciones para este comando, pero el más básico es éste):</li>
+</ol>
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Añadiendo ficheros al área de stage </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>git add . 
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ol>
+<li>Hacer <code>commit</code> de esos cambios. De esta forma, nuestro repositorio ya contendrá los cambios,
+sólo hará falta incorporarlos al repositorio de github (repositorio remoto):</li>
+</ol>
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Commiteando ficheros al repositorio local </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>git commit -m "Mensaje del commit"
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<ol>
+<li>Subir los cambios del repositorio local al repositorio remoto (github). El comando más básico
+para ello es el siguiente:</li>
+</ol>
+
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Sincronizando con el repositorio remoto </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>git push
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Si vamos a nuestro repositorio en github veremos cómo aparecen los commits que hicimos en nuestro
+repositorio local. BIEN!</p>
+
+<h2>Descargar cambios del repositorio de github</h2>
+
+<p>Con el siguiente comando (esta es su sintaxis más sencilla) podrás incorporar los cambios que haya
+en el repositorio remoto de github a tu repositorio local:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Sincronizando el repositorio local con cambios del remoto </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>git pull
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>Esta es su sintaxis más sencilla. Para avanzar en este aspecto, tendría que hablar de
+<a href="http://gitref.org/remotes/">remotes</a>, pero es un concepto bastante extenso y quedaría un
+post muy largo.</p>
+
+<h2>Compartir nuestros cambios con los compañeros</h2>
+
+<p>De acuerdo, ya tenemos nuestros cambios en nuestro repositorio local y los hemos subido a nuestro
+repositorio remoto en github. Existe una forma muy sencilla en github de informar a nuestros compañeros
+de que hemos hecho cambios, los llamados
+<a href="https://help.github.com/articles/using-pull-requests">Pull Request</a>.</p>
+
+<p><img class="right" src="/images/2013/github-pull-request.jpg"></p>
+
+<p>Mediante un Pull Request estás indicando a un compañero que le quieres pasar unos cambios que
+tú has hecho. Ahora tu compañero deberá decidir si acepta los cambios y él incorporará esos
+cambios a su repositorio remoto</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[solveet: cifrado cesar en python]]></title>
+    <link href="http://rchavarria.github.com/blog/2012/12/19/solveet-cifrado-cesar-en-python/"/>
+    <updated>2012-12-19T12:31:00+01:00</updated>
+    <id>http://rchavarria.github.com/blog/2012/12/19/solveet-cifrado-cesar-en-python</id>
+    <content type="html"><![CDATA[<p>Me gusta resolver problemas de programación regularmente para mejorar como programdor, y para ello uso
+la página <a href="http://solveet.com">Solveet</a>. El problema que he solucionado esta semana es el del
+<a href="http://www.solveet.com/exercises/Cifrado-Cesar/145">Cifrado César</a>, y está englobado en la iniciativa
+<a href="http://12meses12katas.com/">12meses12katas</a> en la me gusta participar.</p>
+
+<p>El <em>cifrado César</em> es muy simple: es un tipo de cifrado por sustitución en el que una letra en el texto
+original es reemplazada por otra letra que se encuentra un número fijo de posiciones más adelante
+en el alfabeto.</p>
+
+<p>Decidí usar <strong>python</strong> para este problema porque quería profundizar un poco más en este lenguaje, que lo
+tengo muy verde y he escuchado maravillas de él, pero gracias a la solución del problema he aprendido
+un par de cosas del lenguaje: uso de la función <code>map</code>, y las funciones <code>str.maketrans</code> y <code>str.translate</code>.</p>
+
+<!-- more -->
+
+
+<h2>Primera aproximación</h2>
+
+<p>Debido a mi poco conocimiento del lenguaje, mi
+<a href="http://www.solveet.com/exercises/Cifrado-Cesar/145/solution-1076">primera aproximación</a>
+al problema no es muy elegante, y tampoco usa muchas de las fortalezas de python. La verdad es que es
+una solución más al estilo de un lenguaje que conozco bastante mejor, Java.</p>
+
+<p>Así pues, una vez publiqué mi solución, decidí echarle un vistazo a soluciones de otros usuarios.
+Encontré varias en python, y de ellas aprendí un par de cosas:</p>
+
+<h2>Uso de la función <code>map</code></h2>
+
+<p>Python proporciona la función <code>map(function, iterable, ...)</code>
+(<a href="http://docs.python.org/3.3/library/functions.html#map">documentación</a>), la cual llama a la función
+<code>function</code> para cada uno de los elementos de <code>iterable</code> (se pueden usar uno o varios iterables).</p>
+
+<p>En un principio había pensado usar esta función. <code>function</code> sería el método que realiza el cifrado
+carácter a carácter e <code>iterable</code> sería la cadena de texto a cifrar. Pero el método que cifra necesita
+otro argumento, el desplazamiento, y no fuí capaz de averiguar por mí mismo cómo pasar este argumento
+a mi método usando <code>map</code>.</p>
+
+<p>Lo descubrí gracias a la solución de <a href="http://www.solveet.com/exercises/Cifrado-Cesar/145/solution-1052">climens</a>,
+y aprovechando lo aprendido, mi solución ahora quedaría así:</p>
+
+<p>``` python
+from string import ascii_lowercase as alphabet</p>
+
+<p>def shift(character, offset):</p>
+
+<pre><code>index = alphabet.find(character)
+if(index &lt; 0): return character
+return alphabet[(index + offset) % len(alphabet)]
+</code></pre>
+
+<p>def cipher(message, offset):</p>
+
+<pre><code>ciphered = map(shift, message, [offset] * len(message))
+return "".join(ciphered)
+</code></pre>
+
+<p>def decipher(message, offset):</p>
+
+<pre><code>return cipher(message, -1 * offset)
+</code></pre>
+
+<h1>simple tests</h1>
+
+<p>assert "ibm" == cipher("hal", 1)
+assert "hal" == decipher("ibm", 1)
+```</p>
+
+<p>El <em>truco</em> está en que a la función <code>map</code> le paso dos <code>iterables</code>: la cadena de texto, y un array de enteros
+de la misma longitud y cuyos elementos son todos iguales, el desplazamiento. <strong>¡Qué sencillo ahora que lo
+sé!</strong></p>
+
+<h2>Funciones <code>str.maketrans</code> y <code>str.translate</code></h2>
+
+<p>Desconocía completamente la existencia de estas dos funciones, pero parecen haber sido diseñadas exclusivamente
+para el <em>cifrado César</em>. Las descubrí gracias a la solución de
+<a href="http://www.solveet.com/exercises/Cifrado-Cesar/145/solution-1038">drabor</a></p>
+
+<p><code>str.maketrans</code> (<a href="http://docs.python.org/3.3/library/stdtypes.html#str.maketrans">documentación</a>)
+crea un mapa para ser usado en <code>str.translate</code>
+(<a href="http://docs.python.org/3.3/library/stdtypes.html#str.translate">documentación</a>),
+y ésta, al ser llamada sobre una cadena de caracteres, devuelve otra cadena donde cada carácter ha sido
+<em>transladado</em> según el mapa creado con <code>maketrans</code>.</p>
+
+<p>Ahora sólo hace falta crear el mapa. Uso dos iterables: el alfabeto original, y el alfabeto transladado tantas
+posiciones como diga el desplazamiento del cifrado. De esta forma, con desplazamiento <code>1</code>, la letra <code>a</code>
+corresponderá con la <code>b</code> y así sucesivamente. Pero todo ese trabajo lo hará <code>translate</code>, no nosotros.</p>
+
+<p>Así queda la solución:</p>
+
+<p>```
+from string import ascii_lowercase as alphabet</p>
+
+<p>def cipher(message, offset):</p>
+
+<pre><code>dictionary_mapping = str.maketrans(alphabet, alphabet[offset:] + alphabet[:offset])
+return message.translate(dictionary_mapping)
+</code></pre>
+
+<p>def decipher(message, offset):</p>
+
+<pre><code>return cipher(message, -1 * offset)
+</code></pre>
+
+<h1>simple tests</h1>
+
+<p>assert "ibm" == cipher("hal", 1)
+assert "hal" == decipher("ibm", 1)
+```</p>
+
+<h2>Conclusión</h2>
+
+<p>Cualquiera de las dos soluciones me parece mucho mejor que la mía inicial, y me parecía que debía compartir
+lo aprendido al solucionar este problema.</p>
+
+<p>Y tú, ¿Conoces python? ¿Te apetece participar en <a href="http://solveet.com">solveet</a>?
+¿Tienes alguna sugerencia para mejorar estas soluciones? Deja algún comentario. Si es respetuoso,
+será bienvenido.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[solveet: Torres de Hannoi]]></title>
+    <link href="http://rchavarria.github.com/blog/2012/12/12/solveet-torres-de-hannoi/"/>
+    <updated>2012-12-12T09:35:00+01:00</updated>
+    <id>http://rchavarria.github.com/blog/2012/12/12/solveet-torres-de-hannoi</id>
+    <content type="html"><![CDATA[<p>Simplemente para practicar y mejorar mis habilidades como programador, me gusta resolver problemas
+de programación regularmente. Hace un tiempo conocí la página <a href="http://solveet.com">Solveet</a>, y desde
+entonces intento aportar semanalmente alguna que otra solución a los problemas propuestos por otros
+profesionales del desarrollo software.</p>
+
+<p><img class="right" src="http://upload.wikimedia.org/wikipedia/commons/6/60/Tower_of_Hanoi_4.gif" width="320" height="125" title="By André Karwath aka Aka, Own work, CC-BY-SA-2.5, via Wikimedia Commons" ></p>
+
+<p>El problema que he solucionado esta semana es el de las
+<a href="http://www.solveet.com/exercises/Torres-de-Hannoi/72">Torres de Hannoi</a>, todo un clásico en el
+desarrollo software, y en este post intento describir detalladamente cómo he llegado a mi solución.</p>
+
+<!-- more -->
+
+
+<h2>Introducción</h2>
+
+<p>El punto de partida ha sido esta entrada en la wikipedia acerca de las
+<a href="http://es.wikipedia.org/wiki/Torres_de_Han%C3%B3i">Torres de Hannoi</a> donde explica de una forma muy
+básica la forma de solucionarlo. Ahora sólo hay que implementarlo.</p>
+
+<p>Decidí solucionar el problema en javascript, para aprender más sobre este lenguaje, y decidí solucionar
+el problema de forma iterativa, ya que me pareció más sencilla que la forma recursiva. Y ya que estoy
+practicando, intenté llegar a la solución definitiva practicando TDD.</p>
+
+<p>Puedes ver mi solución publicada en <a href="http://www.solveet.com/exercises/Torres-de-Hannoi/72/solution-1051">solveet</a>,
+así como el código completo de la solución y los tests en este repositorio de
+<a href="https://github.com/rchavarria/solveet-problems/tree/master/hannoi-js">github</a>.</p>
+
+<h2>Manos a la obra</h2>
+
+<p>La parte más fácil es mover el anillo más pequeño. Éste hay que moverlo siempre en los pasos impares,
+y siguiendo siempre un de estas dos secuencias:</p>
+
+<ul>
+<li>Si el número de anillos es impar, hay que moverlo a las siguientes torres o varillas:
+destino -> auxiliar -> origen, y así indefinidamente</li>
+<li>Si el número de anillos es par, la secuencia será: auxiliar -> destino -> origen, ...</li>
+</ul>
+
+
+<h2>Movimientos en los pasos pares</h2>
+
+<p>En los pasos pares hay que mover los anillos que no son el anillo más pequeño. El anillo a mover dependerá
+del número de anillos de los que conste el problema.</p>
+
+<p>Al utilizar TDD, he ido descubriendo poco a poco cómo escoger el anillo a mover y dónde moverlo:</p>
+
+<ul>
+<li>1 anillo: no hace falta mover otros anillos ya que con un movimiento está solucionado.</li>
+<li>2 anillos: solo es posible mover el anillo más grande a la torre destino, ya que el anillo más pequeño lo
+habremos movido en el primer movimiento a la torre auxiliar.</li>
+<li>3 anillos: desarrollando manualmente todos los movimientos, el anillo a mover es aquel que no está en la
+torre destino y que tampoco es el anillo más pequeño.</li>
+<li>4 anillos: desarrollando otra vez manualmente todos los movimientos, el anillo a mover es el menor anillo
+(sin ser el más pequeño) y se deberá mover a la única torre posible. Esta torre la sabremos porque es aquella
+torre que no contiene ni el anillo más pequeño ni el anillo a mover.</li>
+</ul>
+
+
+<p>A partir de los 4 anillos, la solución ya funciona con cualquier número de anillos.</p>
+
+<h4>Reconocimientos</h4>
+
+<ul>
+<li>Imagen By André Karwath aka Aka (Own work) <a href="http://creativecommons.org/licenses/by-sa/2.5">CC-BY-SA-2.5</a>, via <a href="http://commons.wikimedia.org/wiki/File%3ATower_of_Hanoi_4.gif">Wikimedia Commons</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Aprende EJB en 21 d&iacute;as]]></title>
+    <link href="http://rchavarria.github.com/blog/2010/02/03/aprende-ejb-en-21-dias/"/>
+    <updated>2010-02-03T02:03:00+01:00</updated>
+    <id>http://rchavarria.github.com/blog/2010/02/03/aprende-ejb-en-21-dias</id>
+    <content type="html"><![CDATA[<div style="margin:2%; padding:2%; background-color:#E0E0E0; ">
+  <p>Este post pertenece a mi antiguo blog en <a href="http://rchavarria.wordpress.com">wordpress</a>, pero decidí pasarme a github:pages por las siguientes <a href="http://rchavarria.github.com/blog/2012/12/03/por-que-cambie-mi-blog-en-wordpress-com">razones</a></p>
+</div>
+
+
+<p>Hace poco, una compañera de trabajo me habló de un blog muy interesante. El blog habla de <a href="http://ejbvn.wordpress.com/">Aprender EJB en 21 días</a>.</p>
+
+<!-- more -->
+
+
+<p>La verdad es que el título parece sacado de la serie de reportajes <a href="http://www.cuatro.com/21-dias/">21 días bla bla</a>, de Samanta Villar. También me viene a la mente una película, aunque la película trate de <a href="http://es.wikipedia.org/wiki/28_Days_Later">28 días después</a>, en lugar de 21.</p>
+
+<p>En definitiva, el blog me parece digno de mención, me parece que es un trabajo estupendo y muy exhaustivo, todo ello amenizado con gráficos, extensas explicaciones y demás. Aunque creo que puede servir mejor como referencia que como lugar de aprendizaje, ya que puede que trate ciertos temas demasiado en profundidad para el no iniciado.</p>
+
+<p>Si conoces blogs similares estaría encantado de poder compartilos contigo.</p>
+]]></content>
+  </entry>
+  
+</feed>
