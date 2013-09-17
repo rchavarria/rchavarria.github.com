@@ -4,7 +4,7 @@
   <title><![CDATA[Category: programming | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.com/blog/categories/programming/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.com/"/>
-  <updated>2013-09-16T22:41:11+02:00</updated>
+  <updated>2013-09-17T14:00:13+02:00</updated>
   <id>http://rchavarria.github.com/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,105 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Servlet redirecciona a una JSP]]></title>
+    <link href="http://rchavarria.github.com/blog/2013/09/17/servlet-redirecciona-jsp/"/>
+    <updated>2013-09-17T13:27:00+02:00</updated>
+    <id>http://rchavarria.github.com/blog/2013/09/17/servlet-redirecciona-jsp</id>
+    <content type="html"><![CDATA[<div style="margin:2%; padding:2%; background-color:#E0E0E0; ">
+    Find a lightweight English version of this post directly in the <a href="https://github.com/rchavarria/javaee-6-demos/tree/master/request-parameters-jsp">source code repository</a>.
+</div>
+
+
+<p>Este post es una pequeña extensión del anterior, un servlet que leía los parámetros
+de una petición HTTP. La demo anterior presentaba los parámetros leídos de una
+forma muy tosca y básica. En esta demo, la información se va a presentar al usuario
+de una forma más trabajada. Además, orientándonos hacia una arquitectura MVC,
+separaremos las tareas de lectura de los parámetros y presentación de los datos.</p>
+
+<p>Se puede ver el código fuente de la demostración en el directorio
+<a href="https://github.com/rchavarria/javaee-6-demos/tree/master/request-parameters-jsp"><code>request-parameters-jsp</code></a>
+del repositorio de las demos en github.</p>
+
+<!-- more -->
+
+
+<h2>Demo</h2>
+
+<p>La demostración va a ser muy sencilla: crearemos en servlet, lo configuraremos
+para que responda cuando un usuario envíe los campos de un formulario de login,
+y haremos que redireccione a una página JSP, esta página se encargará de renderizar
+los datos que viajarán como atributos de la petición.</p>
+
+<p>Para ejecutar la demo, simplemente hay que descargase el código fuente y ejecutar
+<code>mvn jetty:run</code> desde el directorio raiz de la demo. Visitar la página de login
+<a href="http://localhost:8080/login.html">http://localhost:8080/login.html</a>, introducir
+unos valores cualquiera y enviar los datos del formulario. Como resultado, veremos
+el renderizado de la página JSP en el navegador.</p>
+
+<p><img class="center" src="/images/2013/request-parameters-jsp.png" title="Respuesta del servlet" ></p>
+
+<h2>Dependencias</h2>
+
+<p>Como viene siendo habitual, para la demostración usaremos
+<a href="http://maven.apache.org/">Apache Maven</a> para la gestión de dependencias.
+En nuestro fichero <code>pom.xml</code> incluiremos la única dependencia del proyecto,
+<code>javax-servlet-api</code> y listo.</p>
+
+<h2>El servlet</h2>
+
+<p>Nuestro servlet se trata de un servlet HTTP, luego heredará de <code>javax.servlet.http.HttpServlet</code>.
+Lo configuraremos mediante anotaciones, con <code>@WebServlet</code>. Primero leerá los parámetros
+enviados en la petición HTTP, igual que vimos en la anterior demo, y lo almacenará como un
+atributo del objeto <code>request</code>, para que pueda ser leído por nuestra página JSP.</p>
+
+<p><code>java
+//...
+List&lt;Parameter&gt; params = buildParamList(request);
+request.setAttribute("params", params);
+//...
+</code></p>
+
+<p>Luego, redireccionará la petición a nuestra página JSP. Se ha decidido hacer un
+<code>forward</code> de la petición en lugar de hacer una redirección completa,
+ya que la redirección provocaría una nueva petición HTTP y perderíamos los parámetros
+de la petición original, y esto es algo que no deseamos.</p>
+
+<p><code>java
+//...
+request.getRequestDispatcher("/params.jsp").forward(request, response);
+//...
+</code></p>
+
+<h2>La página JSP</h2>
+
+<p>Finalmente, la página JSP se encarga de presentar la información. De esta forma tenemos
+construida nuestra demo siguiendo un patrón MVC (aunque es muy sencillo en este caso, ya
+que solo contamos con un servlet y una página JSP), donde la página JSP juega el papel
+de <em>vista</em>.</p>
+
+<p>El código que nos interesa dentro del JSP es el que se encarga de iterar el
+atributo que estableció el servlet, al que hemos llamado <code>params</code>.</p>
+
+<p>``` html
+&lt;%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %></p>
+
+<ul>
+    <c:forEach var="p" items="${params}">
+        <li>${p.key}: ${p.value}</li>
+    </c:forEach>
+</ul>
+
+
+<p>```</p>
+
+<h2>Código fuente</h2>
+
+<p>Para echar un ojo al código fuente, visitar el directorio
+<a href="https://github.com/rchavarria/javaee-6-demos/tree/master/request-parameters-jsp"><code>request-parameters-jsp</code></a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Leer parámetros desde un servlet]]></title>

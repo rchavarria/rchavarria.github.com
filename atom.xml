@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.com/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.com/"/>
-  <updated>2013-09-16T22:41:11+02:00</updated>
+  <updated>2013-09-17T14:00:13+02:00</updated>
   <id>http://rchavarria.github.com/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,119 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Servlet redirecciona a una JSP]]></title>
+    <link href="http://rchavarria.github.com/blog/2013/09/17/servlet-redirecciona-jsp/"/>
+    <updated>2013-09-17T13:27:00+02:00</updated>
+    <id>http://rchavarria.github.com/blog/2013/09/17/servlet-redirecciona-jsp</id>
+    <content type="html"><![CDATA[<div style="margin:2%; padding:2%; background-color:#E0E0E0; ">
+    Find a lightweight English version of this post directly in the <a href="https://github.com/rchavarria/javaee-6-demos/tree/master/request-parameters-jsp">source code repository</a>.
+</div>
+
+
+<p>Este post es una pequeña extensión del anterior, un servlet que leía los parámetros
+de una petición HTTP. La demo anterior presentaba los parámetros leídos de una
+forma muy tosca y básica. En esta demo, la información se va a presentar al usuario
+de una forma más trabajada. Además, orientándonos hacia una arquitectura MVC,
+separaremos las tareas de lectura de los parámetros y presentación de los datos.</p>
+
+<p>Se puede ver el código fuente de la demostración en el directorio
+<a href="https://github.com/rchavarria/javaee-6-demos/tree/master/request-parameters-jsp"><code>request-parameters-jsp</code></a>
+del repositorio de las demos en github.</p>
+
+<!-- more -->
+
+
+<h2>Demo</h2>
+
+<p>La demostración va a ser muy sencilla: crearemos en servlet, lo configuraremos
+para que responda cuando un usuario envíe los campos de un formulario de login,
+y haremos que redireccione a una página JSP, esta página se encargará de renderizar
+los datos que viajarán como atributos de la petición.</p>
+
+<p>Para ejecutar la demo, simplemente hay que descargase el código fuente y ejecutar
+<code>mvn jetty:run</code> desde el directorio raiz de la demo. Visitar la página de login
+<a href="http://localhost:8080/login.html">http://localhost:8080/login.html</a>, introducir
+unos valores cualquiera y enviar los datos del formulario. Como resultado, veremos
+el renderizado de la página JSP en el navegador.</p>
+
+<p><img class="center" src="http://rchavarria.github.com/images/2013/request-parameters-jsp.png" title="Respuesta del servlet" ></p>
+
+<h2>Dependencias</h2>
+
+<p>Como viene siendo habitual, para la demostración usaremos
+<a href="http://maven.apache.org/">Apache Maven</a> para la gestión de dependencias.
+En nuestro fichero <code>pom.xml</code> incluiremos la única dependencia del proyecto,
+<code>javax-servlet-api</code> y listo.</p>
+
+<h2>El servlet</h2>
+
+<p>Nuestro servlet se trata de un servlet HTTP, luego heredará de <code>javax.servlet.http.HttpServlet</code>.
+Lo configuraremos mediante anotaciones, con <code>@WebServlet</code>. Primero leerá los parámetros
+enviados en la petición HTTP, igual que vimos en la anterior demo, y lo almacenará como un
+atributo del objeto <code>request</code>, para que pueda ser leído por nuestra página JSP.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="c1">//...</span>
+</span><span class='line'><span class="n">List</span><span class="o">&lt;</span><span class="n">Parameter</span><span class="o">&gt;</span> <span class="n">params</span> <span class="o">=</span> <span class="n">buildParamList</span><span class="o">(</span><span class="n">request</span><span class="o">);</span>
+</span><span class='line'><span class="n">request</span><span class="o">.</span><span class="na">setAttribute</span><span class="o">(</span><span class="s">&quot;params&quot;</span><span class="o">,</span> <span class="n">params</span><span class="o">);</span>
+</span><span class='line'><span class="c1">//...</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Luego, redireccionará la petición a nuestra página JSP. Se ha decidido hacer un
+<code>forward</code> de la petición en lugar de hacer una redirección completa,
+ya que la redirección provocaría una nueva petición HTTP y perderíamos los parámetros
+de la petición original, y esto es algo que no deseamos.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="c1">//...</span>
+</span><span class='line'><span class="n">request</span><span class="o">.</span><span class="na">getRequestDispatcher</span><span class="o">(</span><span class="s">&quot;/params.jsp&quot;</span><span class="o">).</span><span class="na">forward</span><span class="o">(</span><span class="n">request</span><span class="o">,</span> <span class="n">response</span><span class="o">);</span>
+</span><span class='line'><span class="c1">//...</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>La página JSP</h2>
+
+<p>Finalmente, la página JSP se encarga de presentar la información. De esta forma tenemos
+construida nuestra demo siguiendo un patrón MVC (aunque es muy sencillo en este caso, ya
+que solo contamos con un servlet y una página JSP), donde la página JSP juega el papel
+de <em>vista</em>.</p>
+
+<p>El código que nos interesa dentro del JSP es el que se encarga de iterar el
+atributo que estableció el servlet, al que hemos llamado <code>params</code>.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="err">&lt;</span>%@ taglib prefix=&quot;c&quot; uri=&quot;http://java.sun.com/jsp/jstl/core&quot; %&gt;
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;ul&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;c:forEach</span> <span class="na">var=</span><span class="s">&quot;p&quot;</span> <span class="na">items=</span><span class="s">&quot;${params}&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;li&gt;</span>${p.key}: ${p.value}<span class="nt">&lt;/li&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/c:forEach&gt;</span>
+</span><span class='line'><span class="nt">&lt;/ul&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p></p>
+
+<h2>Código fuente</h2>
+
+<p>Para echar un ojo al código fuente, visitar el directorio
+<a href="https://github.com/rchavarria/javaee-6-demos/tree/master/request-parameters-jsp"><code>request-parameters-jsp</code></a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Leer parámetros desde un servlet]]></title>
@@ -1960,48 +2073,6 @@ Encuentra mis razones en el primer post serio:
 
 <h2></h2>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Proyecto maven para javascript]]></title>
-    <link href="http://rchavarria.github.com/blog/2012/09/26/proyecto-maven-para-javascript/"/>
-    <updated>2012-09-26T09:26:00+02:00</updated>
-    <id>http://rchavarria.github.com/blog/2012/09/26/proyecto-maven-para-javascript</id>
-    <content type="html"><![CDATA[<p>Estoy aprendiendo JavaScript. Creo que es uno de los lenguajes con más futuro, y no sólo por la web (que da de comer a mucha gente), sino por herramientas como <a href="http://phonegap.com/">PhoneGap</a> (que te permite crear aplicaciones para iOS, Android, &#8230;), y también por la llegada del nuevo Windows 8, ya que se pueden desarrollar aplicaciones en JavaScript que acceden al hardware de la máquina donde esté instalado Windows 8.</p>
-
-<p>Empecé aprendiéndolo gracias a <a href="http://www.codecademy.com/">Codecademy</a>, que comenzó el año con unos cursos o clases online, y me llamó mucho la atención la posibilidad de poder ir practicando JavaScript sin tener que instalar nada. Y además, cada semana la herramienta me recordaría que tenía una nueva lección, así no dejaría de practicar.</p>
-
-<!-- more -->
-
-
-<p>Pero hace poco tropecé con un pequeño problema, y es que quería aportar una solución escrita en JavaScript al desafío de <a href="http://www.solveet.com/exercises/Compresion-RLE/35">Compresión en RLE</a> en <a href="http://www.solveet.com/">Solveet </a>(una plataforma donde la gente publica desafíos de programación y otra gente publica sus propias soluciones, muy recomendable y divertido). El problema era que no tenía instalado nada en mi ordenador que me permitiera hacer <a href="http://es.wikipedia.org/wiki/Desarrollo_guiado_por_pruebas">TDD </a>(lo prefiero para resolver los desafíos, así practico doble: el desafío y la práctica TDD).</p>
-
-<p>Una herramienta que me encanta para gestionar el ciclo de vida de mis proyectos es <a href="maven.apache.org">maven</a>, así que me decidí a buscar algo que me permitiera escribir JavaScript y luego ejecutarlo con comandos de maven.</p>
-
-<p>Y tuve la suerte de encontrar un post de <a href="http://blog.akquinet.de/">akquinet </a>donde explica <a href="http://blog.akquinet.de/2011/02/11/mavenizing-javascript-projects/">cómo crear un proyecto maven para JavaScript</a>. La verdad es que es realmente sencillo porque akquinet se ha currado un archetype para maven que te crea un esqueleto de proyecto para que escribas directamente JavaScript. Simplemente con este comando para ejecutar maven:</p>
-
-<p>[sourcecode language=&#8221;bash&#8221;]
-mvn archetype:generate \
-  -DarchetypeArtifactId=javascript-quickstart \
-  -DarchetypeGroupId=de.akquinet.javascript.archetypes \
-  -DarchetypeVersion=1.0.0 \
-  -DgroupId=<enter your groupId> \
-  -DartifactId=<enter your artifactId>
-[/sourcecode]</p>
-
-<p>Con el proyecto creado a partir del archetype de akquinet podrás:</p>
-
-<ul>
-    <li>Ejecutar tus tests JavaScript con <a href="http://pivotal.github.com/jasmine/">Jasmine</a></li>
-    <li>Comprimir los ficheros .js y .css de tu proyecto</li>
-    <li>Generar la documentación con <a href="www.jslint.com/">Jslint</a> y <a href="http://code.google.com/p/jsdoc-toolkit/">Jsdoc</a></li>
-</ul>
-
-
-<p>Además, al ser un proyecto maven, es muy fácil que lo integres en un servidor de <a href="http://es.wikipedia.org/wiki/Integraci%C3%B3n_continua">Integración Contínua</a> como <a href="http://hudson.dev.java.net/">Hudson</a>.</p>
-
-<p>Si quieres, puedes ver la solución que aporté en Solveet. El desafío es muy sencillo, y hay muy poco código JavaScript: <a href="http://www.solveet.com/exercises/Compresion-RLE/35/solution-846">Compresión RLE en JavaScript</a>, el <a href="https://github.com/rchavarria/solveet-problems/tree/master/rle-compression-javascript">código completo con los tests</a>.</p>
 ]]></content>
   </entry>
   
