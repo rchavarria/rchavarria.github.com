@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: mktIO | R. Chavarria's Blog]]></title>
-  <link href="http://rchavarria.github.com/blog/categories/mktio/atom.xml" rel="self"/>
-  <link href="http://rchavarria.github.com/"/>
-  <updated>2013-09-17T14:00:13+02:00</updated>
-  <id>http://rchavarria.github.com/</id>
+  <link href="http://rchavarria.github.io/blog/categories/mktio/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.io/"/>
+  <updated>2013-09-19T11:46:25+02:00</updated>
+  <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Notas sobre un video de marketing online]]></title>
-    <link href="http://rchavarria.github.com/blog/2013/04/17/notas-sobre-un-video-de-marketing-online/"/>
+    <link href="http://rchavarria.github.io/blog/2013/04/17/notas-sobre-un-video-de-marketing-online/"/>
     <updated>2013-04-17T06:15:00+02:00</updated>
-    <id>http://rchavarria.github.com/blog/2013/04/17/notas-sobre-un-video-de-marketing-online</id>
+    <id>http://rchavarria.github.io/blog/2013/04/17/notas-sobre-un-video-de-marketing-online</id>
     <content type="html"><![CDATA[<p>En este post incluyo las notas que fui tomando mientras visualizé el siguiente vídeo:
 <a href="http://youtu.be/33vKaNuJh4o">Marca personal, mktIO</a> de la serie #mktIO que regularmente
 se publica en el canal de youtube de

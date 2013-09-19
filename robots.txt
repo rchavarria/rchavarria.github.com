@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://rchavarria.github.com/sitemap.xml 
+Sitemap: http://rchavarria.github.io/sitemap.xml 

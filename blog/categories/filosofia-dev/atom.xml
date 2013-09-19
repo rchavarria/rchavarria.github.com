@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: filosofia dev | R. Chavarria's Blog]]></title>
-  <link href="http://rchavarria.github.com/blog/categories/filosofia-dev/atom.xml" rel="self"/>
-  <link href="http://rchavarria.github.com/"/>
-  <updated>2013-09-17T14:00:13+02:00</updated>
-  <id>http://rchavarria.github.com/</id>
+  <link href="http://rchavarria.github.io/blog/categories/filosofia-dev/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.io/"/>
+  <updated>2013-09-19T11:46:25+02:00</updated>
+  <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Agile principles, patterns and practices in C#]]></title>
-    <link href="http://rchavarria.github.com/blog/2012/11/22/agile-principles-patterns-and-practices-in-c/"/>
+    <link href="http://rchavarria.github.io/blog/2012/11/22/agile-principles-patterns-and-practices-in-c/"/>
     <updated>2012-11-22T11:22:00+01:00</updated>
-    <id>http://rchavarria.github.com/blog/2012/11/22/agile-principles-patterns-and-practices-in-c</id>
+    <id>http://rchavarria.github.io/blog/2012/11/22/agile-principles-patterns-and-practices-in-c</id>
     <content type="html"><![CDATA[<h4>Agile principles, patterns and practices in C#</h4>
 
 
@@ -121,7 +121,7 @@
     <li>[pdf] <a href="http://www.objectmentor.com/resources/articles/TheHumbleDialogBox.pdf">The humble dialog box</a>: cómo separar la lógica de negocio de la interfaz gráfica, de Michael Feathers.</li>
     <li><a href="http://www.martinfowler.com/eaaDev/ModelViewPresenter.html">Patrón model-view-presenter</a>: artículo de Martin Fowler que me llevó a éste de <a href="http://www.martinfowler.com/eaaDev/uiArchs.html">Arquitecturas GUI</a>.</li>
     <li><a href="http://apagayvuelveaencender.blogspot.com.es/2012/11/metodologias-agiles-me-las-creo-o-no-me.html">Metodologías ágiles: ¿me las creo o no me las creo?</a>: excelente post de <a href="http://twitter.com/andres_viedma">Andrés Viedma</a> que me viene ni al pelo como enlace relacionado con el libro y donde se explican los cuatro principios del desarrollo de software ágil</li>
-    <li>Hace ya un tiempo, leí sobre <a href="http://rchavarria.github.com/blog/2010/03/04/principios-y-patrones-de-diseno/">principios y patrones de diseño</a></li>
+    <li>Hace ya un tiempo, leí sobre <a href="http://rchavarria.github.io/blog/2010/03/04/principios-y-patrones-de-diseno/">principios y patrones de diseño</a></li>
 </ul>
 
 ]]></content>
@@ -129,9 +129,9 @@
   
   <entry>
     <title type="html"><![CDATA[Qu&eacute; es un arquitecto de software?]]></title>
-    <link href="http://rchavarria.github.com/blog/2010/02/12/que-es-un-arquitecto-de-software/"/>
+    <link href="http://rchavarria.github.io/blog/2010/02/12/que-es-un-arquitecto-de-software/"/>
     <updated>2010-02-12T02:12:00+01:00</updated>
-    <id>http://rchavarria.github.com/blog/2010/02/12/que-es-un-arquitecto-de-software</id>
+    <id>http://rchavarria.github.io/blog/2010/02/12/que-es-un-arquitecto-de-software</id>
     <content type="html"><![CDATA[<p>Hace días descubrí un artículo en InfoQ titulado “<a href="http://www.infoq.com/articles/brown-are-you-a-software-architect">Eres un arquitecto de software?</a>” de <a href="http://www.infoq.com/author/Simon-Brown">Simon Brown</a>, y hoy he leído una pequeña reseña en <a href="http://www.javahispano.org/contenidos/es/que_es_un_arquitecto_de_sw/">javaHispano</a>, lo cuál me ha recordado que tenía pendiente escribir algo sobre él. En él, Simon nos expone su idea de lo que un arquitecto de software debería ser, o cómo un desarrollador puede llegar a ser arquitecto.</p>
 
 <p>La idea más importante del artículo creo que es que ser arquitecto <strong>es un rol, no un rango</strong>, por lo que el arquitecto se debe comportar como tal y ganarse el respeto del resto del equipo, no porque un papel diga que es el arquitecto los demás deban reverenciarle.</p>
@@ -166,9 +166,9 @@
   
   <entry>
     <title type="html"><![CDATA[El comunicador t&iacute;mido]]></title>
-    <link href="http://rchavarria.github.com/blog/2009/12/16/el-comunicador-timido/"/>
+    <link href="http://rchavarria.github.io/blog/2009/12/16/el-comunicador-timido/"/>
     <updated>2009-12-16T12:16:00+01:00</updated>
-    <id>http://rchavarria.github.com/blog/2009/12/16/el-comunicador-timido</id>
+    <id>http://rchavarria.github.io/blog/2009/12/16/el-comunicador-timido</id>
     <content type="html"><![CDATA[<p>He encontrado por ahí una presentación muy interesante que habla acerca de por qué una persona tímida puede ser una referencia para mucha gente (<a href="http://www.slideshare.net/sachac/the-shy-connector">Sacha Chua - The shy connector</a>):</p>
 
 <p>Eres tímido? No te preocupes, Sacha Chua te da unos consejos, no para superar tu timidez, eres así y no hay nada de malo en ello. Los consejos son para usar tu timidez para ayudar a la gente y convertirte en un gran comunicador.</p>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[R. Chavarria's Blog]]></title>
-  <link href="http://rchavarria.github.com/atom.xml" rel="self"/>
-  <link href="http://rchavarria.github.com/"/>
-  <updated>2013-09-17T14:00:13+02:00</updated>
-  <id>http://rchavarria.github.com/</id>
+  <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.io/"/>
+  <updated>2013-09-19T11:46:25+02:00</updated>
+  <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
     
@@ -14,10 +14,306 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Crear un servicio web JAX-WS]]></title>
+    <link href="http://rchavarria.github.io/blog/2013/09/19/crear-servicio-web-jaxws/"/>
+    <updated>2013-09-19T08:49:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2013/09/19/crear-servicio-web-jaxws</id>
+    <content type="html"><![CDATA[<div style="margin:2%; padding:2%; background-color:#E0E0E0; ">
+    Find a lightweight English version of this post directly in the <a href="https://github.com/rchavarria/javaee-6-demos/tree/master/ws-jaxws-cxf">source code repository</a>.
+</div>
+
+
+<p>En esta demo crearemos un servicio web. Básicamente existen dos tipos de servicios
+web: SOAP, basados en el intercambio de mensajes XML; y servicios web basados en
+una interfaces REST, RESTful web services.</p>
+
+<p>Aquí crearemos un servicio web SOAP, el cual establece que los mensajes XML pueden ser
+transportados por diversos protocolos, aquí lo haremos sobre HTTP, ya que es lo más
+común y sencillo. Ya que usaremos HTTP como protocolo de transporte, nuestro servicio web estará
+gestionado por un servlet.</p>
+
+<p>Se puede ver el código fuente de la demostración en el directorio
+<a href="https://github.com/rchavarria/javaee-6-demos/tree/master/ws-jaxws-cxf"><code>ws-jaxws-cxf</code></a>
+del repositorio de las demos en github.</p>
+
+<!-- more -->
+
+
+<h2>Demo</h2>
+
+<p><img class="right" src="http://rchavarria.github.io/images/2013/web-services-by-psd.jpg" width="320" height="213" title="Foto por el usuario de flickr psd" ></p>
+
+<p>En esta demo no veremos nada funcionando, ya que vamos a crear un servicio web
+pero no vamos a crear un cliente que lo consuma (eso para la siguiente). La forma
+de comprobar que hemos creado un servicio web correcto será la visualización del
+fichero WSDL generado por el servicio, el cual es el contrato entre el proveedor
+del servicio (lo creado en esta demo) y el consumidor del mismo (el cliente que
+crearemos más adelante).</p>
+
+<p>La funcionalidad que nos ofrecerá el servicio se apoyarán en dos métodos:</p>
+
+<ol>
+<li>Añadir usuario: añadiremos un nombre de usuario al servicio.</li>
+<li>Obtener usuario: mediante un identificiado, obtendremos un nombre de usuario.</li>
+</ol>
+
+
+<p>Para ejecutar la demo, simplemente hay que descargase el código fuente y ejecutar
+<code>mvn jetty:run</code> desde el directorio raiz de la demo. Visitar la página de login
+<a href="http://localhost:8080/Users?wsdl">http://localhost:8080/Users?wsdl</a> y veremos
+el fichero WSDL con la definición del servicio.</p>
+
+<h2>Pasos a seguir</h2>
+
+<h3>Elegir un framework que implemente JAX-WS</h3>
+
+<p>Según la <a href="http://docs.oracle.com/javaee/6/tutorial/doc/bnayl.html">documentación de Oracle</a>,
+crear un servicio web parece realmente
+sencillo y para toda la familia. Lo que no explican es que están dependiendo
+de la implementación de los servicios web incluída en <em>su</em> contenedor Java EE,
+Glassfish. No tengo nada en contra, pero me gusta tener cierta independencia,
+por lo que vamos a elegir otro framework que implemente la especificación
+JAX-WS.</p>
+
+<p>He elegido <a href="http://cxf.apache.org">Apache CXF</a>, aunque hay otras implementaciones
+disponibles, como <a href="http://projects.spring.io/spring-ws/">Spring WS</a>
+(quizá en un futuro, veamos su uso).</p>
+
+<h3>Dependencias del proyecto maven</h3>
+
+<p>Como todas las demos, utilizaremos <code>maven</code> como gestor del ciclo de vida del
+proyecto, y las dependencias son una parte muy importante de la vida del proyecto.</p>
+
+<p>La aplicación depende de:</p>
+
+<ul>
+<li><code>javax.servlet-api</code>: el API de Java EE para servlets, ya que será un servlet
+quien gestione las peticiones HTTP. Nuestro servicio web se basará en este servlet.</li>
+<li><code>cxf-rt-frontend-jaxws</code>: la implementación de CXF de la especificación JAX-WS.</li>
+<li><code>cxf-rt-transports-http</code>: HTTP será el protocolo de transporte.</li>
+<li><code>spring-web</code>: CXF usa Spring internamente para su funcionamiento.</li>
+</ul>
+
+
+<h3>Crear el interfaz del servicio</h3>
+
+<p>Nuestro servicio web servirá para almacenar nombres de usuarios, y se podrán
+recuperar estos nombres a través de un identificador que devolverá el servicio
+al añadirlos.</p>
+
+<p>Por lo tanto, vemos que necesitaremos dos métodos:</p>
+
+<ul>
+<li><code>addUser</code>: para añadir un usuario al sistema.</li>
+<li><code>getUser</code>: para recuperar un nombre de usuario.</li>
+</ul>
+
+
+<p>Nuestro interfaz de servicio sería algo así:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kn">import</span> <span class="nn">javax.jws.WebService</span><span class="o">;</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">javax.jws.WebParam</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nd">@WebService</span>
+</span><span class='line'><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">UsersManagement</span> <span class="o">{</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getUser</span><span class="o">(</span><span class="nd">@WebParam</span><span class="o">(</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;userId&quot;</span><span class="o">)</span> <span class="kt">int</span> <span class="n">userId</span><span class="o">);</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">addUser</span><span class="o">(</span><span class="nd">@WebParam</span><span class="o">(</span><span class="n">name</span><span class="o">=</span><span class="s">&quot;name&quot;</span><span class="o">)</span> <span class="n">String</span> <span class="n">name</span><span class="o">);</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Crear la implementación del servicio</h3>
+
+<p>Ya tenemos la definición del servicio, ahora debemos implementarlo. Esta
+implementación deberá estar anotada también con <code>@WebService</code>, y deberemos
+proporcionar valores a algunos parámetros de la anotación. El más importante
+es <code>endpointInterface</code>, que debe apuntar a la definición del servicio.</p>
+
+<p>La implementación tendrá un aspecto similar a éste:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kn">import</span> <span class="nn">javax.jws.WebService</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nd">@WebService</span><span class="o">(</span><span class="n">endpointInterface</span> <span class="o">=</span> <span class="s">&quot;es.rchavarria.ws.UsersManagement&quot;</span><span class="o">,</span>
+</span><span class='line'>            <span class="n">serviceName</span> <span class="o">=</span> <span class="s">&quot;Users&quot;</span><span class="o">)</span>
+</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">UsersManagementImpl</span> <span class="kd">implements</span> <span class="n">UsersManagement</span> <span class="o">{</span>
+</span><span class='line'>     <span class="c1">// ... implementación de los métodos</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Invito a bucear en el código para ver la implementación de los métodos,
+aunque no es muy interesante de ver, todo sea dicho.</p>
+
+<h3>Establecer un servlet que gestione las peticiones HTTP</h3>
+
+<p>El siguiente paso es establecer un servlet que gestione las peticiones HTTP.
+Apache CXF nos proporciona dicho servlet, por lo que deberemos configurar
+nuestro contenedor Java EE para que lo arranque. El servlet gestionará todas
+las peticiones, con lo que estableceremos el patrón URL a <code>/*</code>.</p>
+
+<p>Es muy importante que el patrón URL del servlet sea capaz de gestionar la URL
+donde se despliegue el servicio web, en caso contrario, las peticiones no
+llegarán al servicio web. Por ejemplo, si el patrón URL del servlet es
+<code>/services/*</code> y nuestro servicio web se despliega en <code>/web-services/*</code>,
+las peticiones a nuestro servicio no serán gestionadas por el servlet.</p>
+
+<p>Para establecer el servlet, creamos un fichero descriptor de la aplicación web,
+<code>web.xml</code>:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;servlet&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;servlet-name&gt;</span>the-cxf-servlet<span class="nt">&lt;/servlet-name&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;servlet-class&gt;</span>org.apache.cxf.transport.servlet.CXFServlet<span class="nt">&lt;/servlet-class&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;load-on-startup&gt;</span>1<span class="nt">&lt;/load-on-startup&gt;</span>
+</span><span class='line'><span class="nt">&lt;/servlet&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;servlet-mapping&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;servlet-name&gt;</span>the-cxf-servlet<span class="nt">&lt;/servlet-name&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;url-pattern&gt;</span>/*<span class="nt">&lt;/url-pattern&gt;</span>
+</span><span class='line'><span class="nt">&lt;/servlet-mapping&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Configurar el servlet de CXF</h3>
+
+<p>El servlet de CXF arrancará con el servidor, pero no sabe qué servicios web puede
+invocar. Debemos configurarlo. CXF proporciona un mecanismo para ello, a través
+de un fichero XML.</p>
+
+<p>Podríamos utilizar un fichero por defecto, y guardarlo en <code>WEB-INF/cxf-servlet</code>,
+o podemos configurarlo manualmente. Lo haremos de forma manual, e indicaremos al
+servlet donde está su fichero de configuración. Se lo indicaremos a través de un
+parámetro de inicialización de servlet, por lo que modificaremos nuestro <code>web.xml</code>:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="c">&lt;!-- ... --&gt;</span>
+</span><span class='line'><span class="nt">&lt;servlet&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;servlet-name&gt;</span>the-cxf-servlet<span class="nt">&lt;/servlet-name&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;servlet-class&gt;</span>org.apache.cxf.transport.servlet.CXFServlet<span class="nt">&lt;/servlet-class&gt;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nt">&lt;init-param&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;param-name&gt;</span>config-location<span class="nt">&lt;/param-name&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;param-value&gt;</span>/WEB-INF/services.xml<span class="nt">&lt;/param-value&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/init-param&gt;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nt">&lt;load-on-startup&gt;</span>1<span class="nt">&lt;/load-on-startup&gt;</span>
+</span><span class='line'><span class="nt">&lt;/servlet&gt;</span>
+</span><span class='line'><span class="c">&lt;!-- ... --&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>También debemos añadir el fichero de configuración del servlet CXF, el cual hemos
+llamado <code>WEB-INF/services.xml</code>:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+</span><span class='line'><span class="nt">&lt;beans</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.springframework.org/schema/beans&quot;</span>
+</span><span class='line'>      <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+</span><span class='line'>      <span class="na">xmlns:jaxws=</span><span class="s">&quot;http://cxf.apache.org/jaxws&quot;</span>
+</span><span class='line'>      <span class="na">xmlns:soap=</span><span class="s">&quot;http://cxf.apache.org/bindings/soap&quot;</span>
+</span><span class='line'>      <span class="na">xsi:schemaLocation=</span><span class="s">&quot;</span>
+</span><span class='line'><span class="s">http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd</span>
+</span><span class='line'><span class="s">http://cxf.apache.org/bindings/soap http://cxf.apache.org/schemas/configuration/soap.xsd</span>
+</span><span class='line'><span class="s">http://cxf.apache.org/jaxws</span>
+</span><span class='line'><span class="s">http://cxf.apache.org/schemas/jaxws.xsd&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nt">&lt;jaxws:server</span> <span class="na">id=</span><span class="s">&quot;aServer&quot;</span> <span class="na">serviceClass=</span><span class="s">&quot;es.rchavarria.ws.UsersManagement&quot;</span> <span class="na">address=</span><span class="s">&quot;/Users&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;jaxws:serviceBean&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;bean</span> <span class="na">class=</span><span class="s">&quot;es.rchavarria.ws.UsersManagementImpl&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/jaxws:serviceBean&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/jaxws:server&gt;</span>
+</span><span class='line'><span class="nt">&lt;/beans&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Esto es un fichero de configuración de Spring, y es que CXF usa Spring internamente. Se
+añade un nuevo namespace, <code>jaxws</code>, proporcionado por CXF y que viene con etiquetas XML
+para configurar un servidor que responda a las peticiones dirigidas a nuestro servicio web.</p>
+
+<h3>Listos</h3>
+
+<p>La demo ya está lista para ser ejecutada. Si la ejecutamos con el comando <code>mvn jetty:run</code>
+podremos visitar <a href="http://localhost:8080/Users?wsdl">http://localhost:8080/Users?wsdl</a>
+y veremos el fichero WSDL que define el servicio web.</p>
+
+<p>En la próxima demo, crearemos un cliente a partir de este fichero WSDL, y comprobaremos
+cómo funciona.</p>
+
+<h2>Código fuente</h2>
+
+<p>Para echar un ojo al código fuente, visitar el directorio
+<a href="https://github.com/rchavarria/javaee-6-demos/tree/master/ws-jaxws-cxf"><code>ws-jaxws-cxf</code></a>.</p>
+
+<h2>Enlaces para ampliar información</h2>
+
+<ul>
+<li><a href="http://docs.oracle.com/javaee/6/tutorial/doc/bnayl.html">Construir servicios web con JAX-WS</a></li>
+<li><a href="http://docs.oracle.com/javaee/6/tutorial/doc/giepu.html">Construir servicios web REST con JAX-RS</a></li>
+<li><a href="http://cxf.apache.org/docs/index.html">Guía de uso de Apache CXF</a></li>
+</ul>
+
+
+<p><em>Imagen obtenida de <a href="http://www.flickr.com/photos/psd">psd</a></em></p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Servlet redirecciona a una JSP]]></title>
-    <link href="http://rchavarria.github.com/blog/2013/09/17/servlet-redirecciona-jsp/"/>
+    <link href="http://rchavarria.github.io/blog/2013/09/17/servlet-redirecciona-jsp/"/>
     <updated>2013-09-17T13:27:00+02:00</updated>
-    <id>http://rchavarria.github.com/blog/2013/09/17/servlet-redirecciona-jsp</id>
+    <id>http://rchavarria.github.io/blog/2013/09/17/servlet-redirecciona-jsp</id>
     <content type="html"><![CDATA[<div style="margin:2%; padding:2%; background-color:#E0E0E0; ">
     Find a lightweight English version of this post directly in the <a href="https://github.com/rchavarria/javaee-6-demos/tree/master/request-parameters-jsp">source code repository</a>.
 </div>
@@ -49,7 +345,7 @@ los datos que viajarán como atributos de la petición.</p>
 unos valores cualquiera y enviar los datos del formulario. Como resultado, veremos
 el renderizado de la página JSP en el navegador.</p>
 
-<p><img class="center" src="http://rchavarria.github.com/images/2013/request-parameters-jsp.png" title="Respuesta del servlet" ></p>
+<p><img class="center" src="http://rchavarria.github.io/images/2013/request-parameters-jsp.png" title="Respuesta del servlet" ></p>
 
 <h2>Dependencias</h2>
 
@@ -128,9 +424,9 @@ atributo que estableció el servlet, al que hemos llamado <code>params</code>.</
   
   <entry>
     <title type="html"><![CDATA[Leer parámetros desde un servlet]]></title>
-    <link href="http://rchavarria.github.com/blog/2013/09/13/servlet-lee-parametros/"/>
+    <link href="http://rchavarria.github.io/blog/2013/09/13/servlet-lee-parametros/"/>
     <updated>2013-09-13T12:39:00+02:00</updated>
-    <id>http://rchavarria.github.com/blog/2013/09/13/servlet-lee-parametros</id>
+    <id>http://rchavarria.github.io/blog/2013/09/13/servlet-lee-parametros</id>
     <content type="html"><![CDATA[<div style="margin:2%; padding:2%; background-color:#E0E0E0; ">
     Find a lightweight English version of this post directly in the <a href="https://github.com/rchavarria/javaee-6-demos/tree/master/request-parameters">source code repository</a>.
 </div>
@@ -162,7 +458,7 @@ unos valores cualquiera y enviar los datos del formulario. Veremos el resultado
 que devuelve el servlet al leer los parámetros de la petición HTTP que hemos
 enviado al servidor.</p>
 
-<p><img class="center" src="http://rchavarria.github.com/images/2013/request-parameters.png" title="Respuesta del servlet" ></p>
+<p><img class="center" src="http://rchavarria.github.io/images/2013/request-parameters.png" title="Respuesta del servlet" ></p>
 
 <h2>Dependencias</h2>
 
@@ -174,7 +470,7 @@ la que nos permitirá crear nuestro servlet.</p>
 
 <h2>Página de login</h2>
 
-<p><img class="right" src="http://rchavarria.github.com/images/2013/login-form.png" title="Respuesta del servlet" ></p>
+<p><img class="right" src="http://rchavarria.github.io/images/2013/login-form.png" title="Respuesta del servlet" ></p>
 
 <p>La entrada a nuestra demo será la página de login, la cual contiene un formulario
 muy simple, con dos campos principales: email del usuario y contraseña.</p>
@@ -263,14 +559,22 @@ método con esta pinta:</p>
 
 <p>Para echar un ojo al código fuente, visitar el directorio
 <a href="https://github.com/rchavarria/javaee-6-demos/tree/master/request-parameters"><code>request-parameters</code></a>.</p>
+
+<h2>Enlaces relacionados</h2>
+
+<ul>
+<li><a href="http://theopentutorials.com/examples/java-ee/servlet/get-all-parameters-in-html-form-using-getparameternames">The open tutorials</a>: cómo leer todos los campos de un formulario en un servlet.</li>
+<li><a href="https://baurdotnet.wordpress.com/2011/01/31/getting-a-request-parameter-in-a-servlet">Leer un parámetro en un servlet</a></li>
+</ul>
+
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Un sencillo servlet HTTP]]></title>
-    <link href="http://rchavarria.github.com/blog/2013/09/03/sencillo-servlet-http/"/>
+    <link href="http://rchavarria.github.io/blog/2013/09/03/sencillo-servlet-http/"/>
     <updated>2013-09-03T13:41:00+02:00</updated>
-    <id>http://rchavarria.github.com/blog/2013/09/03/sencillo-servlet-http</id>
+    <id>http://rchavarria.github.io/blog/2013/09/03/sencillo-servlet-http</id>
     <content type="html"><![CDATA[<div style="margin:2%; padding:2%; background-color:#E0E0E0; ">
     Find a lightweight English version of this post directly in the <a href="https://github.com/rchavarria/javaee-6-demos/tree/master/simple-http-servlet">source code repository</a>.
 </div>
@@ -298,7 +602,7 @@ que responda de una forma muy, pero que muy sencilla.</p>
 del servlet visitando
 <a href="http://localhost:8080/SimpleHttpServlet">http://localhost:8080/SimpleHttpServlet</a>.</p>
 
-<p><img class="center" src="http://rchavarria.github.com/images/2013/simple-http-servlet.png" title="Respuesta del servlet" ></p>
+<p><img class="center" src="http://rchavarria.github.io/images/2013/simple-http-servlet.png" title="Respuesta del servlet" ></p>
 
 <h2>Dependencias</h2>
 
@@ -363,9 +667,9 @@ un <code>writer</code> de la respuesta HTTP y escribe un sencillo mensaje en tex
   
   <entry>
     <title type="html"><![CDATA[Demos de tecnologías Java EE]]></title>
-    <link href="http://rchavarria.github.com/blog/2013/09/03/demos-tecnologias-javaee/"/>
+    <link href="http://rchavarria.github.io/blog/2013/09/03/demos-tecnologias-javaee/"/>
     <updated>2013-09-03T12:55:00+02:00</updated>
-    <id>http://rchavarria.github.com/blog/2013/09/03/demos-tecnologias-javaee</id>
+    <id>http://rchavarria.github.io/blog/2013/09/03/demos-tecnologias-javaee</id>
     <content type="html"><![CDATA[<p>Este post va a servir de índice o tabla de contenidos para una serie de post que
 me gustaría ir escribiendo poco a poco, sin prisa pero sin pausa, que el blog ya
 lleva mucho tiempo si actualizarse y hay que darle vida.</p>
@@ -384,24 +688,20 @@ en el Mundo Real™, pero que me permitirán ir adentrándome en todo el mundo J
 <p>Lista de posts:</p>
 
 <ul>
-<li><a href="http://rchavarria.github.com/blog/2013/09/03/sencillo-servlet-http">Un sencillo servlet HTTP</a>: En este post veremos
+<li><a href="http://rchavarria.github.io/blog/2013/09/03/sencillo-servlet-http">Un sencillo servlet HTTP</a>: En este post veremos
 que crear un servlet en Java EE 6 es sincillísimo, y que incluso no es necesario
 contar con un archivo descriptor de la aplicación web.</li>
-<li><a href="http://rchavarria.github.com/blog/2013/09/13/servlet-lee-parametros">Acceder a los datos de un formulario desde un servlet</a>:
+<li><a href="http://rchavarria.github.io/blog/2013/09/13/servlet-lee-parametros">Acceder a los datos de un formulario desde un servlet</a>:
 Es posible acceder a datos enviados por el usuario en la petición HTTP desde un servlet.
 En este post veremos cómo.</li>
-</ul>
-
-
-<!--
-    http://theopentutorials.com/examples/java-ee/servlet/get-all-parameters-in-html-form-using-getparameternames/
-    https://baurdotnet.wordpress.com/2011/01/31/getting-a-request-parameter-in-a-servlet/
-    
-    ampliarlo mediante un ejemplo de cómo enviar un archivo?  
--->
-
-
-<ul>
+<li><a href="http://rchavarria.github.io/blog/2013/09/17/servlet-redirecciona-jsp">Cómo redireccionar de un servlet a un JSP</a>:
+En esta ocasión vamos un paso más allá en los servlets, y avanzamos hacia
+una arquitectura MVC, separando la lógica de la aplicación (leer parámetros) de la
+presentación, que en este caso la hará una página JSP.</li>
+<li><a href="http://rchavarria.github.io/blog/2013/09/19/crear-servicio-web-jaxws">Cómo crear un servicio web</a>:
+En esta demo veremos cómo crear un servicio web, y de cómo usar el framework Apache CXF
+para su creación, configuración y despliegue en un contenedor web. Crearemos un servicio
+web basado en la especificación JAX-WS, que intercambiará mensajes SOAP sobre HTTP.</li>
 <li>Servlet listeners: Veremos el uso que le podemos dar a los distintos listeners asociados
 a los servlets y su ciclo de vida: ServletContextListener,
 ServletContextAttributeListener, ServletRequestListener y HttpSessionListener.</li>
@@ -430,9 +730,9 @@ filtros para los servlets, logging, datos en la sesión, redirección&#8230;</p>
   
   <entry>
     <title type="html"><![CDATA[Aprendiendo a colaborar en github]]></title>
-    <link href="http://rchavarria.github.com/blog/2013/05/30/aprendiendo-a-colaborar-en-github/"/>
+    <link href="http://rchavarria.github.io/blog/2013/05/30/aprendiendo-a-colaborar-en-github/"/>
     <updated>2013-05-30T08:45:00+02:00</updated>
-    <id>http://rchavarria.github.com/blog/2013/05/30/aprendiendo-a-colaborar-en-github</id>
+    <id>http://rchavarria.github.io/blog/2013/05/30/aprendiendo-a-colaborar-en-github</id>
     <content type="html"><![CDATA[<p>Recientemente, hablando con mi amigo <a href="http://twitter.com/dagarfol">David</a> sobre un
 proyectillo que llevamos a medias (estamos empezando, espero que podamos tener algo
 publicable pronto), salió el tema de cómo empezar a colaborar con
@@ -451,7 +751,7 @@ trabajar en equipo con git y github.</p>
 <p>Lo primero que se necesita es tener una cuenta en github. Si no tienes una, uno puede
 <a href="https://github.com/users">registrarse</a> fácilmente. Es como crearse una cuenta de correo.</p>
 
-<p><img class="center" src="http://rchavarria.github.com/images/2013/github-overview.jpg"></p>
+<p><img class="center" src="http://rchavarria.github.io/images/2013/github-overview.jpg"></p>
 
 <p>Después, es necesario que <a href="http://git-scm.com/downloads">descargues e instales git</a>
 en el ordenador donde vayas a trabajar. En windows es tan sencillo como instalar cualquier
@@ -547,7 +847,7 @@ repositorio remoto en github. Existe una forma muy sencilla en github de informa
 de que hemos hecho cambios, los llamados
 <a href="https://help.github.com/articles/using-pull-requests">Pull Request</a>.</p>
 
-<p><img class="right" src="http://rchavarria.github.com/images/2013/github-pull-request.jpg"></p>
+<p><img class="right" src="http://rchavarria.github.io/images/2013/github-pull-request.jpg"></p>
 
 <p>Mediante un Pull Request estás indicando a un compañero que le quieres pasar unos cambios que
 tú has hecho. Ahora tu compañero deberá decidir si acepta los cambios y él incorporará esos
@@ -557,9 +857,9 @@ cambios a su repositorio remoto</p>
   
   <entry>
     <title type="html"><![CDATA[Save InformaticOS, mi primer open space]]></title>
-    <link href="http://rchavarria.github.com/blog/2013/04/30/save-informaticos/"/>
+    <link href="http://rchavarria.github.io/blog/2013/04/30/save-informaticos/"/>
     <updated>2013-04-30T12:23:00+02:00</updated>
-    <id>http://rchavarria.github.com/blog/2013/04/30/save-informaticos</id>
+    <id>http://rchavarria.github.io/blog/2013/04/30/save-informaticos</id>
     <content type="html"><![CDATA[<p>Wow! Menudo chute! No puedo decir más! El sábado 27 de abril estuve en mi primer
 <a href="en.wikipedia.org/wiki/Open_space">Open Space</a>,
 <a href="http://saveinformaticos.reeelab.com/2013/03/07/un-open-space-para-debatir-sobre-nuestra-profesion/">Save InformaticOS</a>,
@@ -573,7 +873,7 @@ unos días después). Ya he acostado a mi hijo, y tengo un ratito de reflexión,
 <!-- more -->
 
 
-<p><img class="center" src="http://rchavarria.github.com/images/2013/panoramica-saveinfos.jpg" width="1250" height="228" title="La rotonda en SaveInfos" ></p>
+<p><img class="center" src="http://rchavarria.github.io/images/2013/panoramica-saveinfos.jpg" width="1250" height="228" title="La rotonda en SaveInfos" ></p>
 
 <p>Lo primero de todo, mil gracias a <a href="https://twitter.com/MaicaTrinidad">Maica</a>,
 <a href="https://twitter.com/jmbeas">Jose Manuel</a> y
@@ -631,9 +931,9 @@ imagen aquí, pero Jose Manuel Beas lo ha hecho perfectamente en
   
   <entry>
     <title type="html"><![CDATA[Notas sobre un video de marketing online]]></title>
-    <link href="http://rchavarria.github.com/blog/2013/04/17/notas-sobre-un-video-de-marketing-online/"/>
+    <link href="http://rchavarria.github.io/blog/2013/04/17/notas-sobre-un-video-de-marketing-online/"/>
     <updated>2013-04-17T06:15:00+02:00</updated>
-    <id>http://rchavarria.github.com/blog/2013/04/17/notas-sobre-un-video-de-marketing-online</id>
+    <id>http://rchavarria.github.io/blog/2013/04/17/notas-sobre-un-video-de-marketing-online</id>
     <content type="html"><![CDATA[<p>En este post incluyo las notas que fui tomando mientras visualizé el siguiente vídeo:
 <a href="http://youtu.be/33vKaNuJh4o">Marca personal, mktIO</a> de la serie #mktIO que regularmente
 se publica en el canal de youtube de
@@ -695,9 +995,9 @@ conservar.</p>
   
   <entry>
     <title type="html"><![CDATA[La meta]]></title>
-    <link href="http://rchavarria.github.com/blog/2013/04/10/la-meta/"/>
+    <link href="http://rchavarria.github.io/blog/2013/04/10/la-meta/"/>
     <updated>2013-04-10T10:06:00+02:00</updated>
-    <id>http://rchavarria.github.com/blog/2013/04/10/la-meta</id>
+    <id>http://rchavarria.github.io/blog/2013/04/10/la-meta</id>
     <content type="html"><![CDATA[<h4>La meta</h4>
 
 <h5>Eliyahu Goldratt</h5>
@@ -797,7 +1097,7 @@ es productivo, todo aquello que no la lleve es imprductivo.</p></li>
 <h2>Otras lecturas y enlaces relacionadas</h2>
 
 <ul>
-<li><a href="http://rchavarria.github.com/blog/2012/10/10/lean-software-development/">Lean software development</a>, de Mary y Tom Poppendiek.</li>
+<li><a href="http://rchavarria.github.io/blog/2012/10/10/lean-software-development/">Lean software development</a>, de Mary y Tom Poppendiek.</li>
 <li><a href="https://plus.google.com/105077077543737057709">Roberto Hens</a> también lo ha leído, y esto es lo que le parece:
 <a href="http://robertohens.blogspot.com.es/2013/04/Kanban-el-Origen-The-Goal.html">Kanban, el origen</a>.</li>
 </ul>
@@ -807,9 +1107,9 @@ es productivo, todo aquello que no la lleve es imprductivo.</p></li>
   
   <entry>
     <title type="html"><![CDATA[[microtip] eclipse: Detail Formatters]]></title>
-    <link href="http://rchavarria.github.com/blog/2013/02/19/microtip-eclipse/"/>
+    <link href="http://rchavarria.github.io/blog/2013/02/19/microtip-eclipse/"/>
     <updated>2013-02-19T17:19:00+01:00</updated>
-    <id>http://rchavarria.github.com/blog/2013/02/19/microtip-eclipse</id>
+    <id>http://rchavarria.github.io/blog/2013/02/19/microtip-eclipse</id>
     <content type="html"><![CDATA[<p>A través del post de <a href="http://twitter.com/kinisoftware">Kinisoftware</a>:
 <a href="http://kinisoftware.com/2013/02/a-la-caza-del-bug-en-eclipse/">A la caza del bug en eclipse</a>
 me encontré con un link muy recomendable, si trabajas con Eclipse como IDE:
@@ -837,7 +1137,7 @@ me encuentro con que trabajo bastante con el tipo de Java <code>java.awt.geom.Re
 y la verdad es que no me gusta nada cómo Eclipse me muestra este tipo de datos
 en una sesión de debugging.</p>
 
-<p><img class="center" src="http://rchavarria.github.com/images/2013/rectangle2d-without-detail-formatter.png" width="804" height="151" title="Rectangle2D sin detail formatter" ></p>
+<p><img class="center" src="http://rchavarria.github.io/images/2013/rectangle2d-without-detail-formatter.png" width="804" height="151" title="Rectangle2D sin detail formatter" ></p>
 
 <h2>Crear un detail formatter</h2>
 
@@ -875,7 +1175,7 @@ código:</p>
 
 <p>Y éste es el resultado, para mi gusto, mucho más compacto y directo:</p>
 
-<p><img class="center" src="http://rchavarria.github.com/images/2013/rectangle2d-using-detail-formatter.png" width="548" height="116" title="Rectangle2D usando detail formatter" ></p>
+<p><img class="center" src="http://rchavarria.github.io/images/2013/rectangle2d-using-detail-formatter.png" width="548" height="116" title="Rectangle2D usando detail formatter" ></p>
 
 <h2>Conclusión</h2>
 
@@ -889,9 +1189,9 @@ de nuestro IDE favorito.</p>
   
   <entry>
     <title type="html"><![CDATA[Agile estimating and planning]]></title>
-    <link href="http://rchavarria.github.com/blog/2013/02/13/agile-estimating-and-planning/"/>
+    <link href="http://rchavarria.github.io/blog/2013/02/13/agile-estimating-and-planning/"/>
     <updated>2013-02-13T13:08:00+01:00</updated>
-    <id>http://rchavarria.github.com/blog/2013/02/13/agile-estimating-and-planning</id>
+    <id>http://rchavarria.github.io/blog/2013/02/13/agile-estimating-and-planning</id>
     <content type="html"><![CDATA[<h4>Agile estimating and planning</h4>
 
 <h5>Mike Cohn</h5>
@@ -1034,9 +1334,9 @@ en su blog.</li>
   
   <entry>
     <title type="html"><![CDATA[Formatear y parsear enumerados en Java con valores personalizados]]></title>
-    <link href="http://rchavarria.github.com/blog/2013/01/22/formatear-y-parsear-enumerados-en-java-con-valores-personalizados/"/>
+    <link href="http://rchavarria.github.io/blog/2013/01/22/formatear-y-parsear-enumerados-en-java-con-valores-personalizados/"/>
     <updated>2013-01-22T13:17:00+01:00</updated>
-    <id>http://rchavarria.github.com/blog/2013/01/22/formatear-y-parsear-enumerados-en-java-con-valores-personalizados</id>
+    <id>http://rchavarria.github.io/blog/2013/01/22/formatear-y-parsear-enumerados-en-java-con-valores-personalizados</id>
     <content type="html"><![CDATA[<p>A partir de la versión 1.5 de Java, nos encontramos con un tipo de datos, un tipo
 especial de clases podríamos decir, los enumerados. Los tipos enumerados sirven para
 acotar los posibles valores que puede tomar una variable o tipo de objeto. Java
@@ -1277,9 +1577,9 @@ que tu solución es muchísimo mejor que ésta, déjame un comentario, será bie
   
   <entry>
     <title type="html"><![CDATA[solveet: cifrado cesar en python]]></title>
-    <link href="http://rchavarria.github.com/blog/2012/12/19/solveet-cifrado-cesar-en-python/"/>
+    <link href="http://rchavarria.github.io/blog/2012/12/19/solveet-cifrado-cesar-en-python/"/>
     <updated>2012-12-19T12:31:00+01:00</updated>
-    <id>http://rchavarria.github.com/blog/2012/12/19/solveet-cifrado-cesar-en-python</id>
+    <id>http://rchavarria.github.io/blog/2012/12/19/solveet-cifrado-cesar-en-python</id>
     <content type="html"><![CDATA[<p>Me gusta resolver problemas de programación regularmente para mejorar como programdor, y para ello uso
 la página <a href="http://solveet.com">Solveet</a>. El problema que he solucionado esta semana es el del
 <a href="http://www.solveet.com/exercises/Cifrado-Cesar/145">Cifrado César</a>, y está englobado en la iniciativa
@@ -1419,9 +1719,9 @@ será bienvenido.</p>
   
   <entry>
     <title type="html"><![CDATA[solveet: Torres de Hannoi]]></title>
-    <link href="http://rchavarria.github.com/blog/2012/12/12/solveet-torres-de-hannoi/"/>
+    <link href="http://rchavarria.github.io/blog/2012/12/12/solveet-torres-de-hannoi/"/>
     <updated>2012-12-12T09:35:00+01:00</updated>
-    <id>http://rchavarria.github.com/blog/2012/12/12/solveet-torres-de-hannoi</id>
+    <id>http://rchavarria.github.io/blog/2012/12/12/solveet-torres-de-hannoi</id>
     <content type="html"><![CDATA[<p>Simplemente para practicar y mejorar mis habilidades como programador, me gusta resolver problemas
 de programación regularmente. Hace un tiempo conocí la página <a href="http://solveet.com">Solveet</a>, y desde
 entonces intento aportar semanalmente alguna que otra solución a los problemas propuestos por otros
@@ -1494,9 +1794,9 @@ torre que no contiene ni el anillo más pequeño ni el anillo a mover.</li>
   
   <entry>
     <title type="html"><![CDATA[Por qu&eacute; cambi&eacute; mi blog en wordpress.com]]></title>
-    <link href="http://rchavarria.github.com/blog/2012/12/03/por-que-cambie-mi-blog-en-wordpress-com/"/>
+    <link href="http://rchavarria.github.io/blog/2012/12/03/por-que-cambie-mi-blog-en-wordpress-com/"/>
     <updated>2012-12-03T09:44:00+01:00</updated>
-    <id>http://rchavarria.github.com/blog/2012/12/03/por-que-cambie-mi-blog-en-wordpress-com</id>
+    <id>http://rchavarria.github.io/blog/2012/12/03/por-que-cambie-mi-blog-en-wordpress-com</id>
     <content type="html"><![CDATA[<p>Desde que leí el post de <a href="http://arturoherrero.com/about">Arturo Herrero</a>,
 <a href="http://arturoherrero.com/2010/12/20/blogging-like-a-hacker">Blogging like a hacker</a>,
 siempre me ha picado el gusanillo de hacer algo similar.</p>
@@ -1513,7 +1813,7 @@ diciéndome que había violado alguno de los términos y condiciones de su <em>c
 <!-- more -->
 
 
-<p><img class="center" src="http://rchavarria.github.com/images/wordpress/wordpress-message.png" width="720" height="152"></p>
+<p><img class="center" src="http://rchavarria.github.io/images/wordpress/wordpress-message.png" width="720" height="152"></p>
 
 <p>En este mensaje básicamente me vienen a decir que no cumplo lo que wordpress dice en su Terms of Service
 o en su Advertising policy, pero no especifican nada más.</p>
@@ -1540,7 +1840,7 @@ superior a 20 diarias), después de este bloqueo temporal, no me va a querer lee
 desplome caer desde prácticamente cero), y para muestra, una imagen de las visitas de los últimos
 días. Como referencia diré que el día en que wordpress decidión bloquear mi blog fue el dia 27 de noviembre.</p>
 
-<p><img class="center" src="http://rchavarria.github.com/images/wordpress/wordpress-visits.png" width="524" height="226"></p>
+<p><img class="center" src="http://rchavarria.github.io/images/wordpress/wordpress-visits.png" width="524" height="226"></p>
 
 <p>Por estas quejas, y sobretodo, porque me apetece bloguear como un hacker, bienvenido a mi <em>nuevo</em> blog.
 Ahora sólo queda migrar los artículos del antiguo a éste. Uff! Qué pereza. Poco a poco amigo.</p>
@@ -1549,9 +1849,9 @@ Ahora sólo queda migrar los artículos del antiguo a éste. Uff! Qué pereza. P
   
   <entry>
     <title type="html"><![CDATA[Post Inicial Del Blog]]></title>
-    <link href="http://rchavarria.github.com/blog/2012/11/28/post-inicial-del-blog/"/>
+    <link href="http://rchavarria.github.io/blog/2012/11/28/post-inicial-del-blog/"/>
     <updated>2012-11-28T00:00:00+01:00</updated>
-    <id>http://rchavarria.github.com/blog/2012/11/28/post-inicial-del-blog</id>
+    <id>http://rchavarria.github.io/blog/2012/11/28/post-inicial-del-blog</id>
     <content type="html"><![CDATA[<p>﻿&#8212;
 layout: page
 title: &#8220;Post inicial del blog&#8221;
@@ -1569,15 +1869,15 @@ github:pages, y el resto de herramientas para bloguear como un hacker :P</p>
 
 <p>¿Por qué cambiar de blog cuando ya tienes <a href="http://rchavarria.wordpress.com">uno</a>?
 Encuentra mis razones en el primer post serio:
-<a href="http://rchavarria.github.com/blog/2012/12/03/por-que-cambie-mi-blog-en-wordpress-com">¿Por qué cambié mi blog de wordpress?</a></p>
+<a href="http://rchavarria.github.io/blog/2012/12/03/por-que-cambie-mi-blog-en-wordpress-com">¿Por qué cambié mi blog de wordpress?</a></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Agile principles, patterns and practices in C#]]></title>
-    <link href="http://rchavarria.github.com/blog/2012/11/22/agile-principles-patterns-and-practices-in-c/"/>
+    <link href="http://rchavarria.github.io/blog/2012/11/22/agile-principles-patterns-and-practices-in-c/"/>
     <updated>2012-11-22T11:22:00+01:00</updated>
-    <id>http://rchavarria.github.com/blog/2012/11/22/agile-principles-patterns-and-practices-in-c</id>
+    <id>http://rchavarria.github.io/blog/2012/11/22/agile-principles-patterns-and-practices-in-c</id>
     <content type="html"><![CDATA[<h4>Agile principles, patterns and practices in C#</h4>
 
 
@@ -1681,7 +1981,7 @@ Encuentra mis razones en el primer post serio:
     <li>[pdf] <a href="http://www.objectmentor.com/resources/articles/TheHumbleDialogBox.pdf">The humble dialog box</a>: cómo separar la lógica de negocio de la interfaz gráfica, de Michael Feathers.</li>
     <li><a href="http://www.martinfowler.com/eaaDev/ModelViewPresenter.html">Patrón model-view-presenter</a>: artículo de Martin Fowler que me llevó a éste de <a href="http://www.martinfowler.com/eaaDev/uiArchs.html">Arquitecturas GUI</a>.</li>
     <li><a href="http://apagayvuelveaencender.blogspot.com.es/2012/11/metodologias-agiles-me-las-creo-o-no-me.html">Metodologías ágiles: ¿me las creo o no me las creo?</a>: excelente post de <a href="http://twitter.com/andres_viedma">Andrés Viedma</a> que me viene ni al pelo como enlace relacionado con el libro y donde se explican los cuatro principios del desarrollo de software ágil</li>
-    <li>Hace ya un tiempo, leí sobre <a href="http://rchavarria.github.com/blog/2010/03/04/principios-y-patrones-de-diseno/">principios y patrones de diseño</a></li>
+    <li>Hace ya un tiempo, leí sobre <a href="http://rchavarria.github.io/blog/2010/03/04/principios-y-patrones-de-diseno/">principios y patrones de diseño</a></li>
 </ul>
 
 ]]></content>
@@ -1689,9 +1989,9 @@ Encuentra mis razones en el primer post serio:
   
   <entry>
     <title type="html"><![CDATA[[microtip] git: ramas locales y remotas]]></title>
-    <link href="http://rchavarria.github.com/blog/2012/11/19/microtip-git-ramas-locales-y-remotas/"/>
+    <link href="http://rchavarria.github.io/blog/2012/11/19/microtip-git-ramas-locales-y-remotas/"/>
     <updated>2012-11-19T11:19:00+01:00</updated>
-    <id>http://rchavarria.github.com/blog/2012/11/19/microtip-git-ramas-locales-y-remotas</id>
+    <id>http://rchavarria.github.io/blog/2012/11/19/microtip-git-ramas-locales-y-remotas</id>
     <content type="html"><![CDATA[<p><a href="http://es.wikipedia.org/wiki/Git"><strong>git</strong></a> es un sistema de control de version distribuido (<a href="http://en.wikipedia.org/wiki/Distributed_version_control_system">DVCS</a> por sus siglas en inglés), y una de sus características que lo hacen más atractivo es su gran rapidez para trabajar con ramas (<em>branches</em>).</p>
 
 
@@ -1767,9 +2067,9 @@ Encuentra mis razones en el primer post serio:
   
   <entry>
     <title type="html"><![CDATA[Mi experiencia en la CAS2012]]></title>
-    <link href="http://rchavarria.github.com/blog/2012/11/08/mi-experiencia-en-la-cas2012/"/>
+    <link href="http://rchavarria.github.io/blog/2012/11/08/mi-experiencia-en-la-cas2012/"/>
     <updated>2012-11-08T10:08:00+01:00</updated>
-    <id>http://rchavarria.github.com/blog/2012/11/08/mi-experiencia-en-la-cas2012</id>
+    <id>http://rchavarria.github.io/blog/2012/11/08/mi-experiencia-en-la-cas2012</id>
     <content type="html"><![CDATA[<p>Más vale tarde que nunca. Tenía ganas de escribir mi experiencia en la <a href="http://conferencia2012.agile-spain.org/"><strong>CAS2012</strong></a> (mi primera CAS) pero todavía no había encontrado el hueco. Supongo que quería leer alguna experiencia de otros asistentes, o será mi alter ego perezoso, quién sabe.</p>
 
 <p>La verdad es que volví de <a href="http://es.wikipedia.org/wiki/C%C3%A1ceres">Cáceres</a> encantadísimo, motivadísimo, y cualquier otro adjetivo que termine en <em>-ísimo</em>. ¡Qué pasada! Como ya he dicho antes, ésta ha sido mi primera CAS, y espero que se repita cada año. Sé que será difícil, pero lo intentaré.</p>
@@ -1812,9 +2112,9 @@ Encuentra mis razones en el primer post serio:
   
   <entry>
     <title type="html"><![CDATA[En el principio... fue la l&iacute;nea de comandos]]></title>
-    <link href="http://rchavarria.github.com/blog/2012/10/25/en-el-principio-fue-la-linea-de-comandos/"/>
+    <link href="http://rchavarria.github.io/blog/2012/10/25/en-el-principio-fue-la-linea-de-comandos/"/>
     <updated>2012-10-25T10:25:00+02:00</updated>
-    <id>http://rchavarria.github.com/blog/2012/10/25/en-el-principio-fue-la-linea-de-comandos</id>
+    <id>http://rchavarria.github.io/blog/2012/10/25/en-el-principio-fue-la-linea-de-comandos</id>
     <content type="html"><![CDATA[<h4>En el principio&#8230; fue la línea de comandos</h4>
 
 
@@ -1941,137 +2241,6 @@ Encuentra mis razones en el primer post serio:
     <li><a href="http://es.wikipedia.org/wiki/En_el_principio_fue_la_l%C3%ADnea_de_comandos">Entrada del libro en la Wikipedia</a></li>
     <li>Otro libro bastante conocido de Neal Stephenson es <a href="http://es.wikipedia.org/wiki/Criptonomic%C3%B3n">Criptonomicón</a></li>
 </ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Lean software development]]></title>
-    <link href="http://rchavarria.github.com/blog/2012/10/10/lean-software-development/"/>
-    <updated>2012-10-10T10:10:00+02:00</updated>
-    <id>http://rchavarria.github.com/blog/2012/10/10/lean-software-development</id>
-    <content type="html"><![CDATA[<h4>Lean software development</h4>
-
-
-
-
-<h5>Mary Poppendieck, Tom Poppendiek:</h5>
-
-
-<p><img class="right" src="http://www.poppendieck.com/images/Agiletoolkit.jpg" width="250" height="332" title="Lean software development" ></p>
-
-<h2>Por qué lo he leído</h2>
-
-
-<p>Después de leer <a href="http://rchavarria.wordpress.com/2012/07/06/scrum-y-xp-desde-las-trincheras/">Scrum y XP desde las trincheras</a>, me quedé con ganas de leer algún libro más de temática Agile, de desarrollo de software siguiendo prácticas lean. Me llaman mucho la atención las metodologías ágiles de desarrollo de software, y creo que son una buena alternativa a las metodologías tradicionales (aunque voy descubriendo otras como <a href="http://www.javiergarzas.com/2012/09/metodologia-gil-fdd-1.html">FDD</a> que parecen igualmente interesantes).</p>
-
-<p>Busqué un libro <em>antiguo</em>, alguno donde pudiera leer los inicios de estas metodologías, para así poder contextualizar todo lo que escucho y leo de las metodologías ágiles a diario.</p>
-
-<!-- more -->
-
-
-
-
-<h2>Qué esperaba</h2>
-
-
-<p>Esperaba un libro dedicado exclusivamente al software, que expusiera ideas que podían parecer pasadas de moda, pero que siguieran de actualidad en algún sentido.</p>
-
-<p>No había oído nunca nada de los autores, así que tampoco me había formado grandes espectativas, simplemente, quería conocer los inicios de las metodologías ágiles.</p>
-
-<h2>Qué encontré</h2>
-
-
-<p>Me encontré un libro muy útil, y aunque es de hace bastantes años (para tratar sobre desarrollo de software), es de total actualidad. De hecho, me sorprende que todavía haya empresas, personas, organizaciones, que no hayan oido hablar de los conceptos que se hablan en el libro.</p>
-
-<h2>Conclusiones</h2>
-
-
-<p>Me sorprendió mucho que el origen de las metodologías ágiles esté en la industria de la manufactura. Me parece difícil que una metodología haya pasado de esa industria a la del desarrollo del software. Pero como indican los autores (y es la idea principal del libro), no se pueden transladar <strong>prácticas</strong> de un entorno a otro, hay que transladar <strong>principios</strong> (ideas) y crear las nuevas prácticas para el nuevo entorno.</p>
-
-<p>Y es de lo que trata este libro, de exponer una serie de herramientas, un <em>toolkit</em>, para ayudar a comprender y a transladar una serie de principios, que está demostrado que funcionan en una industria, al desarrollo del software.</p>
-
-<h2>Otras lecturas y enlaces relacionadas</h2>
-
-
-<ul>
-    <li><a href="http://www.amazon.com/Lean-Software-Development-Agile-Toolkit/dp/0321150783">Lean software development</a>, en Amazon</li>
-    <li><a href="es.wikipedia.org/wiki/Lean_software_development">Lean software development</a>, en la Wikipedia (español)</li>
-    <li>Web de los autores del libro, los <a href="http://www.poppendieck.com">Poppendieck</a></li>
-</ul>
-
-
-<h2>Pasajes que quiero recordar de este libro</h2>
-
-
-<blockquote>Los siete principios del pensamiento Lean:
-<ol>
-    <li>Elimina desperdicios</li>
-    <li>Amplifica el aprendizaje</li>
-    <li>Decide tan tarde como sea posible</li>
-    <li>Entrega tan rápido como sea posible</li>
-    <li>Fortalece al equipo</li>
-    <li>Trabajar para que haya integridad</li>
-    <li>Centrarse en el todo</li>
-</ol>
-</blockquote>
-
-
-<blockquote>Cualquier cosa que no crea valor para el cliente es desperdicio. Y, sí, los defectos (bugs, incidencias, &#8230;) son desperdicion.</blockquote>
-
-
-<blockquote>Es difícil encontrar control sin realimentación (feedback), porque la realimentación de mucho mejor control y determinismo que complicados procesos de control con algoritmos predefinidos.</blockquote>
-
-
-<blockquote>En la mayoría de los casos, incrementar la realimentación, en lugar de reducirla con rigurosos procesos secuenciales, es la forma más efectiva de lidiar con entornos y proyectos de desarrollo de software en problemas.</blockquote>
-
-
-<blockquote><em>Set-based software development</em>: se desarrollan varias alternativas, se comunican las restricciones (en lugar de las soluciones) y se deja que la solución emerja cumpliendo todas las restricciones.</blockquote>
-
-
-<blockquote>Retrasar decisiones irreversibles mientras se reduce la incertidumbre tiene valor económico. Esto lleva a tomar mejores decisiones, limita los riesgos, ayuda a gestionar la complejidad, reduce el desperdicio y hace felices a los clientes.</blockquote>
-
-
-<blockquote>Los procesos de desarrollo ágiles se pueden entender como la creación de opciones que permiten retrasar las decisiones hasta que las necesidades del cliente son mejor entendidas y haya menos riesgo.</blockquote>
-
-
-<blockquote>Los marines planifican, pero no predicen. Comprenden la esencia de las situaciones, buscan simplificar las suposiciones y alternan aproximaciones. Cuando entran en una misión, la estructura organizativa se diluye, y aquellos que están en el frente, quienes tienen acceso a la información más directa, son los responsables de tomar las decisiones.</blockquote>
-
-
-<blockquote>El principio &#8216;entrega tan rápido como sea posible&#8217; complemente a &#8216;decide tan tarde como sea posible&#8217;. Cuanto más rápido entregues, más podrás retrasar tus decisiones.</blockquote>
-
-
-<blockquote>(hablando de los <em>pull systems</em>) en lugar de planificar, sistemas como Kanban consiguen que los jefes no intervengan porque cada persona sabe qué hacer en cada momento.</blockquote>
-
-
-<blockquote>Creemos que transferir prácticas de un entorno a otro es, casi siempre, un error. En lugar de ello, uno debe entender los principios fundamentales detrás de las prácticas y transformar esos principios en nuevas prácticas para el nuevo entorno.</blockquote>
-
-
-<blockquote>El mejor modo de mantener el conocimiento sobre un sistema y que sea mantenible es entregar, junto con el código, un conjunto de tests automáticos, complementados por un modelo superficial de alto nivel creado al final del esfuerzo inicial de desarrollo.</blockquote>
-
-
-<blockquote>Integridad conceptual significa que los conceptos centrales de un sistema son vistos contínuos, como un todo cohesionado. La clave para alcanzarla es la efectividad en los mecanismos de comunicación desarrollados por los grupos que conforman el sistema según se van tomando las decisiones que afectan al resto de grupos.</blockquote>
-
-
-<blockquote>¿De dónde ha tomado la genete la idea de que todo buen diseño ocurre al inicio de un proyecto? Mucha gente encargada de desarrollar productos entiende que los grandes diseños evolucionan con el tiempo.</blockquote>
-
-
-<blockquote>¿Refactorizar es rehacer el trabajo? Mejorar un diseño durante el proceso de desarrollo no es rehacer el trabajo, es una buena práctica de diseño.</blockquote>
-
-
-<blockquote>Los tests proporcionan una base en la que apoyarse para que los desarrolladores realizen cambios a lo largo de todo el proceso de desarrollo.</blockquote>
-
-
-<blockquote>La metodologías tradicionales de desarrollo software tienen la manía de medir tareas complejas y desestructuradas a través de partir la tarea en otras más pequeñas. La forma de estar seguro de que todo está medido es mediante agregación, es decir, mover la medida a un nivel superior, no a un nivel inferior.</blockquote>
-
-
-<blockquote>Un contrato con precio fijado donde el vendedor espera obtener beneficios de los cambios pedidos, combinado con mecanismos rigurosos de aceptación de cambios para controlar el gasto, puede doblar aproximadamente el coste y tiempo que se tarda en desarrollar un proyecto a la vez que produce un resultado de pésima calidad.</blockquote>
-
-
-<blockquote>Un contrato de precio flexible está diseñado para lidiar con la incertidumbre y complejidad, pero esto no elimina el riesgo, sino que lo traslada del vendedor al cliente.</blockquote>
-
-
-<h2></h2>
 
 ]]></content>
   </entry>

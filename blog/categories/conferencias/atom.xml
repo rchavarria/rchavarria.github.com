@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: conferencias | R. Chavarria's Blog]]></title>
-  <link href="http://rchavarria.github.com/blog/categories/conferencias/atom.xml" rel="self"/>
-  <link href="http://rchavarria.github.com/"/>
-  <updated>2013-09-17T14:00:13+02:00</updated>
-  <id>http://rchavarria.github.com/</id>
+  <link href="http://rchavarria.github.io/blog/categories/conferencias/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.io/"/>
+  <updated>2013-09-19T11:46:25+02:00</updated>
+  <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Mis impresiones sobre Codemotion 2012]]></title>
-    <link href="http://rchavarria.github.com/blog/2012/03/29/mis-impresiones-sobre-codemotion-2012/"/>
+    <link href="http://rchavarria.github.io/blog/2012/03/29/mis-impresiones-sobre-codemotion-2012/"/>
     <updated>2012-03-29T03:29:00+02:00</updated>
-    <id>http://rchavarria.github.com/blog/2012/03/29/mis-impresiones-sobre-codemotion-2012</id>
+    <id>http://rchavarria.github.io/blog/2012/03/29/mis-impresiones-sobre-codemotion-2012</id>
     <content type="html"><![CDATA[<p>Como más de 1000 personas, este fin de semana he estado en <a href="http://codemotion.es">Codemotion 2012</a>. Durante estos días he leído algunas impresiones y me gustaría aportar mi granito de arena.</p>
 
 <p>Lo primero que me sorprendió fue la cantidad de gente muy joven que acudió al evento (digo muy joven porque eran claramente más jóvenes que yo, pero me sigo considerando joven), creo que el 40% o más serían estudiantes de universidad. Esto, por un lado me alegra muchísimo, y por otro lado me da mucho vértigo: cuánta gente con ganas de aprender y mucho más tiempo que yo para ello, wow!</p>
@@ -47,9 +47,9 @@
   
   <entry>
     <title type="html"><![CDATA[Mi retrospectiva de la XPWeek 2011]]></title>
-    <link href="http://rchavarria.github.com/blog/2011/10/03/mi-retrospectiva-de-la-xpweek-2011/"/>
+    <link href="http://rchavarria.github.io/blog/2011/10/03/mi-retrospectiva-de-la-xpweek-2011/"/>
     <updated>2011-10-03T10:03:00+02:00</updated>
-    <id>http://rchavarria.github.com/blog/2011/10/03/mi-retrospectiva-de-la-xpweek-2011</id>
+    <id>http://rchavarria.github.io/blog/2011/10/03/mi-retrospectiva-de-la-xpweek-2011</id>
     <content type="html"><![CDATA[<p>El lunes 19 asistí como oyente al día de conferencia que formó parte de la <a href="xpweek.es/?page_id=2">XPWeek</a>. Fue una lástima que no pudiera asistir a ninguno de los cursos sobre TDD que se impartieron en los días siguientes :-(.</p>
 
 <p>Hacía mucho tiempo, mucho, que no participaba en alguna conferencia así, y la experiencia me encantó (pienso seguir hacer proposiciones indecentes a mi empresa para poder asistir a todas aquellas que pueda).</p>

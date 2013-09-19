@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: swing worker | R. Chavarria's Blog]]></title>
-  <link href="http://rchavarria.github.com/blog/categories/swing-worker/atom.xml" rel="self"/>
-  <link href="http://rchavarria.github.com/"/>
-  <updated>2013-09-17T14:00:13+02:00</updated>
-  <id>http://rchavarria.github.com/</id>
+  <link href="http://rchavarria.github.io/blog/categories/swing-worker/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.io/"/>
+  <updated>2013-09-19T11:46:25+02:00</updated>
+  <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
     
@@ -15,15 +15,15 @@
   
   <entry>
     <title type="html"><![CDATA[Uso avanzado de SwingWorker]]></title>
-    <link href="http://rchavarria.github.com/blog/2010/01/26/uso-avanzado-de-swingworker/"/>
+    <link href="http://rchavarria.github.io/blog/2010/01/26/uso-avanzado-de-swingworker/"/>
     <updated>2010-01-26T09:44:00+01:00</updated>
-    <id>http://rchavarria.github.com/blog/2010/01/26/uso-avanzado-de-swingworker</id>
+    <id>http://rchavarria.github.io/blog/2010/01/26/uso-avanzado-de-swingworker</id>
     <content type="html"><![CDATA[<div style="margin:2%; padding:2%; background-color:#E0E0E0; ">
-  <p>Este post pertenece a mi antiguo blog en <a href="http://rchavarria.wordpress.com">wordpress</a>, pero decidí pasarme a github:pages por las siguientes <a href="http://rchavarria.github.com/blog/2012/12/03/por-que-cambie-mi-blog-en-wordpress-com">razones</a></p>
+  <p>Este post pertenece a mi antiguo blog en <a href="http://rchavarria.wordpress.com">wordpress</a>, pero decidí pasarme a github:pages por las siguientes <a href="http://rchavarria.github.io/blog/2012/12/03/por-que-cambie-mi-blog-en-wordpress-com">razones</a></p>
 </div>
 
 
-<p>En una entrada anterior vimos cómo hacer un <a href="http://rchavarria.github.com/blog/2010/01/08/swingworker-en-java-5/">uso básico de SwingWorker</a> así como cuándo usarlo. Vimos que había dos métodos de recuperar el resultado de nuestros cálculos o tarea de larga duración.</p>
+<p>En una entrada anterior vimos cómo hacer un <a href="http://rchavarria.github.io/blog/2010/01/08/swingworker-en-java-5/">uso básico de SwingWorker</a> así como cuándo usarlo. Vimos que había dos métodos de recuperar el resultado de nuestros cálculos o tarea de larga duración.</p>
 
 <p>Aquí veremos un uso avanzado de <code>SwingWorker</code>. Para ello realizaremos una sencilla aplicación que calcule los <strong>N</strong> primeros números de la serie de fibonacci, los vaya mostrando en un área de texto según los vaya calculando y mostraremos el progreso de la tarea un una barra de progreso.</p>
 
@@ -150,7 +150,7 @@
 
 <p>En el siguiente enlace es posible ver una aplicación demostrando lo aprendido. Si se desea descargar el código fuente en forma de proyecto de NetBeans: <a href="http://kenai.com/projects/rchavarria/downloads/download/fibonacci%252FFibonacciCalculator%2520NB%2520project.zip"><strong>FibonacciWorker NetBeans project</strong></a>.</p>
 
-<p><a href="http://kenai.com/projects/rchavarria/downloads/download/fibonacci%252Flaunch.jnlp"><img class="center" title="Ejecutar FibonacciCalculator" src="http://rchavarria.github.com/images/wordpress/launch.png" alt="" width="88" height="23" /></a></p>
+<p><a href="http://kenai.com/projects/rchavarria/downloads/download/fibonacci%252Flaunch.jnlp"><img class="center" title="Ejecutar FibonacciCalculator" src="http://rchavarria.github.io/images/wordpress/launch.png" alt="" width="88" height="23" /></a></p>
 
 <div id="_mcePaste" style="overflow:hidden;position:absolute;left:-10000px;top:285px;width:1px;height:1px;">http://rchavarria.wordpress.com/2010/01/08/swingworker-en-java-5/</div>
 
@@ -159,11 +159,11 @@
   
   <entry>
     <title type="html"><![CDATA[SwingWorker en Java 5]]></title>
-    <link href="http://rchavarria.github.com/blog/2010/01/08/swingworker-en-java-5/"/>
+    <link href="http://rchavarria.github.io/blog/2010/01/08/swingworker-en-java-5/"/>
     <updated>2010-01-08T19:44:00+01:00</updated>
-    <id>http://rchavarria.github.com/blog/2010/01/08/swingworker-en-java-5</id>
+    <id>http://rchavarria.github.io/blog/2010/01/08/swingworker-en-java-5</id>
     <content type="html"><![CDATA[<div style="margin:2%; padding:2%; background-color:#E0E0E0; ">
-  <p>Este post pertenece a mi antiguo blog en <a href="http://rchavarria.wordpress.com">wordpress</a>, pero decidí pasarme a github:pages por las siguientes <a href="http://rchavarria.github.com/blog/2012/12/03/por-que-cambie-mi-blog-en-wordpress-com">razones</a></p>
+  <p>Este post pertenece a mi antiguo blog en <a href="http://rchavarria.wordpress.com">wordpress</a>, pero decidí pasarme a github:pages por las siguientes <a href="http://rchavarria.github.io/blog/2012/12/03/por-que-cambie-mi-blog-en-wordpress-com">razones</a></p>
 </div>
 
 
@@ -266,7 +266,7 @@
 </ol>
 
 
-<p><em>Actualización (26-01-2010)</em>: <a href="http://rchavarria.github.com/blog/2010/01/26/uso-avanzado-de-swingworker/">Uso avanzado de SwingWorker</a></p>
+<p><em>Actualización (26-01-2010)</em>: <a href="http://rchavarria.github.io/blog/2010/01/26/uso-avanzado-de-swingworker/">Uso avanzado de SwingWorker</a></p>
 ]]></content>
   </entry>
   

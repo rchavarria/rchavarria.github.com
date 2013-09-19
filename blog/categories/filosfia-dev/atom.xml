@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: filosfia dev | R. Chavarria's Blog]]></title>
-  <link href="http://rchavarria.github.com/blog/categories/filosfia-dev/atom.xml" rel="self"/>
-  <link href="http://rchavarria.github.com/"/>
-  <updated>2013-09-17T14:00:13+02:00</updated>
-  <id>http://rchavarria.github.com/</id>
+  <link href="http://rchavarria.github.io/blog/categories/filosfia-dev/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.io/"/>
+  <updated>2013-09-19T11:46:25+02:00</updated>
+  <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[My ten goals for programmingworkout.com]]></title>
-    <link href="http://rchavarria.github.com/blog/2012/06/18/my-ten-goals-for-programmingworkout-com/"/>
+    <link href="http://rchavarria.github.io/blog/2012/06/18/my-ten-goals-for-programmingworkout-com/"/>
     <updated>2012-06-18T06:18:00+02:00</updated>
-    <id>http://rchavarria.github.com/blog/2012/06/18/my-ten-goals-for-programmingworkout-com</id>
+    <id>http://rchavarria.github.io/blog/2012/06/18/my-ten-goals-for-programmingworkout-com</id>
     <content type="html"><![CDATA[<p>I don't remember exactly, but I think I arrived to <a href="http://programmingworkout.com">programmingworkout.com</a> web through one person I follow on twitter (but I can't remember who, sorry). The idea looked to me very interesting, and I decided just to sign in. I completely forgot about it, but last week I received an email from Michal Taszycki (<a href="http://twitter.com/#!/mehowte">@mehowte</a>).</p>
 
 <p>In this email, Michal challenges me (and 500 others) to complete three tasks:</p>

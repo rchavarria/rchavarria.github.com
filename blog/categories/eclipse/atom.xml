@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: eclipse | R. Chavarria's Blog]]></title>
-  <link href="http://rchavarria.github.com/blog/categories/eclipse/atom.xml" rel="self"/>
-  <link href="http://rchavarria.github.com/"/>
-  <updated>2013-09-17T14:00:13+02:00</updated>
-  <id>http://rchavarria.github.com/</id>
+  <link href="http://rchavarria.github.io/blog/categories/eclipse/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.io/"/>
+  <updated>2013-09-19T11:46:25+02:00</updated>
+  <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[[microtip] eclipse: Detail Formatters]]></title>
-    <link href="http://rchavarria.github.com/blog/2013/02/19/microtip-eclipse/"/>
+    <link href="http://rchavarria.github.io/blog/2013/02/19/microtip-eclipse/"/>
     <updated>2013-02-19T17:19:00+01:00</updated>
-    <id>http://rchavarria.github.com/blog/2013/02/19/microtip-eclipse</id>
+    <id>http://rchavarria.github.io/blog/2013/02/19/microtip-eclipse</id>
     <content type="html"><![CDATA[<p>A través del post de <a href="http://twitter.com/kinisoftware">Kinisoftware</a>:
 <a href="http://kinisoftware.com/2013/02/a-la-caza-del-bug-en-eclipse/">A la caza del bug en eclipse</a>
 me encontré con un link muy recomendable, si trabajas con Eclipse como IDE:

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: programming | R. Chavarria's Blog]]></title>
-  <link href="http://rchavarria.github.com/blog/categories/programming/atom.xml" rel="self"/>
-  <link href="http://rchavarria.github.com/"/>
-  <updated>2013-09-17T14:00:13+02:00</updated>
-  <id>http://rchavarria.github.com/</id>
+  <link href="http://rchavarria.github.io/blog/categories/programming/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.io/"/>
+  <updated>2013-09-19T11:46:25+02:00</updated>
+  <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
     
@@ -14,10 +14,281 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Crear un servicio web JAX-WS]]></title>
+    <link href="http://rchavarria.github.io/blog/2013/09/19/crear-servicio-web-jaxws/"/>
+    <updated>2013-09-19T08:49:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2013/09/19/crear-servicio-web-jaxws</id>
+    <content type="html"><![CDATA[<div style="margin:2%; padding:2%; background-color:#E0E0E0; ">
+    Find a lightweight English version of this post directly in the <a href="https://github.com/rchavarria/javaee-6-demos/tree/master/ws-jaxws-cxf">source code repository</a>.
+</div>
+
+
+<p>En esta demo crearemos un servicio web. Básicamente existen dos tipos de servicios
+web: SOAP, basados en el intercambio de mensajes XML; y servicios web basados en
+una interfaces REST, RESTful web services.</p>
+
+<p>Aquí crearemos un servicio web SOAP, el cual establece que los mensajes XML pueden ser
+transportados por diversos protocolos, aquí lo haremos sobre HTTP, ya que es lo más
+común y sencillo. Ya que usaremos HTTP como protocolo de transporte, nuestro servicio web estará
+gestionado por un servlet.</p>
+
+<p>Se puede ver el código fuente de la demostración en el directorio
+<a href="https://github.com/rchavarria/javaee-6-demos/tree/master/ws-jaxws-cxf"><code>ws-jaxws-cxf</code></a>
+del repositorio de las demos en github.</p>
+
+<!-- more -->
+
+
+<h2>Demo</h2>
+
+<p><img class="right" src="/images/2013/web-services-by-psd.jpg" width="320" height="213" title="Foto por el usuario de flickr psd" ></p>
+
+<p>En esta demo no veremos nada funcionando, ya que vamos a crear un servicio web
+pero no vamos a crear un cliente que lo consuma (eso para la siguiente). La forma
+de comprobar que hemos creado un servicio web correcto será la visualización del
+fichero WSDL generado por el servicio, el cual es el contrato entre el proveedor
+del servicio (lo creado en esta demo) y el consumidor del mismo (el cliente que
+crearemos más adelante).</p>
+
+<p>La funcionalidad que nos ofrecerá el servicio se apoyarán en dos métodos:</p>
+
+<ol>
+<li>Añadir usuario: añadiremos un nombre de usuario al servicio.</li>
+<li>Obtener usuario: mediante un identificiado, obtendremos un nombre de usuario.</li>
+</ol>
+
+
+<p>Para ejecutar la demo, simplemente hay que descargase el código fuente y ejecutar
+<code>mvn jetty:run</code> desde el directorio raiz de la demo. Visitar la página de login
+<a href="http://localhost:8080/Users?wsdl">http://localhost:8080/Users?wsdl</a> y veremos
+el fichero WSDL con la definición del servicio.</p>
+
+<h2>Pasos a seguir</h2>
+
+<h3>Elegir un framework que implemente JAX-WS</h3>
+
+<p>Según la <a href="http://docs.oracle.com/javaee/6/tutorial/doc/bnayl.html">documentación de Oracle</a>,
+crear un servicio web parece realmente
+sencillo y para toda la familia. Lo que no explican es que están dependiendo
+de la implementación de los servicios web incluída en <em>su</em> contenedor Java EE,
+Glassfish. No tengo nada en contra, pero me gusta tener cierta independencia,
+por lo que vamos a elegir otro framework que implemente la especificación
+JAX-WS.</p>
+
+<p>He elegido <a href="http://cxf.apache.org">Apache CXF</a>, aunque hay otras implementaciones
+disponibles, como <a href="http://projects.spring.io/spring-ws/">Spring WS</a>
+(quizá en un futuro, veamos su uso).</p>
+
+<h3>Dependencias del proyecto maven</h3>
+
+<p>Como todas las demos, utilizaremos <code>maven</code> como gestor del ciclo de vida del
+proyecto, y las dependencias son una parte muy importante de la vida del proyecto.</p>
+
+<p>La aplicación depende de:</p>
+
+<ul>
+<li><code>javax.servlet-api</code>: el API de Java EE para servlets, ya que será un servlet
+quien gestione las peticiones HTTP. Nuestro servicio web se basará en este servlet.</li>
+<li><code>cxf-rt-frontend-jaxws</code>: la implementación de CXF de la especificación JAX-WS.</li>
+<li><code>cxf-rt-transports-http</code>: HTTP será el protocolo de transporte.</li>
+<li><code>spring-web</code>: CXF usa Spring internamente para su funcionamiento.</li>
+</ul>
+
+
+<h3>Crear el interfaz del servicio</h3>
+
+<p>Nuestro servicio web servirá para almacenar nombres de usuarios, y se podrán
+recuperar estos nombres a través de un identificador que devolverá el servicio
+al añadirlos.</p>
+
+<p>Por lo tanto, vemos que necesitaremos dos métodos:</p>
+
+<ul>
+<li><code>addUser</code>: para añadir un usuario al sistema.</li>
+<li><code>getUser</code>: para recuperar un nombre de usuario.</li>
+</ul>
+
+
+<p>Nuestro interfaz de servicio sería algo así:</p>
+
+<p>``` java
+import javax.jws.WebService;
+import javax.jws.WebParam;</p>
+
+<p>@WebService
+public interface UsersManagement {</p>
+
+<pre><code>public String getUser(@WebParam(name="userId") int userId);
+public int addUser(@WebParam(name="name") String name);
+</code></pre>
+
+<p>}
+```</p>
+
+<h3>Crear la implementación del servicio</h3>
+
+<p>Ya tenemos la definición del servicio, ahora debemos implementarlo. Esta
+implementación deberá estar anotada también con <code>@WebService</code>, y deberemos
+proporcionar valores a algunos parámetros de la anotación. El más importante
+es <code>endpointInterface</code>, que debe apuntar a la definición del servicio.</p>
+
+<p>La implementación tendrá un aspecto similar a éste:</p>
+
+<p>``` java
+import javax.jws.WebService;</p>
+
+<p>@WebService(endpointInterface = "es.rchavarria.ws.UsersManagement",</p>
+
+<pre><code>        serviceName = "Users")
+</code></pre>
+
+<p>public class UsersManagementImpl implements UsersManagement {</p>
+
+<pre><code> // ... implementación de los métodos
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Invito a bucear en el código para ver la implementación de los métodos,
+aunque no es muy interesante de ver, todo sea dicho.</p>
+
+<h3>Establecer un servlet que gestione las peticiones HTTP</h3>
+
+<p>El siguiente paso es establecer un servlet que gestione las peticiones HTTP.
+Apache CXF nos proporciona dicho servlet, por lo que deberemos configurar
+nuestro contenedor Java EE para que lo arranque. El servlet gestionará todas
+las peticiones, con lo que estableceremos el patrón URL a <code>/*</code>.</p>
+
+<p>Es muy importante que el patrón URL del servlet sea capaz de gestionar la URL
+donde se despliegue el servicio web, en caso contrario, las peticiones no
+llegarán al servicio web. Por ejemplo, si el patrón URL del servlet es
+<code>/services/*</code> y nuestro servicio web se despliega en <code>/web-services/*</code>,
+las peticiones a nuestro servicio no serán gestionadas por el servlet.</p>
+
+<p>Para establecer el servlet, creamos un fichero descriptor de la aplicación web,
+<code>web.xml</code>:</p>
+
+<p>``` xml
+<servlet></p>
+
+<pre><code>&lt;servlet-name&gt;the-cxf-servlet&lt;/servlet-name&gt;
+&lt;servlet-class&gt;org.apache.cxf.transport.servlet.CXFServlet&lt;/servlet-class&gt;
+&lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+</code></pre>
+
+<p></servlet></p>
+
+<p><servlet-mapping></p>
+
+<pre><code>&lt;servlet-name&gt;the-cxf-servlet&lt;/servlet-name&gt;
+&lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+</code></pre>
+
+<p></servlet-mapping>
+```</p>
+
+<h3>Configurar el servlet de CXF</h3>
+
+<p>El servlet de CXF arrancará con el servidor, pero no sabe qué servicios web puede
+invocar. Debemos configurarlo. CXF proporciona un mecanismo para ello, a través
+de un fichero XML.</p>
+
+<p>Podríamos utilizar un fichero por defecto, y guardarlo en <code>WEB-INF/cxf-servlet</code>,
+o podemos configurarlo manualmente. Lo haremos de forma manual, e indicaremos al
+servlet donde está su fichero de configuración. Se lo indicaremos a través de un
+parámetro de inicialización de servlet, por lo que modificaremos nuestro <code>web.xml</code>:</p>
+
+<p>``` xml</p>
+
+<!-- ... -->
+
+
+<p><servlet></p>
+
+<pre><code>&lt;servlet-name&gt;the-cxf-servlet&lt;/servlet-name&gt;
+&lt;servlet-class&gt;org.apache.cxf.transport.servlet.CXFServlet&lt;/servlet-class&gt;
+
+&lt;init-param&gt;
+    &lt;param-name&gt;config-location&lt;/param-name&gt;
+    &lt;param-value&gt;/WEB-INF/services.xml&lt;/param-value&gt;   
+&lt;/init-param&gt;        
+
+&lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+</code></pre>
+
+<p></servlet></p>
+
+<!-- ... -->
+
+
+<p>```</p>
+
+<p>También debemos añadir el fichero de configuración del servlet CXF, el cual hemos
+llamado <code>WEB-INF/services.xml</code>:</p>
+
+<p>``` xml
+&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;beans xmlns="http://www.springframework.org/schema/beans"</p>
+
+<pre><code>  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:jaxws="http://cxf.apache.org/jaxws"
+  xmlns:soap="http://cxf.apache.org/bindings/soap"
+  xsi:schemaLocation="
+</code></pre>
+
+<p>http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+http://cxf.apache.org/bindings/soap http://cxf.apache.org/schemas/configuration/soap.xsd
+http://cxf.apache.org/jaxws
+http://cxf.apache.org/schemas/jaxws.xsd"></p>
+
+<p>  &lt;jaxws:server id="aServer" serviceClass="es.rchavarria.ws.UsersManagement" address="/Users"></p>
+
+<pre><code>&lt;jaxws:serviceBean&gt;
+    &lt;bean class="es.rchavarria.ws.UsersManagementImpl" /&gt;
+&lt;/jaxws:serviceBean&gt;
+</code></pre>
+
+<p>  &lt;/jaxws:server>
+</beans>
+```</p>
+
+<p>Esto es un fichero de configuración de Spring, y es que CXF usa Spring internamente. Se
+añade un nuevo namespace, <code>jaxws</code>, proporcionado por CXF y que viene con etiquetas XML
+para configurar un servidor que responda a las peticiones dirigidas a nuestro servicio web.</p>
+
+<h3>Listos</h3>
+
+<p>La demo ya está lista para ser ejecutada. Si la ejecutamos con el comando <code>mvn jetty:run</code>
+podremos visitar <a href="http://localhost:8080/Users?wsdl">http://localhost:8080/Users?wsdl</a>
+y veremos el fichero WSDL que define el servicio web.</p>
+
+<p>En la próxima demo, crearemos un cliente a partir de este fichero WSDL, y comprobaremos
+cómo funciona.</p>
+
+<h2>Código fuente</h2>
+
+<p>Para echar un ojo al código fuente, visitar el directorio
+<a href="https://github.com/rchavarria/javaee-6-demos/tree/master/ws-jaxws-cxf"><code>ws-jaxws-cxf</code></a>.</p>
+
+<h2>Enlaces para ampliar información</h2>
+
+<ul>
+<li><a href="http://docs.oracle.com/javaee/6/tutorial/doc/bnayl.html">Construir servicios web con JAX-WS</a></li>
+<li><a href="http://docs.oracle.com/javaee/6/tutorial/doc/giepu.html">Construir servicios web REST con JAX-RS</a></li>
+<li><a href="http://cxf.apache.org/docs/index.html">Guía de uso de Apache CXF</a></li>
+</ul>
+
+
+<p><em>Imagen obtenida de <a href="http://www.flickr.com/photos/psd">psd</a></em></p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Servlet redirecciona a una JSP]]></title>
-    <link href="http://rchavarria.github.com/blog/2013/09/17/servlet-redirecciona-jsp/"/>
+    <link href="http://rchavarria.github.io/blog/2013/09/17/servlet-redirecciona-jsp/"/>
     <updated>2013-09-17T13:27:00+02:00</updated>
-    <id>http://rchavarria.github.com/blog/2013/09/17/servlet-redirecciona-jsp</id>
+    <id>http://rchavarria.github.io/blog/2013/09/17/servlet-redirecciona-jsp</id>
     <content type="html"><![CDATA[<div style="margin:2%; padding:2%; background-color:#E0E0E0; ">
     Find a lightweight English version of this post directly in the <a href="https://github.com/rchavarria/javaee-6-demos/tree/master/request-parameters-jsp">source code repository</a>.
 </div>
@@ -114,9 +385,9 @@ atributo que estableció el servlet, al que hemos llamado <code>params</code>.</
   
   <entry>
     <title type="html"><![CDATA[Leer parámetros desde un servlet]]></title>
-    <link href="http://rchavarria.github.com/blog/2013/09/13/servlet-lee-parametros/"/>
+    <link href="http://rchavarria.github.io/blog/2013/09/13/servlet-lee-parametros/"/>
     <updated>2013-09-13T12:39:00+02:00</updated>
-    <id>http://rchavarria.github.com/blog/2013/09/13/servlet-lee-parametros</id>
+    <id>http://rchavarria.github.io/blog/2013/09/13/servlet-lee-parametros</id>
     <content type="html"><![CDATA[<div style="margin:2%; padding:2%; background-color:#E0E0E0; ">
     Find a lightweight English version of this post directly in the <a href="https://github.com/rchavarria/javaee-6-demos/tree/master/request-parameters">source code repository</a>.
 </div>
@@ -229,14 +500,22 @@ return sb.toString();
 
 <p>Para echar un ojo al código fuente, visitar el directorio
 <a href="https://github.com/rchavarria/javaee-6-demos/tree/master/request-parameters"><code>request-parameters</code></a>.</p>
+
+<h2>Enlaces relacionados</h2>
+
+<ul>
+<li><a href="http://theopentutorials.com/examples/java-ee/servlet/get-all-parameters-in-html-form-using-getparameternames">The open tutorials</a>: cómo leer todos los campos de un formulario en un servlet.</li>
+<li><a href="https://baurdotnet.wordpress.com/2011/01/31/getting-a-request-parameter-in-a-servlet">Leer un parámetro en un servlet</a></li>
+</ul>
+
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Un sencillo servlet HTTP]]></title>
-    <link href="http://rchavarria.github.com/blog/2013/09/03/sencillo-servlet-http/"/>
+    <link href="http://rchavarria.github.io/blog/2013/09/03/sencillo-servlet-http/"/>
     <updated>2013-09-03T13:41:00+02:00</updated>
-    <id>http://rchavarria.github.com/blog/2013/09/03/sencillo-servlet-http</id>
+    <id>http://rchavarria.github.io/blog/2013/09/03/sencillo-servlet-http</id>
     <content type="html"><![CDATA[<div style="margin:2%; padding:2%; background-color:#E0E0E0; ">
     Find a lightweight English version of this post directly in the <a href="https://github.com/rchavarria/javaee-6-demos/tree/master/simple-http-servlet">source code repository</a>.
 </div>
@@ -325,9 +604,9 @@ out.println("&lt;/h2&gt;");
   
   <entry>
     <title type="html"><![CDATA[Demos de tecnologías Java EE]]></title>
-    <link href="http://rchavarria.github.com/blog/2013/09/03/demos-tecnologias-javaee/"/>
+    <link href="http://rchavarria.github.io/blog/2013/09/03/demos-tecnologias-javaee/"/>
     <updated>2013-09-03T12:55:00+02:00</updated>
-    <id>http://rchavarria.github.com/blog/2013/09/03/demos-tecnologias-javaee</id>
+    <id>http://rchavarria.github.io/blog/2013/09/03/demos-tecnologias-javaee</id>
     <content type="html"><![CDATA[<p>Este post va a servir de índice o tabla de contenidos para una serie de post que
 me gustaría ir escribiendo poco a poco, sin prisa pero sin pausa, que el blog ya
 lleva mucho tiempo si actualizarse y hay que darle vida.</p>
@@ -352,18 +631,14 @@ contar con un archivo descriptor de la aplicación web.</li>
 <li><a href="/blog/2013/09/13/servlet-lee-parametros">Acceder a los datos de un formulario desde un servlet</a>:
 Es posible acceder a datos enviados por el usuario en la petición HTTP desde un servlet.
 En este post veremos cómo.</li>
-</ul>
-
-
-<!--
-    http://theopentutorials.com/examples/java-ee/servlet/get-all-parameters-in-html-form-using-getparameternames/
-    https://baurdotnet.wordpress.com/2011/01/31/getting-a-request-parameter-in-a-servlet/
-    
-    ampliarlo mediante un ejemplo de cómo enviar un archivo?  
--->
-
-
-<ul>
+<li><a href="/blog/2013/09/17/servlet-redirecciona-jsp">Cómo redireccionar de un servlet a un JSP</a>:
+En esta ocasión vamos un paso más allá en los servlets, y avanzamos hacia
+una arquitectura MVC, separando la lógica de la aplicación (leer parámetros) de la
+presentación, que en este caso la hará una página JSP.</li>
+<li><a href="/blog/2013/09/19/crear-servicio-web-jaxws">Cómo crear un servicio web</a>:
+En esta demo veremos cómo crear un servicio web, y de cómo usar el framework Apache CXF
+para su creación, configuración y despliegue en un contenedor web. Crearemos un servicio
+web basado en la especificación JAX-WS, que intercambiará mensajes SOAP sobre HTTP.</li>
 <li>Servlet listeners: Veremos el uso que le podemos dar a los distintos listeners asociados
 a los servlets y su ciclo de vida: ServletContextListener,
 ServletContextAttributeListener, ServletRequestListener y HttpSessionListener.</li>
@@ -387,204 +662,6 @@ filtros para los servlets, logging, datos en la sesión, redirección...</p>
 
 -->
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Formatear y parsear enumerados en Java con valores personalizados]]></title>
-    <link href="http://rchavarria.github.com/blog/2013/01/22/formatear-y-parsear-enumerados-en-java-con-valores-personalizados/"/>
-    <updated>2013-01-22T13:17:00+01:00</updated>
-    <id>http://rchavarria.github.com/blog/2013/01/22/formatear-y-parsear-enumerados-en-java-con-valores-personalizados</id>
-    <content type="html"><![CDATA[<p>A partir de la versión 1.5 de Java, nos encontramos con un tipo de datos, un tipo
-especial de clases podríamos decir, los enumerados. Los tipos enumerados sirven para
-acotar los posibles valores que puede tomar una variable o tipo de objeto. Java
-proporciona un método para transformar un enumerado en cadena, <code>name()</code>, y un método
-estático para convertir una cadena en uno de los valores del enumerado,
-<code>valueOf(String)</code>. Pero estos métodos son un poco limitados, ya que no nos permiten
-personalizar los valores a los cuales son transformados los enumerados.</p>
-
-<!-- more -->
-
-
-<p>Partiremos del siguiente código describiendo tres valores en un enumerado:</p>
-
-<p>``` java
-public enum States {</p>
-
-<pre><code>EVERYTHING_IS_OK,
-SOMETHING_WENT_WRONG,
-TOTAL_FAILURE;
-</code></pre>
-
-<p>}
-```</p>
-
-<p>Así, sin más, podemos obtener la representación en <code>String</code> de <code>States.TOTAL_FAILURE</code>
-simplemente llamando al método <code>States.TOTAL_FAILURE.name()</code>. De la misma forma, usando
-la llamada <code>States.valueOf("EVERYTHING_IS_OK")</code> es fácil imaginar qué valor del enumerado
-obtendremos.</p>
-
-<p>Pero, y si en lugar de esa representación a <code>String</code>, ¿queremos definir la nuestra
-propia?. Por ejemplo, siguiendo la siguiente tabla:</p>
-
-<ul>
-<li>EVERYTHING_IS_OK &rarr; green</li>
-<li>SOMETHING_WENT_WRONG &rarr; yellow</li>
-<li>TOTAL_FAILURE &rarr; red</li>
-</ul>
-
-
-<h2>Formatear a cadena</h2>
-
-<p>Formatear es sencillo, y directo. Podemos declarar un campo <code>value</code> donde almacenar el
-valor al cual queremos transformar el enumerado, y podemos sobreescribir el método
-<code>toString()</code> de la siguiente manera:</p>
-
-<p>``` java
-public enum States {</p>
-
-<pre><code>EVERYTHING_IS_OK("green"),
-SOMETHING_WENT_WRONG("yellow"),
-TOTAL_FAILURE("red");
-
-private String value;
-
-private States(String value) {
-    this.value = value;
-}
-
-public String toString() {
-    return value;
-}
-</code></pre>
-
-<p>}
-```</p>
-
-<h2>Parsear desde una cadena</h2>
-
-<p>El problema viene cuando queremos obtener un valor del enumerado a partir de un <code>String</code>.
-Supongamos que la transformación la vamos a hacer en un método estático, que por contraste
-con el anterior método llamaremos <code>fromString</code>. Veamos qué opciones tenemos, de menos a
-más apropiadas:</p>
-
-<h3>Sentencias if</h3>
-
-<p>La primera solución que le viene a uno a la cabeza es usar sentencias <code>if</code>.</p>
-
-<p>``` java
-[...]
-public static States fromString(String fromValue) {</p>
-
-<pre><code>if("green".equals(fromValue)) {
-    return EVERYTHING_IS_OK;
-} else if("yellow".equals(fromValue)) {
-    return SOMETHING_WENT_WRONG;
-} else if("red".equals(fromValue)) {
-    return TOTAL_FAILURE;
-}
-throw new IllegalArgumentException("Wrong value: " + fromValue);
-</code></pre>
-
-<p>}
-[...]
-```</p>
-
-<p>No hay mucho que decir aquí, simplemente que se debería evitar a toda costa esta solución.</p>
-
-<h3>Bucle for</h3>
-
-<p>Otra solución, un poco más elegante, pero básicamente siguiendo la misma filosofía, podría
-ser utilizar un bucle para recorrer los posibles valores del enumerado:</p>
-
-<p>```
-[...]
-public static States fromString(String fromValue) {</p>
-
-<pre><code>for(States state : values()) {
-    if(state.value.equals(fromValue)) {
-        return state;
-    }
-}
-throw new IllegalArgumentException("Wrong value: " + fromValue);
-</code></pre>
-
-<p>}
-[...]
-```</p>
-
-<p>Esta solución es un poquito mejor, ya que si modificamos los valores posibles del enumerado,
-no es necesario que modifiquemos este método.</p>
-
-<h3>Prealmacenamiento de los valores en un Map</h3>
-
-<p>Existe una solución que no involucra el uso de sentencias <code>if</code>, lo cual es muy positivo, ya
-que estamos evitando la posibilidad de error, ya que no tendremos que formular una condición.</p>
-
-<p>Esta solución la encontré en un hilo el de Stack Overflow <a href="http://stackoverflow.com/questions/1080904/how-can-i-lookup-a-java-enum-from-its-string-value">how can I lookup a Java enum
-from its string value?</a>.
-Lo que pretende esta solución es crear una estructura de datos, y cuando se quiera transformar
-un <code>String</code> en un valor del enumerado, simplemente se consulte esa estructura de datos.</p>
-
-<p>La estructura de datos será un <code>Map</code> estático, que se rellenará en un bloque estático y
-consultaremos en nuestro método <code>fromString</code>.</p>
-
-<p>```
-[...]
-private static Map&lt;String, States> dictionary;
-static {</p>
-
-<pre><code>dictionary = new HashMap&lt;String, States&gt;();
-for(States state : values()) {
-    dictionary.put(state.value; state);
-}
-</code></pre>
-
-<p>}
-[...]
-public static States fromString(String fromValue) {</p>
-
-<pre><code>States state = dictionary.get(fromValue);
-if(state == null) {
-    throw new IllegalArgumentException("Wrong value: " + fromValue);
-}
-return state;
-</code></pre>
-
-<p>}
-[...]
-```</p>
-
-<h2>Peligros de esta última solución</h2>
-
-<p>En Stack Overflow, un comentario a la respuesta donde encontré la solución sugiere que esta solución
-puede causar problemas debido al classloader.</p>
-
-<p>Pero he investigado un poco el tema, y parece que el comentario es erróneo, al menos para el
-uso de los enumerados que estoy exponiendo aquí. Según el
-<a href="http://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#d5e12253">ejemplo 8.9.2-1 de la especificación del java</a>,
-primero se inicializan los valores del enumerado, luego la variable estática y finalmente
-se ejecuta el bloque de código estático, estando ya todos los valores del enumerado
-inicializados.</p>
-
-<p>Aquí os dejo unos cuantos enlaces a que confirman que la última solución es correcta:</p>
-
-<ul>
-<li><a href="http://blog.deepincode.com/2006/12/bootstrapping-static-fields-within-enums">Bootstrapping static fields within enums</a> y en enlace encontrado en ese mismo post: <a href="http://blog.deepincode.com/2006/11/type-safe-enumerations-in-java-50">Type Safe Enumerations in Java 5.0</a> (buscar al final de este último post).</li>
-<li>Otro hilo de Stack Overflow, <a href="http://stackoverflow.com/questions/6827987/when-are-these-class-and-subclass-static-blocks-executed-for-an-enum">When are these class and subclass static blocks executed (for an Enum)?</a> que me lleva al recurso definitivo:</li>
-<li><a href="http://docs.oracle.com/javase/specs/jls/se7/html/jls-8.html#d5e12253">Java Language Specification - Example 8.9.2-1</a>: Si la documentación de Oracle sobre java es errónea, apaga y vámonos.</li>
-</ul>
-
-
-<h2>Otras soluciones</h2>
-
-<p>Por supuesto que existen otras soluciones, quizá mejores que la última que propongo, pero
-no he querido hacer más largo este post y he querido centrarme en proponer una alternativa
-a los métodos <code>.name()</code> y <code>.valueOf()</code>, pertenecientes al propio enumerado.</p>
-
-<p>Es por esto por lo que he descartado usar clases externas para formatear o parsear el
-enumerado, lo cual me habría hecho llegar a otras soluciones bien distintas. Pero si crees
-que tu solución es muchísimo mejor que ésta, déjame un comentario, será bienvenido.</p>
 ]]></content>
   </entry>
   

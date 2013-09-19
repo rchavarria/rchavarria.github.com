@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: software | R. Chavarria's Blog]]></title>
-  <link href="http://rchavarria.github.com/blog/categories/software/atom.xml" rel="self"/>
-  <link href="http://rchavarria.github.com/"/>
-  <updated>2013-09-17T14:00:13+02:00</updated>
-  <id>http://rchavarria.github.com/</id>
+  <link href="http://rchavarria.github.io/blog/categories/software/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.io/"/>
+  <updated>2013-09-19T11:46:25+02:00</updated>
+  <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[[microtip] git: ramas locales y remotas]]></title>
-    <link href="http://rchavarria.github.com/blog/2012/11/19/microtip-git-ramas-locales-y-remotas/"/>
+    <link href="http://rchavarria.github.io/blog/2012/11/19/microtip-git-ramas-locales-y-remotas/"/>
     <updated>2012-11-19T11:19:00+01:00</updated>
-    <id>http://rchavarria.github.com/blog/2012/11/19/microtip-git-ramas-locales-y-remotas</id>
+    <id>http://rchavarria.github.io/blog/2012/11/19/microtip-git-ramas-locales-y-remotas</id>
     <content type="html"><![CDATA[<p><a href="http://es.wikipedia.org/wiki/Git"><strong>git</strong></a> es un sistema de control de version distribuido (<a href="http://en.wikipedia.org/wiki/Distributed_version_control_system">DVCS</a> por sus siglas en inglés), y una de sus características que lo hacen más atractivo es su gran rapidez para trabajar con ramas (<em>branches</em>).</p>
 
 
@@ -82,9 +82,9 @@ git merge development master
   
   <entry>
     <title type="html"><![CDATA[Proyecto maven para javascript]]></title>
-    <link href="http://rchavarria.github.com/blog/2012/09/26/proyecto-maven-para-javascript/"/>
+    <link href="http://rchavarria.github.io/blog/2012/09/26/proyecto-maven-para-javascript/"/>
     <updated>2012-09-26T09:26:00+02:00</updated>
-    <id>http://rchavarria.github.com/blog/2012/09/26/proyecto-maven-para-javascript</id>
+    <id>http://rchavarria.github.io/blog/2012/09/26/proyecto-maven-para-javascript</id>
     <content type="html"><![CDATA[<p>Estoy aprendiendo JavaScript. Creo que es uno de los lenguajes con más futuro, y no sólo por la web (que da de comer a mucha gente), sino por herramientas como <a href="http://phonegap.com/">PhoneGap</a> (que te permite crear aplicaciones para iOS, Android, ...), y también por la llegada del nuevo Windows 8, ya que se pueden desarrollar aplicaciones en JavaScript que acceden al hardware de la máquina donde esté instalado Windows 8.</p>
 
 <p>Empecé aprendiéndolo gracias a <a href="http://www.codecademy.com/">Codecademy</a>, que comenzó el año con unos cursos o clases online, y me llamó mucho la atención la posibilidad de poder ir practicando JavaScript sin tener que instalar nada. Y además, cada semana la herramienta me recordaría que tenía una nueva lección, así no dejaría de practicar.</p>
@@ -124,9 +124,9 @@ mvn archetype:generate \
   
   <entry>
     <title type="html"><![CDATA[Programming pearls]]></title>
-    <link href="http://rchavarria.github.com/blog/2012/05/25/programming-pearls/"/>
+    <link href="http://rchavarria.github.io/blog/2012/05/25/programming-pearls/"/>
     <updated>2012-05-25T05:25:00+02:00</updated>
-    <id>http://rchavarria.github.com/blog/2012/05/25/programming-pearls</id>
+    <id>http://rchavarria.github.io/blog/2012/05/25/programming-pearls</id>
     <content type="html"><![CDATA[<h4>Programmig pearls</h4>
 
 
@@ -191,9 +191,9 @@ Los problemas descritos son básicos en el desarrollo de software. No son proble
   
   <entry>
     <title type="html"><![CDATA[Mis impresiones sobre Codemotion 2012]]></title>
-    <link href="http://rchavarria.github.com/blog/2012/03/29/mis-impresiones-sobre-codemotion-2012/"/>
+    <link href="http://rchavarria.github.io/blog/2012/03/29/mis-impresiones-sobre-codemotion-2012/"/>
     <updated>2012-03-29T03:29:00+02:00</updated>
-    <id>http://rchavarria.github.com/blog/2012/03/29/mis-impresiones-sobre-codemotion-2012</id>
+    <id>http://rchavarria.github.io/blog/2012/03/29/mis-impresiones-sobre-codemotion-2012</id>
     <content type="html"><![CDATA[<p>Como más de 1000 personas, este fin de semana he estado en <a href="http://codemotion.es">Codemotion 2012</a>. Durante estos días he leído algunas impresiones y me gustaría aportar mi granito de arena.</p>
 
 <p>Lo primero que me sorprendió fue la cantidad de gente muy joven que acudió al evento (digo muy joven porque eran claramente más jóvenes que yo, pero me sigo considerando joven), creo que el 40% o más serían estudiantes de universidad. Esto, por un lado me alegra muchísimo, y por otro lado me da mucho vértigo: cuánta gente con ganas de aprender y mucho más tiempo que yo para ello, wow!</p>
@@ -223,10 +223,10 @@ Los problemas descritos son básicos en el desarrollo de software. No son proble
   
   <entry>
     <title type="html"><![CDATA[Refactorizacion: inserta un m&eacute;todo ajeno]]></title>
-    <link href="http://rchavarria.github.com/blog/2012/02/14/refactorizacion-inserta-un-metodo-ajeno/"/>
+    <link href="http://rchavarria.github.io/blog/2012/02/14/refactorizacion-inserta-un-metodo-ajeno/"/>
     <updated>2012-02-14T02:14:00+01:00</updated>
-    <id>http://rchavarria.github.com/blog/2012/02/14/refactorizacion-inserta-un-metodo-ajeno</id>
-    <content type="html"><![CDATA[<p>En este post voy a describir una de las muchas refactorizaciones que describe Martin Fowler en su libro <a href="http://martinfowler.com/refactoring/">Refactoring: improving the design of existing code</a> (<a href="http://rchavarria.github.com/blog/2012/01/25/refactoring-improving-the-design-of-existing-code/">mis impresiones sobre el libro</a>). He escogido la refactorización de <a href="http://martinfowler.com/refactoring/catalog/introduceForeignMethod.html">insertar método ajeno</a> por ser una de las que, aun siendo sencilla, no había sido consciente de utilizarla hasta leer el libro.</p>
+    <id>http://rchavarria.github.io/blog/2012/02/14/refactorizacion-inserta-un-metodo-ajeno</id>
+    <content type="html"><![CDATA[<p>En este post voy a describir una de las muchas refactorizaciones que describe Martin Fowler en su libro <a href="http://martinfowler.com/refactoring/">Refactoring: improving the design of existing code</a> (<a href="http://rchavarria.github.io/blog/2012/01/25/refactoring-improving-the-design-of-existing-code/">mis impresiones sobre el libro</a>). He escogido la refactorización de <a href="http://martinfowler.com/refactoring/catalog/introduceForeignMethod.html">insertar método ajeno</a> por ser una de las que, aun siendo sencilla, no había sido consciente de utilizarla hasta leer el libro.</p>
 
 <!-- more -->
 

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: book reviews | R. Chavarria's Blog]]></title>
-  <link href="http://rchavarria.github.com/blog/categories/book-reviews/atom.xml" rel="self"/>
-  <link href="http://rchavarria.github.com/"/>
-  <updated>2013-09-17T14:00:13+02:00</updated>
-  <id>http://rchavarria.github.com/</id>
+  <link href="http://rchavarria.github.io/blog/categories/book-reviews/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.io/"/>
+  <updated>2013-09-19T11:46:25+02:00</updated>
+  <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[La meta]]></title>
-    <link href="http://rchavarria.github.com/blog/2013/04/10/la-meta/"/>
+    <link href="http://rchavarria.github.io/blog/2013/04/10/la-meta/"/>
     <updated>2013-04-10T10:06:00+02:00</updated>
-    <id>http://rchavarria.github.com/blog/2013/04/10/la-meta</id>
+    <id>http://rchavarria.github.io/blog/2013/04/10/la-meta</id>
     <content type="html"><![CDATA[<h4>La meta</h4>
 
 <h5>Eliyahu Goldratt</h5>
@@ -127,9 +127,9 @@ es productivo, todo aquello que no la lleve es imprductivo.</p></li>
   
   <entry>
     <title type="html"><![CDATA[Agile estimating and planning]]></title>
-    <link href="http://rchavarria.github.com/blog/2013/02/13/agile-estimating-and-planning/"/>
+    <link href="http://rchavarria.github.io/blog/2013/02/13/agile-estimating-and-planning/"/>
     <updated>2013-02-13T13:08:00+01:00</updated>
-    <id>http://rchavarria.github.com/blog/2013/02/13/agile-estimating-and-planning</id>
+    <id>http://rchavarria.github.io/blog/2013/02/13/agile-estimating-and-planning</id>
     <content type="html"><![CDATA[<h4>Agile estimating and planning</h4>
 
 <h5>Mike Cohn</h5>
@@ -272,9 +272,9 @@ en su blog.</li>
   
   <entry>
     <title type="html"><![CDATA[En el principio... fue la l&iacute;nea de comandos]]></title>
-    <link href="http://rchavarria.github.com/blog/2012/10/25/en-el-principio-fue-la-linea-de-comandos/"/>
+    <link href="http://rchavarria.github.io/blog/2012/10/25/en-el-principio-fue-la-linea-de-comandos/"/>
     <updated>2012-10-25T10:25:00+02:00</updated>
-    <id>http://rchavarria.github.com/blog/2012/10/25/en-el-principio-fue-la-linea-de-comandos</id>
+    <id>http://rchavarria.github.io/blog/2012/10/25/en-el-principio-fue-la-linea-de-comandos</id>
     <content type="html"><![CDATA[<h4>En el principio... fue la línea de comandos</h4>
 
 
@@ -407,9 +407,9 @@ en su blog.</li>
   
   <entry>
     <title type="html"><![CDATA[Lean software development]]></title>
-    <link href="http://rchavarria.github.com/blog/2012/10/10/lean-software-development/"/>
+    <link href="http://rchavarria.github.io/blog/2012/10/10/lean-software-development/"/>
     <updated>2012-10-10T10:10:00+02:00</updated>
-    <id>http://rchavarria.github.com/blog/2012/10/10/lean-software-development</id>
+    <id>http://rchavarria.github.io/blog/2012/10/10/lean-software-development</id>
     <content type="html"><![CDATA[<h4>Lean software development</h4>
 
 
@@ -538,9 +538,9 @@ en su blog.</li>
   
   <entry>
     <title type="html"><![CDATA[Scrum y XP desde las trincheras]]></title>
-    <link href="http://rchavarria.github.com/blog/2012/07/06/srum-y-xp-desde-las-trincheras/"/>
+    <link href="http://rchavarria.github.io/blog/2012/07/06/srum-y-xp-desde-las-trincheras/"/>
     <updated>2012-07-06T06:06:00+02:00</updated>
-    <id>http://rchavarria.github.com/blog/2012/07/06/srum-y-xp-desde-las-trincheras</id>
+    <id>http://rchavarria.github.io/blog/2012/07/06/srum-y-xp-desde-las-trincheras</id>
     <content type="html"><![CDATA[<h4>Scrum y XP desde las trincheras</h4>
 
 

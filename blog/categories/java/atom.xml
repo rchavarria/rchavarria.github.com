@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: java | R. Chavarria's Blog]]></title>
-  <link href="http://rchavarria.github.com/blog/categories/java/atom.xml" rel="self"/>
-  <link href="http://rchavarria.github.com/"/>
-  <updated>2013-09-17T14:00:13+02:00</updated>
-  <id>http://rchavarria.github.com/</id>
+  <link href="http://rchavarria.github.io/blog/categories/java/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.io/"/>
+  <updated>2013-09-19T11:46:25+02:00</updated>
+  <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Formatear y parsear enumerados en Java con valores personalizados]]></title>
-    <link href="http://rchavarria.github.com/blog/2013/01/22/formatear-y-parsear-enumerados-en-java-con-valores-personalizados/"/>
+    <link href="http://rchavarria.github.io/blog/2013/01/22/formatear-y-parsear-enumerados-en-java-con-valores-personalizados/"/>
     <updated>2013-01-22T13:17:00+01:00</updated>
-    <id>http://rchavarria.github.com/blog/2013/01/22/formatear-y-parsear-enumerados-en-java-con-valores-personalizados</id>
+    <id>http://rchavarria.github.io/blog/2013/01/22/formatear-y-parsear-enumerados-en-java-con-valores-personalizados</id>
     <content type="html"><![CDATA[<p>A partir de la versión 1.5 de Java, nos encontramos con un tipo de datos, un tipo
 especial de clases podríamos decir, los enumerados. Los tipos enumerados sirven para
 acotar los posibles valores que puede tomar una variable o tipo de objeto. Java
@@ -213,10 +213,10 @@ que tu solución es muchísimo mejor que ésta, déjame un comentario, será bie
   
   <entry>
     <title type="html"><![CDATA[Refactorizacion: inserta un m&eacute;todo ajeno]]></title>
-    <link href="http://rchavarria.github.com/blog/2012/02/14/refactorizacion-inserta-un-metodo-ajeno/"/>
+    <link href="http://rchavarria.github.io/blog/2012/02/14/refactorizacion-inserta-un-metodo-ajeno/"/>
     <updated>2012-02-14T02:14:00+01:00</updated>
-    <id>http://rchavarria.github.com/blog/2012/02/14/refactorizacion-inserta-un-metodo-ajeno</id>
-    <content type="html"><![CDATA[<p>En este post voy a describir una de las muchas refactorizaciones que describe Martin Fowler en su libro <a href="http://martinfowler.com/refactoring/">Refactoring: improving the design of existing code</a> (<a href="http://rchavarria.github.com/blog/2012/01/25/refactoring-improving-the-design-of-existing-code/">mis impresiones sobre el libro</a>). He escogido la refactorización de <a href="http://martinfowler.com/refactoring/catalog/introduceForeignMethod.html">insertar método ajeno</a> por ser una de las que, aun siendo sencilla, no había sido consciente de utilizarla hasta leer el libro.</p>
+    <id>http://rchavarria.github.io/blog/2012/02/14/refactorizacion-inserta-un-metodo-ajeno</id>
+    <content type="html"><![CDATA[<p>En este post voy a describir una de las muchas refactorizaciones que describe Martin Fowler en su libro <a href="http://martinfowler.com/refactoring/">Refactoring: improving the design of existing code</a> (<a href="http://rchavarria.github.io/blog/2012/01/25/refactoring-improving-the-design-of-existing-code/">mis impresiones sobre el libro</a>). He escogido la refactorización de <a href="http://martinfowler.com/refactoring/catalog/introduceForeignMethod.html">insertar método ajeno</a> por ser una de las que, aun siendo sencilla, no había sido consciente de utilizarla hasta leer el libro.</p>
 
 <!-- more -->
 
@@ -281,11 +281,11 @@ private Date nextDay(Date aDay) {</p>
   
   <entry>
     <title type="html"><![CDATA[TibrvException[error=901,message=Library not found: tibrvj]]]></title>
-    <link href="http://rchavarria.github.com/blog/2012/01/13/tibrvexception-error-901-message-library-not-found-tibrvj/"/>
+    <link href="http://rchavarria.github.io/blog/2012/01/13/tibrvexception-error-901-message-library-not-found-tibrvj/"/>
     <updated>2012-01-13T13:01:00+01:00</updated>
-    <id>http://rchavarria.github.com/blog/2012/01/13/tibrvexception-error-901-message-library-not-found-tibrvj</id>
+    <id>http://rchavarria.github.io/blog/2012/01/13/tibrvexception-error-901-message-library-not-found-tibrvj</id>
     <content type="html"><![CDATA[<div style="margin:2%; padding:2%; background-color:#E0E0E0; ">
-  <p>Este post pertenece a mi antiguo blog en <a href="http://rchavarria.wordpress.com">wordpress</a>, pero decidí pasarme a github:pages por las siguientes <a href="http://rchavarria.github.com/blog/2012/12/03/por-que-cambie-mi-blog-en-wordpress-com">razones</a></p>
+  <p>Este post pertenece a mi antiguo blog en <a href="http://rchavarria.wordpress.com">wordpress</a>, pero decidí pasarme a github:pages por las siguientes <a href="http://rchavarria.github.io/blog/2012/12/03/por-que-cambie-mi-blog-en-wordpress-com">razones</a></p>
 </div>
 
 
@@ -457,11 +457,11 @@ private void openTibrvjLibrary() {
   
   <entry>
     <title type="html"><![CDATA[Lista de logros para ser mejor programador]]></title>
-    <link href="http://rchavarria.github.com/blog/2011/09/08/lista-logros-mejor-programador/"/>
+    <link href="http://rchavarria.github.io/blog/2011/09/08/lista-logros-mejor-programador/"/>
     <updated>2011-09-08T09:08:00+02:00</updated>
-    <id>http://rchavarria.github.com/blog/2011/09/08/lista-logros-mejor-programador</id>
+    <id>http://rchavarria.github.io/blog/2011/09/08/lista-logros-mejor-programador</id>
     <content type="html"><![CDATA[<div style="margin:2%; padding:2%; background-color:#E0E0E0; ">
-  <p>Este post pertenece a mi antiguo blog en <a href="http://rchavarria.wordpress.com">wordpress</a>, pero decidí pasarme a github:pages por las siguientes <a href="http://rchavarria.github.com/blog/2012/12/03/por-que-cambie-mi-blog-en-wordpress-com">razones</a></p>
+  <p>Este post pertenece a mi antiguo blog en <a href="http://rchavarria.wordpress.com">wordpress</a>, pero decidí pasarme a github:pages por las siguientes <a href="http://rchavarria.github.io/blog/2012/12/03/por-que-cambie-mi-blog-en-wordpress-com">razones</a></p>
 </div>
 
 
@@ -512,9 +512,9 @@ private void openTibrvjLibrary() {
   
   <entry>
     <title type="html"><![CDATA[Heisenbugs]]></title>
-    <link href="http://rchavarria.github.com/blog/2011/02/24/heisengugs/"/>
+    <link href="http://rchavarria.github.io/blog/2011/02/24/heisengugs/"/>
     <updated>2011-02-24T02:24:00+01:00</updated>
-    <id>http://rchavarria.github.com/blog/2011/02/24/heisengugs</id>
+    <id>http://rchavarria.github.io/blog/2011/02/24/heisengugs</id>
     <content type="html"><![CDATA[<blockquote>¡Bien! Ya tengo mi nueva funcionalidad implementada. La aplicación va a ser de lo mejorcito con lo que acabo de desarrollar. Llevo depurando este código toda la tarde. ¿Qué puede fallar? He recorrido instrucción por instrucción y todo se ejecuta según lo previsto.
 
 Lanzo la aplicación ...

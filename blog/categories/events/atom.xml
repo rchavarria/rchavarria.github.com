@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: events | R. Chavarria's Blog]]></title>
-  <link href="http://rchavarria.github.com/blog/categories/events/atom.xml" rel="self"/>
-  <link href="http://rchavarria.github.com/"/>
-  <updated>2013-09-17T14:00:13+02:00</updated>
-  <id>http://rchavarria.github.com/</id>
+  <link href="http://rchavarria.github.io/blog/categories/events/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.io/"/>
+  <updated>2013-09-19T11:46:25+02:00</updated>
+  <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Save InformaticOS, mi primer open space]]></title>
-    <link href="http://rchavarria.github.com/blog/2013/04/30/save-informaticos/"/>
+    <link href="http://rchavarria.github.io/blog/2013/04/30/save-informaticos/"/>
     <updated>2013-04-30T12:23:00+02:00</updated>
-    <id>http://rchavarria.github.com/blog/2013/04/30/save-informaticos</id>
+    <id>http://rchavarria.github.io/blog/2013/04/30/save-informaticos</id>
     <content type="html"><![CDATA[<p>Wow! Menudo chute! No puedo decir más! El sábado 27 de abril estuve en mi primer
 <a href="en.wikipedia.org/wiki/Open_space">Open Space</a>,
 <a href="http://saveinformaticos.reeelab.com/2013/03/07/un-open-space-para-debatir-sobre-nuestra-profesion/">Save InformaticOS</a>,

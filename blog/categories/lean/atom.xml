@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: lean | R. Chavarria's Blog]]></title>
-  <link href="http://rchavarria.github.com/blog/categories/lean/atom.xml" rel="self"/>
-  <link href="http://rchavarria.github.com/"/>
-  <updated>2013-09-17T14:00:13+02:00</updated>
-  <id>http://rchavarria.github.com/</id>
+  <link href="http://rchavarria.github.io/blog/categories/lean/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.io/"/>
+  <updated>2013-09-19T11:46:25+02:00</updated>
+  <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[La meta]]></title>
-    <link href="http://rchavarria.github.com/blog/2013/04/10/la-meta/"/>
+    <link href="http://rchavarria.github.io/blog/2013/04/10/la-meta/"/>
     <updated>2013-04-10T10:06:00+02:00</updated>
-    <id>http://rchavarria.github.com/blog/2013/04/10/la-meta</id>
+    <id>http://rchavarria.github.io/blog/2013/04/10/la-meta</id>
     <content type="html"><![CDATA[<h4>La meta</h4>
 
 <h5>Eliyahu Goldratt</h5>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: internet | R. Chavarria's Blog]]></title>
-  <link href="http://rchavarria.github.com/blog/categories/internet/atom.xml" rel="self"/>
-  <link href="http://rchavarria.github.com/"/>
-  <updated>2013-09-17T14:00:13+02:00</updated>
-  <id>http://rchavarria.github.com/</id>
+  <link href="http://rchavarria.github.io/blog/categories/internet/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.io/"/>
+  <updated>2013-09-19T11:46:25+02:00</updated>
+  <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Refactoring: improving the design of existing code]]></title>
-    <link href="http://rchavarria.github.com/blog/2012/01/25/refactoring-improving-the-design-of-existing-code/"/>
+    <link href="http://rchavarria.github.io/blog/2012/01/25/refactoring-improving-the-design-of-existing-code/"/>
     <updated>2012-01-25T01:25:00+01:00</updated>
-    <id>http://rchavarria.github.com/blog/2012/01/25/refactoring-improving-the-design-of-existing-code</id>
+    <id>http://rchavarria.github.io/blog/2012/01/25/refactoring-improving-the-design-of-existing-code</id>
     <content type="html"><![CDATA[<h4>Refactoring: improving the design of existing code</h4>
 
 
@@ -108,11 +108,11 @@
   
   <entry>
     <title type="html"><![CDATA[Lista de logros para ser mejor programador]]></title>
-    <link href="http://rchavarria.github.com/blog/2011/09/08/lista-logros-mejor-programador/"/>
+    <link href="http://rchavarria.github.io/blog/2011/09/08/lista-logros-mejor-programador/"/>
     <updated>2011-09-08T09:08:00+02:00</updated>
-    <id>http://rchavarria.github.com/blog/2011/09/08/lista-logros-mejor-programador</id>
+    <id>http://rchavarria.github.io/blog/2011/09/08/lista-logros-mejor-programador</id>
     <content type="html"><![CDATA[<div style="margin:2%; padding:2%; background-color:#E0E0E0; ">
-  <p>Este post pertenece a mi antiguo blog en <a href="http://rchavarria.wordpress.com">wordpress</a>, pero decidí pasarme a github:pages por las siguientes <a href="http://rchavarria.github.com/blog/2012/12/03/por-que-cambie-mi-blog-en-wordpress-com">razones</a></p>
+  <p>Este post pertenece a mi antiguo blog en <a href="http://rchavarria.wordpress.com">wordpress</a>, pero decidí pasarme a github:pages por las siguientes <a href="http://rchavarria.github.io/blog/2012/12/03/por-que-cambie-mi-blog-en-wordpress-com">razones</a></p>
 </div>
 
 
@@ -163,9 +163,9 @@
   
   <entry>
     <title type="html"><![CDATA[Heisenbugs]]></title>
-    <link href="http://rchavarria.github.com/blog/2011/02/24/heisengugs/"/>
+    <link href="http://rchavarria.github.io/blog/2011/02/24/heisengugs/"/>
     <updated>2011-02-24T02:24:00+01:00</updated>
-    <id>http://rchavarria.github.com/blog/2011/02/24/heisengugs</id>
+    <id>http://rchavarria.github.io/blog/2011/02/24/heisengugs</id>
     <content type="html"><![CDATA[<blockquote>¡Bien! Ya tengo mi nueva funcionalidad implementada. La aplicación va a ser de lo mejorcito con lo que acabo de desarrollar. Llevo depurando este código toda la tarde. ¿Qué puede fallar? He recorrido instrucción por instrucción y todo se ejecuta según lo previsto.
 
 Lanzo la aplicación ...

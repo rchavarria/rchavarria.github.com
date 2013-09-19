@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: solveet | R. Chavarria's Blog]]></title>
-  <link href="http://rchavarria.github.com/blog/categories/solveet/atom.xml" rel="self"/>
-  <link href="http://rchavarria.github.com/"/>
-  <updated>2013-09-17T14:00:13+02:00</updated>
-  <id>http://rchavarria.github.com/</id>
+  <link href="http://rchavarria.github.io/blog/categories/solveet/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.io/"/>
+  <updated>2013-09-19T11:46:25+02:00</updated>
+  <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[solveet: cifrado cesar en python]]></title>
-    <link href="http://rchavarria.github.com/blog/2012/12/19/solveet-cifrado-cesar-en-python/"/>
+    <link href="http://rchavarria.github.io/blog/2012/12/19/solveet-cifrado-cesar-en-python/"/>
     <updated>2012-12-19T12:31:00+01:00</updated>
-    <id>http://rchavarria.github.com/blog/2012/12/19/solveet-cifrado-cesar-en-python</id>
+    <id>http://rchavarria.github.io/blog/2012/12/19/solveet-cifrado-cesar-en-python</id>
     <content type="html"><![CDATA[<p>Me gusta resolver problemas de programación regularmente para mejorar como programdor, y para ello uso
 la página <a href="http://solveet.com">Solveet</a>. El problema que he solucionado esta semana es el del
 <a href="http://www.solveet.com/exercises/Cifrado-Cesar/145">Cifrado César</a>, y está englobado en la iniciativa
@@ -140,9 +140,9 @@ será bienvenido.</p>
   
   <entry>
     <title type="html"><![CDATA[solveet: Torres de Hannoi]]></title>
-    <link href="http://rchavarria.github.com/blog/2012/12/12/solveet-torres-de-hannoi/"/>
+    <link href="http://rchavarria.github.io/blog/2012/12/12/solveet-torres-de-hannoi/"/>
     <updated>2012-12-12T09:35:00+01:00</updated>
-    <id>http://rchavarria.github.com/blog/2012/12/12/solveet-torres-de-hannoi</id>
+    <id>http://rchavarria.github.io/blog/2012/12/12/solveet-torres-de-hannoi</id>
     <content type="html"><![CDATA[<p>Simplemente para practicar y mejorar mis habilidades como programador, me gusta resolver problemas
 de programación regularmente. Hace un tiempo conocí la página <a href="http://solveet.com">Solveet</a>, y desde
 entonces intento aportar semanalmente alguna que otra solución a los problemas propuestos por otros

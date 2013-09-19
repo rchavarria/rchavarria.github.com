@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: blog | R. Chavarria's Blog]]></title>
-  <link href="http://rchavarria.github.com/blog/categories/blog/atom.xml" rel="self"/>
-  <link href="http://rchavarria.github.com/"/>
-  <updated>2013-09-17T14:00:13+02:00</updated>
-  <id>http://rchavarria.github.com/</id>
+  <link href="http://rchavarria.github.io/blog/categories/blog/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.io/"/>
+  <updated>2013-09-19T11:46:25+02:00</updated>
+  <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Por qu&eacute; cambi&eacute; mi blog en wordpress.com]]></title>
-    <link href="http://rchavarria.github.com/blog/2012/12/03/por-que-cambie-mi-blog-en-wordpress-com/"/>
+    <link href="http://rchavarria.github.io/blog/2012/12/03/por-que-cambie-mi-blog-en-wordpress-com/"/>
     <updated>2012-12-03T09:44:00+01:00</updated>
-    <id>http://rchavarria.github.com/blog/2012/12/03/por-que-cambie-mi-blog-en-wordpress-com</id>
+    <id>http://rchavarria.github.io/blog/2012/12/03/por-que-cambie-mi-blog-en-wordpress-com</id>
     <content type="html"><![CDATA[<p>Desde que leí el post de <a href="http://arturoherrero.com/about">Arturo Herrero</a>,
 <a href="http://arturoherrero.com/2010/12/20/blogging-like-a-hacker">Blogging like a hacker</a>,
 siempre me ha picado el gusanillo de hacer algo similar.</p>

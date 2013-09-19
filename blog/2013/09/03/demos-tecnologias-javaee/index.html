@@ -19,7 +19,7 @@ me gustaría ir escribiendo poco a poco, sin prisa pero sin pausa, &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://rchavarria.github.com/blog/2013/09/03/demos-tecnologias-javaee/">
+  <link rel="canonical" href="http://rchavarria.github.io/blog/2013/09/03/demos-tecnologias-javaee/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -62,14 +62,17 @@ me gustaría ir escribiendo poco a poco, sin prisa pero sin pausa, &hellip;">
   
 <form action="http://google.com/search" method="get">
   <fieldset role="search">
-    <input type="hidden" name="q" value="site:rchavarria.github.com" />
+    <input type="hidden" name="q" value="site:rchavarria.github.io" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
   </fieldset>
 </form>
   
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/blog/archives">Archivos</a></li>
+  <li><a href="/readings">Lista de lectura</a></li>
+  <li><a href="/pet-projects">Proyectos</a></li>
+  <li><a href="/about">About</a></li>
 </ul>
 
 </nav>
@@ -127,18 +130,14 @@ contar con un archivo descriptor de la aplicación web.</li>
 <li><a href="/blog/2013/09/13/servlet-lee-parametros">Acceder a los datos de un formulario desde un servlet</a>:
 Es posible acceder a datos enviados por el usuario en la petición HTTP desde un servlet.
 En este post veremos cómo.</li>
-</ul>
-
-
-<!--
-    http://theopentutorials.com/examples/java-ee/servlet/get-all-parameters-in-html-form-using-getparameternames/
-    https://baurdotnet.wordpress.com/2011/01/31/getting-a-request-parameter-in-a-servlet/
-    
-    ampliarlo mediante un ejemplo de cómo enviar un archivo?  
--->
-
-
-<ul>
+<li><a href="/blog/2013/09/17/servlet-redirecciona-jsp">Cómo redireccionar de un servlet a un JSP</a>:
+En esta ocasión vamos un paso más allá en los servlets, y avanzamos hacia
+una arquitectura MVC, separando la lógica de la aplicación (leer parámetros) de la
+presentación, que en este caso la hará una página JSP.</li>
+<li><a href="/blog/2013/09/19/crear-servicio-web-jaxws">Cómo crear un servicio web</a>:
+En esta demo veremos cómo crear un servicio web, y de cómo usar el framework Apache CXF
+para su creación, configuración y despliegue en un contenedor web. Crearemos un servicio
+web basado en la especificación JAX-WS, que intercambiará mensajes SOAP sobre HTTP.</li>
 <li>Servlet listeners: Veremos el uso que le podemos dar a los distintos listeners asociados
 a los servlets y su ciclo de vida: ServletContextListener,
 ServletContextAttributeListener, ServletRequestListener y HttpSessionListener.</li>
@@ -198,7 +197,7 @@ filtros para los servlets, logging, datos en la sesión, redirección&#8230;</p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rchavarria.github.com/blog/2013/09/03/demos-tecnologias-javaee/" data-via="rchavarriat" data-counturl="http://rchavarria.github.com/blog/2013/09/03/demos-tecnologias-javaee/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rchavarria.github.io/blog/2013/09/03/demos-tecnologias-javaee/" data-via="rchavarriat" data-counturl="http://rchavarria.github.io/blog/2013/09/03/demos-tecnologias-javaee/" >Tweet</a>
   
   
   
@@ -231,6 +230,10 @@ filtros para los servlets, logging, datos en la sesión, redirección&#8230;</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/09/19/crear-servicio-web-jaxws/">Crear un servicio web JAX-WS</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/09/17/servlet-redirecciona-jsp/">Servlet redirecciona a una JSP</a>
       </li>
     
@@ -244,10 +247,6 @@ filtros para los servlets, logging, datos en la sesión, redirección&#8230;</p>
     
       <li class="post">
         <a href="/blog/2013/09/03/demos-tecnologias-javaee/">Demos de tecnologías Java EE</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/05/30/aprendiendo-a-colaborar-en-github/">Aprendiendo a colaborar en github</a>
       </li>
     
   </ul>
@@ -300,8 +299,8 @@ filtros para los servlets, logging, datos en la sesión, redirección&#8230;</p>
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://rchavarria.github.com/blog/2013/09/03/demos-tecnologias-javaee/';
-        var disqus_url = 'http://rchavarria.github.com/blog/2013/09/03/demos-tecnologias-javaee/';
+        var disqus_identifier = 'http://rchavarria.github.io/blog/2013/09/03/demos-tecnologias-javaee/';
+        var disqus_url = 'http://rchavarria.github.io/blog/2013/09/03/demos-tecnologias-javaee/';
         var disqus_script = 'embed.js';
       
     (function () {

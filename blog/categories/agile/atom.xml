@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: agile | R. Chavarria's Blog]]></title>
-  <link href="http://rchavarria.github.com/blog/categories/agile/atom.xml" rel="self"/>
-  <link href="http://rchavarria.github.com/"/>
-  <updated>2013-09-17T14:00:13+02:00</updated>
-  <id>http://rchavarria.github.com/</id>
+  <link href="http://rchavarria.github.io/blog/categories/agile/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.io/"/>
+  <updated>2013-09-19T11:46:25+02:00</updated>
+  <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[La meta]]></title>
-    <link href="http://rchavarria.github.com/blog/2013/04/10/la-meta/"/>
+    <link href="http://rchavarria.github.io/blog/2013/04/10/la-meta/"/>
     <updated>2013-04-10T10:06:00+02:00</updated>
-    <id>http://rchavarria.github.com/blog/2013/04/10/la-meta</id>
+    <id>http://rchavarria.github.io/blog/2013/04/10/la-meta</id>
     <content type="html"><![CDATA[<h4>La meta</h4>
 
 <h5>Eliyahu Goldratt</h5>
@@ -127,9 +127,9 @@ es productivo, todo aquello que no la lleve es imprductivo.</p></li>
   
   <entry>
     <title type="html"><![CDATA[Agile estimating and planning]]></title>
-    <link href="http://rchavarria.github.com/blog/2013/02/13/agile-estimating-and-planning/"/>
+    <link href="http://rchavarria.github.io/blog/2013/02/13/agile-estimating-and-planning/"/>
     <updated>2013-02-13T13:08:00+01:00</updated>
-    <id>http://rchavarria.github.com/blog/2013/02/13/agile-estimating-and-planning</id>
+    <id>http://rchavarria.github.io/blog/2013/02/13/agile-estimating-and-planning</id>
     <content type="html"><![CDATA[<h4>Agile estimating and planning</h4>
 
 <h5>Mike Cohn</h5>
@@ -272,9 +272,9 @@ en su blog.</li>
   
   <entry>
     <title type="html"><![CDATA[Agile principles, patterns and practices in C#]]></title>
-    <link href="http://rchavarria.github.com/blog/2012/11/22/agile-principles-patterns-and-practices-in-c/"/>
+    <link href="http://rchavarria.github.io/blog/2012/11/22/agile-principles-patterns-and-practices-in-c/"/>
     <updated>2012-11-22T11:22:00+01:00</updated>
-    <id>http://rchavarria.github.com/blog/2012/11/22/agile-principles-patterns-and-practices-in-c</id>
+    <id>http://rchavarria.github.io/blog/2012/11/22/agile-principles-patterns-and-practices-in-c</id>
     <content type="html"><![CDATA[<h4>Agile principles, patterns and practices in C#</h4>
 
 
@@ -378,7 +378,7 @@ en su blog.</li>
     <li>[pdf] <a href="http://www.objectmentor.com/resources/articles/TheHumbleDialogBox.pdf">The humble dialog box</a>: cómo separar la lógica de negocio de la interfaz gráfica, de Michael Feathers.</li>
     <li><a href="http://www.martinfowler.com/eaaDev/ModelViewPresenter.html">Patrón model-view-presenter</a>: artículo de Martin Fowler que me llevó a éste de <a href="http://www.martinfowler.com/eaaDev/uiArchs.html">Arquitecturas GUI</a>.</li>
     <li><a href="http://apagayvuelveaencender.blogspot.com.es/2012/11/metodologias-agiles-me-las-creo-o-no-me.html">Metodologías ágiles: ¿me las creo o no me las creo?</a>: excelente post de <a href="http://twitter.com/andres_viedma">Andrés Viedma</a> que me viene ni al pelo como enlace relacionado con el libro y donde se explican los cuatro principios del desarrollo de software ágil</li>
-    <li>Hace ya un tiempo, leí sobre <a href="http://rchavarria.github.com/blog/2010/03/04/principios-y-patrones-de-diseno/">principios y patrones de diseño</a></li>
+    <li>Hace ya un tiempo, leí sobre <a href="http://rchavarria.github.io/blog/2010/03/04/principios-y-patrones-de-diseno/">principios y patrones de diseño</a></li>
 </ul>
 
 ]]></content>
@@ -386,9 +386,9 @@ en su blog.</li>
   
   <entry>
     <title type="html"><![CDATA[Mi experiencia en la CAS2012]]></title>
-    <link href="http://rchavarria.github.com/blog/2012/11/08/mi-experiencia-en-la-cas2012/"/>
+    <link href="http://rchavarria.github.io/blog/2012/11/08/mi-experiencia-en-la-cas2012/"/>
     <updated>2012-11-08T10:08:00+01:00</updated>
-    <id>http://rchavarria.github.com/blog/2012/11/08/mi-experiencia-en-la-cas2012</id>
+    <id>http://rchavarria.github.io/blog/2012/11/08/mi-experiencia-en-la-cas2012</id>
     <content type="html"><![CDATA[<p>Más vale tarde que nunca. Tenía ganas de escribir mi experiencia en la <a href="http://conferencia2012.agile-spain.org/"><strong>CAS2012</strong></a> (mi primera CAS) pero todavía no había encontrado el hueco. Supongo que quería leer alguna experiencia de otros asistentes, o será mi alter ego perezoso, quién sabe.</p>
 
 <p>La verdad es que volví de <a href="http://es.wikipedia.org/wiki/C%C3%A1ceres">Cáceres</a> encantadísimo, motivadísimo, y cualquier otro adjetivo que termine en <em>-ísimo</em>. ¡Qué pasada! Como ya he dicho antes, ésta ha sido mi primera CAS, y espero que se repita cada año. Sé que será difícil, pero lo intentaré.</p>
@@ -431,9 +431,9 @@ en su blog.</li>
   
   <entry>
     <title type="html"><![CDATA[Lean software development]]></title>
-    <link href="http://rchavarria.github.com/blog/2012/10/10/lean-software-development/"/>
+    <link href="http://rchavarria.github.io/blog/2012/10/10/lean-software-development/"/>
     <updated>2012-10-10T10:10:00+02:00</updated>
-    <id>http://rchavarria.github.com/blog/2012/10/10/lean-software-development</id>
+    <id>http://rchavarria.github.io/blog/2012/10/10/lean-software-development</id>
     <content type="html"><![CDATA[<h4>Lean software development</h4>
 
 

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: trabajo | R. Chavarria's Blog]]></title>
-  <link href="http://rchavarria.github.com/blog/categories/trabajo/atom.xml" rel="self"/>
-  <link href="http://rchavarria.github.com/"/>
-  <updated>2013-09-17T14:00:13+02:00</updated>
-  <id>http://rchavarria.github.com/</id>
+  <link href="http://rchavarria.github.io/blog/categories/trabajo/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.io/"/>
+  <updated>2013-09-19T11:46:25+02:00</updated>
+  <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Buenos programadores merecen mejores salarios]]></title>
-    <link href="http://rchavarria.github.com/blog/2010/01/13/buenos-programadores-merecen-mejores-salarios/"/>
+    <link href="http://rchavarria.github.io/blog/2010/01/13/buenos-programadores-merecen-mejores-salarios/"/>
     <updated>2010-01-13T00:00:00+01:00</updated>
-    <id>http://rchavarria.github.com/blog/2010/01/13/buenos-programadores-merecen-mejores-salarios</id>
+    <id>http://rchavarria.github.io/blog/2010/01/13/buenos-programadores-merecen-mejores-salarios</id>
     <content type="html"><![CDATA[<p>Recientemente he leído esta entrada en el <a title="Good Java developers deserve better salaries" href="http://weblogs.java.net/blog/felipegaucho/archive/2010/01/05/good-java-developers-deserve-better-salaries">blog de Felipe Gaucho</a>, pertenciente a un importante grupo de usuarios de Java (<a href="http://java.net/project/brazilian-java-users-group">Brazilian JUG</a>).</p>
 
 <p>En su artículo discute sobre<strong> por qué</strong> los buenos desarrolladores de Java están desapareciendo, o al menos, las buenas ofertas para trabajar como desarrollador Java.</p>

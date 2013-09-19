@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: j2ee | R. Chavarria's Blog]]></title>
-  <link href="http://rchavarria.github.com/blog/categories/j2ee/atom.xml" rel="self"/>
-  <link href="http://rchavarria.github.com/"/>
-  <updated>2013-09-17T14:00:13+02:00</updated>
-  <id>http://rchavarria.github.com/</id>
+  <link href="http://rchavarria.github.io/blog/categories/j2ee/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.io/"/>
+  <updated>2013-09-19T11:46:25+02:00</updated>
+  <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
     
@@ -15,11 +15,11 @@
   
   <entry>
     <title type="html"><![CDATA[Aprende EJB en 21 d&iacute;as]]></title>
-    <link href="http://rchavarria.github.com/blog/2010/02/03/aprende-ejb-en-21-dias/"/>
+    <link href="http://rchavarria.github.io/blog/2010/02/03/aprende-ejb-en-21-dias/"/>
     <updated>2010-02-03T02:03:00+01:00</updated>
-    <id>http://rchavarria.github.com/blog/2010/02/03/aprende-ejb-en-21-dias</id>
+    <id>http://rchavarria.github.io/blog/2010/02/03/aprende-ejb-en-21-dias</id>
     <content type="html"><![CDATA[<div style="margin:2%; padding:2%; background-color:#E0E0E0; ">
-  <p>Este post pertenece a mi antiguo blog en <a href="http://rchavarria.wordpress.com">wordpress</a>, pero decidí pasarme a github:pages por las siguientes <a href="http://rchavarria.github.com/blog/2012/12/03/por-que-cambie-mi-blog-en-wordpress-com">razones</a></p>
+  <p>Este post pertenece a mi antiguo blog en <a href="http://rchavarria.wordpress.com">wordpress</a>, pero decidí pasarme a github:pages por las siguientes <a href="http://rchavarria.github.io/blog/2012/12/03/por-que-cambie-mi-blog-en-wordpress-com">razones</a></p>
 </div>
 
 

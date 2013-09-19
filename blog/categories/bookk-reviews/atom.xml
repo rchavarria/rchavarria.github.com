@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: bookk reviews | R. Chavarria's Blog]]></title>
-  <link href="http://rchavarria.github.com/blog/categories/bookk-reviews/atom.xml" rel="self"/>
-  <link href="http://rchavarria.github.com/"/>
-  <updated>2013-09-17T14:00:13+02:00</updated>
-  <id>http://rchavarria.github.com/</id>
+  <link href="http://rchavarria.github.io/blog/categories/bookk-reviews/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.io/"/>
+  <updated>2013-09-19T11:46:25+02:00</updated>
+  <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Agile principles, patterns and practices in C#]]></title>
-    <link href="http://rchavarria.github.com/blog/2012/11/22/agile-principles-patterns-and-practices-in-c/"/>
+    <link href="http://rchavarria.github.io/blog/2012/11/22/agile-principles-patterns-and-practices-in-c/"/>
     <updated>2012-11-22T11:22:00+01:00</updated>
-    <id>http://rchavarria.github.com/blog/2012/11/22/agile-principles-patterns-and-practices-in-c</id>
+    <id>http://rchavarria.github.io/blog/2012/11/22/agile-principles-patterns-and-practices-in-c</id>
     <content type="html"><![CDATA[<h4>Agile principles, patterns and practices in C#</h4>
 
 
@@ -121,7 +121,7 @@
     <li>[pdf] <a href="http://www.objectmentor.com/resources/articles/TheHumbleDialogBox.pdf">The humble dialog box</a>: cómo separar la lógica de negocio de la interfaz gráfica, de Michael Feathers.</li>
     <li><a href="http://www.martinfowler.com/eaaDev/ModelViewPresenter.html">Patrón model-view-presenter</a>: artículo de Martin Fowler que me llevó a éste de <a href="http://www.martinfowler.com/eaaDev/uiArchs.html">Arquitecturas GUI</a>.</li>
     <li><a href="http://apagayvuelveaencender.blogspot.com.es/2012/11/metodologias-agiles-me-las-creo-o-no-me.html">Metodologías ágiles: ¿me las creo o no me las creo?</a>: excelente post de <a href="http://twitter.com/andres_viedma">Andrés Viedma</a> que me viene ni al pelo como enlace relacionado con el libro y donde se explican los cuatro principios del desarrollo de software ágil</li>
-    <li>Hace ya un tiempo, leí sobre <a href="http://rchavarria.github.com/blog/2010/03/04/principios-y-patrones-de-diseno/">principios y patrones de diseño</a></li>
+    <li>Hace ya un tiempo, leí sobre <a href="http://rchavarria.github.io/blog/2010/03/04/principios-y-patrones-de-diseno/">principios y patrones de diseño</a></li>
 </ul>
 
 ]]></content>

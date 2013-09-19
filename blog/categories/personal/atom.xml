@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: personal | R. Chavarria's Blog]]></title>
-  <link href="http://rchavarria.github.com/blog/categories/personal/atom.xml" rel="self"/>
-  <link href="http://rchavarria.github.com/"/>
-  <updated>2013-09-17T14:00:13+02:00</updated>
-  <id>http://rchavarria.github.com/</id>
+  <link href="http://rchavarria.github.io/blog/categories/personal/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.io/"/>
+  <updated>2013-09-19T11:46:25+02:00</updated>
+  <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Save InformaticOS, mi primer open space]]></title>
-    <link href="http://rchavarria.github.com/blog/2013/04/30/save-informaticos/"/>
+    <link href="http://rchavarria.github.io/blog/2013/04/30/save-informaticos/"/>
     <updated>2013-04-30T12:23:00+02:00</updated>
-    <id>http://rchavarria.github.com/blog/2013/04/30/save-informaticos</id>
+    <id>http://rchavarria.github.io/blog/2013/04/30/save-informaticos</id>
     <content type="html"><![CDATA[<p>Wow! Menudo chute! No puedo decir más! El sábado 27 de abril estuve en mi primer
 <a href="en.wikipedia.org/wiki/Open_space">Open Space</a>,
 <a href="http://saveinformaticos.reeelab.com/2013/03/07/un-open-space-para-debatir-sobre-nuestra-profesion/">Save InformaticOS</a>,
@@ -89,9 +89,9 @@ imagen aquí, pero Jose Manuel Beas lo ha hecho perfectamente en
   
   <entry>
     <title type="html"><![CDATA[Notas sobre un video de marketing online]]></title>
-    <link href="http://rchavarria.github.com/blog/2013/04/17/notas-sobre-un-video-de-marketing-online/"/>
+    <link href="http://rchavarria.github.io/blog/2013/04/17/notas-sobre-un-video-de-marketing-online/"/>
     <updated>2013-04-17T06:15:00+02:00</updated>
-    <id>http://rchavarria.github.com/blog/2013/04/17/notas-sobre-un-video-de-marketing-online</id>
+    <id>http://rchavarria.github.io/blog/2013/04/17/notas-sobre-un-video-de-marketing-online</id>
     <content type="html"><![CDATA[<p>En este post incluyo las notas que fui tomando mientras visualizé el siguiente vídeo:
 <a href="http://youtu.be/33vKaNuJh4o">Marca personal, mktIO</a> de la serie #mktIO que regularmente
 se publica en el canal de youtube de
@@ -153,9 +153,9 @@ conservar.</p>
   
   <entry>
     <title type="html"><![CDATA[La meta]]></title>
-    <link href="http://rchavarria.github.com/blog/2013/04/10/la-meta/"/>
+    <link href="http://rchavarria.github.io/blog/2013/04/10/la-meta/"/>
     <updated>2013-04-10T10:06:00+02:00</updated>
-    <id>http://rchavarria.github.com/blog/2013/04/10/la-meta</id>
+    <id>http://rchavarria.github.io/blog/2013/04/10/la-meta</id>
     <content type="html"><![CDATA[<h4>La meta</h4>
 
 <h5>Eliyahu Goldratt</h5>
@@ -265,9 +265,9 @@ es productivo, todo aquello que no la lleve es imprductivo.</p></li>
   
   <entry>
     <title type="html"><![CDATA[Agile estimating and planning]]></title>
-    <link href="http://rchavarria.github.com/blog/2013/02/13/agile-estimating-and-planning/"/>
+    <link href="http://rchavarria.github.io/blog/2013/02/13/agile-estimating-and-planning/"/>
     <updated>2013-02-13T13:08:00+01:00</updated>
-    <id>http://rchavarria.github.com/blog/2013/02/13/agile-estimating-and-planning</id>
+    <id>http://rchavarria.github.io/blog/2013/02/13/agile-estimating-and-planning</id>
     <content type="html"><![CDATA[<h4>Agile estimating and planning</h4>
 
 <h5>Mike Cohn</h5>
@@ -410,9 +410,9 @@ en su blog.</li>
   
   <entry>
     <title type="html"><![CDATA[Mi experiencia en la CAS2012]]></title>
-    <link href="http://rchavarria.github.com/blog/2012/11/08/mi-experiencia-en-la-cas2012/"/>
+    <link href="http://rchavarria.github.io/blog/2012/11/08/mi-experiencia-en-la-cas2012/"/>
     <updated>2012-11-08T10:08:00+01:00</updated>
-    <id>http://rchavarria.github.com/blog/2012/11/08/mi-experiencia-en-la-cas2012</id>
+    <id>http://rchavarria.github.io/blog/2012/11/08/mi-experiencia-en-la-cas2012</id>
     <content type="html"><![CDATA[<p>Más vale tarde que nunca. Tenía ganas de escribir mi experiencia en la <a href="http://conferencia2012.agile-spain.org/"><strong>CAS2012</strong></a> (mi primera CAS) pero todavía no había encontrado el hueco. Supongo que quería leer alguna experiencia de otros asistentes, o será mi alter ego perezoso, quién sabe.</p>
 
 <p>La verdad es que volví de <a href="http://es.wikipedia.org/wiki/C%C3%A1ceres">Cáceres</a> encantadísimo, motivadísimo, y cualquier otro adjetivo que termine en <em>-ísimo</em>. ¡Qué pasada! Como ya he dicho antes, ésta ha sido mi primera CAS, y espero que se repita cada año. Sé que será difícil, pero lo intentaré.</p>

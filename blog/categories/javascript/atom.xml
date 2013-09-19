@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: javascript | R. Chavarria's Blog]]></title>
-  <link href="http://rchavarria.github.com/blog/categories/javascript/atom.xml" rel="self"/>
-  <link href="http://rchavarria.github.com/"/>
-  <updated>2013-09-17T14:00:13+02:00</updated>
-  <id>http://rchavarria.github.com/</id>
+  <link href="http://rchavarria.github.io/blog/categories/javascript/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.io/"/>
+  <updated>2013-09-19T11:46:25+02:00</updated>
+  <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[solveet: Torres de Hannoi]]></title>
-    <link href="http://rchavarria.github.com/blog/2012/12/12/solveet-torres-de-hannoi/"/>
+    <link href="http://rchavarria.github.io/blog/2012/12/12/solveet-torres-de-hannoi/"/>
     <updated>2012-12-12T09:35:00+01:00</updated>
-    <id>http://rchavarria.github.com/blog/2012/12/12/solveet-torres-de-hannoi</id>
+    <id>http://rchavarria.github.io/blog/2012/12/12/solveet-torres-de-hannoi</id>
     <content type="html"><![CDATA[<p>Simplemente para practicar y mejorar mis habilidades como programador, me gusta resolver problemas
 de programación regularmente. Hace un tiempo conocí la página <a href="http://solveet.com">Solveet</a>, y desde
 entonces intento aportar semanalmente alguna que otra solución a los problemas propuestos por otros
@@ -90,9 +90,9 @@ torre que no contiene ni el anillo más pequeño ni el anillo a mover.</li>
   
   <entry>
     <title type="html"><![CDATA[Proyecto maven para javascript]]></title>
-    <link href="http://rchavarria.github.com/blog/2012/09/26/proyecto-maven-para-javascript/"/>
+    <link href="http://rchavarria.github.io/blog/2012/09/26/proyecto-maven-para-javascript/"/>
     <updated>2012-09-26T09:26:00+02:00</updated>
-    <id>http://rchavarria.github.com/blog/2012/09/26/proyecto-maven-para-javascript</id>
+    <id>http://rchavarria.github.io/blog/2012/09/26/proyecto-maven-para-javascript</id>
     <content type="html"><![CDATA[<p>Estoy aprendiendo JavaScript. Creo que es uno de los lenguajes con más futuro, y no sólo por la web (que da de comer a mucha gente), sino por herramientas como <a href="http://phonegap.com/">PhoneGap</a> (que te permite crear aplicaciones para iOS, Android, ...), y también por la llegada del nuevo Windows 8, ya que se pueden desarrollar aplicaciones en JavaScript que acceden al hardware de la máquina donde esté instalado Windows 8.</p>
 
 <p>Empecé aprendiéndolo gracias a <a href="http://www.codecademy.com/">Codecademy</a>, que comenzó el año con unos cursos o clases online, y me llamó mucho la atención la posibilidad de poder ir practicando JavaScript sin tener que instalar nada. Y además, cada semana la herramienta me recordaría que tenía una nueva lección, así no dejaría de practicar.</p>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: git | R. Chavarria's Blog]]></title>
-  <link href="http://rchavarria.github.com/blog/categories/git/atom.xml" rel="self"/>
-  <link href="http://rchavarria.github.com/"/>
-  <updated>2013-09-17T14:00:13+02:00</updated>
-  <id>http://rchavarria.github.com/</id>
+  <link href="http://rchavarria.github.io/blog/categories/git/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.io/"/>
+  <updated>2013-09-19T11:46:25+02:00</updated>
+  <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Aprendiendo a colaborar en github]]></title>
-    <link href="http://rchavarria.github.com/blog/2013/05/30/aprendiendo-a-colaborar-en-github/"/>
+    <link href="http://rchavarria.github.io/blog/2013/05/30/aprendiendo-a-colaborar-en-github/"/>
     <updated>2013-05-30T08:45:00+02:00</updated>
-    <id>http://rchavarria.github.com/blog/2013/05/30/aprendiendo-a-colaborar-en-github</id>
+    <id>http://rchavarria.github.io/blog/2013/05/30/aprendiendo-a-colaborar-en-github</id>
     <content type="html"><![CDATA[<p>Recientemente, hablando con mi amigo <a href="http://twitter.com/dagarfol">David</a> sobre un
 proyectillo que llevamos a medias (estamos empezando, espero que podamos tener algo
 publicable pronto), salió el tema de cómo empezar a colaborar con
@@ -187,9 +187,9 @@ cambios a su repositorio remoto</p>
   
   <entry>
     <title type="html"><![CDATA[[microtip] git: ramas locales y remotas]]></title>
-    <link href="http://rchavarria.github.com/blog/2012/11/19/microtip-git-ramas-locales-y-remotas/"/>
+    <link href="http://rchavarria.github.io/blog/2012/11/19/microtip-git-ramas-locales-y-remotas/"/>
     <updated>2012-11-19T11:19:00+01:00</updated>
-    <id>http://rchavarria.github.com/blog/2012/11/19/microtip-git-ramas-locales-y-remotas</id>
+    <id>http://rchavarria.github.io/blog/2012/11/19/microtip-git-ramas-locales-y-remotas</id>
     <content type="html"><![CDATA[<p><a href="http://es.wikipedia.org/wiki/Git"><strong>git</strong></a> es un sistema de control de version distribuido (<a href="http://en.wikipedia.org/wiki/Distributed_version_control_system">DVCS</a> por sus siglas en inglés), y una de sus características que lo hacen más atractivo es su gran rapidez para trabajar con ramas (<em>branches</em>).</p>
 
 
