@@ -113,3 +113,8 @@ private String outputParametersList(HttpServletRequest request) {
 
 Para echar un ojo al código fuente, visitar el directorio 
 [`request-parameters`](https://github.com/rchavarria/javaee-6-demos/tree/master/request-parameters).
+
+## Enlaces relacionados
+
+- [The open tutorials](http://theopentutorials.com/examples/java-ee/servlet/get-all-parameters-in-html-form-using-getparameternames): cómo leer todos los campos de un formulario en un servlet.
+- [Leer un parámetro en un servlet](https://baurdotnet.wordpress.com/2011/01/31/getting-a-request-parameter-in-a-servlet)
