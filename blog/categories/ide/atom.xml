@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ide | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/ide/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2013-09-19T11:46:25+02:00</updated>
+  <updated>2013-09-26T09:29:14+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -45,7 +45,7 @@ me encuentro con que trabajo bastante con el tipo de Java <code>java.awt.geom.Re
 y la verdad es que no me gusta nada cómo Eclipse me muestra este tipo de datos
 en una sesión de debugging.</p>
 
-<p><img class="center" src="/images/2013/rectangle2d-without-detail-formatter.png" width="804" height="151" title="Rectangle2D sin detail formatter" ></p>
+<p>{% img center /images/2013/rectangle2d-without-detail-formatter.png 804 151 Rectangle2D sin detail formatter %}</p>
 
 <h2>Crear un detail formatter</h2>
 
@@ -79,7 +79,7 @@ nf.setGroupingUsed(false);</p>
 
 <p>Y éste es el resultado, para mi gusto, mucho más compacto y directo:</p>
 
-<p><img class="center" src="/images/2013/rectangle2d-using-detail-formatter.png" width="548" height="116" title="Rectangle2D usando detail formatter" ></p>
+<p>{% img center /images/2013/rectangle2d-using-detail-formatter.png 548 116 Rectangle2D usando detail formatter %}</p>
 
 <h2>Conclusión</h2>
 

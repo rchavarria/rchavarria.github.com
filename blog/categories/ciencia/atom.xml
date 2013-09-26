@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ciencia | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/ciencia/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2013-09-19T11:46:25+02:00</updated>
+  <updated>2013-09-26T09:29:14+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -26,7 +26,7 @@
 <h5>Paul Davies</h5>
 
 
-<p><img class="right" src="/images/wordpress/god-and-the-new-physics.jpg" width="242" height="376" title="God and the new physics" ></p>
+<p>{% img right /images/wordpress/god-and-the-new-physics.jpg 242 376 God and the new physics %}</p>
 
 <h2>Por qué lo he leído</h2>
 

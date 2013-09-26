@@ -4,7 +4,7 @@
   <title><![CDATA[Category: web service | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/web-service/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2013-09-19T11:46:25+02:00</updated>
+  <updated>2013-09-26T09:29:14+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,195 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Crear una applicación cliente para un servicio web]]></title>
+    <link href="http://rchavarria.github.io/blog/2013/09/26/crear-cliente-servicio-web/"/>
+    <updated>2013-09-26T07:41:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2013/09/26/crear-cliente-servicio-web</id>
+    <content type="html"><![CDATA[<div style="margin:2%; padding:2%; background-color:#E0E0E0; ">
+    Find a lightweight English version of this post directly in the <a href="https://github.com/rchavarria/javaee-6-demos/tree/master/ws-jaxws-client">source code repository</a>.
+</div>
+
+
+<p>En esta demo crearemos un cliente para el servicio web desarrollado en la demo
+anterior. Para ello, utilizaremos una herramienta proporcionada por Java para
+generar unas clases a partir del fichero WSDL de descripción del servicio web, y
+usaremos dichas clases para invocar el servicio. Así de fácil.</p>
+
+<p>Se puede ver el código fuente de la demostración en el directorio
+<a href="https://github.com/rchavarria/javaee-6-demos/tree/master/ws-jaxws-client"><code>ws-jaxws-client</code></a>
+del repositorio de las demos en github.</p>
+
+<!-- more -->
+
+
+<h2>Demo</h2>
+
+<p>En esta demo crearemos en cliente que invocará a los métodos expuestos por el servicio
+web desarrollado en la demo anterior. Estos métodos son:</p>
+
+<ol>
+<li>Añadir usuario: añadiremos un nombre de usuario al servicio.</li>
+<li>Obtener usuario: mediante un identificiador, obtendremos un nombre de usuario.</li>
+</ol>
+
+
+<p>Con lo cual, añadiremos y consultaremos usuarios.</p>
+
+<h2>Pasos a seguir</h2>
+
+<h3>Arrancar el servicio web</h3>
+
+<p>Lo primero que debemos hacer es arrancar nuestro servicio web. Es necesario para que
+el fichero WSDL, que describe el servicio, esté disponible y actualizado. También
+es posible usar un fichero ya existente, por ejemplo, en el caso de que queramos
+desarrollar un cliente para un servicio web de terceros. En definitiva, el elemento
+realmente importante en un servicio web, es el fichero WSDL, que es quien define
+de manera unequívoca el servicio en sí.</p>
+
+<p>Para esta demo, arrancaremos el servicio web desarrollado en la
+<a href="/blog/2013/09/19/crear-servicio-web-jaxws">demo anterior</a>. Básicamente, los comandos
+para arrancarlo, partiendo del directorio raíz del código fuente de todas las demos:</p>
+
+<p><code>
+cd ws-jaxws-cxf
+mvn jetty:run
+</code></p>
+
+<p>De esta forma tendremos el fichero WSDL disponible en <code>http://localhost:8080/Users?wsdl</code>.</p>
+
+<h3>Generar las clases necesarias con <code>wsimport</code></h3>
+
+<p>Java proporciona una herramienta, <code>wsimport</code>, que genera las clases necesarias
+para poder consumir fácilmente un servicio web a partir de un fichero WSDL.</p>
+
+<p>La sintaxis del comando es:</p>
+
+<p><code>
+wsimport [options] &lt;WSDL_URI&gt;
+</code></p>
+
+<p>Así, en nuestro caso, un ejemplo sería:</p>
+
+<p><code>   
+wsimport http://localhost:8080/Users?wsdl
+</code></p>
+
+<p>Este comando genera las clases, las compila y borra el código fuente. Esto no es
+muy práctico a la hora de aprender, así que usaremos algunas opciones para
+obtener el código fuente de las clases generadas.</p>
+
+<ul>
+<li><code>-d src/main/java</code>: indica el directorio donde queremos generar las clases.</li>
+<li><code>-keep</code>: mantiene los ficheros <code>.java</code> generados.</li>
+<li><code>-Xnocompile</code>: no compila los fuentes generados, ya se encargará nuestra
+herramienta de ello, no os preocupéis.</li>
+</ul>
+
+
+<p>El comando completo quedaría:</p>
+
+<p><code>
+wsimport -d src/main/java -keep -Xnocompile http://localhost:8080/Users?wsdl
+</code></p>
+
+<p>Las clases generadas que más nos importan, son:</p>
+
+<ul>
+<li><code>UsersManagementService</code>: esta clase representa el servicio web en sí.</li>
+<li><code>UsersManagement</code>: esta clase contiene los mismos métodos que el servicio web
+definido por el fichero WSDL, y actúa como un proxy a la hora de invocar a nuestro
+servicio. A esta clase se le denomina <code>port</code> (puerto), y es quien nos permite llamar
+a los <em>métodos</em> web.</li>
+</ul>
+
+
+<h3>Crear un test de JUnit para invocar el servicio web</h3>
+
+<p>{% img left /images/2013/web-service-test.png Ejecución de la demo como un test %}</p>
+
+<p>Usaremos un sencillo test de JUnit para invocar a nuestro servicio. Se puede utilizar
+una clase normal de Java, con un método <code>main</code>, pero haciéndolo con un test, podemos
+integrar su ejecución en el ciclo de vida del proyecto gestionado por <code>maven</code> y
+ejecutarlo muy fácilmente con <code>mvn test</code>.</p>
+
+<p>Antes de nada, es necesario añadir la dependencia de JUnit a nuestro proyecto:</p>
+
+<p>``` xml
+<dependency></p>
+
+<pre><code>&lt;groupId&gt;junit&lt;/groupId&gt;
+&lt;artifactId&gt;junit&lt;/artifactId&gt;
+&lt;version&gt;4.8.1&lt;/version&gt;
+&lt;scope&gt;test&lt;/scope&gt;
+</code></pre>
+
+<p></dependency>
+```</p>
+
+<p>Crearemos el test en el paquete <code>es.rchavarria.ws.client</code>. En el método <code>setUp</code>
+de nuestro test (el que se ejecutará antes que cualquier test) crearemos una
+instancia del servicio, y a través de él, obtendremos una instancia de nuestra
+clase <em>port</em>. Esta clase será quien nos permita invocar al servicio web.</p>
+
+<p>``` java
+//...
+public class JaxWsClientTest {</p>
+
+<pre><code>private UsersManagement port;
+
+@Before
+public void setUp() {
+    UsersManagementService service = new UsersManagementService();
+    port = service.getUsersManagementPort();
+}
+</code></pre>
+
+<p>//...      <br/>
+}
+```</p>
+
+<h3>Invocando el servicio web</h3>
+
+<p>Ahora ya disponemos de la clase <em>port</em>, así que ya somos capaces de invocar los
+métodos expuestos por el servicio: <code>addUser</code> y <code>getUser</code>. A por ellos!!</p>
+
+<p>``` java
+@Test
+public void test() {</p>
+
+<pre><code>assertEquals(1, port.addUser("The boss"));
+assertEquals(2, port.addUser("The king"));
+assertEquals(3, port.addUser("The queen"));
+
+assertEquals("The boss", port.getUser(1));
+assertEquals("The queen", port.getUser(3));
+assertEquals("The king", port.getUser(2));
+</code></pre>
+
+<p>}
+```</p>
+
+<h2>Ejecución</h2>
+
+<p>Esta demo se puede ejecutar como un test de JUnit, y estaría integrado en la ejecución
+de <code>maven</code>, así que simplemente ejecuta el comando <code>mvn test</code> para ver los resultados.</p>
+
+<p>He añadido también un plugin, surefire report, por lo que ejecutnado el comando
+<code>mvn site</code>, la herramienta generará (entre otras cosas), un informe con los resultados
+de la ejecución de nuestros tests. Ejecuta el comando y abre el fichero HTML que
+encontrarás en esta ruta dentro del directorio raiz del proyecto <code>target/site/index.html</code>.</p>
+
+<h2>Enlaces para ampliar información</h2>
+
+<ul>
+<li><a href="http://docs.oracle.com/javaee/6/tutorial/doc/bnayl.html">Building web services with JAX-WS</a></li>
+<li><a href="http://docs.oracle.com/javaee/6/tutorial/doc/giepu.html">Building RESTful Web Services with JAX-RS</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Crear un servicio web JAX-WS]]></title>
@@ -41,7 +230,7 @@ del repositorio de las demos en github.</p>
 
 <h2>Demo</h2>
 
-<p><img class="right" src="/images/2013/web-services-by-psd.jpg" width="320" height="213" title="Foto por el usuario de flickr psd" ></p>
+<p>{% img right /images/2013/web-services-by-psd.jpg 320 213 Foto por el usuario de flickr psd %}</p>
 
 <p>En esta demo no veremos nada funcionando, ya que vamos a crear un servicio web
 pero no vamos a crear un cliente que lo consuma (eso para la siguiente). La forma
@@ -54,7 +243,7 @@ crearemos más adelante).</p>
 
 <ol>
 <li>Añadir usuario: añadiremos un nombre de usuario al servicio.</li>
-<li>Obtener usuario: mediante un identificiado, obtendremos un nombre de usuario.</li>
+<li>Obtener usuario: mediante un identificiador, obtendremos un nombre de usuario.</li>
 </ol>
 
 

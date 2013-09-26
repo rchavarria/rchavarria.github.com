@@ -4,7 +4,7 @@
   <title><![CDATA[Category: swing worker | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/swing-worker/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2013-09-19T11:46:25+02:00</updated>
+  <updated>2013-09-26T09:29:14+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -34,85 +34,47 @@
 
 <p>Para realizar nuestra tarea del cálculo de los números de fibonacci crearemos una clase <code>FibonacciWorker</code> que herede de <code>SwingWorker</code> y que haga uso de los métodos adecuados para notificar el progreso hecho en los cálculos. Esta notificación la haremos a través de eventos de cambios en una propiedad. Es posible utilizar <code>PropertyChangelListeners</code> con propiedades definidas por nosotros y utilizar el método <code>firePropertyChange</code> para lanzar estos eventos. Para este ejemplo utilizaremos la propiedad <code>progress</code> que es una propiedad que ya está enlazada por defecto. La propiedad <code>state</code> (indica el estado de la ejecución de la tarea: <em>INCIADA</em>, <em>CANCELADA</em>, <em>COMPLETADA</em>, ...) también lo está.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Nuestra tarea hereda de SwingWorker </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>class FibonacciWorker extends SwingWorker&lt;List&lt;Integer&gt;, Integer&gt; {
-</span><span class='line'>  PrimeNumbersTask(JTextArea textArea, int numbersToCalculate) {&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;pre>&lt;code>//initialize
-</span><span class='line'>&lt;/code>&lt;/pre>
-</span><span class='line'>
-</span><span class='line'>&lt;p>  }&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p>  @Override
-</span><span class='line'>  public List&lt;Integer&gt; doInBackground() {&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;pre>&lt;code>while (numbers.size &amp;lt;= numberstoCalculate &amp;amp;&amp;amp; !isCancelled()) {
-</span><span class='line'>  number = nextFibonacciNumber();
-</span><span class='line'>  numbers.add(number);
-</span><span class='line'>  publish(number);
-</span><span class='line'>  setProgress(100 * numbers.size() / numbersToCalculate);
-</span><span class='line'>}
-</span><span class='line'>return numbers;
-</span><span class='line'>&lt;/code>&lt;/pre>
-</span><span class='line'>
-</span><span class='line'>&lt;p>  }&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p>  @Override
-</span><span class='line'>  protected void process(List&lt;Integer&gt; chunks) {&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;pre>&lt;code>for (Integer number : chunks) {
-</span><span class='line'>  textArea.append(number + &amp;quot;\n&amp;quot;);
-</span><span class='line'>}
-</span><span class='line'>&lt;/code>&lt;/pre>
-</span><span class='line'>
-</span><span class='line'>&lt;p>  }&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p>  private Integer nextFibonacciNumber(){&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;pre>&lt;code>//  calculate next fibonacci number and return it
-</span><span class='line'>&lt;/code>&lt;/pre>
-</span><span class='line'>
-</span><span class='line'>&lt;p>  }
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock Nuestra tarea hereda de SwingWorker %}
+class FibonacciWorker extends SwingWorker&lt;List&lt;Integer&gt;, Integer&gt; {
+  PrimeNumbersTask(JTextArea textArea, int numbersToCalculate) {</p>
+
+<pre><code>//initialize
+</code></pre>
+
+<p>  }</p>
+
+<p>  @Override
+  public List&lt;Integer&gt; doInBackground() {</p>
+
+<pre><code>while (numbers.size &amp;lt;= numberstoCalculate &amp;amp;&amp;amp; !isCancelled()) {
+  number = nextFibonacciNumber();
+  numbers.add(number);
+  publish(number);
+  setProgress(100 * numbers.size() / numbersToCalculate);
+}
+return numbers;
+</code></pre>
+
+<p>  }</p>
+
+<p>  @Override
+  protected void process(List&lt;Integer&gt; chunks) {</p>
+
+<pre><code>for (Integer number : chunks) {
+  textArea.append(number + &amp;quot;\n&amp;quot;);
+}
+</code></pre>
+
+<p>  }</p>
+
+<p>  private Integer nextFibonacciNumber(){</p>
+
+<pre><code>//  calculate next fibonacci number and return it
+</code></pre>
+
+<p>  }
+}
+{% endcodeblock %}</p>
 
 <p>En el código anterior se han omitido detalles de implementación para no desviar la atención. Del código anterior cabe destacar la llamada a <code>publish</code> en la línea <strong>11</strong>, la llamada a <code>setProgress</code> (línea <strong>12</strong>) y la implementación del método <code>process</code>.</p>
 
@@ -120,33 +82,21 @@
 
 <p>Con la llamada al método <code>setProgress()</code> estamos indicando que se lance un evento de cambio sobre la propiedad <code>progress</code> (propiedad creada por defecto junto con <code>state</code> para la notificación de cambios en propiedades). El evento propagado incluirá entre sus datos el parámetro que recibe la función. Para mostrar ese progreso utilizaremos una barra de progreso, la cual la registraremos como interesada en recibir eventos de cambios en las propiedades de <code>FibonacciWorker</code>.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Actualizar una barra de progreso </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>final JProgressBar progressBar = new JProgressBar(0, 100);
-</span><span class='line'>FibonacciWorker task = new FibonacciWorker(textArea, numbersToCalculate);
-</span><span class='line'>task.addPropertyChangeListener(
-</span><span class='line'>  new PropertyChangeListener() {&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;pre>&lt;code>public  void propertyChange(PropertyChangeEvent evt) {
-</span><span class='line'>  if ("progress".equals(evt.getPropertyName())) {
-</span><span class='line'>    progressBar.setValue((Integer)evt.getNewValue());
-</span><span class='line'>  }
-</span><span class='line'>}
-</span><span class='line'>&lt;/code>&lt;/pre>
-</span><span class='line'>
-</span><span class='line'>&lt;p>  });</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock Actualizar una barra de progreso %}
+final JProgressBar progressBar = new JProgressBar(0, 100);
+FibonacciWorker task = new FibonacciWorker(textArea, numbersToCalculate);
+task.addPropertyChangeListener(
+  new PropertyChangeListener() {</p>
+
+<pre><code>public  void propertyChange(PropertyChangeEvent evt) {
+  if ("progress".equals(evt.getPropertyName())) {
+    progressBar.setValue((Integer)evt.getNewValue());
+  }
+}
+</code></pre>
+
+<p>  });
+{% endcodeblock %}</p>
 
 <p>En el siguiente enlace es posible ver una aplicación demostrando lo aprendido. Si se desea descargar el código fuente en forma de proyecto de NetBeans: <a href="http://kenai.com/projects/rchavarria/downloads/download/fibonacci%252FFibonacciCalculator%2520NB%2520project.zip"><strong>FibonacciWorker NetBeans project</strong></a>.</p>
 
@@ -176,24 +126,17 @@
 
 <p>Durante el desarrollo de interfaces gráficas suelen aparecer tareas cuya realización conllevan mucho tiempo, por ejemplo, leer un archivo XML cuando el usuario pulse un botón. La forma más rápida y sencilla de realizar esta tarea podría ser los siguiente:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>JButton button = new JButton(&quot;Cargar fichero XML&quot;);
-</span><span class='line'>button.addActionListener(new ActionListener() {&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;pre>&lt;code>public void actionPerformed(ActionEvent e) {
-</span><span class='line'>    xmlDocument = loadXML();
-</span><span class='line'>}
-</span><span class='line'>&lt;/code>&lt;/pre>
-</span><span class='line'>
-</span><span class='line'>&lt;p>});</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock %}
+JButton button = new JButton(&quot;Cargar fichero XML&quot;);
+button.addActionListener(new ActionListener() {</p>
+
+<pre><code>public void actionPerformed(ActionEvent e) {
+    xmlDocument = loadXML();
+}
+</code></pre>
+
+<p>});
+{% endcodeblock %}</p>
 
 <p>De esta forma, la carga del archivo se realiza en el hilo manejador de eventos (EDT - Event Dispatching Thread) de Swing, y como la tarea necesita mucho tiempo, no es posible manejar el resto de eventos que la interfaz gráfica genera y se quedara congelado, fijo, sin respuesta aparente, hasta que la tarea finalice. Esto produce un efecto indeseable de cara al usuario de la aplicación.</p>
 
@@ -213,24 +156,17 @@
 
 <p>La forma más simple de utilizar SwingWorker es implementando el método <em>doInBackground </em>extendiendo la clase SwingWorker o creando una clase anónima:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>SwingWorker worker = new SwingWorker&lt;MyXMLFile, Void&gt;() {&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;pre>&lt;code>public MyXMLFile doInBackground() {
-</span><span class='line'>    MyXMLFile myXMLDoc = loadXML();
-</span><span class='line'>    return myXMLDoc;
-</span><span class='line'>}
-</span><span class='line'>&lt;/code>&lt;/pre>
-</span><span class='line'>
-</span><span class='line'>&lt;p>};</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock %}
+SwingWorker worker = new SwingWorker&lt;MyXMLFile, Void&gt;() {</p>
+
+<pre><code>public MyXMLFile doInBackground() {
+    MyXMLFile myXMLDoc = loadXML();
+    return myXMLDoc;
+}
+</code></pre>
+
+<p>};
+{% endcodeblock %}</p>
 
 <p>Para que la tarea se ejecute debemos invocar al método <em>execute</em> de SwingWorker. Dicho método se encarga de llamar a <em>doInBackground </em>asegurándose de que se ejecuta en un hilo diferente al EDT.</p>
 
@@ -238,30 +174,20 @@
 
 <ol>
     <li>Sobrescribiendo el método <em>done</em>, el cual es ejecutado en el hilo manejador de eventos después de que la tarea haya finalizado.
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>private MyXMLFile doc;
-</span><span class='line'>//...
-</span><span class='line'>SwingWorker&lt;Document, Void&gt; worker = new SwingWorker&lt;MyXMLFile, Void&gt;() {
-</span><span class='line'>    public MyXMLFile doInBackground() {
-</span><span class='line'>        MyXMLFile myXMLDoc = loadXML();
-</span><span class='line'>        return myXMLDoc;
-</span><span class='line'>    }
-</span><span class='line'>
-</span><span class='line'>    public void done() {
-</span><span class='line'>        doc = get();
-</span><span class='line'>    }
-</span><span class='line'>};</span></code></pre></td></tr></table></div></figure></notextile></div></li>
+{% codeblock %}
+private MyXMLFile doc;
+//...
+SwingWorker&lt;Document, Void&gt; worker = new SwingWorker&lt;MyXMLFile, Void&gt;() {
+    public MyXMLFile doInBackground() {
+        MyXMLFile myXMLDoc = loadXML();
+        return myXMLDoc;
+    }
+
+    public void done() {
+        doc = get();
+    }
+};
+{% endcodeblock %}</li>
     <li>Registrar un <em>listener </em>mediante el método <em>addPropertyChangeListener(PropertyChangeListener listener)</em> el cual será notificado de cambios en el estado de SwingWorker.</span></li>
 </ol>
 

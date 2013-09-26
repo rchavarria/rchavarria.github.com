@@ -4,7 +4,7 @@
   <title><![CDATA[Category: software | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/software/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2013-09-19T11:46:25+02:00</updated>
+  <updated>2013-09-26T09:29:14+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -140,7 +140,7 @@ mvn archetype:generate \
 <h2>Por qué lo he leído</h2>
 
 
-<p><img class="right" src="http://ecx.images-amazon.com/images/I/41ETT7KQRRL.<em>SL500_AA300</em>.jpg" width="300" height="300" title="Programming pearls" ></p>
+<p>{% img right http://ecx.images-amazon.com/images/I/41ETT7KQRRL.<em>SL500_AA300</em>.jpg 300 300 Programming pearls %}</p>
 
 <p>Cuando leí <a href="http://rchavarria.wordpress.com/2011/03/24/apprenticeship-patterns/" title="Apprenticeship patterns">Apprenticeship patterns</a>, me gustó mucho su filosofía, sus consejos para ser un mejor profesional en cuanto a desarrollar software se refiere. Unos de los consejos es: <a href="http://ofps.oreilly.com/titles/9780596518387/construct_your_curriculum.html#study_the_classics" title="Study the classics">estudia a los clásicos</a>. Así que cuando supe de la existencia de este libro, me propuse leerlo, porque me dió la impresión de que era uno de <em>los clásicos</em>.</p>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: tools | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/tools/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2013-09-19T11:46:25+02:00</updated>
+  <updated>2013-09-26T09:29:14+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -36,7 +36,7 @@ trabajar en equipo con git y github.</p>
 <p>Lo primero que se necesita es tener una cuenta en github. Si no tienes una, uno puede
 <a href="https://github.com/users">registrarse</a> fácilmente. Es como crearse una cuenta de correo.</p>
 
-<p><img class="center" src="/images/2013/github-overview.jpg"></p>
+<p>{% img center /images/2013/github-overview.jpg %}</p>
 
 <p>Después, es necesario que <a href="http://git-scm.com/downloads">descargues e instales git</a>
 en el ordenador donde vayas a trabajar. En windows es tan sencillo como instalar cualquier
@@ -62,19 +62,12 @@ cuenta de github son:</p>
 <p>Con tu repositorio en github, ya puedes <em>descargarlo</em> a tu máquina de trabajo. En realidad
 lo que vas a hacer es una copia entera y completamente funcional del repositorio en github.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Clonando un repositorio </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;pre>&lt;code>git clone https://github.com/username/Spoon-Knife.git
-</span><span class='line'>&lt;/code>&lt;/pre>
-</span><span class='line'>
-</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock Clonando un repositorio %}</p>
+
+<pre><code>git clone https://github.com/username/Spoon-Knife.git
+</code></pre>
+
+<p>{% endcodeblock %}</p>
 
 <p>Esto creará un directorio llamado <code>Spoon-Knife</code> donde se encuentra el repositorio completo.</p>
 
@@ -90,19 +83,12 @@ al repositorio (existen más opciones para este comando, pero el más básico es
 </ol>
 
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Añadiendo ficheros al área de stage </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;pre>&lt;code>git add . 
-</span><span class='line'>&lt;/code>&lt;/pre>
-</span><span class='line'>
-</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock Añadiendo ficheros al área de stage %}</p>
+
+<pre><code>git add . 
+</code></pre>
+
+<p>{% endcodeblock %}</p>
 
 <ol>
 <li>Hacer <code>commit</code> de esos cambios. De esta forma, nuestro repositorio ya contendrá los cambios,
@@ -110,19 +96,12 @@ sólo hará falta incorporarlos al repositorio de github (repositorio remoto):</
 </ol>
 
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Commiteando ficheros al repositorio local </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;pre>&lt;code>git commit -m "Mensaje del commit"
-</span><span class='line'>&lt;/code>&lt;/pre>
-</span><span class='line'>
-</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock Commiteando ficheros al repositorio local %}</p>
+
+<pre><code>git commit -m "Mensaje del commit"
+</code></pre>
+
+<p>{% endcodeblock %}</p>
 
 <ol>
 <li>Subir los cambios del repositorio local al repositorio remoto (github). El comando más básico
@@ -130,19 +109,12 @@ para ello es el siguiente:</li>
 </ol>
 
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Sincronizando con el repositorio remoto </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;pre>&lt;code>git push
-</span><span class='line'>&lt;/code>&lt;/pre>
-</span><span class='line'>
-</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock Sincronizando con el repositorio remoto %}</p>
+
+<pre><code>git push
+</code></pre>
+
+<p>{% endcodeblock %}</p>
 
 <p>Si vamos a nuestro repositorio en github veremos cómo aparecen los commits que hicimos en nuestro
 repositorio local. BIEN!</p>
@@ -152,19 +124,12 @@ repositorio local. BIEN!</p>
 <p>Con el siguiente comando (esta es su sintaxis más sencilla) podrás incorporar los cambios que haya
 en el repositorio remoto de github a tu repositorio local:</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Sincronizando el repositorio local con cambios del remoto </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;pre>&lt;code>git pull
-</span><span class='line'>&lt;/code>&lt;/pre>
-</span><span class='line'>
-</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock Sincronizando el repositorio local con cambios del remoto %}</p>
+
+<pre><code>git pull
+</code></pre>
+
+<p>{% endcodeblock %}</p>
 
 <p>Esta es su sintaxis más sencilla. Para avanzar en este aspecto, tendría que hablar de
 <a href="http://gitref.org/remotes/">remotes</a>, pero es un concepto bastante extenso y quedaría un
@@ -177,7 +142,7 @@ repositorio remoto en github. Existe una forma muy sencilla en github de informa
 de que hemos hecho cambios, los llamados
 <a href="https://help.github.com/articles/using-pull-requests">Pull Request</a>.</p>
 
-<p><img class="right" src="/images/2013/github-pull-request.jpg"></p>
+<p>{% img right /images/2013/github-pull-request.jpg %}</p>
 
 <p>Mediante un Pull Request estás indicando a un compañero que le quieres pasar unos cambios que
 tú has hecho. Ahora tu compañero deberá decidir si acepta los cambios y él incorporará esos
