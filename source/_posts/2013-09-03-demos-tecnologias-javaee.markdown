@@ -42,6 +42,10 @@ presentación, que en este caso la hará una página JSP.
 En esta demo veremos cómo crear un servicio web, y de cómo usar el framework Apache CXF
 para su creación, configuración y despliegue en un contenedor web. Crearemos un servicio
 web basado en la especificación JAX-WS, que intercambiará mensajes SOAP sobre HTTP.
+- [Cómo crear un cliente de servicio web](/blog/2013/09/26/crear-cliente-servicio-web):
+Aquí veremos cómo crear un sencillo cliente que consuma el servicio web creado en la demo
+anterior. Lo haremos mediante un test de JUnit, y así crearemos nuestro primer test
+de integración.
 - Servlet listeners: Veremos el uso que le podemos dar a los distintos listeners asociados
 a los servlets y su ciclo de vida: ServletContextListener, 
 ServletContextAttributeListener, ServletRequestListener y HttpSessionListener.

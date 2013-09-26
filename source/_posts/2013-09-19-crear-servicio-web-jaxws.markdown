@@ -46,7 +46,7 @@ crearemos más adelante).
 La funcionalidad que nos ofrecerá el servicio se apoyarán en dos métodos:
 
 1. Añadir usuario: añadiremos un nombre de usuario al servicio.
-2. Obtener usuario: mediante un identificiado, obtendremos un nombre de usuario.
+2. Obtener usuario: mediante un identificiador, obtendremos un nombre de usuario.
 
 Para ejecutar la demo, simplemente hay que descargase el código fuente y ejecutar
 `mvn jetty:run` desde el directorio raiz de la demo. Visitar la página de login
