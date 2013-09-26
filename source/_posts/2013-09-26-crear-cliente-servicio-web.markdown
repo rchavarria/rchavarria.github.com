@@ -36,7 +36,7 @@ en esta en particular crearemos en cliente que invocará a los métodos expuesto
 web desarrollado en la demo anterior. Estos métodos son:
 
 1. Añadir usuario: añadiremos un nombre de usuario al servicio.
-2. Obtener usuario: mediante un identificiador, obtendremos un nombre de usuario.
+2. Obtener usuario: mediante un identificador, obtendremos un nombre de usuario.
 
 Con lo cual, añadiremos y consultaremos usuarios.
 
@@ -49,7 +49,7 @@ el fichero WSDL, que describe el servicio, esté disponible y actualizado. Tambi
 es posible usar un fichero ya existente, por ejemplo, en el caso de que queramos
 desarrollar un cliente para un servicio web de terceros. En definitiva, el elemento
 realmente importante en un servicio web, es el fichero WSDL, que es quien define 
-de manera unequívoca el servicio en sí. 
+de manera inequívoca el servicio en sí. 
 
 Para esta demo, arrancaremos el servicio web desarrollado en la
 [demo anterior](/blog/2013/09/19/crear-servicio-web-jaxws). Básicamente, los comandos
