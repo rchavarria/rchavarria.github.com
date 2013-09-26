@@ -30,7 +30,9 @@ del repositorio de las demos en github.
 
 ## Demo
 
-En esta demo crearemos en cliente que invocará a los métodos expuestos por el servicio
+Esta demo pertenece a una serie de 
+[tutoriales de demostración de tecnologías J2EE](/blog/2013/09/03/demos-tecnologias-javaee) y 
+en esta en particular crearemos en cliente que invocará a los métodos expuestos por el servicio
 web desarrollado en la demo anterior. Estos métodos son:
 
 1. Añadir usuario: añadiremos un nombre de usuario al servicio.
