@@ -4,7 +4,7 @@
   <title><![CDATA[Category: apache | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/apache/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2013-09-26T09:29:14+02:00</updated>
+  <updated>2013-09-29T16:17:03+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -42,8 +42,9 @@
 <h3>Datos que serán persistentes</h3>
 
 
-<p>Como ya hemos visto, sólo vamos a persistir objetos de la clase Person, la cual tendrá un campo id, que funcionará como la clave principal de la tabla, y un campo name, el nombre de la persona. A continuación vemos el código de esta clase:
-{% codeblock Definir persistencia de datos %}
+<p>Como ya hemos visto, sólo vamos a persistir objetos de la clase Person, la cual tendrá un campo id, que funcionará como la clave principal de la tabla, y un campo name, el nombre de la persona. A continuación vemos el código de esta clase:</p>
+
+<p>``` java
 package es.rct.jpa.model;</p>
 
 <p>import javax.persistence.Entity;
@@ -65,7 +66,7 @@ public long getId() {return id;}
 </code></pre>
 
 <p>}
-{% endcodeblock %}</p>
+```</p>
 
 <p>De esta clase vamos a destacar 3 anotaciones, pertenecientes a JPA. Las podemos encontrar en el paquete javax.persistence:</p>
 
@@ -83,8 +84,36 @@ public long getId() {return id;}
 
 <p>Para poder usar Derby como base de datos y Hibernate como implementación de JPA, debemos incluir las siguientes dependencias en nuestro fichero pom.xml de configuración de maven:</p>
 
-<script src="http://gist.github.com/4194334.js"></script>
+<p>``` xml</p>
 
+<!-- ... -->
+
+
+<p><dependency></p>
+
+<pre><code>&lt;groupId&gt;org.apache.derby&lt;/groupId&gt;
+&lt;artifactId&gt;derby&lt;/artifactId&gt;
+&lt;version&gt;10.6.2.1&lt;/version&gt;
+&lt;type&gt;jar&lt;/type&gt;
+&lt;scope&gt;compile&lt;/scope&gt;
+</code></pre>
+
+<p></dependency>
+<dependency></p>
+
+<pre><code>&lt;groupId&gt;org.hibernate&lt;/groupId&gt;
+&lt;artifactId&gt;hibernate-entitymanager&lt;/artifactId&gt;
+&lt;version&gt;3.4.0.GA&lt;/version&gt;
+&lt;type&gt;jar&lt;/type&gt;
+&lt;scope&gt;compile&lt;/scope&gt;
+</code></pre>
+
+<p></dependency></p>
+
+<!-- ... -->
+
+
+<p>```</p>
 
 <p>Las versiones de las dependencias pueden variar. Aquí aparecen las que yo personalmente he utilizado.</p>
 
@@ -99,8 +128,30 @@ el resultado deseado.</p>
 
 <p>El contenido del fichero de configuración JPA es el siguiente:</p>
 
-<script src="http://gist.github.com/4194389.js"></script>
+<p>``` xml
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0"></p>
 
+<pre><code>&lt;persistence-unit name="test-jpa" transaction-type="RESOURCE_LOCAL"&gt;
+
+&lt;provider&gt;org.hibernate.ejb.HibernatePersistence&lt;/provider&gt;
+
+&lt;class&gt;es.rct.jpa.model.Person&lt;/class&gt;
+&lt;exclude-unlisted-classes&gt;true&lt;/exclude-unlisted-classes&gt;
+
+&lt;properties&gt;
+    &lt;property name="hibernate.connection.url" value="jdbc:derby:memory:testing-jpa;create=true" /&gt;
+    &lt;property name="hibernate.connection.driver_class" value="org.apache.derby.jdbc.EmbeddedDriver" /&gt;
+    &lt;property name="hibernate.dialect" value="org.hibernate.dialect.DerbyDialect" /&gt;
+    &lt;property name="hibernate.hbm2ddl.auto" value="create" /&gt;
+    &lt;property name="hibernate.connection.username" value="" /&gt;
+    &lt;property name="hibernate.connection.password" value="" /&gt;
+&lt;/properties&gt;
+
+&lt;/persistence-unit&gt;
+</code></pre>
+
+<p></persistence>
+```</p>
 
 <p>De este fichero xml podemos destacar las siguientes etiquetas:</p>
 
@@ -127,27 +178,27 @@ el resultado deseado.</p>
 
 <p>Primero, debemos crear un objeto EntityManager, que manejará todo lo relacionado con la persistencia: transacciones, guardar datos, actualizarlos, borrarlos, etc.</p>
 
-<p>{% codeblock %}
-EntityManagerFactory emf = Persistence.createEntityManagerFactory(&quot;test-jpa&quot;);
+<p><code>java
+EntityManagerFactory emf = Persistence.createEntityManagerFactory("test-jpa");
 EntityManager em = emf.createEntityManager();
-{% endcodeblock %}</p>
+</code></p>
 
 <p>Una vez terminemos de utilizar nuestro EntityManager, debemos cerrarlo:</p>
 
-<p>{% codeblock %}
+<p><code>java
 em.close();
 emf.close();
-{% endcodeblock %}</p>
+</code></p>
 
 <p>Ahora ya disponemos de un objeto "em" para poder persistir objetos de tipo Person:</p>
 
-<p>{% codeblock %}
+<p>``` java
 private void insertSomeData() {</p>
 
 <pre><code>Person p = new Person();
-p.setName(&amp;quot;person 01&amp;quot;);
+p.setName("person 01");
 Person p1 = new Person();
-p1.setName(&amp;quot;person 02&amp;quot;);
+p1.setName("person 02");
 
 em.getTransaction().begin();
 em.persist(p);
@@ -156,25 +207,25 @@ em.getTransaction().commit();
 </code></pre>
 
 <p>}
-{% endcodeblock %}</p>
+```</p>
 
 <p>Para poder guardar los datos en base de datos, debemos arrancar una transacción, llamar al método "persist" y terminar la transacción. Si queremos indicar que ha habido un error durante la transacción, y no queremos llevarla a cabo, llamaríamos al método "rollback" en lugar del método "commit".</p>
 
 <p>Para comprobar que realmente hemos almacenado los objetos en la base de datos, sólo tenemos que buscarlos por identificador. Ya que sólo hemos almacenado 2 objetos, y son los 2 primeros, los ids serán 1 y 2 respectivamente:</p>
 
-<p>{% codeblock Insertar datos %}
+<p>``` java
 private void listInsertedData() {</p>
 
 <pre><code>em.getTransaction().begin();
-for (long i = 1; i &amp;lt;= 2; i++) {
+for (long i = 1; i &lt;= 2; i++) {
     Person pFinded = em.find(Person.class, new Long(i));
-    System.out.println(&amp;quot;Id: &amp;quot; + i + &amp;quot;, name: &amp;quot; + pFinded.getName());
+    System.out.println("Id: " + i + ", name: " + pFinded.getName());
 }
 em.getTransaction().commit();
 </code></pre>
 
 <p>}
-{% endcodeblock %}</p>
+```</p>
 
 <h2>Código fuente del ejemplo</h2>
 
@@ -254,55 +305,105 @@ set PATH=%DERBY_HOME%\bin;%PATH%
 <h3>Crear una base de datos</h3>
 
 
-<p>{% codeblock Crear una base de datos programáticamente %}</p>
-
-<p>import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.Statement;</p>
-
-<p>public class CreateDataBase {</p>
-
-<p>  public static void main(String[] args) {</p>
-
-<pre><code>String driver = &amp;quot;org.apache.derby.jdbc.EmbeddedDriver&amp;quot;;
-String dbName = &amp;quot;/DerbyDB/ExampleDB&amp;quot;;
-String dbParam = &amp;quot;create=true&amp;quot;; //la base de datos se creará si no existe todavía
-String connectionURL = &amp;quot;jdbc:derby:&amp;quot; + dbName + &amp;quot;;&amp;quot; + dbParam;
-Connection conn = null;
-
-try{
-  Class.forName(driver);
-} catch(java.lang.ClassNotFoundException e) {
-  e.printStackTrace();
-}
-
-try {
-  conn = DriverManager.getConnection(connectionURL);
-
-  Statement st = conn.createStatement();
-  String sqlCreateTableUsers =
-         &amp;quot;CREATE TABLE users ( &amp;quot; +
-         &amp;quot;FirstName VARCHAR(20) NOT NULL, &amp;quot; +
-         &amp;quot;LastName VARCHAR(20) NOT NULL, &amp;quot; +
-         &amp;quot;idUser INTEGER NOT NULL CONSTRAINT idUser_PK PRIMARY KEY &amp;quot; +
-         &amp;quot;)&amp;quot;;
-  // la sentencia SQL crea una tabla con 3 campos
-  st.execute(sqlCreateTableUsers);
-
-  System.out.println(&amp;quot;La base de datos '&amp;quot; + dbName + &amp;quot;' se ha creado correctamente&amp;quot;);
-}  catch (Throwable e)  {
-  System.out.println(&amp;quot;Error al crear la base de datos '&amp;quot; + dbName + &amp;quot;'&amp;quot;);
-  e.printStackTrace();
-} finally {
-  try { conn.close(); }
-  catch (Throwable t){}
-}
-</code></pre>
-
-<p>  }
-}</p>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Crear una base de datos programáticamente </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>import java.sql.Connection;
+</span><span class='line'>import java.sql.DriverManager;
+</span><span class='line'>import java.sql.Statement;&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>public class CreateDataBase {&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>  public static void main(String[] args) {&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>String driver = &amp;quot;org.apache.derby.jdbc.EmbeddedDriver&amp;quot;;
+</span><span class='line'>String dbName = &amp;quot;/DerbyDB/ExampleDB&amp;quot;;
+</span><span class='line'>String dbParam = &amp;quot;create=true&amp;quot;; //la base de datos se creará si no existe todavía
+</span><span class='line'>String connectionURL = &amp;quot;jdbc:derby:&amp;quot; + dbName + &amp;quot;;&amp;quot; + dbParam;
+</span><span class='line'>Connection conn = null;
+</span><span class='line'>
+</span><span class='line'>try{
+</span><span class='line'>  Class.forName(driver);
+</span><span class='line'>} catch(java.lang.ClassNotFoundException e) {
+</span><span class='line'>  e.printStackTrace();
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>try {
+</span><span class='line'>  conn = DriverManager.getConnection(connectionURL);
+</span><span class='line'>
+</span><span class='line'>  Statement st = conn.createStatement();
+</span><span class='line'>  String sqlCreateTableUsers =
+</span><span class='line'>         &amp;quot;CREATE TABLE users ( &amp;quot; +
+</span><span class='line'>         &amp;quot;FirstName VARCHAR(20) NOT NULL, &amp;quot; +
+</span><span class='line'>         &amp;quot;LastName VARCHAR(20) NOT NULL, &amp;quot; +
+</span><span class='line'>         &amp;quot;idUser INTEGER NOT NULL CONSTRAINT idUser_PK PRIMARY KEY &amp;quot; +
+</span><span class='line'>         &amp;quot;)&amp;quot;;
+</span><span class='line'>  // la sentencia SQL crea una tabla con 3 campos
+</span><span class='line'>  st.execute(sqlCreateTableUsers);
+</span><span class='line'>
+</span><span class='line'>  System.out.println(&amp;quot;La base de datos '&amp;quot; + dbName + &amp;quot;' se ha creado correctamente&amp;quot;);
+</span><span class='line'>}  catch (Throwable e)  {
+</span><span class='line'>  System.out.println(&amp;quot;Error al crear la base de datos '&amp;quot; + dbName + &amp;quot;'&amp;quot;);
+</span><span class='line'>  e.printStackTrace();
+</span><span class='line'>} finally {
+</span><span class='line'>  try { conn.close(); }
+</span><span class='line'>  catch (Throwable t){}
+</span><span class='line'>}
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>  }
+</span><span class='line'>}&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Para ejecutar scripts SQL y realizar otras consultas, derby proporciona la herramienta <em>ij</em>, el uso de la cual lo podemos aprender de la siguiente guía: <a href="http://db.apache.org/derby/docs/10.6/getstart/">getting started with derby 10.6 (inglés)</a>.
 Como el nombre de la base de datos es <em>/DerbyDB/ExampleDB</em>, la base de datos será creada en el directorio</p>
@@ -315,79 +416,148 @@ Como el nombre de la base de datos es <em>/DerbyDB/ExampleDB</em>, la base de da
 
 <p>Con el siguiente código seremos capaces de introducir datos en nuestra tabla:</p>
 
-<p>{% codeblock Insertar datos %}</p>
-
-<p>String driver = &quot;org.apache.derby.jdbc.EmbeddedDriver&quot;;
-String dbName = &quot;/DerbyDB/ExampleDB&quot;;
-String connectionURL = &quot;jdbc:derby:&quot; + dbName;
-Connection conn = null;</p>
-
-<p>try{
-  Class.forName(driver);
-} catch(java.lang.ClassNotFoundException e) {
-  e.printStackTrace();
-}</p>
-
-<p>try {
-  conn = DriverManager.getConnection(connectionURL);</p>
-
-<p>  Statement st = conn.createStatement();
-  st.executeUpdate(&quot;INSERT INTO users VALUES('Jose', 'Olmedo', 1)&quot;);
-  st.executeUpdate(&quot;INSERT INTO users VALUES('Maria', 'Hoz', 2)&quot;);</p>
-
-<p>  System.out.println(&quot;Se han insertado dos registros&quot;);
-} catch (Throwable e)  {
-  System.out.println(&quot;Ha fallado la insercion de dos registros&quot;);
-  e.printStackTrace();
-} finally {
-  try { conn.close(); }
-  catch (Throwable t){}
-}</p>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Insertar datos </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>String driver = &quot;org.apache.derby.jdbc.EmbeddedDriver&quot;;
+</span><span class='line'>String dbName = &quot;/DerbyDB/ExampleDB&quot;;
+</span><span class='line'>String connectionURL = &quot;jdbc:derby:&quot; + dbName;
+</span><span class='line'>Connection conn = null;&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>try{
+</span><span class='line'>  Class.forName(driver);
+</span><span class='line'>} catch(java.lang.ClassNotFoundException e) {
+</span><span class='line'>  e.printStackTrace();
+</span><span class='line'>}&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>try {
+</span><span class='line'>  conn = DriverManager.getConnection(connectionURL);&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>  Statement st = conn.createStatement();
+</span><span class='line'>  st.executeUpdate(&quot;INSERT INTO users VALUES('Jose', 'Olmedo', 1)&quot;);
+</span><span class='line'>  st.executeUpdate(&quot;INSERT INTO users VALUES('Maria', 'Hoz', 2)&quot;);&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>  System.out.println(&quot;Se han insertado dos registros&quot;);
+</span><span class='line'>} catch (Throwable e)  {
+</span><span class='line'>  System.out.println(&quot;Ha fallado la insercion de dos registros&quot;);
+</span><span class='line'>  e.printStackTrace();
+</span><span class='line'>} finally {
+</span><span class='line'>  try { conn.close(); }
+</span><span class='line'>  catch (Throwable t){}
+</span><span class='line'>}&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <h3>Realizar consultas</h3>
 
 
 <p>Con el siguiente código, realizamos una consulta a nuestra tabla y mostramos por consola la información en ella almacenada:</p>
 
-<p>{% codeblock Realizar consultas %}</p>
-
-<p>String driver = &quot;org.apache.derby.jdbc.EmbeddedDriver&quot;;
-String dbName = &quot;/DerbyDB/ExampleDB&quot;;
-String connectionURL = &quot;jdbc:derby:&quot; + dbName;
-Connection conn = null;</p>
-
-<p>try{
-  Class.forName(driver);
-} catch(java.lang.ClassNotFoundException e) {
-  e.printStackTrace();
-}</p>
-
-<p>try {
-  conn = DriverManager.getConnection(connectionURL);</p>
-
-<p>  Statement st = conn.createStatement();
-  ResultSet rs=st.executeQuery(&quot;SELECT * FROM users&quot;);
-  while (rs.next()){</p>
-
-<pre><code>Integer idUser = rs.getInt(&amp;quot;idUser&amp;quot;);
-String first = rs.getString(&amp;quot;FirstName&amp;quot;);
-String last = rs.getString(&amp;quot;LastName&amp;quot;);
-System.out.println(idUser + &amp;quot; se llama: &amp;quot; + first + &amp;quot; &amp;quot; + last);
-</code></pre>
-
-<p>  }
-  rs.close();
-} catch (Throwable e)  {
-  System.out.println(&quot;Ha fallado la consulta de datos&quot;);
-  e.printStackTrace();
-} finally {
-  try { conn.close(); }
-  catch (Throwable t){}
-}</p>
-
-<p>{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Realizar consultas </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>String driver = &quot;org.apache.derby.jdbc.EmbeddedDriver&quot;;
+</span><span class='line'>String dbName = &quot;/DerbyDB/ExampleDB&quot;;
+</span><span class='line'>String connectionURL = &quot;jdbc:derby:&quot; + dbName;
+</span><span class='line'>Connection conn = null;&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>try{
+</span><span class='line'>  Class.forName(driver);
+</span><span class='line'>} catch(java.lang.ClassNotFoundException e) {
+</span><span class='line'>  e.printStackTrace();
+</span><span class='line'>}&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>try {
+</span><span class='line'>  conn = DriverManager.getConnection(connectionURL);&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>  Statement st = conn.createStatement();
+</span><span class='line'>  ResultSet rs=st.executeQuery(&quot;SELECT * FROM users&quot;);
+</span><span class='line'>  while (rs.next()){&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>Integer idUser = rs.getInt(&amp;quot;idUser&amp;quot;);
+</span><span class='line'>String first = rs.getString(&amp;quot;FirstName&amp;quot;);
+</span><span class='line'>String last = rs.getString(&amp;quot;LastName&amp;quot;);
+</span><span class='line'>System.out.println(idUser + &amp;quot; se llama: &amp;quot; + first + &amp;quot; &amp;quot; + last);
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>  }
+</span><span class='line'>  rs.close();
+</span><span class='line'>} catch (Throwable e)  {
+</span><span class='line'>  System.out.println(&quot;Ha fallado la consulta de datos&quot;);
+</span><span class='line'>  e.printStackTrace();
+</span><span class='line'>} finally {
+</span><span class='line'>  try { conn.close(); }
+</span><span class='line'>  catch (Throwable t){}
+</span><span class='line'>}&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Espero que este post os sirva para poder utilizar derby como base de datos.</p>
 

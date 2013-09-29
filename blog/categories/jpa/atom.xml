@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: jpa | R. Chavarria's Blog]]></title>
+  <title><![CDATA[Category: JPA | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/jpa/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2013-09-26T09:29:14+02:00</updated>
+  <updated>2013-09-29T16:17:03+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -14,195 +14,270 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Uso de JPA, hibernate y derby]]></title>
-    <link href="http://rchavarria.github.io/blog/2011/05/19/uso-de-jpa-hibernate-y-derby/"/>
-    <updated>2011-05-19T09:44:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2011/05/19/uso-de-jpa-hibernate-y-derby</id>
+    <title type="html"><![CDATA[Entendiendo el ciclo de vida de entidades JPA]]></title>
+    <link href="http://rchavarria.github.io/blog/2013/09/29/entendiendo-ciclo-vida-entidades-jpa/"/>
+    <updated>2013-09-29T15:24:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2013/09/29/entendiendo-ciclo-vida-entidades-jpa</id>
     <content type="html"><![CDATA[<div style="margin:2%; padding:2%; background-color:#E0E0E0; ">
-  <p>Este post pertenece a mi antiguo blog en <a href="http://rchavarria.wordpress.com">wordpress</a>, pero decidí pasarme a github:pages por las siguientes <a href="http://rchavarria.github.io/blog/2012/12/03/por-que-cambie-mi-blog-en-wordpress-com">razones</a></p>
+    Find an English version of this post directly in the <a href="https://github.com/rchavarria/javaee-6-demos/tree/master/jpa-entities">source code repository</a>.
 </div>
 
 
-<p>Tengo una pequeña aplicación en la que uso Apache Derby como base de datos para guardar los datos.</p>
+<p>En esta demo aprenderemos en qué estados puede encontrarse una entidad JPA,
+y qué métodos proporciona el estándar para transicionar una entidad de un
+estado a otro.</p>
 
-<p>Hasta ahora, estaba utilizando el patrón DAO para guardar los datos que quería hacer persistentes en la aplicación. Cada clase DAO se encargaba de crear, borrar, editar y actualizar un tipo de datos. Estas operaciones las hacía mediante SQL puro y duro. No es que el modelo de datos que utilizo sea muy complicado, pero es tedioso editar consultas SQL para cada tipo de dato que quieres persistir.</p>
-
-<p>Así pues, decidí que debería utilizar algo un poco más elaborado. Java dispone de la Java Persistence API, así que, ¿porqué no usarla? Y este post describe los primeros pasos a dar para utilizar JPA en una aplicación.</p>
+<p>Se puede ver el código fuente de la demostración en el directorio
+<a href="https://github.com/rchavarria/javaee-6-demos/tree/master/jpa-entities"><code>jpa-entities</code></a>
+del repositorio de las demos en github.</p>
 
 <!-- more -->
 
 
-<p>JPA es una definición, por sí sola no hace nada, necesita de una implementación para realizar realmente el trabajo. Existen varias implementaciones (ver <a title="Comparativa implementaciones JPA" href="http://terrazadearavaca.blogspot.com/2008/12/jpa-implementations-comparison.html">comparativa</a>). De todas ellas he elegido Hibernate. Puede que no sea la mejor, puede que no sea la más rápida o la más eficiente, pero creo que es la más conocida y la referencia para el resto de implementaciones.</p>
+<h2>Demo</h2>
 
-<h2>El ejemplo, paso a paso</h2>
+<p>Esta demo pertenece a una serie de
+<a href="/blog/2013/09/03/demos-tecnologias-javaee">tutoriales de demostración de tecnologías J2EE</a> y
+en esta en particular aprenderemos los estados del ciclo de vida de una entidad
+JPA y cómo transicionar entre ellos.</p>
 
+<p>Una frase leída en uno de los enlaces que aparecen al final del post dice (traducción
+libre):</p>
 
-<p>Nuestro ejemplo va a consistir en algo muy (pero que muy) sencillo, pero que nos va a permitir aprender cómo configurar hibernate con nuestra base de datos derby. Nuestros datos a guardar van a ser objetos de la clase Person, que va a tener un nombre. No va a haber relaciones con ningún otro objeto, así que sólo exisitirá una tabla en la base de datos. Más sencillo, imposible.</p>
+<blockquote><p>Si, a la hora de modificar entidades, piensas en ellas como transiciones de estados en lugar
+de ejecuciones de sentencias SQL, harás tu desarrollo mucho más sencillo.</p></blockquote>
 
-<h3>Datos que serán persistentes</h3>
+<p>Y es que alguna ventaja tendría que tener lo que proporciona JPA, que es la abstracción
+de la base de datos. Si no dejamos de pensar en SQL, nunca podremos abstraernos de la
+base de datos. Parece muy buena idea lo de ver la vida de una entidad como una serie
+de transiciones de un estado a otro.</p>
 
+<h2>Antes de comenzar</h2>
 
-<p>Como ya hemos visto, sólo vamos a persistir objetos de la clase Person, la cual tendrá un campo id, que funcionará como la clave principal de la tabla, y un campo name, el nombre de la persona. A continuación vemos el código de esta clase:
-{% codeblock Definir persistencia de datos %}
-package es.rct.jpa.model;</p>
+<p>Antes de nada, existen unas entidades y unos tests sencillos, de ejercitación y puesta a
+punto de JPA, Hibernate (implementación de JPA para esta demo) y Derby (el motor de
+base de datos utilizada aquí).</p>
 
-<p>import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;</p>
+<p>Echa un vistazo primero a estas clases (<code>Person</code>, <code>ContactablePerson</code>, <code>Phone</code>) y a los
+tests (<code>BasicPersistenceTest</code> y <code>AdvancedPersistenceTest</code>) para poder comprender mejor
+el ciclo de vida que describiremos a continuación.</p>
 
-<p>@Entity
-public class Person {</p>
+<h2>Estados de una entidad JPA</h2>
 
-<pre><code>@Id
-@GeneratedValue
-private long id;
-private String name;
-
-public void setName(final String name) {this.name = name;}
-public String getName() {return name;}
-public void setId(final long id) {this.id = id;}
-public long getId() {return id;}
-</code></pre>
-
-<p>}
-{% endcodeblock %}</p>
-
-<p>De esta clase vamos a destacar 3 anotaciones, pertenecientes a JPA. Las podemos encontrar en el paquete javax.persistence:</p>
+<p>Una entidad se puede encontrar en alguno de estos estados:</p>
 
 <ul>
-    <li>Entity: indica que esta clase es una entidad, lo cual significa que esta clase tiene correspondencia con una tabla en la base de datos.</li>
-    <li>Id: indica qué campo de la clase va a ser utilizado como clave primaria de la tabla representada por la entidad.</li>
-    <li>GeneratedValue: indica que la clave va a ser generada automáticamente por el motor de persistencia (hibernate)</li>
+<li>No existe todavía: no es un estado en sí, pero podría verse con el origen de todo.</li>
+<li><strong>Nueva</strong>: la entidad se acaba de instaciar con el operador <code>new</code>, como una clase Java
+de toda la vida. No está asociado a ningún contexto de persistencia.</li>
+<li><strong>Gestionada</strong>: tiene una identidad persistente y está asociada a un contexto de
+persistencia.</li>
+<li><strong>Separada</strong>: tiene una identidad persistente pero no está asociada a un contexto de
+persistencia.</li>
+<li><strong>Eliminada</strong>: tiene una identidad persistente, está asociada a un contexto de persistencia,
+pero está marcada para ser eliminada de la base de datos.</li>
 </ul>
 
 
+<h2>Ciclo de vida, transiciones</h2>
 
+<p>En el siguiente diagrama, de la documentación de Oracle, se pueden ver las transiciones
+posibles de una manera gráfica.</p>
 
-<h3>Dependencias de Maven</h3>
+<p><img class="center" src="http://docs.oracle.com/cd/E16439_01/doc.1013/e13981/img/lifeent30.gif" title="Transiciones de una entidad JPA" ></p>
 
+<h3>Transición de nueva a gestionada</h3>
 
-<p>Para poder usar Derby como base de datos y Hibernate como implementación de JPA, debemos incluir las siguientes dependencias en nuestro fichero pom.xml de configuración de maven:</p>
+<p>Fácilmente, con el método <code>persist</code>:</p>
 
-<script src="http://gist.github.com/4194334.js"></script>
+<p>``` java
+@Test
+public void testFromNewToManaged() {</p>
 
+<pre><code>ContactablePerson p = createContactablePerson();
 
-<p>Las versiones de las dependencias pueden variar. Aquí aparecen las que yo personalmente he utilizado.</p>
-
-<h3>Configurar JPA / Hibernate / Derby</h3>
-
-
-<p>Para configurar JPA, debemos escribir la configuracion en un fichero llamado persistence.xml,
-en un directory META-INF, accesible desde el directorio de trabajo de nuestra aplicación.
-Yo lo he creado en src/main/resources/META-INF/persistence.xml, ya que maven empaqueta el
-contenido del directorio src/main/resources en el jar de la aplicación, con lo que tenemos
-el resultado deseado.</p>
-
-<p>El contenido del fichero de configuración JPA es el siguiente:</p>
-
-<script src="http://gist.github.com/4194389.js"></script>
-
-
-<p>De este fichero xml podemos destacar las siguientes etiquetas:</p>
-
-<ul>
-    <li>persistence-unit, atributo name: define una unidad de persistencia, es obligatorio darle un nombre, para poder crear un EntityManager en nuestra aplicación. El EntityManager es el encargado de manejar la persistencia de nuestros datos.</li>
-    <li>provider: aquí indicamos que queremos usar Hibernate como implementación de JPA</li>
-    <li>class: debe existir una etiqueta class por cada clase que queramos persistir, es decir, una por cada entidad que formará nuestra unidad de persistencia.</li>
-    <li>Dentro de las etiquetas properties, definimos propiedades propietarias de la implementación JPA. De entre ellas cabe destacar:</li>
-</ul>
-
-
-<ol>
-    <li>hibernate.connection.url: define la URL de conexión a la base de datos. Aquí estamos configurando Derby como base de datos. Estamos creando una base de datos llamada "testing-jpa" en memoria (no en disco).</li>
-    <li>hibernate.dialect: configuramos Hibernate para que "hable" con Derby</li>
-</ol>
-
-
-
-
-<h3>Crear un test para probar el funcionamiento</h3>
-
-
-<p>Ahora sólo queda crear nuestro código para almacenar algunos objetos del tipo Person.</p>
-
-<p>Primero, debemos crear un objeto EntityManager, que manejará todo lo relacionado con la persistencia: transacciones, guardar datos, actualizarlos, borrarlos, etc.</p>
-
-<p>{% codeblock %}
-EntityManagerFactory emf = Persistence.createEntityManagerFactory(&quot;test-jpa&quot;);
-EntityManager em = emf.createEntityManager();
-{% endcodeblock %}</p>
-
-<p>Una vez terminemos de utilizar nuestro EntityManager, debemos cerrarlo:</p>
-
-<p>{% codeblock %}
-em.close();
-emf.close();
-{% endcodeblock %}</p>
-
-<p>Ahora ya disponemos de un objeto "em" para poder persistir objetos de tipo Person:</p>
-
-<p>{% codeblock %}
-private void insertSomeData() {</p>
-
-<pre><code>Person p = new Person();
-p.setName(&amp;quot;person 01&amp;quot;);
-Person p1 = new Person();
-p1.setName(&amp;quot;person 02&amp;quot;);
-
-em.getTransaction().begin();
 em.persist(p);
-em.persist(p1);
-em.getTransaction().commit();
+assertTrue("entity's state is 'managed'", em.contains(p));
 </code></pre>
 
 <p>}
-{% endcodeblock %}</p>
+```</p>
 
-<p>Para poder guardar los datos en base de datos, debemos arrancar una transacción, llamar al método "persist" y terminar la transacción. Si queremos indicar que ha habido un error durante la transacción, y no queremos llevarla a cabo, llamaríamos al método "rollback" en lugar del método "commit".</p>
+<h3>Transición de gestionada a separada</h3>
 
-<p>Para comprobar que realmente hemos almacenado los objetos en la base de datos, sólo tenemos que buscarlos por identificador. Ya que sólo hemos almacenado 2 objetos, y son los 2 primeros, los ids serán 1 y 2 respectivamente:</p>
-
-<p>{% codeblock Insertar datos %}
-private void listInsertedData() {</p>
-
-<pre><code>em.getTransaction().begin();
-for (long i = 1; i &amp;lt;= 2; i++) {
-    Person pFinded = em.find(Person.class, new Long(i));
-    System.out.println(&amp;quot;Id: &amp;quot; + i + &amp;quot;, name: &amp;quot; + pFinded.getName());
-}
-em.getTransaction().commit();
-</code></pre>
-
-<p>}
-{% endcodeblock %}</p>
-
-<h2>Código fuente del ejemplo</h2>
-
-
-<p>Puedes descargar/ver el código fuente en este repositorio de github: <a title="Repositorio github con la solucion" href="https://github.com/rchavarria/JPAHibernateDerby">https://github.com/rchavarria/JPAHibernateDerby</a></p>
-
-<h2>Referencias</h2>
-
-
-<p>Si quieres profundizar en el tema, aquí dejo unos enlaces que me han sido de gran ayuda.</p>
+<p>Existen dos formas:</p>
 
 <ol>
-<li>
-<a href="http://www.davidmarco.es/blog/entrada.php?id=144">Excelente tutorial de JPA</a>
-</li>
-<li>
-<a href="http://wiki.apache.org/db-derby/InMemoryBackEndPrimer">Configuración de Derby para trabajar en memoria</a>
-</li>
-<li>
-<a href="http://eskatos.wordpress.com/2009/10/26/unit-test-jpa-entities-with-in-memory-derby">Configuración de JPA para usar Hibernate</a>
-</li>
-<li>
-<a href="http://docs.jboss.org/hibernate/entitymanager/3.5/reference/en/html_single/#architecture-javase">Hibernate en entornos JavaSE</a>
-</li>
-<li>
-<a href="http://terrazadearavaca.blogspot.com/2008/12/jpa-implementations-comparison.html">Comparativa de implementaciones de JPA</a>
-</li>
+<li>Mediante el método <code>detach</code>.</li>
+<li>Cerrando el gestor de entidades, <code>EntityManager.close()</code>.</li>
 </ol>
+
+
+<p>Usando el método <code>detach</code>:</p>
+
+<p>``` java
+@Test
+public void testFromManagedToDetachedUsingDetachMethod() {</p>
+
+<pre><code>ContactablePerson p = createContactablePerson();
+em.persist(p);
+
+em.detach(p);
+assertFalse("entity is not in persistence context", em.contains(p));
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Cerrando el gestor:</p>
+
+<p>``` java
+@Test
+public void testFromManagedToDetachedClosingEntityManager() {</p>
+
+<pre><code>ContactablePerson p = createContactablePerson();
+em.persist(p);
+
+tx.commit();
+em.close();
+
+try {
+    em.contains(p);
+    fail("em should be closed, and the entity shouldn't be managed by him");
+} catch (IllegalStateException e) { }
+</code></pre>
+
+<p>}
+```</p>
+
+<h3>Transición de separada a gestionada</h3>
+
+<p>``` java
+@Test
+public void testFromDetachedToManaged() {</p>
+
+<pre><code>ContactablePerson p = createContactablePerson();
+em.persist(p);
+em.detach(p);
+
+ContactablePerson mergedPerson = em.merge(p);
+
+assertFalse("original entity is not managed...", em.contains(p));
+assertTrue("... but merged one is", em.contains(mergedPerson));
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Una entidad previamente gestionada pero que fue separada, es posible actualizarla
+a un nuevo contexto de persistencia. Pero hay que tener cuidado, el objeto original
+no es el que pasa a ser gestionado, si no que es el devuelto por el método <code>merge</code>.</p>
+
+<h3>Transición de gestionada a eliminada</h3>
+
+<p>``` java
+@Test
+public void testFromManagedToRemoved() {</p>
+
+<pre><code>ContactablePerson p = createContactablePerson();
+em.persist(p);
+
+em.remove(p);
+assertFalse("entity has been removed and it is not managed", em.contains(p));
+</code></pre>
+
+<p>}
+```</p>
+
+<h3>Transición de eliminada a gestionada</h3>
+
+<p>Aunqe esta transición no está documentada en el diagrama anterior de Oracle, es posible
+transicionar una entidad a gestionada una vez ésta ya ha sido marcada como eliminada.
+Dejo a elección del lector encontrarle utilidad y sentido a esta transición, ya que
+aunque sea posible, dudo de su valor. Esta transición es posible si usamos el método
+<code>persist</code> sobre la entidad eliminada.</p>
+
+<p>``` java
+@Test
+public void testFromRemovedToManaged() {</p>
+
+<pre><code>ContactablePerson p = createContactablePerson();
+em.persist(p);
+em.remove(p);
+assertFalse("entity has been removed", em.contains(p));
+
+em.persist(p);
+assertTrue("entity is managed again", em.contains(p));
+</code></pre>
+
+<p>}
+```</p>
+
+<h2>Notas finales</h2>
+
+<p>Antes de terminar, me gustaría recalcar algo acerca de la creación del <code>EntityManagerFactory</code>
+y <code>EntityManager</code>, ya que es una cuestión muy importante a la hora de desarrollar nuestras
+aplicaciones.</p>
+
+<p>La creación de un <code>EntityManagerFactory</code> es <strong>muy</strong> costoso, y sólo se debería crear
+<strong>una</strong> vez en toda la vida de nuestra aplicación. Es por esta razón, que su creación
+está en un método estático, que se ejecuta antes que cualquier test, y que sólo se
+ejecuta una vez para todos los tests de la suite:</p>
+
+<p>``` java
+@BeforeClass
+public static void classSetUp() {</p>
+
+<pre><code>emf = Persistence.createEntityManagerFactory("test-jpa");
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Por otro lado, la creación de una <code>EntityManager</code> es mucho más ligero, y la recomendación
+dada por la documentación es la de crear una de ellas por cada transacción que vayamos
+a realizar. Pero cuidado, esto no quiere decir que debamos crear una de ellas en
+cada consulta a la base de datos, si no más bien, una por cada petición de la aplicación
+cliente, es decir, que es una buena práctica agrupar varias consultas siempre y
+cuando estas consultas tengan el objetivo de crear un único resultado al cliente.</p>
+
+<p>Por esta razón de que es poco costoso crear un <code>EntityManager</code>, su creación se
+realiza en el método <code>setUp</code> del test, de forma que tendremos un contexto de persistencia
+limpio en la ejecución de cada uno de nuestros tests, pero reaprovecharemos las
+conexiones a la base de datos, ya que éstas se mantienen en el <code>EntityManagerFactory</code>.</p>
+
+<p>``` java
+@Before
+public void setUp() throws Exception {</p>
+
+<pre><code>em = emf.createEntityManager();
+// ...
+</code></pre>
+
+<p>}
+```</p>
+
+<h2>Ejecución</h2>
+
+<p>Esta demo se puede ejecutar como un test de JUnit, y estaría integrado en la ejecución
+de <code>maven</code>, así que simplemente ejecuta el comando <code>mvn test</code> para ver los resultados.</p>
+
+<h2>Enlaces para ampliar información</h2>
+
+<ul>
+<li><a href="https://github.com/rchavarria/javaee-6-demos/tree/master/jpa-entities">Código de la demo en github</a></li>
+<li><a href="/blog/2011/05/19/uso-de-jpa-hibernate-y-derby">Usar JPA, Hibernate y Derby</a>:
+un post en este mismo blog sobre cómo usar JPA, Hibernate como implementación del estándar
+y Derby como base de datos.</li>
+<li><a href="http://www.davidmarco.es/blog/entrada.php?id=144">An excellent JPA tutorial</a>:
+uno de los mejores tutoriales sobre JPA que he encontrado en español.</li>
+<li><a href="http://docs.jboss.org/hibernate/core/4.0/hem/en-US/html_single">Hibernate EntityManager</a>:
+implementación de JPA dentro del framework Hibernate.</li>
+<li><a href="http://docs.oracle.com/cd/E16439_01/doc.1013/e13981/undejbs003.htm">What is a JPA entity?</a>:
+documentación de Oracle sobre entidades JPA.</li>
+<li><a href="http://www.objectdb.com/java/jpa/persistence/managed">Working with JPA entities objects</a>:
+más documentación sobre entidades JPA.</li>
+</ul>
 
 ]]></content>
   </entry>

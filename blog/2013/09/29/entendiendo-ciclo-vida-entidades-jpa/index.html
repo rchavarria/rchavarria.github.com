@@ -1,0 +1,579 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Entendiendo el ciclo de vida de entidades JPA - R. Chavarria's Blog</title>
+  <meta name="author" content="Rub&eacute;n Chavarr&iacute;a">
+
+  
+  <meta name="description" content="Find an English version of this post directly in the source code repository. En esta demo aprenderemos en qué estados puede encontrarse una entidad &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://rchavarria.github.io/blog/2013/09/29/entendiendo-ciclo-vida-entidades-jpa/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="R. Chavarria's Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36829645-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">R. Chavarria's Blog</a></h1>
+  
+    <h2>Blogging like a hacker about Software Development</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:rchavarria.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archivos</a></li>
+  <li><a href="/readings">Lista de lectura</a></li>
+  <li><a href="/pet-projects">Proyectos</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Entendiendo el ciclo de vida de entidades JPA</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-29T15:24:00+02:00" pubdate data-updated="true">Sep 29<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><div style="margin:2%; padding:2%; background-color:#E0E0E0; ">
+    Find an English version of this post directly in the <a href="https://github.com/rchavarria/javaee-6-demos/tree/master/jpa-entities">source code repository</a>.
+</div>
+
+
+<p>En esta demo aprenderemos en qué estados puede encontrarse una entidad JPA,
+y qué métodos proporciona el estándar para transicionar una entidad de un
+estado a otro.</p>
+
+<p>Se puede ver el código fuente de la demostración en el directorio
+<a href="https://github.com/rchavarria/javaee-6-demos/tree/master/jpa-entities"><code>jpa-entities</code></a>
+del repositorio de las demos en github.</p>
+
+<!-- more -->
+
+
+<h2>Demo</h2>
+
+<p>Esta demo pertenece a una serie de
+<a href="/blog/2013/09/03/demos-tecnologias-javaee">tutoriales de demostración de tecnologías J2EE</a> y
+en esta en particular aprenderemos los estados del ciclo de vida de una entidad
+JPA y cómo transicionar entre ellos.</p>
+
+<p>Una frase leída en uno de los enlaces que aparecen al final del post dice (traducción
+libre):</p>
+
+<blockquote><p>Si, a la hora de modificar entidades, piensas en ellas como transiciones de estados en lugar
+de ejecuciones de sentencias SQL, harás tu desarrollo mucho más sencillo.</p></blockquote>
+
+<p>Y es que alguna ventaja tendría que tener lo que proporciona JPA, que es la abstracción
+de la base de datos. Si no dejamos de pensar en SQL, nunca podremos abstraernos de la
+base de datos. Parece muy buena idea lo de ver la vida de una entidad como una serie
+de transiciones de un estado a otro.</p>
+
+<h2>Antes de comenzar</h2>
+
+<p>Antes de nada, existen unas entidades y unos tests sencillos, de ejercitación y puesta a
+punto de JPA, Hibernate (implementación de JPA para esta demo) y Derby (el motor de
+base de datos utilizada aquí).</p>
+
+<p>Echa un vistazo primero a estas clases (<code>Person</code>, <code>ContactablePerson</code>, <code>Phone</code>) y a los
+tests (<code>BasicPersistenceTest</code> y <code>AdvancedPersistenceTest</code>) para poder comprender mejor
+el ciclo de vida que describiremos a continuación.</p>
+
+<h2>Estados de una entidad JPA</h2>
+
+<p>Una entidad se puede encontrar en alguno de estos estados:</p>
+
+<ul>
+<li>No existe todavía: no es un estado en sí, pero podría verse con el origen de todo.</li>
+<li><strong>Nueva</strong>: la entidad se acaba de instaciar con el operador <code>new</code>, como una clase Java
+de toda la vida. No está asociado a ningún contexto de persistencia.</li>
+<li><strong>Gestionada</strong>: tiene una identidad persistente y está asociada a un contexto de
+persistencia.</li>
+<li><strong>Separada</strong>: tiene una identidad persistente pero no está asociada a un contexto de
+persistencia.</li>
+<li><strong>Eliminada</strong>: tiene una identidad persistente, está asociada a un contexto de persistencia,
+pero está marcada para ser eliminada de la base de datos.</li>
+</ul>
+
+
+<h2>Ciclo de vida, transiciones</h2>
+
+<p>En el siguiente diagrama, de la documentación de Oracle, se pueden ver las transiciones
+posibles de una manera gráfica.</p>
+
+<p><img class="center" src="http://docs.oracle.com/cd/E16439_01/doc.1013/e13981/img/lifeent30.gif" title="Transiciones de una entidad JPA" ></p>
+
+<h3>Transición de nueva a gestionada</h3>
+
+<p>Fácilmente, con el método <code>persist</code>:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="nd">@Test</span>
+</span><span class='line'><span class="kd">public</span> <span class="kt">void</span> <span class="nf">testFromNewToManaged</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>    <span class="n">ContactablePerson</span> <span class="n">p</span> <span class="o">=</span> <span class="n">createContactablePerson</span><span class="o">();</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">em</span><span class="o">.</span><span class="na">persist</span><span class="o">(</span><span class="n">p</span><span class="o">);</span>
+</span><span class='line'>    <span class="n">assertTrue</span><span class="o">(</span><span class="s">&quot;entity&#39;s state is &#39;managed&#39;&quot;</span><span class="o">,</span> <span class="n">em</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="n">p</span><span class="o">));</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Transición de gestionada a separada</h3>
+
+<p>Existen dos formas:</p>
+
+<ol>
+<li>Mediante el método <code>detach</code>.</li>
+<li>Cerrando el gestor de entidades, <code>EntityManager.close()</code>.</li>
+</ol>
+
+
+<p>Usando el método <code>detach</code>:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="nd">@Test</span>
+</span><span class='line'><span class="kd">public</span> <span class="kt">void</span> <span class="nf">testFromManagedToDetachedUsingDetachMethod</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>    <span class="n">ContactablePerson</span> <span class="n">p</span> <span class="o">=</span> <span class="n">createContactablePerson</span><span class="o">();</span>
+</span><span class='line'>    <span class="n">em</span><span class="o">.</span><span class="na">persist</span><span class="o">(</span><span class="n">p</span><span class="o">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">em</span><span class="o">.</span><span class="na">detach</span><span class="o">(</span><span class="n">p</span><span class="o">);</span>
+</span><span class='line'>    <span class="n">assertFalse</span><span class="o">(</span><span class="s">&quot;entity is not in persistence context&quot;</span><span class="o">,</span> <span class="n">em</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="n">p</span><span class="o">));</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Cerrando el gestor:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="nd">@Test</span>
+</span><span class='line'><span class="kd">public</span> <span class="kt">void</span> <span class="nf">testFromManagedToDetachedClosingEntityManager</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>    <span class="n">ContactablePerson</span> <span class="n">p</span> <span class="o">=</span> <span class="n">createContactablePerson</span><span class="o">();</span>
+</span><span class='line'>    <span class="n">em</span><span class="o">.</span><span class="na">persist</span><span class="o">(</span><span class="n">p</span><span class="o">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">tx</span><span class="o">.</span><span class="na">commit</span><span class="o">();</span>
+</span><span class='line'>    <span class="n">em</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">try</span> <span class="o">{</span>
+</span><span class='line'>        <span class="n">em</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="n">p</span><span class="o">);</span>
+</span><span class='line'>        <span class="n">fail</span><span class="o">(</span><span class="s">&quot;em should be closed, and the entity shouldn&#39;t be managed by him&quot;</span><span class="o">);</span>
+</span><span class='line'>    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IllegalStateException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span> <span class="o">}</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Transición de separada a gestionada</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="nd">@Test</span>
+</span><span class='line'><span class="kd">public</span> <span class="kt">void</span> <span class="nf">testFromDetachedToManaged</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>    <span class="n">ContactablePerson</span> <span class="n">p</span> <span class="o">=</span> <span class="n">createContactablePerson</span><span class="o">();</span>
+</span><span class='line'>    <span class="n">em</span><span class="o">.</span><span class="na">persist</span><span class="o">(</span><span class="n">p</span><span class="o">);</span>
+</span><span class='line'>    <span class="n">em</span><span class="o">.</span><span class="na">detach</span><span class="o">(</span><span class="n">p</span><span class="o">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">ContactablePerson</span> <span class="n">mergedPerson</span> <span class="o">=</span> <span class="n">em</span><span class="o">.</span><span class="na">merge</span><span class="o">(</span><span class="n">p</span><span class="o">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">assertFalse</span><span class="o">(</span><span class="s">&quot;original entity is not managed...&quot;</span><span class="o">,</span> <span class="n">em</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="n">p</span><span class="o">));</span>
+</span><span class='line'>    <span class="n">assertTrue</span><span class="o">(</span><span class="s">&quot;... but merged one is&quot;</span><span class="o">,</span> <span class="n">em</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="n">mergedPerson</span><span class="o">));</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Una entidad previamente gestionada pero que fue separada, es posible actualizarla
+a un nuevo contexto de persistencia. Pero hay que tener cuidado, el objeto original
+no es el que pasa a ser gestionado, si no que es el devuelto por el método <code>merge</code>.</p>
+
+<h3>Transición de gestionada a eliminada</h3>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="nd">@Test</span>
+</span><span class='line'><span class="kd">public</span> <span class="kt">void</span> <span class="nf">testFromManagedToRemoved</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>    <span class="n">ContactablePerson</span> <span class="n">p</span> <span class="o">=</span> <span class="n">createContactablePerson</span><span class="o">();</span>
+</span><span class='line'>    <span class="n">em</span><span class="o">.</span><span class="na">persist</span><span class="o">(</span><span class="n">p</span><span class="o">);</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">em</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="n">p</span><span class="o">);</span>
+</span><span class='line'>    <span class="n">assertFalse</span><span class="o">(</span><span class="s">&quot;entity has been removed and it is not managed&quot;</span><span class="o">,</span> <span class="n">em</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="n">p</span><span class="o">));</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Transición de eliminada a gestionada</h3>
+
+<p>Aunqe esta transición no está documentada en el diagrama anterior de Oracle, es posible
+transicionar una entidad a gestionada una vez ésta ya ha sido marcada como eliminada.
+Dejo a elección del lector encontrarle utilidad y sentido a esta transición, ya que
+aunque sea posible, dudo de su valor. Esta transición es posible si usamos el método
+<code>persist</code> sobre la entidad eliminada.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="nd">@Test</span>
+</span><span class='line'><span class="kd">public</span> <span class="kt">void</span> <span class="nf">testFromRemovedToManaged</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>    <span class="n">ContactablePerson</span> <span class="n">p</span> <span class="o">=</span> <span class="n">createContactablePerson</span><span class="o">();</span>
+</span><span class='line'>    <span class="n">em</span><span class="o">.</span><span class="na">persist</span><span class="o">(</span><span class="n">p</span><span class="o">);</span>
+</span><span class='line'>    <span class="n">em</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="n">p</span><span class="o">);</span>
+</span><span class='line'>    <span class="n">assertFalse</span><span class="o">(</span><span class="s">&quot;entity has been removed&quot;</span><span class="o">,</span> <span class="n">em</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="n">p</span><span class="o">));</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">em</span><span class="o">.</span><span class="na">persist</span><span class="o">(</span><span class="n">p</span><span class="o">);</span>
+</span><span class='line'>    <span class="n">assertTrue</span><span class="o">(</span><span class="s">&quot;entity is managed again&quot;</span><span class="o">,</span> <span class="n">em</span><span class="o">.</span><span class="na">contains</span><span class="o">(</span><span class="n">p</span><span class="o">));</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Notas finales</h2>
+
+<p>Antes de terminar, me gustaría recalcar algo acerca de la creación del <code>EntityManagerFactory</code>
+y <code>EntityManager</code>, ya que es una cuestión muy importante a la hora de desarrollar nuestras
+aplicaciones.</p>
+
+<p>La creación de un <code>EntityManagerFactory</code> es <strong>muy</strong> costoso, y sólo se debería crear
+<strong>una</strong> vez en toda la vida de nuestra aplicación. Es por esta razón, que su creación
+está en un método estático, que se ejecuta antes que cualquier test, y que sólo se
+ejecuta una vez para todos los tests de la suite:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="nd">@BeforeClass</span>
+</span><span class='line'><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">classSetUp</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>  <span class="n">emf</span> <span class="o">=</span> <span class="n">Persistence</span><span class="o">.</span><span class="na">createEntityManagerFactory</span><span class="o">(</span><span class="s">&quot;test-jpa&quot;</span><span class="o">);</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Por otro lado, la creación de una <code>EntityManager</code> es mucho más ligero, y la recomendación
+dada por la documentación es la de crear una de ellas por cada transacción que vayamos
+a realizar. Pero cuidado, esto no quiere decir que debamos crear una de ellas en
+cada consulta a la base de datos, si no más bien, una por cada petición de la aplicación
+cliente, es decir, que es una buena práctica agrupar varias consultas siempre y
+cuando estas consultas tengan el objetivo de crear un único resultado al cliente.</p>
+
+<p>Por esta razón de que es poco costoso crear un <code>EntityManager</code>, su creación se
+realiza en el método <code>setUp</code> del test, de forma que tendremos un contexto de persistencia
+limpio en la ejecución de cada uno de nuestros tests, pero reaprovecharemos las
+conexiones a la base de datos, ya que éstas se mantienen en el <code>EntityManagerFactory</code>.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="nd">@Before</span>
+</span><span class='line'><span class="kd">public</span> <span class="kt">void</span> <span class="nf">setUp</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span>
+</span><span class='line'>    <span class="n">em</span> <span class="o">=</span> <span class="n">emf</span><span class="o">.</span><span class="na">createEntityManager</span><span class="o">();</span>
+</span><span class='line'>    <span class="c1">// ...</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Ejecución</h2>
+
+<p>Esta demo se puede ejecutar como un test de JUnit, y estaría integrado en la ejecución
+de <code>maven</code>, así que simplemente ejecuta el comando <code>mvn test</code> para ver los resultados.</p>
+
+<h2>Enlaces para ampliar información</h2>
+
+<ul>
+<li><a href="https://github.com/rchavarria/javaee-6-demos/tree/master/jpa-entities">Código de la demo en github</a></li>
+<li><a href="/blog/2011/05/19/uso-de-jpa-hibernate-y-derby">Usar JPA, Hibernate y Derby</a>:
+un post en este mismo blog sobre cómo usar JPA, Hibernate como implementación del estándar
+y Derby como base de datos.</li>
+<li><a href="http://www.davidmarco.es/blog/entrada.php?id=144">An excellent JPA tutorial</a>:
+uno de los mejores tutoriales sobre JPA que he encontrado en español.</li>
+<li><a href="http://docs.jboss.org/hibernate/core/4.0/hem/en-US/html_single">Hibernate EntityManager</a>:
+implementación de JPA dentro del framework Hibernate.</li>
+<li><a href="http://docs.oracle.com/cd/E16439_01/doc.1013/e13981/undejbs003.htm">What is a JPA entity?</a>:
+documentación de Oracle sobre entidades JPA.</li>
+<li><a href="http://www.objectdb.com/java/jpa/persistence/managed">Working with JPA entities objects</a>:
+más documentación sobre entidades JPA.</li>
+</ul>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Rub&eacute;n Chavarr&iacute;a</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-29T15:24:00+02:00" pubdate data-updated="true">Sep 29<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/jpa/'>JPA</a>, <a class='category' href='/blog/categories/java-ee/'>Java EE</a>, <a class='category' href='/blog/categories/tutorials/'>tutorials</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rchavarria.github.io/blog/2013/09/29/entendiendo-ciclo-vida-entidades-jpa/" data-via="rchavarriat" data-counturl="http://rchavarria.github.io/blog/2013/09/29/entendiendo-ciclo-vida-entidades-jpa/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/09/26/crear-cliente-servicio-web/" title="Previous Post: Crear una applicación cliente para un servicio web">&laquo; Crear una applicación cliente para un servicio web</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/09/29/entendiendo-ciclo-vida-entidades-jpa/">Entendiendo el ciclo de vida de entidades JPA</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/26/crear-cliente-servicio-web/">Crear una applicación cliente para un servicio web</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/19/crear-servicio-web-jaxws/">Crear un servicio web JAX-WS</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/17/servlet-redirecciona-jsp/">Servlet redirecciona a una JSP</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/13/servlet-lee-parametros/">Leer parámetros desde un servlet</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("rchavarriat", 4, true);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/rchavarriat">@rchavarriat</a></p>
+  
+</section>
+
+
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/rchavarriat?count=5&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/rchavarriat">My Delicious Bookmarks &raquo;</a></p>
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Rub&eacute;n Chavarr&iacute;a -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'rchavarria-github-com';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://rchavarria.github.io/blog/2013/09/29/entendiendo-ciclo-vida-entidades-jpa/';
+        var disqus_url = 'http://rchavarria.github.io/blog/2013/09/29/entendiendo-ciclo-vida-entidades-jpa/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

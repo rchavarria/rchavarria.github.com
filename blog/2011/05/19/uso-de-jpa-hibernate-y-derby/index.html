@@ -123,8 +123,7 @@
 
 <p>Como ya hemos visto, sólo vamos a persistir objetos de la clase Person, la cual tendrá un campo id, que funcionará como la clave principal de la tabla, y un campo name, el nombre de la persona. A continuación vemos el código de esta clase:</p>
 
-<figure class='code'><figcaption><span>Definir persistencia de datos </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -142,24 +141,25 @@
 <span class='line-number'>16</span>
 <span class='line-number'>17</span>
 <span class='line-number'>18</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>package es.rct.jpa.model;
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kn">package</span> <span class="n">es</span><span class="o">.</span><span class="na">rct</span><span class="o">.</span><span class="na">jpa</span><span class="o">.</span><span class="na">model</span><span class="o">;</span>
 </span><span class='line'>
-</span><span class='line'>import javax.persistence.Entity;
-</span><span class='line'>import javax.persistence.GeneratedValue;
-</span><span class='line'>import javax.persistence.Id;
+</span><span class='line'><span class="kn">import</span> <span class="nn">javax.persistence.Entity</span><span class="o">;</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">javax.persistence.GeneratedValue</span><span class="o">;</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">javax.persistence.Id</span><span class="o">;</span>
 </span><span class='line'>
-</span><span class='line'>@Entity
-</span><span class='line'>public class Person {
-</span><span class='line'>    @Id
-</span><span class='line'>    @GeneratedValue
-</span><span class='line'>    private long id;
-</span><span class='line'>    private String name;
+</span><span class='line'><span class="nd">@Entity</span>
+</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Person</span> <span class="o">{</span>
+</span><span class='line'>    <span class="nd">@Id</span>
+</span><span class='line'>    <span class="nd">@GeneratedValue</span>
+</span><span class='line'>    <span class="kd">private</span> <span class="kt">long</span> <span class="n">id</span><span class="o">;</span>
+</span><span class='line'>    <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
 </span><span class='line'>
-</span><span class='line'>    public void setName(final String name) {this.name = name;}
-</span><span class='line'>    public String getName() {return name;}
-</span><span class='line'>    public void setId(final long id) {this.id = id;}
-</span><span class='line'>    public long getId() {return id;}
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setName</span><span class="o">(</span><span class="kd">final</span> <span class="n">String</span> <span class="n">name</span><span class="o">)</span> <span class="o">{</span><span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;}</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="o">()</span> <span class="o">{</span><span class="k">return</span> <span class="n">name</span><span class="o">;}</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setId</span><span class="o">(</span><span class="kd">final</span> <span class="kt">long</span> <span class="n">id</span><span class="o">)</span> <span class="o">{</span><span class="k">this</span><span class="o">.</span><span class="na">id</span> <span class="o">=</span> <span class="n">id</span><span class="o">;}</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="kt">long</span> <span class="nf">getId</span><span class="o">()</span> <span class="o">{</span><span class="k">return</span> <span class="n">id</span><span class="o">;}</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>De esta clase vamos a destacar 3 anotaciones, pertenecientes a JPA. Las podemos encontrar en el paquete javax.persistence:</p>
@@ -178,7 +178,39 @@
 
 <p>Para poder usar Derby como base de datos y Hibernate como implementación de JPA, debemos incluir las siguientes dependencias en nuestro fichero pom.xml de configuración de maven:</p>
 
-<script src="http://gist.github.com/4194334.js"></script>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="c">&lt;!-- ... --&gt;</span>
+</span><span class='line'><span class="nt">&lt;dependency&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;groupId&gt;</span>org.apache.derby<span class="nt">&lt;/groupId&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;artifactId&gt;</span>derby<span class="nt">&lt;/artifactId&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;version&gt;</span>10.6.2.1<span class="nt">&lt;/version&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;type&gt;</span>jar<span class="nt">&lt;/type&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;scope&gt;</span>compile<span class="nt">&lt;/scope&gt;</span>
+</span><span class='line'><span class="nt">&lt;/dependency&gt;</span>
+</span><span class='line'><span class="nt">&lt;dependency&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;groupId&gt;</span>org.hibernate<span class="nt">&lt;/groupId&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;artifactId&gt;</span>hibernate-entitymanager<span class="nt">&lt;/artifactId&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;version&gt;</span>3.4.0.GA<span class="nt">&lt;/version&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;type&gt;</span>jar<span class="nt">&lt;/type&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;scope&gt;</span>compile<span class="nt">&lt;/scope&gt;</span>
+</span><span class='line'><span class="nt">&lt;/dependency&gt;</span>
+</span><span class='line'><span class="c">&lt;!-- ... --&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Las versiones de las dependencias pueden variar. Aquí aparecen las que yo personalmente he utilizado.</p>
@@ -194,7 +226,45 @@ el resultado deseado.</p>
 
 <p>El contenido del fichero de configuración JPA es el siguiente:</p>
 
-<script src="http://gist.github.com/4194389.js"></script>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;persistence</span> <span class="na">xmlns=</span><span class="s">&quot;http://java.sun.com/xml/ns/persistence&quot;</span> <span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;persistence-unit</span> <span class="na">name=</span><span class="s">&quot;test-jpa&quot;</span> <span class="na">transaction-type=</span><span class="s">&quot;RESOURCE_LOCAL&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nt">&lt;provider&gt;</span>org.hibernate.ejb.HibernatePersistence<span class="nt">&lt;/provider&gt;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nt">&lt;class&gt;</span>es.rct.jpa.model.Person<span class="nt">&lt;/class&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;exclude-unlisted-classes&gt;</span>true<span class="nt">&lt;/exclude-unlisted-classes&gt;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nt">&lt;properties&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;hibernate.connection.url&quot;</span> <span class="na">value=</span><span class="s">&quot;jdbc:derby:memory:testing-jpa;create=true&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;hibernate.connection.driver_class&quot;</span> <span class="na">value=</span><span class="s">&quot;org.apache.derby.jdbc.EmbeddedDriver&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;hibernate.dialect&quot;</span> <span class="na">value=</span><span class="s">&quot;org.hibernate.dialect.DerbyDialect&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;hibernate.hbm2ddl.auto&quot;</span> <span class="na">value=</span><span class="s">&quot;create&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;hibernate.connection.username&quot;</span> <span class="na">value=</span><span class="s">&quot;&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;hibernate.connection.password&quot;</span> <span class="na">value=</span><span class="s">&quot;&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;/properties&gt;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nt">&lt;/persistence-unit&gt;</span>
+</span><span class='line'><span class="nt">&lt;/persistence&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>De este fichero xml podemos destacar las siguientes etiquetas:</p>
@@ -222,23 +292,25 @@ el resultado deseado.</p>
 
 <p>Primero, debemos crear un objeto EntityManager, que manejará todo lo relacionado con la persistencia: transacciones, guardar datos, actualizarlos, borrarlos, etc.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>EntityManagerFactory emf = Persistence.createEntityManagerFactory(&quot;test-jpa&quot;);
-</span><span class='line'>EntityManager em = emf.createEntityManager();</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="n">EntityManagerFactory</span> <span class="n">emf</span> <span class="o">=</span> <span class="n">Persistence</span><span class="o">.</span><span class="na">createEntityManagerFactory</span><span class="o">(</span><span class="s">&quot;test-jpa&quot;</span><span class="o">);</span>
+</span><span class='line'><span class="n">EntityManager</span> <span class="n">em</span> <span class="o">=</span> <span class="n">emf</span><span class="o">.</span><span class="na">createEntityManager</span><span class="o">();</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Una vez terminemos de utilizar nuestro EntityManager, debemos cerrarlo:</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>em.close();
-</span><span class='line'>emf.close();</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="n">em</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+</span><span class='line'><span class="n">emf</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Ahora ya disponemos de un objeto &#8220;em&#8221; para poder persistir objetos de tipo Person:</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -249,25 +321,25 @@ el resultado deseado.</p>
 <span class='line-number'>9</span>
 <span class='line-number'>10</span>
 <span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>private void insertSomeData() {
-</span><span class='line'>    Person p = new Person();
-</span><span class='line'>    p.setName(&quot;person 01&quot;);
-</span><span class='line'>    Person p1 = new Person();
-</span><span class='line'>    p1.setName(&quot;person 02&quot;);
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">private</span> <span class="kt">void</span> <span class="nf">insertSomeData</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>    <span class="n">Person</span> <span class="n">p</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Person</span><span class="o">();</span>
+</span><span class='line'>    <span class="n">p</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="s">&quot;person 01&quot;</span><span class="o">);</span>
+</span><span class='line'>    <span class="n">Person</span> <span class="n">p1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Person</span><span class="o">();</span>
+</span><span class='line'>    <span class="n">p1</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="s">&quot;person 02&quot;</span><span class="o">);</span>
 </span><span class='line'>
-</span><span class='line'>    em.getTransaction().begin();
-</span><span class='line'>    em.persist(p);
-</span><span class='line'>    em.persist(p1);
-</span><span class='line'>    em.getTransaction().commit();
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>    <span class="n">em</span><span class="o">.</span><span class="na">getTransaction</span><span class="o">().</span><span class="na">begin</span><span class="o">();</span>
+</span><span class='line'>    <span class="n">em</span><span class="o">.</span><span class="na">persist</span><span class="o">(</span><span class="n">p</span><span class="o">);</span>
+</span><span class='line'>    <span class="n">em</span><span class="o">.</span><span class="na">persist</span><span class="o">(</span><span class="n">p1</span><span class="o">);</span>
+</span><span class='line'>    <span class="n">em</span><span class="o">.</span><span class="na">getTransaction</span><span class="o">().</span><span class="na">commit</span><span class="o">();</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 <p>Para poder guardar los datos en base de datos, debemos arrancar una transacción, llamar al método &#8220;persist&#8221; y terminar la transacción. Si queremos indicar que ha habido un error durante la transacción, y no queremos llevarla a cabo, llamaríamos al método &#8220;rollback&#8221; en lugar del método &#8220;commit&#8221;.</p>
 
 <p>Para comprobar que realmente hemos almacenado los objetos en la base de datos, sólo tenemos que buscarlos por identificador. Ya que sólo hemos almacenado 2 objetos, y son los 2 primeros, los ids serán 1 y 2 respectivamente:</p>
 
-<figure class='code'><figcaption><span>Insertar datos </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -275,14 +347,15 @@ el resultado deseado.</p>
 <span class='line-number'>6</span>
 <span class='line-number'>7</span>
 <span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>private void listInsertedData() {
-</span><span class='line'>    em.getTransaction().begin();
-</span><span class='line'>    for (long i = 1; i &lt;= 2; i++) {
-</span><span class='line'>        Person pFinded = em.find(Person.class, new Long(i));
-</span><span class='line'>        System.out.println(&quot;Id: &quot; + i + &quot;, name: &quot; + pFinded.getName());
-</span><span class='line'>    }
-</span><span class='line'>    em.getTransaction().commit();
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">private</span> <span class="kt">void</span> <span class="nf">listInsertedData</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>    <span class="n">em</span><span class="o">.</span><span class="na">getTransaction</span><span class="o">().</span><span class="na">begin</span><span class="o">();</span>
+</span><span class='line'>    <span class="k">for</span> <span class="o">(</span><span class="kt">long</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">2</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+</span><span class='line'>        <span class="n">Person</span> <span class="n">pFinded</span> <span class="o">=</span> <span class="n">em</span><span class="o">.</span><span class="na">find</span><span class="o">(</span><span class="n">Person</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="k">new</span> <span class="n">Long</span><span class="o">(</span><span class="n">i</span><span class="o">));</span>
+</span><span class='line'>        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Id: &quot;</span> <span class="o">+</span> <span class="n">i</span> <span class="o">+</span> <span class="s">&quot;, name: &quot;</span> <span class="o">+</span> <span class="n">pFinded</span><span class="o">.</span><span class="na">getName</span><span class="o">());</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>    <span class="n">em</span><span class="o">.</span><span class="na">getTransaction</span><span class="o">().</span><span class="na">commit</span><span class="o">();</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 
@@ -334,6 +407,10 @@ el resultado deseado.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/09/29/entendiendo-ciclo-vida-entidades-jpa/">Entendiendo el ciclo de vida de entidades JPA</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/09/26/crear-cliente-servicio-web/">Crear una applicación cliente para un servicio web</a>
       </li>
     
@@ -347,10 +424,6 @@ el resultado deseado.</p>
     
       <li class="post">
         <a href="/blog/2013/09/13/servlet-lee-parametros/">Leer parámetros desde un servlet</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/09/03/sencillo-servlet-http/">Un sencillo servlet HTTP</a>
       </li>
     
   </ul>

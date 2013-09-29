@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Java EE | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/java-ee/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2013-09-26T09:29:14+02:00</updated>
+  <updated>2013-09-29T16:17:03+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,275 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Entendiendo el ciclo de vida de entidades JPA]]></title>
+    <link href="http://rchavarria.github.io/blog/2013/09/29/entendiendo-ciclo-vida-entidades-jpa/"/>
+    <updated>2013-09-29T15:24:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2013/09/29/entendiendo-ciclo-vida-entidades-jpa</id>
+    <content type="html"><![CDATA[<div style="margin:2%; padding:2%; background-color:#E0E0E0; ">
+    Find an English version of this post directly in the <a href="https://github.com/rchavarria/javaee-6-demos/tree/master/jpa-entities">source code repository</a>.
+</div>
+
+
+<p>En esta demo aprenderemos en qué estados puede encontrarse una entidad JPA,
+y qué métodos proporciona el estándar para transicionar una entidad de un
+estado a otro.</p>
+
+<p>Se puede ver el código fuente de la demostración en el directorio
+<a href="https://github.com/rchavarria/javaee-6-demos/tree/master/jpa-entities"><code>jpa-entities</code></a>
+del repositorio de las demos en github.</p>
+
+<!-- more -->
+
+
+<h2>Demo</h2>
+
+<p>Esta demo pertenece a una serie de
+<a href="/blog/2013/09/03/demos-tecnologias-javaee">tutoriales de demostración de tecnologías J2EE</a> y
+en esta en particular aprenderemos los estados del ciclo de vida de una entidad
+JPA y cómo transicionar entre ellos.</p>
+
+<p>Una frase leída en uno de los enlaces que aparecen al final del post dice (traducción
+libre):</p>
+
+<blockquote><p>Si, a la hora de modificar entidades, piensas en ellas como transiciones de estados en lugar
+de ejecuciones de sentencias SQL, harás tu desarrollo mucho más sencillo.</p></blockquote>
+
+<p>Y es que alguna ventaja tendría que tener lo que proporciona JPA, que es la abstracción
+de la base de datos. Si no dejamos de pensar en SQL, nunca podremos abstraernos de la
+base de datos. Parece muy buena idea lo de ver la vida de una entidad como una serie
+de transiciones de un estado a otro.</p>
+
+<h2>Antes de comenzar</h2>
+
+<p>Antes de nada, existen unas entidades y unos tests sencillos, de ejercitación y puesta a
+punto de JPA, Hibernate (implementación de JPA para esta demo) y Derby (el motor de
+base de datos utilizada aquí).</p>
+
+<p>Echa un vistazo primero a estas clases (<code>Person</code>, <code>ContactablePerson</code>, <code>Phone</code>) y a los
+tests (<code>BasicPersistenceTest</code> y <code>AdvancedPersistenceTest</code>) para poder comprender mejor
+el ciclo de vida que describiremos a continuación.</p>
+
+<h2>Estados de una entidad JPA</h2>
+
+<p>Una entidad se puede encontrar en alguno de estos estados:</p>
+
+<ul>
+<li>No existe todavía: no es un estado en sí, pero podría verse con el origen de todo.</li>
+<li><strong>Nueva</strong>: la entidad se acaba de instaciar con el operador <code>new</code>, como una clase Java
+de toda la vida. No está asociado a ningún contexto de persistencia.</li>
+<li><strong>Gestionada</strong>: tiene una identidad persistente y está asociada a un contexto de
+persistencia.</li>
+<li><strong>Separada</strong>: tiene una identidad persistente pero no está asociada a un contexto de
+persistencia.</li>
+<li><strong>Eliminada</strong>: tiene una identidad persistente, está asociada a un contexto de persistencia,
+pero está marcada para ser eliminada de la base de datos.</li>
+</ul>
+
+
+<h2>Ciclo de vida, transiciones</h2>
+
+<p>En el siguiente diagrama, de la documentación de Oracle, se pueden ver las transiciones
+posibles de una manera gráfica.</p>
+
+<p><img class="center" src="http://docs.oracle.com/cd/E16439_01/doc.1013/e13981/img/lifeent30.gif" title="Transiciones de una entidad JPA" ></p>
+
+<h3>Transición de nueva a gestionada</h3>
+
+<p>Fácilmente, con el método <code>persist</code>:</p>
+
+<p>``` java
+@Test
+public void testFromNewToManaged() {</p>
+
+<pre><code>ContactablePerson p = createContactablePerson();
+
+em.persist(p);
+assertTrue("entity's state is 'managed'", em.contains(p));
+</code></pre>
+
+<p>}
+```</p>
+
+<h3>Transición de gestionada a separada</h3>
+
+<p>Existen dos formas:</p>
+
+<ol>
+<li>Mediante el método <code>detach</code>.</li>
+<li>Cerrando el gestor de entidades, <code>EntityManager.close()</code>.</li>
+</ol>
+
+
+<p>Usando el método <code>detach</code>:</p>
+
+<p>``` java
+@Test
+public void testFromManagedToDetachedUsingDetachMethod() {</p>
+
+<pre><code>ContactablePerson p = createContactablePerson();
+em.persist(p);
+
+em.detach(p);
+assertFalse("entity is not in persistence context", em.contains(p));
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Cerrando el gestor:</p>
+
+<p>``` java
+@Test
+public void testFromManagedToDetachedClosingEntityManager() {</p>
+
+<pre><code>ContactablePerson p = createContactablePerson();
+em.persist(p);
+
+tx.commit();
+em.close();
+
+try {
+    em.contains(p);
+    fail("em should be closed, and the entity shouldn't be managed by him");
+} catch (IllegalStateException e) { }
+</code></pre>
+
+<p>}
+```</p>
+
+<h3>Transición de separada a gestionada</h3>
+
+<p>``` java
+@Test
+public void testFromDetachedToManaged() {</p>
+
+<pre><code>ContactablePerson p = createContactablePerson();
+em.persist(p);
+em.detach(p);
+
+ContactablePerson mergedPerson = em.merge(p);
+
+assertFalse("original entity is not managed...", em.contains(p));
+assertTrue("... but merged one is", em.contains(mergedPerson));
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Una entidad previamente gestionada pero que fue separada, es posible actualizarla
+a un nuevo contexto de persistencia. Pero hay que tener cuidado, el objeto original
+no es el que pasa a ser gestionado, si no que es el devuelto por el método <code>merge</code>.</p>
+
+<h3>Transición de gestionada a eliminada</h3>
+
+<p>``` java
+@Test
+public void testFromManagedToRemoved() {</p>
+
+<pre><code>ContactablePerson p = createContactablePerson();
+em.persist(p);
+
+em.remove(p);
+assertFalse("entity has been removed and it is not managed", em.contains(p));
+</code></pre>
+
+<p>}
+```</p>
+
+<h3>Transición de eliminada a gestionada</h3>
+
+<p>Aunqe esta transición no está documentada en el diagrama anterior de Oracle, es posible
+transicionar una entidad a gestionada una vez ésta ya ha sido marcada como eliminada.
+Dejo a elección del lector encontrarle utilidad y sentido a esta transición, ya que
+aunque sea posible, dudo de su valor. Esta transición es posible si usamos el método
+<code>persist</code> sobre la entidad eliminada.</p>
+
+<p>``` java
+@Test
+public void testFromRemovedToManaged() {</p>
+
+<pre><code>ContactablePerson p = createContactablePerson();
+em.persist(p);
+em.remove(p);
+assertFalse("entity has been removed", em.contains(p));
+
+em.persist(p);
+assertTrue("entity is managed again", em.contains(p));
+</code></pre>
+
+<p>}
+```</p>
+
+<h2>Notas finales</h2>
+
+<p>Antes de terminar, me gustaría recalcar algo acerca de la creación del <code>EntityManagerFactory</code>
+y <code>EntityManager</code>, ya que es una cuestión muy importante a la hora de desarrollar nuestras
+aplicaciones.</p>
+
+<p>La creación de un <code>EntityManagerFactory</code> es <strong>muy</strong> costoso, y sólo se debería crear
+<strong>una</strong> vez en toda la vida de nuestra aplicación. Es por esta razón, que su creación
+está en un método estático, que se ejecuta antes que cualquier test, y que sólo se
+ejecuta una vez para todos los tests de la suite:</p>
+
+<p>``` java
+@BeforeClass
+public static void classSetUp() {</p>
+
+<pre><code>emf = Persistence.createEntityManagerFactory("test-jpa");
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Por otro lado, la creación de una <code>EntityManager</code> es mucho más ligero, y la recomendación
+dada por la documentación es la de crear una de ellas por cada transacción que vayamos
+a realizar. Pero cuidado, esto no quiere decir que debamos crear una de ellas en
+cada consulta a la base de datos, si no más bien, una por cada petición de la aplicación
+cliente, es decir, que es una buena práctica agrupar varias consultas siempre y
+cuando estas consultas tengan el objetivo de crear un único resultado al cliente.</p>
+
+<p>Por esta razón de que es poco costoso crear un <code>EntityManager</code>, su creación se
+realiza en el método <code>setUp</code> del test, de forma que tendremos un contexto de persistencia
+limpio en la ejecución de cada uno de nuestros tests, pero reaprovecharemos las
+conexiones a la base de datos, ya que éstas se mantienen en el <code>EntityManagerFactory</code>.</p>
+
+<p>``` java
+@Before
+public void setUp() throws Exception {</p>
+
+<pre><code>em = emf.createEntityManager();
+// ...
+</code></pre>
+
+<p>}
+```</p>
+
+<h2>Ejecución</h2>
+
+<p>Esta demo se puede ejecutar como un test de JUnit, y estaría integrado en la ejecución
+de <code>maven</code>, así que simplemente ejecuta el comando <code>mvn test</code> para ver los resultados.</p>
+
+<h2>Enlaces para ampliar información</h2>
+
+<ul>
+<li><a href="https://github.com/rchavarria/javaee-6-demos/tree/master/jpa-entities">Código de la demo en github</a></li>
+<li><a href="/blog/2011/05/19/uso-de-jpa-hibernate-y-derby">Usar JPA, Hibernate y Derby</a>:
+un post en este mismo blog sobre cómo usar JPA, Hibernate como implementación del estándar
+y Derby como base de datos.</li>
+<li><a href="http://www.davidmarco.es/blog/entrada.php?id=144">An excellent JPA tutorial</a>:
+uno de los mejores tutoriales sobre JPA que he encontrado en español.</li>
+<li><a href="http://docs.jboss.org/hibernate/core/4.0/hem/en-US/html_single">Hibernate EntityManager</a>:
+implementación de JPA dentro del framework Hibernate.</li>
+<li><a href="http://docs.oracle.com/cd/E16439_01/doc.1013/e13981/undejbs003.htm">What is a JPA entity?</a>:
+documentación de Oracle sobre entidades JPA.</li>
+<li><a href="http://www.objectdb.com/java/jpa/persistence/managed">Working with JPA entities objects</a>:
+más documentación sobre entidades JPA.</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Crear una applicación cliente para un servicio web]]></title>
@@ -37,12 +306,14 @@ del repositorio de las demos en github.</p>
 
 <h2>Demo</h2>
 
-<p>En esta demo crearemos en cliente que invocará a los métodos expuestos por el servicio
+<p>Esta demo pertenece a una serie de
+<a href="/blog/2013/09/03/demos-tecnologias-javaee">tutoriales de demostración de tecnologías J2EE</a> y
+en esta en particular crearemos en cliente que invocará a los métodos expuestos por el servicio
 web desarrollado en la demo anterior. Estos métodos son:</p>
 
 <ol>
 <li>Añadir usuario: añadiremos un nombre de usuario al servicio.</li>
-<li>Obtener usuario: mediante un identificiador, obtendremos un nombre de usuario.</li>
+<li>Obtener usuario: mediante un identificador, obtendremos un nombre de usuario.</li>
 </ol>
 
 
@@ -57,7 +328,7 @@ el fichero WSDL, que describe el servicio, esté disponible y actualizado. Tambi
 es posible usar un fichero ya existente, por ejemplo, en el caso de que queramos
 desarrollar un cliente para un servicio web de terceros. En definitiva, el elemento
 realmente importante en un servicio web, es el fichero WSDL, que es quien define
-de manera unequívoca el servicio en sí.</p>
+de manera inequívoca el servicio en sí.</p>
 
 <p>Para esta demo, arrancaremos el servicio web desarrollado en la
 <a href="/blog/2013/09/19/crear-servicio-web-jaxws">demo anterior</a>. Básicamente, los comandos
@@ -118,7 +389,7 @@ a los <em>métodos</em> web.</li>
 
 <h3>Crear un test de JUnit para invocar el servicio web</h3>
 
-<p>{% img left /images/2013/web-service-test.png Ejecución de la demo como un test %}</p>
+<p><img class="left" src="/images/2013/web-service-test.png" title="Ejecución de la demo como un test" ></p>
 
 <p>Usaremos un sencillo test de JUnit para invocar a nuestro servicio. Se puede utilizar
 una clase normal de Java, con un método <code>main</code>, pero haciéndolo con un test, podemos
@@ -230,7 +501,7 @@ del repositorio de las demos en github.</p>
 
 <h2>Demo</h2>
 
-<p>{% img right /images/2013/web-services-by-psd.jpg 320 213 Foto por el usuario de flickr psd %}</p>
+<p><img class="right" src="/images/2013/web-services-by-psd.jpg" width="320" height="213" title="Foto por el usuario de flickr psd" ></p>
 
 <p>En esta demo no veremos nada funcionando, ya que vamos a crear un servicio web
 pero no vamos a crear un cliente que lo consuma (eso para la siguiente). La forma
@@ -509,7 +780,7 @@ los datos que viajarán como atributos de la petición.</p>
 unos valores cualquiera y enviar los datos del formulario. Como resultado, veremos
 el renderizado de la página JSP en el navegador.</p>
 
-<p>{% img center /images/2013/request-parameters-jsp.png Respuesta del servlet %}</p>
+<p><img class="center" src="/images/2013/request-parameters-jsp.png" title="Respuesta del servlet" ></p>
 
 <h2>Dependencias</h2>
 
@@ -608,7 +879,7 @@ unos valores cualquiera y enviar los datos del formulario. Veremos el resultado
 que devuelve el servlet al leer los parámetros de la petición HTTP que hemos
 enviado al servidor.</p>
 
-<p>{% img center /images/2013/request-parameters.png Respuesta del servlet %}</p>
+<p><img class="center" src="/images/2013/request-parameters.png" title="Respuesta del servlet" ></p>
 
 <h2>Dependencias</h2>
 
@@ -620,7 +891,7 @@ la que nos permitirá crear nuestro servlet.</p>
 
 <h2>Página de login</h2>
 
-<p>{% img right /images/2013/login-form.png Respuesta del servlet %}</p>
+<p><img class="right" src="/images/2013/login-form.png" title="Respuesta del servlet" ></p>
 
 <p>La entrada a nuestra demo será la página de login, la cual contiene un formulario
 muy simple, con dos campos principales: email del usuario y contraseña.</p>
@@ -697,97 +968,6 @@ return sb.toString();
 <li><a href="https://baurdotnet.wordpress.com/2011/01/31/getting-a-request-parameter-in-a-servlet">Leer un parámetro en un servlet</a></li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Un sencillo servlet HTTP]]></title>
-    <link href="http://rchavarria.github.io/blog/2013/09/03/sencillo-servlet-http/"/>
-    <updated>2013-09-03T13:41:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2013/09/03/sencillo-servlet-http</id>
-    <content type="html"><![CDATA[<div style="margin:2%; padding:2%; background-color:#E0E0E0; ">
-    Find a lightweight English version of this post directly in the <a href="https://github.com/rchavarria/javaee-6-demos/tree/master/simple-http-servlet">source code repository</a>.
-</div>
-
-
-<p>En este post veremos cómo crear un sencillo servlet HTTP. La configuración de dicho
-servlet la haremos mediante anotaciones, y así veremos cómo Java EE 6 puede
-ahorrarnos a los desarrolladores cierto trabajo con ficheros XML de configuración.</p>
-
-<p>Se puede ver el código fuente de la demostración en el directorio
-<a href="https://github.com/rchavarria/javaee-6-demos/tree/master/simple-http-servlet"><code>simple-http-servlet</code></a>
-del repositorio de las demos en github.</p>
-
-<!-- more -->
-
-
-<h2>Demo</h2>
-
-<p>La demostración va a ser muy sencilla: crearemos en servlet, lo configuraremos
-para que responda cuando un usuario visite una página web en concreto, y haremos
-que responda de una forma muy, pero que muy sencilla.</p>
-
-<p>Para ejecutar la demo, simplemente hay que descargase el código fuente y ejecutar
-<code>mvn jetty:run</code> desde el directorio raiz de la demo. Ya se puede ver el resultado
-del servlet visitando
-<a href="http://localhost:8080/SimpleHttpServlet">http://localhost:8080/SimpleHttpServlet</a>.</p>
-
-<p>{% img center /images/2013/simple-http-servlet.png Respuesta del servlet %}</p>
-
-<h2>Dependencias</h2>
-
-<p>Para esta demostración usaremos <a href="http://maven.apache.org/">Apache Maven</a> para
-la gestión de dependencias. Esto nos facilitará enormemente nuestra labor de
-programación. Si echamos un vistazo al fichero <code>pom.xml</code> de la demo, podremos
-ver que solamente existe una dependencia externa, <code>javax-servlet-api</code>, que es
-la que nos permitirá crear nuestro servlet.</p>
-
-<h2>El servlet</h2>
-
-<p>Como ya he comentado antes, se trata de un servlet HTTP, luego nuestro servlet
-heredará de <code>javax.servlet.http.HttpServlet</code>.</p>
-
-<p>Java EE 6 nos permite configurar los servlets sin hacer uso del fichero descriptor
-de la aplicación web, <code>web.xml</code>. Esto es posible mediante la anotación <code>@WebServlet</code>.
-Suponiendo que queremos que el servlet responda cuando el usuario visite la dirección
-<code>/SimpleHttpServlet</code>, la signatura de la clase de nuestro servlet quedaría:</p>
-
-<p>``` java
-@WebServlet(urlPatterns = {"/SimpleHttpServlet"})
-public class HttpServletDemo extends HttpServlet {</p>
-
-<pre><code>//...
-</code></pre>
-
-<p>}
-```</p>
-
-<h3>Respuesta del servlet</h3>
-
-<p>El objetivo de la demo es ver cómo configurar un servlet HTTP mediante anotaciones,
-por lo que la respuesta proporcionada por él es lo más sencilla posible: obtiene
-un <code>writer</code> de la respuesta HTTP y escribe un sencillo mensaje en texto plano.</p>
-
-<p>``` java
-PrintWriter out = response.getWriter();
-try{</p>
-
-<pre><code>out.println("&lt;h2&gt;");
-out.println("This servlet has been configured simply by: ");
-out.println("@WebServlet(urlPatterns = {\"/SimpleHttpServlet\"})");
-out.println("&lt;/h2&gt;");
-</code></pre>
-
-<p>} finally {</p>
-
-<pre><code>out.close();
-</code></pre>
-
-<p>}
-```</p>
-
-<p>Para echar un ojo al código fuente, visitar el directorio
-<a href="https://github.com/rchavarria/javaee-6-demos/tree/master/simple-http-servlet"><code>simple-http-servlet</code></a>.</p>
 ]]></content>
   </entry>
   

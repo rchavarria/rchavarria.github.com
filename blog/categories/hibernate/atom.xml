@@ -4,7 +4,7 @@
   <title><![CDATA[Category: hibernate | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/hibernate/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2013-09-26T09:29:14+02:00</updated>
+  <updated>2013-09-29T16:17:03+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -42,8 +42,9 @@
 <h3>Datos que serán persistentes</h3>
 
 
-<p>Como ya hemos visto, sólo vamos a persistir objetos de la clase Person, la cual tendrá un campo id, que funcionará como la clave principal de la tabla, y un campo name, el nombre de la persona. A continuación vemos el código de esta clase:
-{% codeblock Definir persistencia de datos %}
+<p>Como ya hemos visto, sólo vamos a persistir objetos de la clase Person, la cual tendrá un campo id, que funcionará como la clave principal de la tabla, y un campo name, el nombre de la persona. A continuación vemos el código de esta clase:</p>
+
+<p>``` java
 package es.rct.jpa.model;</p>
 
 <p>import javax.persistence.Entity;
@@ -65,7 +66,7 @@ public long getId() {return id;}
 </code></pre>
 
 <p>}
-{% endcodeblock %}</p>
+```</p>
 
 <p>De esta clase vamos a destacar 3 anotaciones, pertenecientes a JPA. Las podemos encontrar en el paquete javax.persistence:</p>
 
@@ -83,8 +84,36 @@ public long getId() {return id;}
 
 <p>Para poder usar Derby como base de datos y Hibernate como implementación de JPA, debemos incluir las siguientes dependencias en nuestro fichero pom.xml de configuración de maven:</p>
 
-<script src="http://gist.github.com/4194334.js"></script>
+<p>``` xml</p>
 
+<!-- ... -->
+
+
+<p><dependency></p>
+
+<pre><code>&lt;groupId&gt;org.apache.derby&lt;/groupId&gt;
+&lt;artifactId&gt;derby&lt;/artifactId&gt;
+&lt;version&gt;10.6.2.1&lt;/version&gt;
+&lt;type&gt;jar&lt;/type&gt;
+&lt;scope&gt;compile&lt;/scope&gt;
+</code></pre>
+
+<p></dependency>
+<dependency></p>
+
+<pre><code>&lt;groupId&gt;org.hibernate&lt;/groupId&gt;
+&lt;artifactId&gt;hibernate-entitymanager&lt;/artifactId&gt;
+&lt;version&gt;3.4.0.GA&lt;/version&gt;
+&lt;type&gt;jar&lt;/type&gt;
+&lt;scope&gt;compile&lt;/scope&gt;
+</code></pre>
+
+<p></dependency></p>
+
+<!-- ... -->
+
+
+<p>```</p>
 
 <p>Las versiones de las dependencias pueden variar. Aquí aparecen las que yo personalmente he utilizado.</p>
 
@@ -99,8 +128,30 @@ el resultado deseado.</p>
 
 <p>El contenido del fichero de configuración JPA es el siguiente:</p>
 
-<script src="http://gist.github.com/4194389.js"></script>
+<p>``` xml
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0"></p>
 
+<pre><code>&lt;persistence-unit name="test-jpa" transaction-type="RESOURCE_LOCAL"&gt;
+
+&lt;provider&gt;org.hibernate.ejb.HibernatePersistence&lt;/provider&gt;
+
+&lt;class&gt;es.rct.jpa.model.Person&lt;/class&gt;
+&lt;exclude-unlisted-classes&gt;true&lt;/exclude-unlisted-classes&gt;
+
+&lt;properties&gt;
+    &lt;property name="hibernate.connection.url" value="jdbc:derby:memory:testing-jpa;create=true" /&gt;
+    &lt;property name="hibernate.connection.driver_class" value="org.apache.derby.jdbc.EmbeddedDriver" /&gt;
+    &lt;property name="hibernate.dialect" value="org.hibernate.dialect.DerbyDialect" /&gt;
+    &lt;property name="hibernate.hbm2ddl.auto" value="create" /&gt;
+    &lt;property name="hibernate.connection.username" value="" /&gt;
+    &lt;property name="hibernate.connection.password" value="" /&gt;
+&lt;/properties&gt;
+
+&lt;/persistence-unit&gt;
+</code></pre>
+
+<p></persistence>
+```</p>
 
 <p>De este fichero xml podemos destacar las siguientes etiquetas:</p>
 
@@ -127,27 +178,27 @@ el resultado deseado.</p>
 
 <p>Primero, debemos crear un objeto EntityManager, que manejará todo lo relacionado con la persistencia: transacciones, guardar datos, actualizarlos, borrarlos, etc.</p>
 
-<p>{% codeblock %}
-EntityManagerFactory emf = Persistence.createEntityManagerFactory(&quot;test-jpa&quot;);
+<p><code>java
+EntityManagerFactory emf = Persistence.createEntityManagerFactory("test-jpa");
 EntityManager em = emf.createEntityManager();
-{% endcodeblock %}</p>
+</code></p>
 
 <p>Una vez terminemos de utilizar nuestro EntityManager, debemos cerrarlo:</p>
 
-<p>{% codeblock %}
+<p><code>java
 em.close();
 emf.close();
-{% endcodeblock %}</p>
+</code></p>
 
 <p>Ahora ya disponemos de un objeto "em" para poder persistir objetos de tipo Person:</p>
 
-<p>{% codeblock %}
+<p>``` java
 private void insertSomeData() {</p>
 
 <pre><code>Person p = new Person();
-p.setName(&amp;quot;person 01&amp;quot;);
+p.setName("person 01");
 Person p1 = new Person();
-p1.setName(&amp;quot;person 02&amp;quot;);
+p1.setName("person 02");
 
 em.getTransaction().begin();
 em.persist(p);
@@ -156,25 +207,25 @@ em.getTransaction().commit();
 </code></pre>
 
 <p>}
-{% endcodeblock %}</p>
+```</p>
 
 <p>Para poder guardar los datos en base de datos, debemos arrancar una transacción, llamar al método "persist" y terminar la transacción. Si queremos indicar que ha habido un error durante la transacción, y no queremos llevarla a cabo, llamaríamos al método "rollback" en lugar del método "commit".</p>
 
 <p>Para comprobar que realmente hemos almacenado los objetos en la base de datos, sólo tenemos que buscarlos por identificador. Ya que sólo hemos almacenado 2 objetos, y son los 2 primeros, los ids serán 1 y 2 respectivamente:</p>
 
-<p>{% codeblock Insertar datos %}
+<p>``` java
 private void listInsertedData() {</p>
 
 <pre><code>em.getTransaction().begin();
-for (long i = 1; i &amp;lt;= 2; i++) {
+for (long i = 1; i &lt;= 2; i++) {
     Person pFinded = em.find(Person.class, new Long(i));
-    System.out.println(&amp;quot;Id: &amp;quot; + i + &amp;quot;, name: &amp;quot; + pFinded.getName());
+    System.out.println("Id: " + i + ", name: " + pFinded.getName());
 }
 em.getTransaction().commit();
 </code></pre>
 
 <p>}
-{% endcodeblock %}</p>
+```</p>
 
 <h2>Código fuente del ejemplo</h2>
 

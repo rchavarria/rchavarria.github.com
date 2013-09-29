@@ -4,7 +4,7 @@
   <title><![CDATA[Category: blog | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/blog/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2013-09-26T09:29:14+02:00</updated>
+  <updated>2013-09-29T16:17:03+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -34,7 +34,7 @@ diciéndome que había violado alguno de los términos y condiciones de su <em>c
 <!-- more -->
 
 
-<p>{% img center /images/wordpress/wordpress-message.png 720 152 %}</p>
+<p><img class="center" src="/images/wordpress/wordpress-message.png" width="720" height="152"></p>
 
 <p>En este mensaje básicamente me vienen a decir que no cumplo lo que wordpress dice en su Terms of Service
 o en su Advertising policy, pero no especifican nada más.</p>
@@ -61,7 +61,7 @@ superior a 20 diarias), después de este bloqueo temporal, no me va a querer lee
 desplome caer desde prácticamente cero), y para muestra, una imagen de las visitas de los últimos
 días. Como referencia diré que el día en que wordpress decidión bloquear mi blog fue el dia 27 de noviembre.</p>
 
-<p>{% img center /images/wordpress/wordpress-visits.png 524 226 %}</p>
+<p><img class="center" src="/images/wordpress/wordpress-visits.png" width="524" height="226"></p>
 
 <p>Por estas quejas, y sobretodo, porque me apetece bloguear como un hacker, bienvenido a mi <em>nuevo</em> blog.
 Ahora sólo queda migrar los artículos del antiguo a éste. Uff! Qué pereza. Poco a poco amigo.</p>

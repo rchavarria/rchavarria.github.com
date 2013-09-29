@@ -4,7 +4,7 @@
   <title><![CDATA[Category: swing | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/swing/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2013-09-26T09:29:14+02:00</updated>
+  <updated>2013-09-29T16:17:03+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -34,47 +34,85 @@
 
 <p>Para realizar nuestra tarea del cálculo de los números de fibonacci crearemos una clase <code>FibonacciWorker</code> que herede de <code>SwingWorker</code> y que haga uso de los métodos adecuados para notificar el progreso hecho en los cálculos. Esta notificación la haremos a través de eventos de cambios en una propiedad. Es posible utilizar <code>PropertyChangelListeners</code> con propiedades definidas por nosotros y utilizar el método <code>firePropertyChange</code> para lanzar estos eventos. Para este ejemplo utilizaremos la propiedad <code>progress</code> que es una propiedad que ya está enlazada por defecto. La propiedad <code>state</code> (indica el estado de la ejecución de la tarea: <em>INCIADA</em>, <em>CANCELADA</em>, <em>COMPLETADA</em>, ...) también lo está.</p>
 
-<p>{% codeblock Nuestra tarea hereda de SwingWorker %}
-class FibonacciWorker extends SwingWorker&lt;List&lt;Integer&gt;, Integer&gt; {
-  PrimeNumbersTask(JTextArea textArea, int numbersToCalculate) {</p>
-
-<pre><code>//initialize
-</code></pre>
-
-<p>  }</p>
-
-<p>  @Override
-  public List&lt;Integer&gt; doInBackground() {</p>
-
-<pre><code>while (numbers.size &amp;lt;= numberstoCalculate &amp;amp;&amp;amp; !isCancelled()) {
-  number = nextFibonacciNumber();
-  numbers.add(number);
-  publish(number);
-  setProgress(100 * numbers.size() / numbersToCalculate);
-}
-return numbers;
-</code></pre>
-
-<p>  }</p>
-
-<p>  @Override
-  protected void process(List&lt;Integer&gt; chunks) {</p>
-
-<pre><code>for (Integer number : chunks) {
-  textArea.append(number + &amp;quot;\n&amp;quot;);
-}
-</code></pre>
-
-<p>  }</p>
-
-<p>  private Integer nextFibonacciNumber(){</p>
-
-<pre><code>//  calculate next fibonacci number and return it
-</code></pre>
-
-<p>  }
-}
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Nuestra tarea hereda de SwingWorker </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>class FibonacciWorker extends SwingWorker&lt;List&lt;Integer&gt;, Integer&gt; {
+</span><span class='line'>  PrimeNumbersTask(JTextArea textArea, int numbersToCalculate) {&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>//initialize
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>  }&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>  @Override
+</span><span class='line'>  public List&lt;Integer&gt; doInBackground() {&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>while (numbers.size &amp;lt;= numberstoCalculate &amp;amp;&amp;amp; !isCancelled()) {
+</span><span class='line'>  number = nextFibonacciNumber();
+</span><span class='line'>  numbers.add(number);
+</span><span class='line'>  publish(number);
+</span><span class='line'>  setProgress(100 * numbers.size() / numbersToCalculate);
+</span><span class='line'>}
+</span><span class='line'>return numbers;
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>  }&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>  @Override
+</span><span class='line'>  protected void process(List&lt;Integer&gt; chunks) {&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>for (Integer number : chunks) {
+</span><span class='line'>  textArea.append(number + &amp;quot;\n&amp;quot;);
+</span><span class='line'>}
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>  }&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>  private Integer nextFibonacciNumber(){&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>//  calculate next fibonacci number and return it
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>  }
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>En el código anterior se han omitido detalles de implementación para no desviar la atención. Del código anterior cabe destacar la llamada a <code>publish</code> en la línea <strong>11</strong>, la llamada a <code>setProgress</code> (línea <strong>12</strong>) y la implementación del método <code>process</code>.</p>
 
@@ -82,21 +120,33 @@ return numbers;
 
 <p>Con la llamada al método <code>setProgress()</code> estamos indicando que se lance un evento de cambio sobre la propiedad <code>progress</code> (propiedad creada por defecto junto con <code>state</code> para la notificación de cambios en propiedades). El evento propagado incluirá entre sus datos el parámetro que recibe la función. Para mostrar ese progreso utilizaremos una barra de progreso, la cual la registraremos como interesada en recibir eventos de cambios en las propiedades de <code>FibonacciWorker</code>.</p>
 
-<p>{% codeblock Actualizar una barra de progreso %}
-final JProgressBar progressBar = new JProgressBar(0, 100);
-FibonacciWorker task = new FibonacciWorker(textArea, numbersToCalculate);
-task.addPropertyChangeListener(
-  new PropertyChangeListener() {</p>
-
-<pre><code>public  void propertyChange(PropertyChangeEvent evt) {
-  if ("progress".equals(evt.getPropertyName())) {
-    progressBar.setValue((Integer)evt.getNewValue());
-  }
-}
-</code></pre>
-
-<p>  });
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Actualizar una barra de progreso </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>final JProgressBar progressBar = new JProgressBar(0, 100);
+</span><span class='line'>FibonacciWorker task = new FibonacciWorker(textArea, numbersToCalculate);
+</span><span class='line'>task.addPropertyChangeListener(
+</span><span class='line'>  new PropertyChangeListener() {&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>public  void propertyChange(PropertyChangeEvent evt) {
+</span><span class='line'>  if ("progress".equals(evt.getPropertyName())) {
+</span><span class='line'>    progressBar.setValue((Integer)evt.getNewValue());
+</span><span class='line'>  }
+</span><span class='line'>}
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>  });</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>En el siguiente enlace es posible ver una aplicación demostrando lo aprendido. Si se desea descargar el código fuente en forma de proyecto de NetBeans: <a href="http://kenai.com/projects/rchavarria/downloads/download/fibonacci%252FFibonacciCalculator%2520NB%2520project.zip"><strong>FibonacciWorker NetBeans project</strong></a>.</p>
 
@@ -168,105 +218,193 @@ task.addPropertyChangeListener(
 
 <p>Ahora veamos el código que genera el panel con el gestor <code>GridBagLayout</code>:</p>
 
-<p>{% codeblock Generando el panel %}
-package es.rchavarria.gridbaglayouthowto;</p>
-
-<p>public class GridBagLayoutDemo extends javax.swing.JPanel {
-  public GridBagLayoutDemo() {</p>
-
-<pre><code>initComponents();
-</code></pre>
-
-<p>  }</p>
-
-<p> private void initComponents() {
-   java.awt.GridBagConstraints gridBagConstraints;</p>
-
-<p>   btn5 = new javax.swing.JButton();
-   btn1 = new javax.swing.JButton();
-   btn2 = new javax.swing.JButton();
-   btn4 = new javax.swing.JButton();
-   btn6 = new javax.swing.JButton();
-   btn3 = new javax.swing.JButton();</p>
-
-<p>   setLayout(new java.awt.GridBagLayout());</p>
-
-<p>   btn1.setText(&quot;btn 01&quot;);
-   add(btn1, new java.awt.GridBagConstraints());</p>
-
-<p>   btn2.setText(&quot;btn 02&quot;);
-   gridBagConstraints = new java.awt.GridBagConstraints();
-   gridBagConstraints.gridwidth = 2;
-   add(btn2, gridBagConstraints);</p>
-
-<p>   btn3.setText(&quot;btn 03&quot;);
-   gridBagConstraints = new java.awt.GridBagConstraints();
-   gridBagConstraints.gridx = 0;
-   gridBagConstraints.gridy = 1;
-   add(btn3, gridBagConstraints);</p>
-
-<p>   btn4.setText(&quot;btn 04&quot;);
-   gridBagConstraints = new java.awt.GridBagConstraints();
-   gridBagConstraints.gridx = 0;
-   gridBagConstraints.gridy = 2;
-   gridBagConstraints.fill = java.awt.GridBagConstraints.VERTICAL;
-   gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTH;
-   add(btn4, gridBagConstraints);</p>
-
-<p>   btn5.setText(&quot;btn 05&quot;);
-   gridBagConstraints = new java.awt.GridBagConstraints();
-   gridBagConstraints.gridx = 2;
-   gridBagConstraints.gridy = 3;
-   gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-   add(btn5, gridBagConstraints);</p>
-
-<p>   btn6.setText(&quot;large btn&quot;);
-   gridBagConstraints = new java.awt.GridBagConstraints();
-   gridBagConstraints.gridx = 1;
-   gridBagConstraints.gridy = 1;
-   gridBagConstraints.gridwidth = 2;
-   gridBagConstraints.gridheight = 2;
-   gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
-   gridBagConstraints.weightx = 1.0;
-   gridBagConstraints.weighty = 1.0;
-   add(btn6, gridBagConstraints);
- }</p>
-
-<p> private javax.swing.JButton btn1;
- private javax.swing.JButton btn2;
- private javax.swing.JButton btn3;
- private javax.swing.JButton btn4;
- private javax.swing.JButton btn5;
- private javax.swing.JButton btn6;
-}
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Generando el panel </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>package es.rchavarria.gridbaglayouthowto;&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>public class GridBagLayoutDemo extends javax.swing.JPanel {
+</span><span class='line'>  public GridBagLayoutDemo() {&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>initComponents();
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>  }&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p> private void initComponents() {
+</span><span class='line'>   java.awt.GridBagConstraints gridBagConstraints;&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>   btn5 = new javax.swing.JButton();
+</span><span class='line'>   btn1 = new javax.swing.JButton();
+</span><span class='line'>   btn2 = new javax.swing.JButton();
+</span><span class='line'>   btn4 = new javax.swing.JButton();
+</span><span class='line'>   btn6 = new javax.swing.JButton();
+</span><span class='line'>   btn3 = new javax.swing.JButton();&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>   setLayout(new java.awt.GridBagLayout());&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>   btn1.setText(&quot;btn 01&quot;);
+</span><span class='line'>   add(btn1, new java.awt.GridBagConstraints());&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>   btn2.setText(&quot;btn 02&quot;);
+</span><span class='line'>   gridBagConstraints = new java.awt.GridBagConstraints();
+</span><span class='line'>   gridBagConstraints.gridwidth = 2;
+</span><span class='line'>   add(btn2, gridBagConstraints);&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>   btn3.setText(&quot;btn 03&quot;);
+</span><span class='line'>   gridBagConstraints = new java.awt.GridBagConstraints();
+</span><span class='line'>   gridBagConstraints.gridx = 0;
+</span><span class='line'>   gridBagConstraints.gridy = 1;
+</span><span class='line'>   add(btn3, gridBagConstraints);&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>   btn4.setText(&quot;btn 04&quot;);
+</span><span class='line'>   gridBagConstraints = new java.awt.GridBagConstraints();
+</span><span class='line'>   gridBagConstraints.gridx = 0;
+</span><span class='line'>   gridBagConstraints.gridy = 2;
+</span><span class='line'>   gridBagConstraints.fill = java.awt.GridBagConstraints.VERTICAL;
+</span><span class='line'>   gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTH;
+</span><span class='line'>   add(btn4, gridBagConstraints);&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>   btn5.setText(&quot;btn 05&quot;);
+</span><span class='line'>   gridBagConstraints = new java.awt.GridBagConstraints();
+</span><span class='line'>   gridBagConstraints.gridx = 2;
+</span><span class='line'>   gridBagConstraints.gridy = 3;
+</span><span class='line'>   gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+</span><span class='line'>   add(btn5, gridBagConstraints);&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>   btn6.setText(&quot;large btn&quot;);
+</span><span class='line'>   gridBagConstraints = new java.awt.GridBagConstraints();
+</span><span class='line'>   gridBagConstraints.gridx = 1;
+</span><span class='line'>   gridBagConstraints.gridy = 1;
+</span><span class='line'>   gridBagConstraints.gridwidth = 2;
+</span><span class='line'>   gridBagConstraints.gridheight = 2;
+</span><span class='line'>   gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+</span><span class='line'>   gridBagConstraints.weightx = 1.0;
+</span><span class='line'>   gridBagConstraints.weighty = 1.0;
+</span><span class='line'>   add(btn6, gridBagConstraints);
+</span><span class='line'> }&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p> private javax.swing.JButton btn1;
+</span><span class='line'> private javax.swing.JButton btn2;
+</span><span class='line'> private javax.swing.JButton btn3;
+</span><span class='line'> private javax.swing.JButton btn4;
+</span><span class='line'> private javax.swing.JButton btn5;
+</span><span class='line'> private javax.swing.JButton btn6;
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Mediante las líneas del código del tipo: <code>add(componente, gridBagConstraint);</code> se especifican las restricciones para cada componente. Es posible utilizar el mismo objeto para especificar las restricciones pero es recomendable utilizar distintas instancias.</p>
 
 <p>Para ver el resultado de este código, simplemente podemos probarlo mediante la siguiente clase:</p>
 
-<p>{% codeblock Codigo de prueba %}
-package es.rchavarria.gridbaglayouthowto;</p>
-
-<p>import javax.swing.JFrame;
-import javax.swing.SwingUtilities;</p>
-
-<p>public class RunDemo {
-public static void main(String[] args) {
-  SwingUtilities.invokeLater(new Runnable() {</p>
-
-<pre><code>public void run() {
-  JFrame frm = new JFrame(&amp;quot;GridBagLayout HowTo&amp;quot;);
-  frm.getContentPane().add(new GridBagLayoutDemo());
-  frm.pack();
-  frm.setVisible(true);
-}
-</code></pre>
-
-<p>  });
-}
-}
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Codigo de prueba </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>package es.rchavarria.gridbaglayouthowto;&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>import javax.swing.JFrame;
+</span><span class='line'>import javax.swing.SwingUtilities;&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>public class RunDemo {
+</span><span class='line'>public static void main(String[] args) {
+</span><span class='line'>  SwingUtilities.invokeLater(new Runnable() {&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>public void run() {
+</span><span class='line'>  JFrame frm = new JFrame(&amp;quot;GridBagLayout HowTo&amp;quot;);
+</span><span class='line'>  frm.getContentPane().add(new GridBagLayoutDemo());
+</span><span class='line'>  frm.pack();
+</span><span class='line'>  frm.setVisible(true);
+</span><span class='line'>}
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>  });
+</span><span class='line'>}
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   
@@ -289,17 +427,24 @@ public static void main(String[] args) {
 
 <p>Durante el desarrollo de interfaces gráficas suelen aparecer tareas cuya realización conllevan mucho tiempo, por ejemplo, leer un archivo XML cuando el usuario pulse un botón. La forma más rápida y sencilla de realizar esta tarea podría ser los siguiente:</p>
 
-<p>{% codeblock %}
-JButton button = new JButton(&quot;Cargar fichero XML&quot;);
-button.addActionListener(new ActionListener() {</p>
-
-<pre><code>public void actionPerformed(ActionEvent e) {
-    xmlDocument = loadXML();
-}
-</code></pre>
-
-<p>});
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>JButton button = new JButton(&quot;Cargar fichero XML&quot;);
+</span><span class='line'>button.addActionListener(new ActionListener() {&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>public void actionPerformed(ActionEvent e) {
+</span><span class='line'>    xmlDocument = loadXML();
+</span><span class='line'>}
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>});</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>De esta forma, la carga del archivo se realiza en el hilo manejador de eventos (EDT - Event Dispatching Thread) de Swing, y como la tarea necesita mucho tiempo, no es posible manejar el resto de eventos que la interfaz gráfica genera y se quedara congelado, fijo, sin respuesta aparente, hasta que la tarea finalice. Esto produce un efecto indeseable de cara al usuario de la aplicación.</p>
 
@@ -319,17 +464,24 @@ button.addActionListener(new ActionListener() {</p>
 
 <p>La forma más simple de utilizar SwingWorker es implementando el método <em>doInBackground </em>extendiendo la clase SwingWorker o creando una clase anónima:</p>
 
-<p>{% codeblock %}
-SwingWorker worker = new SwingWorker&lt;MyXMLFile, Void&gt;() {</p>
-
-<pre><code>public MyXMLFile doInBackground() {
-    MyXMLFile myXMLDoc = loadXML();
-    return myXMLDoc;
-}
-</code></pre>
-
-<p>};
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>SwingWorker worker = new SwingWorker&lt;MyXMLFile, Void&gt;() {&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>public MyXMLFile doInBackground() {
+</span><span class='line'>    MyXMLFile myXMLDoc = loadXML();
+</span><span class='line'>    return myXMLDoc;
+</span><span class='line'>}
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>};</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>Para que la tarea se ejecute debemos invocar al método <em>execute</em> de SwingWorker. Dicho método se encarga de llamar a <em>doInBackground </em>asegurándose de que se ejecuta en un hilo diferente al EDT.</p>
 
@@ -337,20 +489,30 @@ SwingWorker worker = new SwingWorker&lt;MyXMLFile, Void&gt;() {</p>
 
 <ol>
     <li>Sobrescribiendo el método <em>done</em>, el cual es ejecutado en el hilo manejador de eventos después de que la tarea haya finalizado.
-{% codeblock %}
-private MyXMLFile doc;
-//...
-SwingWorker&lt;Document, Void&gt; worker = new SwingWorker&lt;MyXMLFile, Void&gt;() {
-    public MyXMLFile doInBackground() {
-        MyXMLFile myXMLDoc = loadXML();
-        return myXMLDoc;
-    }
-
-    public void done() {
-        doc = get();
-    }
-};
-{% endcodeblock %}</li>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>private MyXMLFile doc;
+</span><span class='line'>//...
+</span><span class='line'>SwingWorker&lt;Document, Void&gt; worker = new SwingWorker&lt;MyXMLFile, Void&gt;() {
+</span><span class='line'>    public MyXMLFile doInBackground() {
+</span><span class='line'>        MyXMLFile myXMLDoc = loadXML();
+</span><span class='line'>        return myXMLDoc;
+</span><span class='line'>    }
+</span><span class='line'>
+</span><span class='line'>    public void done() {
+</span><span class='line'>        doc = get();
+</span><span class='line'>    }
+</span><span class='line'>};</span></code></pre></td></tr></table></div></figure></notextile></div></li>
     <li>Registrar un <em>listener </em>mediante el método <em>addPropertyChangeListener(PropertyChangeListener listener)</em> el cual será notificado de cambios en el estado de SwingWorker.</span></li>
 </ol>
 
@@ -378,11 +540,11 @@ SwingWorker&lt;Document, Void&gt; worker = new SwingWorker&lt;MyXMLFile, Void&gt
 
 <p>Lo primero de todo veamos qué se puede conseguir con este gestor de layout:</p>
 
-<p>{% img center /images/wordpress/gridbaglayout-frame1.png 250 142 Ventana usando <code>GridBagLayout</code> %}</p>
+<p><img class="center /images/wordpress/gridbaglayout-frame1.png 250 142 Ventana usando" src="<code>GridBagLayout</code>"></p>
 
 <p><code>GridBagLayout</code> coloca los componentes en una serie de filas y columnas, permite a los componentes ocupar varias filas y/o columnas y las filas y las columnas no tienen porque tener la misma altura o anchura. Finalmente, <code>GridBagLayout</code> calcula estas alturas y anchuras dependiendo de los atributos preferredSize de los componentes. En la siguiente imagen podemos el diseño de cada una de las celdas en las que se divide <code>GridBagLayout</code>:</p>
 
-<p>{% img center /images/wordpress/gridbaglayout-design.png 172 124 Diseñando un panel con GridBagLayout %}</p>
+<p><img class="center" src="/images/wordpress/gridbaglayout-design.png" width="172" height="124" title="Diseñando un panel con GridBagLayout" ></p>
 
 <p>Los componentes indican a <code>GridBagLayout</code> sus restricciones mediante un objeto del tipo <code>GridBagConstraints</code>. En esta primera entrada estudiaremos las restricciones básicas y dejaremos para la siguiente parámetros más avanzados que nos permitirán diseñar la posición y comportamiento de los componentes con máxima flexibilidad.</p>
 

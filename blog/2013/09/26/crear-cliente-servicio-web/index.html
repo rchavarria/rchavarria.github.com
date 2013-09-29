@@ -124,12 +124,14 @@ del repositorio de las demos en github.</p>
 
 <h2>Demo</h2>
 
-<p>En esta demo crearemos en cliente que invocará a los métodos expuestos por el servicio
+<p>Esta demo pertenece a una serie de
+<a href="/blog/2013/09/03/demos-tecnologias-javaee">tutoriales de demostración de tecnologías J2EE</a> y
+en esta en particular crearemos en cliente que invocará a los métodos expuestos por el servicio
 web desarrollado en la demo anterior. Estos métodos son:</p>
 
 <ol>
 <li>Añadir usuario: añadiremos un nombre de usuario al servicio.</li>
-<li>Obtener usuario: mediante un identificiador, obtendremos un nombre de usuario.</li>
+<li>Obtener usuario: mediante un identificador, obtendremos un nombre de usuario.</li>
 </ol>
 
 
@@ -144,7 +146,7 @@ el fichero WSDL, que describe el servicio, esté disponible y actualizado. Tambi
 es posible usar un fichero ya existente, por ejemplo, en el caso de que queramos
 desarrollar un cliente para un servicio web de terceros. En definitiva, el elemento
 realmente importante en un servicio web, es el fichero WSDL, que es quien define
-de manera unequívoca el servicio en sí.</p>
+de manera inequívoca el servicio en sí.</p>
 
 <p>Para esta demo, arrancaremos el servicio web desarrollado en la
 <a href="/blog/2013/09/19/crear-servicio-web-jaxws">demo anterior</a>. Básicamente, los comandos
@@ -300,7 +302,7 @@ de <code>maven</code>, así que simplemente ejecuta el comando <code>mvn test</c
 <p>He añadido también un plugin, surefire report, por lo que ejecutnado el comando
 <code>mvn site</code>, la herramienta generará (entre otras cosas), un informe con los resultados
 de la ejecución de nuestros tests. Ejecuta el comando y abre el fichero HTML que
-encontrarás en el directorio <code>target/site/index.html</code> del proyecto.</p>
+encontrarás en esta ruta dentro del directorio raiz del proyecto <code>target/site/index.html</code>.</p>
 
 <h2>Enlaces para ampliar información</h2>
 
@@ -357,6 +359,8 @@ encontrarás en el directorio <code>target/site/index.html</code> del proyecto.<
         <a class="basic-alignment left" href="/blog/2013/09/19/crear-servicio-web-jaxws/" title="Previous Post: Crear un servicio web JAX-WS">&laquo; Crear un servicio web JAX-WS</a>
       
       
+        <a class="basic-alignment right" href="/blog/2013/09/29/entendiendo-ciclo-vida-entidades-jpa/" title="Next Post: Entendiendo el ciclo de vida de entidades JPA">Entendiendo el ciclo de vida de entidades JPA &raquo;</a>
+      
     </p>
   </footer>
 </article>
@@ -376,6 +380,10 @@ encontrarás en el directorio <code>target/site/index.html</code> del proyecto.<
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/09/29/entendiendo-ciclo-vida-entidades-jpa/">Entendiendo el ciclo de vida de entidades JPA</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/09/26/crear-cliente-servicio-web/">Crear una applicación cliente para un servicio web</a>
       </li>
     
@@ -389,10 +397,6 @@ encontrarás en el directorio <code>target/site/index.html</code> del proyecto.<
     
       <li class="post">
         <a href="/blog/2013/09/13/servlet-lee-parametros/">Leer parámetros desde un servlet</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/09/03/sencillo-servlet-http/">Un sencillo servlet HTTP</a>
       </li>
     
   </ul>

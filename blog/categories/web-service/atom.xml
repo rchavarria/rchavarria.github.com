@@ -4,7 +4,7 @@
   <title><![CDATA[Category: web service | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/web-service/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2013-09-26T09:29:14+02:00</updated>
+  <updated>2013-09-29T16:17:03+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -37,12 +37,14 @@ del repositorio de las demos en github.</p>
 
 <h2>Demo</h2>
 
-<p>En esta demo crearemos en cliente que invocará a los métodos expuestos por el servicio
+<p>Esta demo pertenece a una serie de
+<a href="/blog/2013/09/03/demos-tecnologias-javaee">tutoriales de demostración de tecnologías J2EE</a> y
+en esta en particular crearemos en cliente que invocará a los métodos expuestos por el servicio
 web desarrollado en la demo anterior. Estos métodos son:</p>
 
 <ol>
 <li>Añadir usuario: añadiremos un nombre de usuario al servicio.</li>
-<li>Obtener usuario: mediante un identificiador, obtendremos un nombre de usuario.</li>
+<li>Obtener usuario: mediante un identificador, obtendremos un nombre de usuario.</li>
 </ol>
 
 
@@ -57,7 +59,7 @@ el fichero WSDL, que describe el servicio, esté disponible y actualizado. Tambi
 es posible usar un fichero ya existente, por ejemplo, en el caso de que queramos
 desarrollar un cliente para un servicio web de terceros. En definitiva, el elemento
 realmente importante en un servicio web, es el fichero WSDL, que es quien define
-de manera unequívoca el servicio en sí.</p>
+de manera inequívoca el servicio en sí.</p>
 
 <p>Para esta demo, arrancaremos el servicio web desarrollado en la
 <a href="/blog/2013/09/19/crear-servicio-web-jaxws">demo anterior</a>. Básicamente, los comandos
@@ -118,7 +120,7 @@ a los <em>métodos</em> web.</li>
 
 <h3>Crear un test de JUnit para invocar el servicio web</h3>
 
-<p>{% img left /images/2013/web-service-test.png Ejecución de la demo como un test %}</p>
+<p><img class="left" src="/images/2013/web-service-test.png" title="Ejecución de la demo como un test" ></p>
 
 <p>Usaremos un sencillo test de JUnit para invocar a nuestro servicio. Se puede utilizar
 una clase normal de Java, con un método <code>main</code>, pero haciéndolo con un test, podemos
@@ -230,7 +232,7 @@ del repositorio de las demos en github.</p>
 
 <h2>Demo</h2>
 
-<p>{% img right /images/2013/web-services-by-psd.jpg 320 213 Foto por el usuario de flickr psd %}</p>
+<p><img class="right" src="/images/2013/web-services-by-psd.jpg" width="320" height="213" title="Foto por el usuario de flickr psd" ></p>
 
 <p>En esta demo no veremos nada funcionando, ya que vamos a crear un servicio web
 pero no vamos a crear un cliente que lo consuma (eso para la siguiente). La forma

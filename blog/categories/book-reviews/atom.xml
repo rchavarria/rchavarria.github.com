@@ -4,7 +4,7 @@
   <title><![CDATA[Category: book reviews | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/book-reviews/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2013-09-26T09:29:14+02:00</updated>
+  <updated>2013-09-29T16:17:03+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -22,7 +22,7 @@
 
 <h5>Eliyahu Goldratt</h5>
 
-<p>{% img right http://ecx.images-amazon.com/images/I/51E50P52AXL.<em>SY300</em>.jpg 195 300 La meta %}</p>
+<p><img class="right" src="http://ecx.images-amazon.com/images/I/51E50P52AXL.<em>SY300</em>.jpg" width="195" height="300" title="La meta" ></p>
 
 <h2>Por qué lo he leído</h2>
 
@@ -134,7 +134,7 @@ es productivo, todo aquello que no la lleve es imprductivo.</p></li>
 
 <h5>Mike Cohn</h5>
 
-<p>{% img right http://www.mcwherter.net/Portals/McWherter/9780131479418.jpg 245 324 Agile estimating and planning %}</p>
+<p><img class="right" src="http://www.mcwherter.net/Portals/McWherter/9780131479418.jpg" width="245" height="324" title="Agile estimating and planning" ></p>
 
 <h2>Por qué lo he leído</h2>
 
@@ -283,7 +283,7 @@ en su blog.</li>
 <h5>Neal Stephenson</h5>
 
 
-<p>{% img right http://curiosoperoinutil.com/wp-content/uploads/2006/12/Neal-Stephenson-En-el-principio-era-la-linea-de-comandos.jpg 198 296 En el principo fue la linea de comandos %}</p>
+<p><img class="right" src="http://curiosoperoinutil.com/wp-content/uploads/2006/12/Neal-Stephenson-En-el-principio-era-la-linea-de-comandos.jpg" width="198" height="296" title="En el principo fue la linea de comandos" ></p>
 
 <h2>Por qué lo he leído</h2>
 
@@ -418,7 +418,7 @@ en su blog.</li>
 <h5>Mary Poppendieck, Tom Poppendiek:</h5>
 
 
-<p>{% img right http://www.poppendieck.com/images/Agiletoolkit.jpg 250 332 Lean software development %}</p>
+<p><img class="right" src="http://www.poppendieck.com/images/Agiletoolkit.jpg" width="250" height="332" title="Lean software development" ></p>
 
 <h2>Por qué lo he leído</h2>
 
@@ -549,7 +549,7 @@ en su blog.</li>
 <h5>Henrik Kniberg</h5>
 
 
-<p>{% img right http://www.infoq.com/resource/minibooks/scrum-xp-from-the-trenches/en/cover/coverlandingpage.JPG 174 265 Scrum y XP desde las trincheras %}</p>
+<p><img class="right" src="http://www.infoq.com/resource/minibooks/scrum-xp-from-the-trenches/en/cover/coverlandingpage.JPG" width="174" height="265" title="Scrum y XP desde las trincheras" ></p>
 
 <h2>Por qué lo he leído</h2>
 
