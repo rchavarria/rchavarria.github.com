@@ -36,7 +36,8 @@ Nuestro ejemplo va a consistir en algo muy (pero que muy) sencillo, pero que nos
 <h3>Datos que serán persistentes</h3>
 
 Como ya hemos visto, sólo vamos a persistir objetos de la clase Person, la cual tendrá un campo id, que funcionará como la clave principal de la tabla, y un campo name, el nombre de la persona. A continuación vemos el código de esta clase:
-{% codeblock Definir persistencia de datos %}
+
+``` java
 package es.rct.jpa.model;
 
 import javax.persistence.Entity;
@@ -55,7 +56,7 @@ public class Person {
     public void setId(final long id) {this.id = id;}
     public long getId() {return id;}
 }
-{% endcodeblock %}
+```
 
 De esta clase vamos a destacar 3 anotaciones, pertenecientes a JPA. Las podemos encontrar en el paquete javax.persistence:
 
@@ -69,7 +70,24 @@ De esta clase vamos a destacar 3 anotaciones, pertenecientes a JPA. Las podemos 
 
 Para poder usar Derby como base de datos y Hibernate como implementación de JPA, debemos incluir las siguientes dependencias en nuestro fichero pom.xml de configuración de maven:
 
-<script src="http://gist.github.com/4194334.js"></script>
+``` xml
+<!-- ... -->
+<dependency>
+    <groupId>org.apache.derby</groupId>
+    <artifactId>derby</artifactId>
+    <version>10.6.2.1</version>
+    <type>jar</type>
+    <scope>compile</scope>
+</dependency>
+<dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-entitymanager</artifactId>
+    <version>3.4.0.GA</version>
+    <type>jar</type>
+    <scope>compile</scope>
+</dependency>
+<!-- ... -->
+```
 
 Las versiones de las dependencias pueden variar. Aquí aparecen las que yo personalmente he utilizado.
 
@@ -83,7 +101,27 @@ el resultado deseado.
 
 El contenido del fichero de configuración JPA es el siguiente:
 
-<script src="http://gist.github.com/4194389.js"></script>
+``` xml
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="1.0">
+    <persistence-unit name="test-jpa" transaction-type="RESOURCE_LOCAL">
+     
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+     
+    <class>es.rct.jpa.model.Person</class>
+    <exclude-unlisted-classes>true</exclude-unlisted-classes>
+     
+    <properties>
+        <property name="hibernate.connection.url" value="jdbc:derby:memory:testing-jpa;create=true" />
+        <property name="hibernate.connection.driver_class" value="org.apache.derby.jdbc.EmbeddedDriver" />
+        <property name="hibernate.dialect" value="org.hibernate.dialect.DerbyDialect" />
+        <property name="hibernate.hbm2ddl.auto" value="create" />
+        <property name="hibernate.connection.username" value="" />
+        <property name="hibernate.connection.password" value="" />
+    </properties>
+     
+    </persistence-unit>
+</persistence>
+```
 
 De este fichero xml podemos destacar las siguientes etiquetas:
 
@@ -104,48 +142,48 @@ Ahora sólo queda crear nuestro código para almacenar algunos objetos del tipo 
 
 Primero, debemos crear un objeto EntityManager, que manejará todo lo relacionado con la persistencia: transacciones, guardar datos, actualizarlos, borrarlos, etc.
 
-{% codeblock %}
-EntityManagerFactory emf = Persistence.createEntityManagerFactory(&quot;test-jpa&quot;);
+``` java
+EntityManagerFactory emf = Persistence.createEntityManagerFactory("test-jpa");
 EntityManager em = emf.createEntityManager();
-{% endcodeblock %}
+```
 
 Una vez terminemos de utilizar nuestro EntityManager, debemos cerrarlo:
 
-{% codeblock %}
+``` java
 em.close();
 emf.close();
-{% endcodeblock %}
+```
 
 Ahora ya disponemos de un objeto "em" para poder persistir objetos de tipo Person:
 
-{% codeblock %}
+``` java
 private void insertSomeData() {
     Person p = new Person();
-    p.setName(&quot;person 01&quot;);
+    p.setName("person 01");
     Person p1 = new Person();
-    p1.setName(&quot;person 02&quot;);
+    p1.setName("person 02");
 
     em.getTransaction().begin();
     em.persist(p);
     em.persist(p1);
     em.getTransaction().commit();
 }
-{% endcodeblock %}
+```
 
 Para poder guardar los datos en base de datos, debemos arrancar una transacción, llamar al método "persist" y terminar la transacción. Si queremos indicar que ha habido un error durante la transacción, y no queremos llevarla a cabo, llamaríamos al método "rollback" en lugar del método "commit".
 
 Para comprobar que realmente hemos almacenado los objetos en la base de datos, sólo tenemos que buscarlos por identificador. Ya que sólo hemos almacenado 2 objetos, y son los 2 primeros, los ids serán 1 y 2 respectivamente:
 
-{% codeblock Insertar datos %}
+``` java
 private void listInsertedData() {
     em.getTransaction().begin();
-    for (long i = 1; i &lt;= 2; i++) {
+    for (long i = 1; i <= 2; i++) {
         Person pFinded = em.find(Person.class, new Long(i));
-        System.out.println(&quot;Id: &quot; + i + &quot;, name: &quot; + pFinded.getName());
+        System.out.println("Id: " + i + ", name: " + pFinded.getName());
     }
     em.getTransaction().commit();
 }
-{% endcodeblock %}
+```
 
 <h2>Código fuente del ejemplo</h2>
 

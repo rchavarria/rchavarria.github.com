@@ -46,6 +46,9 @@ web basado en la especificación JAX-WS, que intercambiará mensajes SOAP sobre 
 Aquí veremos cómo crear un sencillo cliente que consuma el servicio web creado en la demo
 anterior. Lo haremos mediante un test de JUnit, y así crearemos nuestro primer test
 de integración.
+- [Entendiendo el ciclo de vida de entidades JPA](/blog/2013/09/29/entendiendo-ciclo-vida-entidades-jpa):
+Aquí aprenderemos qué estados son posibles para una entidad JPA, qué significan 
+y cómo transicionar de unos a otros.
 - Servlet listeners: Veremos el uso que le podemos dar a los distintos listeners asociados
 a los servlets y su ciclo de vida: ServletContextListener, 
 ServletContextAttributeListener, ServletRequestListener y HttpSessionListener.

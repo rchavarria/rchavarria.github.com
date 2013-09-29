@@ -46,7 +46,7 @@ de transiciones de un estado a otro.
 
 ## Antes de comenzar
 
-Antes de nada, existen unas entidades y unos test sencillos, de ejercitación y puesta a
+Antes de nada, existen unas entidades y unos tests sencillos, de ejercitación y puesta a
 punto de JPA, Hibernate (implementación de JPA para esta demo) y Derby (el motor de
 base de datos utilizada aquí). 
 
@@ -59,13 +59,13 @@ el ciclo de vida que describiremos a continuación.
 Una entidad se puede encontrar en alguno de estos estados:
 
 - No existe todavía: no es un estado en sí, pero podría verse con el origen de todo.
-- Nueva: la entidad se acaba de instaciar con el operador `new`, como una clase Java
+- **Nueva**: la entidad se acaba de instaciar con el operador `new`, como una clase Java
 de toda la vida. No está asociado a ningún contexto de persistencia.
-- Gestionada: tiene una identidad persistente y está asociada a un contexto de
+- **Gestionada**: tiene una identidad persistente y está asociada a un contexto de
 persistencia.
-- Separada: tiene una identidad persistente pero no está asociada a un contexto de
+- **Separada**: tiene una identidad persistente pero no está asociada a un contexto de
 persistencia.
-- Eliminada: tiene una identidad persistente, está asociada a un contexto de persistencia,
+- **Eliminada**: tiene una identidad persistente, está asociada a un contexto de persistencia,
 pero está marcada para ser eliminada de la base de datos.
 
 ## Ciclo de vida, transiciones
@@ -75,7 +75,7 @@ posibles de una manera gráfica.
 
 {% img center http://docs.oracle.com/cd/E16439_01/doc.1013/e13981/img/lifeent30.gif Transiciones de una entidad JPA %}
 
-### De nueva a gestionada
+### Transición de nueva a gestionada
 
 Fácilmente, con el método `persist`:
 
@@ -89,7 +89,7 @@ public void testFromNewToManaged() {
 }
 ```
 
-### De gestionada a separada
+### Transición de gestionada a separada
 
 Existen dos formas:
 
@@ -127,7 +127,7 @@ public void testFromManagedToDetachedClosingEntityManager() {
 }
 ```
 
-### De separada a gestionada
+### Transición de separada a gestionada
 
 ``` java
 @Test
@@ -145,9 +145,9 @@ public void testFromDetachedToManaged() {
 
 Una entidad previamente gestionada pero que fue separada, es posible actualizarla
 a un nuevo contexto de persistencia. Pero hay que tener cuidado, el objeto original
-no es el que pasa a ser gestionado, si no el devuelto por el método `merge`.
+no es el que pasa a ser gestionado, si no que es el devuelto por el método `merge`.
 
-### De gestionada a eliminada
+### Transición de gestionada a eliminada
 
 ``` java
 @Test
@@ -160,7 +160,7 @@ public void testFromManagedToRemoved() {
 }
 ```
 
-### De eliminada a gestionada
+### Transición de eliminada a gestionada
 
 Aunqe esta transición no está documentada en el diagrama anterior de Oracle, es posible
 transicionar una entidad a gestionada una vez ésta ya ha sido marcada como eliminada. 
@@ -202,11 +202,11 @@ public static void classSetUp() {
 Por otro lado, la creación de una `EntityManager` es mucho más ligero, y la recomendación
 dada por la documentación es la de crear una de ellas por cada transacción que vayamos
 a realizar. Pero cuidado, esto no quiere decir que debamos crear una de ellas en
-cada consulta a la base de datos, si no más bien, en cada petición de la aplicación
+cada consulta a la base de datos, si no más bien, una por cada petición de la aplicación
 cliente, es decir, que es una buena práctica agrupar varias consultas siempre y
 cuando estas consultas tengan el objetivo de crear un único resultado al cliente.
 
-Por esta razón de que es poco costos crear un `EntityManager`, su creación se
+Por esta razón de que es poco costoso crear un `EntityManager`, su creación se
 realiza en el método `setUp` del test, de forma que tendremos un contexto de persistencia
 limpio en la ejecución de cada uno de nuestros tests, pero reaprovecharemos las
 conexiones a la base de datos, ya que éstas se mantienen en el `EntityManagerFactory`.
@@ -227,7 +227,7 @@ de `maven`, así que simplemente ejecuta el comando `mvn test` para ver los resu
 ## Enlaces para ampliar información
 
 - [Código de la demo en github](https://github.com/rchavarria/javaee-6-demos/tree/master/jpa-entities)
-- [Usar JPA, Hibernate y Derby](http://rchavarria.github.io/blog/2011/05/19/uso-de-jpa-hibernate-y-derby):
+- [Usar JPA, Hibernate y Derby](/blog/2011/05/19/uso-de-jpa-hibernate-y-derby):
 un post en este mismo blog sobre cómo usar JPA, Hibernate como implementación del estándar
 y Derby como base de datos.
 - [An excellent JPA tutorial](http://www.davidmarco.es/blog/entrada.php?id=144): 
