@@ -4,7 +4,7 @@
   <title><![CDATA[Category: book reviews | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/book-reviews/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2013-09-29T16:17:03+02:00</updated>
+  <updated>2013-10-07T10:07:44+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,79 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Instant Markdown]]></title>
+    <link href="http://rchavarria.github.io/blog/2013/10/07/instant-markdown/"/>
+    <updated>2013-10-07T09:38:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2013/10/07/instant-markdown</id>
+    <content type="html"><![CDATA[<h4>Instant Markdown</h4>
+
+<h5>Eliyahu Goldratt</h5>
+
+<p><img class="right" src="http://www.packtpub.com/sites/default/files/9145OT_Instant%20Markdown_cov_0.jpg" width="195" height="300" title="Instant Markdown" ></p>
+
+<h2>Por qué lo he leído</h2>
+
+<p>El lenguaje Markdown me interesa, me parece una forma sencilla de formatear documentos
+sin usar grandes pomposidades, y <a href="http://twitter.com/arturoherrero">Arturo</a>, a través de twitter, dió la posibilidad
+de conseguir una copia (¡muchas gracias por cierto!). Había leído alguna <em>review</em>
+del libro, como la de <a href="http://kinisoftware.com/2013/09/revisando-el-libro-instant-markdown">Kinisoftware</a>, por lo que no podía desperdiciar la oportunidad.</p>
+
+<!-- more -->
+
+
+<h2>Qué esperaba</h2>
+
+<p>Ya conocía por encima la sintaxis de Markdown, la utilizo para escribir este post
+y cada vez más para tomar notas rápidas. También, al haber leído ya un par de
+revisiones, ya tenía más o menos una idea de lo que era el libro. Pero hasta que
+no lo lees no sabes con certeza si has acertado o no, así que allá que fui.</p>
+
+<h2>Qué encontre</h2>
+
+<p>Es un libro conciso, directo al grano y facilísimo de leer. Está en ingles, vale,
+pero de verdad que es sencillo de leer. Arturo expone el tema con claridad y sin
+andarse con rodeos.</p>
+
+<p>Aquí podrás encontrar una referencia rápida pero completa de la sintaxis oficial de
+Markdown así como algunos añadidos que ofrecen páginas como <a href="http://github.com">Github</a>, por ejemplo.</p>
+
+<p>También conocerás herramientas para trabajar con Markdown para tu día a día y para
+tareas tan comunes como escribir emails (está genial poder escribir un email, con
+formato, sin tener que levantar las manos del teclado).</p>
+
+<h2>Conclusiones</h2>
+
+<p><em>Instant Markdown</em> es un libro muy fácil de leer, y que te da unas cuantas ideas
+para profundizar en el tema, así que no decepciona. <strong>¿Quieres tener una referencia
+rápida del lenguaje?</strong> Aquí la encontrarás. <strong>¿Quieres conocer posibles usos diarios
+de una sintaxis sencillísima para escribir documentos formateado?</strong> Alimenta tu
+curiosidad con este libro.</p>
+
+<p>Una vez que pruebes la sencillez y rapidez de Markdown, querrás utilizarlo para
+todo, y este libro te indica unas cuantas herramientas para ello.</p>
+
+<h2>Qué he aprendido con este libro</h2>
+
+<ul>
+<li>Se pueden dibujar líneas horizontales, simplemente escribiendo 3 o más de estos
+carácteres en la misma línea: <code>-</code>, <code>*</code>, <code>_</code>. Así:</li>
+</ul>
+
+
+<hr />
+
+<ul>
+<li><p>Puedes escribir emails con la herramienta <a href="http://markdown-here.com">Markdown Here</a>.</p></li>
+<li><p>Puedes escribir listas de cosas por hacer, muy útil. <a href="http://cheddarapp.com">Cheddar</a>.</p></li>
+<li><p>Con la herramienta <a href="http://johnmacfarlane.net/pandoc">pandoc</a> podrás generar múltiples
+formatos a partir de Markdown: HTML, docx, odt, ebook, latex y pdf.</p></li>
+<li><p>Y si Markdown se queda corto en alǵun momento: <a href="http://fletcherpenney.net/multimarkdown">MultiMarkdown</a></p></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[La meta]]></title>
@@ -532,119 +605,6 @@ en su blog.</li>
 
 
 <h2></h2>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Scrum y XP desde las trincheras]]></title>
-    <link href="http://rchavarria.github.io/blog/2012/07/06/srum-y-xp-desde-las-trincheras/"/>
-    <updated>2012-07-06T06:06:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2012/07/06/srum-y-xp-desde-las-trincheras</id>
-    <content type="html"><![CDATA[<h4>Scrum y XP desde las trincheras</h4>
-
-
-
-
-<h5>Henrik Kniberg</h5>
-
-
-<p><img class="right" src="http://www.infoq.com/resource/minibooks/scrum-xp-from-the-trenches/en/cover/coverlandingpage.JPG" width="174" height="265" title="Scrum y XP desde las trincheras" ></p>
-
-<h2>Por qué lo he leído</h2>
-
-
-<p>Estaba un poco cansado de leer libros técnicos, y me apetecía leer alguno más práctico, como si estuviera leyendo un caso de éxito o algo así. También me apetecía introducirme más de lleno en las metodologías ágiles, y un amigo me comentó que desde que leyó <a href="http://www.infoq.com/minibooks/scrum-xp-from-the-trenches">Scrum y XP desde las trincheras</a>, su visión del desarrollo del software cambió totalmente.</p>
-
-<!-- more -->
-
-
-
-
-<h2>Qué esperaba</h2>
-
-
-<p>Esperaba una descripción de los elementos que componen <a href="es.wikipedia.org/wiki/Scrum" title="Scrum">Scrum</a>, o de las prácticas que define <a href="es.wikipedia.org/wiki/Programación_extrema">XP</a>. Y también una visión práctica de las mismas.
-Tenía muy buenas referencias del libro, y tenía ganas de conocer de primera mano todas las bonanzas que había escuchado sobre las metodologías ágiles.</p>
-
-<h2>Qué encontré</h2>
-
-
-<p>Encontré una serie de anécdotas, y una descripción de un caso real de aplicación de Scrum y XP en una empresa. Un testimonio sin igual.
-El autor expone su propia experiencia trabajando con Scrum y XP, metodologías o mejores prácticas del mundo ágil que nos proporciona una idea de lo que nos podríamos encontrar si lo quisiéramos aplicar en nuestra empresa.</p>
-
-<h2>Conclusiones</h2>
-
-
-<p>Un fantástico testimonio que todo el que quiera conocer un caso real y exitoso de aplicación de metodologías ágiles debería leer.
-Sin duda, éste es un libro que no te deberías perder.
-Además, está disponible para su descarga gratuita en varios idiomas, entre ellos el español (enlace de descarga de <a href="http://www.infoq.com/minibooks/scrum-xp-from-the-trenches">Scrum y XP desde las trincheras</a>). La verdad es que se agradece que existan versiones en español de libros tan interesantes como éste.</p>
-
-<h2>Pasajes que quiero recordar de este libro</h2>
-
-
-
-
-<blockquote>el dueño del producto debe concentrarse en los objetivos del negocio, no en escribir historias con orientacion tecnica</blockquote>
-
-
-
-
-<blockquote>otras personas aparte del dueño del producto pueden añadir historias a la pila del producto, pero no pueden asignarles orden de importancia (cometido exclusivo del dueño de producto) ni pueden establecer estimaciones (cometido exclusivo del equipo)</blockquote>
-
-
-
-
-<blockquote>la planificación del sprint es una reunión crítica, la más importante de Scrum</blockquote>
-
-
-
-
-<blockquote>cada historia de usuario depende de tres variables: estimación (proporcionada por el equipo), alcance e importancia (proporcionadas por el dueño del producto)</blockquote>
-
-
-
-
-<blockquote>es responsabilidad del equipo mantener la calidad del sistema bajo toda circunstancia, y no es negociable nunca</blockquote>
-
-
-
-
-<blockquote>la estimación es una labor de equipo, todo el equipo debe involucrarse en estimar cada historia</blockquote>
-
-
-
-
-<blockquote>¡ sienta al equipo junto !</blockquote>
-
-
-
-
-<blockquote>en la retrospectiva, cada persona tiene una oportunidad de decir, sin ser interrumpida, qué ha ido bien, qué podría haber ido mejor y qué piensan que debería hacerse diferente en el próximo sprint</blockquote>
-
-
-
-
-<blockquote> fase de pruebas es dura, probablemente la más dura del ciclo del desarrollo de sw. la sensación es definitivamente 'no agil'. no podemos liberarnos de ella, pero si minimizar la cantidad de tiempo necesario</blockquote>
-
-
-
-
-<blockquote>casi siempre es más barato producir menos, pero hacerlo estable, que producir muchísimo y luego tener que hacer parches de emergencia</blockquote>
-
-
-
-
-<h2>Otras lecturas y enlaces relacionadas</h2>
-
-
-
-
-<ol>
-<li><a href="http://blog.crisp.se/author/henrikkniberg">Blog de Henrik Kniberg</a></li>
-<li><a href="http://agilemanifesto.org/iso/es">Manifiesto ágil</a> (english: <a href="http://agilemanifesto.org/">Agile Manifesto</a>)</li>
-<li><a href="http://www.kleer.la/e-books">Introducción a la Agilidad y Scrum</a></li>
-</ol>
 
 ]]></content>
   </entry>
