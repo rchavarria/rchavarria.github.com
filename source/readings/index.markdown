@@ -58,6 +58,7 @@ Así que aquí está mi Lista de Lectura:
 - [Test driven development: by example](http://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530), de Kent Beck
 - [Software craftsmanship: the new imperative](http://www.amazon.com/Software-Craftsmanship-Imperative-Pete-McBreen/dp/0201733862), de Pete McBreen
 - [Extreme programming explained](http://www.amazon.com/Extreme-Programming-Explained-Embrace-Change/dp/0201616416), de Kent Beck
+- [The coding dojo handbook](https://leanpub.com/codingdojohandbook), de Emiliy Bache
 - [The Psycology of Computer Programming](http://www.amazon.com/exec/obidos/ASIN/0932633420/codihorr-20), de Gerald M. Weingerg
 - [Bitter Java](http://books.google.co.in/books?id=U5dXq7FzvcIC), de Bruce A. Tate
 - Patterns of Enterprise Application Architecture, de Martin Fowler
