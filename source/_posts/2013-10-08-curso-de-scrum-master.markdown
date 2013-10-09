@@ -14,7 +14,7 @@ sidebar: true
 ---
 
 Los días 3 y 4 de octubre de 2013 tuve una oportunidad única, la de asistir a
-un curso *GRATUITO* de Scrum Master impartido por [Ángel Diaz-Maroto] en las oficinas de 
+un curso **GRATUITO** de Scrum Master impartido por [Ángel Diaz-Maroto] en las oficinas de 
 [ING Direct]. Fue un curso espectacular, con otras 14-15 personas magníficas y
 que estoy muy agradecido tanto a ING como a Ángel por hacerlo posible. Fue una
 auténtica pasada.
@@ -117,7 +117,7 @@ Todos ellos se podrían resumir en uno **Respeto**. A partir de él se pueden
 ir concretando alguno más, por mencionar algunos (que surgieron a partir de
 nosotros y fueron completados por Ángel):
 
-{% img right /images/2013/curso-scrum-master/05-principios-valores.jpg 194 260 %}
+{% img left /images/2013/curso-scrum-master/05-principios-valores.jpg 194 260 %}
 
 - Transparencia: no esconder nada, mostrar toda la información importante acerca
 del avance del proyecto, que los problemas salgan a la luz, ...
@@ -135,7 +135,7 @@ gran medida el éxito del proyecto.
 
 Estuvimos discutiendo qué características deberían tener estos roles:
 
-{% img left /images/2013/curso-scrum-master/06-scrum-master.jpg 194 260 %}
+{% img right /images/2013/curso-scrum-master/06-scrum-master.jpg 194 260 %}
 
 {% img right /images/2013/curso-scrum-master/07-product-owner.jpg 194 260 %}
 
