@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2013-10-07T10:07:44+02:00</updated>
+  <updated>2013-10-09T08:24:17+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,200 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Curso de Scrum Master]]></title>
+    <link href="http://rchavarria.github.io/blog/2013/10/08/curso-de-scrum-master/"/>
+    <updated>2013-10-08T11:28:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2013/10/08/curso-de-scrum-master</id>
+    <content type="html"><![CDATA[<p>Los días 3 y 4 de octubre de 2013 tuve una oportunidad única, la de asistir a
+un curso <strong>GRATUITO</strong> de Scrum Master impartido por <a href="http://twitter.com/adiazmaroto">Ángel Diaz-Maroto</a> en las oficinas de
+<a href="http://www.ingdirect.es">ING Direct</a>. Fue un curso espectacular, con otras 14-15 personas magníficas y
+que estoy muy agradecido tanto a ING como a Ángel por hacerlo posible. Fue una
+auténtica pasada.</p>
+
+<p>Este post es para agradecérselo públicamente y para tener unas pequeñas notas y
+no olvidarme de la fabulosa experiencia vivida.</p>
+
+<!-- more -->
+
+
+<h2>El curso</h2>
+
+<p>El curso fueron 2 días muy intensos, donde aprendimos el funcionamiento de Scrum y el
+papel que juega el rol del Scrum Master (porque es un rol, nunca un puesto o un título).
+Por supuesto, una vez realizado el curso no eres realmente un Scrum Master, pero yo
+lo veo un poco como sacarse el carnet de conducir. Es lo que te da la posibilidad
+de conducir y aprender realmente a conducir en situaciones de la vida real. Este curso
+es algo así, <strong>nos ha habilitado para aprender a ser Scrum Master en proyectos de la vida
+real</strong>.</p>
+
+<p>Muy pronto aprendimos la primera lección: ¿Cómo se hace Scrum? ¿Cómo se hace <em>agile</em>?.
+Me quedo con la frase de Ángel:</p>
+
+<blockquote><p>Agilear se hace aligerando</p></blockquote>
+
+<p>La diferencia fundamental de las metodologías ágiles frente a las tradicionales,
+es que las ágiles se basan en eliminar, mientras que las tradicionales se
+basan en añadir capas de complejidad.</p>
+
+<h2>Acuerdos de trabajo</h2>
+
+<p>Lo primero de todo, antes de empezar a trabajar, lo primordial es establecer unos
+acuerdos de trabajo. Sin ellos, cualquier proyecto, empresa, lo que sea, que necesite
+de un trabajo en grupo, no podrá saber si todo el mundo avanza en la misma dirección.</p>
+
+<p>Nosotros es lo primero que hicimos al comenzar el curso, y éstos fueron nuestros
+<em>Acuerdos de Trabajo</em>:</p>
+
+<p><img class="left" src="http://rchavarria.github.io/images/2013/curso-scrum-master/01-acuerdos-trabajo.jpg" width="194" height="260"></p>
+
+<ul>
+<li>Speak up! (¡Habla!): Los problemas se deben resolver cuanto antes. Si te molesta
+cualquier cosa, por pequeña que sea, si crees que va a haber un problema con algo&#8230;
+Dilo en voz alta, que se sepa. Esta es la única forma de que se resuelvan rápidamente.</li>
+<li>Compañerismo: sin él, difícilmente se podrá crear un buen ambiente de trabajo.</li>
+<li>Objetivo común: todos debemos ir en la misma dirección, si no, estaremos despediciando
+esfuerzos.</li>
+</ul>
+
+
+<h2>Crear una visión</h2>
+
+<p><img class="right" src="http://rchavarria.github.io/images/2013/curso-scrum-master/02-vision.jpg" width="194" height="260"></p>
+
+<p>Uno de los acuerdos de trabajo es el de tener un objetivo común, y para ello es
+necesario crear una visión.</p>
+
+<p>La nuestra la creamos a través de una dinámica de grupo, y al final, el resultado
+consensuado al que llegamos fue que nuestra visión para este curso sería:</p>
+
+<blockquote><p>Aprender, en grupo, métodos y buenas prácticas y bases de Scrum, divirtiéndonos.</p></blockquote>
+
+<h2>Manifiesto ágil</h2>
+
+<p><img class="right" src="http://rchavarria.github.io/images/2013/curso-scrum-master/03-clover.jpg" width="194" height="260"></p>
+
+<p>Una vez sentadas las bases de cómo vamos a trabajar y qué es lo que vamos a
+esperar del curso, comenzamos. Y qué mejor punto para empezar que conociendo
+los cuatro valores del <a href="http://www.agilemanifesto.org/iso/es/">manifiesto ágil</a>:</p>
+
+<ul>
+<li><strong>Individuos e interacciones</strong> sobre procesos y herramientas</li>
+<li><strong>Software funcionando</strong> sobre documentación extensiva</li>
+<li><strong>Colaboración con el cliente</strong> sobre negociación contractual</li>
+<li><strong>Respuesta ante el cambio</strong> sobre seguir un plan</li>
+</ul>
+
+
+<h2>Scrum</h2>
+
+<p><img class="left" src="http://rchavarria.github.io/images/2013/curso-scrum-master/04-scrum.jpg" width="194" height="260"></p>
+
+<p>Existen multitud de metodologías que se pueden considerar ágiles, entre ellas
+está <em>Scrum</em>. Aunque Scrum no es una metodología en sí, es un marco de trabajo.
+No es una lista de prácticas que debes hacer, si no una serie de recomendaciones,
+que puedes seguir o no, y que son totalmente independientes del campo en que
+se apliquen. Y puede que estos sean los factores que han hecho que Scrum se
+haya adoptado tanto en todo el mundo.</p>
+
+<p>En el curso, aprendimos cuáles son los actores de Scrum (Product Owner, Scrum
+Master, Team, &#8230;), qué elementos forman parte de él (Backlog, Spring,
+Entregable, &#8230;) y qué reuniones lo hacen posible (Diaria, Retrospectiva,
+Demo, &#8230;).</p>
+
+<p>Todo se podría resumir en <em>Inspección y Adaptación</em>. Inspeccionar qué se está
+haciendo y cómo, detectar dónde se podría mejorar y adaptarse para atajar
+esos impedimentos para conseguir una mejora contínua.</p>
+
+<h2>Principios y valores</h2>
+
+<p>Luego pasamos a ver cuáles son los principios y valores de Scrum.</p>
+
+<p>Todos ellos se podrían resumir en uno <strong>Respeto</strong>. A partir de él se pueden
+ir concretando alguno más, por mencionar algunos (que surgieron a partir de
+nosotros y fueron completados por Ángel):</p>
+
+<p><img class="left" src="http://rchavarria.github.io/images/2013/curso-scrum-master/05-principios-valores.jpg" width="194" height="260"></p>
+
+<ul>
+<li>Transparencia: no esconder nada, mostrar toda la información importante acerca
+del avance del proyecto, que los problemas salgan a la luz, &#8230;</li>
+<li>Confianza: esto da libertad a los integrantes del equipo para trabajar a su
+manera y dar lo mejor de sí mismos.</li>
+<li>Foco: trabajar con un objetivo común, y no desperciar esfuerzos.</li>
+<li>Coraje: porque para cambiar las cosas y trabajar de forma auto-organizada,
+sin un <em>jefismo</em> que te las imponga, se necesita mucho coraje.</li>
+</ul>
+
+
+<h2>Roles</h2>
+
+<p>Los dos roles de Scrum que vimos en el curso son el <em>Product Owner</em> y el <em>Scrum
+Master</em>. Existe una relación muy fuerte entre ellos, y de ellos depende en
+gran medida el éxito del proyecto.</p>
+
+<p>Estuvimos discutiendo qué características deberían tener estos roles:</p>
+
+<p><img class="right" src="http://rchavarria.github.io/images/2013/curso-scrum-master/06-scrum-master.jpg" width="194" height="260"></p>
+
+<p><img class="right" src="http://rchavarria.github.io/images/2013/curso-scrum-master/07-product-owner.jpg" width="194" height="260"></p>
+
+<ul>
+<li>Scrum Master
+
+<ul>
+<li>dialogante</li>
+<li>tenaz</li>
+<li>empático</li>
+</ul>
+</li>
+<li>Product Owner
+
+<ul>
+<li>accesible</li>
+<li>priorizador</li>
+<li>estratega</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>Retrospectiva</h2>
+
+<p>Durante todo el curso aplicamos la siguiente máxima:</p>
+
+<blockquote><p>Learn by doing</p></blockquote>
+
+<p><img class="left" src="http://rchavarria.github.io/images/2013/curso-scrum-master/08-retro.jpg" width="194" height="260"></p>
+
+<p>Es decir, <em>aprender haciendo</em>. De esta forma, aprendimos Scrum haciendo Scrum.
+Y Scrum no existe sin una retrospectiva.</p>
+
+<p>La retrospectiva es una parte fundamental de Scrum. Lo más importante, lo que
+proporciona la retro, es que al terminar la reunión, se ha tenido que tomar una
+decisión:</p>
+
+<blockquote><p>Qué acciones vamos a tomar para solucionar alguno de los problemas que tenemos</p></blockquote>
+
+<p>Y así, poco a poco, problema a problema, con un ritmo sostenible, sin agobios,
+ir mejorando contínuamente. Nunca llegarás a la perfección, siempre aparecerán
+nuevos problemas, pero ahí estará la retro para identificarlos, sacarlos a la
+luz y darles solución.</p>
+
+<h2>Referencias</h2>
+
+<p>A lo largo del curso, hicimos referencia a multitud de autores, libros y recursos,
+así que aquí iré dejando aquellas referencias que vayan surgiendo de conversaciones
+futuras acerca de este curso:</p>
+
+<ul>
+<li><a href="http://scrummasters.com/">Scrum Masters Community</a></li>
+<li><a href="https://www.scrum.org/">The home of Scrum</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Instant Markdown]]></title>
@@ -2475,120 +2669,6 @@ github:pages, y el resto de herramientas para bloguear como un hacker :P</p>
 <p>¿Por qué cambiar de blog cuando ya tienes <a href="http://rchavarria.wordpress.com">uno</a>?
 Encuentra mis razones en el primer post serio:
 <a href="http://rchavarria.github.io/blog/2012/12/03/por-que-cambie-mi-blog-en-wordpress-com">¿Por qué cambié mi blog de wordpress?</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Agile principles, patterns and practices in C#]]></title>
-    <link href="http://rchavarria.github.io/blog/2012/11/22/agile-principles-patterns-and-practices-in-c/"/>
-    <updated>2012-11-22T11:22:00+01:00</updated>
-    <id>http://rchavarria.github.io/blog/2012/11/22/agile-principles-patterns-and-practices-in-c</id>
-    <content type="html"><![CDATA[<h4>Agile principles, patterns and practices in C#</h4>
-
-
-
-
-<h5>Robert C. Martin</h5>
-
-
-<p><img class="right" src="http://vig-fp.prenhall.com/bigcovers/0131857258.jpg" width="300" height="222" title="Agile principles, patterns and practices" ></p>
-
-<h2>Por qué lo he leído</h2>
-
-
-<p>Lo he leido porque me he encontrado referencias a este libro en libros anteriores que he leído, en blogs sobre desarrollo de software que suelo leer y en otros muchos sitios relacionados con el software. Si encuentro tantas referencias, será por algo, ¿no? Además, el autor es muy conocido y valorado, así que no había excusa para no leerlo.</p>
-
-<!-- more -->
-
-
-
-
-<h2>Qué esperaba</h2>
-
-
-<p>Me esperaba un libro de <em>Uncle Bob™</em>. Ya he leído alguno del mismo autor, y me gusta su estilo. Algunas veces me parece un poco extremista, pero creo que es así porque cree en lo que hace y eso es lo que predica. Cuando creo que exagera, no le hago mucho caso y sigo hacia adelante, ya está.</p>
-
-<p>Esperaba una descripción de las metodologías ágiles aplicadas al momento de escribir software y encontré &#8230;</p>
-
-<h2>Qué encontré</h2>
-
-
-<p>&#8230; un pedazo de ladrillo! Me asusté cuando vi la extensión del libro, pero enseguida entendí el porqué. El libro está lleno de diagramas <a href="http://es.wikipedia.org/wiki/Lenguaje_Unificado_de_Modelado">UML</a> y de código fuente (primero los tests, por supuesto). Así que es normal que sea tan largo.</p>
-
-<p>En cuanto al contenido, me gustó mucho la descripción que hace de muchos patrones de diseño, (incluso he aprendido alguno que no conocía). En el libro también podrás encontrar una descripción detallada de los principios <a href="http://es.wikipedia.org/wiki/SOLID_(object-oriented_design)">SOLID</a> y de otros principios sobre cómo organizar y empaquetar los distintos componentes de tu aplicación (clases, paquetes, namespaces, lo que sea).</p>
-
-<h2>Conclusiones</h2>
-
-
-<p>Aunque el libro sea muy extenso, me ha gustado por varias razones:</p>
-
-<ul>
-    <li>He aprendido nuevos patrones de diseño.</li>
-    <li>He podido profundizar sobre el patrón Model-View-Controller (ver enlaces más abajo).</li>
-    <li>He encontrado una descripción muy detallada de los principios <a href="http://es.wikipedia.org/wiki/SOLID_(object-oriented_design)">SOLID.</a></li>
-</ul>
-
-
-<h2>Pasajes que quiero recordar de este libro</h2>
-
-
-<blockquote>Un módulo que es difícil de cambiar, está roto y necesita ser arreglado, aunque funcione.</blockquote>
-
-
-<blockquote>Un módulo que no comunica está roto y necesita ser arreglado.</blockquote>
-
-
-<blockquote>Cuanto más conocen los programadores sobre <em>todo</em> el proyecto, más sano y más informado está el equipo que lo desarrolla.</blockquote>
-
-
-<blockquote>Es el <em>big picture</em> lo que mantiene unido el sistema. Es la visión del sistema lo que hace obvia la localización y la forma de los módulos individuales. Si la forma de un módulo es inconsistente con la <em>metáfora</em>, es el módulo quien está mal, no la metáfora.</blockquote>
-
-
-<blockquote>Al final, el código fuente <em>es</em> el diseño.</blockquote>
-
-
-<blockquote>Se sabe que el software se está pudriendo cuando empieza a mostrar alguno de los siguientes síntomas: rigidez, fragilidad, inmovilidad, viscosidad, complejidad innecesaria, repetición innecesaria u opacidad.</blockquote>
-
-
-<blockquote>El elemento más volatil en los proyectos software son los requisitos. Vivimos en un mundo de requisitos cambiantes, y nuestro trabajo es estar seguros de que nuestros software puede sobrevivir a esos cambios, así que no culpes a los requisitos cambiantes por los fallos en el software.</blockquote>
-
-
-<blockquote>Los principios SOLID: <strong>S</strong>ingle responsability principle, <strong>O</strong>pen close principle, <strong>L</strong>iskov substitution principle, <strong>I</strong>nterface segregation principle, <strong>D</strong>ependency inversion principle.</blockquote>
-
-
-<blockquote>Un motivo de cambio es un motivo de cambio sólo cuando el cambio ocurre, mientras tanto no.</blockquote>
-
-
-<blockquote><em>Strategy </em>and <em>Template method</em> son las formas más comunes de satisfacer Open closed principle. Estos patrones representan una clara separación de la funcionalidad genérica de la implementación detallada de esa funcionalidad.</blockquote>
-
-
-<blockquote><em>Fool me once, shame on you. Fool me twice, shame on me.</em> Inicialmente, escribimos nuestro código pensando que no va a cambiar. Cuando ocurre un cambio, implementamos abstraciones que nos protegen de futuros cambios de esa misma naturaleza.</blockquote>
-
-
-<blockquote>Liskov substitution principle nos lleva a una importante conclusión: un modelo, visto aisladamente, no puede ser validado significativamente. La validez de un modelo puede ser expresado solo en términos de sus clientes.</blockquote>
-
-
-<blockquote>Liskov substitution principle clarifica que en la programación orientada a objetos, una relación de herencia pertenece al comportamiento que puede ser asumido y que los clientes dependen de este comportamiento, lo contrario de lo que normalmente se cree, que la herencia pertenece al estado</blockquote>
-
-
-<blockquote>El diseño de grandes sistemas depende críticamente de un buen diseño de componentes (paquetes, entregables, &#8230;), de esta forma, los equipos individuales puede enfocarse en componentes aislados en lugar de preocuparse por el sistema completo.</blockquote>
-
-
-<blockquote>Las interfaces pertenecen al cliente que las usa, no a la implementación. El enlace lógico entre el cliente y el interfaz es más fuerte que la relación entre el interfaz y sus implementaciones. Es tan fuerte que no tiene sentido desplegar el cliente sin el interfaz, pero sí que lo tiene desplegar el interfaz sin sus implementaciones.</blockquote>
-
-
-
-
-<h2>Otras lecturas y enlaces relacionadas</h2>
-
-
-<ul>
-    <li>[pdf] <a href="http://www.objectmentor.com/resources/articles/TheHumbleDialogBox.pdf">The humble dialog box</a>: cómo separar la lógica de negocio de la interfaz gráfica, de Michael Feathers.</li>
-    <li><a href="http://www.martinfowler.com/eaaDev/ModelViewPresenter.html">Patrón model-view-presenter</a>: artículo de Martin Fowler que me llevó a éste de <a href="http://www.martinfowler.com/eaaDev/uiArchs.html">Arquitecturas GUI</a>.</li>
-    <li><a href="http://apagayvuelveaencender.blogspot.com.es/2012/11/metodologias-agiles-me-las-creo-o-no-me.html">Metodologías ágiles: ¿me las creo o no me las creo?</a>: excelente post de <a href="http://twitter.com/andres_viedma">Andrés Viedma</a> que me viene ni al pelo como enlace relacionado con el libro y donde se explican los cuatro principios del desarrollo de software ágil</li>
-    <li>Hace ya un tiempo, leí sobre <a href="http://rchavarria.github.io/blog/2010/03/04/principios-y-patrones-de-diseno/">principios y patrones de diseño</a></li>
-</ul>
-
 ]]></content>
   </entry>
   
