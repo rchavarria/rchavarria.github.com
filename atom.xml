@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2013-10-09T08:24:17+02:00</updated>
+  <updated>2013-10-18T00:58:47+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,58 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Mi primera aplicación web con AngularJS]]></title>
+    <link href="http://rchavarria.github.io/blog/2013/10/17/primera-aplicacion-angularjs/"/>
+    <updated>2013-10-17T22:00:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2013/10/17/primera-aplicacion-angularjs</id>
+    <content type="html"><![CDATA[<p>Esta semana no he podido aportar ningún tutorial a la serie de
+<a href="http://rchavarria.github.io/blog/2013/09/03/demos-tecnologias-javaee">demos de tecnologías JavaEE</a> ya
+que he dedicado grandes esfuerzos a realizar una prueba técnica para una
+empresa.</p>
+
+<p>La prueba consitía en realizar una aplicación web, donde el back-end está
+programado en PHP y el front-end en JavaScript, utilizando el framework MVC
+<a href="http://angularjs.org">AngularJS</a>.</p>
+
+<p>Ha sido una experiencia interesantísima. Ya tenía conocimientos de arquitecturas
+MVC, he participado profesionalmente en multitud de desarrollos siguiendo
+este modelo, pero ésta ha sido una oportunidad increíble de conocer un
+framework tan de moda y tan demandado como AngularJS. El proyecto consistía en
+implementar una <a href="http://rct-ytlibrary.herokuapp.com">librería de videos de youtube</a>.</p>
+
+<!-- more -->
+
+
+<p><img class="center" src="http://rchavarria.github.io/images/2013/ytlibrary-dnd.png" title="Puedes añadir un vídeo arrastrando y soltando" ></p>
+
+<p>En definitiva, he aprovechado esta oportunidad, y con unas pequeñas modificaciones
+a la prueba técnica inicial, he eliminado la necesidad de un back-end, he creado
+un servidor web básico en <em>NodeJS</em>, y he desplegado la aplicación en <em>heroku</em>.</p>
+
+<p>Si te pica la curiosidad y quieres ver el código fuente, lo puedes encontrar en mi
+repositorio de github <a href="http://github.com/rchavarria/ytlibrary">rchavarria/ytlibrary</a>.</p>
+
+<p>La aplicación explota multitud de conceptos de AngularJS:</p>
+
+<ul>
+<li>Directivas más comunes: <code>ng-model</code>, <code>ng-repeat</code>, <code>ng-click</code>, &#8230;</li>
+<li>Controladores, <code>angular.controller(...)</code>.</li>
+<li>Servicios, implementados como factorías con <code>angular.factory(...)</code>.</li>
+<li>Directivas, <code>angular.directive(...)</code>.</li>
+<li>Posibilidad de arrastrar y soltar vídeos para añadirlos a la lista.</li>
+<li>Animaciones con el módulo proporcionado por AngularJS <code>ngAnimate</code>.</li>
+</ul>
+
+
+<p><img class="center" src="http://rchavarria.github.io/images/2013/ytlibrary-video.png" title="Visualizar un vídeo desde la lista" ></p>
+
+<p>Si todavía tienes ganas de más, te invito a que eches un vistazo a
+<a href="http://rct-ytlibrary.herokuapp.com">Youtube library</a>. Por supuesto, si quieres,
+me encantaría que me contases qué te ha parecido.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Curso de Scrum Master]]></title>
@@ -2643,32 +2695,6 @@ días. Como referencia diré que el día en que wordpress decidión bloquear mi 
 
 <p>Por estas quejas, y sobretodo, porque me apetece bloguear como un hacker, bienvenido a mi <em>nuevo</em> blog.
 Ahora sólo queda migrar los artículos del antiguo a éste. Uff! Qué pereza. Poco a poco amigo.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Post Inicial Del Blog]]></title>
-    <link href="http://rchavarria.github.io/blog/2012/11/28/post-inicial-del-blog/"/>
-    <updated>2012-11-28T00:00:00+01:00</updated>
-    <id>http://rchavarria.github.io/blog/2012/11/28/post-inicial-del-blog</id>
-    <content type="html"><![CDATA[<p>﻿&#8212;
-layout: page
-title: &#8220;Post inicial del blog&#8221;
-date: 2012-11-28 10:10
-author: Rubén Chavarría
-comments: true
-categories: blog
-published: true
-footer: false</p>
-
-<h2>sidebar: true</h2>
-
-<p>Este es el post inicial, para ir familiarizándome con Octopress, Jekyll,
-github:pages, y el resto de herramientas para bloguear como un hacker :P</p>
-
-<p>¿Por qué cambiar de blog cuando ya tienes <a href="http://rchavarria.wordpress.com">uno</a>?
-Encuentra mis razones en el primer post serio:
-<a href="http://rchavarria.github.io/blog/2012/12/03/por-que-cambie-mi-blog-en-wordpress-com">¿Por qué cambié mi blog de wordpress?</a></p>
 ]]></content>
   </entry>
   
