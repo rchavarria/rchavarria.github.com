@@ -65,6 +65,8 @@ Así que aquí está mi Lista de Lectura:
 - [More Programming Pearls](http://search.barnesandnoble.com/More-Programming-Pearls/John-Bentley/e/9780201118896), de Jon Bentley
 - 7 languages in 7 weeks, de Bruce A. Tate
 - No me hagas pensar, de Steve Krug
+- [Rapid development](http://www.stevemcconnell.com/rd.htm), de Steve McConnel, recomendado por [Rodrigo Corral](http://twitter.com/r_corral) en la CAS2013
+- [Facts and fallacies of software development](http://www.amazon.com/Facts-Fallacies-Software-Engineering-Robert/dp/0321117425, de Robert L. Glass, recomendado por [Rodrigo Corral](http://twitter.com/r_corral) en la CAS2013
 
 ## He leído
 
