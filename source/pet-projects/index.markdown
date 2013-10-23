@@ -16,6 +16,35 @@ and more complex over time. Feel free to post any comment or send a link to your
 Codecademy projects. They have an [APIs track](www.codecademy.com/tracks/apis) where
 you can practice codig for well know API's (youtube, soundtrack, twilio).
 
+## [Youtube library](http://kcy.me/u22p)
+
+*Created in October, 2013*
+
+This is [my first application with AngularJS](/blog/2013/10/17/primera-aplicacion-angularjs)
+and it is the result of a technical test to be hired for a company. 
+
+I like it a lot, it is very visual (you can drag & drop a video to add to your library) and
+it has allowed me to learn a bit about a AngularJS, a JavaScript MVC framework to develop
+RIA's. What a wonderful challenge!!
+
+[{% img center /images/2013/ytlibrary-dnd.png Youtube library %}](http://kcy.me/u22p)
+
+## [Weewikipaint](http://kcy.me/u21k)
+
+<!-- 400x228 -->
+[{% img right /images/codecademy/weewikipaint.png 420 292 'Weewikipaint' %}](http://kcy.me/u21k)
+
+*Created in summer, 2013*
+
+This is a project created while I was learning with [Let's code JavaScript], a course
+provided by James Shore where he teaches how to develop a collaborative painting application
+using Test Driven Development in JavaScript.
+
+[Let's code JavaScript]: http://letscodejavascript.com
+
+We used NodeJS as platform to develop both server and client side code, and several of its
+modules such as: jake, karma, mocha, phantomjs and others.
+
 ## [Build a storefront](http://kcy.me/l13j)
 
 <!-- 400x228 -->

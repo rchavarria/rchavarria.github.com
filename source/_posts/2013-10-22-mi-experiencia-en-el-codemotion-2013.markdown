@@ -5,7 +5,7 @@ date: 2013-10-22 12:44
 author: Rubén Chavarría
 comments: true
 categories: 
-- Eventos
+- events
 published: true
 footer: false
 sidebar: true
@@ -14,9 +14,10 @@ sidebar: true
 El pasado viernes 18 de octubre asistí al [Codemotion 2013], un evento de
 desarrolladores para desarrolladores. Es solamente la segunda edición en España,
 pero la considero una cita imprescindible, y encima se celebra cerca de casa, 
-así que no puedo pedir más. 
+así que no puedo pedir más. ¿Quieres un aperitivo? Échale un ojo al [trailer].
 
 [Codemotion 2013]: http://madrid.codemotionworld.com
+[trailer]: http://www.youtube.com/watch?v=SxP67piQp2U
 
 Lamentablemente, por motivos personales no he podido asistir a los dos días,
 así que tengo muuuchas charlas para ver en diferido. Pero no perdí el tiempo, 
