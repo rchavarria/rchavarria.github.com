@@ -4,7 +4,7 @@
   <title><![CDATA[Category: events | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/events/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2013-10-22T14:40:06+02:00</updated>
+  <updated>2013-10-23T12:07:31+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,51 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Mi experiencia en el Codemotion 2013]]></title>
+    <link href="http://rchavarria.github.io/blog/2013/10/22/mi-experiencia-en-el-codemotion-2013/"/>
+    <updated>2013-10-22T12:44:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2013/10/22/mi-experiencia-en-el-codemotion-2013</id>
+    <content type="html"><![CDATA[<p>El pasado viernes 18 de octubre asistí al <a href="http://madrid.codemotionworld.com">Codemotion 2013</a>, un evento de
+desarrolladores para desarrolladores. Es solamente la segunda edición en España,
+pero la considero una cita imprescindible, y encima se celebra cerca de casa,
+así que no puedo pedir más. ¿Quieres un aperitivo? Échale un ojo al <a href="http://www.youtube.com/watch?v=SxP67piQp2U">trailer</a>.</p>
+
+<p>Lamentablemente, por motivos personales no he podido asistir a los dos días,
+así que tengo muuuchas charlas para ver en diferido. Pero no perdí el tiempo,
+pude conocer en pesona a gente de <a href="http://www.autentia.com">Autentia</a>, <a href="http://www.deiser.com">Deiser</a>, y otros patrocinadores del
+evento sin los cuales no habría sido posible: PayPal, Atlassian, Mozilla, Telefónica I+D,
+Alfresco y más.</p>
+
+<p><img class="center" src="/images/2013/codemotion.png" title="Codemotion Spain 2013" ></p>
+
+<!-- more -->
+
+
+<p>El viernes no había muchas charlas ténicas, especialmente por la mañana,
+y eran las que más me interesaban, así que no puedo contar gran cosa de las charlas a
+las que asistí. Eso sí, me encantó el papel de las <strong>comunidades</strong> en la keynote. Es
+una gozada que haya multitud de gente apasionada por el software y que participe
+en actividades y comunidades locales. Toda mi admiración para ellos.</p>
+
+<p>En compensación a esta falta de charlas técnicas, disfruté mucho del pasillo y de la visita
+a los stands que distintas empresas tenían en los pasillos. Especialmente los
+de <a href="http://www.deiser.com">Deiser</a> y <a href="http://www.autentia.com">Autentia</a>. Estoy contento, porque me permitió conocer profesionales
+que trabajan en dos empresas que admiro, no sólo por lo que hacen, si no por cómo
+lo hacen (y además me hice con un poco de <em>merchandaising</em>).</p>
+
+<p><img class="center" src="/images/2013/codemotion-merchandaising.jpg" title="Codemotion Spain 2013" ></p>
+
+<p>Este año, mi edición del Codemotion ha sido muy ligera. Me da mucha pena, pero
+los compromisos son los compromisos, que también los disfruté, por lo que no me
+arrepiento de nada.</p>
+
+<p>Así que, mientras voy viendo alguna que otra charla del canal de youtube de
+<a href="http://www.youtube.com/channel/UCJ91eUdxXwLYyaeIN1rGg-g">Codemotion Madrid</a>, voy esperando con impaciencia la edición del año que viene, para
+reservar agenda y estar a tope.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Save InformaticOS, mi primer open space]]></title>
