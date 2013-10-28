@@ -190,41 +190,41 @@ siguiente modo:
   }
 ```
 
+### Crear una nueva vista
 
+En esta nueva vista, manipularemos la lista de valores devueltos por la 
+managed bean `paramReader`. Por defecto, JSF no proporciona ningún componente
+para manipular listas de datos, por lo que aquí usaremos [Apache Tomahawk] y
+su componente `dataList`.
 
+Nuestra nueva vista, `success.xhtml`, mostrará lal lista de valores en un elemento
+HTML. El código (parcial) será algo parecido a esto:
 
-## Create another view template
+``` html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:t="http://myfaces.apache.org/tomahawk">
+<!-- ... -->
+      <ul>
+        <t:dataList var="aParam"
+                    value="#{paramReader.params}">
+          <li>
+            <h:outputText value="#{aParam.key}" /> :
+            <h:outputText value="#{aParam.value}" />
+          </li>
+        </t:dataList>
+      </ul>
 
-In this new view, we will handle the list of values returned by the `paramReader`
-bean. JSF, by default, doesn't provide any component to handle a list of values, 
-so we will use Apache Tomahawk, and its component `dataList` to handle them.
+      <h:form>
+        <h:commandLink action="#{paramReader.login}">Back to login page</h:commandLink>
+      </h:form>
+</html>
+```
 
-Our view, `success.xhtml`, will show the list of values in an unordered HTML list.
-It would look similar to this:
-
-    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-    <html xmlns="http://www.w3.org/1999/xhtml"
-          xmlns:h="http://java.sun.com/jsf/html"
-          xmlns:t="http://myfaces.apache.org/tomahawk">
-    <!-- ... -->
-          <ul>
-            <t:dataList var="aParam"
-                        value="#{paramReader.params}">
-              <li>
-                <h:outputText value="#{aParam.key}" /> :
-                <h:outputText value="#{aParam.value}" />
-              </li>
-            </t:dataList>
-          </ul>
-
-          <h:form>
-            <h:commandLink action="#{paramReader.login}">Back to login page</h:commandLink>
-          </h:form>
-    </html>
-
-We will use the action method `login()` in the `h:commandLink` element to navigate
-back to our login page.
+Usaremos el action method `login()` en el elemento `h:commandLink` para permitir al
+usuario navegar de vuelta al la página de login.
 
 # Run
 
