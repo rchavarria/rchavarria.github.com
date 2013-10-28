@@ -128,41 +128,48 @@ public class GreetingBean {
 
 En el próximo paso, veremo cómo acceder a esta managed bean.
 
-## Create a view template for login page
+### Crear una vista para la página de login
 
-Facelets is the default templating system in JSF 2.0, and the code is stored in 
-`.xhtml` files. We can use JSF components inside this view and we can access 
-managed beans (and other elements) through the Expresion Language, built in 
-Java EE.
+[Facelets] es el sistema de plantillas por defecto en JSF 2.0 (y posteriores).
+Esto supone que el código de la vista es XML y se guarda en ficheros con la
+extensión `.xhtml`. Podemos usar componentes JSF dentro de esta vista así como
+acceder a managed beans a través del Expression Language, proporcionado por el
+estándar Java EE.
 
-Take a look to the `login.xmtl` file under the `src/webapp` folder. You will find
-something similar to this:
+Gracias a que las vistas son *plantillas*, podemos crear componentes visuales
+con ellas y reutilizarlos a lo largo de nuestro proyecto.
 
-    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-    <html xmlns="http://www.w3.org/1999/xhtml"
-          xmlns:f="http://java.sun.com/jsf/core"
-          xmlns:h="http://java.sun.com/jsf/html">
-    <!-- ... -->
-          <h:form styleClass="form-signin">
-            <h2>#{login.message}</h2>
+Aquí muestro un extracto de nuestra vista de login, el fichero `login.xhtml` que
+se encuentra en el directorio `src/webapp`:
 
-            <h:commandButton id="login" value="Log me in" 
-                             styleClass="btn btn-lg btn-primary btn-block"
-                             action="#{login.submit}" />
-          </h:form>
-    </html>
+``` html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+<!-- ... -->
+      <h:form styleClass="form-signin">
+        <h2>#{login.message}</h2>
 
-Note that we define two new namespaces: `f` and `h`. This will allow us to use
-components provided by JSF.
+        <h:commandButton id="login" value="Log me in" 
+                         styleClass="btn btn-lg btn-primary btn-block"
+                         action="#{login.submit}" />
+      </h:form>
+</html>
+```
 
-We are getting the `h2` title from our managed bean `login` through an Expression
-Language statement: `#{login.message}`. This will invoke the method `getMessage()`
-of our managed bean.
+Nótese que se han definido dos nuevos *namespaces*: `f` y `h`. Esto nos permitirá
+usar componentes reutilizables proporcionados por JSF.
 
-The `h:commandButton` element will allow us to use the method `submit()` of our
-managed bean to control the next step in the navigation model. This method is usually
-known as an *action method*.
+En el código vemos que tomamos el título `h2` de la managed bean llamada `login`
+a través de una sentencia de Expression Language: `#{login.message}`. Esto 
+invocará al método `getMessage()` definido en nuestra managed bean.
+
+El elemento `h:commandButton` nos permite usar el método `submit()` de la managed
+bean para controlar el siguiente paso a dar en nuestro modelo de navegación. Este
+tipo de métodos se conocen como *action method*. Devuelven una `String`, la cual
+identifica la siguiente vista a renderizar.
 
 ## Create another managed bean
 
