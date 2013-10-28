@@ -1,0 +1,594 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Apache MyFaces como implementacion de JavaServer Faces - R. Chavarria's Blog</title>
+  <meta name="author" content="Rub&eacute;n Chavarr&iacute;a">
+
+  
+  <meta name="description" content="Find an English version of this post directly in the source code repository. Esta semana, en esta demo sobre Java EE escribiremos una sencilla &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://rchavarria.github.io/blog/2013/10/28/myfaces-implementacion-javaserver-faces/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="R. Chavarria's Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36829645-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">R. Chavarria's Blog</a></h1>
+  
+    <h2>Blogging like a hacker about Software Development</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:rchavarria.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archivos</a></li>
+  <li><a href="/readings">Lista de lectura</a></li>
+  <li><a href="/pet-projects">Proyectos</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Apache MyFaces como implementacion de JavaServer Faces</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-10-28T13:12:00+01:00" pubdate data-updated="true">Oct 28<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><div style="margin:2%; padding:2%; background-color:#E0E0E0; ">
+    Find an English version of this post directly in the <a href="https://github.com/rchavarria/javaee-6-demos/tree/master/jsf-basics">source code repository</a>.
+</div>
+
+
+<p>Esta semana, en esta demo sobre Java EE escribiremos una sencilla aplicación
+para conocer JavaServer Faces 2.1, un framework MVC impulsado por los
+estándares Java EE.</p>
+
+<p>Será similar a otras demos. Tendremos una página de bienvenida, con un
+formulario donde el usuario podrá introducir su email y una contraseña. Los
+datos del formulario se enviarán a una nueva página que mostrará los
+parámetros y sus valores enviados al servidor y permitirá navegar de vuelta
+a la pantalla inicial.</p>
+
+<p>Para probarla, simplemente bájate el código, ejecuta el comando <code>mvn</code> y
+visita <a href="http://localhost:8080/login.jsf">http://localhost:8080/login.jsf</a> para disfrutar.</p>
+
+<!-- more -->
+
+
+<h2>Demo</h2>
+
+<p>La demo será una aplicación que mostrará los parámetros enviados a través de
+una petición HTTP, y el esquema de navegación será el siguiente:</p>
+
+<p><img class="center" src="/images/2013/jsf-navigation.png" title="Esquema de navegación" ></p>
+
+<h3>Comencemos con el esqueleto</h3>
+
+<p>La forma más rápida de comenzar es con un <em>archetype</em> de maven. Así pues,
+usaremos el archetype por defecto de maven, el cual nos creará un
+esqueleto inicial para comenzar con nuestra aplicación web. Escribir el
+siguiente comando:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mvn archetype:generate \
+</span><span class='line'>    -DgroupId=&lt;group-id&gt; \
+</span><span class='line'>    -DartifactId=&lt;app-id&gt; \
+</span><span class='line'>    -DarchetypeArtifactId=maven-archetype-webapp</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Donde <code>group-id</code> es el nombre de grupo, por ejemplo, el nombre de la empresa
+seguido por el del proyecto. Esta demo usará <code>es.rchavarria.jsf</code>. <code>app-id</code> es
+el nombre que queremos para nuestra nueva aplicación, digamos <code>jsf-basics</code>.</p>
+
+<p>Este comando creará el esqueleto de una aplicación web Java, e incluirá una
+primera página <code>.jsp</code> (que podemos borrar) y un descriptor de la aplicación
+web, <code>web.xml</code>. Para la demo, modificaremos estos ficheros y añadiremos otros
+para completarla.</p>
+
+<h3>Añadimos dependencias</h3>
+
+<p>El siguiente paso es añadir las dependencias necesarias a nuestro proyecto:</p>
+
+<ul>
+<li><code>myfaces-api</code>: el API pública de clases del proyecto core de Apache MyFaces.</li>
+<li><code>myfaces-impl</code>: la implementación privada del API de Apache MyFaces Core</li>
+<li><code>tomahawk20</code>: componentes y utilidades JSF para su uso con la implementación de
+JSF 2.x.</li>
+<li><code>javax-servlet</code>: para acceder al objeto <em>request</em> dentro de la aplicación.</li>
+<li><code>jetty</code>: incluiremos <code>jetty</code> como nuestro servidor para desarrollo.</li>
+</ul>
+
+
+<h3>Configurar FacesServlet en el descriptor de la applicación web</h3>
+
+<p>Necesitamos configurar un servlet, FacesServlet en nuestro caso, que gestione
+todas las peticiones a JSF. Para ello modificaremos el fichero <code>web.xml</code> de la
+siguiente forma:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;servlet&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;servlet-name&gt;</span>Faces Servlet<span class="nt">&lt;/servlet-name&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;servlet-class&gt;</span>javax.faces.webapp.FacesServlet<span class="nt">&lt;/servlet-class&gt;</span>
+</span><span class='line'><span class="nt">&lt;/servlet&gt;</span>
+</span><span class='line'><span class="nt">&lt;servlet-mapping&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;servlet-name&gt;</span>Faces Servlet<span class="nt">&lt;/servlet-name&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;url-pattern&gt;</span>*.jsf<span class="nt">&lt;/url-pattern&gt;</span>
+</span><span class='line'><span class="nt">&lt;/servlet-mapping&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Esto hará que el servlet llamado <em>Faces Servlet</em> gestionará todas las peticiones
+a páginas que terminen en <code>.jsf</code>.</p>
+
+<p>La mayoría de tutoriales se quedan aquí, pero esta configuración <strong>NO</strong> es
+suficiente. Es necesario añadir un listener a nuestro servlet, que dispare la
+inicializaci´on de MyFaces. Asegúrate de incluir esto en el <code>web.xml</code>:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;listener&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;listener-class&gt;</span>org.apache.myfaces.webapp.StartupServletContextListener<span class="nt">&lt;/listener-class&gt;</span>
+</span><span class='line'><span class="nt">&lt;/listener&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Estamos en una demo, y por lo tanto bajo un entorno de desarrollo, por lo que
+recomendaría usar un <em>context param</em> para indicarselo a MyFaces.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="nt">&lt;context-param&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;param-name&gt;</span>javax.faces.PROJECT_STAGE<span class="nt">&lt;/param-name&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;param-value&gt;</span>Development<span class="nt">&lt;/param-value&gt;</span>
+</span><span class='line'><span class="nt">&lt;/context-param&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Para ver una lista completa de parámetros que podemos usar, no dejes de leer la
+documentacón sobre cómo
+<a href="https://myfaces.apache.org/core21/myfaces-impl/webconfig.html">configurar MyFaces</a>.</p>
+
+<h3>Crear una <em>managed bean</em> llamada <code>login</code></h3>
+
+<p>Crearemos una <em>managed bean</em>, que no es más que un POJO que será inyectado en
+nuestra vista de JSF y podremos acceder a sus getters/setters y otros métodos.</p>
+
+<p>Crearla es realmente sencillo, usaremos la anotación <code>@ManagedBean</code> y ya estará
+casi todo hecho. Como primer uso, haremos que devuelva un título para nuestro
+futuro formulario de login. Es un caso de uso muy sencillo, pero nos servirá para
+conocer la potencia de JSF. Un vistazo al código:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kn">import</span> <span class="nn">javax.faces.bean.ManagedBean</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nd">@ManagedBean</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">&quot;login&quot;</span><span class="o">,</span> <span class="n">eager</span> <span class="o">=</span> <span class="kc">true</span><span class="o">)</span>
+</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GreetingBean</span> <span class="o">{</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getMessage</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>        <span class="k">return</span> <span class="s">&quot;Login user&quot;</span><span class="o">;</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>En el próximo paso, veremo cómo acceder a esta managed bean.</p>
+
+<h3>Crear una vista para la página de login</h3>
+
+<p><a href="https://en.wikipedia.org/wiki/Facelets">Facelets</a> es el sistema de plantillas por defecto en JSF 2.0 (y posteriores).
+Esto supone que el código de la vista es XML y se guarda en ficheros con la
+extensión <code>.xhtml</code>. Podemos usar componentes JSF dentro de esta vista así como
+acceder a managed beans a través del Expression Language, proporcionado por el
+estándar Java EE.</p>
+
+<p>Gracias a que las vistas son <em>plantillas</em>, podemos crear componentes visuales
+con ellas y reutilizarlos a lo largo de nuestro proyecto.</p>
+
+<p>Aquí muestro un extracto de nuestra vista de login, el fichero <code>login.xhtml</code> que
+se encuentra en el directorio <code>src/webapp</code>:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="cp">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot;</span>
+</span><span class='line'><span class="cp">   &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</span>
+</span><span class='line'><span class="nt">&lt;html</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/1999/xhtml&quot;</span>
+</span><span class='line'>      <span class="na">xmlns:f=</span><span class="s">&quot;http://java.sun.com/jsf/core&quot;</span>
+</span><span class='line'>      <span class="na">xmlns:h=</span><span class="s">&quot;http://java.sun.com/jsf/html&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'><span class="c">&lt;!-- ... --&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;h:form</span> <span class="na">styleClass=</span><span class="s">&quot;form-signin&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;h2&gt;</span>#{login.message}<span class="nt">&lt;/h2&gt;</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="nt">&lt;h:commandButton</span> <span class="na">id=</span><span class="s">&quot;login&quot;</span> <span class="na">value=</span><span class="s">&quot;Log me in&quot;</span>
+</span><span class='line'>                         <span class="na">styleClass=</span><span class="s">&quot;btn btn-lg btn-primary btn-block&quot;</span>
+</span><span class='line'>                         <span class="na">action=</span><span class="s">&quot;#{login.submit}&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;/h:form&gt;</span>
+</span><span class='line'><span class="nt">&lt;/html&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Nótese que se han definido dos nuevos <em>namespaces</em>: <code>f</code> y <code>h</code>. Esto nos permitirá
+usar componentes reutilizables proporcionados por JSF.</p>
+
+<p>En el código vemos que tomamos el título <code>h2</code> de la managed bean llamada <code>login</code>
+a través de una sentencia de Expression Language: <code>#{login.message}</code>. Esto
+invocará al método <code>getMessage()</code> definido en nuestra managed bean.</p>
+
+<p>El elemento <code>h:commandButton</code> nos permite usar el método <code>submit()</code> de la managed
+bean para controlar el siguiente paso a dar en nuestro modelo de navegación. Este
+tipo de métodos se conocen como <em>action method</em>. Devuelven una <code>String</code>, la cual
+identifica la siguiente vista a renderizar.</p>
+
+<h3>Una nueva managed bean</h3>
+
+<p>Crearemos una nueva managed bean, llamada <code>paramReader</code>. Su propósito será el de
+leer los parámetros de la petición HTTP enviada desde la vista anterior y
+devolver estos parámetros en forma de lista de valores a una nueva vista.</p>
+
+<p>Para leer los parámetros, lo haremos a través del objeto <code>HttpServletRequest</code>,
+all cual accederemos a través de <code>ExternalContext</code> del <code>FacesContext</code>, del
+siguiente modo:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'>  <span class="kd">public</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">Parameter</span><span class="o">&gt;</span> <span class="nf">getParams</span><span class="o">()</span> <span class="o">{</span>
+</span><span class='line'>      <span class="n">FacesContext</span> <span class="n">fc</span> <span class="o">=</span> <span class="n">FacesContext</span><span class="o">.</span><span class="na">getCurrentInstance</span><span class="o">();</span>
+</span><span class='line'>      <span class="n">HttpServletRequest</span> <span class="n">request</span> <span class="o">=</span> <span class="o">(</span><span class="n">HttpServletRequest</span><span class="o">)</span> <span class="n">fc</span><span class="o">.</span><span class="na">getExternalContext</span><span class="o">().</span><span class="na">getRequest</span><span class="o">();</span>
+</span><span class='line'>      <span class="c1">// ...      </span>
+</span><span class='line'>      <span class="k">return</span> <span class="n">params</span><span class="o">;</span>
+</span><span class='line'>  <span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Crear una nueva vista</h3>
+
+<p>En esta nueva vista, manipularemos la lista de valores devueltos por la
+managed bean <code>paramReader</code>. Por defecto, JSF no proporciona ningún componente
+para manipular listas de datos, por lo que aquí usaremos <a href="http://myfaces.apache.org/tomahawk/index.html">Apache Tomahawk</a> y
+su componente <code>dataList</code>.</p>
+
+<p>Nuestra nueva vista, <code>success.xhtml</code>, mostrará lal lista de valores en un elemento
+HTML. El código (parcial) será algo parecido a esto:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="cp">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot;</span>
+</span><span class='line'><span class="cp">   &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</span>
+</span><span class='line'><span class="nt">&lt;html</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/1999/xhtml&quot;</span>
+</span><span class='line'>      <span class="na">xmlns:h=</span><span class="s">&quot;http://java.sun.com/jsf/html&quot;</span>
+</span><span class='line'>      <span class="na">xmlns:t=</span><span class="s">&quot;http://myfaces.apache.org/tomahawk&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'><span class="c">&lt;!-- ... --&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;ul&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;t:dataList</span> <span class="na">var=</span><span class="s">&quot;aParam&quot;</span>
+</span><span class='line'>                    <span class="na">value=</span><span class="s">&quot;#{paramReader.params}&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;li&gt;</span>
+</span><span class='line'>            <span class="nt">&lt;h:outputText</span> <span class="na">value=</span><span class="s">&quot;#{aParam.key}&quot;</span> <span class="nt">/&gt;</span> :
+</span><span class='line'>            <span class="nt">&lt;h:outputText</span> <span class="na">value=</span><span class="s">&quot;#{aParam.value}&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>          <span class="nt">&lt;/li&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;/t:dataList&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;/ul&gt;</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="nt">&lt;h:form&gt;</span>
+</span><span class='line'>        <span class="nt">&lt;h:commandLink</span> <span class="na">action=</span><span class="s">&quot;#{paramReader.login}&quot;</span><span class="nt">&gt;</span>Back to login page<span class="nt">&lt;/h:commandLink&gt;</span>
+</span><span class='line'>      <span class="nt">&lt;/h:form&gt;</span>
+</span><span class='line'><span class="nt">&lt;/html&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Usaremos el action method <code>login()</code> en el elemento <code>h:commandLink</code> para permitir al
+usuario navegar de vuelta al la página de login.</p>
+
+<h2>Ejecutar</h2>
+
+<p>Para ver la demo en acción, simplemente ejecutar el comando maven <code>mvn jetty:run</code>.
+Esto arrancará el servidor. Después, visita la URL
+<a href="http://localhost:8080/login.jsf">http://localhost:8080/login.jsf</a> y a jugar!.</p>
+
+<h2>Enlaces y referencias</h2>
+
+<ul>
+<li><a href="https://javaserverfaces.java.net/">Mojarra project</a>:
+the reference implementation of the JSF specification.</li>
+<li><a href="https://en.wikipedia.org/wiki/JavaServer_Faces">JSF on Wikipedia</a>:
+Wikipedia entry for JavaServer Faces.</li>
+<li><a href="https://en.wikipedia.org/wiki/Facelets">Facelets</a>: Facelets is the default templating system for JSF, instead of JSP&#8217;s pages</li>
+<li><a href="https://myfaces.apache.org/">MyFaces</a>:
+an implementation developed by Apache.</li>
+<li><a href="http://myfaces.apache.org/tomahawk/index.html">Apache Tomahawk</a>: componentes y utilidades JSF para su uso con la implementación de
+JSF 2.x.</li>
+<li><a href="http://java.dzone.com/articles/making-distinctions-between">Kinds of managed beans</a>:
+a comparison table of several kinds of managed beans.</li>
+</ul>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Rubén Chavarría</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-10-28T13:12:00+01:00" pubdate data-updated="true">Oct 28<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/jsf/'>JSF</a>, <a class='category' href='/blog/categories/java-ee/'>Java EE</a>, <a class='category' href='/blog/categories/tutorials/'>tutorials</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rchavarria.github.io/blog/2013/10/28/myfaces-implementacion-javaserver-faces/" data-via="rchavarriat" data-counturl="http://rchavarria.github.io/blog/2013/10/28/myfaces-implementacion-javaserver-faces/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/10/22/mi-experiencia-en-el-codemotion-2013/" title="Previous Post: Mi experiencia en el Codemotion 2013">&laquo; Mi experiencia en el Codemotion 2013</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/10/28/myfaces-implementacion-javaserver-faces/">Apache MyFaces como implementacion de JavaServer Faces</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/10/22/mi-experiencia-en-el-codemotion-2013/">Mi experiencia en el Codemotion 2013</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/10/17/primera-aplicacion-angularjs/">Mi primera aplicación web con AngularJS</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/10/08/curso-de-scrum-master/">Curso de Scrum Master</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/10/07/instant-markdown/">Instant Markdown</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("rchavarriat", 4, true);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/rchavarriat">@rchavarriat</a></p>
+  
+</section>
+
+
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/rchavarriat?count=5&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/rchavarriat">My Delicious Bookmarks &raquo;</a></p>
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2013 - Rub&eacute;n Chavarr&iacute;a -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'rchavarria-github-com';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://rchavarria.github.io/blog/2013/10/28/myfaces-implementacion-javaserver-faces/';
+        var disqus_url = 'http://rchavarria.github.io/blog/2013/10/28/myfaces-implementacion-javaserver-faces/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

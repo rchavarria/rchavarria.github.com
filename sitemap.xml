@@ -253,6 +253,12 @@
         <lastmod>2013-10-23T10:18:33+02:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://rchavarria.github.io/blog/2013/10/28/myfaces-implementacion-javaserver-faces/
+        </loc>
+        <lastmod>2013-10-28T14:36:12+01:00</lastmod>
+    </url>
+    <url>
         <loc>http://rchavarria.github.io/pet-projects/</loc>
         <lastmod>2013-10-23T12:07:31+02:00</lastmod>
     </url>
@@ -270,10 +276,10 @@
     </url>
     <url>
         <loc>http://rchavarria.github.io/</loc>
-        <lastmod>2013-10-23T10:18:33+02:00</lastmod>
+        <lastmod>2013-10-28T14:36:12+01:00</lastmod>
     </url>
     <url>
         <loc>http://rchavarria.github.io/blog/archives/</loc>
-        <lastmod>2013-10-23T10:18:33+02:00</lastmod>
+        <lastmod>2013-10-28T14:36:12+01:00</lastmod>
     </url>
 </urlset>
