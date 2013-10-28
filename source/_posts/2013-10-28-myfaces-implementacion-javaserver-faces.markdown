@@ -50,17 +50,16 @@ primera página `.jsp` (que podemos borrar) y un descriptor de la aplicación
 web, `web.xml`. Para la demo, modificaremos estos ficheros y añadiremos otros
 para completarla.
 
-## Add dependencies
+### Añadimos dependencias
 
-Now it's the time to add our needed dependencies, let's start:
+El siguiente paso es añadir las dependencias necesarias a nuestro proyecto:
 
-- `myfaces-api`: The public API classes of the Apache MyFaces CORE project.
-- `myfaces-impl`: The private implementation classes of the Apache MyFaces Core 
-Implementation
-- `tomahawk20`: JSF components and utilities to use in a JSF 2.x implementation.
-- `javax-servlet`: We will access to http request objects through the servlet
-implementation.
-- `jetty`: Include jetty as our server for development.
+- `myfaces-api`: el API pública de clases del proyecto core de Apache MyFaces.
+- `myfaces-impl`: la implementación privada del API de Apache MyFaces Core
+- `tomahawk20`: componentes y utilidades JSF para su uso con la implementación de
+JSF 2.x.
+- `javax-servlet`: para acceder al objeto *request* dentro de la aplicación.
+- `jetty`: incluiremos `jetty` como nuestro servidor para desarrollo.
 
 ## Configure FacesServlet in webapp descriptor file.
 
