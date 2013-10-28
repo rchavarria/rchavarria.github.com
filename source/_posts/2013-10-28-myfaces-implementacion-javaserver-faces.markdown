@@ -28,7 +28,7 @@ parámetros y sus valores enviados al servidor y permitirá navegar de vuelta
 a la pantalla inicial.
 
 Para probarla, simplemente bájate el código, ejecuta el comando `mvn` y
-visita [http://localhost:8080/login.jsf] para disfrutar.
+visita [http://localhost:8080/login.jsf](http://localhost:8080/login.jsf) para disfrutar.
 
 <!-- more -->
 
@@ -105,25 +105,28 @@ Para ver una lista completa de parámetros que podemos usar, no dejes de leer la
 documentacón sobre cómo 
 [configurar MyFaces](https://myfaces.apache.org/core21/myfaces-impl/webconfig.html).
 
-## Create a managed bean called `login`
+### Crear una *managed bean* llamada `login`
 
-We will create a simple managed bean, and it will allow us to access it in our
-JSF view, our first page that we will see later.
+Crearemos una *managed bean*, que no es más que un POJO que será inyectado en 
+nuestra vista de JSF y podremos acceder a sus getters/setters y otros métodos.
 
-It is fairly simple, just use the annotation `@ManagedBean` and you'll get it.
-We can use it, for example, to return a title for our future login form. Let's
-take a look to the code:
+Crearla es realmente sencillo, usaremos la anotación `@ManagedBean` y ya estará
+casi todo hecho. Como primer uso, haremos que devuelva un título para nuestro
+futuro formulario de login. Es un caso de uso muy sencillo, pero nos servirá para
+conocer la potencia de JSF. Un vistazo al código:
 
-    import javax.faces.bean.ManagedBean;
+``` java
+import javax.faces.bean.ManagedBean;
 
-    @ManagedBean(name = "login", eager = true)
-    public class GreetingBean {
-        public String getMessage() {
-            return "Login user";
-        }
+@ManagedBean(name = "login", eager = true)
+public class GreetingBean {
+    public String getMessage() {
+        return "Login user";
     }
+}
+```
 
-We will learn how to acces this managed bean in a `.jsf` page in the next step.
+En el próximo paso, veremo cómo acceder a esta managed bean.
 
 ## Create a view template for login page
 
