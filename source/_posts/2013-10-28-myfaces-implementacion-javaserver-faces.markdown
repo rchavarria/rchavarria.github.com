@@ -32,6 +32,13 @@ visita [http://localhost:8080/login.jsf](http://localhost:8080/login.jsf) para d
 
 <!-- more -->
 
+## Demo
+
+La demo será una aplicación que mostrará los parámetros enviados a través de 
+una petición HTTP, y el esquema de navegación será el siguiente:
+
+{% img center /images/2013/jsf-navigation.png Esquema de navegación %}
+
 ### Comencemos con el esqueleto
 
 La forma más rápida de comenzar es con un *archetype* de maven. Así pues,
@@ -39,7 +46,12 @@ usaremos el archetype por defecto de maven, el cual nos creará un
 esqueleto inicial para comenzar con nuestra aplicación web. Escribir el 
 siguiente comando:
 
-    mvn archetype:generate -DgroupId=<group-id> -DartifactId=<app-id> -DarchetypeArtifactId=maven-archetype-webapp
+``` 
+mvn archetype:generate \
+    -DgroupId=<group-id> \
+    -DartifactId=<app-id> \
+    -DarchetypeArtifactId=maven-archetype-webapp
+```
 
 Donde `group-id` es el nombre de grupo, por ejemplo, el nombre de la empresa
 seguido por el del proyecto. Esta demo usará `es.rchavarria.jsf`. `app-id` es
@@ -226,20 +238,25 @@ HTML. El código (parcial) será algo parecido a esto:
 Usaremos el action method `login()` en el elemento `h:commandLink` para permitir al
 usuario navegar de vuelta al la página de login.
 
-# Run
+## Ejecutar
 
-Run the maven command `mvn jetty:run` or just `mvn` to start the server. Then,
-visit [http://localhost:8080/login.jsf] and play!.
+Para ver la demo en acción, simplemente ejecutar el comando maven `mvn jetty:run`.
+Esto arrancará el servidor. Después, visita la URL 
+[http://localhost:8080/login.jsf](http://localhost:8080/login.jsf) y a jugar!.
 
-# Further reading
+## Enlaces y referencias
 
 - [Mojarra project](https://javaserverfaces.java.net/): 
 the reference implementation of the JSF specification.
 - [JSF on Wikipedia](https://en.wikipedia.org/wiki/JavaServer_Faces):
 Wikipedia entry for JavaServer Faces.
-- [Facelets](https://en.wikipedia.org/wiki/Facelets):
-Facelets is the default templating system for JSF, instead of JSP's pages
+- [Facelets]: Facelets is the default templating system for JSF, instead of JSP's pages
 - [MyFaces](https://myfaces.apache.org/):
 an implementation developed by Apache.
+- [Apache Tomahawk]: componentes y utilidades JSF para su uso con la implementación de
+JSF 2.x.
 - [Kinds of managed beans](http://java.dzone.com/articles/making-distinctions-between):
 a comparison table of several kinds of managed beans.
+
+[Facelets]: https://en.wikipedia.org/wiki/Facelets
+[Apache Tomahawk]: http://myfaces.apache.org/tomahawk/index.html
