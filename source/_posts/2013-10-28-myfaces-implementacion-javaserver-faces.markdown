@@ -61,39 +61,49 @@ JSF 2.x.
 - `javax-servlet`: para acceder al objeto *request* dentro de la aplicación.
 - `jetty`: incluiremos `jetty` como nuestro servidor para desarrollo.
 
-## Configure FacesServlet in webapp descriptor file.
+### Configurar FacesServlet en el descriptor de la applicación web
 
-We need to configure a servlet, the FacesServlet, to handle all JSF invocations.
-To do so, we need to modify the `web.xml` file:
+Necesitamos configurar un servlet, FacesServlet en nuestro caso, que gestione
+todas las peticiones a JSF. Para ello modificaremos el fichero `web.xml` de la
+siguiente forma:
 
-    <servlet>
-        <servlet-name>Faces Servlet</servlet-name>
-        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>Faces Servlet</servlet-name>
-        <url-pattern>*.jsf</url-pattern>
-    </servlet-mapping>
+``` xml
+<servlet>
+    <servlet-name>Faces Servlet</servlet-name>
+    <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>Faces Servlet</servlet-name>
+    <url-pattern>*.jsf</url-pattern>
+</servlet-mapping>
+```
 
-Basically, it means: our servlet `Faces Servlet` will handle all requests 
-ending in `.jsf`.
+Esto hará que el servlet llamado *Faces Servlet* gestionará todas las peticiones
+a páginas que terminen en `.jsf`.
 
-Most tutorials don't go further, but this configuration doesn't work. We need to
-setup a servlet listener, to start MyFaces initialization. So, be sure to
-include the following config:
+La mayoría de tutoriales se quedan aquí, pero esta configuración **NO** es
+suficiente. Es necesario añadir un listener a nuestro servlet, que dispare la
+inicializaci´on de MyFaces. Asegúrate de incluir esto en el `web.xml`:
 
-    <listener>
-        <listener-class>org.apache.myfaces.webapp.StartupServletContextListener</listener-class>
-    </listener>
+``` xml
+<listener>
+    <listener-class>org.apache.myfaces.webapp.StartupServletContextListener</listener-class>
+</listener>
+```
 
-This is a demo, and we are under a development stage, so I would recomend to use
-this context param for our servlet (see a list of lots of context params documented
-in the [Apache MyFaces project](https://myfaces.apache.org/core21/myfaces-impl/webconfig.html)). 
+Estamos en una demo, y por lo tanto bajo un entorno de desarrollo, por lo que 
+recomendaría usar un *context param* para indicarselo a MyFaces. 
 
-    <context-param>
-        <param-name>javax.faces.PROJECT_STAGE</param-name>
-        <param-value>Development</param-value>
-    </context-param>
+``` xml
+<context-param>
+    <param-name>javax.faces.PROJECT_STAGE</param-name>
+    <param-value>Development</param-value>
+</context-param>
+```
+
+Para ver una lista completa de parámetros que podemos usar, no dejes de leer la 
+documentacón sobre cómo 
+[configurar MyFaces](https://myfaces.apache.org/core21/myfaces-impl/webconfig.html).
 
 ## Create a managed bean called `login`
 
