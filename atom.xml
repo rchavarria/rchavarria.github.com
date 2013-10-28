@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2013-10-28T14:36:13+01:00</updated>
+  <updated>2013-10-28T15:51:49+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -1924,6 +1924,9 @@ de integración.</li>
 <li><a href="http://rchavarria.github.io/blog/2013/09/29/entendiendo-ciclo-vida-entidades-jpa">Entendiendo el ciclo de vida de entidades JPA</a>:
 Aquí aprenderemos qué estados son posibles para una entidad JPA, qué significan
 y cómo transicionar de unos a otros.</li>
+<li><a href="http://rchavarria.github.io/blog/2013/10/28/myfaces-implementacion-javaserver-faces">Apache MyFaces como implementacion de JavaServer Faces</a>:
+En esta demo crearemos desde cero una applicación web con el framework MVC MyFaces,
+la implementación de Apache de JavaServer Faces.</li>
 <li>Servlet listeners: Veremos el uso que le podemos dar a los distintos listeners asociados
 a los servlets y su ciclo de vida: ServletContextListener,
 ServletContextAttributeListener, ServletRequestListener y HttpSessionListener.</li>
