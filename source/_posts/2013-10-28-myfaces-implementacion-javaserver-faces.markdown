@@ -171,20 +171,27 @@ bean para controlar el siguiente paso a dar en nuestro modelo de navegación. Es
 tipo de métodos se conocen como *action method*. Devuelven una `String`, la cual
 identifica la siguiente vista a renderizar.
 
-## Create another managed bean
+### Una nueva managed bean
 
-We will create a new managed bean, called `paramReader`. Its purpouse will be to
-read the request parameters and return them to a view template.
+Crearemos una nueva managed bean, llamada `paramReader`. Su propósito será el de 
+leer los parámetros de la petición HTTP enviada desde la vista anterior y 
+devolver estos parámetros en forma de lista de valores a una nueva vista.
 
-To read the parameters, we will access to the `HttpServletRequest` object through the
-`FacesContext` and its `ExternalContext` object:
+Para leer los parámetros, lo haremos a través del objeto `HttpServletRequest`,
+all cual accederemos a través de `ExternalContext` del `FacesContext`, del
+siguiente modo:
 
-    public List<Parameter> getParams() {
-        FacesContext fc = FacesContext.getCurrentInstance();
-        HttpServletRequest request = (HttpServletRequest) fc.getExternalContext().getRequest();
-        // ...      
-        return params;
-    }
+``` java
+  public List<Parameter> getParams() {
+      FacesContext fc = FacesContext.getCurrentInstance();
+      HttpServletRequest request = (HttpServletRequest) fc.getExternalContext().getRequest();
+      // ...      
+      return params;
+  }
+```
+
+
+
 
 ## Create another view template
 
