@@ -49,6 +49,9 @@ de integración.
 - [Entendiendo el ciclo de vida de entidades JPA](/blog/2013/09/29/entendiendo-ciclo-vida-entidades-jpa):
 Aquí aprenderemos qué estados son posibles para una entidad JPA, qué significan 
 y cómo transicionar de unos a otros.
+- [Apache MyFaces como implementacion de JavaServer Faces](/blog/2013/10/28/myfaces-implementacion-javaserver-faces):
+En esta demo crearemos desde cero una applicación web con el framework MVC MyFaces, 
+la implementación de Apache de JavaServer Faces.
 - Servlet listeners: Veremos el uso que le podemos dar a los distintos listeners asociados
 a los servlets y su ciclo de vida: ServletContextListener, 
 ServletContextAttributeListener, ServletRequestListener y HttpSessionListener.
