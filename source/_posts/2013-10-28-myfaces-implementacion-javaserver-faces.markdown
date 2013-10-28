@@ -32,24 +32,23 @@ visita [http://localhost:8080/login.jsf] para disfrutar.
 
 <!-- more -->
 
+### Comencemos con el esqueleto
 
-
-# Instructions
-
-## Start with a maven webapp archetype
-
-The fastest way to start is using a maven archetype. So, why not start using
-the maven webapp archetype by default? Type the following command:
+La forma más rápida de comenzar es con un *archetype* de maven. Así pues,
+usaremos el archetype por defecto de maven, el cual nos creará un
+esqueleto inicial para comenzar con nuestra aplicación web. Escribir el 
+siguiente comando:
 
     mvn archetype:generate -DgroupId=<group-id> -DartifactId=<app-id> -DarchetypeArtifactId=maven-archetype-webapp
 
-Where `group-id` is your group name, for example, your company name followed by 
-your project name, such as `es.rchavarria.jsf`. The `app-id` is the name of
-your new application. We will use `jsf-basics`.
+Donde `group-id` es el nombre de grupo, por ejemplo, el nombre de la empresa
+seguido por el del proyecto. Esta demo usará `es.rchavarria.jsf`. `app-id` es
+el nombre que queremos para nuestra nueva aplicación, digamos `jsf-basics`.
 
-This command will create the skeleton of a Java web application, including an
-index `.jsp` page and a `web.xml` file, describing the web application. We will
-modify these files and others to complete our demo.
+Este comando creará el esqueleto de una aplicación web Java, e incluirá una 
+primera página `.jsp` (que podemos borrar) y un descriptor de la aplicación
+web, `web.xml`. Para la demo, modificaremos estos ficheros y añadiremos otros
+para completarla.
 
 ## Add dependencies
 
