@@ -20,15 +20,7 @@ Así que aquí está mi Lista de Lectura:
 
 ## Estoy leyendo
 
-<!--
-		Como ganar amigos e influir sobre las personas, de Dale Carnegie
-		(http://www.amazon.es/dp/8493664928)
-
-		* encontrado en el blog de Angel, Vivir al máximo: http://viviralmaximo.net/invierte-en-ti-mismo
-		* pero tb recomendado por un blog que sigo: http://henrikwarne.com/2012/08/22/top-5-surprises-when-starting-out-as-a-software-developer/
--->
-
-- [La meta: un proceso de mejora contínua](http://www.casadellibro.com/libro-la-meta-un-proceso-de-mejora-continua-3-ed/9788479787189/1054992), de Eliyahu M. Goldratt
+- [Expertología](http://www.amazon.es/dp/8492414502), de Andrés Pérez Ortega
 
 ## Tengo pensado leer
 
@@ -52,7 +44,11 @@ Así que aquí está mi Lista de Lectura:
 - [The Passionate Programmer](http://pragprog.com/book/cfcar2/the-passionate-programmer), de Chad Fowler
 - [Agile software development](http://www.amazon.com/Agile-Software-Development-Alistair-Cockburn/dp/0201699699), de Alistair Cockburn
 - [UML Distilled](http://www.amazon.es/gp/product/0321193687/ref=as_li_tf_tl?ie=UTF8&camp=3626&creative=24790&creativeASIN=0321193687&linkCode=as2&tag=wwwjaviergarz-21), de Martin Fowler
-<!-- visto en blog de javier garzás: http://www.javiergarzas.com/2013/04/que-es-uml-diagramas-uml.html -->
+
+<!-- 
+	visto en blog de javier garzás: http://www.javiergarzas.com/2013/04/que-es-uml-diagramas-uml.html 
+-->
+
 - [The art of Unix programming](http://www.catb.org/esr/writings/taoup), de Eric S. Raymond
 - [Snow crash](http://www.amazon.com/Snow-Crash-Bantam-Spectra-Book/dp/0553380958), de Neal Stephenson
 - [Test driven development: by example](http://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530), de Kent Beck
@@ -70,6 +66,9 @@ Así que aquí está mi Lista de Lectura:
 
 ## He leído
 
+- [Instant Markdown](/blog/2013/10/07/instant-markdown), de Arturo Herrero ~ *Septiembre 2013*
+- [Como ganar amigos e influir sobre las personas](http://www.amazon.es/dp/8493664928), de Dale Carnegie ~ *Julio 2013*
+- [La meta: un proceso de mejora contínua](/blog/2013/04/10/la-meta), de Eliyahu M. Goldratt ~ *Abril 2013*
 - [Agile estimating and planning](blog/2013/02/13/agile-estimating-and-planning/), de Mike Cohn ~ *Febrero 2013*
 - [Agile principles, patterns and practices in C#](http://rchavarria.wordpress.com/2012/11/22/agile-principles-patterns-and-practices-in-c), de Robert C. Martin ~ *Noviembre 2012*
 - [En el principio... fue la linea de comandos](http://rchavarria.wordpress.com/2012/10/25/en-el-principio-fue-la-linea-de-comandos), de Neal Stephenson ~ *Octubre 2012*

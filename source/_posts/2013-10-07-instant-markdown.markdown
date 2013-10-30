@@ -14,7 +14,7 @@ sidebar: true
 
 #### Instant Markdown
 
-##### Eliyahu Goldratt
+##### Arturo Herrero
 
 {% img right http://www.packtpub.com/sites/default/files/9145OT_Instant%20Markdown_cov_0.jpg 195 300 Instant Markdown %}
 
