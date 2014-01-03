@@ -48,7 +48,7 @@ Así que aquí está mi Lista de Lectura:
 <!-- 
 	visto en blog de javier garzás: http://www.javiergarzas.com/2013/04/que-es-uml-diagramas-uml.html 
 -->
-
+- [Introduction to the command line](http://shop.fsf.org/product/Introduction_to_Command_Line/), de la Free Software Foundation
 - [The art of Unix programming](http://www.catb.org/esr/writings/taoup), de Eric S. Raymond
 - [Snow crash](http://www.amazon.com/Snow-Crash-Bantam-Spectra-Book/dp/0553380958), de Neal Stephenson
 - [Test driven development: by example](http://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530), de Kent Beck
@@ -63,6 +63,7 @@ Así que aquí está mi Lista de Lectura:
 - No me hagas pensar, de Steve Krug
 - [Rapid development](http://www.stevemcconnell.com/rd.htm), de Steve McConnel, recomendado por [Rodrigo Corral](http://twitter.com/r_corral) en la CAS2013
 - [Facts and fallacies of software development](http://www.amazon.com/Facts-Fallacies-Software-Engineering-Robert/dp/0321117425, de Robert L. Glass, recomendado por [Rodrigo Corral](http://twitter.com/r_corral) en la CAS2013
+- [The twelve facto app](http://12factor.net/), de Adam Wiggins. The twelve-factor app is a methodology for building software-as-a-service apps. ([download de epub](http://12factor.net/12factor.epub))
 
 ## He leído
 
