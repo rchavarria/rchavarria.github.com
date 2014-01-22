@@ -52,6 +52,9 @@ y cómo transicionar de unos a otros.
 - [Apache MyFaces como implementacion de JavaServer Faces](/blog/2013/10/28/myfaces-implementacion-javaserver-faces):
 En esta demo crearemos desde cero una applicación web con el framework MVC MyFaces, 
 la implementación de Apache de JavaServer Faces.
+- [Aplicación web RESTful con Spring MVC](/blog/2014/01/22/restful-spring-mvc): En esta ocasión
+crearemos una aplicación web, con apariencia de aplicación REST, y para ello usaremos la
+tecnología Spring MVC.
 - Servlet listeners: Veremos el uso que le podemos dar a los distintos listeners asociados
 a los servlets y su ciclo de vida: ServletContextListener, 
 ServletContextAttributeListener, ServletRequestListener y HttpSessionListener.
