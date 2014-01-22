@@ -20,7 +20,11 @@ Así que aquí está mi Lista de Lectura:
 
 ## Estoy leyendo
 
+- [El cuadrante del flujo del dinero](http://www.amazon.com/Cuadrante-Flujo-Dinero-Padre-Rico/dp/9707702842),
+de Robert Kiyosaki
 - [Expertología](http://www.amazon.es/dp/8492414502), de Andrés Pérez Ortega
+- [Planifica tu éxito, de aprendiz a empresario](http://www.amazon.com/Planifica-tu-éxito-aprendiz-empresario/dp/841545757X),
+de Roberto Canales (Autentia)
 
 ## Tengo pensado leer
 
@@ -67,8 +71,11 @@ Así que aquí está mi Lista de Lectura:
 
 ## He leído
 
+- [Padre rico, padre pobre](http://www.amazon.com/Padre-Rico-Pobre-Spanish-Edition/dp/160396181X),
+de Robert Kiyosaki ~ *Septiembre 2013*
 - [Instant Markdown](/blog/2013/10/07/instant-markdown), de Arturo Herrero ~ *Septiembre 2013*
-- [Como ganar amigos e influir sobre las personas](http://www.amazon.es/dp/8493664928), de Dale Carnegie ~ *Julio 2013*
+- [Como ganar amigos e influir sobre las personas](https://gist.github.com/rchavarria/8567866),
+de Dale Carnegie ~ *Julio 2013*
 - [La meta: un proceso de mejora contínua](/blog/2013/04/10/la-meta), de Eliyahu M. Goldratt ~ *Abril 2013*
 - [Agile estimating and planning](blog/2013/02/13/agile-estimating-and-planning/), de Mike Cohn ~ *Febrero 2013*
 - [Agile principles, patterns and practices in C#](http://rchavarria.wordpress.com/2012/11/22/agile-principles-patterns-and-practices-in-c), de Robert C. Martin ~ *Noviembre 2012*
