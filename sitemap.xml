@@ -206,7 +206,7 @@
     </url>
     <url>
         <loc>http://rchavarria.github.io/blog/2013/09/03/demos-tecnologias-javaee/</loc>
-        <lastmod>2013-10-28T15:51:21+01:00</lastmod>
+        <lastmod>2014-01-22T23:29:32+01:00</lastmod>
     </url>
     <url>
         <loc>http://rchavarria.github.io/blog/2013/09/03/sencillo-servlet-http/</loc>
@@ -259,6 +259,10 @@
         <lastmod>2013-10-28T14:36:12+01:00</lastmod>
     </url>
     <url>
+        <loc>http://rchavarria.github.io/blog/2014/01/22/restful-spring-mvc/</loc>
+        <lastmod>2014-01-22T23:31:45+01:00</lastmod>
+    </url>
+    <url>
         <loc>http://rchavarria.github.io/pet-projects/</loc>
         <lastmod>2013-10-23T12:07:31+02:00</lastmod>
     </url>
@@ -272,14 +276,14 @@
     </url>
     <url>
         <loc>http://rchavarria.github.io/readings/</loc>
-        <lastmod>2013-10-30T14:32:05+01:00</lastmod>
+        <lastmod>2014-01-03T18:16:31+01:00</lastmod>
     </url>
     <url>
         <loc>http://rchavarria.github.io/</loc>
-        <lastmod>2013-10-30T14:21:20+01:00</lastmod>
+        <lastmod>2014-01-22T23:31:45+01:00</lastmod>
     </url>
     <url>
         <loc>http://rchavarria.github.io/blog/archives/</loc>
-        <lastmod>2013-10-30T14:21:20+01:00</lastmod>
+        <lastmod>2014-01-22T23:31:45+01:00</lastmod>
     </url>
 </urlset>

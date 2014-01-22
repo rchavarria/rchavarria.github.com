@@ -4,7 +4,7 @@
   <title><![CDATA[Category: tutorials | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/tutorials/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2013-10-30T14:32:06+01:00</updated>
+  <updated>2014-01-22T23:32:15+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,276 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Aplicacion web RESTful con Spring MVC]]></title>
+    <link href="http://rchavarria.github.io/blog/2014/01/22/restful-spring-mvc/"/>
+    <updated>2014-01-22T23:10:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2014/01/22/restful-spring-mvc</id>
+    <content type="html"><![CDATA[<div style="margin:2%; padding:2%; background-color:#E0E0E0; ">
+    Find an English version of this post directly in the <a href="https://github.com/rchavarria/javaee-6-demos/tree/master/spring-mvc">source code repository</a>.
+</div>
+
+
+<p>En esta demo crearemos una aplicación web para demostrar el uso del framework
+Spring MVC para crear servicios REST.</p>
+
+<p><img class="right" src="/images/2014/spring-mvc.png" title="Spring MVC" ></p>
+
+<p>Será una aplicación web sencilla, sin persistencia en base de datos (para no
+complicarla), pero será una aplicación Spring MVC completa donde, en lugar de
+generar las respuestas mediante páginas JSP, éstas serán generadas en formato
+JSON, para ser consumidas como si se trataran de servicios web.</p>
+
+<!-- more -->
+
+
+<p>La aplicación no será un servicio web, estrictamente hablando, pero responderá a
+peticiones HTTP <code>get</code>, <code>post</code>, <code>put</code> y <code>delete</code> como si se tratara de uno de ellos.</p>
+
+<h1>Instrucciones</h1>
+
+<p>La aplicación será la típica que ofrece operaciones <a href="https://es.wikipedia.org/wiki/CRUD">CRUD</a>,
+y gestionará una lista de casas, pisos, chalets,... Es decir, los tipos de propiedades
+gestionadas por una agencia inmobiliaria. Por eso, nuestra entidad, nuestro
+recurso (hablando en terminología REST), será una Propiedad o <code>Property</code>.</p>
+
+<p>Veamos los distintos pasos que daremos para desarrollar la aplicación:</p>
+
+<h2>Definir la URI para acceder a nuestra entidad</h2>
+
+<p>Solamente tendremos un recurso al que acceder, una Propiedad, así que solo
+tendremos una URI a la que acceder:</p>
+
+<pre><code>http://&lt;server name&gt;/springmvc/properties
+</code></pre>
+
+<p>Debemos definir los métodos HTTP que usaremos para gestionar las Propiedades:</p>
+
+<ul>
+<li><code>GET /properties</code>: devolverá una lista de Propiedades</li>
+<li><code>GET /properties/{id}</code>: devolverá los detalles de una Propiedad identificada por {id}</li>
+<li><code>POST /properties</code>: creará una nueva Propiedad</li>
+<li><code>DELETE /properties/{id}</code>: borrará una Propiedad</li>
+<li><code>PUT /properties/{id}</code>: actualizará una Propiedad</li>
+</ul>
+
+
+<h1>Crear un controlador MVC de consultas</h1>
+
+<p>El controlador, que responderá a peticiones de consulta (listar y obtener
+por id), se llamará
+<code>es.rchavarria.springmvc.rest.PropertiesQueriesController</code>.</p>
+
+<p>Responderá a peticiones HTTP que consulten datos, tales como listar las Propiedades u
+obtener los detalles de una de ellas.</p>
+
+<p>Debemos marcar el controlador con anotaciones de Spring MVC de forma que Spring
+reconozca la clase como controlador MVC. Usaremos las anotaciones para indicar
+qué URI gestionará. Nuestro controlador vacío podría ser algo así:</p>
+
+<pre><code>@Controller
+@RequestMapping("/properties")
+public class PropertiesQueriesController {
+}
+</code></pre>
+
+<h2>Crear un método que liste Propiedades</h2>
+
+<p>Nuestro primer método será uno que devuelva una lista de Propiedades. La lista
+será creada/obtenida/generada por un servicio, no por el controlador en sí
+mismo. En un principio, el servicio gestionará las Propiedades sin ningún tipo
+de persistencia, pero siempre podremos implementarla en un futuro.</p>
+
+<p>El método mapeará el método <code>get</code> de HTTP y su valor retornado será parte del
+cuerpo de la respuesta. De esta forma, la respuesta no será generada por una
+página JSP, sino que la respuesta será texto en formato JSON generado
+a partir de un objeto Java:</p>
+
+<pre><code>@RequestMapping(method = RequestMethod.GET)
+@ResponseStatus(HttpStatus.OK)
+@ResponseBody
+public List&lt;String&gt; getAllProperties() {
+    return Arrays.asList("one", "two", "three");
+}
+</code></pre>
+
+<h2>Crear tests para probar el controlador</h2>
+
+<p>Este test será un test de integración, ya que no podemos considerarlo como un
+test unitario. No lo podemos considerar así ya que el test arrancará un pequeño
+servidor web, arrancará nuestro controlador y realizará peticiones HTTP reales
+contra él (un test unitario no debería hacer tantas tareas).</p>
+
+<p>Usaremos <a href="https://code.google.com/p/mockito/">Mockito</a> para simular dependencias
+externas y un componente proporcionado por Spring MVC, <code>MockMVC</code>. Este componente
+será el servidor y gestionará las peticiones y analizará las respuestas de
+nuestro controlador.</p>
+
+<p>El siguiente código muestra cómo preparar un servidor y cómo configurar nuestro
+controlador en él:</p>
+
+<pre><code>// ...
+
+private MockMvc mockMvc;
+
+@InjectMocks
+PropertiesQueriesController controller;
+
+@Mock
+PropertyService propertyService;
+
+@Before
+public void setup() {
+    MockitoAnnotations.initMocks(this);
+
+    mockMvc = standaloneSetup(controller)
+            .setMessageConverters(new MappingJackson2HttpMessageConverter())
+            .build();
+}
+
+// ...
+</code></pre>
+
+<p>Y en el siguiente código vemos cómo probar una petición HTTP <code>get</code>:</p>
+
+<pre><code>@Test
+public void testRequestAllPropertiesUsesHttpOK() throws Exception {
+    when(propertyService.requestAllProperties()).thenReturn(allProperties());
+
+    mockMvc.perform(get("/properties")
+        .accept(MediaType.APPLICATION_JSON))
+        .andExpect(status().isOk());
+}
+</code></pre>
+
+<p>Crearemos otro test, para comprobar esta vez que el resultado es el esperado:</p>
+
+<pre><code>@Test
+public void testRequestAllPropertiesRendersOkAsJSON() throws Exception {
+    when(propertyService.requestAllProperties()).thenReturn(allProperties());
+
+    mockMvc.perform(get("/properties")
+        .accept(MediaType.APPLICATION_JSON))
+        .andDo(print())
+        .andExpect(jsonPath("$[0].city").value("first city"))
+        .andExpect(jsonPath("$[1].address").value("second address"))
+        .andExpect(jsonPath("$[2].price").value(300));
+}
+</code></pre>
+
+<p>Para ver más tests o los tests al completo, por favor, echa un vistazo al
+<a href="https://github.com/rchavarria/javaee-6-demos/tree/master/spring-mvc">código de la demo</a>
+en github.</p>
+
+<h2>Añadir un método al controlador que acepte un parámetro en la URI</h2>
+
+<p>Usaremos URIs del tipo <code>http://&lt;server&gt;/springmvc/properties/&lt;id&gt;</code> para obtener los
+detalles de una Propiedad en concreto. <code>&lt;id&gt;</code> representa un identificador de Propiedad,
+y el controlador deberá devolver los detalles de la misma en lugar de una lista con
+todas las propiedades.</p>
+
+<p>En el controlador, anotaremos un nuevo método con <code>@RequestMapping</code> la cual tendrá
+dos parámetros: <code>method</code>, será el método HTTP <code>get</code>; y <code>value</code>, para dar un nombre al
+parámetro. La anotación <code>@ResponseStatus</code> indica al framework el código de estado
+HTTP que deberá devolver y <code>@ResponseBody</code> nos indica que el valor devuelto por el
+método debe ser el cuerpo de mensaje de respuesta.</p>
+
+<p>Este nuevo método tendrá un parámetro, anotado con <code>@PathVariable</code>. Esta anotación
+mapea los parámetros del método con parámetros en la URI.</p>
+
+<pre><code>@RequestMapping(method = RequestMethod.GET, value="/{id}")
+@ResponseStatus(HttpStatus.OK)
+@ResponseBody
+public Property getProperty(@PathVariable String id) {
+    return propertyService.findById(id);
+} 
+</code></pre>
+
+<p>Crearemos un test similar al anterior test de integración, pero para no hacer eterno
+este post, prefiero que le eches un vistazo al código en el
+<a href="https://github.com/rchavarria/javaee-6-demos/tree/master/spring-mvc">proyecto de github</a>.</p>
+
+<h2>Configurar controladores MVC</h2>
+
+<p>Usaremos anotaciones para configurar nuestros controladores, Spring MVC lo hace
+extremadamente fácil y proporciona una anotación, <code>@EnableWebMVC</code>, que hace
+prácticamente todo por nosotros. Y esto es casi todo lo que hay que hacer para
+configurar una aplicación MVC.</p>
+
+<p>Nuestra configuración está centralizada en una clase, la cual será sencillísima
+y se parecerá a ésta:</p>
+
+<pre><code>@Configuration
+@EnableWebMvc
+@ComponentScan(basePackages = { "es.rchavarria.springmvc.rest.controllers" })
+public class MVCConfig {}
+</code></pre>
+
+<p>También crearemos un test de integración para comprobar que configuramos bien
+nuestros controladores. Busca el test <code>MVCConfigIntegrationTest</code> en el
+<a href="https://github.com/rchavarria/javaee-6-demos/tree/master/spring-mvc">repositorio de código</a>
+para verlo.</p>
+
+<h2>Inicializar la aplicación web</h2>
+
+<p>Seguiremos sin usar ficheros XML para configurar nuestra aplicación, por lo que lo haremos
+a través del código.</p>
+
+<p>Crearemos una clase que herede de una proporcionada por Spring,
+<code>AbstractAnnotationConfigDispatcherServletInitializer</code>,
+y sobreescribiremos los siguientes métodos:</p>
+
+<ul>
+<li><code>getRootConfigClasses</code>: debe devolver un array de clases que configuren el contexto raíz
+(root context). Por ahora, no tenemos tal cosa, por lo que puede devolver un array
+vacío o simplemente el valor <code>null</code>.</li>
+<li><code>getServletConfigClasses</code>: debe devolver un array de clases que configuren el
+contexto servlet.</li>
+<li><code>getServletMappings</code>: debe devolver los mapeos del servlet.</li>
+</ul>
+
+
+<p>Ya estamos listos para ejecutar nuestra demo en un contenedor de servlets. En este caso,
+ejecutaremos la aplicación en un servidor Tomcat 7. Para ello, añadiremos el plugin de
+maven de Tomcat 7 a nuestro fichero <code>pom.xml</code>...</p>
+
+<pre><code>&lt;plugin&gt;
+    &lt;groupId&gt;org.apache.tomcat.maven&lt;/groupId&gt;
+    &lt;artifactId&gt;tomcat7-maven-plugin&lt;/artifactId&gt;
+    &lt;version&gt;2.2&lt;/version&gt;
+&lt;/plugin&gt;
+</code></pre>
+
+<p>... y ejecutaremos la aplicación con el comando <code>mvn tomcat7:run</code>.</p>
+
+<h2>¿Por dónde seguir?</h2>
+
+<p>Este post ya ha quedado demasiado largo para publicarse, pero no he encontrado forma de
+hacerlo más corto y contar todos los pasos involucrados para este desarrollo, pero todavía
+tenemos muchísimo trabajo por hacer, por lo que animo a visitar el repositorio de
+código fuente de la demo.</p>
+
+<p>Algunas tareas que quedan pendientes, podrían ser:</p>
+
+<ul>
+<li>Crear un nuevo controlador, un controlador de comandos (en contraposición a controlador de
+consulta), que permita al usuario a crear, actualizar o borrar una Propiedad.</li>
+<li>Crear tres métodos en el controlador, uno por cada acción (crear, actualizar y borrar).</li>
+<li>Recuerda, cada método deberá estar probado por un test unitario o de integración, que no
+se te olvide.</li>
+</ul>
+
+
+<h1>Recursos y lecturas</h1>
+
+<ul>
+<li><a href="http://spring.io/guides/tutorials/rest">Build RESTful services with Spring</a></li>
+<li><a href="https://github.com/rchavarria/javaee-6-demos/tree/master/spring-mvc">Source code of this demo</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Apache MyFaces como implementacion de JavaServer Faces]]></title>
@@ -1036,105 +1306,6 @@ cómo funciona.</p>
 
 
 <p><em>Imagen obtenida de <a href="http://www.flickr.com/photos/psd">psd</a></em></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Servlet redirecciona a una JSP]]></title>
-    <link href="http://rchavarria.github.io/blog/2013/09/17/servlet-redirecciona-jsp/"/>
-    <updated>2013-09-17T13:27:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2013/09/17/servlet-redirecciona-jsp</id>
-    <content type="html"><![CDATA[<div style="margin:2%; padding:2%; background-color:#E0E0E0; ">
-    Find a lightweight English version of this post directly in the <a href="https://github.com/rchavarria/javaee-6-demos/tree/master/request-parameters-jsp">source code repository</a>.
-</div>
-
-
-<p>Este post es una pequeña extensión del anterior, un servlet que leía los parámetros
-de una petición HTTP. La demo anterior presentaba los parámetros leídos de una
-forma muy tosca y básica. En esta demo, la información se va a presentar al usuario
-de una forma más trabajada. Además, orientándonos hacia una arquitectura MVC,
-separaremos las tareas de lectura de los parámetros y presentación de los datos.</p>
-
-<p>Se puede ver el código fuente de la demostración en el directorio
-<a href="https://github.com/rchavarria/javaee-6-demos/tree/master/request-parameters-jsp"><code>request-parameters-jsp</code></a>
-del repositorio de las demos en github.</p>
-
-<!-- more -->
-
-
-<h2>Demo</h2>
-
-<p>La demostración va a ser muy sencilla: crearemos en servlet, lo configuraremos
-para que responda cuando un usuario envíe los campos de un formulario de login,
-y haremos que redireccione a una página JSP, esta página se encargará de renderizar
-los datos que viajarán como atributos de la petición.</p>
-
-<p>Para ejecutar la demo, simplemente hay que descargase el código fuente y ejecutar
-<code>mvn jetty:run</code> desde el directorio raiz de la demo. Visitar la página de login
-<a href="http://localhost:8080/login.html">http://localhost:8080/login.html</a>, introducir
-unos valores cualquiera y enviar los datos del formulario. Como resultado, veremos
-el renderizado de la página JSP en el navegador.</p>
-
-<p><img class="center" src="/images/2013/request-parameters-jsp.png" title="Respuesta del servlet" ></p>
-
-<h2>Dependencias</h2>
-
-<p>Como viene siendo habitual, para la demostración usaremos
-<a href="http://maven.apache.org/">Apache Maven</a> para la gestión de dependencias.
-En nuestro fichero <code>pom.xml</code> incluiremos la única dependencia del proyecto,
-<code>javax-servlet-api</code> y listo.</p>
-
-<h2>El servlet</h2>
-
-<p>Nuestro servlet se trata de un servlet HTTP, luego heredará de <code>javax.servlet.http.HttpServlet</code>.
-Lo configuraremos mediante anotaciones, con <code>@WebServlet</code>. Primero leerá los parámetros
-enviados en la petición HTTP, igual que vimos en la anterior demo, y lo almacenará como un
-atributo del objeto <code>request</code>, para que pueda ser leído por nuestra página JSP.</p>
-
-<p><code>java
-//...
-List&lt;Parameter&gt; params = buildParamList(request);
-request.setAttribute("params", params);
-//...
-</code></p>
-
-<p>Luego, redireccionará la petición a nuestra página JSP. Se ha decidido hacer un
-<code>forward</code> de la petición en lugar de hacer una redirección completa,
-ya que la redirección provocaría una nueva petición HTTP y perderíamos los parámetros
-de la petición original, y esto es algo que no deseamos.</p>
-
-<p><code>java
-//...
-request.getRequestDispatcher("/params.jsp").forward(request, response);
-//...
-</code></p>
-
-<h2>La página JSP</h2>
-
-<p>Finalmente, la página JSP se encarga de presentar la información. De esta forma tenemos
-construida nuestra demo siguiendo un patrón MVC (aunque es muy sencillo en este caso, ya
-que solo contamos con un servlet y una página JSP), donde la página JSP juega el papel
-de <em>vista</em>.</p>
-
-<p>El código que nos interesa dentro del JSP es el que se encarga de iterar el
-atributo que estableció el servlet, al que hemos llamado <code>params</code>.</p>
-
-<p>``` html
-&lt;%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %></p>
-
-<ul>
-    <c:forEach var="p" items="${params}">
-        <li>${p.key}: ${p.value}</li>
-    </c:forEach>
-</ul>
-
-
-<p>```</p>
-
-<h2>Código fuente</h2>
-
-<p>Para echar un ojo al código fuente, visitar el directorio
-<a href="https://github.com/rchavarria/javaee-6-demos/tree/master/request-parameters-jsp"><code>request-parameters-jsp</code></a>.</p>
 ]]></content>
   </entry>
   

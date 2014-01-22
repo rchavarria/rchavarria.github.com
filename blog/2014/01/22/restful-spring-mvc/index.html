@@ -1,0 +1,538 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Aplicacion web RESTful con Spring MVC - R. Chavarria's Blog</title>
+  <meta name="author" content="Rub&eacute;n Chavarr&iacute;a">
+
+  
+  <meta name="description" content="Find an English version of this post directly in the source code repository. En esta demo crearemos una aplicación web para demostrar el uso del &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://rchavarria.github.io/blog/2014/01/22/restful-spring-mvc/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="R. Chavarria's Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36829645-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">R. Chavarria's Blog</a></h1>
+  
+    <h2>Blogging like a hacker about Software Development</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:rchavarria.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archivos</a></li>
+  <li><a href="/readings">Lista de lectura</a></li>
+  <li><a href="/pet-projects">Proyectos</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Aplicacion web RESTful con Spring MVC</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-22T23:10:00+01:00" pubdate data-updated="true">Jan 22<span>nd</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><div style="margin:2%; padding:2%; background-color:#E0E0E0; ">
+    Find an English version of this post directly in the <a href="https://github.com/rchavarria/javaee-6-demos/tree/master/spring-mvc">source code repository</a>.
+</div>
+
+
+<p>En esta demo crearemos una aplicación web para demostrar el uso del framework
+Spring MVC para crear servicios REST.</p>
+
+<p><img class="right" src="/images/2014/spring-mvc.png" title="Spring MVC" ></p>
+
+<p>Será una aplicación web sencilla, sin persistencia en base de datos (para no
+complicarla), pero será una aplicación Spring MVC completa donde, en lugar de
+generar las respuestas mediante páginas JSP, éstas serán generadas en formato
+JSON, para ser consumidas como si se trataran de servicios web.</p>
+
+<!-- more -->
+
+
+<p>La aplicación no será un servicio web, estrictamente hablando, pero responderá a
+peticiones HTTP <code>get</code>, <code>post</code>, <code>put</code> y <code>delete</code> como si se tratara de uno de ellos.</p>
+
+<h1>Instrucciones</h1>
+
+<p>La aplicación será la típica que ofrece operaciones <a href="https://es.wikipedia.org/wiki/CRUD">CRUD</a>,
+y gestionará una lista de casas, pisos, chalets,&#8230; Es decir, los tipos de propiedades
+gestionadas por una agencia inmobiliaria. Por eso, nuestra entidad, nuestro
+recurso (hablando en terminología REST), será una Propiedad o <code>Property</code>.</p>
+
+<p>Veamos los distintos pasos que daremos para desarrollar la aplicación:</p>
+
+<h2>Definir la URI para acceder a nuestra entidad</h2>
+
+<p>Solamente tendremos un recurso al que acceder, una Propiedad, así que solo
+tendremos una URI a la que acceder:</p>
+
+<pre><code>http://&lt;server name&gt;/springmvc/properties
+</code></pre>
+
+<p>Debemos definir los métodos HTTP que usaremos para gestionar las Propiedades:</p>
+
+<ul>
+<li><code>GET /properties</code>: devolverá una lista de Propiedades</li>
+<li><code>GET /properties/{id}</code>: devolverá los detalles de una Propiedad identificada por {id}</li>
+<li><code>POST /properties</code>: creará una nueva Propiedad</li>
+<li><code>DELETE /properties/{id}</code>: borrará una Propiedad</li>
+<li><code>PUT /properties/{id}</code>: actualizará una Propiedad</li>
+</ul>
+
+
+<h1>Crear un controlador MVC de consultas</h1>
+
+<p>El controlador, que responderá a peticiones de consulta (listar y obtener
+por id), se llamará
+<code>es.rchavarria.springmvc.rest.PropertiesQueriesController</code>.</p>
+
+<p>Responderá a peticiones HTTP que consulten datos, tales como listar las Propiedades u
+obtener los detalles de una de ellas.</p>
+
+<p>Debemos marcar el controlador con anotaciones de Spring MVC de forma que Spring
+reconozca la clase como controlador MVC. Usaremos las anotaciones para indicar
+qué URI gestionará. Nuestro controlador vacío podría ser algo así:</p>
+
+<pre><code>@Controller
+@RequestMapping("/properties")
+public class PropertiesQueriesController {
+}
+</code></pre>
+
+<h2>Crear un método que liste Propiedades</h2>
+
+<p>Nuestro primer método será uno que devuelva una lista de Propiedades. La lista
+será creada/obtenida/generada por un servicio, no por el controlador en sí
+mismo. En un principio, el servicio gestionará las Propiedades sin ningún tipo
+de persistencia, pero siempre podremos implementarla en un futuro.</p>
+
+<p>El método mapeará el método <code>get</code> de HTTP y su valor retornado será parte del
+cuerpo de la respuesta. De esta forma, la respuesta no será generada por una
+página JSP, sino que la respuesta será texto en formato JSON generado
+a partir de un objeto Java:</p>
+
+<pre><code>@RequestMapping(method = RequestMethod.GET)
+@ResponseStatus(HttpStatus.OK)
+@ResponseBody
+public List&lt;String&gt; getAllProperties() {
+    return Arrays.asList("one", "two", "three");
+}
+</code></pre>
+
+<h2>Crear tests para probar el controlador</h2>
+
+<p>Este test será un test de integración, ya que no podemos considerarlo como un
+test unitario. No lo podemos considerar así ya que el test arrancará un pequeño
+servidor web, arrancará nuestro controlador y realizará peticiones HTTP reales
+contra él (un test unitario no debería hacer tantas tareas).</p>
+
+<p>Usaremos <a href="https://code.google.com/p/mockito/">Mockito</a> para simular dependencias
+externas y un componente proporcionado por Spring MVC, <code>MockMVC</code>. Este componente
+será el servidor y gestionará las peticiones y analizará las respuestas de
+nuestro controlador.</p>
+
+<p>El siguiente código muestra cómo preparar un servidor y cómo configurar nuestro
+controlador en él:</p>
+
+<pre><code>// ...
+
+private MockMvc mockMvc;
+
+@InjectMocks
+PropertiesQueriesController controller;
+
+@Mock
+PropertyService propertyService;
+
+@Before
+public void setup() {
+    MockitoAnnotations.initMocks(this);
+
+    mockMvc = standaloneSetup(controller)
+            .setMessageConverters(new MappingJackson2HttpMessageConverter())
+            .build();
+}
+
+// ...
+</code></pre>
+
+<p>Y en el siguiente código vemos cómo probar una petición HTTP <code>get</code>:</p>
+
+<pre><code>@Test
+public void testRequestAllPropertiesUsesHttpOK() throws Exception {
+    when(propertyService.requestAllProperties()).thenReturn(allProperties());
+
+    mockMvc.perform(get("/properties")
+        .accept(MediaType.APPLICATION_JSON))
+        .andExpect(status().isOk());
+}
+</code></pre>
+
+<p>Crearemos otro test, para comprobar esta vez que el resultado es el esperado:</p>
+
+<pre><code>@Test
+public void testRequestAllPropertiesRendersOkAsJSON() throws Exception {
+    when(propertyService.requestAllProperties()).thenReturn(allProperties());
+
+    mockMvc.perform(get("/properties")
+        .accept(MediaType.APPLICATION_JSON))
+        .andDo(print())
+        .andExpect(jsonPath("$[0].city").value("first city"))
+        .andExpect(jsonPath("$[1].address").value("second address"))
+        .andExpect(jsonPath("$[2].price").value(300));
+}
+</code></pre>
+
+<p>Para ver más tests o los tests al completo, por favor, echa un vistazo al
+<a href="https://github.com/rchavarria/javaee-6-demos/tree/master/spring-mvc">código de la demo</a>
+en github.</p>
+
+<h2>Añadir un método al controlador que acepte un parámetro en la URI</h2>
+
+<p>Usaremos URIs del tipo <code>http://&lt;server&gt;/springmvc/properties/&lt;id&gt;</code> para obtener los
+detalles de una Propiedad en concreto. <code>&lt;id&gt;</code> representa un identificador de Propiedad,
+y el controlador deberá devolver los detalles de la misma en lugar de una lista con
+todas las propiedades.</p>
+
+<p>En el controlador, anotaremos un nuevo método con <code>@RequestMapping</code> la cual tendrá
+dos parámetros: <code>method</code>, será el método HTTP <code>get</code>; y <code>value</code>, para dar un nombre al
+parámetro. La anotación <code>@ResponseStatus</code> indica al framework el código de estado
+HTTP que deberá devolver y <code>@ResponseBody</code> nos indica que el valor devuelto por el
+método debe ser el cuerpo de mensaje de respuesta.</p>
+
+<p>Este nuevo método tendrá un parámetro, anotado con <code>@PathVariable</code>. Esta anotación
+mapea los parámetros del método con parámetros en la URI.</p>
+
+<pre><code>@RequestMapping(method = RequestMethod.GET, value="/{id}")
+@ResponseStatus(HttpStatus.OK)
+@ResponseBody
+public Property getProperty(@PathVariable String id) {
+    return propertyService.findById(id);
+} 
+</code></pre>
+
+<p>Crearemos un test similar al anterior test de integración, pero para no hacer eterno
+este post, prefiero que le eches un vistazo al código en el
+<a href="https://github.com/rchavarria/javaee-6-demos/tree/master/spring-mvc">proyecto de github</a>.</p>
+
+<h2>Configurar controladores MVC</h2>
+
+<p>Usaremos anotaciones para configurar nuestros controladores, Spring MVC lo hace
+extremadamente fácil y proporciona una anotación, <code>@EnableWebMVC</code>, que hace
+prácticamente todo por nosotros. Y esto es casi todo lo que hay que hacer para
+configurar una aplicación MVC.</p>
+
+<p>Nuestra configuración está centralizada en una clase, la cual será sencillísima
+y se parecerá a ésta:</p>
+
+<pre><code>@Configuration
+@EnableWebMvc
+@ComponentScan(basePackages = { "es.rchavarria.springmvc.rest.controllers" })
+public class MVCConfig {}
+</code></pre>
+
+<p>También crearemos un test de integración para comprobar que configuramos bien
+nuestros controladores. Busca el test <code>MVCConfigIntegrationTest</code> en el
+<a href="https://github.com/rchavarria/javaee-6-demos/tree/master/spring-mvc">repositorio de código</a>
+para verlo.</p>
+
+<h2>Inicializar la aplicación web</h2>
+
+<p>Seguiremos sin usar ficheros XML para configurar nuestra aplicación, por lo que lo haremos
+a través del código.</p>
+
+<p>Crearemos una clase que herede de una proporcionada por Spring,
+<code>AbstractAnnotationConfigDispatcherServletInitializer</code>,
+y sobreescribiremos los siguientes métodos:</p>
+
+<ul>
+<li><code>getRootConfigClasses</code>: debe devolver un array de clases que configuren el contexto raíz
+(root context). Por ahora, no tenemos tal cosa, por lo que puede devolver un array
+vacío o simplemente el valor <code>null</code>.</li>
+<li><code>getServletConfigClasses</code>: debe devolver un array de clases que configuren el
+contexto servlet.</li>
+<li><code>getServletMappings</code>: debe devolver los mapeos del servlet.</li>
+</ul>
+
+
+<p>Ya estamos listos para ejecutar nuestra demo en un contenedor de servlets. En este caso,
+ejecutaremos la aplicación en un servidor Tomcat 7. Para ello, añadiremos el plugin de
+maven de Tomcat 7 a nuestro fichero <code>pom.xml</code>&#8230;</p>
+
+<pre><code>&lt;plugin&gt;
+    &lt;groupId&gt;org.apache.tomcat.maven&lt;/groupId&gt;
+    &lt;artifactId&gt;tomcat7-maven-plugin&lt;/artifactId&gt;
+    &lt;version&gt;2.2&lt;/version&gt;
+&lt;/plugin&gt;
+</code></pre>
+
+<p>&#8230; y ejecutaremos la aplicación con el comando <code>mvn tomcat7:run</code>.</p>
+
+<h2>¿Por dónde seguir?</h2>
+
+<p>Este post ya ha quedado demasiado largo para publicarse, pero no he encontrado forma de
+hacerlo más corto y contar todos los pasos involucrados para este desarrollo, pero todavía
+tenemos muchísimo trabajo por hacer, por lo que animo a visitar el repositorio de
+código fuente de la demo.</p>
+
+<p>Algunas tareas que quedan pendientes, podrían ser:</p>
+
+<ul>
+<li>Crear un nuevo controlador, un controlador de comandos (en contraposición a controlador de
+consulta), que permita al usuario a crear, actualizar o borrar una Propiedad.</li>
+<li>Crear tres métodos en el controlador, uno por cada acción (crear, actualizar y borrar).</li>
+<li>Recuerda, cada método deberá estar probado por un test unitario o de integración, que no
+se te olvide.</li>
+</ul>
+
+
+<h1>Recursos y lecturas</h1>
+
+<ul>
+<li><a href="http://spring.io/guides/tutorials/rest">Build RESTful services with Spring</a></li>
+<li><a href="https://github.com/rchavarria/javaee-6-demos/tree/master/spring-mvc">Source code of this demo</a></li>
+</ul>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Rubén Chavarría</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-01-22T23:10:00+01:00" pubdate data-updated="true">Jan 22<span>nd</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/java-ee/'>Java EE</a>, <a class='category' href='/blog/categories/spring-mvc/'>Spring MVC</a>, <a class='category' href='/blog/categories/tutorials/'>tutorials</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rchavarria.github.io/blog/2014/01/22/restful-spring-mvc/" data-via="rchavarriat" data-counturl="http://rchavarria.github.io/blog/2014/01/22/restful-spring-mvc/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/10/28/myfaces-implementacion-javaserver-faces/" title="Previous Post: Apache MyFaces como implementacion de JavaServer Faces">&laquo; Apache MyFaces como implementacion de JavaServer Faces</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/01/22/restful-spring-mvc/">Aplicacion web RESTful con Spring MVC</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/10/28/myfaces-implementacion-javaserver-faces/">Apache MyFaces como implementacion de JavaServer Faces</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/10/22/mi-experiencia-en-el-codemotion-2013/">Mi experiencia en el Codemotion 2013</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/10/17/primera-aplicacion-angularjs/">Mi primera aplicación web con AngularJS</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/10/08/curso-de-scrum-master/">Curso de Scrum Master</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("rchavarriat", 4, true);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/rchavarriat">@rchavarriat</a></p>
+  
+</section>
+
+
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/rchavarriat?count=5&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/rchavarriat">My Delicious Bookmarks &raquo;</a></p>
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Rub&eacute;n Chavarr&iacute;a -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'rchavarria-github-com';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://rchavarria.github.io/blog/2014/01/22/restful-spring-mvc/';
+        var disqus_url = 'http://rchavarria.github.io/blog/2014/01/22/restful-spring-mvc/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
