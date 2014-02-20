@@ -4,7 +4,7 @@ title: "Agile principles, patterns and practices in C#"
 date: 2012-11-22 11:22
 author: Rubén Chavarría
 categories: 
-- bookk reviews
+- book reviews
 - agile
 - enlaces
 - filosofia dev

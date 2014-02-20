@@ -18,11 +18,13 @@ sidebar: true
 
 ## Por qué lo he leído
 
-Tenía pensado leer este libro porque estoy muy interesado en mejorar como profesional
+Tenía pensado leer [Planifica tu éxito] porque estoy muy interesado en mejorar como profesional
 y en avanzar en mi carrera como tal. Ya simplemente el título te da una idea de progreso y tenía
 curiosidad por conocer un poco más allá de mi perfil profesional actual. Si a esto le añadimos
 que el autor pertenece a una empresa llena de profesionales a los que admiro y que
 además el libro es un regalo, pues ya no hay excusa.
+
+[Planifica tu éxito]: http://www.amazon.es/Planifica-tu-%C3%A9xito-aprendiz-empresario/dp/841545757X/ref=sr_1_1?s=books&ie=UTF8&qid=1392882947&sr=1-1
 
 <!-- more -->
 
@@ -107,4 +109,6 @@ El resto las he reunido en un gist:
 introduce el BCID: 659-11704854
 - Puntero propuesto por el autor para comentar acerca del libro:
 [Adictos al trabajo](www.adictosaltrabajo.com/book_section.inc.php?book=2)
-- [cómo iniciar una conversación y hacer amigos](http://www.profiteditorial.com/libros-para-vivir-mejor/habilidades-personales/c%C3%B3mo-iniciar-una-conversaci%C3%B3n-y-hacer-amigos)
+- [Cómo iniciar una conversación y hacer amigos](http://www.profiteditorial.com/libros-para-vivir-mejor/habilidades-personales/c%C3%B3mo-iniciar-una-conversaci%C3%B3n-y-hacer-amigos)
+- Vídeo explicativo acerca de 
+[«eficacia vs. eficiencia»](http://www.youtube.com/watch?v=vCbfJGCda7E)
