@@ -20,11 +20,8 @@ Así que aquí está mi Lista de Lectura:
 
 ## Estoy leyendo
 
-- [El cuadrante del flujo del dinero](http://www.amazon.com/Cuadrante-Flujo-Dinero-Padre-Rico/dp/9707702842),
-de Robert Kiyosaki
+- [Snow crash](http://www.amazon.com/Snow-Crash-Bantam-Spectra-Book/dp/0553380958), de Neal Stephenson
 - [Expertología](http://www.amazon.es/dp/8492414502), de Andrés Pérez Ortega
-- [Planifica tu éxito, de aprendiz a empresario](http://www.amazon.com/Planifica-tu-éxito-aprendiz-empresario/dp/841545757X),
-de Roberto Canales (Autentia)
 
 ## Tengo pensado leer
 
@@ -54,7 +51,6 @@ de Roberto Canales (Autentia)
 -->
 - [Introduction to the command line](http://shop.fsf.org/product/Introduction_to_Command_Line/), de la Free Software Foundation
 - [The art of Unix programming](http://www.catb.org/esr/writings/taoup), de Eric S. Raymond
-- [Snow crash](http://www.amazon.com/Snow-Crash-Bantam-Spectra-Book/dp/0553380958), de Neal Stephenson
 - [Test driven development: by example](http://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530), de Kent Beck
 - [Software craftsmanship: the new imperative](http://www.amazon.com/Software-Craftsmanship-Imperative-Pete-McBreen/dp/0201733862), de Pete McBreen
 - [Extreme programming explained](http://www.amazon.com/Extreme-Programming-Explained-Embrace-Change/dp/0201616416), de Kent Beck
@@ -71,6 +67,10 @@ de Roberto Canales (Autentia)
 
 ## He leído
 
+- [El cuadrante del flujo del dinero](http://www.amazon.com/Cuadrante-Flujo-Dinero-Padre-Rico/dp/9707702842),
+de Robert Kiyosaki ~ *Marzo 2014*
+- [Planifica tu éxito, de aprendiz a empresario](/blog/2014/02/18/planifica-tu-exito),
+de Roberto Canales (Autentia) ~ *Enero 2014*
 - [Padre rico, padre pobre](http://www.amazon.com/Padre-Rico-Pobre-Spanish-Edition/dp/160396181X),
 de Robert Kiyosaki ~ *Septiembre 2013*
 - [Instant Markdown](/blog/2013/10/07/instant-markdown), de Arturo Herrero ~ *Septiembre 2013*
