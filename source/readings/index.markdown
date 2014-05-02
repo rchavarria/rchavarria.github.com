@@ -26,6 +26,7 @@ Así que aquí está mi Lista de Lectura:
 ## Tengo pensado leer
 
 - [Extreme programming explained](http://www.amazon.com/Extreme-Programming-Explained-Embrace-Change/dp/0201616416), de Kent Beck
+- [The five dysfunctions of a team](http://www.amazon.com/The-Five-Dysfunctions-Team-Leadership/dp/0787960756), de Patrick Lencioni, recomendado por @joserra_diaz y @rubenbpv (https://en.wikipedia.org/wiki/The_Five_Dysfunctions_of_a_Team)
 - [The Passionate Programmer](http://pragprog.com/book/cfcar2/the-passionate-programmer), de Chad Fowler
 - [Agile software development](http://www.amazon.com/Agile-Software-Development-Alistair-Cockburn/dp/0201699699), de Alistair Cockburn
 - [UML Distilled](http://www.amazon.es/gp/product/0321193687/ref=as_li_tf_tl?ie=UTF8&camp=3626&creative=24790&creativeASIN=0321193687&linkCode=as2&tag=wwwjaviergarz-21), de Martin Fowler
@@ -43,23 +44,8 @@ Así que aquí está mi Lista de Lectura:
 - [Rapid development](http://www.stevemcconnell.com/rd.htm), de Steve McConnel, recomendado por [Rodrigo Corral](http://twitter.com/r_corral) en la CAS2013
 - [Facts and fallacies of software development](http://www.amazon.com/Facts-Fallacies-Software-Engineering-Robert/dp/0321117425, de Robert L. Glass, recomendado por [Rodrigo Corral](http://twitter.com/r_corral) en la CAS2013
 - [The twelve facto app](http://12factor.net/), de Adam Wiggins. The twelve-factor app is a methodology for building software-as-a-service apps. ([download de epub](http://12factor.net/12factor.epub))
-
-<!--
-
-	añadir a la lista, recomendas por https://twitter.com/rubenbpv/status/337895178717257728
-
-		The five dysfunctions of a team, Patrick Lencioni, recomendado por @joserra_diaz y @rubenbpv
-				http://www.amazon.com/The-Five-Dysfunctions-Team-Leadership/dp/0787960756
-				https://en.wikipedia.org/wiki/The_Five_Dysfunctions_of_a_Team
-
-		teamwork is an individual skill, christopher M. Avery, Meri Aaron Walker, Erin O'Toole, 
-			recomendado por @joserra_diaz y @rubenbpv
-				http://www.amazon.com/Teamwork-Is-Individual-Skill-Responsibility/dp/1576751554
-
-		the culture game, daniel mezick, , recomendado por @joserra_diaz y @rubenbpv
-				http://www.amazon.com/The-Culture-Game-Tools-Manager/dp/0984875301/
-				
--->
+- [Teamwork is an individual skill](http://www.amazon.com/Teamwork-Is-Individual-Skill-Responsibility/dp/1576751554), de Christopher M. Avery, Meri Aaron Walker y Erin O'Toole, recomendado por @joserra_diaz y @rubenbpv
+- [The culture game](http://www.amazon.com/The-Culture-Game-Tools-Manager/dp/0984875301/), de DAniel Mezick, recomendado por @joserra_diaz y @rubenbpv
 
 ## He leído
 
