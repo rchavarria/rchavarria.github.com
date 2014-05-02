@@ -25,6 +25,25 @@ Así que aquí está mi Lista de Lectura:
 
 ## Tengo pensado leer
 
+- [Extreme programming explained](http://www.amazon.com/Extreme-Programming-Explained-Embrace-Change/dp/0201616416), de Kent Beck
+- [The Passionate Programmer](http://pragprog.com/book/cfcar2/the-passionate-programmer), de Chad Fowler
+- [Agile software development](http://www.amazon.com/Agile-Software-Development-Alistair-Cockburn/dp/0201699699), de Alistair Cockburn
+- [UML Distilled](http://www.amazon.es/gp/product/0321193687/ref=as_li_tf_tl?ie=UTF8&camp=3626&creative=24790&creativeASIN=0321193687&linkCode=as2&tag=wwwjaviergarz-21), de Martin Fowler
+- [Introduction to the command line](http://shop.fsf.org/product/Introduction_to_Command_Line/), de la Free Software Foundation <!-- visto en blog de javier garzás: http://www.javiergarzas.com/2013/04/que-es-uml-diagramas-uml.html -->
+- [The art of Unix programming](http://www.catb.org/esr/writings/taoup), de Eric S. Raymond
+- [Test driven development: by example](http://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530), de Kent Beck
+- [Software craftsmanship: the new imperative](http://www.amazon.com/Software-Craftsmanship-Imperative-Pete-McBreen/dp/0201733862), de Pete McBreen
+- [The coding dojo handbook](https://leanpub.com/codingdojohandbook), de Emiliy Bache
+- [The Psycology of Computer Programming](http://www.amazon.com/exec/obidos/ASIN/0932633420/codihorr-20), de Gerald M. Weingerg
+- [Bitter Java](http://books.google.co.in/books?id=U5dXq7FzvcIC), de Bruce A. Tate
+- Patterns of Enterprise Application Architecture, de Martin Fowler
+- [More Programming Pearls](http://search.barnesandnoble.com/More-Programming-Pearls/John-Bentley/e/9780201118896), de Jon Bentley
+- 7 languages in 7 weeks, de Bruce A. Tate
+- No me hagas pensar, de Steve Krug
+- [Rapid development](http://www.stevemcconnell.com/rd.htm), de Steve McConnel, recomendado por [Rodrigo Corral](http://twitter.com/r_corral) en la CAS2013
+- [Facts and fallacies of software development](http://www.amazon.com/Facts-Fallacies-Software-Engineering-Robert/dp/0321117425, de Robert L. Glass, recomendado por [Rodrigo Corral](http://twitter.com/r_corral) en la CAS2013
+- [The twelve facto app](http://12factor.net/), de Adam Wiggins. The twelve-factor app is a methodology for building software-as-a-service apps. ([download de epub](http://12factor.net/12factor.epub))
+
 <!--
 
 	añadir a la lista, recomendas por https://twitter.com/rubenbpv/status/337895178717257728
@@ -41,29 +60,6 @@ Así que aquí está mi Lista de Lectura:
 				http://www.amazon.com/The-Culture-Game-Tools-Manager/dp/0984875301/
 				
 -->
-
-- [The Passionate Programmer](http://pragprog.com/book/cfcar2/the-passionate-programmer), de Chad Fowler
-- [Agile software development](http://www.amazon.com/Agile-Software-Development-Alistair-Cockburn/dp/0201699699), de Alistair Cockburn
-- [UML Distilled](http://www.amazon.es/gp/product/0321193687/ref=as_li_tf_tl?ie=UTF8&camp=3626&creative=24790&creativeASIN=0321193687&linkCode=as2&tag=wwwjaviergarz-21), de Martin Fowler
-
-<!-- 
-	visto en blog de javier garzás: http://www.javiergarzas.com/2013/04/que-es-uml-diagramas-uml.html 
--->
-- [Introduction to the command line](http://shop.fsf.org/product/Introduction_to_Command_Line/), de la Free Software Foundation
-- [The art of Unix programming](http://www.catb.org/esr/writings/taoup), de Eric S. Raymond
-- [Test driven development: by example](http://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530), de Kent Beck
-- [Software craftsmanship: the new imperative](http://www.amazon.com/Software-Craftsmanship-Imperative-Pete-McBreen/dp/0201733862), de Pete McBreen
-- [Extreme programming explained](http://www.amazon.com/Extreme-Programming-Explained-Embrace-Change/dp/0201616416), de Kent Beck
-- [The coding dojo handbook](https://leanpub.com/codingdojohandbook), de Emiliy Bache
-- [The Psycology of Computer Programming](http://www.amazon.com/exec/obidos/ASIN/0932633420/codihorr-20), de Gerald M. Weingerg
-- [Bitter Java](http://books.google.co.in/books?id=U5dXq7FzvcIC), de Bruce A. Tate
-- Patterns of Enterprise Application Architecture, de Martin Fowler
-- [More Programming Pearls](http://search.barnesandnoble.com/More-Programming-Pearls/John-Bentley/e/9780201118896), de Jon Bentley
-- 7 languages in 7 weeks, de Bruce A. Tate
-- No me hagas pensar, de Steve Krug
-- [Rapid development](http://www.stevemcconnell.com/rd.htm), de Steve McConnel, recomendado por [Rodrigo Corral](http://twitter.com/r_corral) en la CAS2013
-- [Facts and fallacies of software development](http://www.amazon.com/Facts-Fallacies-Software-Engineering-Robert/dp/0321117425, de Robert L. Glass, recomendado por [Rodrigo Corral](http://twitter.com/r_corral) en la CAS2013
-- [The twelve facto app](http://12factor.net/), de Adam Wiggins. The twelve-factor app is a methodology for building software-as-a-service apps. ([download de epub](http://12factor.net/12factor.epub))
 
 ## He leído
 
