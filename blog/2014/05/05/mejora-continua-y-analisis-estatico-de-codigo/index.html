@@ -1,0 +1,373 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Mejora contínua y análisis estático de código - R. Chavarria's Blog</title>
+  <meta name="author" content="Rub&eacute;n Chavarr&iacute;a">
+
+  
+  <meta name="description" content="En una de las últimas retrospectivas de mi equipo de desarrollo, estuvimos
+hablando sobre la mejora contínua, y qué podríamos hacer sobre ella. &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://rchavarria.github.io/blog/2014/05/05/mejora-continua-y-analisis-estatico-de-codigo/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="R. Chavarria's Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36829645-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">R. Chavarria's Blog</a></h1>
+  
+    <h2>Blogging like a hacker about Software Development</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:rchavarria.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archivos</a></li>
+  <li><a href="/readings">Lista de lectura</a></li>
+  <li><a href="/pet-projects">Proyectos</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Mejora contínua y análisis estático de código</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-05T20:00:00+02:00" pubdate data-updated="true">May 5<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><img class="left" src="/images/2014/phpcs-small.png" width="350" height="140" title="Evolución del análisis estático de código" ></p>
+
+<p>En una de las últimas retrospectivas de mi equipo de desarrollo, estuvimos
+hablando sobre la mejora contínua, y qué podríamos hacer sobre ella. Afortunadamente
+usamos <em>Jenkins</em> como servidor de integración contínua y hace ya tiempo configuré
+un proyecto en dicha herramienta para realizar análisis estático de código frecuentemente.</p>
+
+<p>Pero hasta ahora no habíamos tomado ninguna decisión sobre qué hacer con ella. Y
+en esta retro surgió la oportunidad.</p>
+
+<!-- more -->
+
+
+<h2>La herramienta</h2>
+
+<p>Como herramienta de análisis estático de código usamos
+<a href="https://github.com/squizlabs/PHP_CodeSniffer">PHP_CodeSniffer</a>. La razón
+principal es que es una herramienta adecuada al lenguaje que queremos analizar, y
+existe un proyecto que integra esta herramienta entre otras con Jenkins
+(<a href="http://phpqatools.org">PHP QA Tools</a>).</p>
+
+<p>Una vez instalada y configurada, activamos todas las reglas de estilo disponibles
+en la herramienta. Estas reglas incluyen comprobaciones para nombrado de funciones,
+nombrado de ficheros, uso de constantes en PHP como <code>true</code> o <code>false</code>, o ciertas
+reglas de espaciado: después del nombre de función, alineación del operador de
+asignación. Multitud de ellas.</p>
+
+<blockquote><p>Si no puedes medirlo, no puedes mejorarlo</p></blockquote>
+
+<h2>Violaciones del estándar de código</h2>
+
+<p><img class="center" src="/images/2014/phpcs-large.png" title="Descenso del número de errores" ></p>
+
+<p>En el momento de la conversación sobre la mejora contínua nos encontrábamos en
+el máximo que se aprecia en el gráfico, unas 8000 violaciones de reglas de
+estilo.</p>
+
+<p>Y nos pusimos manos a la obra. Después de un pequeño análisis por nuestra parte,
+y unos pocos diálogos (la palabra discusiones tiene un pequeño significado de
+lucha que no encaja en esta situación), conseguimos bajar ese número a menos de
+30. Por lo tanto, está claro que hemos conseguido alguna <strong>mejora</strong>.</p>
+
+<h2>Qué mejoras obtuvimos</h2>
+
+<p>En el pequeños análisis realizado por nosotros, descubrimos que algunas reglas de
+estilo que teníamos activadas resultaban contradictorias. Mientras que una
+obligaba a abrir llaves en la misma línea que la definición de la función:</p>
+
+<pre><code>public function doSomething() {
+</code></pre>
+
+<p>existía otra regla que obligaba a abrir llaves en una línea nueva:</p>
+
+<pre><code>public function doSomething()
+{
+</code></pre>
+
+<p>Por lo tanto, una de las dos había que desactivarla, ¿pero cuál?. He aquí la
+verdadera mejora. La mejora no es utilizar una regla u otra, sino alcanzar un
+consenso dentro del equipo y decidir qué estilo queremos seguir a la hora de
+escribir código.</p>
+
+<p>Algunas otras reglas nos permitieron detectar qué clases necesitaban ser
+refactorizadas. Por ejemplo, si un método tiene una <em>complejidad ciclomática</em>
+elevada o si un método está escrito con demasiados niveles de anidamiento.</p>
+
+<p>Otras reglas simplemente nos enfrentaron a la toma de ciertas decisiones:</p>
+
+<ul>
+<li>Cómo queremos organizar nuestros ficheros</li>
+<li>Cómo queremos dar el nombre a nuestros métodos</li>
+<li>Cómo queremos indentar nuestro código</li>
+</ul>
+
+
+<h2>Conclusión</h2>
+
+<p>No me importa volver a repetirlo, la verdadera mejora no surge de seguir una
+regla u otra a la hora de escribir código. La verdadera mejora surge de las
+conversaciones, diálogos y <em>discusiones</em> entre los miembros del equipo.</p>
+
+<p>¿Y dónde está la parte de <em>contínua</em>? Se encuentra en el servidor de integración
+contínua. Nuestro código es analizado contínuamente, y en el caso de que haya
+un aumento significativo de violaciones de reglas de estilo en nuestro código,
+seremos avisados y podremos tomar la decisión sobre si retomamos el control
+o lo dejamos para más adelante.</p>
+
+<h2>Referencias</h2>
+
+<ul>
+<li><a href="https://es.wikipedia.org/wiki/Proceso_de_mejora_continua">Mejora contínua</a></li>
+<li><a href="https://es.wikipedia.org/wiki/Integraci%C3%B3n_continua">Integración contínua</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Static_code_analysis">Análisis estático de código</a>
+(inglés)</li>
+</ul>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Rubén Chavarría</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-05T20:00:00+02:00" pubdate data-updated="true">May 5<span>th</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/continuous-improvement/'>continuous improvement</a>, <a class='category' href='/blog/categories/programming/'>programming</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rchavarria.github.io/blog/2014/05/05/mejora-continua-y-analisis-estatico-de-codigo/" data-via="rchavarriat" data-counturl="http://rchavarria.github.io/blog/2014/05/05/mejora-continua-y-analisis-estatico-de-codigo/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/02/18/planifica-tu-exito/" title="Previous Post: Planifica tu éxito: de aprendiz a empresario">&laquo; Planifica tu éxito: de aprendiz a empresario</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/05/05/mejora-continua-y-analisis-estatico-de-codigo/">Mejora contínua y análisis estático de código</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/02/18/planifica-tu-exito/">Planifica tu éxito: de aprendiz a empresario</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/01/22/restful-spring-mvc/">Aplicacion web RESTful con Spring MVC</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/10/28/myfaces-implementacion-javaserver-faces/">Apache MyFaces como implementacion de JavaServer Faces</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/10/22/mi-experiencia-en-el-codemotion-2013/">Mi experiencia en el Codemotion 2013</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("rchavarriat", 4, true);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/rchavarriat">@rchavarriat</a></p>
+  
+</section>
+
+
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/rchavarriat?count=5&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/rchavarriat">My Delicious Bookmarks &raquo;</a></p>
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Rub&eacute;n Chavarr&iacute;a -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'rchavarria-github-com';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://rchavarria.github.io/blog/2014/05/05/mejora-continua-y-analisis-estatico-de-codigo/';
+        var disqus_url = 'http://rchavarria.github.io/blog/2014/05/05/mejora-continua-y-analisis-estatico-de-codigo/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
