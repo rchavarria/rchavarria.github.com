@@ -12,7 +12,7 @@ footer: false
 sidebar: true
 ---
 
-{% img left /images/2014/phpcs-small.png Evolución del análisis estático de código %}
+{% img left /images/2014/phpcs-small.png 350 140 Evolución del análisis estático de código %}
 
 En una de las últimas retrospectivas de mi equipo de desarrollo, estuvimos
 hablando sobre la mejora contínua, y qué podríamos hacer sobre ella. Afortunadamente
@@ -55,7 +55,7 @@ lucha que no encaja en esta situación), conseguimos bajar ese número a menos d
 
 ## Qué mejoras obtuvimos
 
-En el pequeños análisis realizado por nosotro, descubrimos que algunas reglas de
+En el pequeños análisis realizado por nosotros, descubrimos que algunas reglas de
 estilo que teníamos activadas resultaban contradictorias. Mientras que una
 obligaba a abrir llaves en la misma línea que la definición de la función:
 
