@@ -12,7 +12,7 @@ footer: false
 sidebar: true
 ---
 
-**imagencita sobre las violaciones????????**
+{% img left /images/2014/phpcs-small.png Evolución del análisis estático de código %}
 
 En una de las últimas retrospectivas de mi equipo de desarrollo, estuvimos
 hablando sobre la mejora contínua, y qué podríamos hacer sobre ella. Afortunadamente
@@ -26,10 +26,11 @@ en esta retro surgió la oportunidad.
 
 ## La herramienta
 
-Como herramienta de análisis estático de código usamos PHP_CodeSniffer. La razón
+Como herramienta de análisis estático de código usamos 
+[PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer). La razón
 principal es que es una herramienta adecuada al lenguaje que queremos analizar, y
 existe un proyecto que integra esta herramienta entre otras con Jenkins
-([PHP QA Tools]()).
+([PHP QA Tools](http://phpqatools.org)).
 
 Una vez instalada y configurada, activamos todas las reglas de estilo disponibles
 en la herramienta. Estas reglas incluyen comprobaciones para nombrado de funciones,
@@ -41,7 +42,7 @@ asignación. Multitud de ellas.
 
 ## Violaciones del estándar de código
 
-**imagen sobre las violaciones**
+{% img center /images/2014/phpcs-large.png Descenso del número de errores %}
 
 En el momento de la conversación sobre la mejora contínua nos encontrábamos en
 el máximo que se aprecia en el gráfico, unas 8000 violaciones de reglas de 
@@ -94,6 +95,7 @@ o lo dejamos para más adelante.
 
 ## Referencias
 
-- [Mejora contínua]()
-- [Integración contínua]()
-- [Análisis estático de código]()
+- [Mejora contínua](https://es.wikipedia.org/wiki/Proceso_de_mejora_continua)
+- [Integración contínua](https://es.wikipedia.org/wiki/Integraci%C3%B3n_continua)
+- [Análisis estático de código](https://en.wikipedia.org/wiki/Static_code_analysis)
+(inglés)
