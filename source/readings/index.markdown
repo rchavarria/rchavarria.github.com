@@ -49,7 +49,7 @@ Así que aquí está mi Lista de Lectura:
 
 ## He leído
 
-- [El cuadrante del flujo del dinero](http://www.amazon.com/Cuadrante-Flujo-Dinero-Padre-Rico/dp/9707702842),
+- [El cuadrante del flujo del dinero](https://gist.github.com/rchavarria/11244352),
 de Robert Kiyosaki ~ *Marzo 2014*
 - [Planifica tu éxito, de aprendiz a empresario](/blog/2014/02/18/planifica-tu-exito),
 de Roberto Canales (Autentia) ~ *Enero 2014*
