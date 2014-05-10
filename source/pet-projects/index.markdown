@@ -16,6 +16,21 @@ and more complex over time. Feel free to post any comment or send a link to your
 Codecademy projects. They have an [APIs track](www.codecademy.com/tracks/apis) where
 you can practice codig for well know API's (youtube, soundtrack, twilio).
 
+## [Einar counts](http://kcy.me/14fd8)
+
+*Created in April, 2014*
+
+{% img left /images/2014/einar-counts.png 140 240 Einar counts %}
+
+To celebrate my son's birthday, I've created and gifted him with an
+android application. It's not a big or an impressive application,
+but it's a handmade gift and that adds a lot of value to it.
+
+[Einar counts](http://kcy.me/14fd8)
+is an application where Einar will teach you kids to count in English
+from 1 to 10. I'm sure your kids will love the app and Einar's funny voice.
+It's free and it works on Android 2.3.3 and up. Give it a try!
+
 ## [Youtube library](http://kcy.me/u22p)
 
 *Created in October, 2013*
