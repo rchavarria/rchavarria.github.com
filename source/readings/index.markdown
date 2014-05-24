@@ -26,9 +26,13 @@ Así que aquí está mi Lista de Lectura:
 ## Tengo pensado leer
 
 - [Extreme programming explained](http://www.amazon.com/Extreme-Programming-Explained-Embrace-Change/dp/0201616416), de Kent Beck
+- [How to start a conversation and make friends](http://www.amazon.com/How-Start-Conversation-Make-Friends/dp/1451610998), de Don Gabor
+- [So good, they can't ignore you](http://www.amazon.com/dp/1455509124?tag=sivers-20), de Cal Newport, visto en [http://sivers.org/book/SoGood]
 - [The five dysfunctions of a team](http://www.amazon.com/The-Five-Dysfunctions-Team-Leadership/dp/0787960756), de Patrick Lencioni, recomendado por @joserra_diaz y @rubenbpv (https://en.wikipedia.org/wiki/The_Five_Dysfunctions_of_a_Team)
 - [The Passionate Programmer](http://pragprog.com/book/cfcar2/the-passionate-programmer), de Chad Fowler
 - [Agile software development](http://www.amazon.com/Agile-Software-Development-Alistair-Cockburn/dp/0201699699), de Alistair Cockburn
+- [Never eat alone](http://www.amazon.com/Never-Eat-Alone-Secrets-Relationship/dp/0385512058), de Keith Ferrazi
+- [Defiende tu dinero](http://www.casadellibro.com/libro-defiende-tu-dinero/9788466651899/2016460), de Simón Pérez y Marcos Cirera, recomendado por [Guillermo Montoya](https://twitter.com/gmfdsr)
 - [UML Distilled](http://www.amazon.es/gp/product/0321193687/ref=as_li_tf_tl?ie=UTF8&camp=3626&creative=24790&creativeASIN=0321193687&linkCode=as2&tag=wwwjaviergarz-21), de Martin Fowler
 - [Introduction to the command line](http://shop.fsf.org/product/Introduction_to_Command_Line/), de la Free Software Foundation <!-- visto en blog de javier garzás: http://www.javiergarzas.com/2013/04/que-es-uml-diagramas-uml.html -->
 - [The art of Unix programming](http://www.catb.org/esr/writings/taoup), de Eric S. Raymond
@@ -46,6 +50,9 @@ Así que aquí está mi Lista de Lectura:
 - [The twelve facto app](http://12factor.net/), de Adam Wiggins. The twelve-factor app is a methodology for building software-as-a-service apps. ([download de epub](http://12factor.net/12factor.epub))
 - [Teamwork is an individual skill](http://www.amazon.com/Teamwork-Is-Individual-Skill-Responsibility/dp/1576751554), de Christopher M. Avery, Meri Aaron Walker y Erin O'Toole, recomendado por @joserra_diaz y @rubenbpv
 - [The culture game](http://www.amazon.com/The-Culture-Game-Tools-Manager/dp/0984875301/), de DAniel Mezick, recomendado por @joserra_diaz y @rubenbpv
+- [Focus](http://www.amazon.es/gp/product/8499883052/), de Daniel Goleman
+- [The art of learning](http://www.amazon.com/The-Art-Learning-Journey-Performance/dp/0743277465), de Josh Waitzkin, recomendado por [Tim Ferris](http://fourhourworkweek.com/2014/03/20/the-art-of-learning-joshua-waitzkin/)
+- [Fearless change](http://www.amazon.com/Fearless-Change-Patterns-Introducing-Ideas/dp/0201741571), de Mary Lynn Manns y Linda Rising
 
 ## He leído
 
