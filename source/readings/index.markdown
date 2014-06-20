@@ -20,14 +20,15 @@ Así que aquí está mi Lista de Lectura:
 
 ## Estoy leyendo
 
-- [Snow crash](http://www.amazon.com/Snow-Crash-Bantam-Spectra-Book/dp/0553380958), de Neal Stephenson
 - [Expertología](http://www.amazon.es/dp/8492414502), de Andrés Pérez Ortega
+- [How to start a conversation and make friends](http://www.amazon.com/How-Start-Conversation-Make-Friends/dp/1451610998), de Don Gabor
 
 ## Tengo pensado leer
 
 - [Extreme programming explained](http://www.amazon.com/Extreme-Programming-Explained-Embrace-Change/dp/0201616416), de Kent Beck
-- [How to start a conversation and make friends](http://www.amazon.com/How-Start-Conversation-Make-Friends/dp/1451610998), de Don Gabor
+- [JavaScript patterns](http://www.amazon.com/JavaScript-Patterns-Stoyan-Stefanov/dp/0596806752), de Stoyan Stefanov
 - [So good, they can't ignore you](http://www.amazon.com/dp/1455509124?tag=sivers-20), de Cal Newport, visto en [http://sivers.org/book/SoGood]
+- [Software craftsmanship](https://leanpub.com/socra), de Sandro Mancuso, recomendado por [Carlos Ble](http://twitter.com/carlosble)
 - [The five dysfunctions of a team](http://www.amazon.com/The-Five-Dysfunctions-Team-Leadership/dp/0787960756), de Patrick Lencioni, recomendado por @joserra_diaz y @rubenbpv (https://en.wikipedia.org/wiki/The_Five_Dysfunctions_of_a_Team)
 - [The Passionate Programmer](http://pragprog.com/book/cfcar2/the-passionate-programmer), de Chad Fowler
 - [Agile software development](http://www.amazon.com/Agile-Software-Development-Alistair-Cockburn/dp/0201699699), de Alistair Cockburn
@@ -56,6 +57,7 @@ Así que aquí está mi Lista de Lectura:
 
 ## He leído
 
+- [Snow crash](http://www.amazon.com/Snow-Crash-Bantam-Spectra-Book/dp/0553380958), de Neal Stephenson ~ *Mayo 2014*
 - [El cuadrante del flujo del dinero](https://gist.github.com/rchavarria/11244352),
 de Robert Kiyosaki ~ *Marzo 2014*
 - [Planifica tu éxito, de aprendiz a empresario](/blog/2014/02/18/planifica-tu-exito),
