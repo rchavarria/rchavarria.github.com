@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: talks | R. Chavarria's Blog]]></title>
+  <link href="http://rchavarria.github.io/blog/categories/talks/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.io/"/>
+  <updated>2014-06-21T18:03:49+02:00</updated>
+  <id>http://rchavarria.github.io/</id>
+  <author>
+    <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Charla técnica: JavaScript masterclass]]></title>
+    <link href="http://rchavarria.github.io/blog/2014/06/21/charla-tecnica-javascript-masterclass/"/>
+    <updated>2014-06-21T17:23:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2014/06/21/charla-tecnica-javascript-masterclass</id>
+    <content type="html"><![CDATA[<p>Recientemente he visto una charla técnica impartida por
+<a href="https://twitter.com/angelinamagnum">Angelina Fabro</a> titulada <em>JavaScript masterclass</em>.
+En este post quiero dejar unas notas que me gustaría recordar, no es un resumen de la
+charla, pero sí son algunas ideas que me gustaría resaltar.</p>
+
+<p>La primera parte de la charla Angelina explica qué no es un programador junior, y en la
+segunda parte qué no es un programador experto, para terminar sugiriendo unos cuantos
+consejos sobre cómo pasar de un estado a otro.</p>
+
+<!-- more -->
+
+
+<h3>Angelina Fabro, a JavaScript masterclass</h3>
+
+<iframe width="560" height="315" src="http://rchavarria.github.io//www.youtube.com/embed/v0TFmdO4ZP0" frameborder="0" allowfullscreen></iframe>
+
+
+<h3>¿Quién es un gran programador?</h3>
+
+<p>Bueno, pues eso depende de a quién le preguntes, pero algunas respuestas que te
+darán podrían ser:</p>
+
+<ul>
+<li>Aquel que cumple con todas las fechas de entrega (si dejamos a un lado la calidad).</li>
+<li>Aquel que soluciona de la forma más rápida los problemas de los clientes.</li>
+<li>Aquel que hace ganar el mayor dinero posible a los dueños de los negocios.</li>
+<li>Aquel que es el mejor mentor para un programador junior.</li>
+<li>Aquel a quien le encanta unirse a otros programadores en la <em>batalla</em>.</li>
+</ul>
+
+
+<h3>¿Qué necesito aprender para ser uno de ellos?</h3>
+
+<p>Como conclusión a su charla, Angelina nos deja unos cuantos consejos que podemos
+aplicar para dar un salto en nuestra carrera profesional:</p>
+
+<ul>
+<li>Pregúntate <em>¿por qué?</em> obsesivamente, hasta el punto de molestarte a tí mismo.</li>
+<li>Enseña y/o habla en un evento.</li>
+<li>Trabaja a través de una seria de libros recomendados por los que más saben.</li>
+<li>Experimenta alocadamente. Haz barbaridades, al código no le importa ni le hace daño.</li>
+<li>Modela tus propias opiniones, debes tenerlas, debes mojarte.</li>
+<li>Busca a un mentor que te guíe por el camino.</li>
+<li>Programa mucho, mucho. Pero para de vez en cuando, tu cerebro necesita descansos.</li>
+<li>Escribe en varios lenguajes.</li>
+<li>Piensa como un programador aunque no estés cerca de un teclado.</li>
+<li>Aprende a distinguir el buen feedback del malo, y desecha el malo claro.</li>
+<li>Libérate del <a href="https://es.wikipedia.org/wiki/S%C3%ADndrome_del_impostor">síndrome del impostor</a>.</li>
+</ul>
+
+
+<h2>Conclusiones</h2>
+
+<p>En general, la charla me ha encantado, y me ha dado un poquito de chispa para seguir mejorando
+como profesional y me ha dado nuevas ideas. Aunque no estoy de acuerdo con todos los consejos que
+Angelina propone, me voy a quedar con dos de ellos que no me había planteado hasta ahora:
+pregúntate por qué obsesivamente y experimenta alocadamente.</p>
+
+<p>Nos recomienda un libro, <em>The secrets of a JavaScript ninja</em>, de John Resig.</p>
+]]></content>
+  </entry>
+  
+</feed>

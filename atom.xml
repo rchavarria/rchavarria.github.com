@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2014-06-20T19:23:25+02:00</updated>
+  <updated>2014-06-21T18:03:49+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,73 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Charla técnica: JavaScript masterclass]]></title>
+    <link href="http://rchavarria.github.io/blog/2014/06/21/charla-tecnica-javascript-masterclass/"/>
+    <updated>2014-06-21T17:23:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2014/06/21/charla-tecnica-javascript-masterclass</id>
+    <content type="html"><![CDATA[<p>Recientemente he visto una charla técnica impartida por
+<a href="https://twitter.com/angelinamagnum">Angelina Fabro</a> titulada <em>JavaScript masterclass</em>.
+En este post quiero dejar unas notas que me gustaría recordar, no es un resumen de la
+charla, pero sí son algunas ideas que me gustaría resaltar.</p>
+
+<p>La primera parte de la charla Angelina explica qué no es un programador junior, y en la
+segunda parte qué no es un programador experto, para terminar sugiriendo unos cuantos
+consejos sobre cómo pasar de un estado a otro.</p>
+
+<!-- more -->
+
+
+<h3>Angelina Fabro, a JavaScript masterclass</h3>
+
+<iframe width="560" height="315" src="http://rchavarria.github.io//www.youtube.com/embed/v0TFmdO4ZP0" frameborder="0" allowfullscreen></iframe>
+
+
+<h3>¿Quién es un gran programador?</h3>
+
+<p>Bueno, pues eso depende de a quién le preguntes, pero algunas respuestas que te
+darán podrían ser:</p>
+
+<ul>
+<li>Aquel que cumple con todas las fechas de entrega (si dejamos a un lado la calidad).</li>
+<li>Aquel que soluciona de la forma más rápida los problemas de los clientes.</li>
+<li>Aquel que hace ganar el mayor dinero posible a los dueños de los negocios.</li>
+<li>Aquel que es el mejor mentor para un programador junior.</li>
+<li>Aquel a quien le encanta unirse a otros programadores en la <em>batalla</em>.</li>
+</ul>
+
+
+<h3>¿Qué necesito aprender para ser uno de ellos?</h3>
+
+<p>Como conclusión a su charla, Angelina nos deja unos cuantos consejos que podemos
+aplicar para dar un salto en nuestra carrera profesional:</p>
+
+<ul>
+<li>Pregúntate <em>¿por qué?</em> obsesivamente, hasta el punto de molestarte a tí mismo.</li>
+<li>Enseña y/o habla en un evento.</li>
+<li>Trabaja a través de una seria de libros recomendados por los que más saben.</li>
+<li>Experimenta alocadamente. Haz barbaridades, al código no le importa ni le hace daño.</li>
+<li>Modela tus propias opiniones, debes tenerlas, debes mojarte.</li>
+<li>Busca a un mentor que te guíe por el camino.</li>
+<li>Programa mucho, mucho. Pero para de vez en cuando, tu cerebro necesita descansos.</li>
+<li>Escribe en varios lenguajes.</li>
+<li>Piensa como un programador aunque no estés cerca de un teclado.</li>
+<li>Aprende a distinguir el buen feedback del malo, y desecha el malo claro.</li>
+<li>Libérate del <a href="https://es.wikipedia.org/wiki/S%C3%ADndrome_del_impostor">síndrome del impostor</a>.</li>
+</ul>
+
+
+<h2>Conclusiones</h2>
+
+<p>En general, la charla me ha encantado, y me ha dado un poquito de chispa para seguir mejorando
+como profesional y me ha dado nuevas ideas. Aunque no estoy de acuerdo con todos los consejos que
+Angelina propone, me voy a quedar con dos de ellos que no me había planteado hasta ahora:
+pregúntate por qué obsesivamente y experimenta alocadamente.</p>
+
+<p>Nos recomienda un libro, <em>The secrets of a JavaScript ninja</em>, de John Resig.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Mejora contínua y análisis estático de código]]></title>
@@ -2816,88 +2883,6 @@ es productivo, todo aquello que no la lleve es imprductivo.</p></li>
 <li><a href="http://robertohens.blogspot.com.es/2013/04/Kanban-el-Origen-The-Goal.html">Kanban, el origen</a>.</li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[[microtip] eclipse: Detail Formatters]]></title>
-    <link href="http://rchavarria.github.io/blog/2013/02/19/microtip-eclipse/"/>
-    <updated>2013-02-19T17:19:00+01:00</updated>
-    <id>http://rchavarria.github.io/blog/2013/02/19/microtip-eclipse</id>
-    <content type="html"><![CDATA[<p>A través del post de <a href="http://twitter.com/kinisoftware">Kinisoftware</a>:
-<a href="http://kinisoftware.com/2013/02/a-la-caza-del-bug-en-eclipse/">A la caza del bug en eclipse</a>
-me encontré con un link muy recomendable, si trabajas con Eclipse como IDE:
-<a href="http://eclipsesource.com/blogs/2013/01/08/effective-java-debugging-with-eclipse/">Effective Java debugging with Eclipse</a>.</p>
-
-<p>En ese link aparecen multitud de consejos sobre cómo hacer debug en eclipse de una manera
-mucho más productiva. Entre estos consejos están los <em>Detail Formatters</em>, para formatear
-de una forma mucho más avanzada que con un simple <code>toString()</code> aquellas clases que desees.</p>
-
-<!-- more -->
-
-
-<p>En un primer momento, me parecieron muy útiles, pero no profundicé en ellos. Pensé que
-cada vez que iniciara la depuración de una aplicación, debía crearme los Detail
-Formatters que deseaba, y me pareció muy laborioso.</p>
-
-<p>Pero no es así, estos formatters se guardan en tus preferencias, y los puedes
-editar siempre que quieras. Los encontrarás en el menú <code>Window</code> > <code>Preferences</code>.
-Y dentro de preferencias, en <code>Java</code> > <code>Debug</code> > <code>Detail Formatters</code>.</p>
-
-<h2>Buscando una excusa</h2>
-
-<p>Una vez que me convencí de su utilidad, había que crear alguno, ¿no?. Actualmente
-me encuentro con que trabajo bastante con el tipo de Java <code>java.awt.geom.Rectangle2D</code>,
-y la verdad es que no me gusta nada cómo Eclipse me muestra este tipo de datos
-en una sesión de debugging.</p>
-
-<p><img class="center" src="http://rchavarria.github.io/images/2013/rectangle2d-without-detail-formatter.png" width="804" height="151" title="Rectangle2D sin detail formatter" ></p>
-
-<h2>Crear un detail formatter</h2>
-
-<p>Manos a la obra. Primero, establecemos un punto de ruptura donde podamos ver en la vista
-<em>Variables</em> una variable de la clase deseada, en este caso de <code>java.awt.geom.Rectangle2D</code>.</p>
-
-<p>Pinchamos con el botón derecho del ratón y seleccionamos la opción <em>New Detail Formatter&#8230;</em>.</p>
-
-<p>Ahora tenemos a nuestra disposición una ventana donde podemos introducir código Java de forma
-que retorne una <code>String</code> con la representación que nosotros queramos. Yo he usado el siguiente
-código:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="n">java</span><span class="o">.</span><span class="na">text</span><span class="o">.</span><span class="na">NumberFormat</span> <span class="n">nf</span> <span class="o">=</span>
-</span><span class='line'>    <span class="n">java</span><span class="o">.</span><span class="na">text</span><span class="o">.</span><span class="na">NumberFormat</span><span class="o">.</span><span class="na">getInstance</span><span class="o">(</span><span class="n">java</span><span class="o">.</span><span class="na">util</span><span class="o">.</span><span class="na">Locale</span><span class="o">.</span><span class="na">ENGLISH</span><span class="o">);</span>
-</span><span class='line'><span class="n">nf</span><span class="o">.</span><span class="na">setMaximumFractionDigits</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
-</span><span class='line'><span class="n">nf</span><span class="o">.</span><span class="na">setGroupingUsed</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">return</span>
-</span><span class='line'>    <span class="s">&quot;x: &quot;</span> <span class="o">+</span> <span class="n">nf</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">getX</span><span class="o">())</span> <span class="o">+</span> <span class="s">&quot;\n&quot;</span> <span class="o">+</span>
-</span><span class='line'>    <span class="s">&quot;y: &quot;</span> <span class="o">+</span> <span class="n">nf</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">getY</span><span class="o">())</span> <span class="o">+</span> <span class="s">&quot;\n&quot;</span> <span class="o">+</span>
-</span><span class='line'>    <span class="s">&quot;w: &quot;</span> <span class="o">+</span> <span class="n">nf</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">getWidth</span><span class="o">())</span> <span class="o">+</span> <span class="s">&quot;\n&quot;</span> <span class="o">+</span>
-</span><span class='line'>    <span class="s">&quot;h: &quot;</span> <span class="o">+</span> <span class="n">nf</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">getHeight</span><span class="o">());</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Y éste es el resultado, para mi gusto, mucho más compacto y directo:</p>
-
-<p><img class="center" src="http://rchavarria.github.io/images/2013/rectangle2d-using-detail-formatter.png" width="548" height="116" title="Rectangle2D usando detail formatter" ></p>
-
-<h2>Conclusión</h2>
-
-<p>En cualquier proyecto nos podemos encontrar con clases que no podremos modificar (frameworks,
-librerías, código legacy, &#8230;). Pero no nos tenemos que conformar con sus tristes y aburridos
-métodos <code>toString()</code>. Podemos escribir nuestro propio código para formatear estos tipos de datos.
-Y lo mejor de todo, podemos reutilizarlo, ya que nuestros formatters se guardan como preferencias
-de nuestro IDE favorito.</p>
 ]]></content>
   </entry>
   
