@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Charla técnica: Escribiendo JavaScript sólido como una roca"
-date: 2014-06-23 22:00
+date: 2014-06-27 20:00
 author: Rubén Chavarría
 comments: true
 categories: 
