@@ -4,7 +4,7 @@
   <title><![CDATA[Category: talks | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/talks/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2014-06-21T18:03:49+02:00</updated>
+  <updated>2014-06-26T23:04:08+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,85 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Charla técnica: Escribiendo JavaScript sólido como una roca]]></title>
+    <link href="http://rchavarria.github.io/blog/2014/06/27/charla-tecnica-escribe-javascript-como-roca/"/>
+    <updated>2014-06-27T20:00:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2014/06/27/charla-tecnica-escribe-javascript-como-roca</id>
+    <content type="html"><![CDATA[<p>Hace poco, he visto una charla técnica impartida por
+<a href="https://twitter.com/damian">Damian Nicholson</a>
+titulada <em>Writing (testable | maintainable | scalable | rock solid) JavaScript</em>,
+que traduzco libremente como *Escribiendo JavaScript sólido como una roca".</p>
+
+<p>En la charla, Damian analiza varios aspectos de porqué es difícil testear
+cierto código JavaScript y finaliza contando su experiencia escribiendo código
+para evitar todos esos errores.</p>
+
+<!-- more -->
+
+
+
+
+<iframe src="http://rchavarria.github.io//player.vimeo.com/video/68526881" width="500" height="161" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+
+<h3>Consejos</h3>
+
+<p>A lo largo de la charla, Damian suelta unos cuantos pequeños consejos:</p>
+
+<ol>
+<li>JavaScript + Unit testing = Good code</li>
+<li>Apóyate en los objetos. Según el conferenciante, los objetos te llevarán a
+diseñar clases, éstas a agruparlas en módulos, y los módulos a organizar mejor
+tus ficheros JavaScript.</li>
+<li>Sobretodo, uno debería testear su API pública, aunque no limitarse a ella.</li>
+</ol>
+
+
+<h3>Problemas a la hora de testear código JavaScript</h3>
+
+<p>A través de un sencillo snipet de código, Damian expone algunos de los problemas
+más comunes a la hora de escribir código JavaScript que lo hace difícilmente
+testeable:</p>
+
+<ul>
+<li>Funciones anónimas.</li>
+<li>Acoplamiento fuerte con el DOM, por ejemplo en el uso y abuso de ids en elementos
+HTML</li>
+<li>Hacer llamadas al servidor mezcladas con otra lógica de nuestra aplicación.</li>
+<li>Callbacks anidados.</li>
+<li>Mezclar código HTML y JavaScript, por ejemplo, excribiendo <em>templates</em> HTML a
+fuego en JavaScript.</li>
+</ul>
+
+
+<h3>Su propia experiencia</h3>
+
+<ul>
+<li>usar data-attributes para parametrizar, o configuraciones. Depender menos de ids
+en los elementos HTML.</li>
+<li>Conocer el ciclo de vida de los frameworks que utilizamos, y <em>engancharnos</em> a los
+eventos del ciclo que dirigen el proceso.</li>
+<li>Aislar nuestra aplicación de los detalles de plugins de terceros (gran consejo éste).</li>
+<li>Apóyate en <a href="http://lostechies.com/derickbailey/2012/10/07/javascript-mixins-beyond-simple-object-extension">mixins</a>.
+Con ellos podrás extender la funcionalidad de tus objetos, de una forma parecida a
+la herencia, aunque muy diferente a ella.</li>
+<li>Mantén funcionalidades privadas en ámbitos privados
+(patrón <a href="http://www.codeproject.com/Articles/247241/Javascript-Module-Pattern">módulo</a>).</li>
+</ul>
+
+
+<h3>Conclusión</h3>
+
+<p>Es una charla eminentemente práctica, por lo que es totalmente recomendable
+si quieres conocer de primera mano buenos consejos sobre cómo escribir código
+JavaScript testeable.</p>
+
+<p>No estoy de acuerdo en todos los consejos que comenta Damian, pero la voz de
+la experiencia tiene muchísimo valor, por lo que la charla me parece fenomenal.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Charla técnica: JavaScript masterclass]]></title>

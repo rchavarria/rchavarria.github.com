@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2014-06-21T18:03:49+02:00</updated>
+  <updated>2014-06-26T23:04:08+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,85 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Charla técnica: Escribiendo JavaScript sólido como una roca]]></title>
+    <link href="http://rchavarria.github.io/blog/2014/06/27/charla-tecnica-escribe-javascript-como-roca/"/>
+    <updated>2014-06-27T20:00:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2014/06/27/charla-tecnica-escribe-javascript-como-roca</id>
+    <content type="html"><![CDATA[<p>Hace poco, he visto una charla técnica impartida por
+<a href="https://twitter.com/damian">Damian Nicholson</a>
+titulada <em>Writing (testable | maintainable | scalable | rock solid) JavaScript</em>,
+que traduzco libremente como *Escribiendo JavaScript sólido como una roca&#8221;.</p>
+
+<p>En la charla, Damian analiza varios aspectos de porqué es difícil testear
+cierto código JavaScript y finaliza contando su experiencia escribiendo código
+para evitar todos esos errores.</p>
+
+<!-- more -->
+
+
+
+
+<iframe src="http://rchavarria.github.io//player.vimeo.com/video/68526881" width="500" height="161" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+
+<h3>Consejos</h3>
+
+<p>A lo largo de la charla, Damian suelta unos cuantos pequeños consejos:</p>
+
+<ol>
+<li>JavaScript + Unit testing = Good code</li>
+<li>Apóyate en los objetos. Según el conferenciante, los objetos te llevarán a
+diseñar clases, éstas a agruparlas en módulos, y los módulos a organizar mejor
+tus ficheros JavaScript.</li>
+<li>Sobretodo, uno debería testear su API pública, aunque no limitarse a ella.</li>
+</ol>
+
+
+<h3>Problemas a la hora de testear código JavaScript</h3>
+
+<p>A través de un sencillo snipet de código, Damian expone algunos de los problemas
+más comunes a la hora de escribir código JavaScript que lo hace difícilmente
+testeable:</p>
+
+<ul>
+<li>Funciones anónimas.</li>
+<li>Acoplamiento fuerte con el DOM, por ejemplo en el uso y abuso de ids en elementos
+HTML</li>
+<li>Hacer llamadas al servidor mezcladas con otra lógica de nuestra aplicación.</li>
+<li>Callbacks anidados.</li>
+<li>Mezclar código HTML y JavaScript, por ejemplo, excribiendo <em>templates</em> HTML a
+fuego en JavaScript.</li>
+</ul>
+
+
+<h3>Su propia experiencia</h3>
+
+<ul>
+<li>usar data-attributes para parametrizar, o configuraciones. Depender menos de ids
+en los elementos HTML.</li>
+<li>Conocer el ciclo de vida de los frameworks que utilizamos, y <em>engancharnos</em> a los
+eventos del ciclo que dirigen el proceso.</li>
+<li>Aislar nuestra aplicación de los detalles de plugins de terceros (gran consejo éste).</li>
+<li>Apóyate en <a href="http://lostechies.com/derickbailey/2012/10/07/javascript-mixins-beyond-simple-object-extension">mixins</a>.
+Con ellos podrás extender la funcionalidad de tus objetos, de una forma parecida a
+la herencia, aunque muy diferente a ella.</li>
+<li>Mantén funcionalidades privadas en ámbitos privados
+(patrón <a href="http://www.codeproject.com/Articles/247241/Javascript-Module-Pattern">módulo</a>).</li>
+</ul>
+
+
+<h3>Conclusión</h3>
+
+<p>Es una charla eminentemente práctica, por lo que es totalmente recomendable
+si quieres conocer de primera mano buenos consejos sobre cómo escribir código
+JavaScript testeable.</p>
+
+<p>No estoy de acuerdo en todos los consejos que comenta Damian, pero la voz de
+la experiencia tiene muchísimo valor, por lo que la charla me parece fenomenal.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Charla técnica: JavaScript masterclass]]></title>
@@ -2771,118 +2850,6 @@ trabajo, si no para darte a conocer, aprender, participar, enriquecerte, &#8230;
 <p>En el vídeo se habla de otras herramientas y otras redes sociales, pero me quedé
 bastante impresionado con estos consejos sobre LinkedIn y son las notas que quiero
 conservar.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[La meta]]></title>
-    <link href="http://rchavarria.github.io/blog/2013/04/10/la-meta/"/>
-    <updated>2013-04-10T10:06:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2013/04/10/la-meta</id>
-    <content type="html"><![CDATA[<h4>La meta</h4>
-
-<h5>Eliyahu Goldratt</h5>
-
-<p><img class="right" src="http://ecx.images-amazon.com/images/I/51E50P52AXL._SY300_.jpg" width="195" height="300" title="La meta" ></p>
-
-<h2>Por qué lo he leído</h2>
-
-<p>Nunca había oído hablar de este libro, pero cuando asistí a la CAS2012, el año pasado en Cáceres,
-varias personas que allí conocí (<a href="https://twitter.com/rferlei">Roberto</a> y
-<a href="https://twitter.com/anuskiaranda">Ana</a>) me hablaron maravillas de él, así que decidí
-ponerlo en la lista de libros a leer.</p>
-
-<!-- more -->
-
-
-<h2>Qué esperaba</h2>
-
-<p>Bueno, en realidad ya me habían contado de qué iba el libro, así que ya llevaba una buena idea
-de lo que se iba a tratar. Y tenía bastantes buenas espectativas.</p>
-
-<h2>Qué encontre</h2>
-
-<p>Encontré un magnífico libro. La verdad es que es muy ameno y divertido. También es intrigante
-ir leyendo cómo el autor va relatando a través del protagonista un proceso de descubrimiento de
-soluciones a todos sus problemas.</p>
-
-<p>La verdad es que se hace muy fácil de leer y comprender los principios Lean y la teoría de las
-restricciones a través de la historia contada a través del protagonista.</p>
-
-<h2>Conclusiones</h2>
-
-<p>El libro me ha encantado, aunque me hubiera gustado mucho más haberlo leído un tiempo atrás, ya
-que trabajé en una fábrica como Ingeniero de Desarrollo (para desarrollar nuevos productos). Por
-lo menos ha sido divertido revivir experiencias de aquel trabajo, ya que muchos de los principios
-(y problemas también) expuestos en el libro ya los viví en mis propias carnes.</p>
-
-<p>Así pues, este es un libro recomendado sobre todo a todos aquellos interesados en mejorar procesos
-de producción. No parece un tema muy de desarrollo de software, que es a lo que me dedico, pero
-estos principios son la base de las metodologías Lean, y por ende, Agile. Además, es un libro
-que se lee relativamente rápido, y, de verdad, es muy divertido, así que tampoco cuesta tanto.</p>
-
-<h2>Pasajes que quiero recordar de este libro</h2>
-
-<blockquote><p>Comprar a precios económicos no es la meta.</p>
-
-<p>La meta no es vender, hay veces que se vende perdiendo dinero o con márgenes ínfimos.</p>
-
-<p>Qué es lo que la gente piensa que son las metas: compras baratas, contratación de gente adecuada,
-tecnología punta, fabricacón de bienes de calidad, venta de bienes de calidad,
-conquista tasa de mercado, comunciaciones o cumplimiento de los deseos del cliente.
-Pero esos son medios para alcanzar la meta.</p>
-
-<p>La calidad sola, es importante, pero no es la meta.</p>
-
-<p>Tecnologia, es importatne, pero no es la meta.</p>
-
-<p>Trabajar no es sinónimo de ganar dinero.</p>
-
-<p>Ésta es la meta: ganar dinero aumentando los beneficios netos y al mismo tiempo el rendimiento
-de la inversión (ROI) y la liquidez.</p>
-
-<p>Parámetros que expresan la meta y que permiten establecer procedimientos operativos para
-dirigir la fábrica: ingresos, inventarios y gastos de operación.</p>
-
-<p>Una fabrica, en la que todo el mundo produce ininterrumpidamente, es muy poco productiva.</p>
-
-<p>Una regla que expresa la relación entre cuellos de botella y los demas recursos: equilibrar
-el flujo, no la capacidad.</p>
-
-<p>El grado de utilización de un recuros &#8216;no-cuello&#8217; de botella no vendrá dado por su propia
-capacidad sino por alguna otra restricción del sistema.</p>
-
-<p>Se pueden distinguir 4 tipos de tiempos desde que el material entra en la fábrica hasta
-que sale de ella: de preparación, de proceso, en cola y de espera.</p>
-
-<p>Tres consejos sobre cómo dirigir: Saber convencer a otras personas, desprender las capas
-de la práctica común y vencer la resistencia al cambio.</p>
-
-<p>Nunca des las respuestas, solo plantea las preguntas.</p>
-
-<p>¿Qué cabmiar? ¿Hacia qué cambiar? ¿Cómo provocar el cambio? Basicamente estamos pidiendo
-las habiliades fundamentales que uno debería esperar de un directivo.</p></blockquote>
-
-<h2>Conceptos</h2>
-
-<ul>
-<li><p>Productividad: significa hacer las cosas de tal manera que, en el caso de la empresa, ésta
-se aproxime lo más posible a su meta. Todo aquello que lleve a una compañía más cerca de su meta
-es productivo, todo aquello que no la lleve es imprductivo.</p></li>
-<li><p>Ingresos: tasa de generacion de dinero a traves de las ventas.</p></li>
-<li><p>Inventario: todo el dinero que el sistema ha invertido en adquierrir cosas que pretende vender.</p></li>
-<li><p>Gastos de operación: todo el dienro que el sistema gasta para convertir el inventario en ingresos netos.</p></li>
-</ul>
-
-
-<h2>Otras lecturas y enlaces relacionadas</h2>
-
-<ul>
-<li><a href="http://rchavarria.github.io/blog/2012/10/10/lean-software-development/">Lean software development</a>, de Mary y Tom Poppendiek.</li>
-<li><a href="https://plus.google.com/105077077543737057709">Roberto Hens</a> también lo ha leído, y esto es lo que le parece:</li>
-<li><a href="http://robertohens.blogspot.com.es/2013/04/Kanban-el-Origen-The-Goal.html">Kanban, el origen</a>.</li>
-</ul>
-
 ]]></content>
   </entry>
   

@@ -5,11 +5,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Category: blog - R. Chavarria's Blog</title>
+  <title>Charla técnica: Escribiendo JavaScript sólido como una roca - R. Chavarria's Blog</title>
   <meta name="author" content="Rub&eacute;n Chavarr&iacute;a">
 
   
-  <meta name="description" content="Category: blog">
+  <meta name="description" content="Hace poco, he visto una charla técnica impartida por
+Damian Nicholson
+titulada Writing (testable | maintainable | scalable | rock solid) JavaScript, &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +20,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://rchavarria.github.ioblog/categories/blog/">
+  <link rel="canonical" href="http://rchavarria.github.io/blog/2014/06/27/charla-tecnica-escribe-javascript-como-roca/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -78,36 +80,161 @@
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Category: blog</h1>
+    
+      <h1 class="entry-title">Charla técnica: Escribiendo JavaScript sólido como una roca</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-27T20:00:00+02:00" pubdate data-updated="true">Jun 27<span>th</span>, 2014</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives" class="category">
+
+
+<div class="entry-content"><p>Hace poco, he visto una charla técnica impartida por
+<a href="https://twitter.com/damian">Damian Nicholson</a>
+titulada <em>Writing (testable | maintainable | scalable | rock solid) JavaScript</em>,
+que traduzco libremente como *Escribiendo JavaScript sólido como una roca&#8221;.</p>
+
+<p>En la charla, Damian analiza varios aspectos de porqué es difícil testear
+cierto código JavaScript y finaliza contando su experiencia escribiendo código
+para evitar todos esos errores.</p>
+
+<!-- more -->
 
 
 
-  
-  <h2>2012</h2>
 
-<article>
-  
-<h1><a href="/blog/2012/12/03/por-que-cambie-mi-blog-en-wordpress-com/">Por qu&eacute; cambi&eacute; mi blog en wordpress.com</a></h1>
-<time datetime="2012-12-03T09:44:00+01:00" pubdate><span class='month'>Dec</span> <span class='day'>03</span> <span class='year'>2012</span></time>
-
-<footer>
-  <span class="categories">posted in <a class='category' href='/blog/categories/blog/'>blog</a></span>
-</footer>
+<iframe src="//player.vimeo.com/video/68526881" width="500" height="161" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
-</article>
+<h3>Consejos</h3>
 
+<p>A lo largo de la charla, Damian suelta unos cuantos pequeños consejos:</p>
+
+<ol>
+<li>JavaScript + Unit testing = Good code</li>
+<li>Apóyate en los objetos. Según el conferenciante, los objetos te llevarán a
+diseñar clases, éstas a agruparlas en módulos, y los módulos a organizar mejor
+tus ficheros JavaScript.</li>
+<li>Sobretodo, uno debería testear su API pública, aunque no limitarse a ella.</li>
+</ol>
+
+
+<h3>Problemas a la hora de testear código JavaScript</h3>
+
+<p>A través de un sencillo snipet de código, Damian expone algunos de los problemas
+más comunes a la hora de escribir código JavaScript que lo hace difícilmente
+testeable:</p>
+
+<ul>
+<li>Funciones anónimas.</li>
+<li>Acoplamiento fuerte con el DOM, por ejemplo en el uso y abuso de ids en elementos
+HTML</li>
+<li>Hacer llamadas al servidor mezcladas con otra lógica de nuestra aplicación.</li>
+<li>Callbacks anidados.</li>
+<li>Mezclar código HTML y JavaScript, por ejemplo, excribiendo <em>templates</em> HTML a
+fuego en JavaScript.</li>
+</ul>
+
+
+<h3>Su propia experiencia</h3>
+
+<ul>
+<li>usar data-attributes para parametrizar, o configuraciones. Depender menos de ids
+en los elementos HTML.</li>
+<li>Conocer el ciclo de vida de los frameworks que utilizamos, y <em>engancharnos</em> a los
+eventos del ciclo que dirigen el proceso.</li>
+<li>Aislar nuestra aplicación de los detalles de plugins de terceros (gran consejo éste).</li>
+<li>Apóyate en <a href="http://lostechies.com/derickbailey/2012/10/07/javascript-mixins-beyond-simple-object-extension">mixins</a>.
+Con ellos podrás extender la funcionalidad de tus objetos, de una forma parecida a
+la herencia, aunque muy diferente a ella.</li>
+<li>Mantén funcionalidades privadas en ámbitos privados
+(patrón <a href="http://www.codeproject.com/Articles/247241/Javascript-Module-Pattern">módulo</a>).</li>
+</ul>
+
+
+<h3>Conclusión</h3>
+
+<p>Es una charla eminentemente práctica, por lo que es totalmente recomendable
+si quieres conocer de primera mano buenos consejos sobre cómo escribir código
+JavaScript testeable.</p>
+
+<p>No estoy de acuerdo en todos los consejos que comenta Damian, pero la voz de
+la experiencia tiene muchísimo valor, por lo que la charla me parece fenomenal.</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Rubén Chavarría</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-06-27T20:00:00+02:00" pubdate data-updated="true">Jun 27<span>th</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/javascript/'>JavaScript</a>, <a class='category' href='/blog/categories/talks/'>talks</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rchavarria.github.io/blog/2014/06/27/charla-tecnica-escribe-javascript-como-roca/" data-via="rchavarriat" data-counturl="http://rchavarria.github.io/blog/2014/06/27/charla-tecnica-escribe-javascript-como-roca/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/06/21/charla-tecnica-javascript-masterclass/" title="Previous Post: Charla técnica: JavaScript masterclass">&laquo; Charla técnica: JavaScript masterclass</a>
+      
+      
+    </p>
+  </footer>
 </article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
 
 </div>
 
@@ -186,7 +313,10 @@
       var disqus_shortname = 'rchavarria-github-com';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://rchavarria.github.io/blog/2014/06/27/charla-tecnica-escribe-javascript-como-roca/';
+        var disqus_url = 'http://rchavarria.github.io/blog/2014/06/27/charla-tecnica-escribe-javascript-como-roca/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
