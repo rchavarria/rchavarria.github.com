@@ -15,7 +15,7 @@ sidebar: true
 Hace poco, he visto una charla técnica impartida por
 [Damian Nicholson](https://twitter.com/damian)
 titulada *Writing (testable | maintainable | scalable | rock solid) JavaScript*,
-que traduzco libremente como *Escribiendo JavaScript sólido como una roca".
+que traduzco libremente como *Escribiendo JavaScript sólido como una roca*.
 
 En la charla, Damian analiza varios aspectos de porqué es difícil testear
 cierto código JavaScript y finaliza contando su experiencia escribiendo código
