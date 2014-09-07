@@ -79,7 +79,10 @@ mientras lo estudiamos por qué no nos formulamos una serie de preguntas
 (haciendo incapié en el *por qué* de los conceptos), para después responder
 con nuestras propias palabras a dichas preguntas.
 
-### Nota sobre la técnica de tomar notas de Cornell
+### Cómo funciona la técnica de tomar notas de Cornell
+
+Resumen extraído de la entrada en la wikipedia: 
+[Cornell note-taking system](http://en.wikipedia.org/wiki/Cornell_Notes)
 
 Dividir el papel en dos columnas: *columna de preguntas*, de 1/3 del ancho y
 *columna de notas*, 2/3 de ancho. La columna de notas es la de tomar notas de
