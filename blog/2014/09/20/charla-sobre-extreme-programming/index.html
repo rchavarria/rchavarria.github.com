@@ -1,0 +1,527 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Charla sobre eXtreme Programming - R. Chavarria's Blog</title>
+  <meta name="author" content="Rub&eacute;n Chavarr&iacute;a">
+
+  
+  <meta name="description" content="Recientemente he dado una charla en el trabajo acerca de eXtreme Programming.
+No es nada del otro mundo, tampoco pretendo dar lecciones a nadie y &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://rchavarria.github.io/blog/2014/09/20/charla-sobre-extreme-programming/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="R. Chavarria's Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36829645-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">R. Chavarria's Blog</a></h1>
+  
+    <h2>Blogging like a hacker about Software Development</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:rchavarria.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archivos</a></li>
+  <li><a href="/readings">Lista de lectura</a></li>
+  <li><a href="/pet-projects">Proyectos</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Charla sobre eXtreme Programming</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-20T01:27:00+02:00" pubdate data-updated="true">Sep 20<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Recientemente he dado una charla en el trabajo acerca de <a href="http://www.extremeprogramming.org">eXtreme Programming</a>.
+No es nada del otro mundo, tampoco pretendo dar lecciones a nadie y tampoco
+he descubierto nada que no estuviera escrito ya. Pero al hacer la charla he
+reunido un poco de información de aquí y de allá, y ya que he hecho ese
+pequeño esfuerzo, ¿por qué no plasmarlo aquí?</p>
+
+<p>A continuación os dejo el guión que escribí mientras la preparaba. No conté
+todo lo que está, ni está todo lo que conté, pero este fue mi pequeño trabajo
+de campo.</p>
+
+<!-- more -->
+
+
+<h2>Introducción al desarrollo ágil de software</h2>
+
+<p>El desarrollo de software comenzó siendo hecho por ingenieros, de los de toda
+la vida (que no quiere decir que sea malo, pero como veremos fué diferente),
+lo que condicionó su forma de hacerlo, pero construir software es más parecido
+a crear una obra de arte: requiere <em>creatividad</em> y <em>artesanía</em>.</p>
+
+<p>A diferencia de otros productos de la ingeniería, el software es maleable,
+muchas veces ilógico y siempre se encuentra incompleto (por eso se parece
+a una obra de arte).</p>
+
+<p>Al entender estas diferencias es cuando empiezan a surgir nuevas forma de
+desarrollar software, como el desarrollo ágil de software.</p>
+
+<p>No existen metodologías o procesos ágiles (en contra de todo lo que se vende
+últimamente), sólo existen <strong>equipos ágiles</strong>. Eso que se describe como
+metodología ágil no es más que la construcción de un entorno para que los
+equipos aprendan a ser ágiles.</p>
+
+<p>Diferencias con lo que se venía haciendo hasta ahora:
+- La forma en la que el equipo trabaja junto es más importante que cualquier
+proceso (gente y comunicación frente a procesos y herramientas).
+- El cliente, el usuario, pasa a ser un miembro esencial del equipo.
+- El mayor problema con el desarrollo de software son los requisitos
+cambiantes. Para la mayoría de los proyectos, aceptar los cambios puede
+costar menos que asegurar que los requisitos no van a cambiar nunca.</p>
+
+<p>Al cambiar la forma de ver los cambios, resulta que es más fácil cambiar cómo
+se gestionan los proyectos. En lugar de gestionar actividades y esperar al
+final del todo a tener una aplicación, los agilistas gestionan los requisitos
+(aceptando que éstos van a cambiar) y se muestra al cliente cómo la aplicación
+va cambiando con el tiempo.</p>
+
+<h2>Gestión por funcionalidades</h2>
+
+<p>En la gestión tradicional, se planifican las actividades una detrás de otra,
+cuando finaliza una comienza la siguiente. Así hasta el final del proyecto.
+Es entonces la única vez donde se muestra el software creado.</p>
+
+<p>¿Cómo funciona? Los requisitos son constantes a lo largo del tiempo, y fluyen a
+través de las actividades como por una línea de montaje. Cada actividad finaliza
+con los requisitos a la vez  y al final de la línea se entrega un software.
+Podemos tener gente especializada en cada actividad, e ir cambiando de equipo
+según vamos cambiando de actividad. La única pega que tiene es que los requisitos
+no son constantes, por lo que todo lo demás no sirve de nada.</p>
+
+<p>¿Y Agile? Agile considera que los requisitos no son constantes. Cada requisito,
+cada funcionalidad se presenta al cliente como una Historia de Usuario. El gráfico
+anterior se gira 90º y el proceso en sí mismo es el que permanece constante. Se
+planifican los requisitos por prioridad, y se va trabajando uno a uno pasándolo por
+todas las actividades, por lo que vamos teniendo requisitos completos poco a poco.
+Tener los requisitos priorizados permite cambiarlos a antojo. Y no solo eso,
+también permite finalizar el proyecto en el momento en el que queramos.</p>
+
+<p>Este giro de 90º permite a los managers a tener una estimación de coste por
+requisito, no por actividad.</p>
+
+<p>Uno de los costes de gestionar requisitos es que siempre hay que estar listo para
+nuevas funcionalidades, por lo que se debe mantener una calidad muy alta tanto en
+diseño como en código.</p>
+
+<h2>Cómo evoluciona el software</h2>
+
+<p>En todo desarrollo de software llega un momento en el al que arreglar un bug,
+resulta que se crean uno o varios pequeños bugs por ahí dispersos.</p>
+
+<p>Barry Boehm ya encontró que según va avanzando un proyecto software en su ciclo
+de vida, el coste de un cambio se vuelve cada vez más y más grande. Un concepto
+que lo explica mejor podría ser el Principio de Oxidación del Software.</p>
+
+<p>Esta curva se comenzó interpretando de forma que se debían crear documentos de
+requisitos lo más detallados y lo más estáticos posibles. Agile no lo considera
+así, en lugar de eso se prepara para que los cambios en los requisitos cuesten
+poco.</p>
+
+<p>Para eso, y para combatir la oxidación del software, Agile propone:
+- Refactorizar: hacerlo sin descanso, sin límites, sin parar, sin excusas…
+refactoriza
+- Tests: unitarios y de aceptación. También se aceptan otros: de integración,
+de sistema, de lo que sea, pero tests. Automáticos, eso si. Con ellos se logra
+eliminar el miedo a los cambios.
+- Entrega temprana y frecuente: con ello se aumenta el feedback del cliente y
+ayuda a identificar cambios. Y cuanto antes se detecten estos cambios, menor
+coste tendrán.</p>
+
+<p>¿Cómo mantener la capacidad de poder realizar cambios manteniendo el coste en
+niveles aceptables? Sólo porque el cliente no vea el código no significa que
+no tengamos que hacer esfuerzo para mantener la capacidad de realizar cambios.
+Y esto se consigue manteniendo un alto nivel de calidad, una baja complejidad
+y una cobertura de tests lo más alta posible.</p>
+
+<h2>Introducción a XP</h2>
+
+<p>El primer proyecto en el que se usó eXtreme Programming comenzó el 6 de marzo
+de 1996. XP es uno de los famosos Procesos Ágiles, entre los que se encuentran
+Scrum, Kanban,…</p>
+
+<p>En lugar de entregar todo lo que el cliente desea en un futuro lejano, XP va
+entregando el software trocito a trocito, según se va necesitando.</p>
+
+<p>XP hace hincapié en el trabajo en equipo. Managers, clientes y programadores
+forman parte del mismo equipo. Los clientes se sienten bien siendo parte del
+equipo, los programadores contribuyen activamente y los managers se encargan
+de que exista una buena comunicación.</p>
+
+<p>¿Por qué extremo? Por una serie de reglas y prácticas las lleva a su máxima
+expresión, mucho más que en proyectos tradicionales.</p>
+
+<h2>De vuelta a lo básico, qué es lo que en realidad importa</h2>
+
+<p>Como ya sabemos, crear software es muy complicado. Por lo que no tiene sentido
+perder el tiempo en tareas que no importan. XP se deshace de tareas o actividades
+que se consideran que no aportan valor.</p>
+
+<p>XP tiene una serie de reglas que se pueden englobar en estos cuatro aspectos:
+- <em>Escuchar</em>: hay que aprender, hay que conocer el problema. Eso te dirá qué es
+lo que debes testear. Como probablemente no lo averigües tú solo, deberás
+escuchar a los clientes, a los usuarios, managers y demás gente de negocio.
+- <em>Diseñar</em>: hay que escuchar lo que el código nos cuenta acerca de cómo quiere
+estar estructurado, y darle forma poco a poco.
+- <em>Codificar</em>: si al final del día no hay un software ejecutable, no habrás
+hecho nada.
+- <em>Testear</em>: hay que saber cuándo hemos terminado. De otra forma, estarás atascado
+pensando si todo cumple con lo establecido o no. Pero lo peor de todo, es que
+tampoco vas a saber cómo de cerca estás de tu destino.</p>
+
+<h2>Reglas</h2>
+
+<p>Algunas reglas sueltas quizá no tengan sentido, pero combinadas se puede ver
+hacia dónde van, qué es lo que quieren conseguir.</p>
+
+<h3>Escuchar</h3>
+
+<p>Se escriben Historias de Usuario (las cuales son el corazón de la planificación
+en un proyecto XP).</p>
+
+<p>El proyecto se divide en iteraciones o sprints.</p>
+
+<p>Al final de cada iteración, se realiza una pequeña entrega de funcionalidades.</p>
+
+<p>Se crean tres niveles de planificación:
+- Release plan: mira hacia el futuro unos cuantos meses y agrupa historias
+en grandes entregas.
+- Next Iteration plan: se agrupan las historias que se van a realizar en
+la próxima iteración.
+- Current Iteration plan: las historias definidas para esta iteración se
+dividen hasta que se encuentran tareas que se pueden acometer fácilmente.
+Los planes se toman como algo vivo, no como algo estático. Si el cliente
+cambia de idea, se cambian los planes. Si el equipo se retrasa en una entrega,
+se cambian los planes.</p>
+
+<p>Se intenta conseguir un Ritmo Sostenible.</p>
+
+<p>Cada dia comienza con un Stand-up Meeting.</p>
+
+<p>Se mide la Velocidad del Proyecto.</p>
+
+<p>Se favorecen los Espacios Abiertos y se fomenta la Movilidad de las Personas.</p>
+
+<h3>Diseñar</h3>
+
+<p>Simplicidad, se busca siempre lo más sencillo posible. Para poder mostrárselo
+al cliente lo antes posible y obtener feedback.</p>
+
+<p>Siempre se usa una Metáfora del Sistema, se busca usar el lenguaje propio
+del negocio, la jerga que se usa en el entorno para el cual se está
+desarrollando el software.</p>
+
+<p>Se crean Spikes, para reducir riesgos.</p>
+
+<p>Ninguna funcionalidad se añade prematuramente (yagni).</p>
+
+<p>Se Refactoriza en cualquier momento y en cualquier lugar que sea posible.</p>
+
+<p>Se usan Tarjetas CRC para las decisiones de diseño. Así, todos los miembros
+del equipo entienden y contribuyen al diseño.</p>
+
+<h3>Codificar</h3>
+
+<p>El cliente siempre está disponible para resolver dudas sobre el software.</p>
+
+<p>El código se escribe siguiendo unos Estándares consensuados por el equipo.</p>
+
+<p>Primero, se escriben los Tests Unitarios, luego el código de producción.</p>
+
+<p>Todo el código de producción se escribe mientras se Programa por Parejas.</p>
+
+<p>Se Integra Frecuentemente, mejor con Integración Contínua.</p>
+
+<p>El código es de todos, Collective Ownership.</p>
+
+<h3>Testear</h3>
+
+<p>En un proyecto XP, los programadores toman la actitud de ser ellos quien
+demuestran al cliente que los requisitos funcionan, y no al revés, no es
+el cliente quien demuestra que lo que pidió no funciona.</p>
+
+<p>Todo el código debe tener Tests Unitarios. Y todos los tests pasan antes
+de sacar una versión.</p>
+
+<p>Cuando se encuentra un bug, se crea un test para reproducirlo, arreglarlo,
+y que nunca vuelva a salir una versión con ese bug.</p>
+
+<p>Se escriben Tests de Aceptación. Se ejecutan frecuentemente y su puntuación
+se hace pública.</p>
+
+<h2>Valores</h2>
+
+<p>XP mejora un proyecto software en cinco aspectos fundamentales, que se han
+convertido en los valores de XP. Las reglas que acabamos de ver son consecuencia
+de maximizar estos valores.</p>
+
+<ul>
+<li>Simplicidad: se hace lo que es necesario, pero nada más. No se añade complejidad
+extra porque sí. Se avanza a pasos pequeños pero firmes.</li>
+<li>Comunicación: todo el mundo es parte del equipo. Siempre que se pueda, la
+comunicación es cara a cara.</li>
+<li>Feedback: al final de cada iteración se entrega un software ejecutable y
+válido. Se demuestra el software pronto y frecuentemente.</li>
+<li>Respeto: todo el mundo da y recibe respeto. Los programadores respetan la
+experiencia de los clientes y al revés.</li>
+<li>Coraje: siempre se dice la verdad sobre las estimaciones y el estado de las
+tareas.</li>
+</ul>
+
+
+<h2>Para seguir leyendo</h2>
+
+<ul>
+<li><a href="http://www.adictosaltrabajo.com/detalle-noticia.php?noticia=379">Principio de oxidación del software (Spanish)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Barry_Boehm">Barry Boehm</a></li>
+<li><a href="http://www.extremeprogramming.org/lessons.html">XP lessons learned</a></li>
+<li><a href="http://www.extremeprogramming.org/when.html">When should XP be used</a></li>
+<li><a href="http://www.agile-process.org">Agile process</a></li>
+<li><a href="http://www.amazon.com/Extreme-Programming-Explained-Embrace-Edition/dp/0321278658">Extreme programming explained</a></li>
+</ul>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Rubén Chavarría</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-20T01:27:00+02:00" pubdate data-updated="true">Sep 20<span>th</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/agile/'>agile</a>, <a class='category' href='/blog/categories/talks/'>talks</a>, <a class='category' href='/blog/categories/xp/'>xp</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rchavarria.github.io/blog/2014/09/20/charla-sobre-extreme-programming/" data-via="rchavarriat" data-counturl="http://rchavarria.github.io/blog/2014/09/20/charla-sobre-extreme-programming/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/09/07/efectividad-de-10-tecnicas-para-estudiar/" title="Previous Post: Efectividad de 10 técnicas para estudiar">&laquo; Efectividad de 10 técnicas para estudiar</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/09/20/charla-sobre-extreme-programming/">Charla sobre eXtreme Programming</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/09/07/efectividad-de-10-tecnicas-para-estudiar/">Efectividad de 10 técnicas para estudiar</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/06/26/charla-tecnica-escribe-javascript-como-roca/">Charla técnica: Escribiendo JavaScript sólido como una roca</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/06/21/charla-tecnica-javascript-masterclass/">Charla técnica: JavaScript masterclass</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/05/mejora-continua-y-analisis-estatico-de-codigo/">Mejora contínua y análisis estático de código</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("rchavarriat", 4, true);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/rchavarriat">@rchavarriat</a></p>
+  
+</section>
+
+
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/rchavarriat?count=5&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/rchavarriat">My Delicious Bookmarks &raquo;</a></p>
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Rub&eacute;n Chavarr&iacute;a -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'rchavarria-github-com';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://rchavarria.github.io/blog/2014/09/20/charla-sobre-extreme-programming/';
+        var disqus_url = 'http://rchavarria.github.io/blog/2014/09/20/charla-sobre-extreme-programming/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
