@@ -13,6 +13,8 @@ footer: false
 sidebar: true
 ---
 
+{% img right /images/2014/xppractices.jpg 360 270 Prácticas de eXtreme Programming %}
+
 Recientemente he dado una charla en el trabajo acerca de [eXtreme Programming].
 No es nada del otro mundo, tampoco pretendo dar lecciones a nadie y tampoco
 he descubierto nada que no estuviera escrito ya. Pero al hacer la charla he
@@ -28,7 +30,7 @@ de campo.
 ## Introducción al desarrollo ágil de software
 
 El desarrollo de software comenzó siendo hecho por ingenieros, de los de toda
-la vida (que no quiere decir que sea malo, pero como veremos fué diferente),
+la vida (que no quiere decir que sea malo, pero como veremos fue diferente),
 lo que condicionó su forma de hacerlo, pero construir software es más parecido 
 a crear una obra de arte: requiere *creatividad* y *artesanía*.
 
@@ -258,3 +260,4 @@ tareas.
 - [Extreme programming explained](http://www.amazon.com/Extreme-Programming-Explained-Embrace-Edition/dp/0321278658)
 
 [eXtreme Programming]: http://www.extremeprogramming.org
+
