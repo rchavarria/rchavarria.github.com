@@ -2,8 +2,15 @@
 layout: post
 title: "Plantilla para módulos NodeJS"
 date: 2014-09-24 00:45
+author: Rubén Chavarría
 comments: true
 categories: 
+- javascript
+- tutorial
+- nodejs
+published: true
+footer: false
+sidebar: true
 ---
 
 Hace poco, viendo los [screencasts de Carlos Blé]
