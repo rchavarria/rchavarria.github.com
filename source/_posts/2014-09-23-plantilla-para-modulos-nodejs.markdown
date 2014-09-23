@@ -41,14 +41,11 @@ Ejecutar el comando:
 
     npm init
 
---------------------------------------------------------------------------------
-                 VOY POR AQUI
---------------------------------------------------------------------------------
+El comando te guiará por unos pasos para introducir información básica del módulo
+donde trabajarás. Entre esa información se encuentra el nombre del proyecto,
+la descripción y la version.
 
-It will walk you through some basic configuration for a NodeJS module. The
-most important information you provide will be: name, description and version.
-
-A `package.json` file like this will be written:
+Un fichero `package.json` tipo podría ser el siguiente:
 
     {
         "name": "nodejs-module-template",
@@ -68,21 +65,22 @@ A `package.json` file like this will be written:
     }
 
 
-# Install gulp
+# Instalar Gulp
 
-You can install it with this simple command:
+Es muy fácil, con `npm`:
 
     npm install --save-dev gulp
 
-The `--save-dev` flag will insert a new line in the `package.json` file to
-tell `npm` about your project's dependencies.
+El flag `--save-dev` insertará una nueva línea en el fichero `package.json` para
+indicar a `npm` que hay una nueva dependencia para tiempo de desarrollo.
 
-Test the installation with `gulp --version`.
+Para comprobar que se ha instalado correctamente, ejecutar el comando 
+`gulp --version`.
 
-# Configure gulp
+# Configurar Gulp
 
-Create a `gulpfile.js` file in the project's root folder. The content of the
-file could be:
+Crea un fichero `gulpfile.js` en el directorio raiz del proyecto. El contenido
+del fichero podría ser el siguiente:
 
     var gulp = require('gulp');
 
@@ -90,23 +88,24 @@ file could be:
         console.log('Hello gulp!');
     });
 
-Run `gulp` command to see a message in the console.
+Ejecuta el comando `gulp` para ver un mensaje por consola.
 
-# Install tests libraries
+# Instalar librerías de tests
 
-It is so easy to install those libraries that we will do it in a single command:
+Es tan fácil como instalar Gulp, simplemente escribir el comando:
 
     npm install --save-dev mocha chai sinon sinon-chai
 
-Test mocha installation with `node node_modules/mocha/bin/mocha --version`.
+Para probar que se ha instalado Mocha adecuadamente, escribir
+`node node_modules/mocha/bin/mocha --version`.
 
-# Before writting your first test
+# Antes de escribir el primer test
 
-Before start writting tests, we will create a bootstrap file for mocha, to
-initialize all libraries and avoid writting boilerplate code in every single
-test we have.
+Antes de escribir el primer test, crearemos un fichero de inicializacion para
+Mocha, para inicializar las librerias y evitar tener que escribir el mismo 
+código una y otra vez en todos nuestros tests.
 
-Create a file called `test/bootstrap.js` with this content:
+Crea un fichero llamado `test/bootstrap.js` y escribe en él este contenido:
 
     global.chai = require('chai');
     global.sinon = require('sinon');
@@ -115,15 +114,16 @@ Create a file called `test/bootstrap.js` with this content:
     var sinonChai = require('sinon-chai');
     chai.use(sinonChai);
 
-This loads Chai and Sinon libraries, creates a `expect` method in the global
-scope, and configures Chai to use Sinon expect functionalities.
+Esto cargará las librerías Chai y Sinon, crea una variable global llamada
+`expect` (la usaremos en todos los tests) y configura Chai para que use métodos
+y funcionalidades proporcionados por Sinon.
 
-Now, we are going to create a Gulp task to run tests. First we need a Gulp
-plugin to be able to run Mocha from Gulp. Just type in the command line:
+Ahora, crearemos una tarea en Gulp para ejecutar los tests. Para ello necesitamos
+un plugin de Gulp que sea capaz de lanzar Mocha. Tan fácil como lo anterior:
 
     npm install --save-dev gulp-mocha
 
-Then, edit `gulpfile.js`, and leave it as this:
+Luego, edita el fichero `gulpfile.js` y déjalo como el siguiente:
 
     var gulp = require('gulp'),
         mocha = require('gulp-mocha');
@@ -134,9 +134,9 @@ Then, edit `gulpfile.js`, and leave it as this:
             .pipe(mocha({ reporter: 'spec' }));
     });
 
-# First test
+# Ahora sí, el primer test
 
-Create a file called `test/scripts/firstSpec.js` with this content:
+Crea un fichero llamado `test/scripts/firstSpec.js` con el siguiente contenido:
 
     describe('Mocha', function() {
         it('expects using Chai', function() {
@@ -144,30 +144,33 @@ Create a file called `test/scripts/firstSpec.js` with this content:
         });
     });
 
-You can run this test just typing `gulp test`.
+Para ejecutar este sencillo test, escribe el comando `gulp test`.
 
-# Watch tests and production files to change
+# Cómo escuchar cambios en ficheros de tests y de producción
 
-You can configure gulp to run a specific tasks every time a file changes.
-We will configure it to run the `test` task every time a production file or a
-test files changes. Add the following task to `gulpfile.js`.
+Es posible configurar Gulp para ejecutar una tarea específica cada vez que un
+fichero (o varios) cambia. Configuraremos que se ejecute la tarea `test` cada
+vez que se cambie un fichero de test o de producción. Para ello, añade la 
+siguiente tarea al fichero `gulpfile.js`.
 
     gulp.task('test-watch', function () {
         return gulp.watch(['src/scripts/**/*.js', 'test/scripts/**/*.js'], ['test']);
     });
 
-Test it with `gulp test-watch` and change `firstSpec.js` to see all tests run
-automatically.
+Para probar que funciona, escribe el comando `gulp test-watch`, cambia `firstSpec.js`
+y guarda los cambios. Verás cómo el test se vuelve a ejecutar automáticamente.
 
-# Test some production code
+# Por fin, probar algún código de producción
 
-Write a simple NodeJS module to sum two integers, save it as `src/scripts/adder.js`.
+Escribe un sencillo módulo NodeJS que sume dos enteros, guárdalo como 
+`src/scripts/adder.js`:
 
     module.exports = function adder(a, b) {
         return a + b;
     };
 
-Replace `test/scripts/firstSpec.js` content with this:
+Reemplaza el contenido de `test/scripts/firstSpec.js` por este otro (o escribe
+tú mismo un nuevo fichero con este test):
 
     describe('Adder module', function() {
         // imports the adder module
@@ -179,12 +182,14 @@ Replace `test/scripts/firstSpec.js` content with this:
         });
     });
 
-# Further reading
+Lánzalos con `gulp test`.
 
-Read documentation for [Gulp] to know more about its tasks, [Mocha] and
-[Mocha's plugin for Gulp] to know more about Mocha's options, [Chai] to 
-learn about its `expect` API, [Sinon] to learn about mocking, spying and
-stubbing JavaScript objects and functions.
+# Seguir leyendo
+
+Puedes leer documentación de [Gulp] para saber cómo crear más y mejores tareas,
+[Mocha] y [Mocha's plugin for Gulp] para conocer más sobre las opciones de Mocha,
+[Chai] para aprender a escribir tests con el API `expect`, [Sinon] para aprender 
+sobre dobles de tests (mocks, spies, stubs) cuando escribas tests.
 
 [NodeJS]: http://nodejs.org
 [Gulp]: http://gulpjs.com
