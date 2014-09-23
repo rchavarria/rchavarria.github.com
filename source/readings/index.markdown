@@ -20,8 +20,8 @@ Así que aquí está mi Lista de Lectura:
 
 ## Estoy leyendo
 
+- [Stop stealing dreams](http://sethgodin.hubpages.com/hub/stop-stealing-dreams), de Seth Godin
 - [Expertología](http://www.amazon.es/dp/8492414502), de Andrés Pérez Ortega
-- [How to start a conversation and make friends](http://www.amazon.com/How-Start-Conversation-Make-Friends/dp/1451610998), de Don Gabor
 
 ## Tengo pensado leer
 
@@ -57,6 +57,7 @@ Así que aquí está mi Lista de Lectura:
 
 ## He leído
 
+- [How to start a conversation and make friends](http://www.amazon.com/How-Start-Conversation-Make-Friends/dp/1451610998), de Don Gabor
 - [Snow crash](http://www.amazon.com/Snow-Crash-Bantam-Spectra-Book/dp/0553380958), de Neal Stephenson ~ *Mayo 2014*
 - [El cuadrante del flujo del dinero](https://gist.github.com/rchavarria/11244352),
 de Robert Kiyosaki ~ *Marzo 2014*
