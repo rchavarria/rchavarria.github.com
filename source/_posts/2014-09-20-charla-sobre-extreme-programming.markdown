@@ -47,6 +47,7 @@ metodología ágil no es más que la construcción de un entorno para que los
 equipos aprendan a ser ágiles.
 
 Diferencias con lo que se venía haciendo hasta ahora:
+
 - La forma en la que el equipo trabaja junto es más importante que cualquier 
 proceso (gente y comunicación frente a procesos y herramientas).
 - El cliente, el usuario, pasa a ser un miembro esencial del equipo.
@@ -103,6 +104,7 @@ así, en lugar de eso se prepara para que los cambios en los requisitos cuesten
 poco.
 
 Para eso, y para combatir la oxidación del software, Agile propone:
+
 - Refactorizar: hacerlo sin descanso, sin límites, sin parar, sin excusas… 
 refactoriza
 - Tests: unitarios y de aceptación. También se aceptan otros: de integración, 
@@ -142,6 +144,7 @@ perder el tiempo en tareas que no importan. XP se deshace de tareas o actividade
 que se consideran que no aportan valor.
 
 XP tiene una serie de reglas que se pueden englobar en estos cuatro aspectos:
+
 - *Escuchar*: hay que aprender, hay que conocer el problema. Eso te dirá qué es 
 lo que debes testear. Como probablemente no lo averigües tú solo, deberás 
 escuchar a los clientes, a los usuarios, managers y demás gente de negocio.
@@ -168,6 +171,7 @@ El proyecto se divide en iteraciones o sprints.
 Al final de cada iteración, se realiza una pequeña entrega de funcionalidades.
 
 Se crean tres niveles de planificación:
+
 - Release plan: mira hacia el futuro unos cuantos meses y agrupa historias 
 en grandes entregas.
 - Next Iteration plan: se agrupan las historias que se van a realizar en 
