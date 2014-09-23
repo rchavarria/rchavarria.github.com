@@ -6,11 +6,21 @@ comments: true
 categories: 
 ---
 
+Hace poco, viendo los [screencasts de Carlos Blé]
+sobre programación, a un compañero de trabajo le picó la curiosidad e
+intentó repetir el ejercicio que practicaba Carlos. Carlos desarrolla algunos
+screencasts en JavaScript, y utiliza [Mocha] y [Chai] como frameworks para tests.
+Yo recordé haber montado algo parecido algún día, y con este proyecto de github
+quiero ayudar a los demás a que puedan montar un [proyecto NodeJS con Gulp, Mocha y Chai].
+
+<!-- more -->
+
 # Plantilla para módulos NodeJS
 
 En este proyecto encontrarás una estructura para módulos [NodeJS] lista
 para comenzar a trabajar. El proyecto está compuesto de las siguientes
 librerías:
+
 - [Gulp]: como herramienta para automatizar tareas
 - [Mocha]: como herramienta para ejecutar tests
 - [Chai]: como librería de checkeos (*asserts* a falta de una traducción mejor)
@@ -191,6 +201,8 @@ Puedes leer documentación de [Gulp] para saber cómo crear más y mejores tarea
 [Chai] para aprender a escribir tests con el API `expect`, [Sinon] para aprender 
 sobre dobles de tests (mocks, spies, stubs) cuando escribas tests.
 
+[screencasts de Carlos Blé]: http://www.carlosble.com/screencasts/es/
+[proyecto NodeJS con Gulp, Mocha y Chai]: https://github.com/rchavarria/nodejs-module-template/tree/template-ready
 [NodeJS]: http://nodejs.org
 [Gulp]: http://gulpjs.com
 [Mocha]: https://github.com/visionmedia/mocha
