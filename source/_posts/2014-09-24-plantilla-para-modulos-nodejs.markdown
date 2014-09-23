@@ -205,7 +205,7 @@ sobre dobles de tests (mocks, spies, stubs) cuando escribas tests.
 [proyecto NodeJS con Gulp, Mocha y Chai]: https://github.com/rchavarria/nodejs-module-template/tree/template-ready
 [NodeJS]: http://nodejs.org
 [Gulp]: http://gulpjs.com
-[Mocha]: https://github.com/visionmedia/mocha
+[Mocha]: http://visionmedia.github.io/mocha/
 [Mocha's plugin for Gulp]: https://github.com/sindresorhus/gulp-mocha
 [Chai]: http://chaijs.com
 [Sinon]: http://cjohansen.no/sinon
