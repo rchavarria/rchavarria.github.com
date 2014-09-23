@@ -4,7 +4,7 @@
   <title><![CDATA[Category: talks | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/talks/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2014-09-20T01:47:52+02:00</updated>
+  <updated>2014-09-24T00:51:46+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -18,7 +18,9 @@
     <link href="http://rchavarria.github.io/blog/2014/09/20/charla-sobre-extreme-programming/"/>
     <updated>2014-09-20T01:27:00+02:00</updated>
     <id>http://rchavarria.github.io/blog/2014/09/20/charla-sobre-extreme-programming</id>
-    <content type="html"><![CDATA[<p>Recientemente he dado una charla en el trabajo acerca de <a href="http://www.extremeprogramming.org">eXtreme Programming</a>.
+    <content type="html"><![CDATA[<p><img class="right" src="/images/2014/xppractices.jpg" width="360" height="270" title="Prácticas de eXtreme Programming" ></p>
+
+<p>Recientemente he dado una charla en el trabajo acerca de <a href="http://www.extremeprogramming.org">eXtreme Programming</a>.
 No es nada del otro mundo, tampoco pretendo dar lecciones a nadie y tampoco
 he descubierto nada que no estuviera escrito ya. Pero al hacer la charla he
 reunido un poco de información de aquí y de allá, y ya que he hecho ese
@@ -34,7 +36,7 @@ de campo.</p>
 <h2>Introducción al desarrollo ágil de software</h2>
 
 <p>El desarrollo de software comenzó siendo hecho por ingenieros, de los de toda
-la vida (que no quiere decir que sea malo, pero como veremos fué diferente),
+la vida (que no quiere decir que sea malo, pero como veremos fue diferente),
 lo que condicionó su forma de hacerlo, pero construir software es más parecido
 a crear una obra de arte: requiere <em>creatividad</em> y <em>artesanía</em>.</p>
 
@@ -50,13 +52,17 @@ desarrollar software, como el desarrollo ágil de software.</p>
 metodología ágil no es más que la construcción de un entorno para que los
 equipos aprendan a ser ágiles.</p>
 
-<p>Diferencias con lo que se venía haciendo hasta ahora:
-- La forma en la que el equipo trabaja junto es más importante que cualquier
-proceso (gente y comunicación frente a procesos y herramientas).
-- El cliente, el usuario, pasa a ser un miembro esencial del equipo.
-- El mayor problema con el desarrollo de software son los requisitos
+<p>Diferencias con lo que se venía haciendo hasta ahora:</p>
+
+<ul>
+<li>La forma en la que el equipo trabaja junto es más importante que cualquier
+proceso (gente y comunicación frente a procesos y herramientas).</li>
+<li>El cliente, el usuario, pasa a ser un miembro esencial del equipo.</li>
+<li>El mayor problema con el desarrollo de software son los requisitos
 cambiantes. Para la mayoría de los proyectos, aceptar los cambios puede
-costar menos que asegurar que los requisitos no van a cambiar nunca.</p>
+costar menos que asegurar que los requisitos no van a cambiar nunca.</li>
+</ul>
+
 
 <p>Al cambiar la forma de ver los cambios, resulta que es más fácil cambiar cómo
 se gestionan los proyectos. En lugar de gestionar actividades y esperar al
@@ -106,15 +112,19 @@ requisitos lo más detallados y lo más estáticos posibles. Agile no lo conside
 así, en lugar de eso se prepara para que los cambios en los requisitos cuesten
 poco.</p>
 
-<p>Para eso, y para combatir la oxidación del software, Agile propone:
-- Refactorizar: hacerlo sin descanso, sin límites, sin parar, sin excusas…
-refactoriza
-- Tests: unitarios y de aceptación. También se aceptan otros: de integración,
+<p>Para eso, y para combatir la oxidación del software, Agile propone:</p>
+
+<ul>
+<li>Refactorizar: hacerlo sin descanso, sin límites, sin parar, sin excusas…
+refactoriza</li>
+<li>Tests: unitarios y de aceptación. También se aceptan otros: de integración,
 de sistema, de lo que sea, pero tests. Automáticos, eso si. Con ellos se logra
-eliminar el miedo a los cambios.
-- Entrega temprana y frecuente: con ello se aumenta el feedback del cliente y
+eliminar el miedo a los cambios.</li>
+<li>Entrega temprana y frecuente: con ello se aumenta el feedback del cliente y
 ayuda a identificar cambios. Y cuanto antes se detecten estos cambios, menor
-coste tendrán.</p>
+coste tendrán.</li>
+</ul>
+
 
 <p>¿Cómo mantener la capacidad de poder realizar cambios manteniendo el coste en
 niveles aceptables? Sólo porque el cliente no vea el código no significa que
@@ -145,17 +155,21 @@ expresión, mucho más que en proyectos tradicionales.</p>
 perder el tiempo en tareas que no importan. XP se deshace de tareas o actividades
 que se consideran que no aportan valor.</p>
 
-<p>XP tiene una serie de reglas que se pueden englobar en estos cuatro aspectos:
-- <em>Escuchar</em>: hay que aprender, hay que conocer el problema. Eso te dirá qué es
+<p>XP tiene una serie de reglas que se pueden englobar en estos cuatro aspectos:</p>
+
+<ul>
+<li><em>Escuchar</em>: hay que aprender, hay que conocer el problema. Eso te dirá qué es
 lo que debes testear. Como probablemente no lo averigües tú solo, deberás
-escuchar a los clientes, a los usuarios, managers y demás gente de negocio.
-- <em>Diseñar</em>: hay que escuchar lo que el código nos cuenta acerca de cómo quiere
-estar estructurado, y darle forma poco a poco.
-- <em>Codificar</em>: si al final del día no hay un software ejecutable, no habrás
-hecho nada.
-- <em>Testear</em>: hay que saber cuándo hemos terminado. De otra forma, estarás atascado
+escuchar a los clientes, a los usuarios, managers y demás gente de negocio.</li>
+<li><em>Diseñar</em>: hay que escuchar lo que el código nos cuenta acerca de cómo quiere
+estar estructurado, y darle forma poco a poco.</li>
+<li><em>Codificar</em>: si al final del día no hay un software ejecutable, no habrás
+hecho nada.</li>
+<li><em>Testear</em>: hay que saber cuándo hemos terminado. De otra forma, estarás atascado
 pensando si todo cumple con lo establecido o no. Pero lo peor de todo, es que
-tampoco vas a saber cómo de cerca estás de tu destino.</p>
+tampoco vas a saber cómo de cerca estás de tu destino.</li>
+</ul>
+
 
 <h2>Reglas</h2>
 
@@ -171,16 +185,20 @@ en un proyecto XP).</p>
 
 <p>Al final de cada iteración, se realiza una pequeña entrega de funcionalidades.</p>
 
-<p>Se crean tres niveles de planificación:
-- Release plan: mira hacia el futuro unos cuantos meses y agrupa historias
-en grandes entregas.
-- Next Iteration plan: se agrupan las historias que se van a realizar en
-la próxima iteración.
-- Current Iteration plan: las historias definidas para esta iteración se
+<p>Se crean tres niveles de planificación:</p>
+
+<ul>
+<li>Release plan: mira hacia el futuro unos cuantos meses y agrupa historias
+en grandes entregas.</li>
+<li>Next Iteration plan: se agrupan las historias que se van a realizar en
+la próxima iteración.</li>
+<li>Current Iteration plan: las historias definidas para esta iteración se
 dividen hasta que se encuentran tareas que se pueden acometer fácilmente.
 Los planes se toman como algo vivo, no como algo estático. Si el cliente
 cambia de idea, se cambian los planes. Si el equipo se retrasa en una entrega,
-se cambian los planes.</p>
+se cambian los planes.</li>
+</ul>
+
 
 <p>Se intenta conseguir un Ritmo Sostenible.</p>
 

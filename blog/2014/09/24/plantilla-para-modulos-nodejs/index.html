@@ -1,0 +1,482 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Plantilla para módulos NodeJS - R. Chavarria's Blog</title>
+  <meta name="author" content="Rub&eacute;n Chavarr&iacute;a">
+
+  
+  <meta name="description" content="Hace poco, viendo los screencasts de Carlos Blé
+sobre programación, a un compañero de trabajo le picó la curiosidad e
+intentó repetir el ejercicio &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://rchavarria.github.io/blog/2014/09/24/plantilla-para-modulos-nodejs/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="R. Chavarria's Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36829645-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">R. Chavarria's Blog</a></h1>
+  
+    <h2>Blogging like a hacker about Software Development</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:rchavarria.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archivos</a></li>
+  <li><a href="/readings">Lista de lectura</a></li>
+  <li><a href="/pet-projects">Proyectos</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Plantilla para módulos NodeJS</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-24T00:45:00+02:00" pubdate data-updated="true">Sep 24<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Hace poco, viendo los <a href="http://www.carlosble.com/screencasts/es/">screencasts de Carlos Blé</a>
+sobre programación, a un compañero de trabajo le picó la curiosidad e
+intentó repetir el ejercicio que practicaba Carlos. Carlos desarrolla algunos
+screencasts en JavaScript, y utiliza <a href="http://visionmedia.github.io/mocha/">Mocha</a> y <a href="http://chaijs.com">Chai</a> como frameworks para tests.
+Yo recordé haber montado algo parecido algún día, y con este proyecto de github
+quiero ayudar a los demás a que puedan montar un <a href="https://github.com/rchavarria/nodejs-module-template/tree/template-ready">proyecto NodeJS con Gulp, Mocha y Chai</a>.</p>
+
+<!-- more -->
+
+
+<h1>Plantilla para módulos NodeJS</h1>
+
+<p>En este proyecto encontrarás una estructura para módulos <a href="http://nodejs.org">NodeJS</a> lista
+para comenzar a trabajar. El proyecto está compuesto de las siguientes
+librerías:</p>
+
+<ul>
+<li><a href="http://gulpjs.com">Gulp</a>: como herramienta para automatizar tareas</li>
+<li><a href="http://visionmedia.github.io/mocha/">Mocha</a>: como herramienta para ejecutar tests</li>
+<li><a href="http://chaijs.com">Chai</a>: como librería de checkeos (<em>asserts</em> a falta de una traducción mejor)
+para tests</li>
+<li><a href="http://cjohansen.no/sinon">Sinon</a>: como una librería de dobles de tests</li>
+</ul>
+
+
+<p>En este fichero están las instrucciones para instalar y poner en funcionamiento
+todas estas librerías.</p>
+
+<h1>¿Cómo instalar NodeJS?</h1>
+
+<p>Lo primero de todo, instalar NodeJS.</p>
+
+<p>Para instalarlo en Ubuntu, simplemente ejecutar el comando:</p>
+
+<pre><code>sudo apt-get install nodejs
+</code></pre>
+
+<p>Para instalarlo en otros sistemas operativos, visitarla página
+<a href="http://nodejs.org/download">NodeJS download page</a>.</p>
+
+<p>Hay otra forma de instalarlo, y es a través de <code>nvm</code> (<a href="http://carlosazaustre.es/blog/como-instalar-node-js-en-ubuntu">Node Version Manager</a>).</p>
+
+<p>El resto de librarías las instalaremos a través de la herramienta <code>npm</code>.</p>
+
+<h1>Inicializar <code>npm</code></h1>
+
+<p>Ejecutar el comando:</p>
+
+<pre><code>npm init
+</code></pre>
+
+<p>El comando te guiará por unos pasos para introducir información básica del módulo
+donde trabajarás. Entre esa información se encuentra el nombre del proyecto,
+la descripción y la version.</p>
+
+<p>Un fichero <code>package.json</code> tipo podría ser el siguiente:</p>
+
+<pre><code>{
+    "name": "nodejs-module-template",
+    "version": "0.0.0",
+    "description": "A template for NodeJS modules",
+    "main": "index.js",
+    "directories": {
+        "test": "test"
+    },
+    "dependencies": {},
+    "devDependencies": {},
+    "scripts": {
+        "test": "test"
+    },
+    "author": "Ruben Chavarria http://rchavarria.github.io",
+    "license": "BSD-2-Clause"
+}
+</code></pre>
+
+<h1>Instalar Gulp</h1>
+
+<p>Es muy fácil, con <code>npm</code>:</p>
+
+<pre><code>npm install --save-dev gulp
+</code></pre>
+
+<p>El flag <code>--save-dev</code> insertará una nueva línea en el fichero <code>package.json</code> para
+indicar a <code>npm</code> que hay una nueva dependencia para tiempo de desarrollo.</p>
+
+<p>Para comprobar que se ha instalado correctamente, ejecutar el comando
+<code>gulp --version</code>.</p>
+
+<h1>Configurar Gulp</h1>
+
+<p>Crea un fichero <code>gulpfile.js</code> en el directorio raiz del proyecto. El contenido
+del fichero podría ser el siguiente:</p>
+
+<pre><code>var gulp = require('gulp');
+
+gulp.task('default', function() {
+    console.log('Hello gulp!');
+});
+</code></pre>
+
+<p>Ejecuta el comando <code>gulp</code> para ver un mensaje por consola.</p>
+
+<h1>Instalar librerías de tests</h1>
+
+<p>Es tan fácil como instalar Gulp, simplemente escribir el comando:</p>
+
+<pre><code>npm install --save-dev mocha chai sinon sinon-chai
+</code></pre>
+
+<p>Para probar que se ha instalado Mocha adecuadamente, escribir
+<code>node node_modules/mocha/bin/mocha --version</code>.</p>
+
+<h1>Antes de escribir el primer test</h1>
+
+<p>Antes de escribir el primer test, crearemos un fichero de inicializacion para
+Mocha, para inicializar las librerias y evitar tener que escribir el mismo
+código una y otra vez en todos nuestros tests.</p>
+
+<p>Crea un fichero llamado <code>test/bootstrap.js</code> y escribe en él este contenido:</p>
+
+<pre><code>global.chai = require('chai');
+global.sinon = require('sinon');
+global.expect = chai.expect;
+
+var sinonChai = require('sinon-chai');
+chai.use(sinonChai);
+</code></pre>
+
+<p>Esto cargará las librerías Chai y Sinon, crea una variable global llamada
+<code>expect</code> (la usaremos en todos los tests) y configura Chai para que use métodos
+y funcionalidades proporcionados por Sinon.</p>
+
+<p>Ahora, crearemos una tarea en Gulp para ejecutar los tests. Para ello necesitamos
+un plugin de Gulp que sea capaz de lanzar Mocha. Tan fácil como lo anterior:</p>
+
+<pre><code>npm install --save-dev gulp-mocha
+</code></pre>
+
+<p>Luego, edita el fichero <code>gulpfile.js</code> y déjalo como el siguiente:</p>
+
+<pre><code>var gulp = require('gulp'),
+    mocha = require('gulp-mocha');
+
+gulp.task('test', function () {
+    return gulp
+        .src(['test/bootstrap.js', 'test/scripts/**/*.js'])
+        .pipe(mocha({ reporter: 'spec' }));
+});
+</code></pre>
+
+<h1>Ahora sí, el primer test</h1>
+
+<p>Crea un fichero llamado <code>test/scripts/firstSpec.js</code> con el siguiente contenido:</p>
+
+<pre><code>describe('Mocha', function() {
+    it('expects using Chai', function() {
+        expect(2 + 2).equals(4);
+    });
+});
+</code></pre>
+
+<p>Para ejecutar este sencillo test, escribe el comando <code>gulp test</code>.</p>
+
+<h1>Cómo escuchar cambios en ficheros de tests y de producción</h1>
+
+<p>Es posible configurar Gulp para ejecutar una tarea específica cada vez que un
+fichero (o varios) cambia. Configuraremos que se ejecute la tarea <code>test</code> cada
+vez que se cambie un fichero de test o de producción. Para ello, añade la
+siguiente tarea al fichero <code>gulpfile.js</code>.</p>
+
+<pre><code>gulp.task('test-watch', function () {
+    return gulp.watch(['src/scripts/**/*.js', 'test/scripts/**/*.js'], ['test']);
+});
+</code></pre>
+
+<p>Para probar que funciona, escribe el comando <code>gulp test-watch</code>, cambia <code>firstSpec.js</code>
+y guarda los cambios. Verás cómo el test se vuelve a ejecutar automáticamente.</p>
+
+<h1>Por fin, probar algún código de producción</h1>
+
+<p>Escribe un sencillo módulo NodeJS que sume dos enteros, guárdalo como
+<code>src/scripts/adder.js</code>:</p>
+
+<pre><code>module.exports = function adder(a, b) {
+    return a + b;
+};
+</code></pre>
+
+<p>Reemplaza el contenido de <code>test/scripts/firstSpec.js</code> por este otro (o escribe
+tú mismo un nuevo fichero con este test):</p>
+
+<pre><code>describe('Adder module', function() {
+    // imports the adder module
+    var adder = require('../../src/scripts/adder.js');
+
+    it('adds two integers', function() {
+        var sum = adder(2, 2);
+        expect(sum).equals(4);
+    });
+});
+</code></pre>
+
+<p>Lánzalos con <code>gulp test</code>.</p>
+
+<h1>Seguir leyendo</h1>
+
+<p>Puedes leer documentación de <a href="http://gulpjs.com">Gulp</a> para saber cómo crear más y mejores tareas,
+<a href="http://visionmedia.github.io/mocha/">Mocha</a> y <a href="https://github.com/sindresorhus/gulp-mocha">Mocha&#8217;s plugin for Gulp</a> para conocer más sobre las opciones de Mocha,
+<a href="http://chaijs.com">Chai</a> para aprender a escribir tests con el API <code>expect</code>, <a href="http://cjohansen.no/sinon">Sinon</a> para aprender
+sobre dobles de tests (mocks, spies, stubs) cuando escribas tests.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Rub&eacute;n Chavarr&iacute;a</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-24T00:45:00+02:00" pubdate data-updated="true">Sep 24<span>th</span>, 2014</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rchavarria.github.io/blog/2014/09/24/plantilla-para-modulos-nodejs/" data-via="rchavarriat" data-counturl="http://rchavarria.github.io/blog/2014/09/24/plantilla-para-modulos-nodejs/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/09/20/charla-sobre-extreme-programming/" title="Previous Post: Charla sobre eXtreme Programming">&laquo; Charla sobre eXtreme Programming</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/09/24/plantilla-para-modulos-nodejs/">Plantilla para módulos NodeJS</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/09/20/charla-sobre-extreme-programming/">Charla sobre eXtreme Programming</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/09/07/efectividad-de-10-tecnicas-para-estudiar/">Efectividad de 10 técnicas para estudiar</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/06/26/charla-tecnica-escribe-javascript-como-roca/">Charla técnica: Escribiendo JavaScript sólido como una roca</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/06/21/charla-tecnica-javascript-masterclass/">Charla técnica: JavaScript masterclass</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("rchavarriat", 4, true);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/rchavarriat">@rchavarriat</a></p>
+  
+</section>
+
+
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/rchavarriat?count=5&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/rchavarriat">My Delicious Bookmarks &raquo;</a></p>
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Rub&eacute;n Chavarr&iacute;a -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'rchavarria-github-com';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://rchavarria.github.io/blog/2014/09/24/plantilla-para-modulos-nodejs/';
+        var disqus_url = 'http://rchavarria.github.io/blog/2014/09/24/plantilla-para-modulos-nodejs/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

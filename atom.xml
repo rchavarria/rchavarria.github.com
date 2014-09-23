@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2014-09-20T01:47:52+02:00</updated>
+  <updated>2014-09-24T00:51:46+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -14,11 +14,231 @@
 
   
   <entry>
+    <title type="html"><![CDATA[Plantilla para módulos NodeJS]]></title>
+    <link href="http://rchavarria.github.io/blog/2014/09/24/plantilla-para-modulos-nodejs/"/>
+    <updated>2014-09-24T00:45:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2014/09/24/plantilla-para-modulos-nodejs</id>
+    <content type="html"><![CDATA[<p>Hace poco, viendo los <a href="http://www.carlosble.com/screencasts/es/">screencasts de Carlos Blé</a>
+sobre programación, a un compañero de trabajo le picó la curiosidad e
+intentó repetir el ejercicio que practicaba Carlos. Carlos desarrolla algunos
+screencasts en JavaScript, y utiliza <a href="http://visionmedia.github.io/mocha/">Mocha</a> y <a href="http://chaijs.com">Chai</a> como frameworks para tests.
+Yo recordé haber montado algo parecido algún día, y con este proyecto de github
+quiero ayudar a los demás a que puedan montar un <a href="https://github.com/rchavarria/nodejs-module-template/tree/template-ready">proyecto NodeJS con Gulp, Mocha y Chai</a>.</p>
+
+<!-- more -->
+
+
+<h1>Plantilla para módulos NodeJS</h1>
+
+<p>En este proyecto encontrarás una estructura para módulos <a href="http://nodejs.org">NodeJS</a> lista
+para comenzar a trabajar. El proyecto está compuesto de las siguientes
+librerías:</p>
+
+<ul>
+<li><a href="http://gulpjs.com">Gulp</a>: como herramienta para automatizar tareas</li>
+<li><a href="http://visionmedia.github.io/mocha/">Mocha</a>: como herramienta para ejecutar tests</li>
+<li><a href="http://chaijs.com">Chai</a>: como librería de checkeos (<em>asserts</em> a falta de una traducción mejor)
+para tests</li>
+<li><a href="http://cjohansen.no/sinon">Sinon</a>: como una librería de dobles de tests</li>
+</ul>
+
+
+<p>En este fichero están las instrucciones para instalar y poner en funcionamiento
+todas estas librerías.</p>
+
+<h1>¿Cómo instalar NodeJS?</h1>
+
+<p>Lo primero de todo, instalar NodeJS.</p>
+
+<p>Para instalarlo en Ubuntu, simplemente ejecutar el comando:</p>
+
+<pre><code>sudo apt-get install nodejs
+</code></pre>
+
+<p>Para instalarlo en otros sistemas operativos, visitarla página
+<a href="http://nodejs.org/download">NodeJS download page</a>.</p>
+
+<p>Hay otra forma de instalarlo, y es a través de <code>nvm</code> (<a href="http://carlosazaustre.es/blog/como-instalar-node-js-en-ubuntu">Node Version Manager</a>).</p>
+
+<p>El resto de librarías las instalaremos a través de la herramienta <code>npm</code>.</p>
+
+<h1>Inicializar <code>npm</code></h1>
+
+<p>Ejecutar el comando:</p>
+
+<pre><code>npm init
+</code></pre>
+
+<p>El comando te guiará por unos pasos para introducir información básica del módulo
+donde trabajarás. Entre esa información se encuentra el nombre del proyecto,
+la descripción y la version.</p>
+
+<p>Un fichero <code>package.json</code> tipo podría ser el siguiente:</p>
+
+<pre><code>{
+    "name": "nodejs-module-template",
+    "version": "0.0.0",
+    "description": "A template for NodeJS modules",
+    "main": "index.js",
+    "directories": {
+        "test": "test"
+    },
+    "dependencies": {},
+    "devDependencies": {},
+    "scripts": {
+        "test": "test"
+    },
+    "author": "Ruben Chavarria http://rchavarria.github.io",
+    "license": "BSD-2-Clause"
+}
+</code></pre>
+
+<h1>Instalar Gulp</h1>
+
+<p>Es muy fácil, con <code>npm</code>:</p>
+
+<pre><code>npm install --save-dev gulp
+</code></pre>
+
+<p>El flag <code>--save-dev</code> insertará una nueva línea en el fichero <code>package.json</code> para
+indicar a <code>npm</code> que hay una nueva dependencia para tiempo de desarrollo.</p>
+
+<p>Para comprobar que se ha instalado correctamente, ejecutar el comando
+<code>gulp --version</code>.</p>
+
+<h1>Configurar Gulp</h1>
+
+<p>Crea un fichero <code>gulpfile.js</code> en el directorio raiz del proyecto. El contenido
+del fichero podría ser el siguiente:</p>
+
+<pre><code>var gulp = require('gulp');
+
+gulp.task('default', function() {
+    console.log('Hello gulp!');
+});
+</code></pre>
+
+<p>Ejecuta el comando <code>gulp</code> para ver un mensaje por consola.</p>
+
+<h1>Instalar librerías de tests</h1>
+
+<p>Es tan fácil como instalar Gulp, simplemente escribir el comando:</p>
+
+<pre><code>npm install --save-dev mocha chai sinon sinon-chai
+</code></pre>
+
+<p>Para probar que se ha instalado Mocha adecuadamente, escribir
+<code>node node_modules/mocha/bin/mocha --version</code>.</p>
+
+<h1>Antes de escribir el primer test</h1>
+
+<p>Antes de escribir el primer test, crearemos un fichero de inicializacion para
+Mocha, para inicializar las librerias y evitar tener que escribir el mismo
+código una y otra vez en todos nuestros tests.</p>
+
+<p>Crea un fichero llamado <code>test/bootstrap.js</code> y escribe en él este contenido:</p>
+
+<pre><code>global.chai = require('chai');
+global.sinon = require('sinon');
+global.expect = chai.expect;
+
+var sinonChai = require('sinon-chai');
+chai.use(sinonChai);
+</code></pre>
+
+<p>Esto cargará las librerías Chai y Sinon, crea una variable global llamada
+<code>expect</code> (la usaremos en todos los tests) y configura Chai para que use métodos
+y funcionalidades proporcionados por Sinon.</p>
+
+<p>Ahora, crearemos una tarea en Gulp para ejecutar los tests. Para ello necesitamos
+un plugin de Gulp que sea capaz de lanzar Mocha. Tan fácil como lo anterior:</p>
+
+<pre><code>npm install --save-dev gulp-mocha
+</code></pre>
+
+<p>Luego, edita el fichero <code>gulpfile.js</code> y déjalo como el siguiente:</p>
+
+<pre><code>var gulp = require('gulp'),
+    mocha = require('gulp-mocha');
+
+gulp.task('test', function () {
+    return gulp
+        .src(['test/bootstrap.js', 'test/scripts/**/*.js'])
+        .pipe(mocha({ reporter: 'spec' }));
+});
+</code></pre>
+
+<h1>Ahora sí, el primer test</h1>
+
+<p>Crea un fichero llamado <code>test/scripts/firstSpec.js</code> con el siguiente contenido:</p>
+
+<pre><code>describe('Mocha', function() {
+    it('expects using Chai', function() {
+        expect(2 + 2).equals(4);
+    });
+});
+</code></pre>
+
+<p>Para ejecutar este sencillo test, escribe el comando <code>gulp test</code>.</p>
+
+<h1>Cómo escuchar cambios en ficheros de tests y de producción</h1>
+
+<p>Es posible configurar Gulp para ejecutar una tarea específica cada vez que un
+fichero (o varios) cambia. Configuraremos que se ejecute la tarea <code>test</code> cada
+vez que se cambie un fichero de test o de producción. Para ello, añade la
+siguiente tarea al fichero <code>gulpfile.js</code>.</p>
+
+<pre><code>gulp.task('test-watch', function () {
+    return gulp.watch(['src/scripts/**/*.js', 'test/scripts/**/*.js'], ['test']);
+});
+</code></pre>
+
+<p>Para probar que funciona, escribe el comando <code>gulp test-watch</code>, cambia <code>firstSpec.js</code>
+y guarda los cambios. Verás cómo el test se vuelve a ejecutar automáticamente.</p>
+
+<h1>Por fin, probar algún código de producción</h1>
+
+<p>Escribe un sencillo módulo NodeJS que sume dos enteros, guárdalo como
+<code>src/scripts/adder.js</code>:</p>
+
+<pre><code>module.exports = function adder(a, b) {
+    return a + b;
+};
+</code></pre>
+
+<p>Reemplaza el contenido de <code>test/scripts/firstSpec.js</code> por este otro (o escribe
+tú mismo un nuevo fichero con este test):</p>
+
+<pre><code>describe('Adder module', function() {
+    // imports the adder module
+    var adder = require('../../src/scripts/adder.js');
+
+    it('adds two integers', function() {
+        var sum = adder(2, 2);
+        expect(sum).equals(4);
+    });
+});
+</code></pre>
+
+<p>Lánzalos con <code>gulp test</code>.</p>
+
+<h1>Seguir leyendo</h1>
+
+<p>Puedes leer documentación de <a href="http://gulpjs.com">Gulp</a> para saber cómo crear más y mejores tareas,
+<a href="http://visionmedia.github.io/mocha/">Mocha</a> y <a href="https://github.com/sindresorhus/gulp-mocha">Mocha&#8217;s plugin for Gulp</a> para conocer más sobre las opciones de Mocha,
+<a href="http://chaijs.com">Chai</a> para aprender a escribir tests con el API <code>expect</code>, <a href="http://cjohansen.no/sinon">Sinon</a> para aprender
+sobre dobles de tests (mocks, spies, stubs) cuando escribas tests.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Charla sobre eXtreme Programming]]></title>
     <link href="http://rchavarria.github.io/blog/2014/09/20/charla-sobre-extreme-programming/"/>
     <updated>2014-09-20T01:27:00+02:00</updated>
     <id>http://rchavarria.github.io/blog/2014/09/20/charla-sobre-extreme-programming</id>
-    <content type="html"><![CDATA[<p>Recientemente he dado una charla en el trabajo acerca de <a href="http://www.extremeprogramming.org">eXtreme Programming</a>.
+    <content type="html"><![CDATA[<p><img class="right" src="http://rchavarria.github.io/images/2014/xppractices.jpg" width="360" height="270" title="Prácticas de eXtreme Programming" ></p>
+
+<p>Recientemente he dado una charla en el trabajo acerca de <a href="http://www.extremeprogramming.org">eXtreme Programming</a>.
 No es nada del otro mundo, tampoco pretendo dar lecciones a nadie y tampoco
 he descubierto nada que no estuviera escrito ya. Pero al hacer la charla he
 reunido un poco de información de aquí y de allá, y ya que he hecho ese
@@ -34,7 +254,7 @@ de campo.</p>
 <h2>Introducción al desarrollo ágil de software</h2>
 
 <p>El desarrollo de software comenzó siendo hecho por ingenieros, de los de toda
-la vida (que no quiere decir que sea malo, pero como veremos fué diferente),
+la vida (que no quiere decir que sea malo, pero como veremos fue diferente),
 lo que condicionó su forma de hacerlo, pero construir software es más parecido
 a crear una obra de arte: requiere <em>creatividad</em> y <em>artesanía</em>.</p>
 
@@ -50,13 +270,17 @@ desarrollar software, como el desarrollo ágil de software.</p>
 metodología ágil no es más que la construcción de un entorno para que los
 equipos aprendan a ser ágiles.</p>
 
-<p>Diferencias con lo que se venía haciendo hasta ahora:
-- La forma en la que el equipo trabaja junto es más importante que cualquier
-proceso (gente y comunicación frente a procesos y herramientas).
-- El cliente, el usuario, pasa a ser un miembro esencial del equipo.
-- El mayor problema con el desarrollo de software son los requisitos
+<p>Diferencias con lo que se venía haciendo hasta ahora:</p>
+
+<ul>
+<li>La forma en la que el equipo trabaja junto es más importante que cualquier
+proceso (gente y comunicación frente a procesos y herramientas).</li>
+<li>El cliente, el usuario, pasa a ser un miembro esencial del equipo.</li>
+<li>El mayor problema con el desarrollo de software son los requisitos
 cambiantes. Para la mayoría de los proyectos, aceptar los cambios puede
-costar menos que asegurar que los requisitos no van a cambiar nunca.</p>
+costar menos que asegurar que los requisitos no van a cambiar nunca.</li>
+</ul>
+
 
 <p>Al cambiar la forma de ver los cambios, resulta que es más fácil cambiar cómo
 se gestionan los proyectos. En lugar de gestionar actividades y esperar al
@@ -106,15 +330,19 @@ requisitos lo más detallados y lo más estáticos posibles. Agile no lo conside
 así, en lugar de eso se prepara para que los cambios en los requisitos cuesten
 poco.</p>
 
-<p>Para eso, y para combatir la oxidación del software, Agile propone:
-- Refactorizar: hacerlo sin descanso, sin límites, sin parar, sin excusas…
-refactoriza
-- Tests: unitarios y de aceptación. También se aceptan otros: de integración,
+<p>Para eso, y para combatir la oxidación del software, Agile propone:</p>
+
+<ul>
+<li>Refactorizar: hacerlo sin descanso, sin límites, sin parar, sin excusas…
+refactoriza</li>
+<li>Tests: unitarios y de aceptación. También se aceptan otros: de integración,
 de sistema, de lo que sea, pero tests. Automáticos, eso si. Con ellos se logra
-eliminar el miedo a los cambios.
-- Entrega temprana y frecuente: con ello se aumenta el feedback del cliente y
+eliminar el miedo a los cambios.</li>
+<li>Entrega temprana y frecuente: con ello se aumenta el feedback del cliente y
 ayuda a identificar cambios. Y cuanto antes se detecten estos cambios, menor
-coste tendrán.</p>
+coste tendrán.</li>
+</ul>
+
 
 <p>¿Cómo mantener la capacidad de poder realizar cambios manteniendo el coste en
 niveles aceptables? Sólo porque el cliente no vea el código no significa que
@@ -145,17 +373,21 @@ expresión, mucho más que en proyectos tradicionales.</p>
 perder el tiempo en tareas que no importan. XP se deshace de tareas o actividades
 que se consideran que no aportan valor.</p>
 
-<p>XP tiene una serie de reglas que se pueden englobar en estos cuatro aspectos:
-- <em>Escuchar</em>: hay que aprender, hay que conocer el problema. Eso te dirá qué es
+<p>XP tiene una serie de reglas que se pueden englobar en estos cuatro aspectos:</p>
+
+<ul>
+<li><em>Escuchar</em>: hay que aprender, hay que conocer el problema. Eso te dirá qué es
 lo que debes testear. Como probablemente no lo averigües tú solo, deberás
-escuchar a los clientes, a los usuarios, managers y demás gente de negocio.
-- <em>Diseñar</em>: hay que escuchar lo que el código nos cuenta acerca de cómo quiere
-estar estructurado, y darle forma poco a poco.
-- <em>Codificar</em>: si al final del día no hay un software ejecutable, no habrás
-hecho nada.
-- <em>Testear</em>: hay que saber cuándo hemos terminado. De otra forma, estarás atascado
+escuchar a los clientes, a los usuarios, managers y demás gente de negocio.</li>
+<li><em>Diseñar</em>: hay que escuchar lo que el código nos cuenta acerca de cómo quiere
+estar estructurado, y darle forma poco a poco.</li>
+<li><em>Codificar</em>: si al final del día no hay un software ejecutable, no habrás
+hecho nada.</li>
+<li><em>Testear</em>: hay que saber cuándo hemos terminado. De otra forma, estarás atascado
 pensando si todo cumple con lo establecido o no. Pero lo peor de todo, es que
-tampoco vas a saber cómo de cerca estás de tu destino.</p>
+tampoco vas a saber cómo de cerca estás de tu destino.</li>
+</ul>
+
 
 <h2>Reglas</h2>
 
@@ -171,16 +403,20 @@ en un proyecto XP).</p>
 
 <p>Al final de cada iteración, se realiza una pequeña entrega de funcionalidades.</p>
 
-<p>Se crean tres niveles de planificación:
-- Release plan: mira hacia el futuro unos cuantos meses y agrupa historias
-en grandes entregas.
-- Next Iteration plan: se agrupan las historias que se van a realizar en
-la próxima iteración.
-- Current Iteration plan: las historias definidas para esta iteración se
+<p>Se crean tres niveles de planificación:</p>
+
+<ul>
+<li>Release plan: mira hacia el futuro unos cuantos meses y agrupa historias
+en grandes entregas.</li>
+<li>Next Iteration plan: se agrupan las historias que se van a realizar en
+la próxima iteración.</li>
+<li>Current Iteration plan: las historias definidas para esta iteración se
 dividen hasta que se encuentran tareas que se pueden acometer fácilmente.
 Los planes se toman como algo vivo, no como algo estático. Si el cliente
 cambia de idea, se cambian los planes. Si el equipo se retrasa en una entrega,
-se cambian los planes.</p>
+se cambian los planes.</li>
+</ul>
+
 
 <p>Se intenta conseguir un Ritmo Sostenible.</p>
 
@@ -2928,133 +3164,6 @@ filtros para los servlets, logging, datos en la sesión, redirección&#8230;</p>
 
 -->
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Aprendiendo a colaborar en github]]></title>
-    <link href="http://rchavarria.github.io/blog/2013/05/30/aprendiendo-a-colaborar-en-github/"/>
-    <updated>2013-05-30T08:45:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2013/05/30/aprendiendo-a-colaborar-en-github</id>
-    <content type="html"><![CDATA[<p>Recientemente, hablando con mi amigo <a href="http://twitter.com/dagarfol">David</a> sobre un
-proyectillo que llevamos a medias (estamos empezando, espero que podamos tener algo
-publicable pronto), salió el tema de cómo empezar a colaborar con
-amigos/compañeros/quien-sea con <a href="http://git-scm.com/">git</a> en <a href="http://github.com">github</a>.</p>
-
-<p>Yo le comenté que era bastante sencillo comenzar, pero de boquilla se pueden decir
-muchas cosas (la mayoría mentira), así que para que no se quede en agua de borrajas,
-en este post encontrarás 5 comandos y acciones básicas para comenzar a
-trabajar en equipo con git y github.</p>
-
-<!-- more -->
-
-
-<h2>¿Qué necesito?</h2>
-
-<p>Lo primero que se necesita es tener una cuenta en github. Si no tienes una, uno puede
-<a href="https://github.com/users">registrarse</a> fácilmente. Es como crearse una cuenta de correo.</p>
-
-<p><img class="center" src="http://rchavarria.github.io/images/2013/github-overview.jpg"></p>
-
-<p>Después, es necesario que <a href="http://git-scm.com/downloads">descargues e instales git</a>
-en el ordenador donde vayas a trabajar. En windows es tan sencillo como instalar cualquier
-otro programa, así que no hay excusa para parar aquí.</p>
-
-<p>Para configurar git y poder usarlo con github, debemos configurarlo. Para ayudarnos, los
-chicos de github se han currado una aplicación,
-<a href="https://help.github.com/articles/set-up-git">Github for Windows</a>. También se puede
-<a href="https://help.github.com/articles/set-up-git#platform-linux">configurar github en linux</a>.</p>
-
-<h2>Obtener el código fuente</h2>
-
-<p>Para comenzar a colaborar, necesitas un repositorio donde esté almacenado el código fuente
-sobre el cual vais a trabajar. Dos formas muy comunes de crear un repositorio en tu
-cuenta de github son:</p>
-
-<ol>
-<li><a href="https://help.github.com/articles/create-a-repo">Crear un repositorio desde cero</a>.</li>
-<li><a href="https://help.github.com/articles/fork-a-repo">Copiar el repositorio de otra persona (fork)</a>.</li>
-</ol>
-
-
-<p>Con tu repositorio en github, ya puedes <em>descargarlo</em> a tu máquina de trabajo. En realidad
-lo que vas a hacer es una copia entera y completamente funcional del repositorio en github.</p>
-
-<figure class='code'><figcaption><span>Clonando un repositorio </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git clone https://github.com/username/Spoon-Knife.git</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Esto creará un directorio llamado <code>Spoon-Knife</code> donde se encuentra el repositorio completo.</p>
-
-<h2>Modificar ficheros y subir los cambios</h2>
-
-<p>Ya podemos realizar los cambios que queramos al código fuente.</p>
-
-<p>Para subir estos cambios al repositorio de github, debemos seguir varios pasos:</p>
-
-<ol>
-<li>Añadir los fichero nuevos al área temporal de git llamada <code>stage</code> para poder hacer <code>commit</code>
-al repositorio (existen más opciones para este comando, pero el más básico es éste):</li>
-</ol>
-
-
-<figure class='code'><figcaption><span>Añadiendo ficheros al área de stage </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git add .</span></code></pre></td></tr></table></div></figure>
-
-
-<ol>
-<li>Hacer <code>commit</code> de esos cambios. De esta forma, nuestro repositorio ya contendrá los cambios,
-sólo hará falta incorporarlos al repositorio de github (repositorio remoto):</li>
-</ol>
-
-
-<figure class='code'><figcaption><span>Commiteando ficheros al repositorio local </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git commit -m "Mensaje del commit"</span></code></pre></td></tr></table></div></figure>
-
-
-<ol>
-<li>Subir los cambios del repositorio local al repositorio remoto (github). El comando más básico
-para ello es el siguiente:</li>
-</ol>
-
-
-<figure class='code'><figcaption><span>Sincronizando con el repositorio remoto </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git push</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Si vamos a nuestro repositorio en github veremos cómo aparecen los commits que hicimos en nuestro
-repositorio local. BIEN!</p>
-
-<h2>Descargar cambios del repositorio de github</h2>
-
-<p>Con el siguiente comando (esta es su sintaxis más sencilla) podrás incorporar los cambios que haya
-en el repositorio remoto de github a tu repositorio local:</p>
-
-<figure class='code'><figcaption><span>Sincronizando el repositorio local con cambios del remoto </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git pull</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Esta es su sintaxis más sencilla. Para avanzar en este aspecto, tendría que hablar de
-<a href="http://gitref.org/remotes/">remotes</a>, pero es un concepto bastante extenso y quedaría un
-post muy largo.</p>
-
-<h2>Compartir nuestros cambios con los compañeros</h2>
-
-<p>De acuerdo, ya tenemos nuestros cambios en nuestro repositorio local y los hemos subido a nuestro
-repositorio remoto en github. Existe una forma muy sencilla en github de informar a nuestros compañeros
-de que hemos hecho cambios, los llamados
-<a href="https://help.github.com/articles/using-pull-requests">Pull Request</a>.</p>
-
-<p><img class="right" src="http://rchavarria.github.io/images/2013/github-pull-request.jpg"></p>
-
-<p>Mediante un Pull Request estás indicando a un compañero que le quieres pasar unos cambios que
-tú has hecho. Ahora tu compañero deberá decidir si acepta los cambios y él incorporará esos
-cambios a su repositorio remoto</p>
 ]]></content>
   </entry>
   

@@ -292,7 +292,11 @@
     </url>
     <url>
         <loc>http://rchavarria.github.io/blog/2014/09/20/charla-sobre-extreme-programming/</loc>
-        <lastmod>2014-09-20T01:45:19+02:00</lastmod>
+        <lastmod>2014-09-24T00:43:09+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://rchavarria.github.io/blog/2014/09/24/plantilla-para-modulos-nodejs/</loc>
+        <lastmod>2014-09-24T00:50:15+02:00</lastmod>
     </url>
     <url>
         <loc>http://rchavarria.github.io/pet-projects/</loc>
@@ -308,14 +312,14 @@
     </url>
     <url>
         <loc>http://rchavarria.github.io/readings/</loc>
-        <lastmod>2014-06-20T19:20:56+02:00</lastmod>
+        <lastmod>2014-09-24T00:43:09+02:00</lastmod>
     </url>
     <url>
         <loc>http://rchavarria.github.io/</loc>
-        <lastmod>2014-09-20T01:45:19+02:00</lastmod>
+        <lastmod>2014-09-24T00:50:15+02:00</lastmod>
     </url>
     <url>
         <loc>http://rchavarria.github.io/blog/archives/</loc>
-        <lastmod>2014-09-20T01:45:19+02:00</lastmod>
+        <lastmod>2014-09-24T00:50:15+02:00</lastmod>
     </url>
 </urlset>
