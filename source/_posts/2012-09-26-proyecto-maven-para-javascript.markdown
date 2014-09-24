@@ -5,7 +5,7 @@ date: 2012-09-26 09:26
 author: Rubén Chavarría
 categories: 
 - software
-- javascript
+- JavaScript
 - programming workout
 comments: true
 published: true

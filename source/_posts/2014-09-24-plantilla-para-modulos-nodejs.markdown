@@ -5,7 +5,7 @@ date: 2014-09-24 00:45
 author: Rubén Chavarría
 comments: true
 categories: 
-- javascript
+- JavaScript
 - tutorial
 - nodejs
 published: true

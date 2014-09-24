@@ -8,7 +8,7 @@ categories:
 - solveet
 - learning
 - programming workout
-- javascript
+- JavaScript
 - tdd
 published: true
 footer: false
