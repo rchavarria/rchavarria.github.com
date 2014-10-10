@@ -1,0 +1,384 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Aprendiendo Vim - R. Chavarria's Blog</title>
+  <meta name="author" content="Rub&eacute;n Chavarr&iacute;a">
+
+  
+  <meta name="description" content="Hubo un momento en mi carrera profesional en la que un compañero me dió a conocer
+Vim, el editor de código. Me pareció una herramienta arcaica, &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://rchavarria.github.io/blog/2014/10/11/aprendiendo-vim/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="R. Chavarria's Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36829645-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">R. Chavarria's Blog</a></h1>
+  
+    <h2>Blogging like a hacker about Software Development</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:rchavarria.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archivos</a></li>
+  <li><a href="/readings">Lista de lectura</a></li>
+  <li><a href="/pet-projects">Proyectos</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Aprendiendo Vim</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-10-11T01:31:00+02:00" pubdate data-updated="true">Oct 11<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Hubo un momento en mi carrera profesional en la que un compañero me dió a conocer
+<em>Vim</em>, el editor de código. Me pareció una herramienta arcaica, básica. Línea
+de comandos, nada de modo gráfico. ¿Pero dónde estaba? ¿En los años 80?. Pero la
+pasión con la que hablaba del editor mi picaba la curiosidad.</p>
+
+<p>Luego, en años venideros, he visto y usado muchos editores de texto, de código
+e incluso IDEs. Nunca me había atrevido a usar Vim, pero de vez en cuando
+escuchaba (de la forma que se escucha en internet: twitter, blogs, &#8230;) algunas
+campanadas de que Vim era un súper editor.</p>
+
+<p>Pero nunca me decidía a darle una oportunidad, hasta&#8230;</p>
+
+<!-- more -->
+
+
+<p>Hasta que cayó un post de <a href="http://elkarmadelteclado.com">Pablo Bernardo</a> en mi lector RSS:
+<a href="http://elkarmadelteclado.com/asi-que-quieres-aprender-usar-vim/">Asi que quieres aprender a usar Vim</a>.</p>
+
+<p>En este post, Pablo detalla toda una serie de recursos disponibles en <em>la nube</em>
+y no sé porqué, pero me tocó la fibra sensible. Y decidí empezar por uno de los
+videos.</p>
+
+<p>El video en cuestión, es un hangout de LinuxIO, de <a href="http://www.desarrolloweb.com">Desarrollo Web</a>, y que se
+titula &#8221;<a href="http://youtu.be/cpL32a_GP3k">El mítico editor Vim</a>&#8221;. Este video fue el detonante de que decidiera
+darle una oportunidad a Vim, una oportunidad seria. Así que decidí comenzar a
+aprenderlo.</p>
+
+<p>La idea es que este post no se acabe aquí, si no que vaya creciendo con el
+tiempo, que vaya actualizandolo según voy consumiendo los recursos que indica
+Pablo, y los que me encuentre por el camino. Para cada uno de ellos me gustaría
+ir describiendo qué es lo que he aprendido de él.</p>
+
+<p>De esta forma, según vaya pasando el tiempo, aquí tendré el camino recorrido,
+y así otros podrán saber cómo lo recorrí para aprender Vim.</p>
+
+<!--
+LinuxIO, con @ktzar, que anima bastante https://www.youtube.com/watch?feature=player_embedded&v=cpL32a_GP3k
+
+Segunda parte del LinuxIO: https://www.youtube.com/watch?feature=player_embedded&v=XvCD78eA46E
+
+Un semi-dios del vim, Drew Neil : https://vimeo.com/53144573
+
+Pagina de Drew Neil : http://drewneil.com/
+Con enlaces a vimcasts, peer-to-peer.io, ...
+
+Libros en open libra (no leidos) http://www.etnassoft.com/biblioteca/?search_term=VIM&books_category=libros_programacion&books_criteria=post_date_DESC&lang=all&since=all
+
+Videos de Derek Wyatt : http://derekwyatt.org/vim/tutorials/
+
+-->
+
+
+<h2>El mítico editor Vim, #linuxIO</h2>
+
+<p><a href="https://twitter.com/ktzar">Miguel Luis González</a> y <a href="https://twitter.com/voylinux">Pablo</a> nos presentan <a href="http://youtu.be/cpL32a_GP3k">El mítico editor Vim</a>. Miguel pone tanta pasión,
+tanto conocimiento, que impresiona. Este es el video que me convenció. Y
+éste es un resumen de lo que aprendí de él (y estoy poniendo en práctica escribiendo
+este post :D ).</p>
+
+<ul>
+<li>Movimientos básicos: <code>h</code>, <code>j</code>, <code>k</code>, <code>l</code>. Nada de usar las flechas, ¡Cobarde!</li>
+<li><code>i</code> para <strong>i</strong>nsertar</li>
+<li><code>a</code> para <strong>a</strong>ñadir. Inserta, pero después de la posición del cursor</li>
+<li><code>:o &lt;fichero&gt;</code> para abrir (<strong>o</strong>pen) un fichero</li>
+<li><code>:q</code> para salir del Vim. <code>:q!</code> para salir ignorando los cambios</li>
+<li><code>:w</code> para guardar (<strong>w</strong>rite)</li>
+<li><code>u</code> para deshacer (<strong>u</strong>ndo)</li>
+<li><code>CTRL + r</code> para rehacer</li>
+<li><code>w</code> para mover el cursor a la siguiente palabra (<strong>w</strong>ord)</li>
+<li><code>b</code> para mover el cursor a la palabra anterior (<strong>b</strong>efore)</li>
+<li><code>e</code> para mover el cursor al final (<strong>e</strong>nd) de la siguiente palabra</li>
+<li><code>x</code> para borrar un carácter</li>
+<li><code>p</code> para <strong>p</strong>egar. <code>P</code> para hacerlo antes del cursor</li>
+<li><code>r</code> para reemplazar un carácter</li>
+<li><code>f&lt;carácter&gt;</code> para encontrar (<strong>f</strong>ind) el siguiente carácter en la línea</li>
+<li><code>0</code> mover el cursor al inicio de la línea. <code>$</code> para ir al final</li>
+<li><code>d</code> borrar (<strong>d</strong>elete). <code>dw</code> borra palabra. <code>dd</code> borra línea</li>
+<li><code>c</code> para <strong>c</strong>ambiar. Por ejemplo, <code>cw</code> cambia una palabra. <code>cc</code> cambia una linea</li>
+<li><code>y</code> para copiar (<strong>y</strong>ank). <code>yw</code> copia una palabra. <code>yy</code> una línea. <code>yf)</code> copia
+hasta que encuentra el caracter <code>)</code> inclusive.</li>
+<li><code>t&lt;carácter&gt;</code> para mover hasta (un<strong>t</strong>ill). <code>yt)</code> para copiar hasta el carácter
+<code>)</code> sin copiar el carácter.</li>
+<li><code>%</code> para mover el cursor al carácter complementario. Por ejemplo, si estamos en
+un carácter <code>(</code>, nos mueve hasta el siguiente <code>)</code>. De <code>[</code> al <code>]</code>. ¿Lo pillas?</li>
+</ul>
+
+
+<!--
+## LinuxIO, Vim avanzado
+
+Mas de @ktzar y @voylinux.
+
+¿Qué aprendí?
+
+- Invocar línea de comandos desde Vim. Pero le veo una pega, que todavía no sé cómo solucionar. No puedo cambiar el directorio de trabajo, por lo que si edito en ~/documents/js y quiero ejecutar un comando sobre ese directorio, no puedo.
+- Plugin [Nerd Tree]
+- Donde está la configuración de Vim (~/.vimrc)
+
+## Derek Wyatt, movimientos basicos 1
+
+## Derek Wyatt, movimientos basicos 2
+
+## Derek Wyatt, movimientos basicos 3
+-->
+
+
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Rubén Chavarría</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-10-11T01:31:00+02:00" pubdate data-updated="true">Oct 11<span>th</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/vim/'>Vim</a>, <a class='category' href='/blog/categories/learning/'>learning</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rchavarria.github.io/blog/2014/10/11/aprendiendo-vim/" data-via="rchavarriat" data-counturl="http://rchavarria.github.io/blog/2014/10/11/aprendiendo-vim/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/09/24/plantilla-para-modulos-nodejs/" title="Previous Post: Plantilla para módulos NodeJS">&laquo; Plantilla para módulos NodeJS</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/10/11/aprendiendo-vim/">Aprendiendo Vim</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/09/24/plantilla-para-modulos-nodejs/">Plantilla para módulos NodeJS</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/09/20/charla-sobre-extreme-programming/">Charla sobre eXtreme Programming</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/09/07/efectividad-de-10-tecnicas-para-estudiar/">Efectividad de 10 técnicas para estudiar</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/06/26/charla-tecnica-escribe-javascript-como-roca/">Charla técnica: Escribiendo JavaScript sólido como una roca</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("rchavarriat", 4, true);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/rchavarriat">@rchavarriat</a></p>
+  
+</section>
+
+
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/rchavarriat?count=5&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/rchavarriat">My Delicious Bookmarks &raquo;</a></p>
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Rub&eacute;n Chavarr&iacute;a -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'rchavarria-github-com';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://rchavarria.github.io/blog/2014/10/11/aprendiendo-vim/';
+        var disqus_url = 'http://rchavarria.github.io/blog/2014/10/11/aprendiendo-vim/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

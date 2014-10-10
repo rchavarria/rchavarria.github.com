@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Vim | R. Chavarria's Blog]]></title>
+  <link href="http://rchavarria.github.io/blog/categories/vim/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.io/"/>
+  <updated>2014-10-11T01:45:22+02:00</updated>
+  <id>http://rchavarria.github.io/</id>
+  <author>
+    <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Aprendiendo Vim]]></title>
+    <link href="http://rchavarria.github.io/blog/2014/10/11/aprendiendo-vim/"/>
+    <updated>2014-10-11T01:31:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2014/10/11/aprendiendo-vim</id>
+    <content type="html"><![CDATA[<p>Hubo un momento en mi carrera profesional en la que un compañero me dió a conocer
+<em>Vim</em>, el editor de código. Me pareció una herramienta arcaica, básica. Línea
+de comandos, nada de modo gráfico. ¿Pero dónde estaba? ¿En los años 80?. Pero la
+pasión con la que hablaba del editor mi picaba la curiosidad.</p>
+
+<p>Luego, en años venideros, he visto y usado muchos editores de texto, de código
+e incluso IDEs. Nunca me había atrevido a usar Vim, pero de vez en cuando
+escuchaba (de la forma que se escucha en internet: twitter, blogs, ...) algunas
+campanadas de que Vim era un súper editor.</p>
+
+<p>Pero nunca me decidía a darle una oportunidad, hasta...</p>
+
+<!-- more -->
+
+
+<p>Hasta que cayó un post de <a href="http://elkarmadelteclado.com">Pablo Bernardo</a> en mi lector RSS:
+<a href="http://elkarmadelteclado.com/asi-que-quieres-aprender-usar-vim/">Asi que quieres aprender a usar Vim</a>.</p>
+
+<p>En este post, Pablo detalla toda una serie de recursos disponibles en <em>la nube</em>
+y no sé porqué, pero me tocó la fibra sensible. Y decidí empezar por uno de los
+videos.</p>
+
+<p>El video en cuestión, es un hangout de LinuxIO, de <a href="http://www.desarrolloweb.com">Desarrollo Web</a>, y que se
+titula "<a href="http://youtu.be/cpL32a_GP3k">El mítico editor Vim</a>". Este video fue el detonante de que decidiera
+darle una oportunidad a Vim, una oportunidad seria. Así que decidí comenzar a
+aprenderlo.</p>
+
+<p>La idea es que este post no se acabe aquí, si no que vaya creciendo con el
+tiempo, que vaya actualizandolo según voy consumiendo los recursos que indica
+Pablo, y los que me encuentre por el camino. Para cada uno de ellos me gustaría
+ir describiendo qué es lo que he aprendido de él.</p>
+
+<p>De esta forma, según vaya pasando el tiempo, aquí tendré el camino recorrido,
+y así otros podrán saber cómo lo recorrí para aprender Vim.</p>
+
+<!--
+LinuxIO, con @ktzar, que anima bastante https://www.youtube.com/watch?feature=player_embedded&v=cpL32a_GP3k
+
+Segunda parte del LinuxIO: https://www.youtube.com/watch?feature=player_embedded&v=XvCD78eA46E
+
+Un semi-dios del vim, Drew Neil : https://vimeo.com/53144573
+
+Pagina de Drew Neil : http://drewneil.com/
+Con enlaces a vimcasts, peer-to-peer.io, ...
+
+Libros en open libra (no leidos) http://www.etnassoft.com/biblioteca/?search_term=VIM&books_category=libros_programacion&books_criteria=post_date_DESC&lang=all&since=all
+
+Videos de Derek Wyatt : http://derekwyatt.org/vim/tutorials/
+
+-->
+
+
+<h2>El mítico editor Vim, #linuxIO</h2>
+
+<p><a href="https://twitter.com/ktzar">Miguel Luis González</a> y <a href="https://twitter.com/voylinux">Pablo</a> nos presentan <a href="http://youtu.be/cpL32a_GP3k">El mítico editor Vim</a>. Miguel pone tanta pasión,
+tanto conocimiento, que impresiona. Este es el video que me convenció. Y
+éste es un resumen de lo que aprendí de él (y estoy poniendo en práctica escribiendo
+este post :D ).</p>
+
+<ul>
+<li>Movimientos básicos: <code>h</code>, <code>j</code>, <code>k</code>, <code>l</code>. Nada de usar las flechas, ¡Cobarde!</li>
+<li><code>i</code> para <strong>i</strong>nsertar</li>
+<li><code>a</code> para <strong>a</strong>ñadir. Inserta, pero después de la posición del cursor</li>
+<li><code>:o &lt;fichero&gt;</code> para abrir (<strong>o</strong>pen) un fichero</li>
+<li><code>:q</code> para salir del Vim. <code>:q!</code> para salir ignorando los cambios</li>
+<li><code>:w</code> para guardar (<strong>w</strong>rite)</li>
+<li><code>u</code> para deshacer (<strong>u</strong>ndo)</li>
+<li><code>CTRL + r</code> para rehacer</li>
+<li><code>w</code> para mover el cursor a la siguiente palabra (<strong>w</strong>ord)</li>
+<li><code>b</code> para mover el cursor a la palabra anterior (<strong>b</strong>efore)</li>
+<li><code>e</code> para mover el cursor al final (<strong>e</strong>nd) de la siguiente palabra</li>
+<li><code>x</code> para borrar un carácter</li>
+<li><code>p</code> para <strong>p</strong>egar. <code>P</code> para hacerlo antes del cursor</li>
+<li><code>r</code> para reemplazar un carácter</li>
+<li><code>f&lt;carácter&gt;</code> para encontrar (<strong>f</strong>ind) el siguiente carácter en la línea</li>
+<li><code>0</code> mover el cursor al inicio de la línea. <code>$</code> para ir al final</li>
+<li><code>d</code> borrar (<strong>d</strong>elete). <code>dw</code> borra palabra. <code>dd</code> borra línea</li>
+<li><code>c</code> para <strong>c</strong>ambiar. Por ejemplo, <code>cw</code> cambia una palabra. <code>cc</code> cambia una linea</li>
+<li><code>y</code> para copiar (<strong>y</strong>ank). <code>yw</code> copia una palabra. <code>yy</code> una línea. <code>yf)</code> copia
+hasta que encuentra el caracter <code>)</code> inclusive.</li>
+<li><code>t&lt;carácter&gt;</code> para mover hasta (un<strong>t</strong>ill). <code>yt)</code> para copiar hasta el carácter
+<code>)</code> sin copiar el carácter.</li>
+<li><code>%</code> para mover el cursor al carácter complementario. Por ejemplo, si estamos en
+un carácter <code>(</code>, nos mueve hasta el siguiente <code>)</code>. De <code>[</code> al <code>]</code>. ¿Lo pillas?</li>
+</ul>
+
+
+<!--
+## LinuxIO, Vim avanzado
+
+Mas de @ktzar y @voylinux.
+
+¿Qué aprendí?
+
+- Invocar línea de comandos desde Vim. Pero le veo una pega, que todavía no sé cómo solucionar. No puedo cambiar el directorio de trabajo, por lo que si edito en ~/documents/js y quiero ejecutar un comando sobre ese directorio, no puedo.
+- Plugin [Nerd Tree]
+- Donde está la configuración de Vim (~/.vimrc)
+
+## Derek Wyatt, movimientos basicos 1
+
+## Derek Wyatt, movimientos basicos 2
+
+## Derek Wyatt, movimientos basicos 3
+-->
+
+
+
+]]></content>
+  </entry>
+  
+</feed>

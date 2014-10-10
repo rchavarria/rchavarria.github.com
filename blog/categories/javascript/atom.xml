@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: javascript | R. Chavarria's Blog]]></title>
+  <title><![CDATA[Category: JavaScript | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/javascript/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2014-09-24T00:54:39+02:00</updated>
+  <updated>2014-10-11T01:45:22+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -232,6 +232,204 @@ sobre dobles de tests (mocks, spies, stubs) cuando escribas tests.</p>
   </entry>
   
   <entry>
+    <title type="html"><![CDATA[Charla técnica: Escribiendo JavaScript sólido como una roca]]></title>
+    <link href="http://rchavarria.github.io/blog/2014/06/26/charla-tecnica-escribe-javascript-como-roca/"/>
+    <updated>2014-06-26T20:00:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2014/06/26/charla-tecnica-escribe-javascript-como-roca</id>
+    <content type="html"><![CDATA[<p>Hace poco, he visto una charla técnica impartida por
+<a href="https://twitter.com/damian">Damian Nicholson</a>
+titulada <em>Writing (testable | maintainable | scalable | rock solid) JavaScript</em>,
+que traduzco libremente como <em>Escribiendo JavaScript sólido como una roca</em>.</p>
+
+<p>En la charla, Damian analiza varios aspectos de porqué es difícil testear
+cierto código JavaScript y finaliza contando su experiencia escribiendo código
+para evitar todos esos errores.</p>
+
+<!-- more -->
+
+
+
+
+<iframe src="http://rchavarria.github.io//player.vimeo.com/video/68526881" width="500" height="161" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+
+<h3>Consejos</h3>
+
+<p>A lo largo de la charla, Damian suelta unos cuantos pequeños consejos:</p>
+
+<ol>
+<li>JavaScript + Unit testing = Good code</li>
+<li>Apóyate en los objetos. Según el conferenciante, los objetos te llevarán a
+diseñar clases, éstas a agruparlas en módulos, y los módulos a organizar mejor
+tus ficheros JavaScript.</li>
+<li>Sobretodo, uno debería testear su API pública, aunque no limitarse a ella.</li>
+</ol>
+
+
+<h3>Problemas a la hora de testear código JavaScript</h3>
+
+<p>A través de un sencillo snipet de código, Damian expone algunos de los problemas
+más comunes a la hora de escribir código JavaScript que lo hace difícilmente
+testeable:</p>
+
+<ul>
+<li>Funciones anónimas.</li>
+<li>Acoplamiento fuerte con el DOM, por ejemplo en el uso y abuso de ids en elementos
+HTML</li>
+<li>Hacer llamadas al servidor mezcladas con otra lógica de nuestra aplicación.</li>
+<li>Callbacks anidados.</li>
+<li>Mezclar código HTML y JavaScript, por ejemplo, excribiendo <em>templates</em> HTML a
+fuego en JavaScript.</li>
+</ul>
+
+
+<h3>Su propia experiencia</h3>
+
+<ul>
+<li>usar data-attributes para parametrizar, o configuraciones. Depender menos de ids
+en los elementos HTML.</li>
+<li>Conocer el ciclo de vida de los frameworks que utilizamos, y <em>engancharnos</em> a los
+eventos del ciclo que dirigen el proceso.</li>
+<li>Aislar nuestra aplicación de los detalles de plugins de terceros (gran consejo éste).</li>
+<li>Apóyate en <a href="http://lostechies.com/derickbailey/2012/10/07/javascript-mixins-beyond-simple-object-extension">mixins</a>.
+Con ellos podrás extender la funcionalidad de tus objetos, de una forma parecida a
+la herencia, aunque muy diferente a ella.</li>
+<li>Mantén funcionalidades privadas en ámbitos privados
+(patrón <a href="http://www.codeproject.com/Articles/247241/Javascript-Module-Pattern">módulo</a>).</li>
+</ul>
+
+
+<h3>Conclusión</h3>
+
+<p>Es una charla eminentemente práctica, por lo que es totalmente recomendable
+si quieres conocer de primera mano buenos consejos sobre cómo escribir código
+JavaScript testeable.</p>
+
+<p>No estoy de acuerdo en todos los consejos que comenta Damian, pero la voz de
+la experiencia tiene muchísimo valor, por lo que la charla me parece fenomenal.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Charla técnica: JavaScript masterclass]]></title>
+    <link href="http://rchavarria.github.io/blog/2014/06/21/charla-tecnica-javascript-masterclass/"/>
+    <updated>2014-06-21T17:23:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2014/06/21/charla-tecnica-javascript-masterclass</id>
+    <content type="html"><![CDATA[<p>Recientemente he visto una charla técnica impartida por
+<a href="https://twitter.com/angelinamagnum">Angelina Fabro</a> titulada <em>JavaScript masterclass</em>.
+En este post quiero dejar unas notas que me gustaría recordar, no es un resumen de la
+charla, pero sí son algunas ideas que me gustaría resaltar.</p>
+
+<p>La primera parte de la charla Angelina explica qué no es un programador junior, y en la
+segunda parte qué no es un programador experto, para terminar sugiriendo unos cuantos
+consejos sobre cómo pasar de un estado a otro.</p>
+
+<!-- more -->
+
+
+<h3>Angelina Fabro, a JavaScript masterclass</h3>
+
+<iframe width="560" height="315" src="http://rchavarria.github.io//www.youtube.com/embed/v0TFmdO4ZP0" frameborder="0" allowfullscreen></iframe>
+
+
+<h3>¿Quién es un gran programador?</h3>
+
+<p>Bueno, pues eso depende de a quién le preguntes, pero algunas respuestas que te
+darán podrían ser:</p>
+
+<ul>
+<li>Aquel que cumple con todas las fechas de entrega (si dejamos a un lado la calidad).</li>
+<li>Aquel que soluciona de la forma más rápida los problemas de los clientes.</li>
+<li>Aquel que hace ganar el mayor dinero posible a los dueños de los negocios.</li>
+<li>Aquel que es el mejor mentor para un programador junior.</li>
+<li>Aquel a quien le encanta unirse a otros programadores en la <em>batalla</em>.</li>
+</ul>
+
+
+<h3>¿Qué necesito aprender para ser uno de ellos?</h3>
+
+<p>Como conclusión a su charla, Angelina nos deja unos cuantos consejos que podemos
+aplicar para dar un salto en nuestra carrera profesional:</p>
+
+<ul>
+<li>Pregúntate <em>¿por qué?</em> obsesivamente, hasta el punto de molestarte a tí mismo.</li>
+<li>Enseña y/o habla en un evento.</li>
+<li>Trabaja a través de una seria de libros recomendados por los que más saben.</li>
+<li>Experimenta alocadamente. Haz barbaridades, al código no le importa ni le hace daño.</li>
+<li>Modela tus propias opiniones, debes tenerlas, debes mojarte.</li>
+<li>Busca a un mentor que te guíe por el camino.</li>
+<li>Programa mucho, mucho. Pero para de vez en cuando, tu cerebro necesita descansos.</li>
+<li>Escribe en varios lenguajes.</li>
+<li>Piensa como un programador aunque no estés cerca de un teclado.</li>
+<li>Aprende a distinguir el buen feedback del malo, y desecha el malo claro.</li>
+<li>Libérate del <a href="https://es.wikipedia.org/wiki/S%C3%ADndrome_del_impostor">síndrome del impostor</a>.</li>
+</ul>
+
+
+<h2>Conclusiones</h2>
+
+<p>En general, la charla me ha encantado, y me ha dado un poquito de chispa para seguir mejorando
+como profesional y me ha dado nuevas ideas. Aunque no estoy de acuerdo con todos los consejos que
+Angelina propone, me voy a quedar con dos de ellos que no me había planteado hasta ahora:
+pregúntate por qué obsesivamente y experimenta alocadamente.</p>
+
+<p>Nos recomienda un libro, <em>The secrets of a JavaScript ninja</em>, de John Resig.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mi primera aplicación web con AngularJS]]></title>
+    <link href="http://rchavarria.github.io/blog/2013/10/17/primera-aplicacion-angularjs/"/>
+    <updated>2013-10-17T22:00:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2013/10/17/primera-aplicacion-angularjs</id>
+    <content type="html"><![CDATA[<p>Esta semana no he podido aportar ningún tutorial a la serie de
+<a href="/blog/2013/09/03/demos-tecnologias-javaee">demos de tecnologías JavaEE</a> ya
+que he dedicado grandes esfuerzos a realizar una prueba técnica para una
+empresa.</p>
+
+<p>La prueba consitía en realizar una aplicación web, donde el back-end está
+programado en PHP y el front-end en JavaScript, utilizando el framework MVC
+<a href="http://angularjs.org">AngularJS</a>.</p>
+
+<p>Ha sido una experiencia interesantísima. Ya tenía conocimientos de arquitecturas
+MVC, he participado profesionalmente en multitud de desarrollos siguiendo
+este modelo, pero ésta ha sido una oportunidad increíble de conocer un
+framework tan de moda y tan demandado como AngularJS. El proyecto consistía en
+implementar una <a href="http://rct-ytlibrary.herokuapp.com">librería de videos de youtube</a>.</p>
+
+<!-- more -->
+
+
+<p><img class="center" src="/images/2013/ytlibrary-dnd.png" title="Puedes añadir un vídeo arrastrando y soltando" ></p>
+
+<p>En definitiva, he aprovechado esta oportunidad, y con unas pequeñas modificaciones
+a la prueba técnica inicial, he eliminado la necesidad de un back-end, he creado
+un servidor web básico en <em>NodeJS</em>, y he desplegado la aplicación en <em>heroku</em>.</p>
+
+<p>Si te pica la curiosidad y quieres ver el código fuente, lo puedes encontrar en mi
+repositorio de github <a href="http://github.com/rchavarria/ytlibrary">rchavarria/ytlibrary</a>.</p>
+
+<p>La aplicación explota multitud de conceptos de AngularJS:</p>
+
+<ul>
+<li>Directivas más comunes: <code>ng-model</code>, <code>ng-repeat</code>, <code>ng-click</code>, ...</li>
+<li>Controladores, <code>angular.controller(...)</code>.</li>
+<li>Servicios, implementados como factorías con <code>angular.factory(...)</code>.</li>
+<li>Directivas, <code>angular.directive(...)</code>.</li>
+<li>Posibilidad de arrastrar y soltar vídeos para añadirlos a la lista.</li>
+<li>Animaciones con el módulo proporcionado por AngularJS <code>ngAnimate</code>.</li>
+</ul>
+
+
+<p><img class="center" src="/images/2013/ytlibrary-video.png" title="Visualizar un vídeo desde la lista" ></p>
+
+<p>Si todavía tienes ganas de más, te invito a que eches un vistazo a
+<a href="http://rct-ytlibrary.herokuapp.com">Youtube library</a>. Por supuesto, si quieres,
+me encantaría que me contases qué te ha parecido.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[solveet: Torres de Hannoi]]></title>
     <link href="http://rchavarria.github.io/blog/2012/12/12/solveet-torres-de-hannoi/"/>
     <updated>2012-12-12T09:35:00+01:00</updated>
@@ -303,48 +501,6 @@ torre que no contiene ni el anillo más pequeño ni el anillo a mover.</li>
 <li>Imagen By André Karwath aka Aka (Own work) <a href="http://creativecommons.org/licenses/by-sa/2.5">CC-BY-SA-2.5</a>, via <a href="http://commons.wikimedia.org/wiki/File%3ATower_of_Hanoi_4.gif">Wikimedia Commons</a></li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Proyecto maven para javascript]]></title>
-    <link href="http://rchavarria.github.io/blog/2012/09/26/proyecto-maven-para-javascript/"/>
-    <updated>2012-09-26T09:26:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2012/09/26/proyecto-maven-para-javascript</id>
-    <content type="html"><![CDATA[<p>Estoy aprendiendo JavaScript. Creo que es uno de los lenguajes con más futuro, y no sólo por la web (que da de comer a mucha gente), sino por herramientas como <a href="http://phonegap.com/">PhoneGap</a> (que te permite crear aplicaciones para iOS, Android, ...), y también por la llegada del nuevo Windows 8, ya que se pueden desarrollar aplicaciones en JavaScript que acceden al hardware de la máquina donde esté instalado Windows 8.</p>
-
-<p>Empecé aprendiéndolo gracias a <a href="http://www.codecademy.com/">Codecademy</a>, que comenzó el año con unos cursos o clases online, y me llamó mucho la atención la posibilidad de poder ir practicando JavaScript sin tener que instalar nada. Y además, cada semana la herramienta me recordaría que tenía una nueva lección, así no dejaría de practicar.</p>
-
-<!-- more -->
-
-
-<p>Pero hace poco tropecé con un pequeño problema, y es que quería aportar una solución escrita en JavaScript al desafío de <a href="http://www.solveet.com/exercises/Compresion-RLE/35">Compresión en RLE</a> en <a href="http://www.solveet.com/">Solveet </a>(una plataforma donde la gente publica desafíos de programación y otra gente publica sus propias soluciones, muy recomendable y divertido). El problema era que no tenía instalado nada en mi ordenador que me permitiera hacer <a href="http://es.wikipedia.org/wiki/Desarrollo_guiado_por_pruebas">TDD </a>(lo prefiero para resolver los desafíos, así practico doble: el desafío y la práctica TDD).</p>
-
-<p>Una herramienta que me encanta para gestionar el ciclo de vida de mis proyectos es <a href="maven.apache.org">maven</a>, así que me decidí a buscar algo que me permitiera escribir JavaScript y luego ejecutarlo con comandos de maven.</p>
-
-<p>Y tuve la suerte de encontrar un post de <a href="http://blog.akquinet.de/">akquinet </a>donde explica <a href="http://blog.akquinet.de/2011/02/11/mavenizing-javascript-projects/">cómo crear un proyecto maven para JavaScript</a>. La verdad es que es realmente sencillo porque akquinet se ha currado un archetype para maven que te crea un esqueleto de proyecto para que escribas directamente JavaScript. Simplemente con este comando para ejecutar maven:</p>
-
-<p>[sourcecode language="bash"]
-mvn archetype:generate \
-  -DarchetypeArtifactId=javascript-quickstart \
-  -DarchetypeGroupId=de.akquinet.javascript.archetypes \
-  -DarchetypeVersion=1.0.0 \
-  -DgroupId=<enter your groupId> \
-  -DartifactId=<enter your artifactId>
-[/sourcecode]</p>
-
-<p>Con el proyecto creado a partir del archetype de akquinet podrás:</p>
-
-<ul>
-    <li>Ejecutar tus tests JavaScript con <a href="http://pivotal.github.com/jasmine/">Jasmine</a></li>
-    <li>Comprimir los ficheros .js y .css de tu proyecto</li>
-    <li>Generar la documentación con <a href="www.jslint.com/">Jslint</a> y <a href="http://code.google.com/p/jsdoc-toolkit/">Jsdoc</a></li>
-</ul>
-
-
-<p>Además, al ser un proyecto maven, es muy fácil que lo integres en un servidor de <a href="http://es.wikipedia.org/wiki/Integraci%C3%B3n_continua">Integración Contínua</a> como <a href="http://hudson.dev.java.net/">Hudson</a>.</p>
-
-<p>Si quieres, puedes ver la solución que aporté en Solveet. El desafío es muy sencillo, y hay muy poco código JavaScript: <a href="http://www.solveet.com/exercises/Compresion-RLE/35/solution-846">Compresión RLE en JavaScript</a>, el <a href="https://github.com/rchavarria/solveet-problems/tree/master/rle-compression-javascript">código completo con los tests</a>.</p>
 ]]></content>
   </entry>
   
