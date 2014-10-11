@@ -166,7 +166,8 @@ parecer necesita Ruby, así que la instalación quizá no sea muy sencilla.
 ## (12-10-2014) Derek Wyatt : Basic movements II
 
 El primer video de Derek decidí saltármelo, ya que todos los comandos estarían 
-cubiertos con los videos de #LinuxIO. En el de [Movimientos básicos II]() aprendí lo siguiente:
+cubiertos con los videos de #LinuxIO. En el de [Movimientos básicos II](http://vimeo.com/6185584)
+aprendí lo siguiente:
 
 - `H` mueve el cursor a la cabecera (**h**ead) del texto que se muestra en pantalla
 - `M` mueve el cursor a la parte **m**edia del texto en pantalla
@@ -175,6 +176,31 @@ cubiertos con los videos de #LinuxIO. En el de [Movimientos básicos II]() apren
 - `#` busca la palabra sobre la que buscamos, pero hacia atrás. Es como el comando
 que ya vi anteriormente `*`
 - `g*` busca el texto, como `*`, pero no tiene porqué ser la palabra completa
+
+## (12-10-2014) Derek Wyatt: Basic movements III
+
+En el video de [Movimientos básicos III](http://vimeo.com/6216655) ya no podían quedar
+muchos más movimientos que aprender, y la verdad es que los que aquí aparecen son ya
+movimientos un poco más extraños, aunque no por eso dejan de ser útiles.
+
+- `:help motion.txt` para ver la ayuda sobre movimientos, para que no se olvide
+ninguno
+- `]]` mueve el cursor hasta el siguiente carácter `{` que exista en la columna 0.
+Ideal para movernos por ficheros de código. Existen otras combinaciones, como 
+`[[`, `[]` y `][`, pero actuando sólo sobre la columna 0, no sé si les voy a sacar
+mucho provecho.
+
+El plugin [matchit](http://www.vim.org/scripts/script.php?script_id=39) amplía la
+funcionalidad del comando `%` (que movía el cursor hasta el siguiente carácter
+complementario: de `(` a `)`, de `[` a `]`, ...).
+
+`:help marks` para conocer acerca de marcadores. No los suelo utilizar en mi día
+a día, pero no está de más saber que existen.
+
+- `m<tecla>` define un marcador en `<tecla>`
+- `'<tecla>` nos mueve al marcador definido en `<tecla>`
+- `''` nos lleva al último lugar donde editamos, ya que Vim almacena en `'` dicha
+posición de forma automática
 
 <!--
 Derek Wyatt : basic editing I
@@ -188,7 +214,4 @@ Derek, pero la mayoría de comandos ya estaban cubiertos con los videos de #Linu
 
 El comando `:set cpoptions+=$` configura una funcionalidad adicional para el comando `c` (**c**ambiar).
 Lo que hace es que aparezca el carácter `$` al final del texto que se va a cambiar.
-
-
-
 -->
