@@ -103,6 +103,32 @@ hasta que encuentra el caracter `)` inclusive.
 - `%` para mover el cursor al carácter complementario. Por ejemplo, si estamos en
 un carácter `(`, nos mueve hasta el siguiente `)`. De `[` al `]`. ¿Lo pillas?
 
+## Vim sobre Linux, comandos avanzados y plugins 
+
+Miguel y Pablo siguen hablando de Vim, de [comandos avanzados y plugins], temas más
+avanzados que en el anterior vídeo, pero con el mismo tono alegre y pasión.
+Esto es lo que aprendí en él:
+
+[comandos avanzados y plugins]: http://youtu.be/XvCD78eA46E 
+
+- `s` para sustituir un carácter. Borra el carácter donde está el cursor y entra
+en modo edición.
+- `C` para cambiar una línea entera.
+- Números como modificadores de comandos. Por ejemplo, `5dd` borra 5 líneas. `3yy`
+copia 3 líneas.
+- `/<texto>` para buscar la cadena de texto hacia adelante
+- `n` para moverse a la siguiente (**n**ext) ocurrencia de la búsqueda. `N` para
+moverse a la anterior.
+- `?<texto>` para buscar la cadena de texto pero hacia atrás
+- `*` entra en modo búsqueda, usando la palabra donde estamos como texto de búsqueda
+- *Movimientos interiores*. `i` expande el cursor o la selección en el **i**nterior
+de un texto encerrado entre dos comillas, o dos paréntesis, o dos llaves.
+Por ejemplo, `ci'` **c**ambia el **i**nterior del texto entre comillas. `di(`
+borra (**d**elete) el **i**nterior del texto entre paréntesis. `cit` **c**ambia
+el **i**nterior del **t**ag HTML.
+- `v` entra en modo **v**isual. `V` modo **v**isual línea a línea
+
+
 <!--
 ## LinuxIO, Vim avanzado
 
