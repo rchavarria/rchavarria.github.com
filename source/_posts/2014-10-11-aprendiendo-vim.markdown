@@ -103,7 +103,7 @@ hasta que encuentra el caracter `)` inclusive.
 - `%` para mover el cursor al carácter complementario. Por ejemplo, si estamos en
 un carácter `(`, nos mueve hasta el siguiente `)`. De `[` al `]`. ¿Lo pillas?
 
-## Vim sobre Linux, comandos avanzados y plugins 
+## (12-10-2014) Vim sobre Linux, comandos avanzados y plugins 
 
 Miguel y Pablo siguen hablando de Vim, de [comandos avanzados y plugins], temas más
 avanzados que en el anterior vídeo, pero con el mismo tono alegre y pasión.
@@ -127,7 +127,41 @@ Por ejemplo, `ci'` **c**ambia el **i**nterior del texto entre comillas. `di(`
 borra (**d**elete) el **i**nterior del texto entre paréntesis. `cit` **c**ambia
 el **i**nterior del **t**ag HTML.
 - `v` entra en modo **v**isual. `V` modo **v**isual línea a línea
+- `CTRL + v` entra en modo **v**isual pero selecciona columnas
+- `CTRL + p` autocompletado, buscando en palabras anteriores a la actual y en todos
+los ficheros abiertos. `CTRL + n` muestra también una lista de posibles palabras
+para autocompletar, pero dando preferencia a texto encontrado hacia abajo
+- `%s/<texto a buscar>/<texto a reemplazar>/g` busca y reemplaza un texto por otro,
+se puede hacer en todo el fichero o dentro de una zona seleccionada con `v`
+- `=` indenta un texto. `==` indenta una línea entera
+- `<` y `>` aumentan o disminuyen la indentación de la línea
+- `gg` mueve el cursor al inicio del fichero. `G` lo mueve al final del fichero
+- `:!<comando unix>` ejecuta un comando unix. `%` se reemplaza por la ruta del
+fichero actual. También puede actuar sobre regiones de selección visuales.
+`:'<, '>!sort` ordena la selección visual
+- `q<tecla>` comienza la grabación de una macro, almacenándola en `<tecla>`. Volver
+a pulsar `q` para parar la grabación. 
+- `@<tecla>` ejecuta la macro almacenada en `<tecla>`
+- `@@` ejecuta la última macro
+- `:split`, `:vsplit` para abrir varios ficheros y verlos simultáneamente
+- `:buffer <número>` para abrir un buffer o nuevo fichero. Por ahora los buffers
+es un tema algo complicado. Más adelante aprenderé más sobre ellos.
 
+Plugin [NERDTree](http://vim.sourceforge.net/scripts/script.php?script_id=1658).
+Con `CTRL + w` se entra en un modo para poder moverse por las
+ventanas (**w**indows). Se pueden utilizar las teclas de movimiento `h`, `j`, `k`, `l`
+para moverse por los ficheros que muestra el plugin en forma de árbol.
+
+Se puede utiliar Vim como una herramienta para comparar ficheros. El comando unix
+`vimdiff` abre Vim con dos ficheros para compararlos.
+
+Toda la configuración de Vim se guarda en el directorio `~/.vim`. Los plugins se
+guardan en `~/.vim/plugin` y los ficheros de ayuda en `~/.vim/doc`. Configuraciones
+de teclas, colores, indentación y otras se guardan en el fichero `~/.vimrc`.
+
+Plugin [Command-T](https://wincent.com/products/command-t). Para abrir ficheros con
+las teclas `CTRL + t`. Parecido a la misma funcionalidad de TextMate o Sublime. Al
+parecer necesita Ruby, así que la instalación quizá no sea muy sencilla.
 
 <!--
 ## LinuxIO, Vim avanzado
