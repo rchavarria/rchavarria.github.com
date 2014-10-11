@@ -17,9 +17,8 @@ decidí cambiarla sólo a nivel de *job*. Por lo que llegamos a la pregunta:
 
 ## Requisitos
 
-Se requiere tener instalado en plugin '[Environment Injector Plugin]'.
-
-Este plugin añade una nueva sección en la pagina de configuracion de los trabajos de jenkins: *Build Environment*
+Para poder hacerlo se requiere tener instalado en plugin
+'[Environment Injector Plugin]'. Este plugin añade una nueva sección en la pagina de configuracion de los trabajos de jenkins: *Build Environment*
 
 ## Proceso
 
