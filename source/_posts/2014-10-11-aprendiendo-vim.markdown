@@ -163,21 +163,32 @@ Plugin [Command-T](https://wincent.com/products/command-t). Para abrir ficheros 
 las teclas `CTRL + t`. Parecido a la misma funcionalidad de TextMate o Sublime. Al
 parecer necesita Ruby, así que la instalación quizá no sea muy sencilla.
 
+## (12-10-2014) Derek Wyatt : Basic movements II
+
+El primer video de Derek decidí saltármelo, ya que todos los comandos estarían 
+cubiertos con los videos de #LinuxIO. En el de [Movimientos básicos II]() aprendí lo siguiente:
+
+- `H` mueve el cursor a la cabecera (**h**ead) del texto que se muestra en pantalla
+- `M` mueve el cursor a la parte **m**edia del texto en pantalla
+- `L` mueve el cursor a la última (**l**ast) línea del texto en pantalla
+- `<número>G` nos lleva a la línea número `<número>`
+- `#` busca la palabra sobre la que buscamos, pero hacia atrás. Es como el comando
+que ya vi anteriormente `*`
+- `g*` busca el texto, como `*`, pero no tiene porqué ser la palabra completa
+
 <!--
-## LinuxIO, Vim avanzado
+Derek Wyatt : basic editing I
 
-Mas de @ktzar y @voylinux.
+No es que aprendiera mucho en el video de [Edición básica](http://vimeo.com/6329762) de 
+Derek, pero la mayoría de comandos ya estaban cubiertos con los videos de #LinuxIO.
 
-¿Qué aprendí?
+- `x` borra el carácter donde esta el cursor. `X` borra hacia atrás
+- `r` **r**eemplaza un carácter. `R` **r**eemplaza varios carácteres, hasta que pulsemos `ESC`.
+`5rx` reemplaza 5 caracteres por una `x`.
 
-- Invocar línea de comandos desde Vim. Pero le veo una pega, que todavía no sé cómo solucionar. No puedo cambiar el directorio de trabajo, por lo que si edito en ~/documents/js y quiero ejecutar un comando sobre ese directorio, no puedo.
-- Plugin [Nerd Tree]
-- Donde está la configuración de Vim (~/.vimrc)
+El comando `:set cpoptions+=$` configura una funcionalidad adicional para el comando `c` (**c**ambiar).
+Lo que hace es que aparezca el carácter `$` al final del texto que se va a cambiar.
 
-## Derek Wyatt, movimientos basicos 1
 
-## Derek Wyatt, movimientos basicos 2
 
-## Derek Wyatt, movimientos basicos 3
 -->
-
