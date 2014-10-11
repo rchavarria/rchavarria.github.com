@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Vim | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/vim/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2014-10-11T01:45:22+02:00</updated>
+  <updated>2014-10-11T17:46:25+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -104,6 +104,67 @@ hasta que encuentra el caracter <code>)</code> inclusive.</li>
 un carácter <code>(</code>, nos mueve hasta el siguiente <code>)</code>. De <code>[</code> al <code>]</code>. ¿Lo pillas?</li>
 </ul>
 
+
+<h2>(12-10-2014) Vim sobre Linux, comandos avanzados y plugins</h2>
+
+<p>Miguel y Pablo siguen hablando de Vim, de <a href="http://youtu.be/XvCD78eA46E">comandos avanzados y plugins</a>, temas más
+avanzados que en el anterior vídeo, pero con el mismo tono alegre y pasión.
+Esto es lo que aprendí en él:</p>
+
+<ul>
+<li><code>s</code> para sustituir un carácter. Borra el carácter donde está el cursor y entra
+en modo edición.</li>
+<li><code>C</code> para cambiar una línea entera.</li>
+<li>Números como modificadores de comandos. Por ejemplo, <code>5dd</code> borra 5 líneas. <code>3yy</code>
+copia 3 líneas.</li>
+<li><code>/&lt;texto&gt;</code> para buscar la cadena de texto hacia adelante</li>
+<li><code>n</code> para moverse a la siguiente (<strong>n</strong>ext) ocurrencia de la búsqueda. <code>N</code> para
+moverse a la anterior.</li>
+<li><code>?&lt;texto&gt;</code> para buscar la cadena de texto pero hacia atrás</li>
+<li><code>*</code> entra en modo búsqueda, usando la palabra donde estamos como texto de búsqueda</li>
+<li><em>Movimientos interiores</em>. <code>i</code> expande el cursor o la selección en el <strong>i</strong>nterior
+de un texto encerrado entre dos comillas, o dos paréntesis, o dos llaves.
+Por ejemplo, <code>ci'</code> <strong>c</strong>ambia el <strong>i</strong>nterior del texto entre comillas. <code>di(</code>
+borra (<strong>d</strong>elete) el <strong>i</strong>nterior del texto entre paréntesis. <code>cit</code> <strong>c</strong>ambia
+el <strong>i</strong>nterior del <strong>t</strong>ag HTML.</li>
+<li><code>v</code> entra en modo <strong>v</strong>isual. <code>V</code> modo <strong>v</strong>isual línea a línea</li>
+<li><code>CTRL + v</code> entra en modo <strong>v</strong>isual pero selecciona columnas</li>
+<li><code>CTRL + p</code> autocompletado, buscando en palabras anteriores a la actual y en todos
+los ficheros abiertos. <code>CTRL + n</code> muestra también una lista de posibles palabras
+para autocompletar, pero dando preferencia a texto encontrado hacia abajo</li>
+<li><code>%s/&lt;texto a buscar&gt;/&lt;texto a reemplazar&gt;/g</code> busca y reemplaza un texto por otro,
+se puede hacer en todo el fichero o dentro de una zona seleccionada con <code>v</code></li>
+<li><code>=</code> indenta un texto. <code>==</code> indenta una línea entera</li>
+<li><code>&lt;</code> y <code>&gt;</code> aumentan o disminuyen la indentación de la línea</li>
+<li><code>gg</code> mueve el cursor al inicio del fichero. <code>G</code> lo mueve al final del fichero</li>
+<li><code>:!&lt;comando unix&gt;</code> ejecuta un comando unix. <code>%</code> se reemplaza por la ruta del
+fichero actual. También puede actuar sobre regiones de selección visuales.
+<code>:'&lt;, '&gt;!sort</code> ordena la selección visual</li>
+<li><code>q&lt;tecla&gt;</code> comienza la grabación de una macro, almacenándola en <code>&lt;tecla&gt;</code>. Volver
+a pulsar <code>q</code> para parar la grabación.</li>
+<li><code>@&lt;tecla&gt;</code> ejecuta la macro almacenada en <code>&lt;tecla&gt;</code></li>
+<li><code>@@</code> ejecuta la última macro</li>
+<li><code>:split</code>, <code>:vsplit</code> para abrir varios ficheros y verlos simultáneamente</li>
+<li><code>:buffer &lt;número&gt;</code> para abrir un buffer o nuevo fichero. Por ahora los buffers
+es un tema algo complicado. Más adelante aprenderé más sobre ellos.</li>
+</ul>
+
+
+<p>Plugin <a href="http://vim.sourceforge.net/scripts/script.php?script_id=1658">NERDTree</a>.
+Con <code>CTRL + w</code> se entra en un modo para poder moverse por las
+ventanas (<strong>w</strong>indows). Se pueden utilizar las teclas de movimiento <code>h</code>, <code>j</code>, <code>k</code>, <code>l</code>
+para moverse por los ficheros que muestra el plugin en forma de árbol.</p>
+
+<p>Se puede utiliar Vim como una herramienta para comparar ficheros. El comando unix
+<code>vimdiff</code> abre Vim con dos ficheros para compararlos.</p>
+
+<p>Toda la configuración de Vim se guarda en el directorio <code>~/.vim</code>. Los plugins se
+guardan en <code>~/.vim/plugin</code> y los ficheros de ayuda en <code>~/.vim/doc</code>. Configuraciones
+de teclas, colores, indentación y otras se guardan en el fichero <code>~/.vimrc</code>.</p>
+
+<p>Plugin <a href="https://wincent.com/products/command-t">Command-T</a>. Para abrir ficheros con
+las teclas <code>CTRL + t</code>. Parecido a la misma funcionalidad de TextMate o Sublime. Al
+parecer necesita Ruby, así que la instalación quizá no sea muy sencilla.</p>
 
 <!--
 ## LinuxIO, Vim avanzado
