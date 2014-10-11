@@ -18,19 +18,33 @@ decidí cambiarla sólo a nivel de *job*. Por lo que llegamos a la pregunta:
 ## Requisitos
 
 Para poder hacerlo se requiere tener instalado en plugin
-'[Environment Injector Plugin]'. Este plugin añade una nueva sección en la pagina de configuracion de los trabajos de jenkins: *Build Environment*
+'[Environment Injector Plugin]'. Este plugin añade una nueva sección en la página
+de configuracion de los trabajos de jenkins: *Build Environment*.
 
 ## Proceso
 
-una vez que ya esta todo:
-1. Ir a la ágina de configuracion del trabajo.
-2. Localizar la sección *Build Environment*
-3. Activar la opcion *Inject environment variables to the build process* (Inyectar variables de entorno en el proceso de construcción).
-4. En el campo *Properties Content*, modificar la variable de entorno que necesitamos
+Una vez que el plugin está instalado, seguir estos sencillos pasos:
 
-%img la imagencita con el text a modificar%
+1. Ir a la página de configuración del trabajo.
+2. Localizar la sección *Build Environment*.
+3. Activar la opcion *Inject environment variables to the build process* (Inyectar
+variables de entorno en el proceso de construcción).
+4. En el campo *Properties Content*, modificar la variable de entorno que necesitamos.
 
-Este ejemplo muestra como se configura un Jenkins instalado en un Linux, en Windows se utilizaría de otra forma ya que las variables de entorno no son exactamente iguales
+En la siguiente imagen se puede ver el texto necesario para inyectar la variable
+`PATH` en un entorno Linux. A dicha variable le estoy añadiendo una ruta donde
+se encuentra la aplicación que necesita el *job* que estoy configurando.
+
+En la siguiente imagen se puede ver el texto necesario para inyectar la variable
+`PATH` en un entorno Linux. A dicha variable le estoy añadiendo una ruta donde
+se encuentra la aplicación que necesita el *job* que estoy configurando.
+
+{% img left /images/2014/jenkins-build-environment.png %}
+
+Este ejemplo muestra como se configura un Jenkins instalado en un Linux, en
+Windows se utilizaría de otra forma ya que las variables de entorno no
+son exactamente iguales, así como la configuración de las mismas.
 
 [Jenkins]: http://www.jenkins-ci.org
 [Environment Injector Plugin]: https://wiki.jenkins-ci.org/display/JENKINS/EnvInject+Plugin
+
