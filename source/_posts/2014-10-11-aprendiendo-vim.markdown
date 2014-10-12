@@ -279,3 +279,14 @@ arriba o a la derecha
 - `CRTL-w` mueve el cursor a la siguiente ventana, de una en una, una especie de
 `CTRL-TAB` o así
 
+<!--
+
+## (14-10-2014) Derek Wyatt: how to use the help system
+
+Para aprender acerca de [cómo usar la ayuda](http://vimeo.com/7035132) este
+video es lo mejor, aquí va un resumen:
+
+- 
+
+-->
+
