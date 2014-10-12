@@ -163,7 +163,7 @@ Plugin [Command-T](https://wincent.com/products/command-t). Para abrir ficheros 
 las teclas `CTRL + t`. Parecido a la misma funcionalidad de TextMate o Sublime. Al
 parecer necesita Ruby, así que la instalación quizá no sea muy sencilla.
 
-## (12-10-2014) Derek Wyatt : Basic movements II
+## (12-10-2014) Derek Wyatt: Basic movements II
 
 El primer video de Derek decidí saltármelo, ya que todos los comandos estarían 
 cubiertos con los videos de #LinuxIO. En el de [Movimientos básicos II](http://vimeo.com/6185584)
@@ -202,8 +202,7 @@ a día, pero no está de más saber que existen.
 - `''` nos lleva al último lugar donde editamos, ya que Vim almacena en `'` dicha
 posición de forma automática
 
-<!--
-Derek Wyatt : basic editing I
+## (13-10-2014) Derek Wyatt: basic editing I
 
 No es que aprendiera mucho en el video de [Edición básica](http://vimeo.com/6329762) de 
 Derek, pero la mayoría de comandos ya estaban cubiertos con los videos de #LinuxIO.
@@ -212,6 +211,71 @@ Derek, pero la mayoría de comandos ya estaban cubiertos con los videos de #Linu
 - `r` **r**eemplaza un carácter. `R` **r**eemplaza varios carácteres, hasta que pulsemos `ESC`.
 `5rx` reemplaza 5 caracteres por una `x`.
 
-El comando `:set cpoptions+=$` configura una funcionalidad adicional para el comando `c` (**c**ambiar).
-Lo que hace es que aparezca el carácter `$` al final del texto que se va a cambiar.
--->
+El comando `:set cpoptions+=$` configura una funcionalidad adicional para el 
+comando `c` (**c**ambiar). Lo que hace es que aparezca el carácter `$` al 
+final del texto que se va a cambiar.
+
+## (13-10-2104) Derek Wyatt: basic editing II
+
+No hay gran cosa que destacar en el video de
+[Edición básica II](http://vimeo.com/6332848).
+
+- `F<carácter>` encontrar (**f**ind) un carácter hacia atrás
+- `J` une (**j**oin) una línea con la inmediatamente inferior. `gj` une dos líneas
+sin dejar ningún espacio en blanco. 
+- `gv` selecciona el último bloque visual 
+
+## (13-10-2014) Derek Wyatt: working with many files I
+
+En el episodio de [Múltiples ficheros I](https://vimeo.com/6306508) aprendí un
+manejo básico de buffers, es decir, manejar varios ficheros a la vez.
+
+- `:e <fichero>` abre un buffer con ese <fichero>
+- `:ls` lista todos los buffers abiertos
+- `:buffer <número>` cambia al buffer número `<número>`. `:b <nombre>` cambia al
+buffer del fichero con el nombre `<nombre>`. `b#` cambia al buffer anterior.
+- `:bdelete` o `bd` cierra el buffer abierto en ese momento
+- `:%bd` cierra todos los buffers (`%` significa *todo el rango*)
+
+## (13-10-2014) Derek Wyatt: working with many files II
+
+El episodio de [Múltiples ficheros II](https://vimeo.com/6307101) sigue enseñándome
+a manejar varios buffers o ficheros a la vez.
+
+- `:wn` (**w**rite and move **n**ext), escribe el buffer actual y se mueve al
+siguiente
+- `:n` mueve al siguiente (**n**ext) buffer
+- `:bufdo <comando>` ejecuta el comando en todos y cada uno de los buffers
+abiertos
+- `:wall` escribe todos (**all**) los buffers
+- `:bfirst` se mueve al primer buffer. `:bn` se mueve al siguiente. `:bp` se
+mueve al anterior (**p**revious)
+
+Todos estos comandos son potentes si se usa **una sola sesión de Vim**, y
+son inútiles si tienes abiertos N Vims con N ficheros. Así que recuerda:
+una sola sesión de Vim.
+
+## (13-10-2014) Derek Wyatt: working with many files III
+
+En el [último episodio sobre múltiples ficheros](https://vimeo.com/6342264)
+hay más y más comandos que aprender, a cual más útil.
+
+- `CTRL-w o` te deja con sólo una ventana abierta
+- `:split <fichero>`, `:sp <fichero>` divide la pantalla y abre una ventana debajo
+de otra con el nuevo fichero
+- `CTRL-w x` intercambia (e**x**change) dos ventanas
+- `CTRL-w v` divide la pantalla en vertical, mostrando dos ventanas con el mismo
+buffer. También se puede hacer con `:vsplit` o `:vsp`
+- `CTRL-w` seguido de `h`, `j`, `k` o `l` te permite moverte de ventana en ventana
+igual que si lo estuvieras haciendo dentro de un fichero
+- `CTRL-w` seguido de `H`, `J`, `K` o `L` mueve la ventana a la derecha, abajo,
+arriba o a la derecha
+- `CTRL-w p` mueve el cursor a la última ventana visitada
+- `CTRL-w c` **c**ierra la ventana
+- `CRTL-w` mueve el cursor a la siguiente ventana, de una en una, una especie de
+`CTRL-TAB` o así
+
+- `CTRL-w c` **c**ierra la ventana
+- `CRTL-w` mueve el cursor a la siguiente ventana, de una en una, una especie de
+`CTRL-TAB` o así
+
