@@ -286,6 +286,25 @@ arriba o a la derecha
 Para aprender acerca de [cómo usar la ayuda](http://vimeo.com/7035132) este
 video es lo mejor, aquí va un resumen:
 
+- `:help` o `:h` abre una ventana como si fuera un buffer donde muestra la ayuda
+- `CTRL+]` para seguir un hiperenlace de la ayuda (no se si funcionara con 
+teclado español). `CTRL+t` para volver hacia atrás
+- `:help <tag>` abre la ayuda de una etiqueta. Las etiquetas tienen la forma
+de `*:<command>*` en la ayuda.
+- `:help <function>()` abre la ayuda de una función
+- the command `wildmenu` (o `wmnu`) habilita el autocompletado de comandos en
+con `TAB`. Para activarla, escribir `:set wildmenu`. Para desactivarla
+`:set nowildmenu`
+- `:helpgrep` (`:helpg`) busca un patrón en los ficheros de ayuda. Con el
+filtro `[@xx]` busca sólo para el lenguaje `xx`. Para movernos por los resultados
+se puede hacer con `:cn` (siguiente o **n**ext) o con `:cwin` nos abre una
+ventana llamada *quickfix* (`:h quickfix` para saber más)
+
+## () Derek Wyatt: Vim runtime y el fichero .vimrc
+
+Sigo aprendiendo Vim con este tío, esta vez sobre el fichero de configuración
+[.vimrc y el runtime](http://derekwyatt.org/vim/tutorials/intermediate/#vimrc):
+
 - 
 
 -->
