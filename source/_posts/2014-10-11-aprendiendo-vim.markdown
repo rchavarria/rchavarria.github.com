@@ -279,8 +279,6 @@ arriba o a la derecha
 - `CRTL-w` mueve el cursor a la siguiente ventana, de una en una, una especie de
 `CTRL-TAB` o así
 
-<!--
-
 ## (14-10-2014) Derek Wyatt: how to use the help system
 
 Para aprender acerca de [cómo usar la ayuda](http://vimeo.com/7035132) este
@@ -300,10 +298,12 @@ filtro `[@xx]` busca sólo para el lenguaje `xx`. Para movernos por los resultad
 se puede hacer con `:cn` (siguiente o **n**ext) o con `:cwin` nos abre una
 ventana llamada *quickfix* (`:h quickfix` para saber más)
 
+<!--
+
 ## () Derek Wyatt: Vim runtime y el fichero .vimrc
 
-Sigo aprendiendo Vim con este tío, esta vez sobre el fichero de configuración
-[.vimrc y el runtime](http://derekwyatt.org/vim/tutorials/intermediate/#vimrc):
+Sigo aprendiendo Vim con este tío, esta vez sobre el 
+[fichero de configuración .vimrc y el runtime](http://derekwyatt.org/vim/tutorials/intermediate/#vimrc):
 
 - 
 
