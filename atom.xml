@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2014-10-11T17:46:25+02:00</updated>
+  <updated>2014-10-17T00:10:44+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,58 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Jenkins CI: inyectar variable de entorno]]></title>
+    <link href="http://rchavarria.github.io/blog/2014/10/17/jenkins-ci-inyectar-variable-de-entorno/"/>
+    <updated>2014-10-17T08:44:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2014/10/17/jenkins-ci-inyectar-variable-de-entorno</id>
+    <content type="html"><![CDATA[<p>Recientemente, me ha surgido la necesidad de inyectar, o modificar más bien, una
+variable de entorno en el servidor de integración contínua que usamos en el
+trabajo, <a href="http://www.jenkins-ci.org">Jenkins</a>.</p>
+
+<p>Uno de los <em>jobs</em> de Jenkins necesita una aplicación recientemente instalada, y
+dicha aplicación no está alojada en ningún directorio definido dentro de la
+variable de entorno <code>PATH</code>. Por lo cual, el <em>job</em> fallaba.</p>
+
+<p>Una posible solución a este problema era el de modificar la variable de entorno
+a nivel global, pero eso podría entrar en conflicto con otros <em>jobs</em>. Por lo cual
+decidí cambiarla sólo a nivel de <em>job</em>. Por lo que llegamos a la pregunta:
+¿Cómo se inyecta una variable de entorno en un <em>job</em> de Jenkins?</p>
+
+<!-- more -->
+
+
+<h2>Requisitos</h2>
+
+<p>Para poder hacerlo se requiere tener instalado en plugin
+&#8217;<a href="https://wiki.jenkins-ci.org/display/JENKINS/EnvInject+Plugin">Environment Injector Plugin</a>&#8217;. Este plugin añade una nueva sección en la página
+de configuracion de los trabajos de jenkins: <em>Build Environment</em>.</p>
+
+<h2>Proceso</h2>
+
+<p>Una vez que el plugin está instalado, seguir estos sencillos pasos:</p>
+
+<ol>
+<li>Ir a la página de configuración del trabajo.</li>
+<li>Localizar la sección <em>Build Environment</em>.</li>
+<li>Activar la opcion <em>Inject environment variables to the build process</em> (Inyectar
+variables de entorno en el proceso de construcción).</li>
+<li>En el campo <em>Properties Content</em>, modificar la variable de entorno que necesitamos.</li>
+</ol>
+
+
+<p>En la siguiente imagen se puede ver el texto necesario para inyectar la variable
+<code>PATH</code> en un entorno Linux. A dicha variable le estoy añadiendo una ruta donde
+se encuentra la aplicación que necesita el <em>job</em> que estoy configurando.</p>
+
+<p><img class="center" src="http://rchavarria.github.io/images/2014/jenkins-build-environment.png"></p>
+
+<p>Este ejemplo muestra como se configura un Jenkins instalado en un Linux, en
+Windows se utilizaría de otra forma ya que las variables de entorno no
+son exactamente iguales, así como la configuración de las mismas.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Aprendiendo Vim]]></title>
@@ -166,22 +218,176 @@ de teclas, colores, indentación y otras se guardan en el fichero <code>~/.vimrc
 las teclas <code>CTRL + t</code>. Parecido a la misma funcionalidad de TextMate o Sublime. Al
 parecer necesita Ruby, así que la instalación quizá no sea muy sencilla.</p>
 
+<h2>(12-10-2014) Derek Wyatt: Basic movements II</h2>
+
+<p>El primer video de Derek decidí saltármelo, ya que todos los comandos estarían
+cubiertos con los videos de #LinuxIO. En el de <a href="http://vimeo.com/6185584">Movimientos básicos II</a>
+aprendí lo siguiente:</p>
+
+<ul>
+<li><code>H</code> mueve el cursor a la cabecera (<strong>h</strong>ead) del texto que se muestra en pantalla</li>
+<li><code>M</code> mueve el cursor a la parte <strong>m</strong>edia del texto en pantalla</li>
+<li><code>L</code> mueve el cursor a la última (<strong>l</strong>ast) línea del texto en pantalla</li>
+<li><code>&lt;número&gt;G</code> nos lleva a la línea número <code>&lt;número&gt;</code></li>
+<li><code>#</code> busca la palabra sobre la que buscamos, pero hacia atrás. Es como el comando
+que ya vi anteriormente <code>*</code></li>
+<li><code>g*</code> busca el texto, como <code>*</code>, pero no tiene porqué ser la palabra completa</li>
+</ul>
+
+
+<h2>(12-10-2014) Derek Wyatt: Basic movements III</h2>
+
+<p>En el video de <a href="http://vimeo.com/6216655">Movimientos básicos III</a> ya no podían quedar
+muchos más movimientos que aprender, y la verdad es que los que aquí aparecen son ya
+movimientos un poco más extraños, aunque no por eso dejan de ser útiles.</p>
+
+<ul>
+<li><code>:help motion.txt</code> para ver la ayuda sobre movimientos, para que no se olvide
+ninguno</li>
+<li><code>]]</code> mueve el cursor hasta el siguiente carácter <code>{</code> que exista en la columna 0.
+Ideal para movernos por ficheros de código. Existen otras combinaciones, como
+<code>[[</code>, <code>[]</code> y <code>][</code>, pero actuando sólo sobre la columna 0, no sé si les voy a sacar
+mucho provecho.</li>
+</ul>
+
+
+<p>El plugin <a href="http://www.vim.org/scripts/script.php?script_id=39">matchit</a> amplía la
+funcionalidad del comando <code>%</code> (que movía el cursor hasta el siguiente carácter
+complementario: de <code>(</code> a <code>)</code>, de <code>[</code> a <code>]</code>, &#8230;).</p>
+
+<p><code>:help marks</code> para conocer acerca de marcadores. No los suelo utilizar en mi día
+a día, pero no está de más saber que existen.</p>
+
+<ul>
+<li><code>m&lt;tecla&gt;</code> define un marcador en <code>&lt;tecla&gt;</code></li>
+<li><code>'&lt;tecla&gt;</code> nos mueve al marcador definido en <code>&lt;tecla&gt;</code></li>
+<li><code>''</code> nos lleva al último lugar donde editamos, ya que Vim almacena en <code>'</code> dicha
+posición de forma automática</li>
+</ul>
+
+
+<h2>(13-10-2014) Derek Wyatt: basic editing I</h2>
+
+<p>No es que aprendiera mucho en el video de <a href="http://vimeo.com/6329762">Edición básica</a> de
+Derek, pero la mayoría de comandos ya estaban cubiertos con los videos de #LinuxIO.</p>
+
+<ul>
+<li><code>x</code> borra el carácter donde esta el cursor. <code>X</code> borra hacia atrás</li>
+<li><code>r</code> <strong>r</strong>eemplaza un carácter. <code>R</code> <strong>r</strong>eemplaza varios carácteres, hasta que pulsemos <code>ESC</code>.
+<code>5rx</code> reemplaza 5 caracteres por una <code>x</code>.</li>
+</ul>
+
+
+<p>El comando <code>:set cpoptions+=$</code> configura una funcionalidad adicional para el
+comando <code>c</code> (<strong>c</strong>ambiar). Lo que hace es que aparezca el carácter <code>$</code> al
+final del texto que se va a cambiar.</p>
+
+<h2>(13-10-2104) Derek Wyatt: basic editing II</h2>
+
+<p>No hay gran cosa que destacar en el video de
+<a href="http://vimeo.com/6332848">Edición básica II</a>.</p>
+
+<ul>
+<li><code>F&lt;carácter&gt;</code> encontrar (<strong>f</strong>ind) un carácter hacia atrás</li>
+<li><code>J</code> une (<strong>j</strong>oin) una línea con la inmediatamente inferior. <code>gj</code> une dos líneas
+sin dejar ningún espacio en blanco.</li>
+<li><code>gv</code> selecciona el último bloque visual</li>
+</ul>
+
+
+<h2>(13-10-2014) Derek Wyatt: working with many files I</h2>
+
+<p>En el episodio de <a href="https://vimeo.com/6306508">Múltiples ficheros I</a> aprendí un
+manejo básico de buffers, es decir, manejar varios ficheros a la vez.</p>
+
+<ul>
+<li><code>:e &lt;fichero&gt;</code> abre un buffer con ese <fichero></li>
+<li><code>:ls</code> lista todos los buffers abiertos</li>
+<li><code>:buffer &lt;número&gt;</code> cambia al buffer número <code>&lt;número&gt;</code>. <code>:b &lt;nombre&gt;</code> cambia al
+buffer del fichero con el nombre <code>&lt;nombre&gt;</code>. <code>b#</code> cambia al buffer anterior.</li>
+<li><code>:bdelete</code> o <code>bd</code> cierra el buffer abierto en ese momento</li>
+<li><code>:%bd</code> cierra todos los buffers (<code>%</code> significa <em>todo el rango</em>)</li>
+</ul>
+
+
+<h2>(13-10-2014) Derek Wyatt: working with many files II</h2>
+
+<p>El episodio de <a href="https://vimeo.com/6307101">Múltiples ficheros II</a> sigue enseñándome
+a manejar varios buffers o ficheros a la vez.</p>
+
+<ul>
+<li><code>:wn</code> (<strong>w</strong>rite and move <strong>n</strong>ext), escribe el buffer actual y se mueve al
+siguiente</li>
+<li><code>:n</code> mueve al siguiente (<strong>n</strong>ext) buffer</li>
+<li><code>:bufdo &lt;comando&gt;</code> ejecuta el comando en todos y cada uno de los buffers
+abiertos</li>
+<li><code>:wall</code> escribe todos (<strong>all</strong>) los buffers</li>
+<li><code>:bfirst</code> se mueve al primer buffer. <code>:bn</code> se mueve al siguiente. <code>:bp</code> se
+mueve al anterior (<strong>p</strong>revious)</li>
+</ul>
+
+
+<p>Todos estos comandos son potentes si se usa <strong>una sola sesión de Vim</strong>, y
+son inútiles si tienes abiertos N Vims con N ficheros. Así que recuerda:
+una sola sesión de Vim.</p>
+
+<h2>(13-10-2014) Derek Wyatt: working with many files III</h2>
+
+<p>En el <a href="https://vimeo.com/6342264">último episodio sobre múltiples ficheros</a>
+hay más y más comandos que aprender, a cual más útil.</p>
+
+<ul>
+<li><code>CTRL-w o</code> te deja con sólo una ventana abierta</li>
+<li><code>:split &lt;fichero&gt;</code>, <code>:sp &lt;fichero&gt;</code> divide la pantalla y abre una ventana debajo
+de otra con el nuevo fichero</li>
+<li><code>CTRL-w x</code> intercambia (e<strong>x</strong>change) dos ventanas</li>
+<li><code>CTRL-w v</code> divide la pantalla en vertical, mostrando dos ventanas con el mismo
+buffer. También se puede hacer con <code>:vsplit</code> o <code>:vsp</code></li>
+<li><code>CTRL-w</code> seguido de <code>h</code>, <code>j</code>, <code>k</code> o <code>l</code> te permite moverte de ventana en ventana
+igual que si lo estuvieras haciendo dentro de un fichero</li>
+<li><code>CTRL-w</code> seguido de <code>H</code>, <code>J</code>, <code>K</code> o <code>L</code> mueve la ventana a la derecha, abajo,
+arriba o a la derecha</li>
+<li><code>CTRL-w p</code> mueve el cursor a la última ventana visitada</li>
+<li><code>CTRL-w c</code> <strong>c</strong>ierra la ventana</li>
+<li><p><code>CRTL-w</code> mueve el cursor a la siguiente ventana, de una en una, una especie de
+<code>CTRL-TAB</code> o así</p></li>
+<li><p><code>CTRL-w c</code> <strong>c</strong>ierra la ventana</p></li>
+<li><code>CRTL-w</code> mueve el cursor a la siguiente ventana, de una en una, una especie de
+<code>CTRL-TAB</code> o así</li>
+</ul>
+
+
+<h2>(14-10-2014) Derek Wyatt: how to use the help system</h2>
+
+<p>Para aprender acerca de <a href="http://vimeo.com/7035132">cómo usar la ayuda</a> este
+video es lo mejor, aquí va un resumen:</p>
+
+<ul>
+<li><code>:help</code> o <code>:h</code> abre una ventana como si fuera un buffer donde muestra la ayuda</li>
+<li><code>CTRL+]</code> para seguir un hiperenlace de la ayuda (no se si funcionara con
+teclado español). <code>CTRL+t</code> para volver hacia atrás</li>
+<li><code>:help &lt;tag&gt;</code> abre la ayuda de una etiqueta. Las etiquetas tienen la forma
+de <code>*:&lt;command&gt;*</code> en la ayuda.</li>
+<li><code>:help &lt;function&gt;()</code> abre la ayuda de una función</li>
+<li>the command <code>wildmenu</code> (o <code>wmnu</code>) habilita el autocompletado de comandos en
+con <code>TAB</code>. Para activarla, escribir <code>:set wildmenu</code>. Para desactivarla
+<code>:set nowildmenu</code></li>
+<li><code>:helpgrep</code> (<code>:helpg</code>) busca un patrón en los ficheros de ayuda. Con el
+filtro <code>[@xx]</code> busca sólo para el lenguaje <code>xx</code>. Para movernos por los resultados
+se puede hacer con <code>:cn</code> (siguiente o <strong>n</strong>ext) o con <code>:cwin</code> nos abre una
+ventana llamada <em>quickfix</em> (<code>:h quickfix</code> para saber más)</li>
+</ul>
+
+
 <!--
-## LinuxIO, Vim avanzado
 
-Mas de @ktzar y @voylinux.
+## () Derek Wyatt: Vim runtime y el fichero .vimrc
 
-¿Qué aprendí?
+Sigo aprendiendo Vim con este tío, esta vez sobre el 
+[fichero de configuración .vimrc y el runtime](http://derekwyatt.org/vim/tutorials/intermediate/#vimrc):
 
-- Invocar línea de comandos desde Vim. Pero le veo una pega, que todavía no sé cómo solucionar. No puedo cambiar el directorio de trabajo, por lo que si edito en ~/documents/js y quiero ejecutar un comando sobre ese directorio, no puedo.
-- Plugin [Nerd Tree]
-- Donde está la configuración de Vim (~/.vimrc)
+- 
 
-## Derek Wyatt, movimientos basicos 1
-
-## Derek Wyatt, movimientos basicos 2
-
-## Derek Wyatt, movimientos basicos 3
 -->
 
 
@@ -3169,101 +3375,6 @@ método con esta pinta:</p>
 <li><a href="https://baurdotnet.wordpress.com/2011/01/31/getting-a-request-parameter-in-a-servlet">Leer un parámetro en un servlet</a></li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Un sencillo servlet HTTP]]></title>
-    <link href="http://rchavarria.github.io/blog/2013/09/03/sencillo-servlet-http/"/>
-    <updated>2013-09-03T13:41:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2013/09/03/sencillo-servlet-http</id>
-    <content type="html"><![CDATA[<div style="margin:2%; padding:2%; background-color:#E0E0E0; ">
-    Find a lightweight English version of this post directly in the <a href="https://github.com/rchavarria/javaee-6-demos/tree/master/simple-http-servlet">source code repository</a>.
-</div>
-
-
-<p>En este post veremos cómo crear un sencillo servlet HTTP. La configuración de dicho
-servlet la haremos mediante anotaciones, y así veremos cómo Java EE 6 puede
-ahorrarnos a los desarrolladores cierto trabajo con ficheros XML de configuración.</p>
-
-<p>Se puede ver el código fuente de la demostración en el directorio
-<a href="https://github.com/rchavarria/javaee-6-demos/tree/master/simple-http-servlet"><code>simple-http-servlet</code></a>
-del repositorio de las demos en github.</p>
-
-<!-- more -->
-
-
-<h2>Demo</h2>
-
-<p>La demostración va a ser muy sencilla: crearemos en servlet, lo configuraremos
-para que responda cuando un usuario visite una página web en concreto, y haremos
-que responda de una forma muy, pero que muy sencilla.</p>
-
-<p>Para ejecutar la demo, simplemente hay que descargase el código fuente y ejecutar
-<code>mvn jetty:run</code> desde el directorio raiz de la demo. Ya se puede ver el resultado
-del servlet visitando
-<a href="http://localhost:8080/SimpleHttpServlet">http://localhost:8080/SimpleHttpServlet</a>.</p>
-
-<p><img class="center" src="http://rchavarria.github.io/images/2013/simple-http-servlet.png" title="Respuesta del servlet" ></p>
-
-<h2>Dependencias</h2>
-
-<p>Para esta demostración usaremos <a href="http://maven.apache.org/">Apache Maven</a> para
-la gestión de dependencias. Esto nos facilitará enormemente nuestra labor de
-programación. Si echamos un vistazo al fichero <code>pom.xml</code> de la demo, podremos
-ver que solamente existe una dependencia externa, <code>javax-servlet-api</code>, que es
-la que nos permitirá crear nuestro servlet.</p>
-
-<h2>El servlet</h2>
-
-<p>Como ya he comentado antes, se trata de un servlet HTTP, luego nuestro servlet
-heredará de <code>javax.servlet.http.HttpServlet</code>.</p>
-
-<p>Java EE 6 nos permite configurar los servlets sin hacer uso del fichero descriptor
-de la aplicación web, <code>web.xml</code>. Esto es posible mediante la anotación <code>@WebServlet</code>.
-Suponiendo que queremos que el servlet responda cuando el usuario visite la dirección
-<code>/SimpleHttpServlet</code>, la signatura de la clase de nuestro servlet quedaría:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="nd">@WebServlet</span><span class="o">(</span><span class="n">urlPatterns</span> <span class="o">=</span> <span class="o">{</span><span class="s">&quot;/SimpleHttpServlet&quot;</span><span class="o">})</span>
-</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">HttpServletDemo</span> <span class="kd">extends</span> <span class="n">HttpServlet</span> <span class="o">{</span>
-</span><span class='line'>    <span class="c1">//...</span>
-</span><span class='line'><span class="o">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>Respuesta del servlet</h3>
-
-<p>El objetivo de la demo es ver cómo configurar un servlet HTTP mediante anotaciones,
-por lo que la respuesta proporcionada por él es lo más sencilla posible: obtiene
-un <code>writer</code> de la respuesta HTTP y escribe un sencillo mensaje en texto plano.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="n">PrintWriter</span> <span class="n">out</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="na">getWriter</span><span class="o">();</span>
-</span><span class='line'><span class="k">try</span><span class="o">{</span>
-</span><span class='line'>    <span class="n">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;&lt;h2&gt;&quot;</span><span class="o">);</span>
-</span><span class='line'>    <span class="n">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;This servlet has been configured simply by: &quot;</span><span class="o">);</span>
-</span><span class='line'>    <span class="n">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;@WebServlet(urlPatterns = {\&quot;/SimpleHttpServlet\&quot;})&quot;</span><span class="o">);</span>
-</span><span class='line'>    <span class="n">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;&lt;/h2&gt;&quot;</span><span class="o">);</span>
-</span><span class='line'><span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
-</span><span class='line'>    <span class="n">out</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
-</span><span class='line'><span class="o">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Para echar un ojo al código fuente, visitar el directorio
-<a href="https://github.com/rchavarria/javaee-6-demos/tree/master/simple-http-servlet"><code>simple-http-servlet</code></a>.</p>
 ]]></content>
   </entry>
   
