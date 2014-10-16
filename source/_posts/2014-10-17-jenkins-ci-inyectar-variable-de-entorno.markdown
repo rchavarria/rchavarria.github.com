@@ -2,8 +2,14 @@
 layout: post
 title: "Jenkins CI: inyectar variable de entorno"
 date: 2014-10-17 08:44
+author: Rubén Chavarría
 comments: true
 categories: 
+- Jenkins
+- Continuous Integration
+published: true
+footer: false
+sidebar: true
 ---
 
 Recientemente, me ha surgido la necesidad de inyectar, o modificar más bien, una
