@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Jenkins CI: inyectar variable de entorno - R. Chavarria's Blog</title>
+  <title>Category: Continuous Integration - R. Chavarria's Blog</title>
   <meta name="author" content="Rub&eacute;n Chavarr&iacute;a">
 
   
-  <meta name="description" content="Recientemente, me ha surgido la necesidad de inyectar, o modificar más bien, una
-variable de entorno en el servidor de integración contínua que &hellip;">
+  <meta name="description" content="Category: Continuous Integration">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@ variable de entorno en el servidor de integración contínua que &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://rchavarria.github.io/blog/2014/10/17/jenkins-ci-inyectar-variable-de-entorno/">
+  <link rel="canonical" href="http://rchavarria.github.ioblog/categories/continuous-integration/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -79,134 +78,36 @@ variable de entorno en el servidor de integración contínua que &hellip;">
   <div id="main">
     <div id="content">
       <div>
-<article class="hentry" role="article">
+<article role="article">
   
   <header>
-    
-      <h1 class="entry-title">Jenkins CI: inyectar variable de entorno</h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-10-17T08:44:00+02:00" pubdate data-updated="true">Oct 17<span>th</span>, 2014</time>
-        
-      </p>
+    <h1 class="entry-title">Category: Continuous Integration</h1>
     
   </header>
-
-
-<div class="entry-content"><p>Recientemente, me ha surgido la necesidad de inyectar, o modificar más bien, una
-variable de entorno en el servidor de integración contínua que usamos en el
-trabajo, <a href="http://www.jenkins-ci.org">Jenkins</a>.</p>
-
-<p>Uno de los <em>jobs</em> de Jenkins necesita una aplicación recientemente instalada, y
-dicha aplicación no está alojada en ningún directorio definido dentro de la
-variable de entorno <code>PATH</code>. Por lo cual, el <em>job</em> fallaba.</p>
-
-<p>Una posible solución a este problema era el de modificar la variable de entorno
-a nivel global, pero eso podría entrar en conflicto con otros <em>jobs</em>. Por lo cual
-decidí cambiarla sólo a nivel de <em>job</em>. Por lo que llegamos a la pregunta:
-¿Cómo se inyecta una variable de entorno en un <em>job</em> de Jenkins?</p>
-
-<!-- more -->
-
-
-<h2>Requisitos</h2>
-
-<p>Para poder hacerlo se requiere tener instalado en plugin
-&#8217;<a href="https://wiki.jenkins-ci.org/display/JENKINS/EnvInject+Plugin">Environment Injector Plugin</a>&#8217;. Este plugin añade una nueva sección en la página
-de configuracion de los trabajos de jenkins: <em>Build Environment</em>.</p>
-
-<h2>Proceso</h2>
-
-<p>Una vez que el plugin está instalado, seguir estos sencillos pasos:</p>
-
-<ol>
-<li>Ir a la página de configuración del trabajo.</li>
-<li>Localizar la sección <em>Build Environment</em>.</li>
-<li>Activar la opcion <em>Inject environment variables to the build process</em> (Inyectar
-variables de entorno en el proceso de construcción).</li>
-<li>En el campo <em>Properties Content</em>, modificar la variable de entorno que necesitamos.</li>
-</ol>
-
-
-<p>En la siguiente imagen se puede ver el texto necesario para inyectar la variable
-<code>PATH</code> en un entorno Linux. A dicha variable le estoy añadiendo una ruta donde
-se encuentra la aplicación que necesita el <em>job</em> que estoy configurando.</p>
-
-<p><img class="center" src="/images/2014/jenkins-build-environment.png"></p>
-
-<p>Este ejemplo muestra como se configura un Jenkins instalado en un Linux, en
-Windows se utilizaría de otra forma ya que las variables de entorno no
-son exactamente iguales, así como la configuración de las mismas.</p>
-</div>
-
-
-  <footer>
-    <p class="meta">
-      
   
-
-<span class="byline author vcard">Posted by <span class="fn">Rubén Chavarría</span></span>
-
-      
-
-
-
-
-
+  <div id="blog-archives" class="category">
 
 
 
   
+  <h2>2014</h2>
+
+<article>
+  
+<h1><a href="/blog/2014/10/17/jenkins-ci-inyectar-variable-de-entorno/">Jenkins CI: inyectar variable de entorno</a></h1>
+<time datetime="2014-10-17T08:44:00+02:00" pubdate><span class='month'>Oct</span> <span class='day'>17</span> <span class='year'>2014</span></time>
+
+<footer>
+  <span class="categories">posted in <a class='category' href='/blog/categories/continuous-integration/'>Continuous Integration</a>, <a class='category' href='/blog/categories/jenkins/'>Jenkins</a></span>
+</footer>
 
 
-<time datetime="2014-10-17T08:44:00+02:00" pubdate data-updated="true">Oct 17<span>th</span>, 2014</time>
-      
-
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/continuous-integration/'>Continuous Integration</a>, <a class='category' href='/blog/categories/jenkins/'>Jenkins</a>
-  
-</span>
-
-
-    </p>
-    
-      <div class="sharing">
-  
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rchavarria.github.io/blog/2014/10/17/jenkins-ci-inyectar-variable-de-entorno/" data-via="rchavarriat" data-counturl="http://rchavarria.github.io/blog/2014/10/17/jenkins-ci-inyectar-variable-de-entorno/" >Tweet</a>
-  
-  
-  
-</div>
-
-    
-    <p class="meta">
-      
-        <a class="basic-alignment left" href="/blog/2014/10/11/aprendiendo-vim/" title="Previous Post: Aprendiendo Vim">&laquo; Aprendiendo Vim</a>
-      
-      
-    </p>
-  </footer>
 </article>
 
-  <section>
-    <h1>Comments</h1>
-    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
-  </section>
+
+  
+</article>
 
 </div>
 
@@ -285,10 +186,7 @@ son exactamente iguales, así como la configuración de las mismas.</p>
       var disqus_shortname = 'rchavarria-github-com';
       
         
-        // var disqus_developer = 1;
-        var disqus_identifier = 'http://rchavarria.github.io/blog/2014/10/17/jenkins-ci-inyectar-variable-de-entorno/';
-        var disqus_url = 'http://rchavarria.github.io/blog/2014/10/17/jenkins-ci-inyectar-variable-de-entorno/';
-        var disqus_script = 'embed.js';
+        var disqus_script = 'count.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

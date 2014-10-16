@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Continuous Integration | R. Chavarria's Blog]]></title>
+  <link href="http://rchavarria.github.io/blog/categories/continuous-integration/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.io/"/>
+  <updated>2014-10-17T00:21:51+02:00</updated>
+  <id>http://rchavarria.github.io/</id>
+  <author>
+    <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Jenkins CI: inyectar variable de entorno]]></title>
+    <link href="http://rchavarria.github.io/blog/2014/10/17/jenkins-ci-inyectar-variable-de-entorno/"/>
+    <updated>2014-10-17T08:44:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2014/10/17/jenkins-ci-inyectar-variable-de-entorno</id>
+    <content type="html"><![CDATA[<p>Recientemente, me ha surgido la necesidad de inyectar, o modificar más bien, una
+variable de entorno en el servidor de integración contínua que usamos en el
+trabajo, <a href="http://www.jenkins-ci.org">Jenkins</a>.</p>
+
+<p>Uno de los <em>jobs</em> de Jenkins necesita una aplicación recientemente instalada, y
+dicha aplicación no está alojada en ningún directorio definido dentro de la
+variable de entorno <code>PATH</code>. Por lo cual, el <em>job</em> fallaba.</p>
+
+<p>Una posible solución a este problema era el de modificar la variable de entorno
+a nivel global, pero eso podría entrar en conflicto con otros <em>jobs</em>. Por lo cual
+decidí cambiarla sólo a nivel de <em>job</em>. Por lo que llegamos a la pregunta:
+¿Cómo se inyecta una variable de entorno en un <em>job</em> de Jenkins?</p>
+
+<!-- more -->
+
+
+<h2>Requisitos</h2>
+
+<p>Para poder hacerlo se requiere tener instalado en plugin
+'<a href="https://wiki.jenkins-ci.org/display/JENKINS/EnvInject+Plugin">Environment Injector Plugin</a>'. Este plugin añade una nueva sección en la página
+de configuracion de los trabajos de jenkins: <em>Build Environment</em>.</p>
+
+<h2>Proceso</h2>
+
+<p>Una vez que el plugin está instalado, seguir estos sencillos pasos:</p>
+
+<ol>
+<li>Ir a la página de configuración del trabajo.</li>
+<li>Localizar la sección <em>Build Environment</em>.</li>
+<li>Activar la opcion <em>Inject environment variables to the build process</em> (Inyectar
+variables de entorno en el proceso de construcción).</li>
+<li>En el campo <em>Properties Content</em>, modificar la variable de entorno que necesitamos.</li>
+</ol>
+
+
+<p>En la siguiente imagen se puede ver el texto necesario para inyectar la variable
+<code>PATH</code> en un entorno Linux. A dicha variable le estoy añadiendo una ruta donde
+se encuentra la aplicación que necesita el <em>job</em> que estoy configurando.</p>
+
+<p><img class="center" src="/images/2014/jenkins-build-environment.png"></p>
+
+<p>Este ejemplo muestra como se configura un Jenkins instalado en un Linux, en
+Windows se utilizaría de otra forma ya que las variables de entorno no
+son exactamente iguales, así como la configuración de las mismas.</p>
+]]></content>
+  </entry>
+  
+</feed>
