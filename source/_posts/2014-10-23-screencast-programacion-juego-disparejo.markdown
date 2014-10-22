@@ -13,13 +13,13 @@ sidebar: true
 ---
 
 En este post te presento un screencast que he creado mostrándote cómo resuelvo
-un problema de programacion. Todo empezó viendo los 
+un problema de programación. Todo empezó viendo los 
 [Screencasts de programación de Carlos Blé].
 Deberías echarles un vistazo, merecen la pena, en serio.
 
 Me gustaron tanto que me pregunté si podría crear yo algunos. Por aquel tiempo
 estaba trasteando con un problema de solveet.com, el [Juego del disparejo].
-Así que tenia todo: el gusanillo de crear algo, y un problema sobre el que
+Así que tenía todo: el gusanillo de crear algo, y un problema sobre el que
 trabajar.
 
 <!-- more -->
@@ -36,7 +36,7 @@ nada en particular, si no porque lo estoy aprendiendo, y para ello me
 da por resolver problemas de programación (donde solveet.com entra en
 juego). 
 
-El proceso que sigo es el ciclo TDD: red -> green -> refactor. Para evolucionar
+El proceso que sigo es el ciclo TDD: red ➭ green ➭ refactor. Para evolucionar
 el código y las refactorizaciones, aplico técnicas aprendidas de [Carlos] y
 sus screencasts, así como las [Transformation Priority Premise] del
 gran maestro [Uncle Bob].
