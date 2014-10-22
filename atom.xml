@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2014-10-17T00:21:51+02:00</updated>
+  <updated>2014-10-23T00:33:15+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,46 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Screencast de programacion: el Juego del disparejo]]></title>
+    <link href="http://rchavarria.github.io/blog/2014/10/23/screencast-programacion-juego-disparejo/"/>
+    <updated>2014-10-23T00:12:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2014/10/23/screencast-programacion-juego-disparejo</id>
+    <content type="html"><![CDATA[<p>En este post te presento un screencast que he creado mostrándote cómo resuelvo
+un problema de programación. Todo empezó viendo los
+<a href="http://www.carlosble.com/screencasts/es/">Screencasts de programación de Carlos Blé</a>.
+Deberías echarles un vistazo, merecen la pena, en serio.</p>
+
+<p>Me gustaron tanto que me pregunté si podría crear yo algunos. Por aquel tiempo
+estaba trasteando con un problema de solveet.com, el <a href="http://www.solveet.com/exercises/Juego-del-disparejo/306">Juego del disparejo</a>.
+Así que tenía todo: el gusanillo de crear algo, y un problema sobre el que
+trabajar.</p>
+
+<!-- more -->
+
+
+
+
+<iframe src="http://rchavarria.github.io//player.vimeo.com/video/109688257" 
+        width="500"
+        height="281"
+        frameborder="0"
+        webkitallowfullscreen mozallowfullscreen allowfullscreen>
+</iframe>
+
+
+<p>El problema lo resuelvo con el lenguaje de programación <a href="http://dartlang.org/">Dart</a>. No por
+nada en particular, si no porque lo estoy aprendiendo, y para ello me
+da por resolver problemas de programación (donde solveet.com entra en
+juego).</p>
+
+<p>El proceso que sigo es el ciclo TDD: red ➭ green ➭ refactor. Para evolucionar
+el código y las refactorizaciones, aplico técnicas aprendidas de <a href="http://www.carlosble.com">Carlos</a> y
+sus screencasts, así como las <a href="http://blog.8thlight.com/uncle-bob/2013/05/27/TheTransformationPriorityPremise.html">Transformation Priority Premise</a> del
+gran maestro <a href="https://en.wikipedia.org/wiki/Robert_Cecil_Martin">Uncle Bob</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Jenkins CI: inyectar variable de entorno]]></title>
@@ -3227,154 +3267,6 @@ atributo que estableció el servlet, al que hemos llamado <code>params</code>.</
 
 <p>Para echar un ojo al código fuente, visitar el directorio
 <a href="https://github.com/rchavarria/javaee-6-demos/tree/master/request-parameters-jsp"><code>request-parameters-jsp</code></a>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Leer parámetros desde un servlet]]></title>
-    <link href="http://rchavarria.github.io/blog/2013/09/13/servlet-lee-parametros/"/>
-    <updated>2013-09-13T12:39:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2013/09/13/servlet-lee-parametros</id>
-    <content type="html"><![CDATA[<div style="margin:2%; padding:2%; background-color:#E0E0E0; ">
-    Find a lightweight English version of this post directly in the <a href="https://github.com/rchavarria/javaee-6-demos/tree/master/request-parameters">source code repository</a>.
-</div>
-
-
-<p>En este post veremos cómo un servlet puede leer los parámetros que vienen
-encapsulados en la petición HTTP que realiza un usuario a nuestra aplicación web.
-La configuración de dicho servlet la haremos mediante anotaciones para tener un
-proyecto más sencillo.</p>
-
-<p>Se puede ver el código fuente de la demostración en el directorio
-<a href="https://github.com/rchavarria/javaee-6-demos/tree/master/request-parameters"><code>request-parameters</code></a>
-del repositorio de las demos en github.</p>
-
-<!-- more -->
-
-
-<h2>Demo</h2>
-
-<p>La demostración va a ser muy sencilla: crearemos en servlet, lo configuraremos
-para que responda cuando un usuario envíe los campos de un formulario de login,
-y haremos que responda con una página HTML que incluye una lista con los valores
-de los campos de dicho formulario.</p>
-
-<p>Para ejecutar la demo, simplemente hay que descargase el código fuente y ejecutar
-<code>mvn jetty:run</code> desde el directorio raiz de la demo. Visitar la página de login
-<a href="http://localhost:8080/login.html">http://localhost:8080/login.html</a>, introducir
-unos valores cualquiera y enviar los datos del formulario. Veremos el resultado
-que devuelve el servlet al leer los parámetros de la petición HTTP que hemos
-enviado al servidor.</p>
-
-<p><img class="center" src="http://rchavarria.github.io/images/2013/request-parameters.png" title="Respuesta del servlet" ></p>
-
-<h2>Dependencias</h2>
-
-<p>Para esta demostración usaremos <a href="http://maven.apache.org/">Apache Maven</a> para
-la gestión de dependencias. Esto nos facilitará enormemente nuestra labor de
-programación. Si echamos un vistazo al fichero <code>pom.xml</code> de la demo, podremos
-ver que solamente existe una dependencia externa, <code>javax-servlet-api</code>, que es
-la que nos permitirá crear nuestro servlet.</p>
-
-<h2>Página de login</h2>
-
-<p><img class="right" src="http://rchavarria.github.io/images/2013/login-form.png" title="Respuesta del servlet" ></p>
-
-<p>La entrada a nuestra demo será la página de login, la cual contiene un formulario
-muy simple, con dos campos principales: email del usuario y contraseña.</p>
-
-<p>En el código HTML de la página, se ha establecido la acción del formulario a
-<code>RequestParametersServlet</code>. Ésta va a ser la URL a la que nuestro servlet deberá responder.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">&quot;RequestParametersServlet&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">name=</span><span class="s">&quot;email&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Email address&quot;</span> <span class="na">autofocus</span> <span class="nt">/&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;password&quot;</span> <span class="na">name=</span><span class="s">&quot;password&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Password&quot;</span> <span class="nt">/&gt;</span>
-</span><span class='line'>  
-</span><span class='line'>  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">&quot;submit&quot;</span><span class="nt">&gt;</span>Log me in<span class="nt">&lt;/button&gt;</span>
-</span><span class='line'><span class="nt">&lt;/form&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>El servlet</h2>
-
-<p>Nuestro servlet se trata de un servlet HTTP, luego heredará de <code>javax.servlet.http.HttpServlet</code>.
-Lo configuraremos mediante anotaciones, con <code>@WebServlet</code>. Y retornará un sencillo
-código HTML que mostrará al usuario el valor de los parámetros enviados desde el
-formulario de login.</p>
-
-<p>La definión del servlet quedaría así:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="nd">@WebServlet</span><span class="o">(</span><span class="n">urlPatterns</span> <span class="o">=</span> <span class="o">{</span><span class="s">&quot;/RequestParametersServlet&quot;</span><span class="o">})</span>
-</span><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">RequestParametersServletDemo</span> <span class="kd">extends</span> <span class="n">HttpServlet</span> <span class="o">{</span>
-</span><span class='line'>    <span class="c1">//...</span>
-</span><span class='line'><span class="o">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Mientras que el código que lee los parámetros de la petición HTTP estaría agrupado en un
-método con esta pinta:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">private</span> <span class="n">String</span> <span class="nf">outputParametersList</span><span class="o">(</span><span class="n">HttpServletRequest</span> <span class="n">request</span><span class="o">)</span> <span class="o">{</span>
-</span><span class='line'>    <span class="n">Enumeration</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">names</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">getParameterNames</span><span class="o">();</span>
-</span><span class='line'>  <span class="k">if</span><span class="o">(!</span><span class="n">names</span><span class="o">.</span><span class="na">hasMoreElements</span><span class="o">())</span> <span class="k">return</span> <span class="s">&quot;&quot;</span><span class="o">;</span>
-</span><span class='line'>  
-</span><span class='line'>  <span class="n">StringBuilder</span> <span class="n">sb</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringBuilder</span><span class="o">();</span>
-</span><span class='line'>  
-</span><span class='line'>  <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">&quot;&lt;ul&gt;&quot;</span><span class="o">);</span>
-</span><span class='line'>    <span class="k">while</span><span class="o">(</span><span class="n">names</span><span class="o">.</span><span class="na">hasMoreElements</span><span class="o">())</span> <span class="o">{</span>
-</span><span class='line'>      <span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="n">names</span><span class="o">.</span><span class="na">nextElement</span><span class="o">();</span>
-</span><span class='line'>      <span class="n">String</span> <span class="n">value</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="na">getParameter</span><span class="o">(</span><span class="n">name</span><span class="o">);</span>
-</span><span class='line'>      
-</span><span class='line'>      <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">&quot;&lt;li&gt;&quot;</span><span class="o">);</span>
-</span><span class='line'>        <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">name</span> <span class="o">+</span> <span class="s">&quot;: &quot;</span> <span class="o">+</span> <span class="n">value</span><span class="o">);</span>
-</span><span class='line'>        <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">&quot;&lt;/li&gt;&quot;</span><span class="o">);</span>
-</span><span class='line'>    <span class="o">}</span>
-</span><span class='line'>    <span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">&quot;&lt;/ul&gt;&quot;</span><span class="o">);</span>
-</span><span class='line'>  
-</span><span class='line'>  <span class="k">return</span> <span class="n">sb</span><span class="o">.</span><span class="na">toString</span><span class="o">();</span>
-</span><span class='line'><span class="o">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Para echar un ojo al código fuente, visitar el directorio
-<a href="https://github.com/rchavarria/javaee-6-demos/tree/master/request-parameters"><code>request-parameters</code></a>.</p>
-
-<h2>Enlaces relacionados</h2>
-
-<ul>
-<li><a href="http://theopentutorials.com/examples/java-ee/servlet/get-all-parameters-in-html-form-using-getparameternames">The open tutorials</a>: cómo leer todos los campos de un formulario en un servlet.</li>
-<li><a href="https://baurdotnet.wordpress.com/2011/01/31/getting-a-request-parameter-in-a-servlet">Leer un parámetro en un servlet</a></li>
-</ul>
-
 ]]></content>
   </entry>
   
