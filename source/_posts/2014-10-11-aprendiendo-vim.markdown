@@ -298,14 +298,25 @@ filtro `[@xx]` busca sólo para el lenguaje `xx`. Para movernos por los resultad
 se puede hacer con `:cn` (siguiente o **n**ext) o con `:cwin` nos abre una
 ventana llamada *quickfix* (`:h quickfix` para saber más)
 
-<!--
 
-## () Derek Wyatt: Vim runtime y el fichero .vimrc
+## (23-10-2014) Derek Wyatt: Vim runtime y el fichero .vimrc
 
 Sigo aprendiendo Vim con este tío, esta vez sobre el 
 [fichero de configuración .vimrc y el runtime](http://derekwyatt.org/vim/tutorials/intermediate/#vimrc):
 
-- 
+- El fichero `vimrc` se usa para configurar Vim cuando arranca
+- En Linux, el fichero `vimrc` se encuentra en `~/.vimrc`
+- Puedes escribir los mismos comandos que en el modo comando, cuando empieza por `:`
+- Echar un vistazo a MiniBufExplorer plugin
+- `:h vimrc` para leer la ayuda
+- `nnoremap` es un comando interesante para remapear ciertos comandos
+- `:h 'runtimepath'` muestra la ayuda sobre vim runtime path
+- `~/.vim/` es el runtime path por defecto en Linux. Ahí es donde irán instalados
+los ficheros de ayuda, los plugins, los colores de syntaxis, ...
+- `~/.vim/doc` es donde se guarda la ayuda
+- `~/.vim/colors` es donde se guardan los esquemas de colores
+- `~/.vim/plugin` es donde *viven* los plugins
 
+<!--
 -->
 
