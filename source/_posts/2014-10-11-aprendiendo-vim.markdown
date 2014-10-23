@@ -318,5 +318,24 @@ los ficheros de ayuda, los plugins, los colores de syntaxis, ...
 - `~/.vim/plugin` es donde *viven* los plugins
 
 <!--
+
+## (24-10-2014) Derek Wyatt: Vim modes introduction
+
+Los modos es la característica que diferencia a Vim (sobre todo de emacs, su eterno
+enemigo), y ya iba siendo hora de apreder sobre ellos. Los modos de Vim son:
+normal, visual, inserción, comando y ¿¡ejecución!?, así que aquí va una
+[introducción a los modos de Vim](https://vimeo.com/7129986):
+
+- modo *Normal*: donde puedes introducir los comandos del editor
+- modo *Visual*: como el modo normal, pero según te mueves por el fichero, el texto
+se va resaltando, como si fuera una selección visual
+- modo *Inserción*: es el modo donde se introduce el texto
+- modo *Línea de comandos*: donde puedes introducir comandos en una línea abajo
+del todo de la ventana de Vim. Los comandos comienzan con `:`, `/`, `?` o `!`
+- Y hay otros modos menos usados, que más que modos distintos son como una
+mezcla de varios de los básicos, como el modo *Inserción Normal*, que, estando
+en el modo de inserción, te permite ejecutar un comando (uno sólo) y luego
+vuelve a entrar en el modo de inserción.
+
 -->
 
