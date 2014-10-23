@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Vim | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/vim/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2014-10-23T00:33:15+02:00</updated>
+  <updated>2014-10-24T00:42:44+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -327,14 +327,49 @@ ventana llamada <em>quickfix</em> (<code>:h quickfix</code> para saber más)</li
 </ul>
 
 
+<h2>(23-10-2014) Derek Wyatt: Vim runtime y el fichero .vimrc</h2>
+
+<p>Sigo aprendiendo Vim con este tío, esta vez sobre el
+<a href="http://derekwyatt.org/vim/tutorials/intermediate/#vimrc">fichero de configuración .vimrc y el runtime</a>:</p>
+
+<ul>
+<li>El fichero <code>vimrc</code> se usa para configurar Vim cuando arranca</li>
+<li>En Linux, el fichero <code>vimrc</code> se encuentra en <code>~/.vimrc</code></li>
+<li>Puedes escribir los mismos comandos que en el modo comando, cuando empieza por <code>:</code></li>
+<li>Echar un vistazo a MiniBufExplorer plugin</li>
+<li><code>:h vimrc</code> para leer la ayuda</li>
+<li><code>nnoremap</code> es un comando interesante para remapear ciertos comandos</li>
+<li><code>:h 'runtimepath'</code> muestra la ayuda sobre vim runtime path</li>
+<li><code>~/.vim/</code> es el runtime path por defecto en Linux. Ahí es donde irán instalados
+los ficheros de ayuda, los plugins, los colores de syntaxis, ...</li>
+<li><code>~/.vim/doc</code> es donde se guarda la ayuda</li>
+<li><code>~/.vim/colors</code> es donde se guardan los esquemas de colores</li>
+<li><code>~/.vim/plugin</code> es donde <em>viven</em> los plugins</li>
+</ul>
+
+
+<h2>(24-10-2014) Derek Wyatt: Vim modes introduction</h2>
+
+<p>Los modos es la característica que diferencia a Vim (sobre todo de emacs, su eterno
+enemigo), y ya iba siendo hora de apreder sobre ellos. Los modos de Vim son:
+normal, visual, inserción, comando y ¿¡ejecución!?, así que aquí va una
+<a href="http://derekwyatt.org/vim/tutorials/intermediate/#modes-intro">introducción a los modos de Vim</a>:</p>
+
+<ul>
+<li>modo <em>Normal</em>: donde puedes introducir los comandos del editor</li>
+<li>modo <em>Visual</em>: como el modo normal, pero según te mueves por el fichero, el texto
+se va resaltando, como si fuera una selección visual</li>
+<li>modo <em>Inserción</em>: es el modo donde se introduce el texto</li>
+<li>modo <em>Línea de comandos</em>: donde puedes introducir comandos en una línea abajo
+del todo de la ventana de Vim. Los comandos comienzan con <code>:</code>, <code>/</code>, <code>?</code> o <code>!</code></li>
+<li>Y hay otros modos menos usados, que más que modos distintos son como una
+mezcla de varios de los básicos, como el modo <em>Inserción Normal</em>, que, estando
+en el modo de inserción, te permite ejecutar un comando (uno sólo) y luego
+vuelve a entrar en el modo de inserción.</li>
+</ul>
+
+
 <!--
-
-## () Derek Wyatt: Vim runtime y el fichero .vimrc
-
-Sigo aprendiendo Vim con este tío, esta vez sobre el 
-[fichero de configuración .vimrc y el runtime](http://derekwyatt.org/vim/tutorials/intermediate/#vimrc):
-
-- 
 
 -->
 
