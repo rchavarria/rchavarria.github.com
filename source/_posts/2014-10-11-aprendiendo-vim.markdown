@@ -335,6 +335,27 @@ mezcla de varios de los básicos, como el modo *Inserción Normal*, que, estando
 en el modo de inserción, te permite ejecutar un comando (uno sólo) y luego
 vuelve a entrar en el modo de inserción.
 
+## (28-10-2014) Derek Wyatt: Insert mode
+
+En este video Derek profundiza en uno de los modos importantes de Vim, el
+[modo de inserción](https://vimeo.com/7133419), en el cual podemos usar
+autocompletado, indentar líneas y muchas cosas más.
+
+- `:help i_CTRL-A` muestra la ayuda para la combinación de teclas `CTRL a` pero
+exclusivamente para el modo de inserción, de ahí el `i_`
+- `expandtab` es una opción que indica el número de espacios a insertar cuando
+se presiona la tecla `TAB`
+- `CTRL w` borra la palabra anterior (si estamos en modo de inserción)
+- `CTRL t` incrementa en uno la indentación
+- `CTRL d` decrementa en uno la indentación
+- `:help ins-special-special` muestra la ayuda de comandos en el modo inserción,
+como por ejemplo `CTRL g j` para mover el cursor una línea abajo.
+- `CTRL m`, `CTRL p` busca palabras para autocompletar buscando hacia abajo o
+hacia arriba
+- `CTRL x` + `CTRL l` autocompleta líneas enteras, es decir, en lugar de buscar
+palabrejas, busca líneas completas.
+- `CTRL x` + `CTRL f` autocompleta rutas de ficheros
+
 <!--
 
 -->
