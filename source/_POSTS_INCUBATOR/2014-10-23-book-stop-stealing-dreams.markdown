@@ -31,7 +31,29 @@ Notas acerca del libro 'Stop stealing dreams', de Seth Godin
 - the world changed first, now it's time for school to follow along
 - nowadays, reputation is worth more than test scores. access to data means that data isn't the valuable part, the processin is
 - en lugar de aislar estudiantes, deberiamos conectarlos : trabajo en grupo, clases intractivas, ...
-
+- transparency is missing, in search of power, control and independence, administrators hide informaiton from teachers and vice-versa
+- *connection economy* Students have the ability to easily do outside resarch and to discover that the teacher (or her textbook) is just plain wrong.
+- School is a kind of *contract of adhesion*, that means, a take-it-or-leave-it mass deal. There is no individual negotiation possible.
+- we don't ask students to decide to participate, we assume the contract of adhesion
+- great doctors are great because they made the choice
+- the shortcut for achieving the school goal (make compliant citizens) is **fear**. do this or we'll tell your parents, be suspended, ...
+- there really are only two tools available to the educator: fear and passion
+- the problem is that individual passion is hard to scale
+- la escuela enseña cosas que se dan por sentadas, que no admiten dudas. pero la nueva deberia enseñar duda razonable, ucestionarse científicamente las cosas
+- John Stuart Mill: it's better to be a human being dissatisfied than a pig satisfied; better to be Socrates dissatisfied than a fool satisfied
+- Bravery in school is pushined, not rewarded
+- school, no surprise, is focused on crating hourly workers. it downplays group work, breaks tasks into the smallest possible measurable units, does nothing to coordinate teaching, isolates teachres into departments. It measure individual level
+- every one of those behaviors is a mirror of what hapens in the factory in 1937
+- scarce skills combinde with even scarcer attitudes almost always lead to low unemployment and high wages
+- Judgement, skill, and attitude are the new replacements for obedience
+- It used to be simple: the teacher was teh cop, the lecturer, the source of answers, and the gatekeeper to resources. We don't need a human being standing next to us to lecture us on how to find the saquare root of a number or sharpen an axe. What we do need is someone to persuade us that we want to learn those things
+- competent people solve a problem the same way, every time
+- competence is the enemy of change
+- incompetent worker is one who will break the rules and find me something no one else can
+- we're entering a revolution of ideas while producing a generation that wants instructions instead
+- the only barrier to learning, is now merely the decision to learn
+- a surplus of obedient hourly workers leads to unemployment, not more factories. on the other hand, creative jobs lead to more creative jobs.
+- 
 
 Algunos recursos relacionados:
 - [No digitalicemos los libros de texto](http://www.enriquedans.com/2014/09/no-digitalicemos-el-libro-de-texto.html), de Enrique Dans
