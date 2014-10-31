@@ -53,7 +53,19 @@ Notas acerca del libro 'Stop stealing dreams', de Seth Godin
 - we're entering a revolution of ideas while producing a generation that wants instructions instead
 - the only barrier to learning, is now merely the decision to learn
 - a surplus of obedient hourly workers leads to unemployment, not more factories. on the other hand, creative jobs lead to more creative jobs.
-- 
+- school is a factory, and the output of that factory is complaiant workers who buy a lot of stuff. These students are trained to dream small dreams.
+- The economy demands that we pick ourselves to have big dreams.
+- willpower can be tought by teachers and parents. search for Kelly McGonigal and Roy Baumeister
+- Teacher intentionally humiliated him, for one clear reason (teacher was in charge): "you will conform and you will meet the quality standards or you willl be punished"
+- is it too risky to do the right thing? can parents try to get it right? why should the school do that job and not parent? what matters is that finding a path that might be better is just too risky for someone who has only one chance to raise his kids properly.
+- David Weinberger: "las redes de personas, la conexión entre personas (como en una clase) pueden hacernos más inteligentes o más estúpidos"
+- the only way for a student to get respect inside school is to earn temporary aproval from a teacher he wont likely see again any time soon. if that teacher is mercurial, petty, or inconsistent, the studen is told to deal with it. -> es muy fuerte no, tener que contentar a alguien a quien no vas a ver en la p$%& vida
+- Cultural literacy, common store of knowledge will never be infinite, and what's more imporant, we canot drill and practice it into a population tat has so many fascinating or easy diversions availbable as alternatives: tv, youtube, ...
+- if we teach our students to be passionate, ethical, and inquisitive, I'm confident that the facts will follow
+- They are too lazy to ask their colleagues if there's a better way. they don't look for tips or ways to break or open or fix or improve. they self-describe as Dummies and give up. they make no effort, acting out of fear instead of passion. That forward-learning posture is teachable -> passion is teachable?
+-  
+
+
 
 Algunos recursos relacionados:
 - [No digitalicemos los libros de texto](http://www.enriquedans.com/2014/09/no-digitalicemos-el-libro-de-texto.html), de Enrique Dans
