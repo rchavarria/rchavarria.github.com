@@ -356,6 +356,36 @@ hacia arriba
 palabrejas, busca líneas completas.
 - `CTRL x` + `CTRL f` autocompleta rutas de ficheros
 
+## (02-11-2014) Derek Wyatt: One Vim... just one
+
+Es cortito video acerca de [mantener una y solo una sesión de Vim](http://vimeo.com/4446112)
+se enfoca en solamente un comando de la shell:
+
+    gvim --remote-silent
+
+Este sencillo comando nos permite abrir varios ficheros en una única sesión
+gráfica de vim.
+
+Tal y como dicen los comentarios del vídeo, este comando solamente funciona por
+defecto en la interfaz gráfica de Vim, no en la versión de Vim que se ejecuta
+en la línea de comandos.
+
+## (02-11-2014) Derek Wyatt: Destroying is good
+
+En este video Derek muestra cómo utilizar
+[comandos destructivos para editar](http://vimeo.com/6110008)
+el contenido que queremos.
+
+Comandos utilizados:
+
+- `:v/<some pattern>/<some command>`: es el comando `:vglobal` (usar `:help :vglobal`
+para saber más). Este comando realiza acciones sobre líneas que NO cumplen el patrón
+especificado.
+- `:help :substitute` muestra ayuda del comando utilizado para sustituir unas cadenas
+por otras.
+- Expresiones regulares, que son ya un problema en sí mismas y que darían para
+mucho tiempo de aprendizaje.
+
 <!--
 
 -->
