@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2014-11-02T01:23:40+01:00</updated>
+  <updated>2014-11-02T21:17:09+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -619,6 +619,40 @@ hacia arriba</li>
 <li><code>CTRL x</code> + <code>CTRL l</code> autocompleta líneas enteras, es decir, en lugar de buscar
 palabrejas, busca líneas completas.</li>
 <li><code>CTRL x</code> + <code>CTRL f</code> autocompleta rutas de ficheros</li>
+</ul>
+
+
+<h2>(02-11-2014) Derek Wyatt: One Vim&#8230; just one</h2>
+
+<p>Es cortito video acerca de <a href="http://vimeo.com/4446112">mantener una y solo una sesión de Vim</a>
+se enfoca en solamente un comando de la shell:</p>
+
+<pre><code>gvim --remote-silent
+</code></pre>
+
+<p>Este sencillo comando nos permite abrir varios ficheros en una única sesión
+gráfica de vim.</p>
+
+<p>Tal y como dicen los comentarios del vídeo, este comando solamente funciona por
+defecto en la interfaz gráfica de Vim, no en la versión de Vim que se ejecuta
+en la línea de comandos.</p>
+
+<h2>(02-11-2014) Derek Wyatt: Destroying is good</h2>
+
+<p>En este video Derek muestra cómo utilizar
+<a href="http://vimeo.com/6110008">comandos destructivos para editar</a>
+el contenido que queremos.</p>
+
+<p>Comandos utilizados:</p>
+
+<ul>
+<li><code>:v/&lt;some pattern&gt;/&lt;some command&gt;</code>: es el comando <code>:vglobal</code> (usar <code>:help :vglobal</code>
+para saber más). Este comando realiza acciones sobre líneas que NO cumplen el patrón
+especificado.</li>
+<li><code>:help :substitute</code> muestra ayuda del comando utilizado para sustituir unas cadenas
+por otras.</li>
+<li>Expresiones regulares, que son ya un problema en sí mismas y que darían para
+mucho tiempo de aprendizaje.</li>
 </ul>
 
 
