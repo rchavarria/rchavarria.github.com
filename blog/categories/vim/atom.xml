@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Vim | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/vim/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2014-10-24T00:42:44+02:00</updated>
+  <updated>2014-11-02T01:23:40+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -366,6 +366,30 @@ del todo de la ventana de Vim. Los comandos comienzan con <code>:</code>, <code>
 mezcla de varios de los básicos, como el modo <em>Inserción Normal</em>, que, estando
 en el modo de inserción, te permite ejecutar un comando (uno sólo) y luego
 vuelve a entrar en el modo de inserción.</li>
+</ul>
+
+
+<h2>(28-10-2014) Derek Wyatt: Insert mode</h2>
+
+<p>En este video Derek profundiza en uno de los modos importantes de Vim, el
+<a href="https://vimeo.com/7133419">modo de inserción</a>, en el cual podemos usar
+autocompletado, indentar líneas y muchas cosas más.</p>
+
+<ul>
+<li><code>:help i_CTRL-A</code> muestra la ayuda para la combinación de teclas <code>CTRL a</code> pero
+exclusivamente para el modo de inserción, de ahí el <code>i_</code></li>
+<li><code>expandtab</code> es una opción que indica el número de espacios a insertar cuando
+se presiona la tecla <code>TAB</code></li>
+<li><code>CTRL w</code> borra la palabra anterior (si estamos en modo de inserción)</li>
+<li><code>CTRL t</code> incrementa en uno la indentación</li>
+<li><code>CTRL d</code> decrementa en uno la indentación</li>
+<li><code>:help ins-special-special</code> muestra la ayuda de comandos en el modo inserción,
+como por ejemplo <code>CTRL g j</code> para mover el cursor una línea abajo.</li>
+<li><code>CTRL m</code>, <code>CTRL p</code> busca palabras para autocompletar buscando hacia abajo o
+hacia arriba</li>
+<li><code>CTRL x</code> + <code>CTRL l</code> autocompleta líneas enteras, es decir, en lugar de buscar
+palabrejas, busca líneas completas.</li>
+<li><code>CTRL x</code> + <code>CTRL f</code> autocompleta rutas de ficheros</li>
 </ul>
 
 

@@ -300,7 +300,7 @@
     </url>
     <url>
         <loc>http://rchavarria.github.io/blog/2014/10/11/aprendiendo-vim/</loc>
-        <lastmod>2014-10-24T00:42:06+02:00</lastmod>
+        <lastmod>2014-10-29T00:50:50+01:00</lastmod>
     </url>
     <url>
         <loc>
@@ -313,6 +313,10 @@
             http://rchavarria.github.io/blog/2014/10/23/screencast-programacion-juego-disparejo/
         </loc>
         <lastmod>2014-10-23T00:32:57+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://rchavarria.github.io/blog/2014/11/02/mi-primer-katayuno/</loc>
+        <lastmod>2014-11-02T01:21:32+01:00</lastmod>
     </url>
     <url>
         <loc>http://rchavarria.github.io/pet-projects/</loc>
@@ -332,10 +336,10 @@
     </url>
     <url>
         <loc>http://rchavarria.github.io/</loc>
-        <lastmod>2014-10-24T00:42:06+02:00</lastmod>
+        <lastmod>2014-11-02T01:21:32+01:00</lastmod>
     </url>
     <url>
         <loc>http://rchavarria.github.io/blog/archives/</loc>
-        <lastmod>2014-10-24T00:42:06+02:00</lastmod>
+        <lastmod>2014-11-02T01:21:32+01:00</lastmod>
     </url>
 </urlset>

@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2014-10-24T00:42:44+02:00</updated>
+  <updated>2014-11-02T01:23:40+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,143 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Mi primer katayuno]]></title>
+    <link href="http://rchavarria.github.io/blog/2014/11/02/mi-primer-katayuno/"/>
+    <updated>2014-11-02T01:14:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2014/11/02/mi-primer-katayuno</id>
+    <content type="html"><![CDATA[<p>El pasado 25 de octubre asistí a un <a href="http://katayunos.com">katayuno</a> organizado por <a href="http://aprendiendotdd.com">Aprendiendo TDD</a>.
+Esta pequeña reunión tuvo lugar en <a href="http://www.materiagriscoworking.com">MateriaGris Coworking</a>, un espacio de coworking
+que ha montado un gran amigo mío.</p>
+
+<p>El katayuno consistía en resolver un sencillísimo problema (el tema no es resolver
+un gran problema sino practicar TDD): desarrollar un método que, tomando como parámetros
+dos números enteros <code>a</code> y <code>b</code>, devuelva una lista con el doble de todos los números
+impares entre ambos. Realizamos dos iteraciones, cada vez haciendo <em>pair programming</em>
+con una pareja distinta.</p>
+
+<p>En este post voy a describir cómo fueron mis dos iteraciones, y algo de código <a href="http://dartlang.org">Dart</a> que
+he escrito después intentando simularlas, para poder ilustrar todo el proceso.</p>
+
+<!-- more -->
+
+
+<h2>Iteración 1</h2>
+
+<p>En este primera iteración seguimos unos pasos que a mí me parecían correctos.
+Empezamos solucionando los casos más sencillos, como aquellos que el resultado
+era una lista vacía por ejemplo, para terminar con los más complicados. Estos
+pasos me parecían correctos, quizá porque estoy acostumbrado a resolverlos de
+ese modo.</p>
+
+<p>Más tarde, como vimos en la pequeña restrospectiva de la iteración mi pareja
+y yo mostramos nuestro código, y criticaron bastante nuestro código, la verdad.
+No es nada malo, de hecho, aprendimos bastante y otras parejas nos enseñaron
+otro enfoque que me pareció interesante.</p>
+
+<p>Al final de la iteración, nuestro código quedó más o menos así:</p>
+
+<pre><code>class OddDoubler {
+
+    List&lt;int&gt; compute(int a, int b) {
+        List&lt;int&gt; list = new List&lt;int&gt;();
+
+        while (a &lt;= b) {
+            if (isOdd(a)) {
+                list.add(a * 2);
+            }
+            a++;
+        }
+
+        return list;
+    }
+
+    boolean isOdd(n) =&gt; n % 2 != 0;
+}
+</code></pre>
+
+<p>El código completo, incluidos tests:
+<a href="https://github.com/rchavarria/katayuno-octubre-2014/blob/master/iteration-1/odd-doubles.dart">iteración 1</a>.</p>
+
+<p>A mí, personalmente, el código de producción me gusta, sencillo y
+al grano. Pero para llegar a él, hay un paso,
+<a href="https://github.com/rchavarria/katayuno-octubre-2014/commit/135d644fdbe75c5c8d6e17cd8f1461f7eaac67ce">donde introducimos el bucle while</a>
+que quizá sea un paso demasiado grande, por lo que quizá los tests
+elegidos no sean los más adecuados.</p>
+
+<h2>Iteración 2</h2>
+
+<p>En esta segunda iteración cambiamos de pareja. Y también cambiamos la forma
+de atacar el problema. Esta vez, siguiendo los consejos de los compañeros
+de la iteración anterior, decidimos resolver el problema avanzando por
+estados intermedios. Así que esta vez, no solucionamos el problema
+desde los casos más sencillos hasta los más complicados.</p>
+
+<p>Decidimos que los pasos intermedios serían:</p>
+
+<ul>
+<li>Decidir si un número is impar o no</li>
+<li>Implementar un método que nos diera una lista de todos los números entre
+dos números dados</li>
+<li>Implementar un método que nos eliminara de una lista los números pares</li>
+<li>Implementar un método que multiplicara por 2 todos los elementos de
+una lista</li>
+</ul>
+
+
+<p>No llegamos a completarlo del todo, la iteración se nos quedó corta, pero
+la idea la implementé más tarde y éste es el resultado de la
+segunda iteración:</p>
+
+<pre><code>class OddDoubler {
+
+    boolean isOdd(int n) =&gt; n % 2 != 0;
+
+    List&lt;int&gt; getNumbers(int a, int b) =&gt; new List&lt;int&gt;.generate((b - a + 1), (int index) =&gt; a + index);
+
+    List&lt;int&gt; filterOdds(List&lt;int&gt; numbers) {
+        numbers.removeWhere((n) =&gt; !isOdd(n));
+        return numbers;
+    }
+
+    List&lt;int&gt; doubleNumbers(List&lt;int&gt; numbers) =&gt; numbers.map((n) =&gt; n * 2);
+
+    // This method should be the only public method
+    // It resolves the KATA
+    List&lt;int&gt; compute(int a, int b) =&gt; doubleNumbers(filterOdds(getNumbers(a, b)));
+}
+</code></pre>
+
+<p>El código completo, incluidos tests:
+<a href="https://github.com/rchavarria/katayuno-octubre-2014/blob/master/iteration-2/odd-doubles.dart">iteración 2</a>.</p>
+
+<p>Me gusta más la aproximación de esta iteración, pero lo que no me gusta
+es que hay métodos públicos que en realidad deberían ser privados. Son
+públicos porque hemos creado tests para comprobar su funcionamiento, pero
+deberían ser privados porque no aportan nada fuera de la implementación
+de la clase.</p>
+
+<p>Como todo en el desarrollo del software, toda decisión tiene su parte
+buena y su parte no tan buena.</p>
+
+<h2>Conclusión</h2>
+
+<p>Es la primera vez que participo en un evento de este tipo, y espero que no
+sea la última. La experiencia me encantó.</p>
+
+<p>Sí, es cierto, en la primera iteración nos dieron bastante caña a mi pareja
+y a mí, pero eso nos sirvió para entender que no todas las aproximaciones son
+igual de buenas, y que hay que ser humilde para tener la mente abierta y
+poder aprender de los demás compañeros.</p>
+
+<p>Este tipo de eventos nos ayudan a ser mejores profesionales, y era mi objetivo
+al participar en él. Gracias a <a href="http://aprendiendotdd.com">Aprendiendo TDD</a> y a <a href="http://www.materiagriscoworking.com">MateriaGris Coworking</a>
+creo que todos aprendimos algo aquella mañana.</p>
+
+<p>Gracias chicos.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Screencast de programacion: el Juego del disparejo]]></title>
@@ -458,6 +595,30 @@ del todo de la ventana de Vim. Los comandos comienzan con <code>:</code>, <code>
 mezcla de varios de los básicos, como el modo <em>Inserción Normal</em>, que, estando
 en el modo de inserción, te permite ejecutar un comando (uno sólo) y luego
 vuelve a entrar en el modo de inserción.</li>
+</ul>
+
+
+<h2>(28-10-2014) Derek Wyatt: Insert mode</h2>
+
+<p>En este video Derek profundiza en uno de los modos importantes de Vim, el
+<a href="https://vimeo.com/7133419">modo de inserción</a>, en el cual podemos usar
+autocompletado, indentar líneas y muchas cosas más.</p>
+
+<ul>
+<li><code>:help i_CTRL-A</code> muestra la ayuda para la combinación de teclas <code>CTRL a</code> pero
+exclusivamente para el modo de inserción, de ahí el <code>i_</code></li>
+<li><code>expandtab</code> es una opción que indica el número de espacios a insertar cuando
+se presiona la tecla <code>TAB</code></li>
+<li><code>CTRL w</code> borra la palabra anterior (si estamos en modo de inserción)</li>
+<li><code>CTRL t</code> incrementa en uno la indentación</li>
+<li><code>CTRL d</code> decrementa en uno la indentación</li>
+<li><code>:help ins-special-special</code> muestra la ayuda de comandos en el modo inserción,
+como por ejemplo <code>CTRL g j</code> para mover el cursor una línea abajo.</li>
+<li><code>CTRL m</code>, <code>CTRL p</code> busca palabras para autocompletar buscando hacia abajo o
+hacia arriba</li>
+<li><code>CTRL x</code> + <code>CTRL l</code> autocompleta líneas enteras, es decir, en lugar de buscar
+palabrejas, busca líneas completas.</li>
+<li><code>CTRL x</code> + <code>CTRL f</code> autocompleta rutas de ficheros</li>
 </ul>
 
 
@@ -3189,119 +3350,6 @@ cómo funciona.</p>
 
 
 <p><em>Imagen obtenida de <a href="http://www.flickr.com/photos/psd">psd</a></em></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Servlet redirecciona a una JSP]]></title>
-    <link href="http://rchavarria.github.io/blog/2013/09/17/servlet-redirecciona-jsp/"/>
-    <updated>2013-09-17T13:27:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2013/09/17/servlet-redirecciona-jsp</id>
-    <content type="html"><![CDATA[<div style="margin:2%; padding:2%; background-color:#E0E0E0; ">
-    Find a lightweight English version of this post directly in the <a href="https://github.com/rchavarria/javaee-6-demos/tree/master/request-parameters-jsp">source code repository</a>.
-</div>
-
-
-<p>Este post es una pequeña extensión del anterior, un servlet que leía los parámetros
-de una petición HTTP. La demo anterior presentaba los parámetros leídos de una
-forma muy tosca y básica. En esta demo, la información se va a presentar al usuario
-de una forma más trabajada. Además, orientándonos hacia una arquitectura MVC,
-separaremos las tareas de lectura de los parámetros y presentación de los datos.</p>
-
-<p>Se puede ver el código fuente de la demostración en el directorio
-<a href="https://github.com/rchavarria/javaee-6-demos/tree/master/request-parameters-jsp"><code>request-parameters-jsp</code></a>
-del repositorio de las demos en github.</p>
-
-<!-- more -->
-
-
-<h2>Demo</h2>
-
-<p>La demostración va a ser muy sencilla: crearemos en servlet, lo configuraremos
-para que responda cuando un usuario envíe los campos de un formulario de login,
-y haremos que redireccione a una página JSP, esta página se encargará de renderizar
-los datos que viajarán como atributos de la petición.</p>
-
-<p>Para ejecutar la demo, simplemente hay que descargase el código fuente y ejecutar
-<code>mvn jetty:run</code> desde el directorio raiz de la demo. Visitar la página de login
-<a href="http://localhost:8080/login.html">http://localhost:8080/login.html</a>, introducir
-unos valores cualquiera y enviar los datos del formulario. Como resultado, veremos
-el renderizado de la página JSP en el navegador.</p>
-
-<p><img class="center" src="http://rchavarria.github.io/images/2013/request-parameters-jsp.png" title="Respuesta del servlet" ></p>
-
-<h2>Dependencias</h2>
-
-<p>Como viene siendo habitual, para la demostración usaremos
-<a href="http://maven.apache.org/">Apache Maven</a> para la gestión de dependencias.
-En nuestro fichero <code>pom.xml</code> incluiremos la única dependencia del proyecto,
-<code>javax-servlet-api</code> y listo.</p>
-
-<h2>El servlet</h2>
-
-<p>Nuestro servlet se trata de un servlet HTTP, luego heredará de <code>javax.servlet.http.HttpServlet</code>.
-Lo configuraremos mediante anotaciones, con <code>@WebServlet</code>. Primero leerá los parámetros
-enviados en la petición HTTP, igual que vimos en la anterior demo, y lo almacenará como un
-atributo del objeto <code>request</code>, para que pueda ser leído por nuestra página JSP.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="c1">//...</span>
-</span><span class='line'><span class="n">List</span><span class="o">&lt;</span><span class="n">Parameter</span><span class="o">&gt;</span> <span class="n">params</span> <span class="o">=</span> <span class="n">buildParamList</span><span class="o">(</span><span class="n">request</span><span class="o">);</span>
-</span><span class='line'><span class="n">request</span><span class="o">.</span><span class="na">setAttribute</span><span class="o">(</span><span class="s">&quot;params&quot;</span><span class="o">,</span> <span class="n">params</span><span class="o">);</span>
-</span><span class='line'><span class="c1">//...</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Luego, redireccionará la petición a nuestra página JSP. Se ha decidido hacer un
-<code>forward</code> de la petición en lugar de hacer una redirección completa,
-ya que la redirección provocaría una nueva petición HTTP y perderíamos los parámetros
-de la petición original, y esto es algo que no deseamos.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="c1">//...</span>
-</span><span class='line'><span class="n">request</span><span class="o">.</span><span class="na">getRequestDispatcher</span><span class="o">(</span><span class="s">&quot;/params.jsp&quot;</span><span class="o">).</span><span class="na">forward</span><span class="o">(</span><span class="n">request</span><span class="o">,</span> <span class="n">response</span><span class="o">);</span>
-</span><span class='line'><span class="c1">//...</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>La página JSP</h2>
-
-<p>Finalmente, la página JSP se encarga de presentar la información. De esta forma tenemos
-construida nuestra demo siguiendo un patrón MVC (aunque es muy sencillo en este caso, ya
-que solo contamos con un servlet y una página JSP), donde la página JSP juega el papel
-de <em>vista</em>.</p>
-
-<p>El código que nos interesa dentro del JSP es el que se encarga de iterar el
-atributo que estableció el servlet, al que hemos llamado <code>params</code>.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="err">&lt;</span>%@ taglib prefix=&quot;c&quot; uri=&quot;http://java.sun.com/jsp/jstl/core&quot; %&gt;
-</span><span class='line'>
-</span><span class='line'><span class="nt">&lt;ul&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;c:forEach</span> <span class="na">var=</span><span class="s">&quot;p&quot;</span> <span class="na">items=</span><span class="s">&quot;${params}&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>      <span class="nt">&lt;li&gt;</span>${p.key}: ${p.value}<span class="nt">&lt;/li&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;/c:forEach&gt;</span>
-</span><span class='line'><span class="nt">&lt;/ul&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p></p>
-
-<h2>Código fuente</h2>
-
-<p>Para echar un ojo al código fuente, visitar el directorio
-<a href="https://github.com/rchavarria/javaee-6-demos/tree/master/request-parameters-jsp"><code>request-parameters-jsp</code></a>.</p>
 ]]></content>
   </entry>
   
