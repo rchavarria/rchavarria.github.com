@@ -26,8 +26,9 @@ Así que aquí está mi Lista de Lectura:
 ## Tengo pensado leer
 
 - [JavaScript patterns](http://www.amazon.com/JavaScript-Patterns-Stoyan-Stefanov/dp/0596806752), de Stoyan Stefanov
-- [So good, they can't ignore you](http://www.amazon.com/dp/1455509124?tag=sivers-20), de Cal Newport, visto en [http://sivers.org/book/SoGood]
 - [Software craftsmanship](https://leanpub.com/socra), de Sandro Mancuso, recomendado por [Carlos Ble](http://twitter.com/carlosble)
+- [The craftsman](http://www.amazon.com/dp/0300151195/ref=cm_sw_su_dp), de Richard Sennet, creo que visto en el twitter de [Arturo Herrero](http://twitter.com/arturoherrero)
+- [So good, they can't ignore you](http://www.amazon.com/dp/1455509124?tag=sivers-20), de Cal Newport, visto en [http://sivers.org/book/SoGood]
 - [The five dysfunctions of a team](http://www.amazon.com/The-Five-Dysfunctions-Team-Leadership/dp/0787960756), de Patrick Lencioni, recomendado por @joserra_diaz y @rubenbpv (https://en.wikipedia.org/wiki/The_Five_Dysfunctions_of_a_Team)
 - [The Passionate Programmer](http://pragprog.com/book/cfcar2/the-passionate-programmer), de Chad Fowler
 - [Agile software development](http://www.amazon.com/Agile-Software-Development-Alistair-Cockburn/dp/0201699699), de Alistair Cockburn
