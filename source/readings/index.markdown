@@ -54,6 +54,8 @@ Así que aquí está mi Lista de Lectura:
 - [Focus](http://www.amazon.es/gp/product/8499883052/), de Daniel Goleman
 - [The art of learning](http://www.amazon.com/The-Art-Learning-Journey-Performance/dp/0743277465), de Josh Waitzkin, recomendado por [Tim Ferris](http://fourhourworkweek.com/2014/03/20/the-art-of-learning-joshua-waitzkin/)
 - [Fearless change](http://www.amazon.com/Fearless-Change-Patterns-Introducing-Ideas/dp/0201741571), de Mary Lynn Manns y Linda Rising
+- [Antifrágil](http://www.amazon.es/gp/product/8449328640/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=8449328640&linkCode=as2&tag=viviralmaximo-21), de Nassim Taleb, recomendado por Vivir al máximo y Joan Tubau. Habla de cómo salir reforzado de las crisis
+- [La lógica oculta de la vida](http://www.amazon.es/gp/product/8484607399/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=8484607399&linkCode=as2&tag=viviralmaximo-21), de Tim Harford, recomendado por Vivir al máximo y Joan Tubau
 
 ## He leído
 
