@@ -317,6 +317,76 @@ los ficheros de ayuda, los plugins, los colores de syntaxis, ...
 - `~/.vim/colors` es donde se guardan los esquemas de colores
 - `~/.vim/plugin` es donde *viven* los plugins
 
+## (24-10-2014) Derek Wyatt: Vim modes introduction
+
+Los modos es la característica que diferencia a Vim (sobre todo de emacs, su eterno
+enemigo), y ya iba siendo hora de apreder sobre ellos. Los modos de Vim son:
+normal, visual, inserción, comando y ¿¡ejecución!?, así que aquí va una
+[introducción a los modos de Vim](http://derekwyatt.org/vim/tutorials/intermediate/#modes-intro):
+
+- modo *Normal*: donde puedes introducir los comandos del editor
+- modo *Visual*: como el modo normal, pero según te mueves por el fichero, el texto
+se va resaltando, como si fuera una selección visual
+- modo *Inserción*: es el modo donde se introduce el texto
+- modo *Línea de comandos*: donde puedes introducir comandos en una línea abajo
+del todo de la ventana de Vim. Los comandos comienzan con `:`, `/`, `?` o `!`
+- Y hay otros modos menos usados, que más que modos distintos son como una
+mezcla de varios de los básicos, como el modo *Inserción Normal*, que, estando
+en el modo de inserción, te permite ejecutar un comando (uno sólo) y luego
+vuelve a entrar en el modo de inserción.
+
+## (28-10-2014) Derek Wyatt: Insert mode
+
+En este video Derek profundiza en uno de los modos importantes de Vim, el
+[modo de inserción](https://vimeo.com/7133419), en el cual podemos usar
+autocompletado, indentar líneas y muchas cosas más.
+
+- `:help i_CTRL-A` muestra la ayuda para la combinación de teclas `CTRL a` pero
+exclusivamente para el modo de inserción, de ahí el `i_`
+- `expandtab` es una opción que indica el número de espacios a insertar cuando
+se presiona la tecla `TAB`
+- `CTRL w` borra la palabra anterior (si estamos en modo de inserción)
+- `CTRL t` incrementa en uno la indentación
+- `CTRL d` decrementa en uno la indentación
+- `:help ins-special-special` muestra la ayuda de comandos en el modo inserción,
+como por ejemplo `CTRL g j` para mover el cursor una línea abajo.
+- `CTRL m`, `CTRL p` busca palabras para autocompletar buscando hacia abajo o
+hacia arriba
+- `CTRL x` + `CTRL l` autocompleta líneas enteras, es decir, en lugar de buscar
+palabrejas, busca líneas completas.
+- `CTRL x` + `CTRL f` autocompleta rutas de ficheros
+
+## (02-11-2014) Derek Wyatt: One Vim... just one
+
+Es cortito video acerca de [mantener una y solo una sesión de Vim](http://vimeo.com/4446112)
+se enfoca en solamente un comando de la shell:
+
+    gvim --remote-silent
+
+Este sencillo comando nos permite abrir varios ficheros en una única sesión
+gráfica de vim.
+
+Tal y como dicen los comentarios del vídeo, este comando solamente funciona por
+defecto en la interfaz gráfica de Vim, no en la versión de Vim que se ejecuta
+en la línea de comandos.
+
+## (02-11-2014) Derek Wyatt: Destroying is good
+
+En este video Derek muestra cómo utilizar
+[comandos destructivos para editar](http://vimeo.com/6110008)
+el contenido que queremos.
+
+Comandos utilizados:
+
+- `:v/<some pattern>/<some command>`: es el comando `:vglobal` (usar `:help :vglobal`
+para saber más). Este comando realiza acciones sobre líneas que NO cumplen el patrón
+especificado.
+- `:help :substitute` muestra ayuda del comando utilizado para sustituir unas cadenas
+por otras.
+- Expresiones regulares, que son ya un problema en sí mismas y que darían para
+mucho tiempo de aprendizaje.
+
 <!--
+
 -->
 
