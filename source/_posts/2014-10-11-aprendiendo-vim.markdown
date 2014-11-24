@@ -370,7 +370,7 @@ Tal y como dicen los comentarios del vídeo, este comando solamente funciona por
 defecto en la interfaz gráfica de Vim, no en la versión de Vim que se ejecuta
 en la línea de comandos.
 
-## (02-11-2014) Derek Wyatt: Destroying is good
+## (02-11-2014) Derek Wyatt: Destruction is good
 
 En este video Derek muestra cómo utilizar
 [comandos destructivos para editar](http://vimeo.com/6110008)
@@ -386,7 +386,20 @@ por otras.
 - Expresiones regulares, que son ya un problema en sí mismas y que darían para
 mucho tiempo de aprendizaje.
 
+## (24-11-2014) Derek Wyatt: Using a Vim macro to edit many files
+
+Y después de un tiempo sin ver nada nuevo de Vim, hoy toca ver cómo se puede
+[utilizar una macro para editar varios ficheros](http://vimeo.com/4456458), del cual,
+se pueden sacar los siguientes macros y consejos:
+
+- `q + a` para comenzar a grabar una macro en la posición `a` 
+- `@ + a` para ejecutar la macro grabada en la posición `a`
+- `@ + @` para ejecutar la última macro
+- `5 + @ + a` para ejecutar la macro en `a` 5 veces
+- `:wn` guardar todos los cambios y moverse al siguiente buffer
+- `:prev` moverse al buffer anterior
+- `" + a + p` imprime la macro guardada en la posición `a`
+
 <!--
 
 -->
-
