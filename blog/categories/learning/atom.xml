@@ -4,7 +4,7 @@
   <title><![CDATA[Category: learning | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/learning/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2014-11-19T00:20:48+01:00</updated>
+  <updated>2014-11-25T00:42:51+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -408,7 +408,7 @@ gráfica de vim.</p>
 defecto en la interfaz gráfica de Vim, no en la versión de Vim que se ejecuta
 en la línea de comandos.</p>
 
-<h2>(02-11-2014) Derek Wyatt: Destroying is good</h2>
+<h2>(02-11-2014) Derek Wyatt: Destruction is good</h2>
 
 <p>En este video Derek muestra cómo utilizar
 <a href="http://vimeo.com/6110008">comandos destructivos para editar</a>
@@ -427,11 +427,26 @@ mucho tiempo de aprendizaje.</li>
 </ul>
 
 
+<h2>(24-11-2014) Derek Wyatt: Using a Vim macro to edit many files</h2>
+
+<p>Y después de un tiempo sin ver nada nuevo de Vim, hoy toca ver cómo se puede
+<a href="http://vimeo.com/4456458">utilizar una macro para editar varios ficheros</a>, del cual,
+se pueden sacar los siguientes macros y consejos:</p>
+
+<ul>
+<li><code>q + a</code> para comenzar a grabar una macro en la posición <code>a</code></li>
+<li><code>@ + a</code> para ejecutar la macro grabada en la posición <code>a</code></li>
+<li><code>@ + @</code> para ejecutar la última macro</li>
+<li><code>5 + @ + a</code> para ejecutar la macro en <code>a</code> 5 veces</li>
+<li><code>:wn</code> guardar todos los cambios y moverse al siguiente buffer</li>
+<li><code>:prev</code> moverse al buffer anterior</li>
+<li><code>" + a + p</code> imprime la macro guardada en la posición <code>a</code></li>
+</ul>
+
+
 <!--
 
 -->
-
-
 
 ]]></content>
   </entry>
