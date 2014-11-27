@@ -246,24 +246,21 @@ Qué trae ES6?
 
 ### The Google Glass revolution, Alain Regnier, @altolabs, GDG Paris
 
-Multitud de sensores
+Opinión: impresionante por la demo en vivo de las gafas. Me sirvió para
+conocer de primera mano las Google Glass y pasar un poco de envidia de
+poder cacharrear con un prototipo tecnológico.
 
-Organizado en Cards : como si fuera un timeline
-
-Controles : voz, táctil, mover cabeza
-
-Glass Mobile, MyGlass web
-
-:( parece muy enlazado a tu móvil
+- Multitud de sensores
+- Organizado en Cards : como si fuera un timeline
+- Controles : voz, táctil, mover cabeza
+- Glass Mobile, MyGlass web
+- :( parece muy enlazado a tu móvil
 
 Programar para GGlass
 
 1. Mirror API : nunca te conectas a tu GGlass
-
 tu server ­> google server ­> tus gafas
-
 2. GDK : accede a hardware de tu GGlass
-
 3. WearScript : javascript para wearables
 
 Usando behat para no abusar de F5, Alfonso Machado, GeeksHub
