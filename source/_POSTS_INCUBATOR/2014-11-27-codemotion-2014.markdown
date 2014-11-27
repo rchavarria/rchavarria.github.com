@@ -225,33 +225,26 @@ Ante todo, ten en cuenta el impacto técnico, es muy, muy grande.
 
 ### Lo que la cafeína le hizo a JavaScript, Sergio Arbeo
 
-muy divertido
+Opinión: charla muy divertida y amena, Sergio comunica muy bien y se nota que sabe
+de lo que habla. La charla es muy técnica y va de cosas muy sencillas hasta
+ciertos problemas que te hacen estrujarte la mente un poco.
 
-coffeescript mejor que ES5, coffeescript peor que ES6
+CoffeeScript mejor que ES5, CoffeeScript peor que ES6
 
 Qué trae ES6?
 
-Destructuring, con su operación inversa, funciona con arrays
+- Destructuring, con su operación inversa, funciona con arrays
+- Modules
+- let / const
+- classes
+- propiedades computadas (ejemplo de código implementando `pluck`
+- function: sspread operator : convierte varios argumentos en un array
+- function: sdefault parameters
+- arrow functions
 
-Modules
+**Acción**: Librería ESNext para usar ES6 hoy
 
-let / const
-
-classes
-
-propiedades computadas (ejemplo de código implementando `pluck`
-
-functions
-
-spread operator : convierte varios argumentos en un array
-
-default parameters
-
-arrow functions
-
-Librería ESNext para usar ES6 hoy
-
-The Google Glass revolution, Alain Regnier, @altolabs, GDG Paris
+### The Google Glass revolution, Alain Regnier, @altolabs, GDG Paris
 
 Multitud de sensores
 
