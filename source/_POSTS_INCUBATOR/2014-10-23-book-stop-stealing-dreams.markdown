@@ -63,7 +63,20 @@ Notas acerca del libro 'Stop stealing dreams', de Seth Godin
 - Cultural literacy, common store of knowledge will never be infinite, and what's more imporant, we canot drill and practice it into a population tat has so many fascinating or easy diversions availbable as alternatives: tv, youtube, ...
 - if we teach our students to be passionate, ethical, and inquisitive, I'm confident that the facts will follow
 - They are too lazy to ask their colleagues if there's a better way. they don't look for tips or ways to break or open or fix or improve. they self-describe as Dummies and give up. they make no effort, acting out of fear instead of passion. That forward-learning posture is teachable -> passion is teachable?
--  
+- Modelo de Khan Academy: cada estudiante ve las lecciones en casa, a su ritmo. Luego, durante el dia, el profesor le ayuda donde esté atascado. Así, NADIE lleva el mismo ritmo
+- Nosotros, podemos decir simplemente *aqui*, y creer que los estudiantes harán el difícil (y asustadizo) trabajo de encontrar en internet lo que queremos que encuentren. Ahí es donde necesitamos la escuela.
+- Teacher's work: find the best homework questions ever devised and create world-class tutorials in how to solve each one -> imagina esto coordinado entre todos los profesores.
+- What's needed rom the teacher is no longer high-throughtput lectures or test scoring or classroom management. No, what's needed is individual craftsmanshiop, emotiaonal labor, and the ability to motivate
+- Instead of punishing great teachers with proecise instructions on how to spend their day, we give them the freedom to actually teach.
+- Emotional labor looks like patience, kindness and respect
+- For the first time in a century, we have the opporutnity to let digital systems do work while our teachres do labor
+- One popular strategy is to play your top elemven at all times, and perhaps, just maybe, if you're ahead by five or more goals, sub in a few of the second-string players. The lesson to the kids is obvious: skill now is reqarded, dreams, not so much. If you're not already great, dont bother showing up. 
+- But perhaps, the goal is to teach kids aabout effort and opporutninty and teamwork
+- It turns out that a huge percentage of hockey players are born in just threemonths of the year. The reason is simple: tese are the oldest kids in youth hockey
+- MORALEJA: no valorar el skill, la habilidad, porque el niño mayor tienen ventaja, valorar pasio, los sueños del chico
+- Lidership is a gradual process, one where you take responsibility years before you are given authority. And that's something we can teach.
+- School servers a real function when it activates a passion for lifelong learning
+
 
 
 
