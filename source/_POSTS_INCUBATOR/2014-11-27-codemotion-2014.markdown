@@ -2,12 +2,44 @@
 title: Codemotion 2014
 ---
 
-2014.codemotion.es/es/agenda.html
+Por tercer año consecutivo asistí al evento Codemotion, "un evento de
+desarrolladores para desarrolladores". Me encanta la descripcion del
+evento. La verdad es que es una pasada, un evento al que este año acudimos
+casi 2000 profesionales del desarrollo sofware, donde unos ponente (incluso
+extranjeros) cuentan sus experiencias en la vida real. Impresionante.
 
+Antes de nada me gustaría agradecer a los organizadores del evento, a todos
+los voluntarios que nos soportan, a los patrocinadores y no me puedo olvidar
+de la Universidad San Pablo CEU, que cedió las instalaciones.
+Hay muchas quejas por *el intenné* sobre ciertos aspectos de la organización:
+salas abarrotadas, comida insuficiente,... Creo que tienen razón, pero
+también hay que entender que un evento así no es fácil organizarlo. A mí
+me ha encantado la cantidad de tiempo disponible entre charla y charla. No
+me he perdido ninguna de las charlas a las que quería asistir.
+
+<!-- more -->
+
+Este año he podido disfrutar más de las charlas técnicas que el año pasado,
+por lo que he aprendido y conocido multitud de nuevas herramientas,
+técnicas e ideas.
+
+Aún así, me he quedado con una espinita clavada. Me hubiera gustado
+*pasillear* algo más, pero no se puede tener todo, o pasillo o charla.
+También me hubiera gustado acercarme a más ponentes para darles las gracias
+y comentar con ellos las tecnologías o herramientas que expusieron.
+
+Pero no todo está perdido, he conocido a unos cuantos buenos profesionales
+más y eso es una parte importante de estos eventos: ver viejos amigos y
+hacer nuevos.
+ 
 ## Notas sobre las charlas
 
 Y a continuación, una transcripción de algunas notas que fuí tomando en
-todas las charlas a las que asistí.
+todas las charlas a las que asistí. En la 
+[agenda del Codemotion](2014.codemotion.es/es/agenda.html)
+podrás encontrar cada una de las charlas que se impartieron con detalles
+del ponente, presentaciones, vídeos,... Para ir aguantando hasta el año
+que viene.
 
 ### What if everything is awesome, Christian Heilmann
 
@@ -263,56 +295,46 @@ tu server ­> google server ­> tus gafas
 2. GDK : accede a hardware de tu GGlass
 3. WearScript : javascript para wearables
 
-Usando behat para no abusar de F5, Alfonso Machado, GeeksHub
+### Usando behat para no abusar de F5, Alfonso Machado, GeeksHub
+
+Opinión: una charla muy práctica, donde Alfonso nos cuenta su experiencia con `behat` a raiz
+de unos problemas que tuvo él. Ejemplos con código y demo en vivo. Muy interesante.
 
 Implementación de Gerkin inspirado en Cucumber
 
-Mink : drivers para emular navegadores con Selenium (java and the like) + acciones predefinidas
+Mink: drivers para emular navegadores con Selenium (java and the like) + acciones predefinidas
 
 Instalacion difícil, mejor con composer
 
-Scrum bad smells, Juanma Gómez
+### Scrum bad smells, Juanma Gómez
 
-animada, buena conexion con la gente
+Opinión: muy animada, Juanma conecta perfectamente con la gente. Intentó tirar de nosotros,
+pero era la última hora y nos resistíamos un poco. Eso sí, a la hora de las preguntas la
+gente se extendió bastante. Buena señal.
 
-Patrones en la implantacion agile
+Patrones en la implantación agile
 
-2 trampas : yo ya lo se todo; esto no se puede hacer
-
-Las empresas esperan que no cambien nada
-
-“nosotros hacemos nuestro scrum”
-
-equipo multidisciplinar no es que todos hacemos de todo, no es un hombre orquesta, sino que es
-
+- 2 trampas : yo ya lo se todo; esto no se puede hacer
+- Las empresas esperan que no cambien nada
+- “nosotros hacemos nuestro scrum”
+- equipo multidisciplinar no es que todos hacemos de todo, no es un hombre orquesta, sino que es
 un equipo con perfiles especializados que se complementan
-
-dueño de producto sin capacidad (o experiencia) en la toma de decisiones o de visión estratégica
-
-jefe de proyecto que pasa a scrum master : el rol del SM es complejo porque debe tratar
-
+- dueño de producto sin capacidad (o experiencia) en la toma de decisiones o de visión estratégica
+- jefe de proyecto que pasa a scrum master: el rol del SM es complejo porque debe tratar
 sobretodo de personas
+- Iteraciones variables
+- Definir todo al principio (como en cascada)
+- Hacer cascadas pequeñas
+- Control y seguimiento en lugar de responsabilidad y confianza
+- “yo ya he hecho mi trabajo”
 
-Iteraciones variables
+Mitos:
 
-Definir todo al principio (como en cascada)
+- ser agil es ser rápido
+- en scrum sólo hay visión a corto plazo : debemos tener una visión a largo plazo
 
-Hacer cascadas pequeñas
+Como resumen:
 
-Control y seguimiento en lugar de responsabilidad y confianza
-
-“yo ya he hecho mi trabajo”
-
-Mitos :
-
-● ser agil es ser rápido
-
-● en scrum sólo hay visión a corto plazo : debemos tener una visión a largo plazo
-
-Conclusión :
-
-● 1o aprender
-
-● siempre hay alcantarillas que abrir, siempre va a salir algo que huele mal
-
-● scrum conlleva un cambio cultural
+- 1º aprender
+- siempre hay alcantarillas que abrir, siempre va a salir algo que huele mal
+- scrum conlleva un cambio cultural
