@@ -70,7 +70,7 @@ Si tus aplicaciones están dirigidas por datos, duraran mucho tiempo.
 
 Agradece, da feedback, a tus usuarios y a los creadores de tus apps.
 
-Echar un vistazo a los recursos de las diapositivas.
+**Acción**: Echar un vistazo a los recursos de las diapositivas.
 
 ### Lean Node.js, Ricardo Borillo
 
@@ -102,7 +102,7 @@ Relativo al despliegue:
 - fusion passenger, nginx + docker
 - pm2 (cluster, monitorización, ...)
 
-Código y ejemplos en: [https://github.com/borillo/codemotion-2014]
+Código y ejemplos en el [https://github.com/borillo/codemotion-2014](repo codemotion de R. Borillo).
 
 ### Workshop, designing a release pipeline, Jose Luis Soria
 
@@ -123,7 +123,7 @@ c. necesito: nombre, meta a conseguir, fuentes, flujo, ...
 5. Definir los pasos (partes de cada una de las etapas)
 6. Definir automatizacion y herramientas
 7. Definir modelo ejecucion
-8. Planificar para futuras mejoras : comienza simple y evoluciona
+8. Planificar para futuras mejoras: comienza simple y evoluciona
 9. Inspecciona y adáptate (mejora contínua)
 
 Recursos:
@@ -131,8 +131,6 @@ Recursos:
 - libro Continuous Delivery
 - Agile testing cuadrant
 - Herramientas de orquestación: ThoughtWorks Go, MS VS Release Management
-
-Slides del taller: [http://www.slideshare.net/jlsoria/jose-luis-soria-codemotion-2014-designing-a-release-pipeline]
 
 ### Loves always takes care and humility, Chema Alonso
 
@@ -148,7 +146,7 @@ Dev: preocupada por la seguridad. Cree que algo está seguro si está bien hecho
 
 Hacker: tiene muchas otras maneras de romper la seguirdad.
 
-Hacker: quiere nuevos metodos aplicando la ciencia : doble factor autenticación, usb con llave,
+Hacker: quiere nuevos metodos aplicando la ciencia: doble factor autenticación, usb con llave,
 matrices de numeros, ...
 
 Dev: ve problemas, a cada nuevo método le encuentra una debilidad.
@@ -168,28 +166,28 @@ OOP Vs Functional
 - scala tiene ambos
 - haskell
 - F#
-- clojure : lenguaje funcional con cierta flexibilidad
+- clojure: lenguaje funcional con cierta flexibilidad
 
 Estático Vs Dinámico
 
-- groovy : ambos
-- python : para aprender dinámico
-- ruby : favorece implícito (potencia sin control)
-- php : desarrollo rápido
-- js : para integración con otros sistemas
+- groovy: ambos
+- python: para aprender dinámico
+- ruby: favorece implícito (potencia sin control)
+- php: desarrollo rápido
+- js: para integración con otros sistemas
 
 De sistema, de bajo nivel
 
-- C : potencia
-- C++ : añade cierta estructura a C
-- Go : concurrencia
-- Rust : gestión memoria
+- C: potencia
+- C++: añade cierta estructura a C
+- Go: concurrencia
+- Rust: gestión memoria
 
 Lenguajes del sigle XXI
 
-- ceylon : modularidad
-- elm : funcional en interactivo (I/O) : es un haskell para el navegador
-- julia : cálculo científico y macros
+- ceylon: modularidad
+- elm: funcional en interactivo (I/O): es un haskell para el navegador
+- julia: cálculo científico y macros
 
 Y para terminar, Piet: cada pixel, con su color, es una instruccion. El
 hola mundo con este lenguaje es el más bonito que he visto nunca.
@@ -247,9 +245,9 @@ tus usuarios y para saber cómo afectan los cambios que haces.
 
 No hay un manual sobre que medir, pero no hay que medir todo.
 
-Analisis corto plazo : monitoring, alerting.
+Analisis corto plazo: monitoring, alerting.
 
-Analisis medio plazo : buscar patrones de uso, optimizar para su uso. Análisis de casos
+Analisis medio plazo: buscar patrones de uso, optimizar para su uso. Análisis de casos
 especiales te pueden llevar a optimizaciones a incorporar
 
 Stadísticas al usuario:
@@ -258,7 +256,7 @@ Stadísticas al usuario:
 - número de visualizaciones de su app
 - widgets más usados
 
-Herramientas análisis logs : logstash, fluentd, splunk, syslog
+Herramientas análisis logs: logstash, fluentd, splunk, syslog
 
 No volverte loco con las métricas, no se puede medir todo, debes decidir qué 
 precisión quieres (queries de mas de 30seg), definir una politica de retención de
@@ -274,14 +272,14 @@ ciertos problemas que te hacen estrujarte la mente un poco.
 
 CoffeeScript mejor que ES5, CoffeeScript peor que ES6
 
-Qué trae ES6?
+¿Qué trae ES6?
 
 - Destructuring, con su operación inversa, funciona con arrays
 - Modules
 - let / const
 - classes
 - propiedades computadas (ejemplo de código implementando `pluck`
-- function: sspread operator : convierte varios argumentos en un array
+- function: sspread operator: convierte varios argumentos en un array
 - function: sdefault parameters
 - arrow functions
 
@@ -294,17 +292,17 @@ conocer de primera mano las Google Glass y pasar un poco de envidia de
 poder cacharrear con un prototipo tecnológico.
 
 - Multitud de sensores
-- Organizado en Cards : como si fuera un timeline
-- Controles : voz, táctil, mover cabeza
+- Organizado en Cards: como si fuera un timeline
+- Controles: voz, táctil, mover cabeza
 - Glass Mobile, MyGlass web
 - :( parece muy enlazado a tu móvil
 
 Programar para GGlass
 
-1. Mirror API : nunca te conectas a tu GGlass
+1. Mirror API: nunca te conectas a tu GGlass
 tu server ­> google server ­> tus gafas
-2. GDK : accede a hardware de tu GGlass
-3. WearScript : javascript para wearables
+2. GDK: accede a hardware de tu GGlass
+3. WearScript: javascript para wearables
 
 ### Usando behat para no abusar de F5, Alfonso Machado, GeeksHub
 
@@ -325,7 +323,7 @@ gente se extendió bastante. Buena señal.
 
 Patrones en la implantación agile
 
-- 2 trampas : yo ya lo se todo; esto no se puede hacer
+- 2 trampas: yo ya lo se todo; esto no se puede hacer
 - Las empresas esperan que no cambien nada
 - “nosotros hacemos nuestro scrum”
 - equipo multidisciplinar no es que todos hacemos de todo, no es un hombre orquesta, sino que es
@@ -342,7 +340,7 @@ sobretodo de personas
 Mitos:
 
 - ser agil es ser rápido
-- en scrum sólo hay visión a corto plazo : debemos tener una visión a largo plazo
+- en scrum sólo hay visión a corto plazo: debemos tener una visión a largo plazo
 
 Como resumen:
 
