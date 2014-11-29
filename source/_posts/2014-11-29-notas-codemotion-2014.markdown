@@ -26,7 +26,7 @@ también hay que entender que un evento así no es fácil organizarlo. A mí
 me ha encantado la cantidad de tiempo disponible entre charla y charla. No
 me he perdido ninguna de las charlas a las que quería asistir.
 
-{% img center /images/2014/codemotion.png %}
+{% img center /images/2014/Codemotion.png %}
 
 <!-- more -->
 
@@ -58,13 +58,13 @@ Opinión de la charla: muy amena, se nota que Christian es un profesional dando
 charlas por todo el mundo; muy buena historia, muy bien hilada y cortita, al
 grano.
 
-La prensa publicita casos demasiado idilicos.
+La prensa publicita casos demasiado idílicos.
 
 Los programadores tenemos tendencia a recrear (reinventar la rueda) en lugar de
 mejorar (¿porqué si no hay N variantes de frameworks web, por ejemplo?). **Mejora
 las cosas que ya existen**
 
-No expliques, demuestralo con código o algo mejor, arregla el bug.
+No expliques, demuéstralo con código o algo mejor, arregla el bug.
 
 Si tus aplicaciones están dirigidas por datos, duraran mucho tiempo.
 
@@ -102,7 +102,7 @@ Relativo al despliegue:
 - fusion passenger, nginx + docker
 - pm2 (cluster, monitorización, ...)
 
-Código y ejemplos en el [https://github.com/borillo/codemotion-2014](repo codemotion de R. Borillo).
+Código y ejemplos en el (https://github.com/borillo/codemotion-2014)[repo Codemotion de R. Borillo].
 
 ### Workshop, designing a release pipeline, Jose Luis Soria
 
@@ -192,7 +192,7 @@ Lenguajes del sigle XXI
 Y para terminar, Piet: cada pixel, con su color, es una instruccion. El
 hola mundo con este lenguaje es el más bonito que he visto nunca.
 
-Las slides y los ejemplos de código: [https://github.com/Alotor/20-languages-demos]
+Las slides y los ejemplos de código en el (repo Codemotion de alotor)[https://github.com/Alotor/20-languages-demos]
 
 ### Keynote del segundo día
 
@@ -232,7 +232,8 @@ los alumnos se las ingenian para engañar al sistema.
 En definitiva:
 aprende > practica > crea > comparte > ayuda
 
-Proyecto en el que está trabajando la ponente: [https://github.com/Khan/live-editor]
+(Live editor)[https://github.com/Khan/live-editor] es el proyecto en el que está
+trabajando la ponente.
 
 ### Analizando y debuggeando tu plataforma, Luis Bosque
 
@@ -295,7 +296,7 @@ poder cacharrear con un prototipo tecnológico.
 - Organizado en Cards: como si fuera un timeline
 - Controles: voz, táctil, mover cabeza
 - Glass Mobile, MyGlass web
-- :( parece muy enlazado a tu móvil
+- Un detalle queno me gustó nada es que parece muy enlazado a tu móvil
 
 Programar para GGlass
 
