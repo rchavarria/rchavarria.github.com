@@ -4,7 +4,7 @@
   <title><![CDATA[Category: events | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/events/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2014-11-29T01:28:12+01:00</updated>
+  <updated>2014-12-02T00:20:06+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -122,7 +122,7 @@ errores y conseguir un desarrollo más rápido.</li>
 </ul>
 
 
-<p>Código y ejemplos en el (https://github.com/borillo/codemotion-2014)[repo Codemotion de R. Borillo].</p>
+<p>Código y ejemplos en el <a href="https://github.com/borillo/codemotion-2014">repo Codemotion de R. Borillo</a></p>
 
 <h3>Workshop, designing a release pipeline, Jose Luis Soria</h3>
 
@@ -230,7 +230,7 @@ técnicas de 1h intentan venderte de usar su lenguaje. Alotor le sobra con 2 min
 <p>Y para terminar, Piet: cada pixel, con su color, es una instruccion. El
 hola mundo con este lenguaje es el más bonito que he visto nunca.</p>
 
-<p>Las slides y los ejemplos de código en el (repo Codemotion de alotor)[https://github.com/Alotor/20-languages-demos]</p>
+<p>Las slides y los ejemplos de código en el <a href="https://github.com/Alotor/20-languages-demos">repo Codemotion de Alotor</a></p>
 
 <h3>Keynote del segundo día</h3>
 
@@ -276,7 +276,7 @@ los alumnos se las ingenian para engañar al sistema.</li>
 <p>En definitiva:
 aprende > practica > crea > comparte > ayuda</p>
 
-<p>(Live editor)[https://github.com/Khan/live-editor] es el proyecto en el que está
+<p><a href="https://github.com/Khan/live-editor">Live editor</a> es el proyecto en el que está
 trabajando la ponente.</p>
 
 <h3>Analizando y debuggeando tu plataforma, Luis Bosque</h3>
