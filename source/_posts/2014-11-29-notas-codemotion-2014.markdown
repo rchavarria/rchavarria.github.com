@@ -102,7 +102,7 @@ Relativo al despliegue:
 - fusion passenger, nginx + docker
 - pm2 (cluster, monitorización, ...)
 
-Código y ejemplos en el (https://github.com/borillo/codemotion-2014)[repo Codemotion de R. Borillo].
+Código y ejemplos en el [repo Codemotion de R. Borillo](https://github.com/borillo/codemotion-2014)
 
 ### Workshop, designing a release pipeline, Jose Luis Soria
 
@@ -192,7 +192,7 @@ Lenguajes del sigle XXI
 Y para terminar, Piet: cada pixel, con su color, es una instruccion. El
 hola mundo con este lenguaje es el más bonito que he visto nunca.
 
-Las slides y los ejemplos de código en el (repo Codemotion de alotor)[https://github.com/Alotor/20-languages-demos]
+Las slides y los ejemplos de código en el [repo Codemotion de Alotor](https://github.com/Alotor/20-languages-demos)
 
 ### Keynote del segundo día
 
@@ -232,7 +232,7 @@ los alumnos se las ingenian para engañar al sistema.
 En definitiva:
 aprende > practica > crea > comparte > ayuda
 
-(Live editor)[https://github.com/Khan/live-editor] es el proyecto en el que está
+[Live editor](https://github.com/Khan/live-editor) es el proyecto en el que está
 trabajando la ponente.
 
 ### Analizando y debuggeando tu plataforma, Luis Bosque
