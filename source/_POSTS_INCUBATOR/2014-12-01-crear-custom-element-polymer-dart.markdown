@@ -23,7 +23,7 @@ importa el Web Component y usa el mismo.
 importa el Web Component y usa el mismo.
 - `web/tute_stopwatch.dart`: código Dart que implementa el Web Component.
 
-## Instalando polymer.dart
+## Instalando Polymer.dart
 
 Para poder usar Polymer, primero es necesario instalarlo como una dependencia del
 proyecto. Para ello, modificar el fichero `pubspec.yaml` y añadir el siguiente
@@ -128,7 +128,7 @@ Para que todo esté correcto, la clase `TuteStopwatch` debe heredar de `PolymerE
 implementar las interfaces `Polymer` y `Observable`. Además, debe definir un
 constructor *nombrado* que llame a `super.created()`.
 
-## Enlazando datos entre Dart y el HTML
+## Enlazando datos entre Dart y HTML
 
 En la parte visual (HTML) se pueden usar las llaves dobles `{{...}}` para utilizar una
 variable anotada como `@observable` en la parte de comportamiento (Dart). Por ejemplo,
