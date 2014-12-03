@@ -76,11 +76,50 @@ Notas acerca del libro 'Stop stealing dreams', de Seth Godin
 - MORALEJA: no valorar el skill, la habilidad, porque el niño mayor tienen ventaja, valorar pasio, los sueños del chico
 - Lidership is a gradual process, one where you take responsibility years before you are given authority. And that's something we can teach.
 - School servers a real function when it activates a passion for lifelong learning
-
+- 2 pilares para una educación para el futuro:
+1. Enseñar a los niños a liderar, que es conducir sin un mapa claro
+2. Ayudarles a aprender cómo solucionar problemas realmente interesantes
+- Preguntas dirigidas a aquellos profesores que simplemente leen de sus notas, que creen en la memorización, que creen que tienen más poder que los niños por el hecho de se profesor: ¿les estás dando esos dos regalos? ¿la próxima generación de niños, conocerá más datos o será capaz de conectar datos y transformar esos datos en información, liderazgo y progreso?
+- school is at its best when it gives students the expectation of dreaming dreams that they cna work on every day until they accomplish them because they worked hard enough to reach them (mejor eso, que sueños imposibles de alcanzar)
+- school needs to put us on the spot. again and again and again it needs to reward students for being willing to be singled out. learning to survive those moments, and then feel compelled to experience them again. (nada de esconderse, que haya retos, y de buscarlos)
+- when we associate reading with homework and tests, is it any wonder we avoid it? we must teach how to love reading & writing
+- big companies create an environment whre people like you can crate jobs instead. pick yourself.
+- the only source of innovation is the artist willing to be usefuly wrong. es bueno ser una persona que se siente cómoda estando equivocada, cómoda verbalizando una teoría y después ponerla a prueba. esto hay que enseñárselo a los niños.
+- it's essential that the school of the future teach music. the passion of seeing progress, the hard work of practice, the joy and fear of public performance - these are critical skills for our future
+- two kinds of learning:
+1. because it was required
+2. because the student wants (insists) on cquiring a skill in order to accomplish a goal
+- qué tal si dejamos de enseñar a aprender hechos, qué tal si comenzamos a enseñar el mimo por el trabajo bien hecho, establecer metas, to engage, hablar inteligentemente, planificar, tomar buenas decisiones y liderar?
+- a primary output of the school should be to produce citizens who often choose the reational path (en lugar del instinto) and that's going to hpappen only if we've created enough situations for them to practice in
+- being cared about, connected with, andpushed is the platform we need to do the emotional heavy lifting of commintting to learn
+- the puzzles of math and physics are golden opporutniites to start young adults down the path of lifelong learning
+- reading makes all of us more thoughtful, better informed, and more productive members of a civil society
+**CON ESTO SÍ QUE ME QUIERO QUEDAR** : INCULCAR A LOS NIÑOS LA PASIÓN POR LEER
+- the library is no longer a warehouse for dead books, the library ought to be the local nerve center for informaiton
+- a library will be a place of co-working, inventing projects, aided by a librarian who understand the Mesh can bring to bear domain knowledge and people knowledge and access to information
+- la trampa de la universidad famosa: básicamente las universidades hacen publicidad, se hacen más caras, pero no para hacer una educación mejor, si no para ser más famosas, ser más caras todavía y ganar más dinero
+- a university delivers four things:
+1. access to information -> we have information online, so we don't need universities for this
+2. accreditations or a scarce degree (creo que esto ya no tiene mucha validez)
+3. Membership in a tribe
+4. a situation for growth
+- membership in a tribe: this i sperhaps the best reason to actually move to a college campus in order to get a degree
+- situation for growth: the reason that's almost impossible to mimic in an online situation. the right college is the last, best chance for masses of teenagers to find themselves ina situationwhere they have no choice but to grow. and fast.
+- when we let our kids dream, encourage them to contribute, and push the to do work that matters, we open doors for them that will lead to places that are difficult for us to imagine
+- don't wait for it. pick yourself. teach yourself. motivate your kids. push them to dream, against all odds.
+- learn and lead and teach
+**WHAT WE TEACH**
+- when we teach a child to make good decisions , we benefit from a lifetime of good decisions
+- when we teach a child to love to learn, the amount of learning will become limitless
+- when we teach a child to deal with a changing world, she will never become obsolete
+- when we are brave enough to teach a child to question authority, evenours, we insulate ourselves from those who would use their authority to workk against each of us
+- and when we give students the desrie to make things, even choices, we create a world filled with makers.
 
 
 
 Algunos recursos relacionados:
+- [Stope stealing dreams](http://sethgodin.hubpages.com/hub/stop-stealing-dreams), de Seth Godin
+- [42 quotes from the book](http://ivanasendecka.com/2012/03/03/stopstealingdreams)
 - [No digitalicemos los libros de texto](http://www.enriquedans.com/2014/09/no-digitalicemos-el-libro-de-texto.html), de Enrique Dans
 - [Modern education](https://twitter.com/thereaIbanksy/status/514217338183626753), de Banksy
 - [Innovar en el aula](https://twitter.com/ocatasus/status/512848102106341376/photo/1), los profesores no están obligados a utilizar los libros de una editorial, ni lo que diga el colegio. 'Libertad de cátedra' o algo así le llaman.
