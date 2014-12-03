@@ -1,45 +1,66 @@
-## 1 - first contact, body language
+## 1 - Primer contacto, lenguaje corporal
 
-- **S-O-F-T-E-N** your body language, de las siglas en ingles de Smile, Open Arms, Forward Lean, Touch, Eye Contact, Nod.
-- some preparation to start conversations in a party (*converstation fuel*): 1. newspapers for unusual or interesting stories, 2. news of interest
-to other guests, 3. events going on in your life.  
-- romper el hielo: di tu nombre, como conociste al organizador, alaga su forma de vestir, pidele bailar, POSITIVO SIEMPRE.
+- **S-O-F-T-E-N**: de las siglas en ingles de Smile (Sonríe), Open Arms (Abre
+los brazos), Forward Lean (Postura hacia adelante), Touch (Toca), Eye Contact
+(Contacto visual), Nod (Afirmar con la cabeza).
+- *Conversation fuel* (combustible de la conversación) es la preparación para
+comenzar algunas conversaciones en un fiesta o evento: buscar en los periódicos
+o internet noticias inusuales o interesantes, noticias de interés para los
+asistentes, otros eventos a los que has asistido o asistirás próximamente.
+- Cómo romper el hielo: di tu nombre, como conociste al organizador,
+alaga su forma de vestir, pidele bailar,... Cualquier cosa, pero siempre en
+positivo.
 
-## 2 - breaking the ice and getting the conversation going
+## 2 - Romper el hielo y hacer que la conversación aparezca
 
-- how do you actually start a conversation :
-1.1. risk versus rejection
-1.2. ritual questions
-1.3. listen for free information
-1.4. seek inforamtion (follow-up questions)
-1.5. self-disclosure (reveal your free information)
-- closed-ended Vs open-ended questions
-- introduce yourself to people regularly and begin to share your ideas, feelings, opinions, and experiences. And
-after saying hello, seek out other people's thoughts, views, interestss, and knowledge.
-- Break the ice with a compliement or comment followed by a *ritual question*
-- break the ice by noticing osmething that the person is carrying, ask a ritual question based on the object
-- break the ice by making a comment or ask a question based on the situation
-- the longer you wait to make an introudciont the  more uncomfortable people get
-- *Closed-ended* questions require only a yes or a no
-- they are more effective when they are followed by an *open-ended* question
-- *free information* es informacion que damos voluntariamente
-- Do smalltalk -> most conversations that do not go through the 'ritual' phases rarely proceed to deeper and more meaningful levels. That's why
-smalltalk is so important
-- Don't think (about what to say next), just listen, listen for *key words*, facts, opinions, feeling, and most of all, *free information*
-- *iceber statement* is a comment or a iece of free informaion where 90% is under the surface waiting to be asked about
-- Once you've broken the ice, asked a few ritual questiosn, used active listening, THEN is time to seek further information 
-based on the free informatino you learned
-- self-disclose free information about you
-- if you desire meaningful convewrsations, be prepared to reveal some of your history and what is important to you
-- Four levels of trust:
-1.1. *cliche* greeting
-1.2. exchange some personal facts
-1.3. reveal personal opinions & preferences on different subjects, open-minded discussion, not arguing
-1.4. your personal feelings, reveal your emotions
+- Cómo comenzar una conversación?
 
-## 3 - Five seconds to success : the art of remembering names
+1. Riesgo Vs Rechazo
+2. *Preguntas rituales*
+3. Estar atento a *información gratuita*
+4. Sonsacar más información con *preguntas de seguimiento*
+5. Autodescubrmiento, o revelado de *información gratuita* sobre uno mismo
 
-- among others, think of someone you know with the same name
+- Preguntas *cerradas* Vs *abiertas*
+- Preséntate regularmente a gente desconocida y comienza a compartir tus
+ideas, sentimientos, opiniones y experiencias. Y después de decir "Hola",
+comienza a indagar en los pensamientos, vistas, intereses y conocimiento
+del resto de la gente.
+- Rompe el hielo con un cumplido seguido de una *pregunta ritual*
+- Rompe el hielo dándote cuenta de algo que la persona lleva consigo y
+haz una *pregunta ritual* sobre el mismo
+- Rompe el hielo haciendo un comentairio o una pregunta basada en
+la situación que estáis
+- Cuanto más tardes en presentarte, más incómoda se siente la gente
+- La *preguntas cerradas* son aquellas que requieren solo un sí o un no
+- Son más efectivas cuando van seguidas de una *pregunta abierta*
+- La *información gratuita* en información que damos voluntariamente
+- Haz un poco de hablar por hablar, la mayoría de conversaciónes que no
+pasan por las fases rituales raramente progresan hasta niveles más
+profundos e interesantes. Por eso, las pequeñas conversaciones (sobre el
+tiempo,...) son muy importantes
+- No pienses en qué vas a decir después, simplemente escucha, atento a
+*palabras claves*, hechos, opiniones, sentimientos y sobre todo
+*información gratuita*
+- Una *frase iceberg* es un comentario o un trozo de *información gratuita*
+donde el 90% está bajo la superficie esperando a ser descubierta mediante
+preguntas
+- Una vez que has roto el hielo, preguntado un par de *preguntas rituales*,
+escuchado activamente, entonces es hora de buscar más información basada
+en la *información gratuita* que has ido aprendiendo
+- Proporciona *información gratuita* sobre tí
+- Si quieres conversaciones interesantes, prepárate a revelar parte de tu historia
+y qué cosas son importantes para tí
+- Existen cuatro niveles de confianza:
+1. Saludos *cliché*
+2. Intercambio de hechos personales
+3. Revelación de opiniones y preferencias personales sobre distintos temas,
+debates abiertos, pero no discusiones
+4. Revelación de sentimientos y emociones personales
+
+## 3 - 5 segundos para tener éxito: el arte de recordar nombres
+
+- Entre otros, piensa en alguien que conoces con el mismo nombre
 
 ## 4 - keeping the conversation going strong
 
