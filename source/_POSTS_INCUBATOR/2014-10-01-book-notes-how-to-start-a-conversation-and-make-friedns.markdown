@@ -58,43 +58,53 @@ y qué cosas son importantes para tí
 debates abiertos, pero no discusiones
 4. Revelación de sentimientos y emociones personales
 
-## 3 - 5 segundos para tener éxito: el arte de recordar nombres
+## 3 - Cinco segundos para tener éxito: el arte de recordar nombres
 
 - Entre otros, piensa en alguien que conoces con el mismo nombre
 
-## 4 - keeping the conversation going strong
+## 4 - Manteniendo viva una conversación
 
-- six additional keys to sustaining conversations:
-1.1. focus on the situation you are in
-1.2. find about the 'big' events in other person's life
-1.3. balance the two-way information exchange
-1.4. discuss topics are important to you
-1.5. change topics using free informatino
-1.6. seek out common interests and experiences
+- Seis claves para mantener conversaciones:
 
-- *hot buttons* are subjects or activities that **really** interest people.
-- one goal of asking ritual questions is to discover hot buttons
-- a good conversation is balanced, so be ready to reveal your hot buttons too
-- *active talker* and *active listener* : be sure to do both in conversation
-- Discuss topics that are important to you
-- change topics using free information
-- listen carefully for words, facts, and details, and refer to them as your conversation continues
-- seek out common interestss and experiences
+1. Concéntrate en la situación en la que estás, no te despistes
+2. Infórmate acerca de los grandes eventos de la vida de la otra persona
+3. Mantén un balance adecuado en el intercambion de información, que no
+sea un monólogo (ni por tu parte ni por la suya)
+4. Conversa sobre los temas que son importantes para vosotros
+5. Cambia de tema usando *información gratuita* proporcionada anteriormente
+6. Busca intereses y experiencias comunes
 
-## 5 - getting your ideas across (get across == expresar)
+- *temas candentes* son temas o actividades que **realmente** interesan a la gente
+- Un objetivo de hacer *preguntas rituales* es descubrir esos temas
+- Una buena conversación está equilibrada, así que, disponte a descubrir tus
+*temas candentes*
+- Asegúrate de ser *hablador activo* así como *escuchador activo*
+- Escucha atentemente palabras, hechos y detalles y vuelve a tratarlos según
+va avanzando la conversación
 
-- *wishful hearing* escucha lo que quiere oir, solo oye lo que quiere
-- begin to encourage cooperation and receptivity by telling others the purpose of your conversation
-- when you hear ideas taht seem irrelevant explore thir purpose
-- this encourage your partner to cooperate with you
+## 5 - Expresando tus ideas
 
-## 6 - overcoming conversation hang ups (overcome == derrotar, vencer, debilitar) (hang up == cortar, detener, colgar)
+- Hay mucha gente que solo escucha lo que quiere oir, solo oye lo que quiere
+- Comienza a promover cooperación y receptividad comentando a los demás el
+propóstio de tu conversación
+- Cuando oigas ideas que parezcan irrelevantes, explora su propósito, quizá
+encuentres una idea relacionada que sea interesante
+- Todo esto, hace que tu compañero esté más dispuesto a cooperar
 
-- first hang up : 'Im right, youre wrong' this closed and aggressive attitude will not allow others to open up to tyou in any real meaninful way
-- Second hang up : 'I can read a person like a book', people don't like being stereotyped, in resposne, they may stereotype you, and the communication channel closes
-- 'It doesnt matter to me' : this attitude tells about noninvolvement, indifference, boredom or even insincerity
-- you're destined to a life of frustation and disappointment if you only respond to the world around you based on *what people think about me?*
-- 4th hang up : 'tell me something I dont know', you're giving ghe message the other person's ideas and feelings dont matter to you
+## 6 - Superar conversaciones cortantes
+
+- Primer impedimento: 'Yo tengo razón, tú te equivocas'. Esta actitud cerrada y agresiva
+no permite a los demás abrirse contigo de ninguna forma válida, más bien todo lo contrario,
+la otra persona se pondrá a la defensiva y dejará de escucharte
+- Segundo impedimento: 'Las personas son como un libro abierto para mí'. A la gente
+no le gusta ser esterotipada. En respuesta, ellos harán lo mismo contigo y el canal
+de comunicación se cerrará
+- 'Eso no me importa'. Esta actitud dice a los demás acerca de tu desinterés,
+indiferencia, aburrimiento incluso que eres un mentiroso
+- Estarás destinado a una vida de frustración y decepción si solo respondes al mundo
+alrededor tuyo de acuerdo a lo que la gente pueda pensar de tí
+- 'Dime algo que no sepa ya'. Estás dando un mensaje a la otra persona de que sus
+ideas y sentimientos no te importan
 
 ## 7 - closing converstions tactfully
 
