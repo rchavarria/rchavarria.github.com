@@ -106,74 +106,93 @@ alrededor tuyo de acuerdo a lo que la gente pueda pensar de tí
 - 'Dime algo que no sepa ya'. Estás dando un mensaje a la otra persona de que sus
 ideas y sentimientos no te importan
 
-## 7 - closing converstions tactfully
+## 7 - Cerrando conversaciones con tacto
 
-- there are natural pauses between sentences and its wise to bring your converstioan to a close at those tiems
-- handling a complainer : after listening for free information and details of the problem, ask a few yes/no or closed-ended questions to break the flow of complaints and to allow you to direct the conversatoin to a conclusion
-- para solucionar los problemas de los amigos, en lugar de darlses consejos, pídeles que te cuenten sus opciones
-- para quitarte de enmedio a vendedores, si no acpetan un *no* por resupesta repite como un disco rallado *no estoy interesado*
+- Existen pausas naturales entre frases y está bien llevar la conversación a su
+final en esos momentos
+- Manejando a un quejicoso: después de escuchar la *información gratuita* y los
+detalles del problema, pregúntale algunas *preguntas cerradas*  para romper el
+flujo de quejas y permitirte llevar la discusión hacia alguna conclusión
+- Para solucionar problemas de los amigos, en lugar de darles consejos, pídeles
+que te cuenten sus opciones
+- Para quitarte de enmedio a esos vendedores que no aceptan un *no* por respuesta,
+repite como un disco rallado: *no estoy interesado*
 
-## 8 - making friends
+## 8 - Haciendo amigos
 
-- meet people who have similiar interests : starts your conversations by finding out the different reasons other are taking the class
-- concentrate on the details tat someone discloses to you, and make a point to remember key words and free information
-- matain contact, share experiences, invite to do activities you both like
-- when talking with old friends, it's important to reestablish old ties and bring each other up to date
+- Reúnete con gente con intereses similares: comienza tus conversaciones buscando
+las diferentes razones por las que los demás están llendo a ese curso, conferencia,
+evento, porqué están en el grupo de lectura,...
+- Concéntrate en los detalles que la gente te proporciona, y esfuérzate para
+recordar *palabras clave* e *información gratuita*.
+- Manténte en contacto con ellos, comparte experiencias, invítales a actividades
+que os gusten a los dos,...
+- Cuando hables con viejos amigos, es importante reestablecer viejos lazos y
+actualizarse cada uno con lo que le ha pasado en la vida desde entonces.
 
+## 9 - Reconociendo y aceptando distintos estilos de conversación
 
-## 9 - recognizing an dusing conversation styles
+Según el autor, hay cuatro estilos, y con las primeras letras de ellos forma
+la palabra *c-h-a-t*:
 
-- 4 styles : C-H-A-T (candid, hang back, accurate, talkative)
-- Candid:
-1.1. you usually say what's on your mind without mincing words
-1.2. you see conversations as a match
-- Hang back (reserved approach to conversation)
-1.1. thoughtful describes your conversation.
-1.2. excellent listener
-1.3. others have the impression that you are shy, disinterested, snobbish, or unwilling to communicate
-- Accurate (methodical aproach to conversation)
-1.1. absorb, assess, and impart iformation helps you converse about technical topics
-1.2. you rarely are the one to 'break the ice'. 
-1.3. Go to excruciatingn detail about topics
-1.4. avoid making *small talk*
-- Talkative : outgoing approach to conversation
-1.1. extroverrted, energetic conversationalist who can talk about anything
+1. *Candid*: franco, sincero, dice lo que piensa. Normalmente dice lo que tiene
+en mente, sin medir sus palabras. Ve las conversaciones como un partido.
+2. *Hang back*: reservado. Conversaciones profundas, muy pensadas. Escuchador
+excelente. Los demás pueden tener la sensación de que es tímido, desinteresado
+o que simplemente no tiene ganas de comunicarse
+3. *Accurate*: metódico. Su capacidad de absorber e impartir información lo
+hace muy bueno para conversaciones técnicas. Raramente es quien rompe el hielo.
+Suele llegar hasta detalles muy precisos en sus conversaciones. Intenta no
+usar nunca conversaciones superfluas.
+4. *Talkative*: hablador, sociable. Extrovertido. Conversador muy energético.
+Puede hablar sobre cualquier tema
 
-## 10 - talking to people from other countries
+## 10 - Conversando con gente de otros paises
 
-- show genuine curiosity and interest in the other person's country
-- the are usually delighted if you ask them to teach you a few ritual phrases in their native language
-- avoid stereotyping, better conversations develop when you ask tem for their individual opinions
-- international host's excellent advice : 'keep it simple, dont talk loudly, and never act like your are speaking to a child'
+- Muestra curiosidad genuina e interés por el pais de la otra persona
+- Les encanta que les pidas que te enseñen alguna *frase ritual* en su
+lengua nativa
+- Evita los estereotipos. Las conversaciones se desarrollan mejor cuando
+preguntas por sus opiniones individuales, en lugar de generalizar para
+todo el pais
+- Un excelente consejo de alguien acostumbrado a hospedar a extranjeros:
+"Sé sencillo, no hables alto, y nunca actúes como si estuvieras hablando
+con un niño"
 
-## 11 - customs that influence cross-cultural conversations
+## 11 - Costumbres que influyen en conversaciones entre culturas
 
-## 12 - five golden rules of mobile phone etiquette
+## 12 - Cinco reglas de oro para comportarse con el teléfono
 
-1. people you're with take precedence over the people you want to call
-2. turn on vibrate while attending social or business functions
-3. choose the right time to call
-4. find a private or semiprivate place to talk
-5. speak at a normal volume
+1. La gente con la que estás físicamente tiene preferencia sobre la gente
+que te llama
+2. Activa la vibración si estás en un acto social o de negocios
+3. Elige el mejor momento para llamar, no interrumpas
+4. Busca un lugar privado (o casi) para hablar por teléfono
+5. Habla con un volumen normal
 
-## 13 - email and online chat rooms
+## 13 - Email y chats
 
-- in your first email (or whatever) always introduce yourself, explain how you got the person's contact and te reason for our correspondence
+- En tu primer email (o lo que sea), preséntate primero, explica cómo conseguiste
+el contacto de la persona y al final, la razón de tu email.
 
-## 14 - improving your conversations
+## 14 - Mejorando tus conversaciones
 
-- while in a conversation, a silence should be considered a time to rest or think about conversation topics
-- it's also important not to sandwich positive comments and constructive criticism. Instead, encourage with positive feedback and then presenting the problem in the form of an open-ended question
-- no respondas a la defensiva ante un put-down (hablar mal de alguien, menospreciar, ningunear, despellejar), mejor haz preguntas para saber qué le molesta de lo que estás haciendo
+- Durante una conversación, un silencio se puede considerar como un tiempo de descanso
+o de reflexión acerca de los temas de la conversación
+- Es muy importante no emparejar comentarios positivos con críticas constructivas.
+En lugar de eso, da animos con el feedback positivo y luego presenta el problema
+en forma de una *pregunta abierta*
+- No respondas a la defensiva ante un menosprecio, mejor haz preguntas para saber
+qué le molesta de lo que estás haciendo
 
-## 15 - 50 ways to improve your conversations
+## 15 - 50 formas de mejorar tus conversaciones
 
-0. mira a los ojos, sonrie y saluda
-1. be the first to say hello
-2. introduce yourself to others
-8. let others know about you
-25. be open to answering common ritual quetiosn
-36. keep in touch with friends and acquaintances
-42. ask others about things they have told you in previous conversations
-43. listen carefully for free information
+0. Mira a los ojos, sonríe y saluda
+1. Se el primero en decir *Hola*
+2. Preséntate a los demás
+8. Deja que los demás te conozcan
+25. Que no te importe responder a *preguntas rituales* cotidianas
+36. Mantén el contacto con los amigos y conocidos
+42. Pregunta a los demás acerca de temas que hablásteis la última vez que os vísteis
+43. Escucha atentamente acerca de *información gratuita*
 
