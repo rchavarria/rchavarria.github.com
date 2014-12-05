@@ -20,12 +20,11 @@ Así que aquí está mi Lista de Lectura:
 
 ## Estoy leyendo
 
-- [Extreme programming explained](http://www.amazon.com/Extreme-Programming-Explained-Embrace-Change/dp/0201616416), de Kent Beck
+- [Learning JavaScript design patterns](http://www.amazon.com/Learning-JavaScript-Design-Patterns-Osmani/dp/1449331815/), de Addy Osmani
 - [Expertología](http://www.amazon.es/dp/8492414502), de Andrés Pérez Ortega
 
 ## Tengo pensado leer
 
-- [JavaScript patterns](http://www.amazon.com/JavaScript-Patterns-Stoyan-Stefanov/dp/0596806752), de Stoyan Stefanov
 - [Software craftsmanship](https://leanpub.com/socra), de Sandro Mancuso, recomendado por [Carlos Ble](http://twitter.com/carlosble)
 - [Getting real: how to build a successful web app](https://gettingreal.37signals.com/), de 37signals, recomendado por los organizadores del Codemotion 2014
 - [The craftsman](http://www.amazon.com/dp/0300151195/ref=cm_sw_su_dp), de Richard Sennet, creo que visto en el twitter de [Arturo Herrero](http://twitter.com/arturoherrero)
@@ -61,6 +60,7 @@ Así que aquí está mi Lista de Lectura:
 
 ## He leído
 
+- [Extreme programming explained](http://www.amazon.com/Extreme-Programming-Explained-Embrace-Change/dp/0201616416), de Kent Beck
 - [Stop stealing dreams](http://sethgodin.hubpages.com/hub/stop-stealing-dreams), de Seth Godin
 - [How to start a conversation and make friends](http://www.amazon.com/How-Start-Conversation-Make-Friends/dp/1451610998), de Don Gabor
 - [Snow crash](http://www.amazon.com/Snow-Crash-Bantam-Spectra-Book/dp/0553380958), de Neal Stephenson ~ *Mayo 2014*
