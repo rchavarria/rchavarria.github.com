@@ -4,7 +4,7 @@
   <title><![CDATA[Category: book reviews | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/book-reviews/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2014-12-02T00:20:06+01:00</updated>
+  <updated>2014-12-06T00:52:18+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,89 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How to start conversations and make friends]]></title>
+    <link href="http://rchavarria.github.io/blog/2014/12/05/how-to-start-conversations-and-make-friends/"/>
+    <updated>2014-12-05T18:11:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2014/12/05/how-to-start-conversations-and-make-friends</id>
+    <content type="html"><![CDATA[<h5>de Don Gabor</h5>
+
+<p><img class="left" src="/images/2014/how-to-start-conversation.jpg" width="200" height="306" title="Portada del libro How to start a conversation" ></p>
+
+<h2>Por qué lo he leído</h2>
+
+<p>En el mundo del software se suele hablar mucho de la excelencia técnica, de
+tecnologías, de las últimas buenas prácticas,... Y también de las personas.
+Yo soy de esos que está convencido de que en esta profesión (en realidad en
+todas las profesiones) las relaciones personales son una parte vital de la
+misma.</p>
+
+<p>Como buen técnico, se me da mejor tratar con las máquinas que con las personas,
+así que, ¿por qué no aprender un poco más acerca de ellas?</p>
+
+<!-- more -->
+
+
+<h2>Qué esperaba</h2>
+
+<p>Por un lado me apetecía leer el libro, para aprender cosas nuevas y leer algo
+<em>no-técnico</em>, pero por otro lado me daba pereza porque esperaba algún tipo
+de libro de autoayuda, de <em>buenrrollismo</em>,... Bueno, un poco de americanada
+para vender la moto, poco más.</p>
+
+<h2>Qué encontre</h2>
+
+<p>Bueno, pues un libro un poco de autoayuda la verdad es que sí. Pero también
+encontré trucos útiles para recordar nombres, por ejemplo, y algún que
+otro consejo que sirve perfectamente para la vida real.</p>
+
+<h2>Conclusiones</h2>
+
+<p>Aunque el libro lo veo ahora como un poquitín de autoayuda, no se me hizo
+pesado de leer, y tampoco muy repetitivo (como suelen pecar aquellos).
+El autor enfatiza algunos aspectos una y otra vez, pero está bien.</p>
+
+<p>También utiliza algunos conceptos propios, pero son sencillos de compreder,
+y aunque el libro está lleno de conceptos de sentido común, creo que
+cualquier persona encontrará ideas que, o no se había dado cuenta, o no
+se había planteado.</p>
+
+<h2>Qué he aprendido</h2>
+
+<p>Sobretodo he recordado algo que ya sabía: para conectar con la gente hay que
+ser educado y detallista.</p>
+
+<p>Aparte de esto, estas son unas ideas que debería tener en cuenta a partir de
+ahora:</p>
+
+<ol>
+<li>Mira a los ojos, sonríe y saluda</li>
+<li>Se el primero en decir <em>Hola</em></li>
+<li>Preséntate a los demás</li>
+<li>Deja que los demás te conozcan</li>
+<li>Que no te importe responder a <em>preguntas rituales</em> cotidianas</li>
+<li>Mantén el contacto con los amigos y conocidos</li>
+<li>Pregunta a los demás acerca de temas que hablásteis la última vez que os vísteis</li>
+<li>Escucha atentamente acerca de <em>información gratuita</em></li>
+</ol>
+
+
+<h2>Frases que me gustaría recordar</h2>
+
+<p>Como son muchísimas las notas que he tomado de este libro, y básicamente lo
+que quiero recordar ya lo he escrito antes, aquí dejo un enlace a
+<a href="https://gist.github.com/rchavarria/8997378#file-how-to-start-conversation-make-friends-markdown">Mis notas sobre How to start conversations and make friends</a>.</p>
+
+<h2>Recursos relacionados</h2>
+
+<ul>
+<li><a href="http://www.amazon.com/How-Start-Conversation-Make-Friends/dp/1451610998">Comprar el libro en Amazon</a></li>
+<li><a href="https://gist.github.com/rchavarria/8997378#file-how-to-start-conversation-make-friends-markdown">Mis notas sobre How to start conversations and make friends</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Planifica tu éxito: de aprendiz a empresario]]></title>
@@ -450,120 +533,6 @@ cuyas estimaciones sean iguales o menores que la velocidad del equipo.</li>
 <li><a href="http://twitter.com/joserra_diaz/">Jose Ramón Díaz</a>, de <a href="http://www.agilar.org/">Agilar</a>,
 habla de <a href="http://najaraba.blogspot.com.es/2013/02/la-estimacion-agil-de-proyectos-puntos.html">estimaciones ágiles</a>
 en su blog.</li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Agile principles, patterns and practices in C#]]></title>
-    <link href="http://rchavarria.github.io/blog/2012/11/22/agile-principles-patterns-and-practices-in-c/"/>
-    <updated>2012-11-22T11:22:00+01:00</updated>
-    <id>http://rchavarria.github.io/blog/2012/11/22/agile-principles-patterns-and-practices-in-c</id>
-    <content type="html"><![CDATA[<h4>Agile principles, patterns and practices in C#</h4>
-
-
-
-
-<h5>Robert C. Martin</h5>
-
-
-<p><img class="right" src="http://vig-fp.prenhall.com/bigcovers/0131857258.jpg" width="300" height="222" title="Agile principles, patterns and practices" ></p>
-
-<h2>Por qué lo he leído</h2>
-
-
-<p>Lo he leido porque me he encontrado referencias a este libro en libros anteriores que he leído, en blogs sobre desarrollo de software que suelo leer y en otros muchos sitios relacionados con el software. Si encuentro tantas referencias, será por algo, ¿no? Además, el autor es muy conocido y valorado, así que no había excusa para no leerlo.</p>
-
-<!-- more -->
-
-
-
-
-<h2>Qué esperaba</h2>
-
-
-<p>Me esperaba un libro de <em>Uncle Bob™</em>. Ya he leído alguno del mismo autor, y me gusta su estilo. Algunas veces me parece un poco extremista, pero creo que es así porque cree en lo que hace y eso es lo que predica. Cuando creo que exagera, no le hago mucho caso y sigo hacia adelante, ya está.</p>
-
-<p>Esperaba una descripción de las metodologías ágiles aplicadas al momento de escribir software y encontré ...</p>
-
-<h2>Qué encontré</h2>
-
-
-<p>... un pedazo de ladrillo! Me asusté cuando vi la extensión del libro, pero enseguida entendí el porqué. El libro está lleno de diagramas <a href="http://es.wikipedia.org/wiki/Lenguaje_Unificado_de_Modelado">UML</a> y de código fuente (primero los tests, por supuesto). Así que es normal que sea tan largo.</p>
-
-<p>En cuanto al contenido, me gustó mucho la descripción que hace de muchos patrones de diseño, (incluso he aprendido alguno que no conocía). En el libro también podrás encontrar una descripción detallada de los principios <a href="http://es.wikipedia.org/wiki/SOLID_(object-oriented_design)">SOLID</a> y de otros principios sobre cómo organizar y empaquetar los distintos componentes de tu aplicación (clases, paquetes, namespaces, lo que sea).</p>
-
-<h2>Conclusiones</h2>
-
-
-<p>Aunque el libro sea muy extenso, me ha gustado por varias razones:</p>
-
-<ul>
-    <li>He aprendido nuevos patrones de diseño.</li>
-    <li>He podido profundizar sobre el patrón Model-View-Controller (ver enlaces más abajo).</li>
-    <li>He encontrado una descripción muy detallada de los principios <a href="http://es.wikipedia.org/wiki/SOLID_(object-oriented_design)">SOLID.</a></li>
-</ul>
-
-
-<h2>Pasajes que quiero recordar de este libro</h2>
-
-
-<blockquote>Un módulo que es difícil de cambiar, está roto y necesita ser arreglado, aunque funcione.</blockquote>
-
-
-<blockquote>Un módulo que no comunica está roto y necesita ser arreglado.</blockquote>
-
-
-<blockquote>Cuanto más conocen los programadores sobre <em>todo</em> el proyecto, más sano y más informado está el equipo que lo desarrolla.</blockquote>
-
-
-<blockquote>Es el <em>big picture</em> lo que mantiene unido el sistema. Es la visión del sistema lo que hace obvia la localización y la forma de los módulos individuales. Si la forma de un módulo es inconsistente con la <em>metáfora</em>, es el módulo quien está mal, no la metáfora.</blockquote>
-
-
-<blockquote>Al final, el código fuente <em>es</em> el diseño.</blockquote>
-
-
-<blockquote>Se sabe que el software se está pudriendo cuando empieza a mostrar alguno de los siguientes síntomas: rigidez, fragilidad, inmovilidad, viscosidad, complejidad innecesaria, repetición innecesaria u opacidad.</blockquote>
-
-
-<blockquote>El elemento más volatil en los proyectos software son los requisitos. Vivimos en un mundo de requisitos cambiantes, y nuestro trabajo es estar seguros de que nuestros software puede sobrevivir a esos cambios, así que no culpes a los requisitos cambiantes por los fallos en el software.</blockquote>
-
-
-<blockquote>Los principios SOLID: <strong>S</strong>ingle responsability principle, <strong>O</strong>pen close principle, <strong>L</strong>iskov substitution principle, <strong>I</strong>nterface segregation principle, <strong>D</strong>ependency inversion principle.</blockquote>
-
-
-<blockquote>Un motivo de cambio es un motivo de cambio sólo cuando el cambio ocurre, mientras tanto no.</blockquote>
-
-
-<blockquote><em>Strategy </em>and <em>Template method</em> son las formas más comunes de satisfacer Open closed principle. Estos patrones representan una clara separación de la funcionalidad genérica de la implementación detallada de esa funcionalidad.</blockquote>
-
-
-<blockquote><em>Fool me once, shame on you. Fool me twice, shame on me.</em> Inicialmente, escribimos nuestro código pensando que no va a cambiar. Cuando ocurre un cambio, implementamos abstraciones que nos protegen de futuros cambios de esa misma naturaleza.</blockquote>
-
-
-<blockquote>Liskov substitution principle nos lleva a una importante conclusión: un modelo, visto aisladamente, no puede ser validado significativamente. La validez de un modelo puede ser expresado solo en términos de sus clientes.</blockquote>
-
-
-<blockquote>Liskov substitution principle clarifica que en la programación orientada a objetos, una relación de herencia pertenece al comportamiento que puede ser asumido y que los clientes dependen de este comportamiento, lo contrario de lo que normalmente se cree, que la herencia pertenece al estado</blockquote>
-
-
-<blockquote>El diseño de grandes sistemas depende críticamente de un buen diseño de componentes (paquetes, entregables, ...), de esta forma, los equipos individuales puede enfocarse en componentes aislados en lugar de preocuparse por el sistema completo.</blockquote>
-
-
-<blockquote>Las interfaces pertenecen al cliente que las usa, no a la implementación. El enlace lógico entre el cliente y el interfaz es más fuerte que la relación entre el interfaz y sus implementaciones. Es tan fuerte que no tiene sentido desplegar el cliente sin el interfaz, pero sí que lo tiene desplegar el interfaz sin sus implementaciones.</blockquote>
-
-
-
-
-<h2>Otras lecturas y enlaces relacionadas</h2>
-
-
-<ul>
-    <li>[pdf] <a href="http://www.objectmentor.com/resources/articles/TheHumbleDialogBox.pdf">The humble dialog box</a>: cómo separar la lógica de negocio de la interfaz gráfica, de Michael Feathers.</li>
-    <li><a href="http://www.martinfowler.com/eaaDev/ModelViewPresenter.html">Patrón model-view-presenter</a>: artículo de Martin Fowler que me llevó a éste de <a href="http://www.martinfowler.com/eaaDev/uiArchs.html">Arquitecturas GUI</a>.</li>
-    <li><a href="http://apagayvuelveaencender.blogspot.com.es/2012/11/metodologias-agiles-me-las-creo-o-no-me.html">Metodologías ágiles: ¿me las creo o no me las creo?</a>: excelente post de <a href="http://twitter.com/andres_viedma">Andrés Viedma</a> que me viene ni al pelo como enlace relacionado con el libro y donde se explican los cuatro principios del desarrollo de software ágil</li>
-    <li>Hace ya un tiempo, leí sobre <a href="http://rchavarria.github.io/blog/2010/03/04/principios-y-patrones-de-diseno/">principios y patrones de diseño</a></li>
 </ul>
 
 ]]></content>
