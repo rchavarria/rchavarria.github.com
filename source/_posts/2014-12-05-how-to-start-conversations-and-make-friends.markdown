@@ -14,7 +14,7 @@ sidebar: true
 
 ##### de Don Gabor
 
-{% img %}
+{% img left /images/2014/how-to-start-conversation.jpg %}
 
 ## Por qué lo he leído
 
