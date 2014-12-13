@@ -1,11 +1,23 @@
 # Cómo crear un *Web Component* usando Dart y Polymer
 
+[Dart] es un lenguaje de programación no muy conocido hoy en día pero
+que tiene un gran potencial, ya que está pensado para aplicaciones
+web, tanto para la parte servidora como para la parte cliente. Así,
+con Dart puedes escribir código que se ejecuta en el navegador y
+código ejecutándose en un servidor que responda a ese cliente.
+
+[Polymer] es una implementación del estándar HTML Web Components,
+un estándar que quiere revolucionar la manera en la que se desarrollan
+aplicaciones web en los navegadores.
+
 En este tutorial describo lo que he aprendido siguiendo el tutorial acerca
-de [Cómo crear un Web Component con Dart y Polymer].
+de [Cómo crear un Web Component con Dart y Polymer]. Si quieres bucear
+en el código directamente, puedes hacerlo en mi repositorio de Github
+[Custom element Dart tutorial].
 
 ## Introducción
 
-El Web Component que voy a crear con este tutorial es un sencillo cronómetro,
+El Web Component que crearemos con este tutorial es un sencillo cronómetro,
 con el cual podremos comenzar a contar el tiempo, pausarlo o detenerlo completamente.
 
 Rápidamente, los pasos que vamos a seguir son:
@@ -216,6 +228,9 @@ una dirección URL donde poder probar la aplicación.
 El comando `pub build` genera ficheros que pueden ser desplegados en un servidor
 aparte y que hará posible ejecutar la aplicación en cualquier navegador moderno.
 
+[Dart]: http://dartlang.org
+[Polymer]: http://polymer.org
+[Custom element Dart tutorial]: https://github.com/rchavarria/dart-tutorials/tree/master/custom-element-dart-tutorial
 [Cómo crear un Web Component con Dart y Polymer]: https://www.dartlang.org/docs/tutorials/polymer-intro/
 [Two-way data binding using Polymer]: https://www.dartlang.org/docs/tutorials/forms/#binding-data
 [Declarative event mapping]: http://www.polymer-project.org/polymer.html#declarative-event-mapping
