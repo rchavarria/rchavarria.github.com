@@ -4,7 +4,7 @@
   <title><![CDATA[Category: tutorials | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/tutorials/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2014-12-06T00:54:53+01:00</updated>
+  <updated>2014-12-13T19:11:48+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,280 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Crear Web Components con Dart y Polymer]]></title>
+    <link href="http://rchavarria.github.io/blog/2014/12/13/crear-web-components-con-dart-y-polymer/"/>
+    <updated>2014-12-13T18:42:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2014/12/13/crear-web-components-con-dart-y-polymer</id>
+    <content type="html"><![CDATA[<p><a href="http://dartlang.org">Dart</a> es un lenguaje de programación, no muy conocido hoy en día, pero
+que tiene un gran potencial, ya que está pensado para aplicaciones
+web, tanto para la parte servidora como para la parte cliente. Así,
+con Dart puedes escribir código que se ejecuta en el navegador y
+código ejecutándose en un servidor que responda a ese cliente.</p>
+
+<p><a href="http://polymer.org">Polymer</a> es una implementación del estándar HTML Web Components,
+un estándar que quiere revolucionar la manera en la que se desarrollan
+aplicaciones web en los navegadores.</p>
+
+<p>En este tutorial describo lo que he aprendido siguiendo el tutorial acerca
+de <a href="https://www.dartlang.org/docs/tutorials/polymer-intro/">Cómo crear un Web Component con Dart y Polymer</a>. Si quieres bucear
+en el código directamente, puedes hacerlo en mi repositorio de Github
+<a href="https://github.com/rchavarria/dart-tutorials/tree/master/custom-element-dart-tutorial">Custom element Dart tutorial</a>.</p>
+
+<!-- more -->
+
+
+<h2>Qué vamos a crear</h2>
+
+<p>El Web Component que crearemos con este tutorial es un sencillo cronómetro,
+con el cual podremos comenzar a contar el tiempo, pausarlo o detenerlo completamente.</p>
+
+<p>Rápidamente, los pasos que vamos a seguir son:</p>
+
+<ol>
+<li>Importar el fichero HTML que contiene la definición del Web Component</li>
+<li>Usar el Web Component en nuestra propia página web</li>
+<li>Inicializar Polymer. La librería de Dart que vamos a usar ya proporciona
+el mecanismo para hacerlo, no te preocupes</li>
+</ol>
+
+
+<h2>Ficheros de los que consta el tutorial</h2>
+
+<ul>
+<li><code>web/index.html</code>: es el punto de entrada de la aplicación. Inicializa Polymer,
+importa el Web Component y usa el mismo.</li>
+<li><code>web/tute_stopwatch.html</code>: código HTML que define el Web Component.
+importa el Web Component y usa el mismo.</li>
+<li><code>web/tute_stopwatch.dart</code>: código Dart que implementa el Web Component.</li>
+</ul>
+
+
+<h2>Instalando Polymer.dart</h2>
+
+<p>Para poder usar Polymer, primero es necesario instalarlo como una dependencia del
+proyecto. Para ello, modificar el fichero <code>pubspec.yaml</code> y añadir el siguiente
+contenido:</p>
+
+<p><code>
+dependencies:
+  polymer: "&gt;=0.15.1 &lt;0.16.0"
+</code></p>
+
+<p>Después, ejecutar el comando <code>pub get</code>. <code>pub</code> es una herramienta que viene con el
+SDK de Dart. Dart Editor también puede ejecutar este comando para instalar todas
+las dependencias del proyecto.</p>
+
+<p>Para inicializar Polymer, modificar <code>web/index.html</code> y añadir esta línea al final
+del mismo:</p>
+
+<p>``` html
+...</p>
+
+<script type="application/dart">export "package:polymer/init.dart";</script>
+
+
+<p>...
+```</p>
+
+<h2>Incluir Polymer en la aplicación</h2>
+
+<p>Estos son los ficheros a modificar para usar Polymer en la creación del
+Web Component:</p>
+
+<p><code>web/tute_stopwatch.html</code>: importar el fichero <code>packages/polymer/polymer.html</code>
+antes de definir cualquier Web Component en la aplicación:</p>
+
+<p><code>html
+&lt;link rel="import" href="packages/polymer/polymer.html"&gt;
+&lt;polymer-element name="tute-stopwatch"&gt;
+</code></p>
+
+<p><code>web/tute_stopwatch.dart</code>: importar la librería Polymer en el fichero Dart:</p>
+
+<p><code>
+import 'dart:html';
+import 'package:polymer/polymer.dart';
+// ...
+</code></p>
+
+<h2>Instanciar un Web Component</h2>
+
+<p>En la página web donde se va a usar el Web Component, debemos importar la definición
+del mismo, usar un tag con su nombre (como si fuera un componente HTML normal) e
+inicializar Polymer. De forma que <code>web/index.html</code> quedaría parecido a:</p>
+
+<p>``` html
+&lt;!DOCTYPE html>
+<html>
+  <head></p>
+
+<pre><code>&lt;!-- importa la definición del Web Component --&gt;
+&lt;link rel="import" href="tute_stopwatch.html"&gt;
+</code></pre>
+
+<p>  </head></p>
+
+<p>  <body></p>
+
+<pre><code>&lt;!-- usa el Web Component --&gt;
+&lt;tute-stopwatch&gt;&lt;/tute-stopwatch&gt;
+
+&lt;!-- inicializa Polymer --&gt;
+&lt;script type="application/dart"&gt;export "package:polymer/init.dart";&lt;/script&gt;
+</code></pre>
+
+<p>  </body>
+</html>
+```</p>
+
+<h2>Definiendo el Web Component</h2>
+
+<p>La definición del mismo está en el fichero <code>web/tute_stopwatch.html</code>. Para definirlo
+hay que usar el tag <code>&lt;polymer-element&gt;</code> y asignar un nombre al Web Component. En
+este caso <code>tute-stopwatch</code>.</p>
+
+<p>El tag <code>&lt;polymer-element&gt;</code> puede tener dos tags hijos: <code>&lt;template&gt;</code>, que contiene
+el código HTML; y <code>&lt;script&gt;</code>, que contiene el código Dart.</p>
+
+<p>``` html
+<polymer-element name="tute-stopwatch">
+  <template></p>
+
+<pre><code>...
+</code></pre>
+
+<p>  </template>
+  <script type="application/dart" src="tute_stopwatch.dart"></script>
+</polymer-element>
+```</p>
+
+<h2>Dando comportamiento al Web Component</h2>
+
+<p>El comportamiento es implementado en Dart, en el fichero <code>web/tute_stopwatch.dart</code>.
+En este fichero, se declara una clase que extiende de <code>PolymerElement</code> y está
+anotada con <code>@CustomTag</code>. El contenido de <code>@CustomTag</code> debe coincidir con el
+nombre dado en la definición del Web Component.</p>
+
+<p>```
+@CustomTag('tute-stopwatch')
+class TuteStopwatch extends PolymerElement {</p>
+
+<pre><code>TuteStopwatch.created() : super.created();
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Para que todo esté correcto, la clase <code>TuteStopwatch</code> debe heredar de <code>PolymerElement</code> o
+implementar las interfaces <code>Polymer</code> y <code>Observable</code>. Además, debe definir un
+constructor <em>nombrado</em> que llame a <code>super.created()</code>.</p>
+
+<h2>Enlazando datos entre Dart y HTML</h2>
+
+<p>En la parte visual (HTML) se pueden usar las llaves dobles <code>U+007B {...}}</code> para utilizar una
+variable anotada como <code>@observable</code> en la parte de comportamiento (Dart). Por ejemplo,
+para usar una <code>String</code> que al modificarla en Dart se actualice la vista HTML, los
+ficheros <code>web/tute_stopwatch.html</code> y <code>web/tute_stopwatch.dart</code> quedarían:</p>
+
+<p>``` html
+<polymer-element name="tute-stopwatch">
+  <template></p>
+
+<pre><code>&lt;div&gt; { {counter}} &lt;/div&gt;
+</code></pre>
+
+<p>  </template>
+  ...
+</polymer-element>
+```</p>
+
+<p>```
+@CustomTag('tute-stopwatch')
+class TuteStopwatch extends PolymerElement {</p>
+
+<pre><code>...
+@observable String counter;
+
+void aMethod() {
+    counter = '14:59';
+}
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Para hacer un doble enlace, de Dart a HTML y viceversa, se puede consultar en enlace
+<a href="https://www.dartlang.org/docs/tutorials/forms/#binding-data">Two-way data binding using Polymer</a>.</p>
+
+<h2>Creando manejadores de eventos</h2>
+
+<p>De la misma forma que se puede enlazar variables, se pueden enlazar manejadores de
+eventos que gestionen las interacciones del usuario. Por ejemplo, para responder
+ante un click del usuario, en HTML:</p>
+
+<p><code>html
+&lt;button on-click="{ {start}}"&gt;Start&lt;/button&gt;
+</code></p>
+
+<p>Mientras que en Dart:</p>
+
+<p>```
+@CustomTag('tute-stopwatch')
+class TuteStopwatch extends PolymerElement {</p>
+
+<pre><code>...
+void start(Event evt, var detail, Node target) {
+    ...
+}
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Donde:</p>
+
+<ul>
+<li><code>evt</code>: contiene información sobre el evento</li>
+<li><code>detail</code>: puede proveer información adicional sobre el evento</li>
+<li><code>target</code>: el nodo HTML que lanzó el evento</li>
+</ul>
+
+
+<p>Para más información, como los manejadores de eventos disponibles y más, consultar
+<a href="http://www.polymer-project.org/polymer.html#declarative-event-mapping">Declarative event mapping</a>.</p>
+
+<h2>Desplegando la aplicación</h2>
+
+<p>Antes de desplegar, es necesario el uso de <em>transformadores</em> de Polymer para
+completar el proceso. Para ello, modificar <code>pubspec.yaml</code> añadiendo las siguientes
+líneas:</p>
+
+<p>```
+...
+dependencies:
+  polymer: ...
+transformers:
+- polymer:</p>
+
+<pre><code>entry_points: web/index.html
+</code></pre>
+
+<p>```</p>
+
+<p>Definiendo <code>entry_points</code> indicamos a Polymer qué ficheros HTML queremos que transforme.</p>
+
+<p>Para probar el Web Component desarrollado podemos seleccionar <em>Ejecutar como JavaScript</em>
+sobre el fichero <code>web/index.html</code> desde Dart Editor.</p>
+
+<p>O también, tenemos el comando <code>pub serve</code> en línea de comandos. Este comando nos indicará
+una dirección URL donde poder probar la aplicación.</p>
+
+<p>El comando <code>pub build</code> genera ficheros que pueden ser desplegados en un servidor
+aparte y que hará posible ejecutar la aplicación en cualquier navegador moderno.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Aplicacion web RESTful con Spring MVC]]></title>
@@ -1035,277 +1309,6 @@ encontrarás en esta ruta dentro del directorio raiz del proyecto <code>target/s
 <li><a href="http://docs.oracle.com/javaee/6/tutorial/doc/giepu.html">Building RESTful Web Services with JAX-RS</a></li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Crear un servicio web JAX-WS]]></title>
-    <link href="http://rchavarria.github.io/blog/2013/09/19/crear-servicio-web-jaxws/"/>
-    <updated>2013-09-19T08:49:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2013/09/19/crear-servicio-web-jaxws</id>
-    <content type="html"><![CDATA[<div style="margin:2%; padding:2%; background-color:#E0E0E0; ">
-    Find a lightweight English version of this post directly in the <a href="https://github.com/rchavarria/javaee-6-demos/tree/master/ws-jaxws-cxf">source code repository</a>.
-</div>
-
-
-<p>En esta demo crearemos un servicio web. Básicamente existen dos tipos de servicios
-web: SOAP, basados en el intercambio de mensajes XML; y servicios web basados en
-una interfaces REST, RESTful web services.</p>
-
-<p>Aquí crearemos un servicio web SOAP, el cual establece que los mensajes XML pueden ser
-transportados por diversos protocolos, aquí lo haremos sobre HTTP, ya que es lo más
-común y sencillo. Ya que usaremos HTTP como protocolo de transporte, nuestro servicio web estará
-gestionado por un servlet.</p>
-
-<p>Se puede ver el código fuente de la demostración en el directorio
-<a href="https://github.com/rchavarria/javaee-6-demos/tree/master/ws-jaxws-cxf"><code>ws-jaxws-cxf</code></a>
-del repositorio de las demos en github.</p>
-
-<!-- more -->
-
-
-<h2>Demo</h2>
-
-<p><img class="right" src="/images/2013/web-services-by-psd.jpg" width="320" height="213" title="Foto por el usuario de flickr psd" ></p>
-
-<p>En esta demo no veremos nada funcionando, ya que vamos a crear un servicio web
-pero no vamos a crear un cliente que lo consuma (eso para la siguiente). La forma
-de comprobar que hemos creado un servicio web correcto será la visualización del
-fichero WSDL generado por el servicio, el cual es el contrato entre el proveedor
-del servicio (lo creado en esta demo) y el consumidor del mismo (el cliente que
-crearemos más adelante).</p>
-
-<p>La funcionalidad que nos ofrecerá el servicio se apoyarán en dos métodos:</p>
-
-<ol>
-<li>Añadir usuario: añadiremos un nombre de usuario al servicio.</li>
-<li>Obtener usuario: mediante un identificiador, obtendremos un nombre de usuario.</li>
-</ol>
-
-
-<p>Para ejecutar la demo, simplemente hay que descargase el código fuente y ejecutar
-<code>mvn jetty:run</code> desde el directorio raiz de la demo. Visitar la página de login
-<a href="http://localhost:8080/Users?wsdl">http://localhost:8080/Users?wsdl</a> y veremos
-el fichero WSDL con la definición del servicio.</p>
-
-<h2>Pasos a seguir</h2>
-
-<h3>Elegir un framework que implemente JAX-WS</h3>
-
-<p>Según la <a href="http://docs.oracle.com/javaee/6/tutorial/doc/bnayl.html">documentación de Oracle</a>,
-crear un servicio web parece realmente
-sencillo y para toda la familia. Lo que no explican es que están dependiendo
-de la implementación de los servicios web incluída en <em>su</em> contenedor Java EE,
-Glassfish. No tengo nada en contra, pero me gusta tener cierta independencia,
-por lo que vamos a elegir otro framework que implemente la especificación
-JAX-WS.</p>
-
-<p>He elegido <a href="http://cxf.apache.org">Apache CXF</a>, aunque hay otras implementaciones
-disponibles, como <a href="http://projects.spring.io/spring-ws/">Spring WS</a>
-(quizá en un futuro, veamos su uso).</p>
-
-<h3>Dependencias del proyecto maven</h3>
-
-<p>Como todas las demos, utilizaremos <code>maven</code> como gestor del ciclo de vida del
-proyecto, y las dependencias son una parte muy importante de la vida del proyecto.</p>
-
-<p>La aplicación depende de:</p>
-
-<ul>
-<li><code>javax.servlet-api</code>: el API de Java EE para servlets, ya que será un servlet
-quien gestione las peticiones HTTP. Nuestro servicio web se basará en este servlet.</li>
-<li><code>cxf-rt-frontend-jaxws</code>: la implementación de CXF de la especificación JAX-WS.</li>
-<li><code>cxf-rt-transports-http</code>: HTTP será el protocolo de transporte.</li>
-<li><code>spring-web</code>: CXF usa Spring internamente para su funcionamiento.</li>
-</ul>
-
-
-<h3>Crear el interfaz del servicio</h3>
-
-<p>Nuestro servicio web servirá para almacenar nombres de usuarios, y se podrán
-recuperar estos nombres a través de un identificador que devolverá el servicio
-al añadirlos.</p>
-
-<p>Por lo tanto, vemos que necesitaremos dos métodos:</p>
-
-<ul>
-<li><code>addUser</code>: para añadir un usuario al sistema.</li>
-<li><code>getUser</code>: para recuperar un nombre de usuario.</li>
-</ul>
-
-
-<p>Nuestro interfaz de servicio sería algo así:</p>
-
-<p>``` java
-import javax.jws.WebService;
-import javax.jws.WebParam;</p>
-
-<p>@WebService
-public interface UsersManagement {</p>
-
-<pre><code>public String getUser(@WebParam(name="userId") int userId);
-public int addUser(@WebParam(name="name") String name);
-</code></pre>
-
-<p>}
-```</p>
-
-<h3>Crear la implementación del servicio</h3>
-
-<p>Ya tenemos la definición del servicio, ahora debemos implementarlo. Esta
-implementación deberá estar anotada también con <code>@WebService</code>, y deberemos
-proporcionar valores a algunos parámetros de la anotación. El más importante
-es <code>endpointInterface</code>, que debe apuntar a la definición del servicio.</p>
-
-<p>La implementación tendrá un aspecto similar a éste:</p>
-
-<p>``` java
-import javax.jws.WebService;</p>
-
-<p>@WebService(endpointInterface = "es.rchavarria.ws.UsersManagement",</p>
-
-<pre><code>        serviceName = "Users")
-</code></pre>
-
-<p>public class UsersManagementImpl implements UsersManagement {</p>
-
-<pre><code> // ... implementación de los métodos
-</code></pre>
-
-<p>}
-```</p>
-
-<p>Invito a bucear en el código para ver la implementación de los métodos,
-aunque no es muy interesante de ver, todo sea dicho.</p>
-
-<h3>Establecer un servlet que gestione las peticiones HTTP</h3>
-
-<p>El siguiente paso es establecer un servlet que gestione las peticiones HTTP.
-Apache CXF nos proporciona dicho servlet, por lo que deberemos configurar
-nuestro contenedor Java EE para que lo arranque. El servlet gestionará todas
-las peticiones, con lo que estableceremos el patrón URL a <code>/*</code>.</p>
-
-<p>Es muy importante que el patrón URL del servlet sea capaz de gestionar la URL
-donde se despliegue el servicio web, en caso contrario, las peticiones no
-llegarán al servicio web. Por ejemplo, si el patrón URL del servlet es
-<code>/services/*</code> y nuestro servicio web se despliega en <code>/web-services/*</code>,
-las peticiones a nuestro servicio no serán gestionadas por el servlet.</p>
-
-<p>Para establecer el servlet, creamos un fichero descriptor de la aplicación web,
-<code>web.xml</code>:</p>
-
-<p>``` xml
-<servlet></p>
-
-<pre><code>&lt;servlet-name&gt;the-cxf-servlet&lt;/servlet-name&gt;
-&lt;servlet-class&gt;org.apache.cxf.transport.servlet.CXFServlet&lt;/servlet-class&gt;
-&lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
-</code></pre>
-
-<p></servlet></p>
-
-<p><servlet-mapping></p>
-
-<pre><code>&lt;servlet-name&gt;the-cxf-servlet&lt;/servlet-name&gt;
-&lt;url-pattern&gt;/*&lt;/url-pattern&gt;
-</code></pre>
-
-<p></servlet-mapping>
-```</p>
-
-<h3>Configurar el servlet de CXF</h3>
-
-<p>El servlet de CXF arrancará con el servidor, pero no sabe qué servicios web puede
-invocar. Debemos configurarlo. CXF proporciona un mecanismo para ello, a través
-de un fichero XML.</p>
-
-<p>Podríamos utilizar un fichero por defecto, y guardarlo en <code>WEB-INF/cxf-servlet</code>,
-o podemos configurarlo manualmente. Lo haremos de forma manual, e indicaremos al
-servlet donde está su fichero de configuración. Se lo indicaremos a través de un
-parámetro de inicialización de servlet, por lo que modificaremos nuestro <code>web.xml</code>:</p>
-
-<p>``` xml</p>
-
-<!-- ... -->
-
-
-<p><servlet></p>
-
-<pre><code>&lt;servlet-name&gt;the-cxf-servlet&lt;/servlet-name&gt;
-&lt;servlet-class&gt;org.apache.cxf.transport.servlet.CXFServlet&lt;/servlet-class&gt;
-
-&lt;init-param&gt;
-    &lt;param-name&gt;config-location&lt;/param-name&gt;
-    &lt;param-value&gt;/WEB-INF/services.xml&lt;/param-value&gt;   
-&lt;/init-param&gt;        
-
-&lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
-</code></pre>
-
-<p></servlet></p>
-
-<!-- ... -->
-
-
-<p>```</p>
-
-<p>También debemos añadir el fichero de configuración del servlet CXF, el cual hemos
-llamado <code>WEB-INF/services.xml</code>:</p>
-
-<p>``` xml
-&lt;?xml version="1.0" encoding="UTF-8"?>
-&lt;beans xmlns="http://www.springframework.org/schema/beans"</p>
-
-<pre><code>  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns:jaxws="http://cxf.apache.org/jaxws"
-  xmlns:soap="http://cxf.apache.org/bindings/soap"
-  xsi:schemaLocation="
-</code></pre>
-
-<p>http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-http://cxf.apache.org/bindings/soap http://cxf.apache.org/schemas/configuration/soap.xsd
-http://cxf.apache.org/jaxws
-http://cxf.apache.org/schemas/jaxws.xsd"></p>
-
-<p>  &lt;jaxws:server id="aServer" serviceClass="es.rchavarria.ws.UsersManagement" address="/Users"></p>
-
-<pre><code>&lt;jaxws:serviceBean&gt;
-    &lt;bean class="es.rchavarria.ws.UsersManagementImpl" /&gt;
-&lt;/jaxws:serviceBean&gt;
-</code></pre>
-
-<p>  &lt;/jaxws:server>
-</beans>
-```</p>
-
-<p>Esto es un fichero de configuración de Spring, y es que CXF usa Spring internamente. Se
-añade un nuevo namespace, <code>jaxws</code>, proporcionado por CXF y que viene con etiquetas XML
-para configurar un servidor que responda a las peticiones dirigidas a nuestro servicio web.</p>
-
-<h3>Listos</h3>
-
-<p>La demo ya está lista para ser ejecutada. Si la ejecutamos con el comando <code>mvn jetty:run</code>
-podremos visitar <a href="http://localhost:8080/Users?wsdl">http://localhost:8080/Users?wsdl</a>
-y veremos el fichero WSDL que define el servicio web.</p>
-
-<p>En la próxima demo, crearemos un cliente a partir de este fichero WSDL, y comprobaremos
-cómo funciona.</p>
-
-<h2>Código fuente</h2>
-
-<p>Para echar un ojo al código fuente, visitar el directorio
-<a href="https://github.com/rchavarria/javaee-6-demos/tree/master/ws-jaxws-cxf"><code>ws-jaxws-cxf</code></a>.</p>
-
-<h2>Enlaces para ampliar información</h2>
-
-<ul>
-<li><a href="http://docs.oracle.com/javaee/6/tutorial/doc/bnayl.html">Construir servicios web con JAX-WS</a></li>
-<li><a href="http://docs.oracle.com/javaee/6/tutorial/doc/giepu.html">Construir servicios web REST con JAX-RS</a></li>
-<li><a href="http://cxf.apache.org/docs/index.html">Guía de uso de Apache CXF</a></li>
-</ul>
-
-
-<p><em>Imagen obtenida de <a href="http://www.flickr.com/photos/psd">psd</a></em></p>
 ]]></content>
   </entry>
   

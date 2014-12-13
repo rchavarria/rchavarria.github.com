@@ -4,7 +4,7 @@
   <title><![CDATA[Category: dart | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/dart/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2014-12-06T00:54:53+01:00</updated>
+  <updated>2014-12-13T19:11:48+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,280 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Crear Web Components con Dart y Polymer]]></title>
+    <link href="http://rchavarria.github.io/blog/2014/12/13/crear-web-components-con-dart-y-polymer/"/>
+    <updated>2014-12-13T18:42:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2014/12/13/crear-web-components-con-dart-y-polymer</id>
+    <content type="html"><![CDATA[<p><a href="http://dartlang.org">Dart</a> es un lenguaje de programación, no muy conocido hoy en día, pero
+que tiene un gran potencial, ya que está pensado para aplicaciones
+web, tanto para la parte servidora como para la parte cliente. Así,
+con Dart puedes escribir código que se ejecuta en el navegador y
+código ejecutándose en un servidor que responda a ese cliente.</p>
+
+<p><a href="http://polymer.org">Polymer</a> es una implementación del estándar HTML Web Components,
+un estándar que quiere revolucionar la manera en la que se desarrollan
+aplicaciones web en los navegadores.</p>
+
+<p>En este tutorial describo lo que he aprendido siguiendo el tutorial acerca
+de <a href="https://www.dartlang.org/docs/tutorials/polymer-intro/">Cómo crear un Web Component con Dart y Polymer</a>. Si quieres bucear
+en el código directamente, puedes hacerlo en mi repositorio de Github
+<a href="https://github.com/rchavarria/dart-tutorials/tree/master/custom-element-dart-tutorial">Custom element Dart tutorial</a>.</p>
+
+<!-- more -->
+
+
+<h2>Qué vamos a crear</h2>
+
+<p>El Web Component que crearemos con este tutorial es un sencillo cronómetro,
+con el cual podremos comenzar a contar el tiempo, pausarlo o detenerlo completamente.</p>
+
+<p>Rápidamente, los pasos que vamos a seguir son:</p>
+
+<ol>
+<li>Importar el fichero HTML que contiene la definición del Web Component</li>
+<li>Usar el Web Component en nuestra propia página web</li>
+<li>Inicializar Polymer. La librería de Dart que vamos a usar ya proporciona
+el mecanismo para hacerlo, no te preocupes</li>
+</ol>
+
+
+<h2>Ficheros de los que consta el tutorial</h2>
+
+<ul>
+<li><code>web/index.html</code>: es el punto de entrada de la aplicación. Inicializa Polymer,
+importa el Web Component y usa el mismo.</li>
+<li><code>web/tute_stopwatch.html</code>: código HTML que define el Web Component.
+importa el Web Component y usa el mismo.</li>
+<li><code>web/tute_stopwatch.dart</code>: código Dart que implementa el Web Component.</li>
+</ul>
+
+
+<h2>Instalando Polymer.dart</h2>
+
+<p>Para poder usar Polymer, primero es necesario instalarlo como una dependencia del
+proyecto. Para ello, modificar el fichero <code>pubspec.yaml</code> y añadir el siguiente
+contenido:</p>
+
+<p><code>
+dependencies:
+  polymer: "&gt;=0.15.1 &lt;0.16.0"
+</code></p>
+
+<p>Después, ejecutar el comando <code>pub get</code>. <code>pub</code> es una herramienta que viene con el
+SDK de Dart. Dart Editor también puede ejecutar este comando para instalar todas
+las dependencias del proyecto.</p>
+
+<p>Para inicializar Polymer, modificar <code>web/index.html</code> y añadir esta línea al final
+del mismo:</p>
+
+<p>``` html
+...</p>
+
+<script type="application/dart">export "package:polymer/init.dart";</script>
+
+
+<p>...
+```</p>
+
+<h2>Incluir Polymer en la aplicación</h2>
+
+<p>Estos son los ficheros a modificar para usar Polymer en la creación del
+Web Component:</p>
+
+<p><code>web/tute_stopwatch.html</code>: importar el fichero <code>packages/polymer/polymer.html</code>
+antes de definir cualquier Web Component en la aplicación:</p>
+
+<p><code>html
+&lt;link rel="import" href="packages/polymer/polymer.html"&gt;
+&lt;polymer-element name="tute-stopwatch"&gt;
+</code></p>
+
+<p><code>web/tute_stopwatch.dart</code>: importar la librería Polymer en el fichero Dart:</p>
+
+<p><code>
+import 'dart:html';
+import 'package:polymer/polymer.dart';
+// ...
+</code></p>
+
+<h2>Instanciar un Web Component</h2>
+
+<p>En la página web donde se va a usar el Web Component, debemos importar la definición
+del mismo, usar un tag con su nombre (como si fuera un componente HTML normal) e
+inicializar Polymer. De forma que <code>web/index.html</code> quedaría parecido a:</p>
+
+<p>``` html
+&lt;!DOCTYPE html>
+<html>
+  <head></p>
+
+<pre><code>&lt;!-- importa la definición del Web Component --&gt;
+&lt;link rel="import" href="tute_stopwatch.html"&gt;
+</code></pre>
+
+<p>  </head></p>
+
+<p>  <body></p>
+
+<pre><code>&lt;!-- usa el Web Component --&gt;
+&lt;tute-stopwatch&gt;&lt;/tute-stopwatch&gt;
+
+&lt;!-- inicializa Polymer --&gt;
+&lt;script type="application/dart"&gt;export "package:polymer/init.dart";&lt;/script&gt;
+</code></pre>
+
+<p>  </body>
+</html>
+```</p>
+
+<h2>Definiendo el Web Component</h2>
+
+<p>La definición del mismo está en el fichero <code>web/tute_stopwatch.html</code>. Para definirlo
+hay que usar el tag <code>&lt;polymer-element&gt;</code> y asignar un nombre al Web Component. En
+este caso <code>tute-stopwatch</code>.</p>
+
+<p>El tag <code>&lt;polymer-element&gt;</code> puede tener dos tags hijos: <code>&lt;template&gt;</code>, que contiene
+el código HTML; y <code>&lt;script&gt;</code>, que contiene el código Dart.</p>
+
+<p>``` html
+<polymer-element name="tute-stopwatch">
+  <template></p>
+
+<pre><code>...
+</code></pre>
+
+<p>  </template>
+  <script type="application/dart" src="tute_stopwatch.dart"></script>
+</polymer-element>
+```</p>
+
+<h2>Dando comportamiento al Web Component</h2>
+
+<p>El comportamiento es implementado en Dart, en el fichero <code>web/tute_stopwatch.dart</code>.
+En este fichero, se declara una clase que extiende de <code>PolymerElement</code> y está
+anotada con <code>@CustomTag</code>. El contenido de <code>@CustomTag</code> debe coincidir con el
+nombre dado en la definición del Web Component.</p>
+
+<p>```
+@CustomTag('tute-stopwatch')
+class TuteStopwatch extends PolymerElement {</p>
+
+<pre><code>TuteStopwatch.created() : super.created();
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Para que todo esté correcto, la clase <code>TuteStopwatch</code> debe heredar de <code>PolymerElement</code> o
+implementar las interfaces <code>Polymer</code> y <code>Observable</code>. Además, debe definir un
+constructor <em>nombrado</em> que llame a <code>super.created()</code>.</p>
+
+<h2>Enlazando datos entre Dart y HTML</h2>
+
+<p>En la parte visual (HTML) se pueden usar las llaves dobles <code>U+007B {...}}</code> para utilizar una
+variable anotada como <code>@observable</code> en la parte de comportamiento (Dart). Por ejemplo,
+para usar una <code>String</code> que al modificarla en Dart se actualice la vista HTML, los
+ficheros <code>web/tute_stopwatch.html</code> y <code>web/tute_stopwatch.dart</code> quedarían:</p>
+
+<p>``` html
+<polymer-element name="tute-stopwatch">
+  <template></p>
+
+<pre><code>&lt;div&gt; { {counter}} &lt;/div&gt;
+</code></pre>
+
+<p>  </template>
+  ...
+</polymer-element>
+```</p>
+
+<p>```
+@CustomTag('tute-stopwatch')
+class TuteStopwatch extends PolymerElement {</p>
+
+<pre><code>...
+@observable String counter;
+
+void aMethod() {
+    counter = '14:59';
+}
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Para hacer un doble enlace, de Dart a HTML y viceversa, se puede consultar en enlace
+<a href="https://www.dartlang.org/docs/tutorials/forms/#binding-data">Two-way data binding using Polymer</a>.</p>
+
+<h2>Creando manejadores de eventos</h2>
+
+<p>De la misma forma que se puede enlazar variables, se pueden enlazar manejadores de
+eventos que gestionen las interacciones del usuario. Por ejemplo, para responder
+ante un click del usuario, en HTML:</p>
+
+<p><code>html
+&lt;button on-click="{ {start}}"&gt;Start&lt;/button&gt;
+</code></p>
+
+<p>Mientras que en Dart:</p>
+
+<p>```
+@CustomTag('tute-stopwatch')
+class TuteStopwatch extends PolymerElement {</p>
+
+<pre><code>...
+void start(Event evt, var detail, Node target) {
+    ...
+}
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Donde:</p>
+
+<ul>
+<li><code>evt</code>: contiene información sobre el evento</li>
+<li><code>detail</code>: puede proveer información adicional sobre el evento</li>
+<li><code>target</code>: el nodo HTML que lanzó el evento</li>
+</ul>
+
+
+<p>Para más información, como los manejadores de eventos disponibles y más, consultar
+<a href="http://www.polymer-project.org/polymer.html#declarative-event-mapping">Declarative event mapping</a>.</p>
+
+<h2>Desplegando la aplicación</h2>
+
+<p>Antes de desplegar, es necesario el uso de <em>transformadores</em> de Polymer para
+completar el proceso. Para ello, modificar <code>pubspec.yaml</code> añadiendo las siguientes
+líneas:</p>
+
+<p>```
+...
+dependencies:
+  polymer: ...
+transformers:
+- polymer:</p>
+
+<pre><code>entry_points: web/index.html
+</code></pre>
+
+<p>```</p>
+
+<p>Definiendo <code>entry_points</code> indicamos a Polymer qué ficheros HTML queremos que transforme.</p>
+
+<p>Para probar el Web Component desarrollado podemos seleccionar <em>Ejecutar como JavaScript</em>
+sobre el fichero <code>web/index.html</code> desde Dart Editor.</p>
+
+<p>O también, tenemos el comando <code>pub serve</code> en línea de comandos. Este comando nos indicará
+una dirección URL donde poder probar la aplicación.</p>
+
+<p>El comando <code>pub build</code> genera ficheros que pueden ser desplegados en un servidor
+aparte y que hará posible ejecutar la aplicación en cualquier navegador moderno.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Mi primer katayuno]]></title>
