@@ -156,7 +156,7 @@ constructor *nombrado* que llame a `super.created()`.
 
 ## Enlazando datos entre Dart y HTML
 
-En la parte visual (HTML) se pueden usar las llaves dobles `U+007B {...}}` para utilizar una
+En la parte visual (HTML) se pueden usar las llaves dobles `{ {...}}` para utilizar una
 variable anotada como `@observable` en la parte de comportamiento (Dart). Por ejemplo,
 para usar una `String` que al modificarla en Dart se actualice la vista HTML, los
 ficheros `web/tute_stopwatch.html` y `web/tute_stopwatch.dart` quedarían:
@@ -243,7 +243,7 @@ El comando `pub build` genera ficheros que pueden ser desplegados en un servidor
 aparte y que hará posible ejecutar la aplicación en cualquier navegador moderno.
 
 [Dart]: http://dartlang.org
-[Polymer]: http://polymer.org
+[Polymer]: http://polymer-project.org
 [Custom element Dart tutorial]: https://github.com/rchavarria/dart-tutorials/tree/master/custom-element-dart-tutorial
 [Cómo crear un Web Component con Dart y Polymer]: https://www.dartlang.org/docs/tutorials/polymer-intro/
 [Two-way data binding using Polymer]: https://www.dartlang.org/docs/tutorials/forms/#binding-data
