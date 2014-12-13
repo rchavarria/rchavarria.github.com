@@ -4,7 +4,7 @@
   <title><![CDATA[Category: polymer | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/polymer/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2014-12-13T19:11:48+01:00</updated>
+  <updated>2014-12-13T19:16:50+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -24,7 +24,7 @@ web, tanto para la parte servidora como para la parte cliente. Así,
 con Dart puedes escribir código que se ejecuta en el navegador y
 código ejecutándose en un servidor que responda a ese cliente.</p>
 
-<p><a href="http://polymer.org">Polymer</a> es una implementación del estándar HTML Web Components,
+<p><a href="http://polymer-project.org">Polymer</a> es una implementación del estándar HTML Web Components,
 un estándar que quiere revolucionar la manera en la que se desarrollan
 aplicaciones web en los navegadores.</p>
 
@@ -184,7 +184,7 @@ constructor <em>nombrado</em> que llame a <code>super.created()</code>.</p>
 
 <h2>Enlazando datos entre Dart y HTML</h2>
 
-<p>En la parte visual (HTML) se pueden usar las llaves dobles <code>U+007B {...}}</code> para utilizar una
+<p>En la parte visual (HTML) se pueden usar las llaves dobles <code>{ {...}}</code> para utilizar una
 variable anotada como <code>@observable</code> en la parte de comportamiento (Dart). Por ejemplo,
 para usar una <code>String</code> que al modificarla en Dart se actualice la vista HTML, los
 ficheros <code>web/tute_stopwatch.html</code> y <code>web/tute_stopwatch.dart</code> quedarían:</p>
