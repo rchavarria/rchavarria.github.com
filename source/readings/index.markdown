@@ -88,7 +88,7 @@ de Dale Carnegie ~ *Julio 2013*
 - [Nikola Tesla (biografía)](http://www.casadellibro.com/libro-nikola-tesla-el-genio-al-que-le-robaron-la-luz/1652872/2900001360156), de Margaret Cheney ~ *Mayo 2011*
 - [God and the new physics](http://rchavarria.wordpress.com/2011/04/08/god-and-the-new-physics), de Paul Davies ~ *Abril 2011*
 - [Dormir sin lágrimas](http://rchavarria.wordpress.com/2011/03/29/dormir-sin-lagrimas), de Rosa Jové ~ *Marzo 2011*
-- [Apprenticeship patterns](blog/2011/03/24/apprenticeship-patterns) ~ *Marzo 2011*
+- [Apprenticeship patterns](/blog/2011/03/24/apprenticeship-patterns) ~ *Marzo 2011*
 - Peopleware, de Tom DeMarco y Timoth Lister ~ *Febrero 2011*
 - Clean code, de Robert C. Martin ~ *Enero 2011*
 - Implementation patterns, de Kent Beck ~ *Enero 2011*
