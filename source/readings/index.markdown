@@ -7,8 +7,8 @@ footer: true
 ---
 
 Al igual que [Javier Acero](http://javieracero.com), en cuanto leí el patrón 
-[My Reading List](http://apprenticeship-patterns.labs.oreilly.com/ch06.html#reading_list) 
-en [Apprenticeship Patterns](http://apprenticeship-patterns.labs.oreilly.com) 
+**My Reading List**
+en [Apprenticeship Patterns](/blog/2011/03/24/apprenticeship-patterns) 
 (de David H. Hoover y Adewale Oshineye) decidí a crear mi propia lista de lectura.
 
 Leyendo el patrón me dí cuenta de que sería interesante poder tener una lista centralizada 
