@@ -156,7 +156,7 @@ constructor *nombrado* que llame a `super.created()`.
 
 ## Enlazando datos entre Dart y HTML
 
-En la parte visual (HTML) se pueden usar las llaves dobles `{ {...}}` para utilizar una
+En la parte visual (HTML) se pueden usar las llaves dobles `{% raw %}{{...}}{% endraw %}` para utilizar una
 variable anotada como `@observable` en la parte de comportamiento (Dart). Por ejemplo,
 para usar una `String` que al modificarla en Dart se actualice la vista HTML, los
 ficheros `web/tute_stopwatch.html` y `web/tute_stopwatch.dart` quedarían:
@@ -164,7 +164,7 @@ ficheros `web/tute_stopwatch.html` y `web/tute_stopwatch.dart` quedarían:
 ``` html
 <polymer-element name="tute-stopwatch">
   <template>
-    <div> { {counter}} </div>
+    <div>{% raw %}{{counter}}{% endraw %}</div>
   </template>
   ...
 </polymer-element>
@@ -192,7 +192,7 @@ eventos que gestionen las interacciones del usuario. Por ejemplo, para responder
 ante un click del usuario, en HTML:
 
 ``` html
-<button on-click="{ {start}}">Start</button>
+<button on-click="{% raw %}{{start}}{% endraw %}">Start</button>
 ```
 
 Mientras que en Dart:
