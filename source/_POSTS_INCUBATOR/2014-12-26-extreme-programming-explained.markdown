@@ -62,47 +62,111 @@ no con unos pocos ajustes muy grandes.
 los ojos de la carretera (porque desarrollar es como conducir, es mejor ir haciendo
 pequeñas correcciones que un volantazo para corregir el rumbo).
 
-- Four values
+## Los cuatro valores
 
-1. **Comunication**: problems with projects can invariably be traced back to somegody not talking to somebody else about somthing important. the effect of testing, pair programming and estimating is that programmers and customers and managers have to ocmmunicate
-2. **Simplicity**: is not easy. it is the hardest thing in the world not to look toward the things you'll need to implement tomorrow andnext week and next month
-3. **Feedback**: feedback works at different tme scales. unit tests give feedback in minutes or days. functional tests give feedback in weeks or months. The system is put into production as soon as it makes sense, so the business can begin to feel what the system is like. Feedback works with communication and simplicity. the more feedback you have, the easier it is to communicate. If yuoare communicating clearly, you will know what to test and measure. Simple systems are easier to test
-4. **Courage**: cuando se dieron cuenta de que había que hacer algo duro, rompieron el flujo, rompieron la mitad de los tests. unos cuantos días de duro trabajo después, todos los tests volvían a estar bien. Otro movimiento de corage es el de desechar código. If you don't have the three first values in place, courage by itself is just palain hacking/cracking.
+**Comunicación**
 
-- Basic principles: a value may be vague. A principle s more concrete:
+- Cualquier problema en un proyecto puede, invariantemente, ser
+rastreado hasta encontrar a alguien que no habló con otro alguien acerca de algo
+importante. 
+- El efecto de los tests, programación en parejas y las estimaciones es que
+Programadores, Clientes y Managers están obligados a comunicarse.
 
-1. **Rapid feedback**: time between an action and its feedback is critical to learning (semanas mejor que meses, minutos mejor que dias)
-2. **Assume simplicity**: treat every problem as if it can be solved with ridiculou simplicity. trust your ability to add complexity in the future where you need it
-3. **Incrmental change**: any problem is solved with a series of the smallest changes that make a difference
-4. **Embrace change**: 
-5. **Quality work**: nobody likes working sloppy. everybody likes doing a good job. 
+**Simplicidad**
 
-- Aquí hay otros principios,que no son tan céntricos como los anteriores, pero que tamibén se tienen en cuenta
+- La Simplicidad no es fácil.
+- Lo más difícil en el mundo es evitar mirar hacia adelante al pensar en funcionalidades
+que vas a necesitar implementar mañana, la próxima semana o el próximo mes.
 
-6. **Teach learning**: en lugar de adoctinar, o mandar, se pueden suerir estrategias, lecturas, para que cada uno aprenda sus lecciones.
-7. **Small initial investment**: the focus a tight budget generates encourages you to do a good job of everything you do, pero no recortes mucho, o no podrás hacer nada interesante
-8. **Play to win**: en lugar de trabajar *según el manual* (para que cuando todo acabe no te puedan echar la culpa del fracaso), en XP cada miembro del equipo hace lo que está en su mano para ayudar al equipo a ganar
-9. **Concrete experiments**: cada vez aque tomas una decisión y no la compruebas (con un experimento) puedes haber tomado la decisión incorrecta
-10. **Open, honest communication**: los programadores deben de ser libres de reportar malas noticias a clientes y managers, de entregarlas pronto y de no ser castigados por ello
-11. **Work with people's instincts, not against them**: you can expound all you want on some practice (the best practice you know), but when the pressure mounts, if the practice doesn't sove an immediate problem it will be discarded.
-12. **Accepted responsibility**: if the team comes to the conclusion that a ertain task needs doing, someone will choose to do ti, no matter how odious
-13. **Local adaptation**: you get to decide how to develop. You have to change and adapt.
-14. **Travel light**: they just carry what they must have to keep producing value for the customer (tests and code)
-15. **Honest measurement**: specially of working hours
+**Feedback**
 
-## Back to basics
+- Trabaja en diferentes escalas de tiempos. Por ejemplo, los tests unitarios dan
+feedback en minutos o días, mientras que los tests funcionales proporcionan feedback
+en semanas o meses.
+- El sistemas se pone en producción tan pronto como tiene sentido hacerlo. De esta
+forma el Negocio puede comenzar a ver cómo va a ser el sistema.
+- El feedback funciona con la Comunicación y la Simplicidad. Cuanto más feedback
+tienes, más fácil es comunicar. Si estás comunicando claramente, sabrás qué debes
+medir y testear. Los sistemas simples son más fáciles de testear.
 
-**Coding**
+**Coraje**
 
-Es la única actividad con la que sabemos que sin ella no podemos tener software. Escribir código simplemente está bien para pequeños programas, pero para appliaciones más complejas necesitamos algo más allá de la programación.
-- code also gives you a chance to communicate clearly and concisely. if you have an idea and explain it to me, I can easily misunderstand. if we code it together, I can see in the logic you write the precise shape of you ideas. this communication easily turns into learning. I see your idea and I get one of y own. I turn to code, also.
-- ya que no podemos prescindir del código (ya que si no no existiría el programa), we should use it for as many purposes of software engineering as possible: communicate, describe algorithms, tests and specifications
+- En ocasiones, hay que saltarse las normas, romper el flujo, romper la mitad
+de los tests. Después de unos días de duro trabajo (y coraje), los tests
+deberían volver a estar bien.
+- Otro movimiento de coraje es el de desechar código.
+- Si no tienes los tres primeros valores en su lugar, el Coraje por sí mismo
+no es más que hackear y crackear el sistema.
 
-**Testing**
+## Principios básicos
 
-- Cualquier cosa que no puede ser testeada, no existe. PUedes creer que has implementado tu diea,pero si no puedes probarla, ¿cómo puedes estar seguro?
-- tmabien se pueden escribir tests para requerimientos no-funcionales: performances, adhere of code to standards
-- the tests tell you when you're done. when you can't htink of any tests to write that might break, you're completely done
+Un valor puede ser vago, un principio es más concreto.
+
+1. **Feedback rápido**: el tiempo entre una acción y su feedback es crítico
+para aprender (semanas mejor que meses, minutos mejor que dias).
+2. **Asumir simplicidad**: tratar cualquier problema como si pudiera ser resuelto
+con una simplicidad ridícula. Confía en tu habilidad para añadir complejidad en
+el futuro, cuando realmente la necesites.
+3. **Cambio incremental**: cualquier problemas se resuelve con una serie de
+cambios pequeños que poco a poco van marcando la diferencia.
+4. **Acepta el cambio**
+5. **Trabajo de calidad**: a nadie le gusta un trabajo descuidado, a todo el
+mundo le gusta hacer un buen trabajo.
+
+Existen otros principios, que no son tan céntricos como los anteriores, pero
+que tamibén se tienen en cuenta:
+
+6. **Enseña a aprender**: en lugar de adoctinar, o mandar, se pueden suerir
+estrategias, lecturas, para que cada uno aprenda sus lecciones.
+7. **Inversión inicial pequeña**: el foco que un presupuesto ajustado genera
+te incentiva a hacer un excelente trabajo en todo lo que haces, pero no recortes
+mucho o no podrás hacer nada interesante.
+8. **Juega para ganar**: en lugar de trabajar *según el manual* (para que cuando
+todo acabe no te puedan echar la culpa del fracaso), en XP cada miembro del
+equipo hace lo que está en su mano para ayudar al equipo a ganar.
+9. **Experimentos concretos**: cada vez aque tomas una decisión y no la
+compruebas (con un experimento) puedes haber tomado la decisión incorrecta.
+10. **Comunicación honesta y abierta**: los programadores deben de ser libres
+de reportar malas noticias a clientes y managers, de entregarlas pronto y
+de no ser castigados por ello.
+11. **Trabaja con los instintos de la gente, no contra ellos**: puedes hacer
+incapié todo lo que quieras sobre una buena práctica (quizá la mejor que conozcas),
+pero cuando la presión hace efecto, si la práctica no arregla un problema
+inmediato será descartada por la gente.
+12. **Aceptar responsabilidad**: si el equipo llega a la conclusión de que cierta
+tarea debe ser hecha, alguien elegirá hacerla, aunque sea la peor tarea del
+mundo.
+13. **Adaptación local**: no hay que seguir todas las normas a rajatabla, tú debes
+decidir cómo hacer software. Cambia, mide y adapta lo que mejor trabaje para ti.
+14. **Viaja ligero**: el equipo solo arrastra lo que deban arrastar para producir
+valor al cliente, normalmente, solo código y tests.
+15. **Mediciones honestas**: especialemente las horas trabajadas.
+
+## Vuelta a lo básico
+
+**Codificar**
+
+- Es la única actividad con la que sabemos que sin ella no podemos tener software.
+Escribir código simplemente está bien para pequeños programas, pero para
+appliaciones más complejas necesitamos algo más allá de la programación.
+- El código te da la oportunidad de comunicarte clara y concisamente. Si tienes una
+idea y me la explicas, probablemente yo te malinterprete. Si la codificamos juntos,
+puedo ver tus ideas en la lógica que escribes. Esta comunciación se transforma
+fácilmente en aprendizaje. Veo tus ideas y tengo las mias propias. Así que ahora
+es mi turno de codificar y enseñarte mis ideas.
+- Ya que no podemos prescindir del código (ya que si no no existiría el programa),
+deberíamos usarlo para tantos propósitos sobre ingenieria del software como fuera
+posible: comunicar, describir algoritmos, tests, especificaciones, ...
+
+**Testear**
+
+- Cualquier cosa que no puede ser testeada, no existe. PUedes creer que has
+implementado tu diea,pero si no puedes probarla, ¿cómo puedes estar seguro?
+- También se pueden escribir tests para requerimientos no-funcionales:
+rendimiento, cumplimentación de estándares de codificación, ...
+- Los tests te dicen cuando has terminado. Cuando ya no puedes pensar en
+ningún test erróneo más, es cuando has terminado completamente (ya no tienes
+ningún código de producción más que escribir).
 - most software ships withou testss. automated tests clarly aren¡t essential, entonces porqué considerarlo como una actividad básica?
 - long-term answer is taht tests keep the program alive longer, you can make nore changeslonger
 - short-term reason: programming with tests is more fun. you code with so much more confidence
