@@ -1,43 +1,66 @@
 # Extreme Programming explained, by Kent Beck
 
-- Extreme Programming (XP) is a lightweight methodology for small-to-medium-sized teams developing software in the face of vague or reapidly changing requirements
-- XP is an experiment to answer the question: "How would you program if you had enough time?" -> Mentality of sufficiency Vs. Mentality of scarcity : parábola de la tribu del bosque y la de la montaña
-- Most of the practices in XP are as old as programming
+- Extreme Programming (XP, o Programación Extrema) es una metodología ligera 
+para equipos de tamaño pequeño o mediano que desarrollan software 
+enfrentándose a requisitos vagos o en contínuo cambio.
+- XP es un experimento para responder a la pregunta: ¿Cómo programarías si
+tuvieras suficiente tiempo? Donde se explica la diferencia entre la *Mentalidad
+de la suficiencia* frente a la *Mentalidad de la escasez* (parábola de la
+tribu del bosque y de la montaña)
+- La mayoría de las prácticas en XP son tan viejas como la programación en
+sí misma.
 
 ## Part I: the problem
 
-- The basic problem is risk
-- How does XP address the risk?
+- El problema básico es el riesgo, así que, ¿cómo gestiona XP el riesgo?
 
-1. Schedule slips: short release cycles
-2. Project canceled: asks the customer to choose the smallest release that makes the most business sense
+1. Desviaciones de la planificación: ciclos de releases cortos
+2. Cancelación del proyecto: pregunta al cliente que elija la release más pequeña
+que tiene sentido para el negocio
+/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\                          
 3. System goes sour: Cruft is not allowed to accumulate
-4. Defect rate: tests functions and program features
-5. Business misunderstood: customer to be an integral part of the team
-6. Business changes: shortens the release cycle
-7. False feature rich: highest priority tasks are addressed
-8. Staff turnover programmers to accept responsibility
+/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\                          
+4. Tasa de defectos: teste funciones y funcionalidades
+5. Malentendido en el negocio: el cliente es una parte integral del equipo
+6. Cambios en el negocio: ciclos de releases cortos
+7. Falsa riqueza de funcionalidades: se realizan las tareas con la máxima prioridad
+8. Rotación del personal: los programadores aceptan responsabilidades
 
-- XP puede ayudar en varios aspectos para una estrategia para maximizar el valor económico del proyecto:
+- XP puede ayudar en varios aspectos para una estrategia para maximizar el 
+valor económico del proyecto:
 
-1. Spending money and earning sooner
-2. Increasing the probability that the project will stay alive
+1. Gastando menos dinero y generando ingresos antes
+2. Incrementando la probabilidad de que el proyecto siga con vida durante más tiempo
 
-- There are four variables in soft dev: **Cost**, **Time**, **Quality**, **Scope**.
-- customers and managers pick values for three of them, the development team gets to pick the resultant value of the fourth variable
-- If the don't like the result they can change the inputs or they can pick a different three variables to control
-- In many ways, cost is the most constrained variable. The investment has to start slow and grow over time
-- Quality is a strange variable. Often, by insisting on better quality you can get projects done sooner. temporarily sacrificing internal quality to reduce time to market is a tempting short-term play. Pero hay que tener cuidado o la falta de calidad te pillará y puede que llegues a un punto de código inmantenible.
-- For software dev, **scope** is the most important variable to be aware of.
-- What if we see the softness of requirements a s an opportuity, not a problem? Then we can choose to see scope as the easiest of the four variables to control, because it is so soft, we can shape it.
+- Hay cuatro variables fundamentales en el desarrollo software: **Coste**, **Tiempo**,
+**Calidad** y **Alcance**.
+- Clientes y Managers escogen los valores de tres de ellas, el equipo de desarrollo
+elige el valor resultante de la cuarta.
+- Si no les gusta el resultado, pueden cambiar los valores de entrada o pueden 
+elegir otras tres variables de control distintas.
+- En la mayoría de los casos, el Coste es la variable más restrictiva. La inversión
+comenzar poco a poco y crecer a lo largo del tiempo.
+- La Calidad es una variable extraña. A menudo, insistir en una mejor Calidad
+puede hacer que los proyectos estén hechos antes. Los sacrificios internos de
+Calidad de forma temporal para reducir el tiempo de entrega puede ser una
+forma tentativa de jugar. Pero hay que tener cuidado o la falta de calidad
+te pillará y puede que llegues a un punto de código inmantenible.
+- En cuanto al desarrollo del software, el **Alcance** es la variable más importante
+a tener en cuenta.
+- ¿Qué tal si vemos la flexibilidad de los requisitos como una oportunidad y no
+como un problema? Así podemos ver el Ámbito como la más fácil de las cuatro variables
+de control, porque es tan flexible que podemos darle la forma que queramos.
 - ¿Cómo conseguir que no suba el coste del cambio con el paso del tiempo?
 
-1. simple design
-2. automated tests
-3. constant refinement of the design
+1. Diseño sencillo
+2. Tests automáticos
+3. Refinamiento constante del diseño
 
-- We need to control the development of software by making many small adjustements, not by making a few large adjustments.
-- haz muchos cambios pequeños (mejor que unos pocos grandes) pero nunca apartar los ojos de la carretera
+- Necesitamos controlar el desarrollo del software mediante muchos pequeños ajustes,
+no con unos pocos ajustes muy grandes.
+- Haz muchos cambios pequeños (mejor que unos pocos grandes) pero nunca apartar
+los ojos de la carretera (porque desarrollar es como conducir, es mejor ir haciendo
+pequeñas correcciones que un volantazo para corregir el rumbo).
 
 - Four values
 
