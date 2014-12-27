@@ -206,6 +206,132 @@ Prácticas
 - antoher wayof saying thi sis that the split of power between Business and Develoment is not an exucse to avoid tough jobs
 - most of the time the work will be simpler than you first imagined. whne it isn't, you do it anyway, beause that is what you get paid for
 
+## planning strategy
 
+- we wil make the plan quickly and cheaplly, so there will be little inertia when we must change it
+- primero, aprende las reglas y síguelas (como estas para planificar). cuando estés cómodo con ellas, podrás saltártelas para mejorar
+- the goal: the goal of the game is to maximize the value of software produced by the team
+- the strategy: invest as little as possibl to put the most valuable functionality into production as quicklly as possible
+- players: two players, Development and Business
+- moves: exploration, commitment and steer (pequeños cambios frente a grandes cambios, como pequeñas correcciones conduciendo un coche)
+- exploration phase: what all the system should eventually do. Write a story, Estimate a story, Split a story.
+- commitment phase: Business choose the scope and date, Development confidently commit to delivering it (or not, so Business has to choose another scope or date). Sort by value, Sort by risk, Set velocity, Choose scope
+- steering phase: update the plan based on what is learned. Iteration, Recovery, New story, Reestimate
+
+## iteration planing
+
+- pieces are task cards instead of story cards, but movements are  quite similar
+- exploration phase: Write a task, Split/Combine tasks
+- commitment phase: Accept a task, Estimate a task, Set load factors, Balancing
+- steering phase: Implement a task, Record progress, Recovery, Verify story
+
+## development strategy
+
+- while you are developing, you can act like you and your partner are the only pair on th eproject. then you switch hats. as integrators, you become aware where there are collisions
+- Collective ownership: one of the effects of collective ownership is that complex code does not live very long. It tends to spread knowledge of the system around the team
+- pair programming: it isn't a person programming whiole another person watches. it's a dialog trying to simultaneously program, analyze, design and test. it works for XP becuase it encourages communication
+
+## design strategy
+
+- hay dos problemas con lo de diseñar para un futuro: 
+
+1. las especificaciones pueden cambiar (por lo que el diseño ya no vale para nada)
+2. puedes aprender una mejor manera de hacer las cosas. 
+
+si no pasa una dde las dos, es mejor diseñar para el futuro pero **yo no me arriesgo** a que no haya cambios y mucho menos a no aprender nada.
+
+- when faced iwth a big refactoring, you have to take it in small steps. mientras estás desarrollando, ves la oporutnidad de hacer un peuqeño cambio. Hazlo. La gran refactoización se irá reduciendo.
+
+- four rules of simple design:
+
+1. systme (code and test) must communicate everything you want to communicate
+2. system must contain no duplicate code
+3. system should have the fewst possible classes
+4. system should have the fewest possible methods
+
+### roles of pictures in design
+
+- benefits: if you find it impossible to reduce the number of elements, if there is an obvious asymmetry, if there are many more lines than boxes. all of these are clues to a bad design. Another strength is speed
+- cons: they can't give you concrete feedback
+- the pictures aren't saved. wishing you could save the whiteboard is a sure sign the design hasn't been communicated, either to the theam or to the system
+
+## testing strategy
+
+- los tests escritos por unos dan confianza al resto del equipo
+- se puede aprender de los ests, en dos casos: 
+
+1. tests debería fallar y no falla -> código mal
+2. tests no debería fallar y falla -> código mal
+
+- the tester's job is to translage the sometimes vague testing ideas of the customer into real, automatic, isolated tests
+
+# Part III: implementing XP
+
+## adoptin XP
+
+- how to adopt: pick your worst problem, solve it the XP way, when it's no longer your worst problem, repeat.
+
+## retrofitting XP
+
+- ¿cómo comenzar a escribir tests para un código que ya existe? ¿todo de golpe? No, poco a poco
+
+## roles for people
+
+### programmer
+
+- your job isn't over when the computer understnds what to do. your first value is communication with other people
+- una habilidad necesaria es *pair programming*
+- another skill needed by the extreme programmer is the habit of simplicity
+- tienes que estar dispuesto a aceptar la propiedad colectiva del código
+- without courage, XP just simply doesn't work
+
+### customer
+
+- the programmer knows how to program. the customer knows what to program.
+- skills for the custormer to be learned: write good stories, influence a project without being able to congtrol it
+- customers have to make decisions
+- you will have to learn how to write stories
+- you will have to learn to write functional tests
+
+### tester
+
+- you are responsible fo rhelping the customer choose and write functional testss
+
+### tracker
+
+- you have to make lots of estimates and then notice how reality conformed to your guesses. 
+- your job is to close the loop on feedback
+- kkeping an eye on the big picutre
+- your are the team historian. keep a log of functional test scores and defects reported
+- the skill you need to cultivate most is the ability to collect the information you need without distrubing
+
+### coach
+
+- you notice when people are deviating from the team's process and bring this to the team's attention
+- how other teams are using XP, what the ideas behind XP are, and how they realte to the current situation
+- confident, aggressive programmers are valuable precisely because they are confident and aggressive
+
+### consultant
+
+- los equipos XP son my buenos técnicamente, pero de bez en cuando necesitan a un experto
+- what they won't do is let you go off and sole the problem by yourseelf
+- and when you are done, they will most likely throw away eveythingyou have done and do it over tehmselves
+
+## 20-80 rule
+
+## what makes XP hard
+
+- it is primarily emotions (espeically fear) that makes XP hard
+- you have to learn to be dissatisfied with coplexity, not to rest until you can't imagin anything simpler working
+- las emociones forma parte de las persones, por eso, XP no trata de eliminarlas sino que acepta e incentiva que las personas expersen sus sentimientos
+
+## when you hsouldn't try XP
+
+- the giggest barrrer to the succes sof an XP project is business culture
+- another culture that is not conducive to XP is one in which you are required to put in long hours to prove your "commitment to the company"
+
+## xp at work
+
+- 
 
 
