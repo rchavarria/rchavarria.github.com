@@ -167,79 +167,76 @@ rendimiento, cumplimentación de estándares de codificación, ...
 - Los tests te dicen cuando has terminado. Cuando ya no puedes pensar en
 ningún test erróneo más, es cuando has terminado completamente (ya no tienes
 ningún código de producción más que escribir).
-- most software ships withou testss. automated tests clarly aren¡t essential, entonces porqué considerarlo como una actividad básica?
-- long-term answer is taht tests keep the program alive longer, you can make nore changeslonger
-- short-term reason: programming with tests is more fun. you code with so much more confidence
+- Lamentablemente, la mayoría del software se entrega sin haber escrito tests,
+luego los tests automáticos no son esenciales, entonces ¿porqué considerarlo
+como una actividad básica?
+- Una respuesta para el largo plazo es que los tests mantienen viva la
+aplicación por más tiempo, y permiten a los programadores a realizar cambios
+durante más tiempo también.
+- La razón a corto plazo es que programar con tests es más divertido, ya que
+uno programa con mucha más confianza, puede tomar mayores riesgos programando
+y programará más rápido.
 
-**Listening**
+**Escuchar**
 
-- como programador, no sabes nada del negocio, así que debes preguntar. if you're going to ask questions, then you'd better be prepared to listen to the answers
-- programmers help the customer to understandwhat is hard and what is easy
-- the things that have to be communicated get communicated when they need to be communicated an in the amount of deeetail they need to be communicated.
+- Como programador, no sabes nada del negocio, así que debes preguntar. Y si
+vas a hacer preguntas, mejor que estés preparado para escuchar las respuestas.
+- Los programadores ayudan al Cliente a entender lo que es difícil y lo que es
+fácil de implementar.
+- Los temas que tienen que ser comunicados son comunicados cuando necesitan ser
+comunicados y con el nivel de detalle que necesitan ser comunicados.
 
-**Designing**
+**Diseñar**
 
-- designing s creating a structure that organizes the logic in the system
-- good design: a change in one part of the system doesn't always require a change in another part of the system. ensures that every piece of logic in the system has one and only one home. puts the logic near the data it operates on. allows the extension of the system with changes in only one place
+- Diseñar es crear una estrucutra que organice la lógica del sistema.
+- Buen diseño: un cambio en una parte del sistema no siempre requiere un cambio
+en otra parte del mismo. También asegura que cada pieza de la lógica del sistema
+tiene un solo lugar. Mueve la lógica cerca de los datos con los que opera. 
+Permite la extensión del sistema con cambios en un solo lugar.
 
-**Conclusion**
+**Conclusión**
 
-You code because you want some software. You test to know whne you're done coding. You lisen to know what to code or what to eest. YOu design to keep coding and testing and listening indefinitely.
+Codificas porque quieres algún tipo de software. Testeas para saber cuando has
+terminado de codificar. Escuchas para saber qué codificar o qué testear.
+Diseñas para poder codificar, testear y escuchar de forma indefinida.
 
-## Part II: the solution
+## Parte II: la solución
 
 Prácticas
 
-**Planning game**
-
-- Qué es lo que se va a entregar (planning game) es una mezcla entre las prioridades del negocio y las estimaciones técnicas.
-
-**Small releases**
-
-- every release should be as small as possible, containng the most valuable business requirements
-
-**Metaphor**
-
-- the metaphor just helps everyone on the project understand the basic elements and their relationshsiops
-- by asking for a metaphor we are likely to get an architecture that is easy to commujnicate and elaborate
-
-**Simple design**
-
-- runs all teh tests. has no duplicated logic. states every intention imporatant to hgt programmers. has the fewest possible clases and methods (lements)
-
-**Testing**
-
-- any program featue without an automated test simply doesn't exist. unit and functional tests. the reuslt is a program that becoes more and more confident over time  it becomes more capable of accepting change
-
-**Refactoring**
-
-- after they had added the feature, the programmers ask if they now can see how to tmake the program simpler, while still runningn all of the tests
-- you don't refactor on specullaiton. you  refactor whne hte system asks you to. when the system requires that you dupliczte code, it is aksing for refactoring
-
-**Pair programmign**
-
-- two roles: on is thinkinig about the best way to impleent this methdo right here. the other is thingkin more strategically
-
-**Collective ownership**
-
-- anybdoy who sees an opporunity to add value to any portion of the code is requiered to do so at any time
-
-**Continuous integartion**
-
-- code is integrated and tested lots of times a day
-
-**40-hour week**
-
-- i want to be fresh and eager every morning, and tired and satisfied every night. overitem is a symptom of a seriuos problem on the project.
-
-**On-site customer**
-
-- a real customer must sit with the team, availble to answer questions, resolve disputes, ans set small-scale priorities.
-
-**Coding standards**
-
-- the standard must be adopted voluntarily by the whole team
-
+- **Juego de planificación**: lo que se va a entregar es una mezcla entre las prioridades
+del negocio y las estimaciones técnicas.
+- **Releases pequeñas**: cada release debería ser tan pequeña como fuera posible,
+conteniendo los requisitos más valiosos para el negocio.
+- **Metáfora**: la metáfora simplemente ayuda a todo el mundo en el proyecto a
+entender los elementos básicos y sus relaciones. Buscando una metáfora es probable
+que lleguemos a una arquitectura que sea fácil de comunicar e implementar.
+- **Diseño simple**: ejecuta todos los tests, no tiene lógica duplicada, comunica
+cada intención importante a los programadores y tiene el mínimo número de clases
+y métodos (elementos) posibles.
+- **Testear**: cualquier funcionalidad del programa sin un test automático
+simplemente no existe. Existen tests unitarios y funcionales. El resultado es un
+programa que es cada vez más confiado con el tiempo y que es capaz de aceptar
+cambios.
+- **Refactorizar**: cuando se añade una funcionalidad, los programadores se preguntan
+si pueden hacer el programa más simple, sin que ello cause el fallo en algún test.
+No se refactoriza bajo especulación. Uno refactoriza cuando el sistema lo pide.
+Cuando el sistema requiere que se duplique código, está pidiendo una refactorización.
+- **Pair programming**: hay dos roles: uno piensa acerca de la mejor forma de
+implementar el método en el que se está trabajando mientras que el otro piensa de
+una forma más estratégica.
+- **Propiedad colectiva del código**: cualquiera que vea una oportunidad para añadir valor
+a cualquier porción del código está obligado a hacerlo en cualquier momento.
+- **Integración contínua**: el código es integrado y testeado muchas veces a lo
+largo de un día de trabajo.
+- **Semana laboral del 40 horas**: uno quiere estar fresco y con energía cada mañana, y cansado y
+satisfecho cada noche. Trabajar muchas horas extras durante mucho tiempo es un
+síntoma de un serio problema en el proyecto.
+- **Cliente conel equipo**: un cliente real se sienta con el equipo, disponible para
+responder a cualquier pregunta, resolver disputas y establecer prioridades a pequeña
+escala.
+- **Estándar de codificación**: un estándar de codificación es adoptado voluntariamente
+por el equipo al completo.
 
 - Cómo unas prácticas refuerzan las debilidades del resto de ellas:
 
