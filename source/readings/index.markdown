@@ -7,8 +7,8 @@ footer: true
 ---
 
 Al igual que [Javier Acero](http://javieracero.com), en cuanto leí el patrón 
-[My Reading List](http://apprenticeship-patterns.labs.oreilly.com/ch06.html#reading_list) 
-en [Apprenticeship Patterns](http://apprenticeship-patterns.labs.oreilly.com) 
+**My Reading List**
+en [Apprenticeship Patterns](/blog/2011/03/24/apprenticeship-patterns) 
 (de David H. Hoover y Adewale Oshineye) decidí a crear mi propia lista de lectura.
 
 Leyendo el patrón me dí cuenta de que sería interesante poder tener una lista centralizada 
@@ -74,7 +74,7 @@ de Robert Kiyosaki ~ *Septiembre 2013*
 - [Como ganar amigos e influir sobre las personas](https://gist.github.com/rchavarria/8567866),
 de Dale Carnegie ~ *Julio 2013*
 - [La meta: un proceso de mejora contínua](/blog/2013/04/10/la-meta), de Eliyahu M. Goldratt ~ *Abril 2013*
-- [Agile estimating and planning](blog/2013/02/13/agile-estimating-and-planning/), de Mike Cohn ~ *Febrero 2013*
+- [Agile estimating and planning](/blog/2013/02/13/agile-estimating-and-planning/), de Mike Cohn ~ *Febrero 2013*
 - [Agile principles, patterns and practices in C#](http://rchavarria.wordpress.com/2012/11/22/agile-principles-patterns-and-practices-in-c), de Robert C. Martin ~ *Noviembre 2012*
 - [En el principio... fue la linea de comandos](http://rchavarria.wordpress.com/2012/10/25/en-el-principio-fue-la-linea-de-comandos), de Neal Stephenson ~ *Octubre 2012*
 - [Lean software development: an agile toolkit](http://rchavarria.wordpress.com/2012/10/10/lean-software-development), de Mary y Tom Poppendieck ~ *Septiembre 2012*
@@ -88,7 +88,7 @@ de Dale Carnegie ~ *Julio 2013*
 - [Nikola Tesla (biografía)](http://www.casadellibro.com/libro-nikola-tesla-el-genio-al-que-le-robaron-la-luz/1652872/2900001360156), de Margaret Cheney ~ *Mayo 2011*
 - [God and the new physics](http://rchavarria.wordpress.com/2011/04/08/god-and-the-new-physics), de Paul Davies ~ *Abril 2011*
 - [Dormir sin lágrimas](http://rchavarria.wordpress.com/2011/03/29/dormir-sin-lagrimas), de Rosa Jové ~ *Marzo 2011*
-- [Apprenticeship patterns](blog/2011/03/24/apprenticeship-patterns) ~ *Marzo 2011*
+- [Apprenticeship patterns](/blog/2011/03/24/apprenticeship-patterns) ~ *Marzo 2011*
 - Peopleware, de Tom DeMarco y Timoth Lister ~ *Febrero 2011*
 - Clean code, de Robert C. Martin ~ *Enero 2011*
 - Implementation patterns, de Kent Beck ~ *Enero 2011*
