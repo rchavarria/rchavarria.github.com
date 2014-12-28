@@ -222,14 +222,14 @@ cambios.
 si pueden hacer el programa más simple, sin que ello cause el fallo en algún test.
 No se refactoriza bajo especulación. Uno refactoriza cuando el sistema lo pide.
 Cuando el sistema requiere que se duplique código, está pidiendo una refactorización.
-- **Pair programming**: hay dos roles: uno piensa acerca de la mejor forma de
+- **Programación en parejas**: hay dos roles: uno piensa acerca de la mejor forma de
 implementar el método en el que se está trabajando mientras que el otro piensa de
 una forma más estratégica.
 - **Propiedad colectiva del código**: cualquiera que vea una oportunidad para añadir valor
 a cualquier porción del código está obligado a hacerlo en cualquier momento.
 - **Integración contínua**: el código es integrado y testeado muchas veces a lo
 largo de un día de trabajo.
-- **Semana laboral del 40 horas**: uno quiere estar fresco y con energía cada mañana, y cansado y
+- **Semana laboral de 40 horas**: uno quiere estar fresco y con energía cada mañana, y cansado y
 satisfecho cada noche. Trabajar muchas horas extras durante mucho tiempo es un
 síntoma de un serio problema en el proyecto.
 - **Cliente conel equipo**: un cliente real se sienta con el equipo, disponible para
@@ -238,50 +238,68 @@ escala.
 - **Estándar de codificación**: un estándar de codificación es adoptado voluntariamente
 por el equipo al completo.
 
-- Cómo unas prácticas refuerzan las debilidades del resto de ellas:
+- Cómo unas prácticas son apoyadas por otras para reforzar sus debilidades:
 
-1. planning game: es apoyado por on-site customer, short releases
-2. short releases: le apoya planning game, continuous integrations, tests and simple design
-3. metaphor: tests, on-site customer, refactoring
-4. simple design: refactoring, metaphor, pair programming
-5. testing: simple design, pair programming
-6. refactoring: collective ownership, coding standards, pair programming, simple design, ,tests, continuous integrations, 40-hour week
-7. pair programming: coding standards, 40-hour week, metaphor, tests, simple design
-8. collective ownership: continuous integration, tests, pair programming, coding standards
-9. continuous integration: tests, pair programmming, refactoring
-10. 40-hour week: todas las prácticas llevan a trabajr jornadas razonabeles
-11. on-site ucstomer: they write functional tests, make small-scale priority and decisions
-12. coding standards: pair programming, refactoirng
+1. Juego de planificación: cliente con el equipo, releases cortas.
+2. Releases cortas: juego de planificación, integración contínua, tests y 
+diseño simple.
+3. Metáfora: tests, cliente con el equipo, refactorizar.
+4. Diseño simple: refactorizar, metáfora y programación en parejas.
+5. Tests: diseño simple, programación en parejas.
+6. Refactorizar: propiedad colectiva del código, estándar de codificación, 
+programación en pareja, diseño simple, tests, integración contínua,
+semana laboral de 40 horas.
+7. Programación en pareja: estándar de codificación, semana laboral de 40 horas,
+metáfora, tests y diseño simple.
+8. Propiedad colectiva del código: integración contínua, tests, programación en 
+pareja, estándar de codificación
+9. Integración contínua: tests, programación en pareja, refactorizar.
+10. Semana laboral de 40 horas: en general, todas las prácticas llevan a trabajar
+jornadas razonables.
+11. Cliente con el equipo: escriben tests funcionales, priorizan a pequeña escala
+y toman decisiones.
+12. Estándar de codificación: programación en pareja y refactorizar.
 
 /!\  imagencita de la página 58 sobre todas las prácticas interconectadas /!\
 
-### management strategy
+### Estrategia de gestión
 
-- manager's job is to highlight what needs to be done, no tto assign work
-- manager provides guidance all along
-- namanger needstotake the leas in adapting XP to lclal conditions
-- manager doesn't impose a lot of overhead (burocracia)
+- El trabajo del manager es indicar lo que necesita ser echo, pero sin asignar el
+trabajo a nadie en concreto.
+- Un manager está para guiar al equipo cuando éste lo necesita
+- Es el manager quien tiene que tomar las riendas de adaptar XP a las condiciones
+locales del equipo.
+- Un manager no impone mucha sobrecarga, es decir, burocracia.
 
-**metrics**
+**Métricas**
 
-- tha basic XP manangement tool is the metric
-- the medium of the metric is the Big Visible Chart, the manager periodically updates aprominnent chart
-- don't have too many metrics, and be prepared to retie metrics that have served their purpose
-- any metric that is approaching 100% is likely to be useless
+- La herramienta básica de gestión en XP son las métricas.
+- El medio de las métricas es un gran gráfico bien visible, el manager lo actualiza
+periódicamente.
+- No tiene que haber demasiadas métricas, y se debe estar preparado para retirar
+aquellas que ya no sirven para su propósito.
+- Cualquier métrica que se aproxime a su 100% tiene muchas probabilidades de ser
+inútil.
 
-**coaching**
+**Coaching**
 
-- management is divided into two roles: the coach and the tracker. coaching is primarily concerned with the technical execution and evolution of the process
+La gestión está dividida en dos roles: el coach y el que realiza el seguimiento.
+El coaching se encarga principalmente de la ejecución técnica y de la evolución
+de los procesos.
 
-**tracking**
+**Seguimiento**
 
-- if you don't measure what really happens against what you predicted would happen, you won't ever learn
-- planning is always emotional
+- Si no mides lo que pasa en la realidad contra una predicción que hiciste en el
+pasado, nunca aprenderás.
+- Planificar es siempre emocional.
 
-**intervention**
+**Intervenciones**
 
-- cuando hay problemas que el equipo nop uede solucionar, es el manager quien tiene que interverni, pero con cuidado, si abasallar, o perderá toda la confianza
-- ejemplos: cambios de personal, se necesitan cambios en los procesos del equipo, matar el proyecto
+- Cuando hay problemas que el equipo no puede solucionar, es el manager quien
+tiene que intervernir, pero con cuidado, si abasallar, o perderá toda la
+confianza del equipo.
+- Ejemplos: cambios de personal, se necesitan cambios en los procesos del
+equipo, matar el proyecto
 
 ## facilities strategy
 
