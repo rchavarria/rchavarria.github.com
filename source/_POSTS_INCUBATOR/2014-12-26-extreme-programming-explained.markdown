@@ -17,9 +17,8 @@ sí misma.
 1. Desviaciones de la planificación: ciclos de releases cortos
 2. Cancelación del proyecto: pregunta al cliente que elija la release más pequeña
 que tiene sentido para el negocio
-/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\                          
-3. System goes sour: Cruft is not allowed to accumulate
-/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\/!\                          
+3. El sistema se vuelve rancio: no se permite que se acumule lo que ha dejado de
+ser útil
 4. Tasa de defectos: teste funciones y funcionalidades
 5. Malentendido en el negocio: el cliente es una parte integral del equipo
 6. Cambios en el negocio: ciclos de releases cortos
