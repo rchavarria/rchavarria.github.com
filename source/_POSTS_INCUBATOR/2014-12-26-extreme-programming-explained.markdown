@@ -301,31 +301,31 @@ confianza del equipo.
 - Ejemplos: cambios de personal, se necesitan cambios en los procesos del
 equipo, matar el proyecto
 
-## facilities strategy
+## Estrategia del entorno
 
-- tking control of the physical environment sends a powerful message to the team. 
-- taking control of their physical environment is the first step toward taking control of hwo they work overall
-- antoher wayof saying thi sis that the split of power between Business and Develoment is not an exucse to avoid tough jobs
-- most of the time the work will be simpler than you first imagined. whne it isn't, you do it anyway, beause that is what you get paid for
+- Tomar control del entorno físico envía un mensaje bastante poderoso al equipo
+- Tomar el control de su entorno físico es el primer paso hacia la toma de control de cómo ellos trabajarán en conjunto
+- La división de poderes entre Negocio y Desarrollo no quiere decir que haya que evitar hacer los trabajos difíciles
+- La mayoría de las veces el trabajo será más sencillo de lo que en un principio te imaginaste. Si no es así, hazlo igual, es por eso por lo que te pagan
 
-## planning strategy
+## Estrategia de planificación
 
-- we wil make the plan quickly and cheaplly, so there will be little inertia when we must change it
-- primero, aprende las reglas y síguelas (como estas para planificar). cuando estés cómodo con ellas, podrás saltártelas para mejorar
-- the goal: the goal of the game is to maximize the value of software produced by the team
-- the strategy: invest as little as possibl to put the most valuable functionality into production as quicklly as possible
-- players: two players, Development and Business
-- moves: exploration, commitment and steer (pequeños cambios frente a grandes cambios, como pequeñas correcciones conduciendo un coche)
-- exploration phase: what all the system should eventually do. Write a story, Estimate a story, Split a story.
-- commitment phase: Business choose the scope and date, Development confidently commit to delivering it (or not, so Business has to choose another scope or date). Sort by value, Sort by risk, Set velocity, Choose scope
-- steering phase: update the plan based on what is learned. Iteration, Recovery, New story, Reestimate
+- En XP se hace un plan de forma rápida y barata, por lo que hay poca inercia cuando tenemos que cambiarlo
+- Primero, aprende las reglas y síguelas (como estas para planificar). Cuando estés cómodo con ellas, podrás saltártelas para mejorar
+- El objetivo del juego de planificación es maximizar el valor del software producido por el equipo
+- Estrategia: invertir lo mínimo posible para poner la funcionalidad más valiosa en producción tan rápido como sea posible
+- Jugadores: Desarrollo y Negocio
+- Movimientos: exploración, compromiso y pequeñas correcciones (pequeños cambios frente a grandes cambios, como pequeñas correcciones conduciendo un coche).
+- Fase de exploración: qué es lo que el sistema debería hacer finalmente. Escribir una historia. Estimar una historia. Dividir una historia.
+- Fase de compromiso: Negocio elige el alcance y una fecha, Desarrollo se compromete a entregar todo o parte del alcance en esa fecha. Negocio elige si hace el alcance menor o alarga la fecha de entrega. Ordenar por valor. Ordenar por riesgo. Establecer la velocidad. Elegir alcance.
+- Fase de pequeñas correciones: actualizar el plan en base a lo que se va aprendiendo. Iteraciones. Recuperación. Nuevas historias. Reestimaciones.
 
-## iteration planing
+## Planificación de la iteración
 
-- pieces are task cards instead of story cards, but movements are  quite similar
-- exploration phase: Write a task, Split/Combine tasks
-- commitment phase: Accept a task, Estimate a task, Set load factors, Balancing
-- steering phase: Implement a task, Record progress, Recovery, Verify story
+- Las piezas son *tarjetas de tareas* en lugar de *tarjetas de historias*, pero los movimientos de cada fase son bastante similares
+- Fase de exploración: escribir una tarea. Dividir / Combinar tareas
+- Fase de compromiso: aceptar una tarea. Estimar una tarea. Establecer factores de carga (cuánto trabajo tiene cada persona en el equipo). Balancear carga de trabajo.
+- Fase de pequeñas correcciones: implementar una tarea. Guardar progreso. Recuperación. Verificar historia
 
 ## development strategy
 
