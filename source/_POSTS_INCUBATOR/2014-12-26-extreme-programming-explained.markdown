@@ -333,23 +333,25 @@ equipo, matar el proyecto
 - Propiedad colectiva del código: uno de los efectos de la propiedad colectiva del código es que el código complejo no vive mucho tiempo. Ademas, tiende a expandir el conocimiento del sistema alrededor de todos los integrantes del equipo.
 - Programación en parejas: no es una persona programando mientras la otra persona mira. Es un diálogo tratando simultáneamente de programar, analizar, diseñar y testear. Funciona para XP porque incentiva la comunicación.
 
-## design strategy
+## Estrategia de diseño
 
-- hay dos problemas con lo de diseñar para un futuro: 
+- Hay dos problemas con lo de diseñar para un futuro: 
 
-1. las especificaciones pueden cambiar (por lo que el diseño ya no vale para nada)
-2. puedes aprender una mejor manera de hacer las cosas. 
+1. Las especificaciones pueden cambiar (por lo que el diseño ya no vale para nada)
+2. Puedes aprender una mejor manera de hacer las cosas. 
 
-si no pasa una dde las dos, es mejor diseñar para el futuro pero **yo no me arriesgo** a que no haya cambios y mucho menos a no aprender nada.
+/!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\
+- Si no pasa una dde las dos, es mejor diseñar para el futuro pero **yo no me arriesgo** a que no haya cambios y mucho menos a no aprender nada.
+/!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\
 
-- when faced iwth a big refactoring, you have to take it in small steps. mientras estás desarrollando, ves la oporutnidad de hacer un peuqeño cambio. Hazlo. La gran refactoización se irá reduciendo.
+- Cuando tienes delante una gran refactorización, tienes que afrontarla en mucho pasos pequeños. Mientras
+estás desarrollando, ves la oporutnidad de hacer un peuqeño cambio. Hazlo. La gran refactoización se irá reduciendo.
+- Cuatro reglase del diseño simple:
 
-- four rules of simple design:
-
-1. systme (code and test) must communicate everything you want to communicate
-2. system must contain no duplicate code
-3. system should have the fewst possible classes
-4. system should have the fewest possible methods
+1. El sistema (código y tests) debe comunicar todo lo que quiere comunicar
+2. El sistema no debe contener código duplicado
+3. El sistema debería tener el menor número de clases posible
+4. El sistema debería tener el menor número de métodos posible
 
 ### roles of pictures in design
 
