@@ -327,11 +327,11 @@ equipo, matar el proyecto
 - Fase de compromiso: aceptar una tarea. Estimar una tarea. Establecer factores de carga (cuánto trabajo tiene cada persona en el equipo). Balancear carga de trabajo.
 - Fase de pequeñas correcciones: implementar una tarea. Guardar progreso. Recuperación. Verificar historia
 
-## development strategy
+## Estrategia de desarrollo
 
-- while you are developing, you can act like you and your partner are the only pair on th eproject. then you switch hats. as integrators, you become aware where there are collisions
-- Collective ownership: one of the effects of collective ownership is that complex code does not live very long. It tends to spread knowledge of the system around the team
-- pair programming: it isn't a person programming whiole another person watches. it's a dialog trying to simultaneously program, analyze, design and test. it works for XP becuase it encourages communication
+- Mientras una pareja está desarrollando, puede actuar como si fuera la única pareja en el proyecto, como si fueran los únicos que tocan el código. Luego, cambian de sombrero, como integradores, y están muy atentos a posibles colisiones, conflictos en el código.
+- Propiedad colectiva del código: uno de los efectos de la propiedad colectiva del código es que el código complejo no vive mucho tiempo. Ademas, tiende a expandir el conocimiento del sistema alrededor de todos los integrantes del equipo.
+- Programación en parejas: no es una persona programando mientras la otra persona mira. Es un diálogo tratando simultáneamente de programar, analizar, diseñar y testear. Funciona para XP porque incentiva la comunicación.
 
 ## design strategy
 
