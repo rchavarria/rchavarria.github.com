@@ -341,7 +341,7 @@ equipo, matar el proyecto
 2. Puedes aprender una mejor manera de hacer las cosas. 
 
 /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\
-- Si no pasa una dde las dos, es mejor diseñar para el futuro pero **yo no me arriesgo** a que no haya cambios y mucho menos a no aprender nada.
+- Si no pasa una de las dos, es mejor diseñar para el futuro pero **yo no me arriesgo** a que no haya cambios y mucho menos a no aprender nada.
 /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\
 
 - Cuando tienes delante una gran refactorización, tienes que afrontarla en mucho pasos pequeños. Mientras
@@ -359,15 +359,15 @@ estás desarrollando, ves la oporutnidad de hacer un peuqeño cambio. Hazlo. La 
 - Contras: los gráficos no te pueden dar un feedback concreto (no se pueden ejecutar)
 - Los gráficos no se guardan. Desear que se pudiera guardar un gráfico en una pizarra es una señal de que el diseño no ha sido comunicado, ni al equipo ni al sistema
 
-## testing strategy
+## Estragia de testeo
 
-- los tests escritos por unos dan confianza al resto del equipo
-- se puede aprender de los ests, en dos casos: 
+- Los tests escritos por unos dan confianza al resto del equipo
+- Se puede aprender de los tests, en dos casos: 
 
 1. tests debería fallar y no falla -> código mal
 2. tests no debería fallar y falla -> código mal
 
-- the tester's job is to translage the sometimes vague testing ideas of the customer into real, automatic, isolated tests
+- El trabajo del tester es el de traducir las ideas vagas de test de un Cliente a unos tests reales, automáticos y aislados.
 
 # Part III: implementing XP
 
