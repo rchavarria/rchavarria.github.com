@@ -369,73 +369,70 @@ estás desarrollando, ves la oporutnidad de hacer un peuqeño cambio. Hazlo. La 
 
 - El trabajo del tester es el de traducir las ideas vagas de test de un Cliente a unos tests reales, automáticos y aislados.
 
-# Part III: implementing XP
+# Parte III: implementando XP
 
-## adoptin XP
+**Adoptando XP**
 
-- how to adopt: pick your worst problem, solve it the XP way, when it's no longer your worst problem, repeat.
+- Cómo adoptar XP: elige tu peor problem, resuélvelo como XP te dice y cuando ya no sea tu peor problem, repite el proceso.
 
-## retrofitting XP
+**Adoptando XP a proyectos existentes**
 
 - ¿cómo comenzar a escribir tests para un código que ya existe? ¿todo de golpe? No, poco a poco
 
-## roles for people
+## Distintos papeles en XP
 
-### programmer
+**El papel del Programador**
 
-- your job isn't over when the computer understnds what to do. your first value is communication with other people
-- una habilidad necesaria es *pair programming*
-- another skill needed by the extreme programmer is the habit of simplicity
-- tienes que estar dispuesto a aceptar la propiedad colectiva del código
-- without courage, XP just simply doesn't work
+- Su trabajo no se acaba cuando el ordenador entiende qué es lo que tiene que hacer. Su trabajo más importante es la comunicación con el resto de la gente
+- Una habilidad necesaria es *pair programming*
+- Otra habilidad necesaria es el hábito de la simplicidad
+- Tienes que estar dispuesto a aceptar la propiedad colectiva del código
+- Si coraje, XP simplemente no funciona
 
-### customer
+**El papel del Cliente**
 
-- the programmer knows how to program. the customer knows what to program.
-- skills for the custormer to be learned: write good stories, influence a project without being able to congtrol it
-- customers have to make decisions
-- you will have to learn how to write stories
-- you will have to learn to write functional tests
+- El Programador sabe *cómo* programar. El Cliente sabe *qué* programar
+- Habilidades que el Cliente debe aprender: escribir buenas historias de usuario, influir en el proyecto sin ser capaz de controlarlo o manipularlo
+- El Cliente tiene que tomar decisiones
+- Debe aprender a escribir historias de usuario
+- Debe aprender a escribir tests funcionales
 
-### tester
+**El papel de Tester**
 
-- you are responsible fo rhelping the customer choose and write functional testss
+- Es el responsable de ayudar al Cliente a elegir y escribir los tests funcionales
 
-### tracker
+**El papel de quien realiza el seguimiento**
 
-- you have to make lots of estimates and then notice how reality conformed to your guesses. 
-- your job is to close the loop on feedback
-- kkeping an eye on the big picutre
-- your are the team historian. keep a log of functional test scores and defects reported
-- the skill you need to cultivate most is the ability to collect the information you need without distrubing
+- Debe hacer muchísimas estimaciones y darse cuenta de si la realidad del proyecto coincide con ellas
+- Su trabajo es cerrar el ciclo del feedback
+- Debe mantener un ojo en el aspecto global del proyecto
+- Es como un historiador del proyecto. Mantiene un log de los tests funcionales que pasan y los errores/bugs reportados
+- La habilidad que más necesita cultivar es la habilidad del recoger informacion que necesita sin molestar a los demás ni interponerse en su trabajo diario
 
-### coach
+**El papel del Coach**
 
-- you notice when people are deviating from the team's process and bring this to the team's attention
-- how other teams are using XP, what the ideas behind XP are, and how they realte to the current situation
-- confident, aggressive programmers are valuable precisely because they are confident and aggressive
+- Se debe de dar cuenta de cuando la gente se desvía del proceso definido por el equipo y conseguir llevar esto a la atención del equipo
+- Debe ser consciente tambien de cómo otros equipos están usando XP, qué son las ideas detrás de XP y cómo esas ideas están relacionadas con la situación actual del equipo
+/!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\
+- Los Programadores confiados y agresivos son valiosos precisamente porque ellos son confiados y agresivos
+/!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\
 
-### consultant
+**El papel del Consultor**
 
-- los equipos XP son my buenos técnicamente, pero de bez en cuando necesitan a un experto
-- what they won't do is let you go off and sole the problem by yourseelf
-- and when you are done, they will most likely throw away eveythingyou have done and do it over tehmselves
+- Los equipos XP son my buenos técnicamente, pero de bez en cuando necesitan a un experto
+- Lo que el equipo de XP no va a hacer va a ser dejar al experto que trabaje solo en el problema
+- Lo que harán, probablemente, será deshacerse de todos los cambios que hizo el Consultor y volver a hacerlos por ellos mismos
 
-## 20-80 rule
+## Qué hace que XP sea tan difícil
 
-## what makes XP hard
+/!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\
+- Primordialmente las emociones (especialmente el miedo) son lo que hace que XP sea tan duro de practicar y aplicar
+/!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\
+- Debes aprender a no estar satisfecho con la complejidad, de no descansar hasta que no puedes imaginar nada más sencillo funcionando
+- Las emociones forma parte de las persones, por eso, XP no trata de eliminarlas sino que acepta e incentiva que las personas expresen sus sentimientos
 
-- it is primarily emotions (espeically fear) that makes XP hard
-- you have to learn to be dissatisfied with coplexity, not to rest until you can't imagin anything simpler working
-- las emociones forma parte de las persones, por eso, XP no trata de eliminarlas sino que acepta e incentiva que las personas expersen sus sentimientos
+## Cuando no deberías intentar XP
 
-## when you hsouldn't try XP
-
-- the giggest barrrer to the succes sof an XP project is business culture
-- another culture that is not conducive to XP is one in which you are required to put in long hours to prove your "commitment to the company"
-
-## xp at work
-
-- 
-
+- La mayor barrera para el éxito de XP en un proyecto software es la cultura empresarial, la cultura de la empresa que quiere implantarlo
+- Una cultura que no es compatible con XP is aquella que *obliga* a sus trabajadores a realizar largas jornadas de trabajo por el hecho de *comprometerse con la compañía*.
 
