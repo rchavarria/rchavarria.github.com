@@ -10,7 +10,7 @@ tribu del bosque y de la montaña)
 - La mayoría de las prácticas en XP son tan viejas como la programación en
 sí misma.
 
-## Part I: the problem
+## Parte I: el problema
 
 - El problema básico es el riesgo, así que, ¿cómo gestiona XP el riesgo?
 
