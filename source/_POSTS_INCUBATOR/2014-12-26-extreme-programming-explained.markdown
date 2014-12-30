@@ -353,11 +353,11 @@ estás desarrollando, ves la oporutnidad de hacer un peuqeño cambio. Hazlo. La 
 3. El sistema debería tener el menor número de clases posible
 4. El sistema debería tener el menor número de métodos posible
 
-### roles of pictures in design
+### El papel de los gráficos/dibujos en el diseño
 
-- benefits: if you find it impossible to reduce the number of elements, if there is an obvious asymmetry, if there are many more lines than boxes. all of these are clues to a bad design. Another strength is speed
-- cons: they can't give you concrete feedback
-- the pictures aren't saved. wishing you could save the whiteboard is a sure sign the design hasn't been communicated, either to the theam or to the system
+- Pros: si te resulta imposible reducir el número de elementos, si hay una asimetría obvia, si hay más líneas que cajas; entonces, todo eso son pistas de un mal diseño. Otra fortaleza es la velocidad de comunicación
+- Contras: los gráficos no te pueden dar un feedback concreto (no se pueden ejecutar)
+- Los gráficos no se guardan. Desear que se pudiera guardar un gráfico en una pizarra es una señal de que el diseño no ha sido comunicado, ni al equipo ni al sistema
 
 ## testing strategy
 
