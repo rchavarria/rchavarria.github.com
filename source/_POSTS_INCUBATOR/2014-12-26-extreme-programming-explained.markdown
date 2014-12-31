@@ -302,35 +302,60 @@ equipo, matar el proyecto
 
 ## Estrategia del entorno
 
-- Tomar control del entorno físico envía un mensaje bastante poderoso al equipo
-- Tomar el control de su entorno físico es el primer paso hacia la toma de control de cómo ellos trabajarán en conjunto
-- La división de poderes entre Negocio y Desarrollo no quiere decir que haya que evitar hacer los trabajos difíciles
-- La mayoría de las veces el trabajo será más sencillo de lo que en un principio te imaginaste. Si no es así, hazlo igual, es por eso por lo que te pagan
+- Tomar control del entorno físico envía un mensaje bastante poderoso al
+equipo
+- Tomar el control de su entorno físico es el primer paso hacia la toma de
+control de cómo ellos trabajarán en conjunto
+- La división de poderes entre Negocio y Desarrollo no quiere decir que
+haya que evitar hacer los trabajos difíciles
+- La mayoría de las veces el trabajo será más sencillo de lo que en un
+principio te imaginaste. Si no es así, hazlo igual, es por eso por lo
+que te pagan
 
 ## Estrategia de planificación
 
-- En XP se hace un plan de forma rápida y barata, por lo que hay poca inercia cuando tenemos que cambiarlo
-- Primero, aprende las reglas y síguelas (como estas para planificar). Cuando estés cómodo con ellas, podrás saltártelas para mejorar
-- El objetivo del juego de planificación es maximizar el valor del software producido por el equipo
-- Estrategia: invertir lo mínimo posible para poner la funcionalidad más valiosa en producción tan rápido como sea posible
+- En XP se hace un plan de forma rápida y barata, por lo que hay poca inercia
+cuando tenemos que cambiarlo
+- Primero, aprende las reglas y síguelas (como estas para planificar). Cuando
+estés cómodo con ellas, podrás saltártelas para mejorar
+- El objetivo del juego de planificación es maximizar el valor del software
+producido por el equipo
+- Estrategia: invertir lo mínimo posible para poner la funcionalidad más valiosa
+en producción tan rápido como sea posible
 - Jugadores: Desarrollo y Negocio
-- Movimientos: exploración, compromiso y pequeñas correcciones (pequeños cambios frente a grandes cambios, como pequeñas correcciones conduciendo un coche).
-- Fase de exploración: qué es lo que el sistema debería hacer finalmente. Escribir una historia. Estimar una historia. Dividir una historia.
-- Fase de compromiso: Negocio elige el alcance y una fecha, Desarrollo se compromete a entregar todo o parte del alcance en esa fecha. Negocio elige si hace el alcance menor o alarga la fecha de entrega. Ordenar por valor. Ordenar por riesgo. Establecer la velocidad. Elegir alcance.
-- Fase de pequeñas correciones: actualizar el plan en base a lo que se va aprendiendo. Iteraciones. Recuperación. Nuevas historias. Reestimaciones.
+- Movimientos: exploración, compromiso y pequeñas correcciones (pequeños cambios
+frente a grandes cambios, como pequeñas correcciones conduciendo un coche).
+- Fase de exploración: qué es lo que el sistema debería hacer finalmente. Escribir
+una historia. Estimar una historia. Dividir una historia.
+- Fase de compromiso: Negocio elige el alcance y una fecha, Desarrollo se
+compromete a entregar todo o parte del alcance en esa fecha. Negocio elige si hace
+el alcance menor o alarga la fecha de entrega. Ordenar por valor. Ordenar por
+riesgo. Establecer la velocidad. Elegir alcance.
+- Fase de pequeñas correciones: actualizar el plan en base a lo que se va aprendiendo.
+Iteraciones. Recuperación. Nuevas historias. Reestimaciones.
 
 ## Planificación de la iteración
 
-- Las piezas son *tarjetas de tareas* en lugar de *tarjetas de historias*, pero los movimientos de cada fase son bastante similares
+- Las piezas son *tarjetas de tareas* en lugar de *tarjetas de historias*, pero los
+movimientos de cada fase son bastante similares
 - Fase de exploración: escribir una tarea. Dividir / Combinar tareas
-- Fase de compromiso: aceptar una tarea. Estimar una tarea. Establecer factores de carga (cuánto trabajo tiene cada persona en el equipo). Balancear carga de trabajo.
-- Fase de pequeñas correcciones: implementar una tarea. Guardar progreso. Recuperación. Verificar historia
+- Fase de compromiso: aceptar una tarea. Estimar una tarea. Establecer factores de
+carga (cuánto trabajo tiene cada persona en el equipo). Balancear carga de trabajo.
+- Fase de pequeñas correcciones: implementar una tarea. Guardar progreso.
+Recuperación. Verificar historia
 
 ## Estrategia de desarrollo
 
-- Mientras una pareja está desarrollando, puede actuar como si fuera la única pareja en el proyecto, como si fueran los únicos que tocan el código. Luego, cambian de sombrero, como integradores, y están muy atentos a posibles colisiones, conflictos en el código.
-- Propiedad colectiva del código: uno de los efectos de la propiedad colectiva del código es que el código complejo no vive mucho tiempo. Ademas, tiende a expandir el conocimiento del sistema alrededor de todos los integrantes del equipo.
-- Programación en parejas: no es una persona programando mientras la otra persona mira. Es un diálogo tratando simultáneamente de programar, analizar, diseñar y testear. Funciona para XP porque incentiva la comunicación.
+- Mientras una pareja está desarrollando, puede actuar como si fuera la única pareja
+en el proyecto, como si fueran los únicos que tocan el código. Luego, cambian de
+sombrero, como integradores, y están muy atentos a posibles colisiones, conflictos
+en el código.
+- Propiedad colectiva del código: uno de los efectos de la propiedad colectiva del
+código es que el código complejo no vive mucho tiempo. Ademas, tiende a expandir el
+conocimiento del sistema alrededor de todos los integrantes del equipo.
+- Programación en parejas: no es una persona programando mientras la otra persona
+mira. Es un diálogo tratando simultáneamente de programar, analizar, diseñar y
+testear. Funciona para XP porque incentiva la comunicación.
 
 ## Estrategia de diseño
 
@@ -340,11 +365,13 @@ equipo, matar el proyecto
 2. Puedes aprender una mejor manera de hacer las cosas. 
 
 /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\
-- Si no pasa una de las dos, es mejor diseñar para el futuro pero **yo no me arriesgo** a que no haya cambios y mucho menos a no aprender nada.
+- Si no pasa una de las dos, es mejor diseñar para el futuro pero **yo no me
+arriesgo** a que no haya cambios y mucho menos a no aprender nada.
 /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\
 
-- Cuando tienes delante una gran refactorización, tienes que afrontarla en mucho pasos pequeños. Mientras
-estás desarrollando, ves la oporutnidad de hacer un peuqeño cambio. Hazlo. La gran refactoización se irá reduciendo.
+- Cuando tienes delante una gran refactorización, tienes que afrontarla en mucho
+pasos pequeños. Mientras estás desarrollando, ves la oporutnidad de hacer un
+pequeño cambio. Hazlo. La gran refactoización se irá reduciendo.
 - Cuatro reglase del diseño simple:
 
 1. El sistema (código y tests) debe comunicar todo lo que quiere comunicar
@@ -354,9 +381,14 @@ estás desarrollando, ves la oporutnidad de hacer un peuqeño cambio. Hazlo. La 
 
 ### El papel de los gráficos/dibujos en el diseño
 
-- Pros: si te resulta imposible reducir el número de elementos, si hay una asimetría obvia, si hay más líneas que cajas; entonces, todo eso son pistas de un mal diseño. Otra fortaleza es la velocidad de comunicación
-- Contras: los gráficos no te pueden dar un feedback concreto (no se pueden ejecutar)
-- Los gráficos no se guardan. Desear que se pudiera guardar un gráfico en una pizarra es una señal de que el diseño no ha sido comunicado, ni al equipo ni al sistema
+- Pros: si te resulta imposible reducir el número de elementos, si hay una
+asimetría obvia, si hay más líneas que cajas; entonces, todo eso son pistas
+de un mal diseño. Otra fortaleza es la velocidad de comunicación
+- Contras: los gráficos no te pueden dar un feedback concreto (no se pueden
+ejecutar)
+- Los gráficos no se guardan. Desear que se pudiera guardar un gráfico en una
+pizarra es una señal de que el diseño no ha sido comunicado, ni al equipo ni
+al sistema
 
 ## Estragia de testeo
 
@@ -366,23 +398,27 @@ estás desarrollando, ves la oporutnidad de hacer un peuqeño cambio. Hazlo. La 
 1. tests debería fallar y no falla -> código mal
 2. tests no debería fallar y falla -> código mal
 
-- El trabajo del tester es el de traducir las ideas vagas de test de un Cliente a unos tests reales, automáticos y aislados.
+- El trabajo del tester es el de traducir las ideas vagas de test de un Cliente
+a unos tests reales, automáticos y aislados.
 
 # Parte III: implementando XP
 
 **Adoptando XP**
 
-- Cómo adoptar XP: elige tu peor problem, resuélvelo como XP te dice y cuando ya no sea tu peor problem, repite el proceso.
+- Cómo adoptar XP: elige tu peor problem, resuélvelo como XP te dice y cuando
+ya no sea tu peor problem, repite el proceso.
 
 **Adoptando XP a proyectos existentes**
 
-- ¿cómo comenzar a escribir tests para un código que ya existe? ¿todo de golpe? No, poco a poco
+- ¿cómo comenzar a escribir tests para un código que ya existe? ¿todo de golpe?
+No, poco a poco
 
 ## Distintos papeles en XP
 
 **El papel del Programador**
 
-- Su trabajo no se acaba cuando el ordenador entiende qué es lo que tiene que hacer. Su trabajo más importante es la comunicación con el resto de la gente
+- Su trabajo no se acaba cuando el ordenador entiende qué es lo que tiene que
+hacer. Su trabajo más importante es la comunicación con el resto de la gente
 - Una habilidad necesaria es *pair programming*
 - Otra habilidad necesaria es el hábito de la simplicidad
 - Tienes que estar dispuesto a aceptar la propiedad colectiva del código
@@ -391,7 +427,8 @@ estás desarrollando, ves la oporutnidad de hacer un peuqeño cambio. Hazlo. La 
 **El papel del Cliente**
 
 - El Programador sabe *cómo* programar. El Cliente sabe *qué* programar
-- Habilidades que el Cliente debe aprender: escribir buenas historias de usuario, influir en el proyecto sin ser capaz de controlarlo o manipularlo
+- Habilidades que el Cliente debe aprender: escribir buenas historias de usuario,
+influir en el proyecto sin ser capaz de controlarlo o manipularlo
 - El Cliente tiene que tomar decisiones
 - Debe aprender a escribir historias de usuario
 - Debe aprender a escribir tests funcionales
@@ -402,36 +439,52 @@ estás desarrollando, ves la oporutnidad de hacer un peuqeño cambio. Hazlo. La 
 
 **El papel de quien realiza el seguimiento**
 
-- Debe hacer muchísimas estimaciones y darse cuenta de si la realidad del proyecto coincide con ellas
+- Debe hacer muchísimas estimaciones y darse cuenta de si la realidad del proyecto
+coincide con ellas
 - Su trabajo es cerrar el ciclo del feedback
 - Debe mantener un ojo en el aspecto global del proyecto
-- Es como un historiador del proyecto. Mantiene un log de los tests funcionales que pasan y los errores/bugs reportados
-- La habilidad que más necesita cultivar es la habilidad del recoger informacion que necesita sin molestar a los demás ni interponerse en su trabajo diario
+- Es como un historiador del proyecto. Mantiene un log de los tests funcionales
+que pasan y los errores/bugs reportados
+- La habilidad que más necesita cultivar es la habilidad del recoger informacion que
+necesita sin molestar a los demás ni interponerse en su trabajo diario
 
 **El papel del Coach**
 
-- Se debe de dar cuenta de cuando la gente se desvía del proceso definido por el equipo y conseguir llevar esto a la atención del equipo
-- Debe ser consciente tambien de cómo otros equipos están usando XP, qué son las ideas detrás de XP y cómo esas ideas están relacionadas con la situación actual del equipo
+- Se debe de dar cuenta de cuando la gente se desvía del proceso definido por el
+equipo y conseguir llevar esto a la atención del equipo
+- Debe ser consciente tambien de cómo otros equipos están usando XP, qué son las
+ideas detrás de XP y cómo esas ideas están relacionadas con la situación actual
+del equipo
 /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\
-- Los Programadores confiados y agresivos son valiosos precisamente porque ellos son confiados y agresivos
+- Los Programadores confiados y agresivos son valiosos precisamente porque ellos
+son confiados y agresivos
 /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\
 
 **El papel del Consultor**
 
-- Los equipos XP son my buenos técnicamente, pero de bez en cuando necesitan a un experto
-- Lo que el equipo de XP no va a hacer va a ser dejar al experto que trabaje solo en el problema
-- Lo que harán, probablemente, será deshacerse de todos los cambios que hizo el Consultor y volver a hacerlos por ellos mismos
+- Los equipos XP son my buenos técnicamente, pero de bez en cuando necesitan a
+un experto
+- Lo que el equipo de XP no va a hacer va a ser dejar al experto que trabaje
+solo en el problema
+- Lo que harán, probablemente, será deshacerse de todos los cambios que hizo
+el Consultor y volver a hacerlos por ellos mismos
 
 ## Qué hace que XP sea tan difícil
 
 /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\
-- Primordialmente las emociones (especialmente el miedo) son lo que hace que XP sea tan duro de practicar y aplicar
+- Primordialmente las emociones (especialmente el miedo) son lo que hace que XP
+sea tan duro de practicar y aplicar
 /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\
-- Debes aprender a no estar satisfecho con la complejidad, de no descansar hasta que no puedes imaginar nada más sencillo funcionando
-- Las emociones forma parte de las persones, por eso, XP no trata de eliminarlas sino que acepta e incentiva que las personas expresen sus sentimientos
+- Debes aprender a no estar satisfecho con la complejidad, de no descansar hasta
+que no puedes imaginar nada más sencillo funcionando
+- Las emociones forma parte de las persones, por eso, XP no trata de eliminarlas
+sino que acepta e incentiva que las personas expresen sus sentimientos
 
 ## Cuando no deberías intentar XP
 
-- La mayor barrera para el éxito de XP en un proyecto software es la cultura empresarial, la cultura de la empresa que quiere implantarlo
-- Una cultura que no es compatible con XP is aquella que *obliga* a sus trabajadores a realizar largas jornadas de trabajo por el hecho de *comprometerse con la compañía*.
+- La mayor barrera para el éxito de XP en un proyecto software es la cultura
+empresarial, la cultura de la empresa que quiere implantarlo
+- Una cultura que no es compatible con XP is aquella que *obliga* a sus trabajadores
+a realizar largas jornadas de trabajo por el hecho de *comprometerse con la
+compañía*.
 
