@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Book review: Extreme Programming explained"
+title: "Extreme Programming explained"
 date: 2015-01-02 10:24
 author: Rubén Chavarría
 comments: true
