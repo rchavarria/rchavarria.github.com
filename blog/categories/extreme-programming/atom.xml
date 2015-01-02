@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: extreme programming | R. Chavarria's Blog]]></title>
+  <link href="http://rchavarria.github.io/blog/categories/extreme-programming/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.io/"/>
+  <updated>2015-01-02T10:30:42+01:00</updated>
+  <id>http://rchavarria.github.io/</id>
+  <author>
+    <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Extreme Programming explained]]></title>
+    <link href="http://rchavarria.github.io/blog/2015/01/02/extreme-programming-explained/"/>
+    <updated>2015-01-02T10:24:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2015/01/02/extreme-programming-explained</id>
+    <content type="html"><![CDATA[<h5>de Kent Beck</h5>
+
+<p><img class="right" src="http://ecx.images-amazon.com/images/I/71kDsLjbnsL.jpg" width="240" height="300"></p>
+
+<h2>Por qué lo he leído</h2>
+
+<p>Estoy muy interesado en las metodologías ágiles, pero yo osy más una persona
+técnica, un ingeniero preocupado por los aspectos técnicos de los proyectos,
+más que por los aspectos de gestión. Creo que Extreme Programming explica lo
+básico, los inicios de Agile.</p>
+
+<p>Ya conocía algunas prácticas de XP, pero quería conocerlas más a fondo.</p>
+
+<!-- more -->
+
+
+<h2>Qué esperaba</h2>
+
+<p>Sencillo, buscaba un libro que me explicara los valores, principios y prácticas
+de XP. Existe un recurso online donde poder encontrar estos recursos,
+<a href="http://www.extremeprogramming.org">http://www.extremeprogramming.org</a>,
+pero buscaba algún recurso que los tratara con más profundidad.</p>
+
+<h2>Qué encontre</h2>
+
+<p>Justamente lo que buscaba. El libro trata XP a fondo, no sólo explicando y
+dando sentido a los valores, principios y prácticas, sino también multitud
+de experiencias reales.</p>
+
+<p>También encontré mucha información acerca de <em>pair programming</em>, práctica
+en la que estoy muy interesado, así como la forma en que las distintas
+prácticas se interconectan entre sí.</p>
+
+<p><img class="center" src="/images/2015/xp-practices.jpg" title="Cómo están interconectadas las prácticas XP" ></p>
+
+<h2>Conclusiones</h2>
+
+<p>Un libro totalmente recomendable. Trata el tema de Extreme Programming con
+mucha claridad, exponiendo todas las partes que lo componen, explica cada
+uno de los papeles que juegan los integrantes de un equipo XP (aunque se
+ha quedado un poco obsoleto para hoy en día, pero puesto en perspectiva
+toma mucho sentido).</p>
+
+<p>La verdad es que parece mentira que el autor esté hablando sobre estos
+temas por el año 1999/2000 y que todavía en 2015 estemos como estamos.</p>
+
+<h2>Frases que me gustaría recordar</h2>
+
+<blockquote><p>XP es un experimento para responder a la pregunta: ¿Cómo programarías si
+tuvieras suficiente tiempo? Donde se explica la diferencia entre la <em>Mentalidad
+de la suficiencia</em> frente a la <em>Mentalidad de la escasez</em> (parábola de la
+tribu del bosque y de la montaña)</p>
+
+<p>Si no cambiaran los requisitos o no aprendiéramos nada durante el proceso
+sería mejor diseñar para el futuro pero <strong>yo no me
+arriesgo</strong> a que no haya cambios y mucho menos a no aprender nada.</p>
+
+<p>Los Programadores confiados y agresivos son valiosos precisamente porque ellos
+son confiados y agresivos</p>
+
+<p>Primordialmente las emociones (especialmente el miedo) son lo que hace que XP
+sea tan duro de practicar y aplicar</p>
+
+<p>Los cuatro valores de XP: comunicación, simplicidad, feedback y coraje</p>
+
+<p>Cuatro actividades básicas: codificar, testear, escuchar y diseñar</p>
+
+<p>El trabajo del programador no se acaba cuando el ordenador entiende qué es lo
+que tiene que hacer. Su trabajo más importante es la comunicación con el resto
+de la gente</p>
+
+<p>Una habilidad necesaria para los programadores es <em>pair programming</em></p>
+
+<p>Otra habilidad necesaria es el hábito de la simplicidad</p></blockquote>
+
+<h2>Recursos relacionados</h2>
+
+<ul>
+<li><a href="https://gist.github.com/rchavarria/1345a4f58a1a712e73a5">Extensas notas sobre el libro</a></li>
+<li><a href="http://www.amazon.es/Extreme-Programming-Explained-Embrace-Embracing/dp/0321278658/ref=sr_1_1?ie=UTF8&amp;qid=1420044502&amp;sr=8-1&amp;keywords=extreme+programming+explained">Extreme Programming explained, en Amazon</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

@@ -294,7 +294,7 @@ constructor <em>nombrado</em> que llame a <code>super.created()</code>.</p>
 
 <h2>Enlazando datos entre Dart y HTML</h2>
 
-<p>En la parte visual (HTML) se pueden usar las llaves dobles <code>{ {...}}</code> para utilizar una
+<p>En la parte visual (HTML) se pueden usar las llaves dobles <code>{{...}}</code> para utilizar una
 variable anotada como <code>@observable</code> en la parte de comportamiento (Dart). Por ejemplo,
 para usar una <code>String</code> que al modificarla en Dart se actualice la vista HTML, los
 ficheros <code>web/tute_stopwatch.html</code> y <code>web/tute_stopwatch.dart</code> quedarían:</p>
@@ -307,7 +307,7 @@ ficheros <code>web/tute_stopwatch.html</code> y <code>web/tute_stopwatch.dart</c
 <span class='line-number'>6</span>
 </pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;polymer</span><span class="na">-element</span> <span class="na">name=</span><span class="s">&quot;tute-stopwatch&quot;</span><span class="nt">&gt;</span>
 </span><span class='line'>  <span class="nt">&lt;template&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;div&gt;</span> { {counter}} <span class="nt">&lt;/div&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;div&gt;</span>{{counter}}<span class="nt">&lt;/div&gt;</span>
 </span><span class='line'>  <span class="nt">&lt;/template&gt;</span>
 </span><span class='line'>  ...
 </span><span class='line'><span class="err">&lt;</span>/polymer-element&gt;
@@ -347,7 +347,7 @@ eventos que gestionen las interacciones del usuario. Por ejemplo, para responder
 ante un click del usuario, en HTML:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;button</span> <span class="na">on-click=</span><span class="s">&quot;{ {start}}&quot;</span><span class="nt">&gt;</span>Start<span class="nt">&lt;/button&gt;</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;button</span> <span class="na">on-click=</span><span class="s">&quot;{{start}}&quot;</span><span class="nt">&gt;</span>Start<span class="nt">&lt;/button&gt;</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
@@ -461,6 +461,8 @@ aparte y que hará posible ejecutar la aplicación en cualquier navegador modern
         <a class="basic-alignment left" href="/blog/2014/12/05/how-to-start-conversations-and-make-friends/" title="Previous Post: How to start conversations and make friends">&laquo; How to start conversations and make friends</a>
       
       
+        <a class="basic-alignment right" href="/blog/2015/01/02/extreme-programming-explained/" title="Next Post: Extreme Programming explained">Extreme Programming explained &raquo;</a>
+      
     </p>
   </footer>
 </article>
@@ -480,6 +482,10 @@ aparte y que hará posible ejecutar la aplicación en cualquier navegador modern
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/01/02/extreme-programming-explained/">Extreme Programming explained</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/12/13/crear-web-components-con-dart-y-polymer/">Crear Web Components con Dart y Polymer</a>
       </li>
     
@@ -493,10 +499,6 @@ aparte y que hará posible ejecutar la aplicación en cualquier navegador modern
     
       <li class="post">
         <a href="/blog/2014/11/18/mi-primer-code-retreat/">Mi primer Code Retreat</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/11/02/mi-primer-katayuno/">Mi primer katayuno</a>
       </li>
     
   </ul>
@@ -537,7 +539,7 @@ aparte y que hará posible ejecutar la aplicación en cualquier navegador modern
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2014 - Rub&eacute;n Chavarr&iacute;a -
+  Copyright &copy; 2015 - Rub&eacute;n Chavarr&iacute;a -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 

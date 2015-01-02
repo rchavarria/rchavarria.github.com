@@ -4,7 +4,7 @@
   <title><![CDATA[Category: tutorials | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/tutorials/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2014-12-13T19:16:50+01:00</updated>
+  <updated>2015-01-02T10:30:42+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -184,7 +184,7 @@ constructor <em>nombrado</em> que llame a <code>super.created()</code>.</p>
 
 <h2>Enlazando datos entre Dart y HTML</h2>
 
-<p>En la parte visual (HTML) se pueden usar las llaves dobles <code>{ {...}}</code> para utilizar una
+<p>En la parte visual (HTML) se pueden usar las llaves dobles <code>{{...}}</code> para utilizar una
 variable anotada como <code>@observable</code> en la parte de comportamiento (Dart). Por ejemplo,
 para usar una <code>String</code> que al modificarla en Dart se actualice la vista HTML, los
 ficheros <code>web/tute_stopwatch.html</code> y <code>web/tute_stopwatch.dart</code> quedarían:</p>
@@ -193,7 +193,7 @@ ficheros <code>web/tute_stopwatch.html</code> y <code>web/tute_stopwatch.dart</c
 <polymer-element name="tute-stopwatch">
   <template></p>
 
-<pre><code>&lt;div&gt; { {counter}} &lt;/div&gt;
+<pre><code>&lt;div&gt;{{counter}}&lt;/div&gt;
 </code></pre>
 
 <p>  </template>
@@ -226,7 +226,7 @@ eventos que gestionen las interacciones del usuario. Por ejemplo, para responder
 ante un click del usuario, en HTML:</p>
 
 <p><code>html
-&lt;button on-click="{ {start}}"&gt;Start&lt;/button&gt;
+&lt;button on-click="{{start}}"&gt;Start&lt;/button&gt;
 </code></p>
 
 <p>Mientras que en Dart:</p>

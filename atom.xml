@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2014-12-13T19:16:50+01:00</updated>
+  <updated>2015-01-02T10:30:42+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,96 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Extreme Programming explained]]></title>
+    <link href="http://rchavarria.github.io/blog/2015/01/02/extreme-programming-explained/"/>
+    <updated>2015-01-02T10:24:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2015/01/02/extreme-programming-explained</id>
+    <content type="html"><![CDATA[<h5>de Kent Beck</h5>
+
+<p><img class="right" src="http://ecx.images-amazon.com/images/I/71kDsLjbnsL.jpg" width="240" height="300"></p>
+
+<h2>Por qué lo he leído</h2>
+
+<p>Estoy muy interesado en las metodologías ágiles, pero yo osy más una persona
+técnica, un ingeniero preocupado por los aspectos técnicos de los proyectos,
+más que por los aspectos de gestión. Creo que Extreme Programming explica lo
+básico, los inicios de Agile.</p>
+
+<p>Ya conocía algunas prácticas de XP, pero quería conocerlas más a fondo.</p>
+
+<!-- more -->
+
+
+<h2>Qué esperaba</h2>
+
+<p>Sencillo, buscaba un libro que me explicara los valores, principios y prácticas
+de XP. Existe un recurso online donde poder encontrar estos recursos,
+<a href="http://www.extremeprogramming.org">http://www.extremeprogramming.org</a>,
+pero buscaba algún recurso que los tratara con más profundidad.</p>
+
+<h2>Qué encontre</h2>
+
+<p>Justamente lo que buscaba. El libro trata XP a fondo, no sólo explicando y
+dando sentido a los valores, principios y prácticas, sino también multitud
+de experiencias reales.</p>
+
+<p>También encontré mucha información acerca de <em>pair programming</em>, práctica
+en la que estoy muy interesado, así como la forma en que las distintas
+prácticas se interconectan entre sí.</p>
+
+<p><img class="center" src="http://rchavarria.github.io/images/2015/xp-practices.jpg" title="Cómo están interconectadas las prácticas XP" ></p>
+
+<h2>Conclusiones</h2>
+
+<p>Un libro totalmente recomendable. Trata el tema de Extreme Programming con
+mucha claridad, exponiendo todas las partes que lo componen, explica cada
+uno de los papeles que juegan los integrantes de un equipo XP (aunque se
+ha quedado un poco obsoleto para hoy en día, pero puesto en perspectiva
+toma mucho sentido).</p>
+
+<p>La verdad es que parece mentira que el autor esté hablando sobre estos
+temas por el año 1999/2000 y que todavía en 2015 estemos como estamos.</p>
+
+<h2>Frases que me gustaría recordar</h2>
+
+<blockquote><p>XP es un experimento para responder a la pregunta: ¿Cómo programarías si
+tuvieras suficiente tiempo? Donde se explica la diferencia entre la <em>Mentalidad
+de la suficiencia</em> frente a la <em>Mentalidad de la escasez</em> (parábola de la
+tribu del bosque y de la montaña)</p>
+
+<p>Si no cambiaran los requisitos o no aprendiéramos nada durante el proceso
+sería mejor diseñar para el futuro pero <strong>yo no me
+arriesgo</strong> a que no haya cambios y mucho menos a no aprender nada.</p>
+
+<p>Los Programadores confiados y agresivos son valiosos precisamente porque ellos
+son confiados y agresivos</p>
+
+<p>Primordialmente las emociones (especialmente el miedo) son lo que hace que XP
+sea tan duro de practicar y aplicar</p>
+
+<p>Los cuatro valores de XP: comunicación, simplicidad, feedback y coraje</p>
+
+<p>Cuatro actividades básicas: codificar, testear, escuchar y diseñar</p>
+
+<p>El trabajo del programador no se acaba cuando el ordenador entiende qué es lo
+que tiene que hacer. Su trabajo más importante es la comunicación con el resto
+de la gente</p>
+
+<p>Una habilidad necesaria para los programadores es <em>pair programming</em></p>
+
+<p>Otra habilidad necesaria es el hábito de la simplicidad</p></blockquote>
+
+<h2>Recursos relacionados</h2>
+
+<ul>
+<li><a href="https://gist.github.com/rchavarria/1345a4f58a1a712e73a5">Extensas notas sobre el libro</a></li>
+<li><a href="http://www.amazon.es/Extreme-Programming-Explained-Embrace-Embracing/dp/0321278658/ref=sr_1_1?ie=UTF8&amp;qid=1420044502&amp;sr=8-1&amp;keywords=extreme+programming+explained">Extreme Programming explained, en Amazon</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Crear Web Components con Dart y Polymer]]></title>
@@ -205,7 +295,7 @@ constructor <em>nombrado</em> que llame a <code>super.created()</code>.</p>
 
 <h2>Enlazando datos entre Dart y HTML</h2>
 
-<p>En la parte visual (HTML) se pueden usar las llaves dobles <code>{ {...}}</code> para utilizar una
+<p>En la parte visual (HTML) se pueden usar las llaves dobles <code>{{...}}</code> para utilizar una
 variable anotada como <code>@observable</code> en la parte de comportamiento (Dart). Por ejemplo,
 para usar una <code>String</code> que al modificarla en Dart se actualice la vista HTML, los
 ficheros <code>web/tute_stopwatch.html</code> y <code>web/tute_stopwatch.dart</code> quedarían:</p>
@@ -218,7 +308,7 @@ ficheros <code>web/tute_stopwatch.html</code> y <code>web/tute_stopwatch.dart</c
 <span class='line-number'>6</span>
 </pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;polymer</span><span class="na">-element</span> <span class="na">name=</span><span class="s">&quot;tute-stopwatch&quot;</span><span class="nt">&gt;</span>
 </span><span class='line'>  <span class="nt">&lt;template&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;div&gt;</span> { {counter}} <span class="nt">&lt;/div&gt;</span>
+</span><span class='line'>    <span class="nt">&lt;div&gt;</span>{{counter}}<span class="nt">&lt;/div&gt;</span>
 </span><span class='line'>  <span class="nt">&lt;/template&gt;</span>
 </span><span class='line'>  ...
 </span><span class='line'><span class="err">&lt;</span>/polymer-element&gt;
@@ -258,7 +348,7 @@ eventos que gestionen las interacciones del usuario. Por ejemplo, para responder
 ante un click del usuario, en HTML:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;button</span> <span class="na">on-click=</span><span class="s">&quot;{ {start}}&quot;</span><span class="nt">&gt;</span>Start<span class="nt">&lt;/button&gt;</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;button</span> <span class="na">on-click=</span><span class="s">&quot;{{start}}&quot;</span><span class="nt">&gt;</span>Start<span class="nt">&lt;/button&gt;</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
@@ -3176,200 +3266,6 @@ repositorio de github <a href="http://github.com/rchavarria/ytlibrary">rchavarri
 <p>Si todavía tienes ganas de más, te invito a que eches un vistazo a
 <a href="http://rct-ytlibrary.herokuapp.com">Youtube library</a>. Por supuesto, si quieres,
 me encantaría que me contases qué te ha parecido.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Curso de Scrum Master]]></title>
-    <link href="http://rchavarria.github.io/blog/2013/10/08/curso-de-scrum-master/"/>
-    <updated>2013-10-08T11:28:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2013/10/08/curso-de-scrum-master</id>
-    <content type="html"><![CDATA[<p>Los días 3 y 4 de octubre de 2013 tuve una oportunidad única, la de asistir a
-un curso <strong>GRATUITO</strong> de Scrum Master impartido por <a href="http://twitter.com/adiazmaroto">Ángel Diaz-Maroto</a> en las oficinas de
-<a href="http://www.ingdirect.es">ING Direct</a>. Fue un curso espectacular, con otras 14-15 personas magníficas y
-que estoy muy agradecido tanto a ING como a Ángel por hacerlo posible. Fue una
-auténtica pasada.</p>
-
-<p>Este post es para agradecérselo públicamente y para tener unas pequeñas notas y
-no olvidarme de la fabulosa experiencia vivida.</p>
-
-<!-- more -->
-
-
-<h2>El curso</h2>
-
-<p>El curso fueron 2 días muy intensos, donde aprendimos el funcionamiento de Scrum y el
-papel que juega el rol del Scrum Master (porque es un rol, nunca un puesto o un título).
-Por supuesto, una vez realizado el curso no eres realmente un Scrum Master, pero yo
-lo veo un poco como sacarse el carnet de conducir. Es lo que te da la posibilidad
-de conducir y aprender realmente a conducir en situaciones de la vida real. Este curso
-es algo así, <strong>nos ha habilitado para aprender a ser Scrum Master en proyectos de la vida
-real</strong>.</p>
-
-<p>Muy pronto aprendimos la primera lección: ¿Cómo se hace Scrum? ¿Cómo se hace <em>agile</em>?.
-Me quedo con la frase de Ángel:</p>
-
-<blockquote><p>Agilear se hace aligerando</p></blockquote>
-
-<p>La diferencia fundamental de las metodologías ágiles frente a las tradicionales,
-es que las ágiles se basan en eliminar, mientras que las tradicionales se
-basan en añadir capas de complejidad.</p>
-
-<h2>Acuerdos de trabajo</h2>
-
-<p>Lo primero de todo, antes de empezar a trabajar, lo primordial es establecer unos
-acuerdos de trabajo. Sin ellos, cualquier proyecto, empresa, lo que sea, que necesite
-de un trabajo en grupo, no podrá saber si todo el mundo avanza en la misma dirección.</p>
-
-<p>Nosotros es lo primero que hicimos al comenzar el curso, y éstos fueron nuestros
-<em>Acuerdos de Trabajo</em>:</p>
-
-<p><img class="left" src="http://rchavarria.github.io/images/2013/curso-scrum-master/01-acuerdos-trabajo.jpg" width="194" height="260"></p>
-
-<ul>
-<li>Speak up! (¡Habla!): Los problemas se deben resolver cuanto antes. Si te molesta
-cualquier cosa, por pequeña que sea, si crees que va a haber un problema con algo&#8230;
-Dilo en voz alta, que se sepa. Esta es la única forma de que se resuelvan rápidamente.</li>
-<li>Compañerismo: sin él, difícilmente se podrá crear un buen ambiente de trabajo.</li>
-<li>Objetivo común: todos debemos ir en la misma dirección, si no, estaremos despediciando
-esfuerzos.</li>
-</ul>
-
-
-<h2>Crear una visión</h2>
-
-<p><img class="right" src="http://rchavarria.github.io/images/2013/curso-scrum-master/02-vision.jpg" width="194" height="260"></p>
-
-<p>Uno de los acuerdos de trabajo es el de tener un objetivo común, y para ello es
-necesario crear una visión.</p>
-
-<p>La nuestra la creamos a través de una dinámica de grupo, y al final, el resultado
-consensuado al que llegamos fue que nuestra visión para este curso sería:</p>
-
-<blockquote><p>Aprender, en grupo, métodos y buenas prácticas y bases de Scrum, divirtiéndonos.</p></blockquote>
-
-<h2>Manifiesto ágil</h2>
-
-<p><img class="right" src="http://rchavarria.github.io/images/2013/curso-scrum-master/03-clover.jpg" width="194" height="260"></p>
-
-<p>Una vez sentadas las bases de cómo vamos a trabajar y qué es lo que vamos a
-esperar del curso, comenzamos. Y qué mejor punto para empezar que conociendo
-los cuatro valores del <a href="http://www.agilemanifesto.org/iso/es/">manifiesto ágil</a>:</p>
-
-<ul>
-<li><strong>Individuos e interacciones</strong> sobre procesos y herramientas</li>
-<li><strong>Software funcionando</strong> sobre documentación extensiva</li>
-<li><strong>Colaboración con el cliente</strong> sobre negociación contractual</li>
-<li><strong>Respuesta ante el cambio</strong> sobre seguir un plan</li>
-</ul>
-
-
-<h2>Scrum</h2>
-
-<p><img class="left" src="http://rchavarria.github.io/images/2013/curso-scrum-master/04-scrum.jpg" width="194" height="260"></p>
-
-<p>Existen multitud de metodologías que se pueden considerar ágiles, entre ellas
-está <em>Scrum</em>. Aunque Scrum no es una metodología en sí, es un marco de trabajo.
-No es una lista de prácticas que debes hacer, si no una serie de recomendaciones,
-que puedes seguir o no, y que son totalmente independientes del campo en que
-se apliquen. Y puede que estos sean los factores que han hecho que Scrum se
-haya adoptado tanto en todo el mundo.</p>
-
-<p>En el curso, aprendimos cuáles son los actores de Scrum (Product Owner, Scrum
-Master, Team, &#8230;), qué elementos forman parte de él (Backlog, Spring,
-Entregable, &#8230;) y qué reuniones lo hacen posible (Diaria, Retrospectiva,
-Demo, &#8230;).</p>
-
-<p>Todo se podría resumir en <em>Inspección y Adaptación</em>. Inspeccionar qué se está
-haciendo y cómo, detectar dónde se podría mejorar y adaptarse para atajar
-esos impedimentos para conseguir una mejora contínua.</p>
-
-<h2>Principios y valores</h2>
-
-<p>Luego pasamos a ver cuáles son los principios y valores de Scrum.</p>
-
-<p>Todos ellos se podrían resumir en uno <strong>Respeto</strong>. A partir de él se pueden
-ir concretando alguno más, por mencionar algunos (que surgieron a partir de
-nosotros y fueron completados por Ángel):</p>
-
-<p><img class="left" src="http://rchavarria.github.io/images/2013/curso-scrum-master/05-principios-valores.jpg" width="194" height="260"></p>
-
-<ul>
-<li>Transparencia: no esconder nada, mostrar toda la información importante acerca
-del avance del proyecto, que los problemas salgan a la luz, &#8230;</li>
-<li>Confianza: esto da libertad a los integrantes del equipo para trabajar a su
-manera y dar lo mejor de sí mismos.</li>
-<li>Foco: trabajar con un objetivo común, y no desperciar esfuerzos.</li>
-<li>Coraje: porque para cambiar las cosas y trabajar de forma auto-organizada,
-sin un <em>jefismo</em> que te las imponga, se necesita mucho coraje.</li>
-</ul>
-
-
-<h2>Roles</h2>
-
-<p>Los dos roles de Scrum que vimos en el curso son el <em>Product Owner</em> y el <em>Scrum
-Master</em>. Existe una relación muy fuerte entre ellos, y de ellos depende en
-gran medida el éxito del proyecto.</p>
-
-<p>Estuvimos discutiendo qué características deberían tener estos roles:</p>
-
-<p><img class="right" src="http://rchavarria.github.io/images/2013/curso-scrum-master/06-scrum-master.jpg" width="194" height="260"></p>
-
-<p><img class="right" src="http://rchavarria.github.io/images/2013/curso-scrum-master/07-product-owner.jpg" width="194" height="260"></p>
-
-<ul>
-<li>Scrum Master
-
-<ul>
-<li>dialogante</li>
-<li>tenaz</li>
-<li>empático</li>
-</ul>
-</li>
-<li>Product Owner
-
-<ul>
-<li>accesible</li>
-<li>priorizador</li>
-<li>estratega</li>
-</ul>
-</li>
-</ul>
-
-
-<h2>Retrospectiva</h2>
-
-<p>Durante todo el curso aplicamos la siguiente máxima:</p>
-
-<blockquote><p>Learn by doing</p></blockquote>
-
-<p><img class="left" src="http://rchavarria.github.io/images/2013/curso-scrum-master/08-retro.jpg" width="194" height="260"></p>
-
-<p>Es decir, <em>aprender haciendo</em>. De esta forma, aprendimos Scrum haciendo Scrum.
-Y Scrum no existe sin una retrospectiva.</p>
-
-<p>La retrospectiva es una parte fundamental de Scrum. Lo más importante, lo que
-proporciona la retro, es que al terminar la reunión, se ha tenido que tomar una
-decisión:</p>
-
-<blockquote><p>Qué acciones vamos a tomar para solucionar alguno de los problemas que tenemos</p></blockquote>
-
-<p>Y así, poco a poco, problema a problema, con un ritmo sostenible, sin agobios,
-ir mejorando contínuamente. Nunca llegarás a la perfección, siempre aparecerán
-nuevos problemas, pero ahí estará la retro para identificarlos, sacarlos a la
-luz y darles solución.</p>
-
-<h2>Referencias</h2>
-
-<p>A lo largo del curso, hicimos referencia a multitud de autores, libros y recursos,
-así que aquí iré dejando aquellas referencias que vayan surgiendo de conversaciones
-futuras acerca de este curso:</p>
-
-<ul>
-<li><a href="http://scrummasters.com/">Scrum Masters Community</a></li>
-<li><a href="https://www.scrum.org/">The home of Scrum</a></li>
-</ul>
-
 ]]></content>
   </entry>
   
