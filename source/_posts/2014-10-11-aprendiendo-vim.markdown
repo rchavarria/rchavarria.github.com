@@ -400,6 +400,23 @@ se pueden sacar los siguientes macros y consejos:
 - `:prev` moverse al buffer anterior
 - `" + a + p` imprime la macro guardada en la posición `a`
 
+## (08-01-2015) Derek Wyatt: Vim macros and global commands
+
+Sigo aprendiendo cosas sobre Vim, esta vez sigo con 
+[macros en Vim y comandos globales](https://vimeo.com/4448635). Estos son los
+comandos y nuevos consejos que aprendí:
+
+- `CTRL + A` incrementa en uno el primer número que encuentra en la línea
+- `20 CTRL + A` incrementa en 20 el primer número de la línea
+- Grabar y ejecutar macros, visto en el anterior
+- `:g/sometext/normal 20^A` es un comando global (en modo :normal, lo que sea eso
+que signifique), que busca la cadena `sometext` (ya he visto antes cómo buscar
+cadenas de texto) y ejecuta el comando `20 CTRL + A`. Para ello, para poder
+escribir `CTRL + A` como comando, hay que pulsar `CTRL + V` para que la 
+siguiente pulsación la tome de forma literal, y luego pulsar `CTRL + A`
+- `CTRL + V` hace que Vim tome la siguiente pulsación de forma literal, muy útil
+cuando se escriben comandos globales, por ejemplo.
+
 <!--
 
 -->
