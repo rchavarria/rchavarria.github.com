@@ -417,6 +417,22 @@ siguiente pulsación la tome de forma literal, y luego pulsar `CTRL + A`
 - `CTRL + V` hace que Vim tome la siguiente pulsación de forma literal, muy útil
 cuando se escriben comandos globales, por ejemplo.
 
+## (08-01-2015) Derek Wyatt: Vim expression register
+
+Una vez acabados los vídeos de nivel intermedio, toca comenzar con los de
+nivel avanzado. Comienzo con el [registro de expresiones](). ¿Qué es?
+¿Para qué sirve? En el vídeo lo descubro:
+
+- ¿Qué es? Es un registro, un lugar donde almacenar *cosas*. ¿Y qué cosas
+son esas? Pues son comandos.
+- ¿Para qué sirve? Lo utilizan los programadores de plugins para extender
+Vim y para integrarlo con herramientas de terceros.
+- `:imap <c-j>d <c-r>=system('echo foo')<cr>` mapea (en modo **i**nserción)
+la combinación de teclas `CTRL + J, D` para que ejecute el comando de 
+sistema `echo foo` e inserte el resultado en el archivo que estamos
+editando. `<c-r>` significa `CTRL + R`, que accede al *registro de expresiones*
+del que estamos hablando.
+
 <!--
 
 -->
