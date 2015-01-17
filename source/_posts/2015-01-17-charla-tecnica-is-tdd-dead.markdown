@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Charla tècnica: Is TDD dead? Of course not!"
+title: "Charla técnica: Is TDD dead? Of course not!"
 date: 2015-01-17 17:35
 author: Rubén Chavarría
 comments: true
@@ -38,6 +38,8 @@ Un montón de consejos (la mayoría) sobre TDD son para principiantes de TDD.
 Así que, cuando te den alguno, piensa si ya has superado esa barrera, y si lo
 has hecho, ignora el consejo, porque tú ya estas por encima de él. Aprende a
 discernir qué información es válida para tu nivel.
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/PCEHRFHKZSk" frameborder="0" allowfullscreen></iframe>
 
 [Emily Bache]: http://twitter.com/emilybache
 [Is TDD dead? Of course not!]: https://www.youtube.com/watch?v=PCEHRFHKZSk
