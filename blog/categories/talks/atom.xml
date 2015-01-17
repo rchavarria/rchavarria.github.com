@@ -4,7 +4,7 @@
   <title><![CDATA[Category: talks | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/talks/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2015-01-02T10:30:42+01:00</updated>
+  <updated>2015-01-17T17:46:25+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,44 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Charla tècnica: Is TDD dead? Of course not!]]></title>
+    <link href="http://rchavarria.github.io/blog/2015/01/17/charla-tecnica-is-tdd-dead/"/>
+    <updated>2015-01-17T17:35:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2015/01/17/charla-tecnica-is-tdd-dead</id>
+    <content type="html"><![CDATA[<p>Hace poco, vi posteada una charla de <a href="http://twitter.com/emilybache">Emily Bache</a> titulada <a href="https://www.youtube.com/watch?v=PCEHRFHKZSk">Is TDD dead? Of course not!</a>
+en el blog <a href="http://garajeando.blogspot.com/2015/01/interesting-talk-is-tdd-dead-of-course.html">Garajeando</a>, un blog que suelo leer. Poco después la vi posteada
+en otro blog que suelo leer, <a href="http://alvarogarcia7.github.io/blog/2015/01/06/talk-is-tdd-dead-of-course-not-by-emily-bache">The long way through Software Craftsmanship</a>. ¿Algo debería tener
+la charla no? Aquí hay un resumen de lo que la charla me a aportado a mí:</p>
+
+<!-- more -->
+
+
+<p>Básicamente, la charla habla de las tres críticas que <a href="http://twitter.com/dhh">David Heinemeier Hansson</a>
+hizo a la práctica de TDD con su <a href="http://david.heinemeierhansson.com/2014/tdd-is-dead-long-live-testing.html">TDD is dead, long live testing</a>.</p>
+
+<ol>
+<li>Fundamentalismo: para evitarlo, experimenta TDD, inténtalo por tí mismo, que no
+te lo cuenten. Después, juzga por tí mismo. Para experimentarlo existen prácticas
+como las <em>code katas</em> o <em>coding dojos</em> y herramientas como <a href="http://cyber-dojo.org">cyber-dojo.org</a>.</li>
+<li>Daña el diseño: diseñar es difícil (con o sin TDD). TDD
+te empuja a introducir nuevos niveles de indirección, hacia el Principio de
+Inversión de Dependencias. Aún así, es <strong>tu responsabilidad</strong> como programador
+saber cuándo tu aplicación tiene demasiados niveles de indirección y actuar en
+consecuencia.</li>
+<li>Foco en tests unitarios: puede que David tenga razón aquí, hay mucho foco
+en los tests unitarios. Emily nos habla de unos <a href="http://coding-is-like-cooking.info/tag/approval-testing">tests de Aprobación</a> como
+complemento a los unitarios.</li>
+</ol>
+
+
+<p>Un montón de consejos (la mayoría) sobre TDD son para principiantes de TDD.
+Así que, cuando te den alguno, piensa si ya has superado esa barrera, y si lo
+has hecho, ignora el consejo, porque tú ya estas por encima de él. Aprende a
+discernir qué información es válida para tu nivel.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Charla sobre eXtreme Programming]]></title>

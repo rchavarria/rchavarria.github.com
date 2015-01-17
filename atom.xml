@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2015-01-02T10:30:42+01:00</updated>
+  <updated>2015-01-17T17:46:25+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,44 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Charla tècnica: Is TDD dead? Of course not!]]></title>
+    <link href="http://rchavarria.github.io/blog/2015/01/17/charla-tecnica-is-tdd-dead/"/>
+    <updated>2015-01-17T17:35:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2015/01/17/charla-tecnica-is-tdd-dead</id>
+    <content type="html"><![CDATA[<p>Hace poco, vi posteada una charla de <a href="http://twitter.com/emilybache">Emily Bache</a> titulada <a href="https://www.youtube.com/watch?v=PCEHRFHKZSk">Is TDD dead? Of course not!</a>
+en el blog <a href="http://garajeando.blogspot.com/2015/01/interesting-talk-is-tdd-dead-of-course.html">Garajeando</a>, un blog que suelo leer. Poco después la vi posteada
+en otro blog que suelo leer, <a href="http://alvarogarcia7.github.io/blog/2015/01/06/talk-is-tdd-dead-of-course-not-by-emily-bache">The long way through Software Craftsmanship</a>. ¿Algo debería tener
+la charla no? Aquí hay un resumen de lo que la charla me a aportado a mí:</p>
+
+<!-- more -->
+
+
+<p>Básicamente, la charla habla de las tres críticas que <a href="http://twitter.com/dhh">David Heinemeier Hansson</a>
+hizo a la práctica de TDD con su <a href="http://david.heinemeierhansson.com/2014/tdd-is-dead-long-live-testing.html">TDD is dead, long live testing</a>.</p>
+
+<ol>
+<li>Fundamentalismo: para evitarlo, experimenta TDD, inténtalo por tí mismo, que no
+te lo cuenten. Después, juzga por tí mismo. Para experimentarlo existen prácticas
+como las <em>code katas</em> o <em>coding dojos</em> y herramientas como <a href="http://cyber-dojo.org">cyber-dojo.org</a>.</li>
+<li>Daña el diseño: diseñar es difícil (con o sin TDD). TDD
+te empuja a introducir nuevos niveles de indirección, hacia el Principio de
+Inversión de Dependencias. Aún así, es <strong>tu responsabilidad</strong> como programador
+saber cuándo tu aplicación tiene demasiados niveles de indirección y actuar en
+consecuencia.</li>
+<li>Foco en tests unitarios: puede que David tenga razón aquí, hay mucho foco
+en los tests unitarios. Emily nos habla de unos <a href="http://coding-is-like-cooking.info/tag/approval-testing">tests de Aprobación</a> como
+complemento a los unitarios.</li>
+</ol>
+
+
+<p>Un montón de consejos (la mayoría) sobre TDD son para principiantes de TDD.
+Así que, cuando te den alguno, piensa si ya has superado esa barrera, y si lo
+has hecho, ignora el consejo, porque tú ya estas por encima de él. Aprende a
+discernir qué información es válida para tu nivel.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Extreme Programming explained]]></title>
@@ -1628,8 +1666,47 @@ se pueden sacar los siguientes macros y consejos:</p>
 </ul>
 
 
-<!--
+<h2>(08-01-2015) Derek Wyatt: Vim macros and global commands</h2>
 
+<p>Sigo aprendiendo cosas sobre Vim, esta vez sigo con
+<a href="https://vimeo.com/4448635">macros en Vim y comandos globales</a>. Estos son los
+comandos y nuevos consejos que aprendí:</p>
+
+<ul>
+<li><code>CTRL + A</code> incrementa en uno el primer número que encuentra en la línea</li>
+<li><code>20 CTRL + A</code> incrementa en 20 el primer número de la línea</li>
+<li>Grabar y ejecutar macros, visto en el anterior</li>
+<li><code>:g/sometext/normal 20^A</code> es un comando global (en modo :normal, lo que sea eso
+que signifique), que busca la cadena <code>sometext</code> (ya he visto antes cómo buscar
+cadenas de texto) y ejecuta el comando <code>20 CTRL + A</code>. Para ello, para poder
+escribir <code>CTRL + A</code> como comando, hay que pulsar <code>CTRL + V</code> para que la
+siguiente pulsación la tome de forma literal, y luego pulsar <code>CTRL + A</code></li>
+<li><code>CTRL + V</code> hace que Vim tome la siguiente pulsación de forma literal, muy útil
+cuando se escriben comandos globales, por ejemplo.</li>
+</ul>
+
+
+<h2>(08-01-2015) Derek Wyatt: Vim expression register</h2>
+
+<p>Una vez acabados los vídeos de nivel intermedio, toca comenzar con los de
+nivel avanzado. Comienzo con el <a href="">registro de expresiones</a>. ¿Qué es?
+¿Para qué sirve? En el vídeo lo descubro:</p>
+
+<ul>
+<li>¿Qué es? Es un registro, un lugar donde almacenar <em>cosas</em>. ¿Y qué cosas
+son esas? Pues son comandos.</li>
+<li>¿Para qué sirve? Lo utilizan los programadores de plugins para extender
+Vim y para integrarlo con herramientas de terceros.</li>
+<li><code>:imap &lt;c-j&gt;d &lt;c-r&gt;=system('echo foo')&lt;cr&gt;</code> mapea (en modo <strong>i</strong>nserción)
+la combinación de teclas <code>CTRL + J, D</code> para que ejecute el comando de
+sistema <code>echo foo</code> e inserte el resultado en el archivo que estamos
+editando. <code>&lt;c-r&gt;</code> significa <code>CTRL + R</code>, que accede al <em>registro de expresiones</em>
+del que estamos hablando.</li>
+</ul>
+
+
+<!--
+Next: [Vim autocommands](http://vimeo.com/4454614)
 -->
 
 ]]></content>
@@ -3214,58 +3291,6 @@ arrepiento de nada.</p>
 <p>Así que, mientras voy viendo alguna que otra charla del canal de youtube de
 <a href="http://www.youtube.com/channel/UCJ91eUdxXwLYyaeIN1rGg-g">Codemotion Madrid</a>, voy esperando con impaciencia la edición del año que viene, para
 reservar agenda y estar a tope.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Mi primera aplicación web con AngularJS]]></title>
-    <link href="http://rchavarria.github.io/blog/2013/10/17/primera-aplicacion-angularjs/"/>
-    <updated>2013-10-17T22:00:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2013/10/17/primera-aplicacion-angularjs</id>
-    <content type="html"><![CDATA[<p>Esta semana no he podido aportar ningún tutorial a la serie de
-<a href="http://rchavarria.github.io/blog/2013/09/03/demos-tecnologias-javaee">demos de tecnologías JavaEE</a> ya
-que he dedicado grandes esfuerzos a realizar una prueba técnica para una
-empresa.</p>
-
-<p>La prueba consitía en realizar una aplicación web, donde el back-end está
-programado en PHP y el front-end en JavaScript, utilizando el framework MVC
-<a href="http://angularjs.org">AngularJS</a>.</p>
-
-<p>Ha sido una experiencia interesantísima. Ya tenía conocimientos de arquitecturas
-MVC, he participado profesionalmente en multitud de desarrollos siguiendo
-este modelo, pero ésta ha sido una oportunidad increíble de conocer un
-framework tan de moda y tan demandado como AngularJS. El proyecto consistía en
-implementar una <a href="http://rct-ytlibrary.herokuapp.com">librería de videos de youtube</a>.</p>
-
-<!-- more -->
-
-
-<p><img class="center" src="http://rchavarria.github.io/images/2013/ytlibrary-dnd.png" title="Puedes añadir un vídeo arrastrando y soltando" ></p>
-
-<p>En definitiva, he aprovechado esta oportunidad, y con unas pequeñas modificaciones
-a la prueba técnica inicial, he eliminado la necesidad de un back-end, he creado
-un servidor web básico en <em>NodeJS</em>, y he desplegado la aplicación en <em>heroku</em>.</p>
-
-<p>Si te pica la curiosidad y quieres ver el código fuente, lo puedes encontrar en mi
-repositorio de github <a href="http://github.com/rchavarria/ytlibrary">rchavarria/ytlibrary</a>.</p>
-
-<p>La aplicación explota multitud de conceptos de AngularJS:</p>
-
-<ul>
-<li>Directivas más comunes: <code>ng-model</code>, <code>ng-repeat</code>, <code>ng-click</code>, &#8230;</li>
-<li>Controladores, <code>angular.controller(...)</code>.</li>
-<li>Servicios, implementados como factorías con <code>angular.factory(...)</code>.</li>
-<li>Directivas, <code>angular.directive(...)</code>.</li>
-<li>Posibilidad de arrastrar y soltar vídeos para añadirlos a la lista.</li>
-<li>Animaciones con el módulo proporcionado por AngularJS <code>ngAnimate</code>.</li>
-</ul>
-
-
-<p><img class="center" src="http://rchavarria.github.io/images/2013/ytlibrary-video.png" title="Visualizar un vídeo desde la lista" ></p>
-
-<p>Si todavía tienes ganas de más, te invito a que eches un vistazo a
-<a href="http://rct-ytlibrary.herokuapp.com">Youtube library</a>. Por supuesto, si quieres,
-me encantaría que me contases qué te ha parecido.</p>
 ]]></content>
   </entry>
   

@@ -532,8 +532,47 @@ se pueden sacar los siguientes macros y consejos:</p>
 </ul>
 
 
-<!--
+<h2>(08-01-2015) Derek Wyatt: Vim macros and global commands</h2>
 
+<p>Sigo aprendiendo cosas sobre Vim, esta vez sigo con
+<a href="https://vimeo.com/4448635">macros en Vim y comandos globales</a>. Estos son los
+comandos y nuevos consejos que aprendí:</p>
+
+<ul>
+<li><code>CTRL + A</code> incrementa en uno el primer número que encuentra en la línea</li>
+<li><code>20 CTRL + A</code> incrementa en 20 el primer número de la línea</li>
+<li>Grabar y ejecutar macros, visto en el anterior</li>
+<li><code>:g/sometext/normal 20^A</code> es un comando global (en modo :normal, lo que sea eso
+que signifique), que busca la cadena <code>sometext</code> (ya he visto antes cómo buscar
+cadenas de texto) y ejecuta el comando <code>20 CTRL + A</code>. Para ello, para poder
+escribir <code>CTRL + A</code> como comando, hay que pulsar <code>CTRL + V</code> para que la
+siguiente pulsación la tome de forma literal, y luego pulsar <code>CTRL + A</code></li>
+<li><code>CTRL + V</code> hace que Vim tome la siguiente pulsación de forma literal, muy útil
+cuando se escriben comandos globales, por ejemplo.</li>
+</ul>
+
+
+<h2>(08-01-2015) Derek Wyatt: Vim expression register</h2>
+
+<p>Una vez acabados los vídeos de nivel intermedio, toca comenzar con los de
+nivel avanzado. Comienzo con el <a href="">registro de expresiones</a>. ¿Qué es?
+¿Para qué sirve? En el vídeo lo descubro:</p>
+
+<ul>
+<li>¿Qué es? Es un registro, un lugar donde almacenar <em>cosas</em>. ¿Y qué cosas
+son esas? Pues son comandos.</li>
+<li>¿Para qué sirve? Lo utilizan los programadores de plugins para extender
+Vim y para integrarlo con herramientas de terceros.</li>
+<li><code>:imap &lt;c-j&gt;d &lt;c-r&gt;=system('echo foo')&lt;cr&gt;</code> mapea (en modo <strong>i</strong>nserción)
+la combinación de teclas <code>CTRL + J, D</code> para que ejecute el comando de
+sistema <code>echo foo</code> e inserte el resultado en el archivo que estamos
+editando. <code>&lt;c-r&gt;</code> significa <code>CTRL + R</code>, que accede al <em>registro de expresiones</em>
+del que estamos hablando.</li>
+</ul>
+
+
+<!--
+Next: [Vim autocommands](http://vimeo.com/4454614)
 -->
 
 </div>
@@ -605,6 +644,10 @@ se pueden sacar los siguientes macros y consejos:</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/01/17/charla-tecnica-is-tdd-dead/">Charla tècnica: Is TDD dead? Of course not!</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/01/02/extreme-programming-explained/">Extreme Programming explained</a>
       </li>
     
@@ -618,10 +661,6 @@ se pueden sacar los siguientes macros y consejos:</p>
     
       <li class="post">
         <a href="/blog/2014/11/29/notas-codemotion-2014/">Mis notas sobre Codemotion 2014</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/11/18/mi-primer-code-retreat/">Mi primer Code Retreat</a>
       </li>
     
   </ul>
