@@ -420,7 +420,7 @@ cuando se escriben comandos globales, por ejemplo.
 ## (08-01-2015) Derek Wyatt: Vim expression register
 
 Una vez acabados los vídeos de nivel intermedio, toca comenzar con los de
-nivel avanzado. Comienzo con el [registro de expresiones](). ¿Qué es?
+nivel avanzado. Comienzo con el [registro de expresiones](http://vimeo.com/4446843). ¿Qué es?
 ¿Para qué sirve? En el vídeo lo descubro:
 
 - ¿Qué es? Es un registro, un lugar donde almacenar *cosas*. ¿Y qué cosas
@@ -433,6 +433,38 @@ sistema `echo foo` e inserte el resultado en el archivo que estamos
 editando. `<c-r>` significa `CTRL + R`, que accede al *registro de expresiones*
 del que estamos hablando.
 
+## (18-01-2015) Derek Wyatt: Vim autocomands
+
+Siguiendo con vídeos de nivel avanzado, esta vez toca *auto comandos*. Parece
+una funcionalidad super útil de Vim. Es una funcionalidad donde puedes configurar
+Vim para que realice los comandos que quieras cuando ocurra algún evento: por
+ejemplo, cuando se guarda un fichero en disco, o cuando se mueva el cursor.
+El vídeo está disponible en [Autocomandos](http://vimeo.com/4454614),
+y es muy cortito, que no te de pereza.
+
+- `:help :autocmd`
+
+### (18-01-2015) Derek Wyatt: Find command and the path
+
+El vídeo anterior era realmente corto, y solamente saqué en claro un comando
+para Vim, `:autocmd`, pero para su uso es necesario de tener funciones u
+otros comandos para que realmente haga algo. 
+
+Así pues, el siguiente es [Find command and the Path](http://vimeo.com/6154082)
+para aprender a buscar ficheros y cargarlos para su edición.
+
+- `:set path=<directorio>`: establece la variable `path` en Vim, para búsqueda
+de ficheros por ejemplo.
+- `:find <filename>`: busca por un fichero y lo abre para su edición
+- `:pwd`: muestra el directorio de trabajo actual
+
 <!--
-Next: [Vim autocommands](http://vimeo.com/4454614)
+Next: [Globals, commands and functions](http://vimeo.com/15443936)
 -->
+
+
+
+
+
+
+
