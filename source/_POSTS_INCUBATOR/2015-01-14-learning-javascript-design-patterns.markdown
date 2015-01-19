@@ -84,7 +84,24 @@ Are used to create specific types of objects.
 
 **Constructors with prototypes**
 
+Este patrón resuelve el problema de redefinir funciones.
 
+    function Car(model, year, miles) {
+        this.model = model;
+        this.year = year;
+        this.miles = miles;
+    }
+
+    // Note here that we are using Object.prototype.newMethod rather than
+    // Object.prototype so as to avoid redefining the prototype object
+    Car.prototype.toString = function () {
+        return this.model + " has done " + this.miles + " miles";
+    };
+
+## The singleton pattern
+
+- Traditionally it restricts instantiation of a class to a single object
+- In its simplest form it can be an object literal
 
 
 
