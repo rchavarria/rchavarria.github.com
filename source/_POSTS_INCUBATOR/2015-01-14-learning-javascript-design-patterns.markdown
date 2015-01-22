@@ -102,6 +102,97 @@ Este patrón resuelve el problema de redefinir funciones.
 
 - Traditionally it restricts instantiation of a class to a single object
 - In its simplest form it can be an object literal
+- You could add your own private members and methods to the singleton by encapsulating variable and function declarations inseide a closure
+- Eso puede ser usado para controlar que solo existe una instancia del objeto que se quiere crear
+
+``` javascript
+var Singleton = ( function () {
+    var instantiated;
+
+    function init() {
+        // singleton here
+        return {
+            publicMethod: function () {
+                console. log('hello world' );
+            },
+            publicProperty: 'test'
+        };
+    }
+
+    return {
+        getInstance: function () {
+            if (! instantiated) {
+                instantiated = init();
+            }
+            return instantiated;
+        }
+    };
+})();
+
+// calling public methods is then as easy as:
+Singleton. getInstance(). publicMethod();
+```
+
+- it's quite useful when exactly one object is needed to coordinate patterns across the system
+
+## The module pattern
+
+- it is used to further emulate the concept of classes in such a away that we're able to include both public/private methods and variables inse a single object, thus shielding particular parts from the global scope, reducing the likelihood of your function names conflicting
+with this pattern only a public api is returnd, keeping everything else within the closure private
+
+``` javascript
+var testModule = ( function () {
+    var counter = 0;
+    return {
+        incrementCounter: function () {
+            return counter++;
+        }
+    };
+})();
+// test
+testModule. incrementCounter();
+``` 
+
+- Disadvantages: you alse cant access private members in methods that are added to the object at a later point. it's not simply not possible to patch privates. instead, one must override all public methods which interact with bth buggy privates
+
+## The observer pattern
+
+- allows and object (known as a subscriber) to watch another object (the publisher)
+- subscribers are able to register (subscribe) to receive notifications. publishers broadcasts (publishes) a notification
+- **the general idea here is the promotion of the loose coupling**
+- advantages: dynamic relationships may exist. this provides a great deal of flexibility
+- decoupling applications: por ejemplo, cuando el usuario clica un boton, en lugar de actualizar el UI directamente, el click-handler puede publicar uno/varios evetnos y el UI afecgtado escucharlos (puede haber un UI o varios escuchando)
+- decoupling ajax requests: con peticiones ajax, lo mismo. podemos tener un componente que hace la peticion ajax y publica eventos antes y después de la request (con los datos incluso). varios componentes de la aplicación pueden reaccionar de forma distinta a esos eventos
+
+## The mediator pattern
+
+it's a behavioural design pattern that allows us to expose a unified interface through which the fdiffferent parts of a system may communicate. promotes loose coupling by ensuring that instead of modules referring to each other explicitly, their interaction is handled through this central point.
+it's essentialy a shared subject in the observer pattern
+- perhaps the bigggest downside of using the mediator pattern is that it can introduce a single point of failure
+
+*mediator Vs observer* the mediator pattern centralizes rather than simply just distributing. Es el mediador quien tiene la responsabilidad.
+
+## The prototype pattern
+
+- creates objects based on a template of an existing object through cloning
+- `Object.create` creates an object which has a specified prototype and which optionally contains specified properties (por ejemplo: `Object.create(prototype, optionalDescriptorObjects)`
+
+## The command pattern
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
