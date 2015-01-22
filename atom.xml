@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2015-01-20T22:53:53+01:00</updated>
+  <updated>2015-01-22T23:10:04+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,157 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Calcular hashes MD5 en Dart con cipher]]></title>
+    <link href="http://rchavarria.github.io/blog/2015/01/22/calcular-md5-dart-cipher/"/>
+    <updated>2015-01-22T23:02:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2015/01/22/calcular-md5-dart-cipher</id>
+    <content type="html"><![CDATA[<p>Cuando estoy aprendiendo un lenguaje de programación, me gusta practicar
+con él, me gusta escribir código con él. Puedes leer los libros o los blogs
+que quieras, pero hasta que no escribas aplicaciones y las ejecutes, nunca
+apredenderás nada de ese lenguaje.</p>
+
+<p>Para practicar me gusta <a href="http://solveet.com">Solveet</a>. Puedes encontrar problemas muy diversos,
+tanto fáciles como más complicados. Publicas tu código, con lo que todo el
+mundo puede verlo (por eso te esfuerzas en dejar tu código un poquito más
+limpio).</p>
+
+<p>Recientemente decidí resolver un problema en el que se trata de escribir
+un <a href="http://www.solveet.com/exercises/Acceder-a-la-API-Marvel/299">acceso a la API pública de Marvel</a>. Uno de los pasos para acceder a dicha
+API es calcular el hash MD5 de unos parámetros a pasar a la API para
+autenticarte. Dart es un lenguaje moderno, así que pensé que sería muy
+fácil calcular hashes MD5. ¡Menuda decepción me llevé!</p>
+
+<!-- more -->
+
+
+<h2>Crypto</h2>
+
+<p>En realidad no soy ningún experto en Dart, pero no encontré que el lenguaje
+proporcionara clases o métodos para hacerlo. Existe una librería llamada
+crypto, que parece haber sido escrita por alguien de dentro, pero me
+pareció que estaba abandonada y sin documentación (repito, fue una impresión
+mía, que me perdone el autor(es)).</p>
+
+<h2>Cipher</h2>
+
+<p>Por suerte encontré <a href="https://github.com/izaera/cipher">cipher</a>, una librería escrita por <a href="https://twitter.com/izaera">Iván Zaera</a>, que me
+puso las cosas más fáciles. El repositorio en git parece activo y tiene
+una documentación mucho mejor que la de crypto. Al menos encontré la forma
+de usar la librería y hacer lo que quería.</p>
+
+<p>Pero no encontré exactamente lo que buscaba, lo encontré algo desperdigado
+entre las páginas de la wiki. Así que este post es para mostrar el método
+que encontré para <strong>calcular hashes MD5 en Dart con cipher</strong>.</p>
+
+<h2>Código</h2>
+
+<p>Para usar la librería, hay que añadir la dependencia de la librería al
+fichero <code>pubspec.yaml</code> del proyecto:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>...
+</span><span class='line'>dependencies:
+</span><span class='line'>    cipher: "&gt;=0.7.1 &lt;0.8.0"
+</span><span class='line'>...</span></code></pre></td></tr></table></div></figure>
+
+
+<p>La siguiente clase, contiene un método público, <code>digest</code>, que acepta un
+<code>String</code> como parámetro y devuelve un <code>String</code> con el hash MD5 del mismo:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>// needs `cipher` as a project's dependency
+</span><span class='line'>import 'package:cipher/cipher.dart';
+</span><span class='line'>import 'package:cipher/impl/server.dart';
+</span><span class='line'>import 'dart:typed_data';
+</span><span class='line'>import 'dart:convert';
+</span><span class='line'>
+</span><span class='line'>/**
+</span><span class='line'> * Uses cipher package to compute the MD5 hash of a given String
+</span><span class='line'> */
+</span><span class='line'>class Utf8String2MD5 {
+</span><span class='line'>
+</span><span class='line'>    Utf8Encoder encoder;
+</span><span class='line'>    Digest md5;
+</span><span class='line'>
+</span><span class='line'>    Utf8String2MD5() {
+</span><span class='line'>        // cipher must be initialized before using any class from the package
+</span><span class='line'>        initCipher();
+</span><span class='line'>
+</span><span class='line'>        // cipher class to compute the MD5
+</span><span class='line'>        md5 = new Digest('MD5');
+</span><span class='line'>        encoder = new Utf8Encoder();
+</span><span class='line'>    }
+</span><span class='line'>
+</span><span class='line'>    /**
+</span><span class='line'>     * @param message Message which MD5 hash will be computed
+</span><span class='line'>     * @return the MD5 hash of `message`
+</span><span class='line'>     */
+</span><span class='line'>    String digest(String message) {
+</span><span class='line'>        // get utf-8 values of the message
+</span><span class='line'>        List&lt;int&gt; utf8Data = encoder.convert(message);
+</span><span class='line'>        // convert to the input data for the cipher class
+</span><span class='line'>        Utf8List inputData = new Uint8List.fromList(utf8Data);
+</span><span class='line'>        // compute the MD5
+</span><span class='line'>        Uint8List digestValue = md5.process(inputData);
+</span><span class='line'>
+</span><span class='line'>        return digestValue
+</span><span class='line'>            .map((i) =&gt; i.toRadixString(16)) // converts to hexadecimal string
+</span><span class='line'>            .map((s) =&gt; s.padLeft(2, '0')) // pad strings with 0
+</span><span class='line'>            .join(); // join all elements in the List to build a String
+</span><span class='line'>    }
+</span><span class='line'>
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Charla técnica: Is TDD dead? Of course not!]]></title>
@@ -3284,51 +3435,6 @@ JSF 2.x.</li>
 a comparison table of several kinds of managed beans.</li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Mi experiencia en el Codemotion 2013]]></title>
-    <link href="http://rchavarria.github.io/blog/2013/10/22/mi-experiencia-en-el-codemotion-2013/"/>
-    <updated>2013-10-22T12:44:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2013/10/22/mi-experiencia-en-el-codemotion-2013</id>
-    <content type="html"><![CDATA[<p>El pasado viernes 18 de octubre asistí al <a href="http://madrid.codemotionworld.com">Codemotion 2013</a>, un evento de
-desarrolladores para desarrolladores. Es solamente la segunda edición en España,
-pero la considero una cita imprescindible, y encima se celebra cerca de casa,
-así que no puedo pedir más. ¿Quieres un aperitivo? Échale un ojo al <a href="http://www.youtube.com/watch?v=SxP67piQp2U">trailer</a>.</p>
-
-<p>Lamentablemente, por motivos personales no he podido asistir a los dos días,
-así que tengo muuuchas charlas para ver en diferido. Pero no perdí el tiempo,
-pude conocer en pesona a gente de <a href="http://www.autentia.com">Autentia</a>, <a href="http://www.deiser.com">Deiser</a>, y otros patrocinadores del
-evento sin los cuales no habría sido posible: PayPal, Atlassian, Mozilla, Telefónica I+D,
-Alfresco y más.</p>
-
-<p><img class="center" src="http://rchavarria.github.io/images/2013/codemotion.png" title="Codemotion Spain 2013" ></p>
-
-<!-- more -->
-
-
-<p>El viernes no había muchas charlas ténicas, especialmente por la mañana,
-y eran las que más me interesaban, así que no puedo contar gran cosa de las charlas a
-las que asistí. Eso sí, me encantó el papel de las <strong>comunidades</strong> en la keynote. Es
-una gozada que haya multitud de gente apasionada por el software y que participe
-en actividades y comunidades locales. Toda mi admiración para ellos.</p>
-
-<p>En compensación a esta falta de charlas técnicas, disfruté mucho del pasillo y de la visita
-a los stands que distintas empresas tenían en los pasillos. Especialmente los
-de <a href="http://www.deiser.com">Deiser</a> y <a href="http://www.autentia.com">Autentia</a>. Estoy contento, porque me permitió conocer profesionales
-que trabajan en dos empresas que admiro, no sólo por lo que hacen, si no por cómo
-lo hacen (y además me hice con un poco de <em>merchandaising</em>).</p>
-
-<p><img class="center" src="http://rchavarria.github.io/images/2013/codemotion-merchandaising.jpg" title="Codemotion Spain 2013" ></p>
-
-<p>Este año, mi edición del Codemotion ha sido muy ligera. Me da mucha pena, pero
-los compromisos son los compromisos, que también los disfruté, por lo que no me
-arrepiento de nada.</p>
-
-<p>Así que, mientras voy viendo alguna que otra charla del canal de youtube de
-<a href="http://www.youtube.com/channel/UCJ91eUdxXwLYyaeIN1rGg-g">Codemotion Madrid</a>, voy esperando con impaciencia la edición del año que viene, para
-reservar agenda y estar a tope.</p>
 ]]></content>
   </entry>
   

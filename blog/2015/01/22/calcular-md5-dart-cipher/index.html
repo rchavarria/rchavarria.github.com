@@ -1,0 +1,420 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Calcular hashes MD5 en Dart con cipher - R. Chavarria's Blog</title>
+  <meta name="author" content="Rub&eacute;n Chavarr&iacute;a">
+
+  
+  <meta name="description" content="Cuando estoy aprendiendo un lenguaje de programación, me gusta practicar
+con él, me gusta escribir código con él. Puedes leer los libros o los blogs &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://rchavarria.github.io/blog/2015/01/22/calcular-md5-dart-cipher/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="R. Chavarria's Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36829645-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">R. Chavarria's Blog</a></h1>
+  
+    <h2>Blogging like a hacker about Software Development</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:rchavarria.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archivos</a></li>
+  <li><a href="/readings">Lista de lectura</a></li>
+  <li><a href="/pet-projects">Proyectos</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Calcular hashes MD5 en Dart con cipher</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-01-22T23:02:00+01:00" pubdate data-updated="true">Jan 22<span>nd</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Cuando estoy aprendiendo un lenguaje de programación, me gusta practicar
+con él, me gusta escribir código con él. Puedes leer los libros o los blogs
+que quieras, pero hasta que no escribas aplicaciones y las ejecutes, nunca
+apredenderás nada de ese lenguaje.</p>
+
+<p>Para practicar me gusta <a href="http://solveet.com">Solveet</a>. Puedes encontrar problemas muy diversos,
+tanto fáciles como más complicados. Publicas tu código, con lo que todo el
+mundo puede verlo (por eso te esfuerzas en dejar tu código un poquito más
+limpio).</p>
+
+<p>Recientemente decidí resolver un problema en el que se trata de escribir
+un <a href="http://www.solveet.com/exercises/Acceder-a-la-API-Marvel/299">acceso a la API pública de Marvel</a>. Uno de los pasos para acceder a dicha
+API es calcular el hash MD5 de unos parámetros a pasar a la API para
+autenticarte. Dart es un lenguaje moderno, así que pensé que sería muy
+fácil calcular hashes MD5. ¡Menuda decepción me llevé!</p>
+
+<!-- more -->
+
+
+<h2>Crypto</h2>
+
+<p>En realidad no soy ningún experto en Dart, pero no encontré que el lenguaje
+proporcionara clases o métodos para hacerlo. Existe una librería llamada
+crypto, que parece haber sido escrita por alguien de dentro, pero me
+pareció que estaba abandonada y sin documentación (repito, fue una impresión
+mía, que me perdone el autor(es)).</p>
+
+<h2>Cipher</h2>
+
+<p>Por suerte encontré <a href="https://github.com/izaera/cipher">cipher</a>, una librería escrita por <a href="https://twitter.com/izaera">Iván Zaera</a>, que me
+puso las cosas más fáciles. El repositorio en git parece activo y tiene
+una documentación mucho mejor que la de crypto. Al menos encontré la forma
+de usar la librería y hacer lo que quería.</p>
+
+<p>Pero no encontré exactamente lo que buscaba, lo encontré algo desperdigado
+entre las páginas de la wiki. Así que este post es para mostrar el método
+que encontré para <strong>calcular hashes MD5 en Dart con cipher</strong>.</p>
+
+<h2>Código</h2>
+
+<p>Para usar la librería, hay que añadir la dependencia de la librería al
+fichero <code>pubspec.yaml</code> del proyecto:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>...
+</span><span class='line'>dependencies:
+</span><span class='line'>    cipher: "&gt;=0.7.1 &lt;0.8.0"
+</span><span class='line'>...</span></code></pre></td></tr></table></div></figure>
+
+
+<p>La siguiente clase, contiene un método público, <code>digest</code>, que acepta un
+<code>String</code> como parámetro y devuelve un <code>String</code> con el hash MD5 del mismo:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>// needs `cipher` as a project's dependency
+</span><span class='line'>import 'package:cipher/cipher.dart';
+</span><span class='line'>import 'package:cipher/impl/server.dart';
+</span><span class='line'>import 'dart:typed_data';
+</span><span class='line'>import 'dart:convert';
+</span><span class='line'>
+</span><span class='line'>/**
+</span><span class='line'> * Uses cipher package to compute the MD5 hash of a given String
+</span><span class='line'> */
+</span><span class='line'>class Utf8String2MD5 {
+</span><span class='line'>
+</span><span class='line'>    Utf8Encoder encoder;
+</span><span class='line'>    Digest md5;
+</span><span class='line'>
+</span><span class='line'>    Utf8String2MD5() {
+</span><span class='line'>        // cipher must be initialized before using any class from the package
+</span><span class='line'>        initCipher();
+</span><span class='line'>
+</span><span class='line'>        // cipher class to compute the MD5
+</span><span class='line'>        md5 = new Digest('MD5');
+</span><span class='line'>        encoder = new Utf8Encoder();
+</span><span class='line'>    }
+</span><span class='line'>
+</span><span class='line'>    /**
+</span><span class='line'>     * @param message Message which MD5 hash will be computed
+</span><span class='line'>     * @return the MD5 hash of `message`
+</span><span class='line'>     */
+</span><span class='line'>    String digest(String message) {
+</span><span class='line'>        // get utf-8 values of the message
+</span><span class='line'>        List&lt;int&gt; utf8Data = encoder.convert(message);
+</span><span class='line'>        // convert to the input data for the cipher class
+</span><span class='line'>        Utf8List inputData = new Uint8List.fromList(utf8Data);
+</span><span class='line'>        // compute the MD5
+</span><span class='line'>        Uint8List digestValue = md5.process(inputData);
+</span><span class='line'>
+</span><span class='line'>        return digestValue
+</span><span class='line'>            .map((i) =&gt; i.toRadixString(16)) // converts to hexadecimal string
+</span><span class='line'>            .map((s) =&gt; s.padLeft(2, '0')) // pad strings with 0
+</span><span class='line'>            .join(); // join all elements in the List to build a String
+</span><span class='line'>    }
+</span><span class='line'>
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Rubén Chavarría</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-01-22T23:02:00+01:00" pubdate data-updated="true">Jan 22<span>nd</span>, 2015</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/cryptography/'>cryptography</a>, <a class='category' href='/blog/categories/dart/'>dart</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rchavarria.github.io/blog/2015/01/22/calcular-md5-dart-cipher/" data-via="rchavarriat" data-counturl="http://rchavarria.github.io/blog/2015/01/22/calcular-md5-dart-cipher/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2015/01/17/charla-tecnica-is-tdd-dead/" title="Previous Post: Charla técnica: Is TDD dead? Of course not!">&laquo; Charla técnica: Is TDD dead? Of course not!</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/01/22/calcular-md5-dart-cipher/">Calcular hashes MD5 en Dart con cipher</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/01/17/charla-tecnica-is-tdd-dead/">Charla técnica: Is TDD dead? Of course not!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/01/02/extreme-programming-explained/">Extreme Programming explained</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/12/13/crear-web-components-con-dart-y-polymer/">Crear Web Components con Dart y Polymer</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/12/05/how-to-start-conversations-and-make-friends/">How to start conversations and make friends</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("rchavarriat", 4, true);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/rchavarriat">@rchavarriat</a></p>
+  
+</section>
+
+
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/rchavarriat?count=5&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/rchavarriat">My Delicious Bookmarks &raquo;</a></p>
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Rub&eacute;n Chavarr&iacute;a -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'rchavarria-github-com';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://rchavarria.github.io/blog/2015/01/22/calcular-md5-dart-cipher/';
+        var disqus_url = 'http://rchavarria.github.io/blog/2015/01/22/calcular-md5-dart-cipher/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
