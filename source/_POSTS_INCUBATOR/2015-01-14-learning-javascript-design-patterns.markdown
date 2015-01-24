@@ -179,6 +179,218 @@ it's essentialy a shared subject in the observer pattern
 
 ## The command pattern
 
+It provides you means to separate the responsibilities o fisuuing commands from anything, delegating this responsibility to different objects
+Si tenemos un objeto con métodos, implementamos uno nuevo, 'execute', al que le pasamos el nombre del método y los argumentos -> decoupling. De forma que podríamos hacer algo similar a esto:
+
+``` javascript
+CarManager.execute('buyVehicle', 'Ford Escort', '4332234');
+```
+
+## The facade pattern
+
+Provides a convenient higher-level interface to a larger body o fcode, hiding its tru underlying complexity
+- this gives us the ability to indirectly interact with subsystmems in a way that can sometimes be less prone to error than accessing the subsystem directly
+
+## The factory pattern
+
+- Deals with the problem of creating objects whithout the need to specify the exact class of object being created
+
+## The mixin pattern
+
+- Los mixins son un mecanismos para permitir la herencia múltiple
+
+## The decorator pattern
+
+- A structural design pattern that promotes code reuse and is fexlible alternative to sub classing
+
+### Decorators
+
+- Are used when it's necessary to delegate responsibilities to an objet where it doesn't make sense to subclass it
+- Rather than just using inheritance, where we're used to extending objects linearly, we work with a single base objcet and pregressively add decorator objects which provide the additional capapbiliteies. 
+- JavaScript incorpora este patŕon en el lenguaje, ya que permite añadir propiedades y métodos dinámicamente
+
+# Flyweight
+
+- Is considered a usefull classicla solution for code that's repetivtive, slow and inefficient
+- taking several similar objects and placing that shared information into a single external object or structure
+- In the pattern, there's a concept of two states - intrinsic and extrinsic. Intrinsic data is required by internal methods. Extrinsic data can however be removed and stored externally
+- Object with same intrinsic data can be replaced with a single hsared object. 
+- it uses a amanger to handle the extrinsic states
+
+## Flyweight and the DOM
+
+### Centralized event handling
+
+- normally what you might do to build menu, list components, is bind a click event to each link element in the parent container. instead of binding the click to multiple elementes, we can easily attach a flyweight to the top of our container which can listen for events coming fro below.
+
+# MV<something> patterns
+
+## MVP (model - view - presenter)
+
+- Presenter: is a component which contains the usr-interface business logic for the view
+- la diferencia con MVC es que en MVP la vista es pasiva. En MVC, la vista escucha cambios en el model y tiene lógica de negocio. En MVP no hay data binding, hay que hacerlo manualmente
+
+## MVVM
+
+- this pattern make use of declarative data bindidngs to allow a separation of work on Views from other layers
+
+### Model
+
+- models hold information, but typically don't handle behavior. they don't format information. Formattin of data is ahndled by the View
+- validation is considered acceptable for the models
+
+/!\ NOTA, CONCULSIÓN PARA EL LIBRO: EXPLICA MUY BIEN LAS DIFERENCIAS ENTRE MVC, MVP, MVVM,... /!\ 
+
+### View
+
+- Is considrered active
+- it contains the data-bindings, evetns, and behaviors which require an understanding of the model and viewmodel
+
+### ViewModel
+
+- can be considered a specialized controller that acts as a data converter. it changes model infromation into view information, passing commands from the view to the model
+- View and ViewModel communicate using data-bindings and events
+
+## MVC vs. MVP vs. MVVM
+
+- In MVC, Views have direct access to Models
+- In MVP, Presenters listen to evetns from both the View AND Model and mediating the actions between them
+- MVVM allows us to create View-specific subsets of a Model
+- ViewModel is not requeired to referenca a View. the abstraction of the View means there is less logic requiered in the code behind it
+- One of the downsides to this however is that a level of interpreations is needed between the ViewModel and the View
+
+# Namespacing patterns
+
+## Automated nested namespacing
+
+- Para crear el siguiente namespace: `application.utilities.drawing.canvas.2d`
+
+```
+var application = {
+    utilities: {
+        drawing: {
+            canvas: {
+                2d: {
+                    //...
+                }
+            }
+        }
+    }
+};
+```
+
+- Es posible crear esto automáticamente, por ejemplo parseando cadenas como `"myApp.ns1.module"`.
+
+## Dependency declaration pattern
+
+- Trata de *cachear* un modulo, para no acceder a él navegando todos los namespaces. Se supone que gana en rendimiento
+
+``` javascript
+// en lugar de:
+myApp.utilities.math.fibonacci(25);
+
+// mejor
+var maths = myApp.utilities.math;
+maths.fibonacci(25);
+// seguir usando maths
+```
+
+## Namespacing fundamentals
+
+Desde lo más sencillo hasta lo más complejo:
+
+1. Single global variables
+2. Prefix namespacing: para evitar que otros desarrolladores interfieran con nuestro trabajo, añadimos un prefijo
+
+```
+var myprefix_MyApplication = ...
+```
+
+3. Object literal notation: existen varias formas de intentar evitar colisiones:
+
+```
+// estas opciones chequean si ya existe un modulo o variable
+var myApplication = myApplication || {}; // la más usada
+if(!myApplication) MyApplication = {};
+var myApplication = myApplication = myApplication || {}; // mejor que la primera opcion
+myApplication || (myApplication = {});  // se considera una buena práctica
+var myApplication = myApplication === undefined ? {} : myApplication; // la preferida
+```
+
+4. Nested spacing
+
+```
+var myApp = myApp || {};
+myApp.routers = myApp.routers || {};
+...
+```
+
+5. Immediately-invoked Function Expressions (IIFE)s
+
+Simplest version
+
+```
+// anonymous
+(function() { /*...*/ })();
+// named
+(function foobar() { /*..*/ })());
+```
+
+6. Namespace injection
+
+- Namespace injection is another variation on the IIFE where we inject the methods and properties for a specific namespace fro within a funciton wrapper using *this*.
+
+```
+(function() {
+//...
+this.methodForUtils = function() {};
+}).apply(myApp.utils);
+```
+
+# Design Patterns in jQuery Core
+
+Un capitulo dedicado a jQuery, vaya full de estambul
+
+# Modern Modular JavaScript Design Patterns
+
+## AMD
+
+The AMD module format itself is aproposal fo rdefining modules where both the module and dependencies can be asynchronously loaded
+- the two key concepts you need to be aware of there are the idea of a **define** method, facilitating module definitions, and a **require** mehtod, for handling dependency loading.
+
+```
+define(
+    module_id,
+    [dependencies],
+    definition function
+);
+```
+
+## CommonJS
+
+This module proposal specifies a simple API for declaring modules in the server side.
+- A CommonJS module is a reusable piece of JavaScript which exports specific objects made available to any dependent code
+- they basically contains two primary parts: free varialbe named **exports** and a **require** function that modules can use to import the `exports` of other modules
+
+## ES Harmony
+
+The next version of JavaScript will come with **import** and **export** modules.
+
+```
+module skills {
+    export var specialty = 'foo bar';
+    export var other = ...
+}
+
+module cakes {
+    import * from skills;
+    // ...
+}
+```
+
+# Bonus: jQuery plugin design patterns
+
+
 
 
 
