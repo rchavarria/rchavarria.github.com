@@ -21,17 +21,18 @@ Así que aquí está mi Lista de Lectura:
 ## Estoy leyendo
 
 - [Learning JavaScript design patterns](http://www.amazon.com/Learning-JavaScript-Design-Patterns-Osmani/dp/1449331815/), de Addy Osmani
+- [JavaScript patterns](http://www.amazon.com/JavaScript-Patterns-Stoyan-Stefanov/dp/0596806752), de Stoyan Stefanov
 - [Expertología](http://www.amazon.es/dp/8492414502), de Andrés Pérez Ortega
 
 ## Tengo pensado leer
 
-- [JavaScript patterns](http://www.amazon.com/JavaScript-Patterns-Stoyan-Stefanov/dp/0596806752), de Stoyan Stefanov
 - [Software craftsmanship](https://leanpub.com/socra), de Sandro Mancuso, recomendado por [Carlos Ble](http://twitter.com/carlosble)
+- [Notes to a software team leader](https://leanpub.com/teamleader), de Roy Osherove
+- [The Passionate Programmer](http://pragprog.com/book/cfcar2/the-passionate-programmer), de Chad Fowler
+- [The five dysfunctions of a team](http://www.amazon.com/The-Five-Dysfunctions-Team-Leadership/dp/0787960756), de Patrick Lencioni, recomendado por @joserra_diaz y @rubenbpv (https://en.wikipedia.org/wiki/The_Five_Dysfunctions_of_a_Team)
 - [Getting real: how to build a successful web app](https://gettingreal.37signals.com/), de 37signals, recomendado por los organizadores del Codemotion 2014
 - [The craftsman](http://www.amazon.com/dp/0300151195/ref=cm_sw_su_dp), de Richard Sennet, creo que visto en el twitter de [Arturo Herrero](http://twitter.com/arturoherrero)
 - [So good, they can't ignore you](http://www.amazon.com/dp/1455509124?tag=sivers-20), de Cal Newport, visto en [http://sivers.org/book/SoGood]
-- [The five dysfunctions of a team](http://www.amazon.com/The-Five-Dysfunctions-Team-Leadership/dp/0787960756), de Patrick Lencioni, recomendado por @joserra_diaz y @rubenbpv (https://en.wikipedia.org/wiki/The_Five_Dysfunctions_of_a_Team)
-- [The Passionate Programmer](http://pragprog.com/book/cfcar2/the-passionate-programmer), de Chad Fowler
 - [Agile software development](http://www.amazon.com/Agile-Software-Development-Alistair-Cockburn/dp/0201699699), de Alistair Cockburn
 - [Never eat alone](http://www.amazon.com/Never-Eat-Alone-Secrets-Relationship/dp/0385512058), de Keith Ferrazi
 - [Defiende tu dinero](http://www.casadellibro.com/libro-defiende-tu-dinero/9788466651899/2016460), de Simón Pérez y Marcos Cirera, recomendado por [Guillermo Montoya](https://twitter.com/gmfdsr)
@@ -49,7 +50,7 @@ Así que aquí está mi Lista de Lectura:
 - No me hagas pensar, de Steve Krug
 - [Rapid development](http://www.stevemcconnell.com/rd.htm), de Steve McConnel, recomendado por [Rodrigo Corral](http://twitter.com/r_corral) en la CAS2013
 - [Facts and fallacies of software development](http://www.amazon.com/Facts-Fallacies-Software-Engineering-Robert/dp/0321117425, de Robert L. Glass, recomendado por [Rodrigo Corral](http://twitter.com/r_corral) en la CAS2013
-- [The twelve facto app](http://12factor.net/), de Adam Wiggins. The twelve-factor app is a methodology for building software-as-a-service apps. ([download de epub](http://12factor.net/12factor.epub))
+- [The twelve factor app](http://12factor.net/), de Adam Wiggins. The twelve-factor app is a methodology for building software-as-a-service apps. ([download de epub](http://12factor.net/12factor.epub))
 - [Teamwork is an individual skill](http://www.amazon.com/Teamwork-Is-Individual-Skill-Responsibility/dp/1576751554), de Christopher M. Avery, Meri Aaron Walker y Erin O'Toole, recomendado por @joserra_diaz y @rubenbpv
 - [The culture game](http://www.amazon.com/The-Culture-Game-Tools-Manager/dp/0984875301/), de DAniel Mezick, recomendado por @joserra_diaz y @rubenbpv
 - [Focus](http://www.amazon.es/gp/product/8499883052/), de Daniel Goleman
@@ -61,9 +62,9 @@ Así que aquí está mi Lista de Lectura:
 
 ## He leído
 
-- [Extreme programming explained](/blog/2015/01/02/extreme-programming-explained), de Kent Beck
-- [Stop stealing dreams](http://sethgodin.hubpages.com/hub/stop-stealing-dreams), de Seth Godin
-- [How to start a conversation and make friends](http://www.amazon.com/How-Start-Conversation-Make-Friends/dp/1451610998), de Don Gabor
+- [Extreme programming explained](/blog/2015/01/02/extreme-programming-explained), de Kent Beck ~ *Enero 2015*
+- [Stop stealing dreams](http://sethgodin.hubpages.com/hub/stop-stealing-dreams), de Seth Godin ~ *Octubre 2014*
+- [How to start a conversation and make friends](http://www.amazon.com/How-Start-Conversation-Make-Friends/dp/1451610998), de Don Gabor ~ *Julio 2014*
 - [Snow crash](http://www.amazon.com/Snow-Crash-Bantam-Spectra-Book/dp/0553380958), de Neal Stephenson ~ *Mayo 2014*
 - [El cuadrante del flujo del dinero](https://gist.github.com/rchavarria/11244352),
 de Robert Kiyosaki ~ *Marzo 2014*
