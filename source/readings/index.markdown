@@ -32,6 +32,7 @@ Así que aquí está mi Lista de Lectura:
 - [The five dysfunctions of a team](http://www.amazon.com/The-Five-Dysfunctions-Team-Leadership/dp/0787960756), de Patrick Lencioni, recomendado por @joserra_diaz y @rubenbpv (https://en.wikipedia.org/wiki/The_Five_Dysfunctions_of_a_Team)
 - [Getting real: how to build a successful web app](https://gettingreal.37signals.com/), de 37signals, recomendado por los organizadores del Codemotion 2014
 - [The craftsman](http://www.amazon.com/dp/0300151195/ref=cm_sw_su_dp), de Richard Sennet, creo que visto en el twitter de [Arturo Herrero](http://twitter.com/arturoherrero)
+- [Soft Skills: The software developer's life manual](http://www.amazon.com/gp/product/1617292397/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1617292397&linkCode=as2&tag=makithecompsi-20&linkId=YNX4566EEVSNF3IL), de John Sonmez, recomendado por [Alberto Moratilla](http://twitter.com/4lberto), dice que las valoraciones en Amazon son estupendas
 - [So good, they can't ignore you](http://www.amazon.com/dp/1455509124?tag=sivers-20), de Cal Newport, visto en [http://sivers.org/book/SoGood]
 - [Agile software development](http://www.amazon.com/Agile-Software-Development-Alistair-Cockburn/dp/0201699699), de Alistair Cockburn
 - [Never eat alone](http://www.amazon.com/Never-Eat-Alone-Secrets-Relationship/dp/0385512058), de Keith Ferrazi
