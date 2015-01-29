@@ -21,6 +21,8 @@ operaciones asíncronas.
 En el [tutorial sobre Futures] podrás encontrar información acerca de cómo
 usar esta API de Dart.
 
+<!-- more -->
+
 ## Introducción
 
 El siguiente código haría que la aplicación quedara congelada:
