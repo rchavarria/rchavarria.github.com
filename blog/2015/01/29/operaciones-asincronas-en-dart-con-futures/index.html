@@ -1,0 +1,456 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Operaciones asíncronas en Dart con Futures - R. Chavarria's Blog</title>
+  <meta name="author" content="Rub&eacute;n Chavarr&iacute;a">
+
+  
+  <meta name="description" content="Dart es un lenguaje de programación que se ejecuta en un único hilo. Si un
+bloque de código bloquea dicho hilo (por ejemplo haciendo una operación de &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://rchavarria.github.io/blog/2015/01/29/operaciones-asincronas-en-dart-con-futures/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="R. Chavarria's Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36829645-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">R. Chavarria's Blog</a></h1>
+  
+    <h2>Blogging like a hacker about Software Development</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:rchavarria.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archivos</a></li>
+  <li><a href="/readings">Lista de lectura</a></li>
+  <li><a href="/pet-projects">Proyectos</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Operaciones asíncronas en Dart con Futures</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-01-29T22:06:00+01:00" pubdate data-updated="true">Jan 29<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p><a href="http://dartlang.org">Dart</a> es un lenguaje de programación que se ejecuta en un único hilo. Si un
+bloque de código bloquea dicho hilo (por ejemplo haciendo una operación de
+entrada-salida de larga duración), la aplicación quedará <em>congelada</em>. Las
+operaciones asíncronas permiten al programador crear operaciones sin bloquear
+la aplicación entera. Dart usa la clase <code>Future</code> para realizar estas
+operaciones asíncronas.</p>
+
+<p>En el <a href="https://www.dartlang.org/docs/tutorials/futures/">tutorial sobre Futures</a> podrás encontrar información acerca de cómo
+usar esta API de Dart.</p>
+
+<!-- more -->
+
+
+<h2>Introducción</h2>
+
+<p>El siguiente código haría que la aplicación quedara congelada:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>import 'dart:io';
+</span><span class='line'>
+</span><span class='line'>void printDailyNewsDigest() {
+</span><span class='line'>  File file = new File("dailyNewsDigest.txt");
+</span><span class='line'>  print(file.readAsStringSync());
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>void main() {
+</span><span class='line'>  printDailyNewsDigest();
+</span><span class='line'>  printWinningLotteryNumbers();
+</span><span class='line'>  printWeatherForecast();
+</span><span class='line'>  printBaseballScore();
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>El problema de este código es que <code>readAsStringSync()</code> no retorna hasta que no
+termina, con lo que las llamadas al resto de métodos serán retrasadas.</p>
+
+<p>Para lograr hacer que esa llamada no bloquee la ejecución del resto, Dart proporciona
+los <em>Futures</em>.</p>
+
+<h2>¿Qué es un <em>Future</em>?</h2>
+
+<p>Es simplemente un medio para obtener un valor en algún momento en el futuro.</p>
+
+<p>La forma en la que funciona es la siguiente: una función que necesita hacer una
+acción muy costosa en el tiempo, encola dicha acción como un trabajo para hacer y
+devuelve un objeto <code>Future</code> inmediatamente, de esta forma se consigue no bloquear
+el hilo de ejecución de Dart. Más adelante, cuando el trabajo ha terminado, y el
+valor está disponible, se dice que el <code>Future</code> se ha completado con dicho valor.</p>
+
+<p>Para obtener el valor que representa <code>Future</code>, se usa el método <code>then()</code>, pasándole
+como parámetro una función de callback que será llamada con el valor del <code>Future</code>.</p>
+
+<h2>¿Cómo se usa?</h2>
+
+<p>El método bloqueante anterior quedaría así usando <code>Future</code>:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>import 'dart:io';
+</span><span class='line'>import 'dart:async';
+</span><span class='line'>
+</span><span class='line'>void printDailyNewsDigest() {
+</span><span class='line'>  File file = new File("dailyNewsDigest.txt");
+</span><span class='line'>  Future future = file.readAsString();
+</span><span class='line'>  future.then((content) {
+</span><span class='line'>    print(content);
+</span><span class='line'>  });
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Esta vez, para leer el fichero se usa el método <code>readAsString()</code>, el cual no bloquea
+el hilo y retorna un <code>Future</code>. Después, se registra un callback a través del método
+<code>then()</code>. Este callback recibe como parámetro el valor que esperamos que retorne
+<code>readAsString()</code>, que es el contenido del fichero. Es en este callback donde
+se imprime el contenido del fichero leído.</p>
+
+<p>El propio método <code>then()</code> devuelve también un <code>Future</code>, por lo cual se pueden
+encadenar distintas llamadas <code>then()</code>.</p>
+
+<h2>Gestión de errores</h2>
+
+<p>La gestión de errores con <code>Future</code> es muy sencilla, ya que la clase proporciona el
+método <code>catchError()</code> que será llamado si se produce un error a la hora de conseguir
+el valor que representa el <code>Future</code>.</p>
+
+<p>El método anterior se puede reescribir así:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>void printDailyNewsDigest() {
+</span><span class='line'>  File file = new File("dailyNewsDigest.txt");
+</span><span class='line'>  Future future = file.readAsString();
+</span><span class='line'>  future.then((content) =&gt; doSomethingWith(content))
+</span><span class='line'>        .catchError((e) =&gt; handleError(e));
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>De esta forma, si <code>readAsString()</code> produce un error, la variable <code>future</code> se completará
+con error (en lugar de completarse con el valor del contenido del fichero), lo que
+provocará que el <code>Future</code> devuelto por <code>then()</code> se complete también con error, lo que hará
+que se llame al método <code>catchError()</code>, el cual gestionará el error.</p>
+
+<h2>Encadenando múltiples llamadas a <code>then()</code></h2>
+
+<p>Supongamos que existen tres funciones: <code>expensiveA()</code>, <code>expensiveB()</code> y <code>expensiveC()</code>. Todas
+ellas devolviendo <code>Future</code>s, de forma que se pueden encadenar llamadas a <code>then()</code> de esta
+forma:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>expensiveA().then((aValue) =&gt; expensiveB()) 
+</span><span class='line'>            .then((bValue) =&gt; expensiveC()) 
+</span><span class='line'>            .then((cValue) =&gt; doSomethingWith(cValue));</span></code></pre></td></tr></table></div></figure>
+
+
+<p>También existe otra posibilidad, y es esperar a que termine la ejecución de las tres, para
+realizar alguna acción solamente cuando los tres <code>Future</code>s se hayan completado. Para ello,
+el API proporciona el método <code>wait()</code>.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Future.wait([expensiveA(), expensiveB(), expensiveC()])
+</span><span class='line'>      .then((List responses) =&gt; chooseBestResponse(responses));</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Aquí, <code>wait()</code> devuelve un <code>Future</code> cuyo valor es una lista con los valores de todos los
+<code>Future</code>s pasados como parámetros.</p>
+
+<h2>Creando tus propios <code>Future</code></h2>
+
+<p>De acuerdo, entendido cómo se usan. Pero, ¿y si lo que quiero es ser yo quien comienza la
+cadena de <code>Future</code>s? ¿Cómo se crea el primero de ellos?</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Future methodReturningAFuture() {
+</span><span class='line'>    return new Future.value('foo bar');
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>El método del código anterior devuelve un valor, un <code>Future</code> que se resuelve al valor
+<code>foo bar</code>. Si quisiéramos imprimir esa cadena por consola, haríamos lo siguiente:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>methodReturningAFuture()
+</span><span class='line'>    .then((message) =&gt; print(message));</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Conclusión</h2>
+
+<p>Si así <em>en papel</em> no te ha quedado lo suficientemente claro, te recomiendo que te pases
+por el <a href="https://www.dartlang.org/docs/tutorials/futures/">tutorial sobre Futures</a> o que le eches un ojo al <a href="https://github.com/rchavarria/dart-tutorials/tree/master/futures">código completo</a> del tutorial.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Rubén Chavarría</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-01-29T22:06:00+01:00" pubdate data-updated="true">Jan 29<span>th</span>, 2015</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/dart/'>dart</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rchavarria.github.io/blog/2015/01/29/operaciones-asincronas-en-dart-con-futures/" data-via="rchavarriat" data-counturl="http://rchavarria.github.io/blog/2015/01/29/operaciones-asincronas-en-dart-con-futures/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2015/01/22/calcular-md5-dart-cipher/" title="Previous Post: Calcular hashes MD5 en Dart con cipher">&laquo; Calcular hashes MD5 en Dart con cipher</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/01/29/operaciones-asincronas-en-dart-con-futures/">Operaciones asíncronas en Dart con Futures</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/01/22/calcular-md5-dart-cipher/">Calcular hashes MD5 en Dart con cipher</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/01/17/charla-tecnica-is-tdd-dead/">Charla técnica: Is TDD dead? Of course not!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/01/02/extreme-programming-explained/">Extreme Programming explained</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/12/13/crear-web-components-con-dart-y-polymer/">Crear Web Components con Dart y Polymer</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("rchavarriat", 4, true);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/rchavarriat">@rchavarriat</a></p>
+  
+</section>
+
+
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/rchavarriat?count=5&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/rchavarriat">My Delicious Bookmarks &raquo;</a></p>
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Rub&eacute;n Chavarr&iacute;a -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'rchavarria-github-com';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://rchavarria.github.io/blog/2015/01/29/operaciones-asincronas-en-dart-con-futures/';
+        var disqus_url = 'http://rchavarria.github.io/blog/2015/01/29/operaciones-asincronas-en-dart-con-futures/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

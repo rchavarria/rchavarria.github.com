@@ -4,7 +4,7 @@
   <title><![CDATA[Category: dart | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/dart/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2015-01-26T22:01:20+01:00</updated>
+  <updated>2015-01-29T22:11:55+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,179 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Operaciones asíncronas en Dart con Futures]]></title>
+    <link href="http://rchavarria.github.io/blog/2015/01/29/operaciones-asincronas-en-dart-con-futures/"/>
+    <updated>2015-01-29T22:06:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2015/01/29/operaciones-asincronas-en-dart-con-futures</id>
+    <content type="html"><![CDATA[<p><a href="http://dartlang.org">Dart</a> es un lenguaje de programación que se ejecuta en un único hilo. Si un
+bloque de código bloquea dicho hilo (por ejemplo haciendo una operación de
+entrada-salida de larga duración), la aplicación quedará <em>congelada</em>. Las
+operaciones asíncronas permiten al programador crear operaciones sin bloquear
+la aplicación entera. Dart usa la clase <code>Future</code> para realizar estas
+operaciones asíncronas.</p>
+
+<p>En el <a href="https://www.dartlang.org/docs/tutorials/futures/">tutorial sobre Futures</a> podrás encontrar información acerca de cómo
+usar esta API de Dart.</p>
+
+<!-- more -->
+
+
+<h2>Introducción</h2>
+
+<p>El siguiente código haría que la aplicación quedara congelada:</p>
+
+<p>```
+import 'dart:io';</p>
+
+<p>void printDailyNewsDigest() {
+  File file = new File("dailyNewsDigest.txt");
+  print(file.readAsStringSync());
+}</p>
+
+<p>void main() {
+  printDailyNewsDigest();
+  printWinningLotteryNumbers();
+  printWeatherForecast();
+  printBaseballScore();
+}
+```</p>
+
+<p>El problema de este código es que <code>readAsStringSync()</code> no retorna hasta que no
+termina, con lo que las llamadas al resto de métodos serán retrasadas.</p>
+
+<p>Para lograr hacer que esa llamada no bloquee la ejecución del resto, Dart proporciona
+los <em>Futures</em>.</p>
+
+<h2>¿Qué es un <em>Future</em>?</h2>
+
+<p>Es simplemente un medio para obtener un valor en algún momento en el futuro.</p>
+
+<p>La forma en la que funciona es la siguiente: una función que necesita hacer una
+acción muy costosa en el tiempo, encola dicha acción como un trabajo para hacer y
+devuelve un objeto <code>Future</code> inmediatamente, de esta forma se consigue no bloquear
+el hilo de ejecución de Dart. Más adelante, cuando el trabajo ha terminado, y el
+valor está disponible, se dice que el <code>Future</code> se ha completado con dicho valor.</p>
+
+<p>Para obtener el valor que representa <code>Future</code>, se usa el método <code>then()</code>, pasándole
+como parámetro una función de callback que será llamada con el valor del <code>Future</code>.</p>
+
+<h2>¿Cómo se usa?</h2>
+
+<p>El método bloqueante anterior quedaría así usando <code>Future</code>:</p>
+
+<p>```
+import 'dart:io';
+import 'dart:async';</p>
+
+<p>void printDailyNewsDigest() {
+  File file = new File("dailyNewsDigest.txt");
+  Future future = file.readAsString();
+  future.then((content) {</p>
+
+<pre><code>print(content);
+</code></pre>
+
+<p>  });
+}
+```</p>
+
+<p>Esta vez, para leer el fichero se usa el método <code>readAsString()</code>, el cual no bloquea
+el hilo y retorna un <code>Future</code>. Después, se registra un callback a través del método
+<code>then()</code>. Este callback recibe como parámetro el valor que esperamos que retorne
+<code>readAsString()</code>, que es el contenido del fichero. Es en este callback donde
+se imprime el contenido del fichero leído.</p>
+
+<p>El propio método <code>then()</code> devuelve también un <code>Future</code>, por lo cual se pueden
+encadenar distintas llamadas <code>then()</code>.</p>
+
+<h2>Gestión de errores</h2>
+
+<p>La gestión de errores con <code>Future</code> es muy sencilla, ya que la clase proporciona el
+método <code>catchError()</code> que será llamado si se produce un error a la hora de conseguir
+el valor que representa el <code>Future</code>.</p>
+
+<p>El método anterior se puede reescribir así:</p>
+
+<p>```
+void printDailyNewsDigest() {
+  File file = new File("dailyNewsDigest.txt");
+  Future future = file.readAsString();
+  future.then((content) => doSomethingWith(content))</p>
+
+<pre><code>    .catchError((e) =&gt; handleError(e));
+</code></pre>
+
+<p>}
+```</p>
+
+<p>De esta forma, si <code>readAsString()</code> produce un error, la variable <code>future</code> se completará
+con error (en lugar de completarse con el valor del contenido del fichero), lo que
+provocará que el <code>Future</code> devuelto por <code>then()</code> se complete también con error, lo que hará
+que se llame al método <code>catchError()</code>, el cual gestionará el error.</p>
+
+<h2>Encadenando múltiples llamadas a <code>then()</code></h2>
+
+<p>Supongamos que existen tres funciones: <code>expensiveA()</code>, <code>expensiveB()</code> y <code>expensiveC()</code>. Todas
+ellas devolviendo <code>Future</code>s, de forma que se pueden encadenar llamadas a <code>then()</code> de esta
+forma:</p>
+
+<p>```
+expensiveA().then((aValue) => expensiveB())</p>
+
+<pre><code>        .then((bValue) =&gt; expensiveC()) 
+        .then((cValue) =&gt; doSomethingWith(cValue));
+</code></pre>
+
+<p>```</p>
+
+<p>También existe otra posibilidad, y es esperar a que termine la ejecución de las tres, para
+realizar alguna acción solamente cuando los tres <code>Future</code>s se hayan completado. Para ello,
+el API proporciona el método <code>wait()</code>.</p>
+
+<p>```
+Future.wait([expensiveA(), expensiveB(), expensiveC()])</p>
+
+<pre><code>  .then((List responses) =&gt; chooseBestResponse(responses));
+</code></pre>
+
+<p>```</p>
+
+<p>Aquí, <code>wait()</code> devuelve un <code>Future</code> cuyo valor es una lista con los valores de todos los
+<code>Future</code>s pasados como parámetros.</p>
+
+<h2>Creando tus propios <code>Future</code></h2>
+
+<p>De acuerdo, entendido cómo se usan. Pero, ¿y si lo que quiero es ser yo quien comienza la
+cadena de <code>Future</code>s? ¿Cómo se crea el primero de ellos?</p>
+
+<p>```
+Future methodReturningAFuture() {</p>
+
+<pre><code>return new Future.value('foo bar');
+</code></pre>
+
+<p>}
+```</p>
+
+<p>El método del código anterior devuelve un valor, un <code>Future</code> que se resuelve al valor
+<code>foo bar</code>. Si quisiéramos imprimir esa cadena por consola, haríamos lo siguiente:</p>
+
+<p>```
+methodReturningAFuture()</p>
+
+<pre><code>.then((message) =&gt; print(message));
+</code></pre>
+
+<p>```</p>
+
+<h2>Conclusión</h2>
+
+<p>Si así <em>en papel</em> no te ha quedado lo suficientemente claro, te recomiendo que te pases
+por el <a href="https://www.dartlang.org/docs/tutorials/futures/">tutorial sobre Futures</a> o que le eches un ojo al <a href="https://github.com/rchavarria/dart-tutorials/tree/master/futures">código completo</a> del tutorial.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Calcular hashes MD5 en Dart con cipher]]></title>
