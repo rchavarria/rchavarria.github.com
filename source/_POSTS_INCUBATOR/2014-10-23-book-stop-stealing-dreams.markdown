@@ -1,32 +1,36 @@
 Notas acerca del libro 'Stop stealing dreams', de Seth Godin
 
-- large-scale education was not developed to motivate kids or to create scholars, fue para crear adultos sumisos, trabajadores para líneas de montaje en las fábricas
-- if you do ajob where someone tells you exactly what to do, he will find someone cheaper than you to do it
-- what's school for?
-1. to create a society that's culturally coordinated -> but TV wins
-2. to further science and knowledge and pursue information for its own sake -> luego asociamos leer libros con los exámenes, poca gente lee por el placer de leer y aprender
-3. to enhance civilization while giving people the tools to make informed decisions -> we failed at raise the standards for rational thought, skeptical investigation, and useful financial decision making
-4. to train people to become productive workers (en este si que lo hemos petado)
+- la educacion a gran escala no fue desarrollada para motivar a los niños o para crear eruditos, fue para crear adultos sumisos, trabajadores para líneas de montaje en las fábricas
+- si tienes un trabajo donde alguien te dice exactamente qué hacer, él encontrara alguien más barato que haga lo mismo
+- para qué es la escuela?
+1. para crear una sociedad culturalmente coordinada -> pero la TV gana
+2. Para llevar más lejos la ciencia y el conocimineto y perseguir la información "porque sí" -> luego asociamos leer libros con los exámenes, poca gente lee por el placer de leer y aprender
+3. para mejorar la civilización mientras le damos a la gene herramientas para tomar decisiones conscientes e informadas -> fallamos al elevar los estándares del pensamiento racional, investigación escéptica, y la toma de decisiones financieras de utilidad
+4. para entrenar a gente en ser trabajadores productivos (en este si que lo hemos petado)
 - si la escuela fue creada para 'fabricar' fuerza de trabajo, y ya no necesitamos fuerza de trabajo, ¿para qué invertir en mejorar la escuela? cambiémosla
-- in 1914, a professor in Kansas invented the multiple-choice test. he said: 'this is a test of lower order thinking (no necesitas saber las cosas para responder) for the lower orders (para los ignorantes)
-- esos exámenes siguen vigentes, no porque funciones, but it's easy and efficient way to keep the mass production of students moving forward.
-- shools industrial, scaled-up, measurable structure means that fear must be used to keep the masses in line (fear destrois passion)
-- we can teach people to make commitments, overcome fear, deal transparently, inititate and plan a course, desire lifelong learning, express themselves and innovate. Pero en lugar de eso, hemos hecho olvidar bravery, creativity and initiative
-- dreamers in schools are dangerous, they are hard to fit into existing systgems
-- learning is something you choose to do
+- en 1914, un profesor de Kansas inventó los exámenes tipo test. Dijo : "éste es un examen donde no necesitas las cosas para responder hecho para los ignorantes"
+- esos exámenes siguen vigentes, no porque funcionen, sino porque es una forma fácil y eficiente de que la masa de estudiantes siga adelante (aunque no haga progresos reales)
+- la escuela industrial, a gran escala, con estructuras medibles significa que el miedo es el medio para mantener a raya a las masas (el miedo destruye la pasión)
+- podemos enseñar a la gente a comprometerse, a superar sus miedos, a negociar transarentemente, a iniciar y planificar un curso, a desear tener una vida de contínuo aprendizaje, a expresarse por sí mismos y a innovar. Pero en lugar de eso, hemos hecho que se olviden del coraje, la creatividad y la iniciativa
+- los soñadores en la escuela son peligrosos, es difícil hacerlos encajar en los sistemas existentes
+- aprender es algo que tú eliges hacer
 - he aquí 12 formas en las que la escuela puede ser reformada:
-1. homework during the day, lectures at night
-2. open book, open note, all the time
-3. access to any course, anywhere in the world
-4. precise, focused instruction instead of mass, generalized instruction
-5. the end of multiple-choice exams
-6. experience instead of test scores as a measure of achievement
-7. the end of compliance as an outcome
-8. cooperation instead of isolation
-9. amplification of outlying sudents, teachers, and ideas
-10. transformation of the role of the teacher
-11. lifelong learning, earlier work
-12. death o fthe nearly famous college
+1. deberes por el día, en clase, las clases orales del profesor por la noche, en casa
+2. libro abierto, cuaderno abierto, todo el tiempo
+3. acceso a cualquier curso y asignatura, desde cualquier parte del mundo
+4. instruciones precisas y focalizadas, en lugar de instrucciones generalizadas y en masa
+5. que se acaben los exámenes tipo test
+6. experiencias en lugar de notas en los examenes como medida de logros
+7. que se acabe la obediencia (el silencio, el aceptar las cosas porque sí) como un resultado
+8. cooperacion en lugar de aislamiento
+9. amplificacion de los estudiantes sobresalientes, de los profesores y de las ideas
+10. transformacion del rol del profesor
+11. aprendizaje contínuo, trabajo más temprano
+12. que se acabe la universidad *famosa*
+
+
+
+
 - that's the new job of school, not to hand a map to those willing to follow it, but to inclucate leadership and restlessness into a new generation
 - the world changed first, now it's time for school to follow along
 - nowadays, reputation is worth more than test scores. access to data means that data isn't the valuable part, the processin is
