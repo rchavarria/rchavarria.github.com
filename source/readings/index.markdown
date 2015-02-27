@@ -67,16 +67,16 @@ Así que aquí está mi Lista de Lectura:
 
 - [Extreme programming explained](/blog/2015/01/02/extreme-programming-explained), de Kent Beck ~ *Enero 2015*
 - [Stop stealing dreams](http://sethgodin.hubpages.com/hub/stop-stealing-dreams), de Seth Godin ~ *Octubre 2014*
-- [How to start a conversation and make friends](http://www.amazon.com/How-Start-Conversation-Make-Friends/dp/1451610998), de Don Gabor ~ *Julio 2014*
+- [How to start a conversation and make friends](/blog/2014/12/05/how-to-start-conversations-and-make-friends), de Don Gabor ~ *Julio 2014*
 - [Snow crash](http://www.amazon.com/Snow-Crash-Bantam-Spectra-Book/dp/0553380958), de Neal Stephenson ~ *Mayo 2014*
-- [El cuadrante del flujo del dinero](https://gist.github.com/rchavarria/11244352),
+- [El cuadrante del flujo del dinero](https://github.com/rchavarria/book-notes/blob/master/published/cuadrante-flujo-dinero-by-robert-kiyosaki.md),
 de Robert Kiyosaki ~ *Marzo 2014*
 - [Planifica tu éxito, de aprendiz a empresario](/blog/2014/02/18/planifica-tu-exito),
 de Roberto Canales (Autentia) ~ *Enero 2014*
 - [Padre rico, padre pobre](http://www.amazon.com/Padre-Rico-Pobre-Spanish-Edition/dp/160396181X),
 de Robert Kiyosaki ~ *Septiembre 2013*
 - [Instant Markdown](/blog/2013/10/07/instant-markdown), de Arturo Herrero ~ *Septiembre 2013*
-- [Como ganar amigos e influir sobre las personas](https://gist.github.com/rchavarria/8567866),
+- [Como ganar amigos e influir sobre las personas](https://github.com/rchavarria/book-notes/blob/master/published/ganar-amigos-influir-personas-by-dale-carnegie.md),
 de Dale Carnegie ~ *Julio 2013*
 - [La meta: un proceso de mejora contínua](/blog/2013/04/10/la-meta), de Eliyahu M. Goldratt ~ *Abril 2013*
 - [Agile estimating and planning](/blog/2013/02/13/agile-estimating-and-planning/), de Mike Cohn ~ *Febrero 2013*

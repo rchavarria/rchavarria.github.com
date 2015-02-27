@@ -101,7 +101,7 @@ más importantes serían:
 y/o internacionales
 
 El resto las he reunido en un gist: 
-[notas sobre Planifica tu éxito](https://gist.github.com/rchavarria/8997378)
+[notas sobre Planifica tu éxito](https://github.com/rchavarria/book-notes/blob/master/published/planifica-exito-by-roberto-canales.md)
 
 ## Recursos relacionados
 
