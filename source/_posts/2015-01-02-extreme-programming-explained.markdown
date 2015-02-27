@@ -89,6 +89,6 @@ de la gente
 
 ## Recursos relacionados
 
-- [Extensas notas sobre el libro](https://gist.github.com/rchavarria/1345a4f58a1a712e73a5)
+- [Extensas notas sobre el libro](https://github.com/rchavarria/book-notes/blob/master/published/extreme-programming-explained-by-kent-beck.md)
 - [Extreme Programming explained, en Amazon](http://www.amazon.es/Extreme-Programming-Explained-Embrace-Embracing/dp/0321278658/ref=sr_1_1?ie=UTF8&qid=1420044502&sr=8-1&keywords=extreme+programming+explained)
 
