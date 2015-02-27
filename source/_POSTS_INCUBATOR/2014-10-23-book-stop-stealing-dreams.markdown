@@ -27,19 +27,19 @@ Notas acerca del libro 'Stop stealing dreams', de Seth Godin
 10. transformacion del rol del profesor
 11. aprendizaje contínuo, trabajo más temprano
 12. que se acabe la universidad *famosa*
-
-
-
-
-- that's the new job of school, not to hand a map to those willing to follow it, but to inclucate leadership and restlessness into a new generation
-- the world changed first, now it's time for school to follow along
-- nowadays, reputation is worth more than test scores. access to data means that data isn't the valuable part, the processin is
+- el nuevo trabajo de la escuela no es proporcionar un mapa a aquellos que quieran seguirlo, si no inculcar el liderazgo y la perseverancia en una nueva generación
+- el mundo cambió primero, ahora es el turno de la escuela
+- hoy en dia, la reputación vale más que las notas en los exámenes. el acceso a los datos significa que ya no es la parte con valor, el procesamiento de los datos es lo que da valor
 - en lugar de aislar estudiantes, deberiamos conectarlos : trabajo en grupo, clases intractivas, ...
-- transparency is missing, in search of power, control and independence, administrators hide informaiton from teachers and vice-versa
-- *connection economy* Students have the ability to easily do outside resarch and to discover that the teacher (or her textbook) is just plain wrong.
-- School is a kind of *contract of adhesion*, that means, a take-it-or-leave-it mass deal. There is no individual negotiation possible.
-- we don't ask students to decide to participate, we assume the contract of adhesion
-- great doctors are great because they made the choice
+- falla la transparencia, en la búsqueda del poder, control e independencia, los administradores esconden informacion a los profesores y viceversa
+- *economía conectada*: los estudiantes tienen la habilidad y la facilidad de investigar lo que hay fuera y descubrir que el profesor (o libro de texto) está equivocado
+- la escuela es una especie de *contrato de adhesión*, lo que significa un contrato de *lo tomas o lo dejas* en masa. no hay negociación individual posible
+- no preguntamos a los estudiantes si quieren participar, simplemente asumimos el *contrato de adhesión*
+- los mejores doctores son los mejores porque ellos lo decidieron
+
+
+
+
 - the shortcut for achieving the school goal (make compliant citizens) is **fear**. do this or we'll tell your parents, be suspended, ...
 - there really are only two tools available to the educator: fear and passion
 - the problem is that individual passion is hard to scale
