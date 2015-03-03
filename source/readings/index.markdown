@@ -62,6 +62,7 @@ Así que aquí está mi Lista de Lectura:
 - [Antifrágil](http://www.amazon.es/gp/product/8449328640/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=8449328640&linkCode=as2&tag=viviralmaximo-21), de Nassim Taleb, recomendado por Vivir al máximo y Joan Tubau. Habla de cómo salir reforzado de las crisis
 - [La lógica oculta de la vida](http://www.amazon.es/gp/product/8484607399/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=8484607399&linkCode=as2&tag=viviralmaximo-21), de Tim Harford, recomendado por Vivir al máximo y Joan Tubau
 - [Your money or your life](http://www.amazon.com/Your-Money-Life-Transforming-Relationship/dp/0143115766), de Vicki Robin y Joe Dominguez, recomendado por J. B. Rainsberger
+- [Software for your head](http://www.amazon.com/Software-Your-Head-Protocols-Maintaining/dp/0201604566), de Jim y Michele McCarthy, recomendado por el podcast [Ideas ágile](http://www.ideasagiles.com/podcast/)
 
 ## He leído
 
