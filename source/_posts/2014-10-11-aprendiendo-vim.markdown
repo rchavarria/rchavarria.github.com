@@ -458,6 +458,31 @@ de ficheros por ejemplo.
 - `:find <filename>`: busca por un fichero y lo abre para su edición
 - `:pwd`: muestra el directorio de trabajo actual
 
+### (Marzo 2015) Comando `set statusline`
+
+Esta vez no tengo nada de ningún video, pero es igualmente interesante. Mediante
+el comando `set statusline` se puede configurar la apariencia de la *barra de
+estado* de Vim. Existen muchos símbolos (por llamarlos de alguna manera) que a
+modo de función `printf` pueden ser sustituidos por diversos campos dentro del
+editor: nombre del fichero, número de línea, codificación del fichero,...
+
+A partir de [esta pregunta en Stack Overflow](http://stackoverflow.com/questions/21069164/osx-vim-set-laststatus-2-shows-only-the-filename-but-i-want-to-see-everythin)
+encontré el fichero de configuración de [sk1418](https://github.com/sk1418/myConf/blob/master/common/.vimrc#L506)
+en el cual me basé para crearme mi propia configuarción de la barra de estado:
+
+    set laststatus =2 " always show status bar
+    set statusline=%<%f%h%m%r%=%b\ 0x%B\ \ %l,%c%V\ %p\ %P
+
+La cual me muestra:
+
+- Nombre del fichero, con la ruta completa
+- Una marca para saber si el fichero está modificado
+- Valor decimal del carácter donde está situado el cursor
+- Valor hexadecimal del mismo
+- Columna o línea del fichero donde está el cursor
+- Fila
+- Tanto por ciento del fichero donde está el cursor
+
 <!--
 Next: [Globals, commands and functions](http://vimeo.com/15443936)
 -->
