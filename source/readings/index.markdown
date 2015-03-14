@@ -67,7 +67,7 @@ Así que aquí está mi Lista de Lectura:
 ## He leído
 
 - [Extreme programming explained](/blog/2015/01/02/extreme-programming-explained), de Kent Beck ~ *Enero 2015*
-- [Stop stealing dreams](http://sethgodin.hubpages.com/hub/stop-stealing-dreams), de Seth Godin ~ *Octubre 2014*
+- [Stop stealing dreams](/blog/2015/03/13/stop-stealing-dreams), de Seth Godin ~ *Octubre 2014*
 - [How to start a conversation and make friends](/blog/2014/12/05/how-to-start-conversations-and-make-friends), de Don Gabor ~ *Julio 2014*
 - [Snow crash](http://www.amazon.com/Snow-Crash-Bantam-Spectra-Book/dp/0553380958), de Neal Stephenson ~ *Mayo 2014*
 - [El cuadrante del flujo del dinero](https://github.com/rchavarria/book-notes/blob/master/published/cuadrante-flujo-dinero-by-robert-kiyosaki.md),
