@@ -26,6 +26,7 @@ Así que aquí está mi Lista de Lectura:
 
 ## Tengo pensado leer
 
+- [The grumpy programmer's PHPUnit cookbook](https://leanpub.com/grumpy-phpunit), de Chris Hartjes, amigo de J.B.Rainsberger
 - [Software craftsmanship](https://leanpub.com/socra), de Sandro Mancuso, recomendado por [Carlos Ble](http://twitter.com/carlosble)
 - [Notes to a software team leader](https://leanpub.com/teamleader), de Roy Osherove
 - [The Passionate Programmer](http://pragprog.com/book/cfcar2/the-passionate-programmer), de Chad Fowler
