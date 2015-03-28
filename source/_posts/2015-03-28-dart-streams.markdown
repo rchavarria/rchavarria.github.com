@@ -19,7 +19,7 @@ el método te recomiendo una charla de [Rod Vagg], [Embrace the asynchronous].
 
 Los *Streams* en Dart forman una interfaz única para cualquier cosa que necesite
 enviar repetidamente una serie de datos de forma asíncrona, ya sean eventos HTML
-(escuchar clicks del usuario), o eventos de entrada/salida en una aplicación
+(como escuchar clicks del usuario), o eventos de entrada/salida en una aplicación
 de servidor.
 
 Operaciones sobre *Streams*:
@@ -32,7 +32,7 @@ Operaciones sobre *Streams*:
 ## Consumiendo un `Stream`
 
 En lugar de introducir datos al Stream a través de un `StreamController`,
-(que podría ser algo largo de contar) vamos a utilizar el constructor
+que podría ser algo largo de contar, vamos a utilizar el constructor
 `Stream.fromIterable()`, el cual nos permite construir un `Stream` a partir de
 una lista de objetos, por ejemplo.
 
@@ -50,7 +50,7 @@ stream.listen((value) {
 ```
 
 `Stream` también tiene otros métodos: `first`, `last`, `length` y `isEmpty`. Todos
-ellos devuelven un `Future`, como los que estudiamos en [Futures en Dart], el cual
+ellos devuelven un `Future`, como los que estudiamos en [Futures con Dart], el cual
 se completará con el valor apropiado dentro del `Stream`:
 
 ```
@@ -141,6 +141,8 @@ los valores del `Stream` original, y un `StreamSink` al cual podremos añadir
 el valor transformado. La salida de `transform()` es un nuevo `Stream` cuyos
 valores han sido transformados por el `StreamTransformer`.
 
+Todo esto se ve mucho más claro con un poco de código:
+
 ```
 var transformer = new StreamTransformer.fromHandlers(handleData: (value, sink) {
   // create two new values from the original value
@@ -202,7 +204,7 @@ subscription.onError((err) => print("error: $err"));
 subscription.onDone(() => print("done"));
 ```
 
-Pasandolos como parámetros:
+Pásandolos como parámetros:
 
 ```
 var subscription = stream.listen(
@@ -228,11 +230,11 @@ subscription.onData((value) {
 ## Referencias:
 
 - [Embrace the asynchronous]
-- [Futures en Dart], en este propio blog
+- [Futures con Dart], en este propio blog
 - [API Streams]
 
 [Embrace the asynchronous]: https://www.youtube.com/watch?v=oeKkwZhKgP0
 [Rod Vagg]: http://r.va.gg
-[Futures en Dart]: /blog/2015/01/29/operaciones-asincronas-en-dart-con-futures/
+[Futures con Dart]: /blog/2015/01/29/operaciones-asincronas-en-dart-con-futures/
 [API Streams]: http://api.dartlang.org/dart_async/Stream.html
 
