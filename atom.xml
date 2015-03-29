@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2015-03-27T00:55:25+01:00</updated>
+  <updated>2015-03-29T01:22:58+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,308 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Dart Streams]]></title>
+    <link href="http://rchavarria.github.io/blog/2015/03/28/dart-streams/"/>
+    <updated>2015-03-28T01:39:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2015/03/28/dart-streams</id>
+    <content type="html"><![CDATA[<p>Siendo Dart un lenguaje muy influenciado por JavaScript, no podría dejar de lado
+conceptos como la <strong>programación asíncrona</strong>. Existen varios métodos para manejar
+la asincronía, y uno de ellos son los <strong>Streams</strong>. Si estás muy interesado en
+el método te recomiendo una charla de <a href="http://r.va.gg">Rod Vagg</a>, <a href="https://www.youtube.com/watch?v=oeKkwZhKgP0">Embrace the asynchronous</a>.</p>
+
+<p>Los <em>Streams</em> en Dart forman una interfaz única para cualquier cosa que necesite
+enviar repetidamente una serie de datos de forma asíncrona, ya sean eventos HTML
+(como escuchar clicks del usuario), o eventos de entrada/salida en una aplicación
+de servidor.</p>
+
+<p>Operaciones sobre <em>Streams</em>:</p>
+
+<ul>
+<li>Consumir: los datos son sacados de un <code>Stream</code> a uno o varios <code>StreamSubscriber</code></li>
+<li>Producir: los datos son introducidos en un <code>Stream</code> desde un <code>StreamController</code></li>
+</ul>
+
+
+<!-- more -->
+
+
+<h2>Consumiendo un <code>Stream</code></h2>
+
+<p>En lugar de introducir datos al Stream a través de un <code>StreamController</code>,
+que podría ser algo largo de contar, vamos a utilizar el constructor
+<code>Stream.fromIterable()</code>, el cual nos permite construir un <code>Stream</code> a partir de
+una lista de objetos, por ejemplo.</p>
+
+<p>Típicamente, se usa el método <code>listen()</code> para subscribirse a un <code>Stream</code>. Este método
+es llamado cada vez que se recibe un dato:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>var data = [1, 2, 3, 4, 5];
+</span><span class='line'>var stream = new Stream.fromIterable(data);
+</span><span class='line'>
+</span><span class='line'>// subscribe to the streams events
+</span><span class='line'>stream.listen((value) {
+</span><span class='line'>  print("Received: $value");
+</span><span class='line'>});</span></code></pre></td></tr></table></div></figure>
+
+
+<p><code>Stream</code> también tiene otros métodos: <code>first</code>, <code>last</code>, <code>length</code> y <code>isEmpty</code>. Todos
+ellos devuelven un <code>Future</code>, como los que estudiamos en <a href="http://rchavarria.github.io/blog/2015/01/29/operaciones-asincronas-en-dart-con-futures/">Futures con Dart</a>, el cual
+se completará con el valor apropiado dentro del <code>Stream</code>:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>streamProperties() {
+</span><span class='line'>  var stream;
+</span><span class='line'>
+</span><span class='line'>  stream = new Stream.fromIterable([1, 2, 3, 4, 5]);
+</span><span class='line'>  stream.first.then((value) =&gt; print("stream.first: $value"));  // 1
+</span><span class='line'>
+</span><span class='line'>  stream = new Stream.fromIterable([1, 2, 3, 4, 5]);
+</span><span class='line'>  stream.last.then((value) =&gt; print("stream.last: $value"));  // 5  
+</span><span class='line'>
+</span><span class='line'>  stream = new Stream.fromIterable([1, 2, 3, 4, 5]);
+</span><span class='line'>  stream.isEmpty.then((value) =&gt; print("stream.isEmpty: $value")); // false
+</span><span class='line'>
+</span><span class='line'>  stream = new Stream.fromIterable([1, 2, 3, 4, 5]);
+</span><span class='line'>  stream.length.then((value) =&gt; print("stream.length: $value")); // 5
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>También se pueden tener varios listeners, pero para eso hay que convertir el <code>Stream</code>
+en un stream de broadcast con <code>asBroadcastStream()</code>. Podremos comprobar de qué tipo
+es un stream con la propiedad <code>isBroadcast</code>.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>var data = [1, 2, 3, 4, 5];
+</span><span class='line'>var stream = new Stream.fromIterable(data);
+</span><span class='line'>var broadcastStream = stream.asBroadcastStream();
+</span><span class='line'>
+</span><span class='line'>broadcastStream.listen((value) =&gt; print("stream.listen: $value")); 
+</span><span class='line'>broadcastStream.first.then((value) =&gt; print("stream.first: $value"));
+</span><span class='line'>//...</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Subconjuntos de datos de un <code>Stream</code></h2>
+
+<p>Los <code>Stream</code>s tienen algunos métodos de utilidad que permiten seleccionar un subconjunto
+de los datos que vendrán en él. Cada uno de estos métodos devuelve un
+<code>Stream</code> al que podemos registrar un listener. Para una lista completa de estos métodos
+se puede consultar la documentación oficial: <a href="http://api.dartlang.org/dart_async/Stream.html">API Streams</a>.</p>
+
+<p><code>where</code>: selecciona aquellos datos que cumplen una condición:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>broadcastStream
+</span><span class='line'>    .where((value) =&gt; value % 2 == 0) 
+</span><span class='line'>    .listen((value) =&gt; print("where: $value"));</span></code></pre></td></tr></table></div></figure>
+
+
+<p><code>take</code>: toma solo los <code>n</code> primeros elementos:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>broadcastStream
+</span><span class='line'>    .take(3) 
+</span><span class='line'>    .listen((value) =&gt; print("take: $value"));</span></code></pre></td></tr></table></div></figure>
+
+
+<p><code>skip</code>: se salta los <code>n</code> primeros elementos:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>broadcastStream
+</span><span class='line'>    .skip(3)
+</span><span class='line'>    .listen((value) =&gt; print("skip: $value"));</span></code></pre></td></tr></table></div></figure>
+
+
+<p><code>takeWhile</code>: va tomando datos mientras la condición sea verdadera:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>broadcastStream
+</span><span class='line'>    .takeWhile((value) =&gt; value &lt; 3) 
+</span><span class='line'>    .listen((value) =&gt; print("takeWhile: $value"));</span></code></pre></td></tr></table></div></figure>
+
+
+<p><code>skipWhile</code>: va saltando datos mientras la condición sea verdadera:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>broadcastStream
+</span><span class='line'>    .skipWhile((value) =&gt; value &lt; 3)
+</span><span class='line'>    .listen((value) =&gt; print("skipWhile: $value"));</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Transformando streams</h2>
+
+<p>El método <code>Stream.transform()</code> admite un parámetro de tipo <code>StreamTransformer</code>.
+Es posible crear uno con el método <code>fromHandlers()</code>, el cual admite un
+método como parámetro. Este método se llamará con 2 parámetros: cada uno de
+los valores del <code>Stream</code> original, y un <code>StreamSink</code> al cual podremos añadir
+el valor transformado. La salida de <code>transform()</code> es un nuevo <code>Stream</code> cuyos
+valores han sido transformados por el <code>StreamTransformer</code>.</p>
+
+<p>Todo esto se ve mucho más claro con un poco de código:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>var transformer = new StreamTransformer.fromHandlers(handleData: (value, sink) {
+</span><span class='line'>  // create two new values from the original value
+</span><span class='line'>  sink.add("Message: $value");
+</span><span class='line'>  sink.add("Body: $value");
+</span><span class='line'>});
+</span><span class='line'>    
+</span><span class='line'>// transform the stream and listen to its output
+</span><span class='line'>stream.transform(transformer).listen((value) =&gt; print("listen: $value"));</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Un ejemplo de la vida real podría ser la lectura de un fichero o de una
+petición HTTP, transformando los datos recibidos a <code>String</code> con el decodificador
+<code>UTF8.decoder()</code> del paquete <code>dart:convert</code>.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>File file = new File("some_file.txt");
+</span><span class='line'>file.openRead()
+</span><span class='line'>    .transform(UTF8.decoder) // use a UTF8.decoder
+</span><span class='line'>    .listen((String data) =&gt; print(data));</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Validando los valores de un <code>Stream</code></h2>
+
+<p>Otros métodos útiles podrían ser <code>any()</code>, <code>every()</code> y <code>contains()</code>, los cuales
+devuelven todos <code>Future&lt;boolean&gt;</code>, es decir, un <code>Future</code> que se completa con un
+valor de <code>true</code> o <code>false</code>.</p>
+
+<p>Estos métodos servirían para realizar ciertas comprobaciones sobre los datos
+recibidos por el <code>Stream</code>. Siguiendo con el ejemplo que crea un <code>Stream</code> a partir
+de un array con los valores del 1 al 5:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>broadcastStream
+</span><span class='line'>    .any((value) =&gt; value &lt; 5)
+</span><span class='line'>    .then((result) =&gt; print("Any less than 5?: $result")); // true
+</span><span class='line'>  
+</span><span class='line'>broadcastStream
+</span><span class='line'>    .every((value) =&gt; value &lt; 5)
+</span><span class='line'>    .then((result) =&gt; print("All less than 5?: $result")); // false
+</span><span class='line'>  
+</span><span class='line'>broadcastStream
+</span><span class='line'>    .contains(4)
+</span><span class='line'>    .then((result) =&gt; print("Contains 4?: $result")); // true</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Gestión de errores con <code>StreamSubscription</code></h2>
+
+<p>Existen dos alternativas para la gestión de errores en los streams. Usando el
+objeto <code>StreamSubscription</code> que retorna <code>listen()</code> o pasando los manejadores de
+eventos al propio método <code>listen()</code>.</p>
+
+<p>Usando <code>StreamSubscription</code> devuelto por <code>listen()</code>:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>var subscription = stream.listen(null);
+</span><span class='line'>subscription.onData((value) =&gt; print("listen: $value"));
+</span><span class='line'>subscription.onError((err) =&gt; print("error: $err"));
+</span><span class='line'>subscription.onDone(() =&gt; print("done"));</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Pásandolos como parámetros:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>var subscription = stream.listen(
+</span><span class='line'>    (value) =&gt; print("listen: $value"),
+</span><span class='line'>    onError: (err) =&gt; print("error: $err"),
+</span><span class='line'>    onDone: () =&gt; print("done")
+</span><span class='line'>    );</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Eliminando la suscripción a un <code>Stream</code></h2>
+
+<p>Con el método anterior de obtener un objeto <code>StreamSubscription</code>, podemos
+utilizar dicha referencia para cancelar la suscripción con el método <code>cancel()</code>.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>var subscription = stream.listen(null);
+</span><span class='line'>subscription.onData((value) {
+</span><span class='line'>  print("listen: $value");
+</span><span class='line'>  if (value == 2) subscription.cancel();
+</span><span class='line'>});</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Referencias:</h2>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=oeKkwZhKgP0">Embrace the asynchronous</a></li>
+<li><a href="http://rchavarria.github.io/blog/2015/01/29/operaciones-asincronas-en-dart-con-futures/">Futures con Dart</a>, en este propio blog</li>
+<li><a href="http://api.dartlang.org/dart_async/Stream.html">API Streams</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Stop stealing dreams]]></title>
@@ -3078,118 +3380,6 @@ o lo dejamos para más adelante.</p>
 <li><a href="https://es.wikipedia.org/wiki/Integraci%C3%B3n_continua">Integración contínua</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Static_code_analysis">Análisis estático de código</a>
 (inglés)</li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Planifica tu éxito: de aprendiz a empresario]]></title>
-    <link href="http://rchavarria.github.io/blog/2014/02/18/planifica-tu-exito/"/>
-    <updated>2014-02-18T22:00:00+01:00</updated>
-    <id>http://rchavarria.github.io/blog/2014/02/18/planifica-tu-exito</id>
-    <content type="html"><![CDATA[<h5>de Roberto Canales Mora</h5>
-
-<p><img class="right" src="http://ecx.images-amazon.com/images/I/810ghYlRMFL._SL1500_.jpg" width="229" height="330" title="Planifica tu exito: de aprendiz a empresario" ></p>
-
-<h2>Por qué lo he leído</h2>
-
-<p>Tenía pensado leer <a href="http://www.amazon.es/Planifica-tu-%C3%A9xito-aprendiz-empresario/dp/841545757X/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1392882947&amp;sr=1-1">Planifica tu éxito</a> porque estoy muy interesado en mejorar como profesional
-y en avanzar en mi carrera como tal. Ya simplemente el título te da una idea de progreso y tenía
-curiosidad por conocer un poco más allá de mi perfil profesional actual. Si a esto le añadimos
-que el autor pertenece a una empresa llena de profesionales a los que admiro y que
-además el libro es un regalo, pues ya no hay excusa.</p>
-
-<!-- more -->
-
-
-<h2>Qué esperaba</h2>
-
-<p>Me esperaba una descripción de una carrera profesional plena, desde <em>currito</em> hasta
-magnate de empresas multinacionales. Una descripción de todas las fases por las que
-pasaría una persona a lo largo de toda su trayectoria profesional, y por supuesto,
-cómo pasar de una fase a la siguiente, aunque ya se que no hay ninguna
-receta mágica para ello.</p>
-
-<h2>Qué encontre</h2>
-
-<p>Por supuesto encontré más o menos lo que esperaba, pero mucho más práctico y
-adaptado al mundo real.</p>
-
-<p>Encontré una descripción de varias fases de la carrera profesional que se puede
-encontrar cualquier desarrollador software (o cualquier trabajador del conocimiento),
-y una serie de pautas para brillar en cada una de esas fases. Está claro que un
-directivo no tiene que tener las mismas características que un trabajador o un mando
-intermedio, pero eso no quiere decir que no puedan ser la misma persona en distintos
-momentos de su trayectoria laboral.</p>
-
-<p>En el desarrollo del software existen básicamente dos caminos: el técnico y el de gestión.
-Ambos perfectamente válidos y no necesariamente excluyentes, pero se necesitan
-distintas aptitudes para cada uno de los caminos.</p>
-
-<h2>Conclusiones</h2>
-
-<p>Me parece un libro fantástico, muy recomendable, especialmente para todas aquellas
-personas que desean avanzar en su carrera profesional (por el camino técnico o de
-gestión). No va a tener una receta mágica, pero seguro que va a encontrar consejos
-muy útiles.</p>
-
-<p>En ocasiones me parece muy autobiográfico (al menos muy personal) y otras veces me
-recuerda a los consejos que me daba mi padre (y tienen pinta que yo le daré a mi hijo).</p>
-
-<p>Me parece un libro muy práctico, con los pies en la tierra y que no divaga con
-filosofías o con idealismos. Eso hace que haya ciertas partes con las que no estoy
-de acuerdo, porque echa por tierra ciertas <em>creencias</em> personales, pero creo que eso
-es bueno, y comprendo totalmente el punto de vista del autor.</p>
-
-<h2>Qué he aprendido</h2>
-
-<p>Lo esencial, la idea principal que me ha transmitido el libro es que, para triunfar,
-para ser un profesional reconocido, al menos hay que:</p>
-
-<ul>
-<li>trabajar duro, muy duro, constantemente</li>
-<li>apoyarse en otros profesionales como tú, de dentro o fuera de tu empresa, de
-dentro o fuera de tu ciudad, de dentro o fuera de tu pais, pero apoyarse en
-otros profesinales</li>
-</ul>
-
-
-<h2>Frases que me gustaría recordar</h2>
-
-<p>Hay muchas frases y conceptos que me gustaría recordar de este libro, pero las
-más importantes serían:</p>
-
-<blockquote><p>Para conseguir X hay que ser Y (pero serlo un poco más que los demás)</p>
-
-<p>Hay dos caminos hacia el éxito: técnico o gestión</p>
-
-<p>Lee, lee, lee y aprende nuevas habilidades, tanto técnicas como no técnicas</p>
-
-<p>Atesora conocimiento, no dinero. Gasta poco y podrás cambiar de aires con facilidad</p>
-
-<p>Permítete cambiar de rumbo, de objetivos y de opinión</p>
-
-<p>En trabajos intelectuales, no valen métodos militares</p>
-
-<p>La gente no dejará de sorprenderte por las cosas estúpidas que hace</p>
-
-<p>Déjate encontrar: blog, comentar, publicar en medios de terceros, eventos locales
-y/o internacionales</p></blockquote>
-
-<p>El resto las he reunido en un gist:
-<a href="https://github.com/rchavarria/book-notes/blob/master/published/planifica-exito-by-roberto-canales.md">notas sobre Planifica tu éxito</a></p>
-
-<h2>Recursos relacionados</h2>
-
-<ul>
-<li>Book crossing, conoce dónde ha estado este libro: <a href="http://bookcrossing.com">BookCrossing</a>,
-introduce el BCID: 659-11704854</li>
-<li>Puntero propuesto por el autor para comentar acerca del libro:
-<a href="www.adictosaltrabajo.com/book_section.inc.php?book=2">Adictos al trabajo</a></li>
-<li><a href="http://www.profiteditorial.com/libros-para-vivir-mejor/habilidades-personales/c%C3%B3mo-iniciar-una-conversaci%C3%B3n-y-hacer-amigos">Cómo iniciar una conversación y hacer amigos</a></li>
-<li>Vídeo explicativo acerca de
-<a href="http://www.youtube.com/watch?v=vCbfJGCda7E">«eficacia vs. eficiencia»</a></li>
 </ul>
 
 ]]></content>
