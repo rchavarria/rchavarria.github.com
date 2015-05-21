@@ -28,6 +28,8 @@ Así que aquí está mi Lista de Lectura:
 
 - [Notes to a software team leader](https://leanpub.com/teamleader), de Roy Osherove
 - [Slow burn](http://www.amazon.com/Slow-Burn-Faster-Exercising-Slower/dp/0062736744), de Stu Mittleman, recomendado por [Rick Rubin en una entrevisa de Tim Ferris](http://fourhourworkweek.com/2015/05/15/rick-rubin)
+- [The grumpy programmer's PHPUnit cookbook](https://leanpub.com/grumpy-phpunit), de Chris Hartjes, amigo de J.B.Rainsberger
+- [Software craftsmanship](https://leanpub.com/socra), de Sandro Mancuso, recomendado por [Carlos Ble](http://twitter.com/carlosble)
 - [Software craftsmanship](https://leanpub.com/socra), de Sandro Mancuso, recomendado por [Carlos Ble](http://twitter.com/carlosble)
 - [Tao Te Ching](http://www.amazon.com/Tao-Te-Ching-Laozi/dp/0060812451), de Stephen Mitchell, recomendado por [Rick Rubin en una entrevisa de Tim Ferris](http://fourhourworkweek.com/2015/05/15/rick-rubin) 
 - [The Passionate Programmer](http://pragprog.com/book/cfcar2/the-passionate-programmer), de Chad Fowler
@@ -69,7 +71,7 @@ Así que aquí está mi Lista de Lectura:
 ## He leído
 
 - [Extreme programming explained](/blog/2015/01/02/extreme-programming-explained), de Kent Beck ~ *Enero 2015*
-- [Stop stealing dreams](http://sethgodin.hubpages.com/hub/stop-stealing-dreams), de Seth Godin ~ *Octubre 2014*
+- [Stop stealing dreams](/blog/2015/03/13/stop-stealing-dreams), de Seth Godin ~ *Octubre 2014*
 - [How to start a conversation and make friends](/blog/2014/12/05/how-to-start-conversations-and-make-friends), de Don Gabor ~ *Julio 2014*
 - [Snow crash](http://www.amazon.com/Snow-Crash-Bantam-Spectra-Book/dp/0553380958), de Neal Stephenson ~ *Mayo 2014*
 - [El cuadrante del flujo del dinero](https://github.com/rchavarria/book-notes/blob/master/published/cuadrante-flujo-dinero-by-robert-kiyosaki.md),
