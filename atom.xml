@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2015-03-29T01:22:58+01:00</updated>
+  <updated>2015-05-29T01:15:28+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,93 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Learning JavaScript design patterns]]></title>
+    <link href="http://rchavarria.github.io/blog/2015/05/29/learning-javascript-design-patterns/"/>
+    <updated>2015-05-29T01:04:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2015/05/29/learning-javascript-design-patterns</id>
+    <content type="html"><![CDATA[<h5>de Addy Osmany</h5>
+
+<h2>Por qué lo he leído</h2>
+
+<p><img class="left" src="http://www.addyosmani.com/resources/essentialjsdesignpatterns/cover/cover.jpg" width="206" height="271" title="JavaScript desing patterns" ></p>
+
+<p>Ya llevo un tiempo programando con JavaScript de forma profesional, y empiezo
+a sentir que necesito ir un paso más allá con el lenguaje. No creo que conozca
+todo lo que ofrece el lenguaje, todo lo contrario, a veces siento que me queda
+mucho por aprender y que necesito profundizar en muchos y muchos temas. Con
+este libro pretendía trasladar mis conocimientos sobre patrones de diseño con
+Java a JavaScript.</p>
+
+<!-- more -->
+
+
+<h2>Qué esperaba</h2>
+
+<p>Esperaba grandes cosas de este libro. Ya tenía referencias anteriores del autor,
+creo que es un profesional como la copa de un pino. Así que un libro escrito
+por él, pues tenía buena pinta.</p>
+
+<p>Supongo que esperar encontrar una estructura de libro muy parecido a otros:
+clasificaciones, descripciones, catalogaciones,&#8230;</p>
+
+<h2>Qué encontré</h2>
+
+<p>Encontré un libro con mucho código, cosa que no tiene que ser ni bueno, ni malo.
+En el caso de este libro, es una ayuda muy buena. Las explicaciones de Addy son
+clarísimas y hay multitud de ejemplos y casos reales.</p>
+
+<h2>Conclusiones</h2>
+
+<p>Aunque es un libro que no miente, trata sobre patrones de diseño, el libro me
+ha defraudado un poco. Esperaba más del autor. Quizá no he sabido aprovechar
+el contenido del libro, pero me ha parecido superficial en algunos capítulos,
+y en otros ha entrado a describir con mucho detalle librerías como jQuery o
+plugins para él.</p>
+
+<p>En realidad, el libro que andaba buscando era <a href="http://www.amazon.com/JavaScript-Patterns-Stoyan-Stefanov/dp/0596806752">JavaScript patterns</a>, de
+Stoyan Stefanov, pero me daba más confianza Addy porque era un autor que ya
+conocía. Toca ponerle remedio y ya me he puesto con el libro de Stoyan.</p>
+
+<p>Eso sí, tengo que reconocer que es el primer lugar donde he encontrado una buena
+descripción de lo que son cada una de las arquitecturas MVx (MVC, MVP, MVVM,&#8230;)</p>
+
+<h2>Qué he aprendido</h2>
+
+<ul>
+<li>Se pueden añadir propiedades a objetos a través del método
+<code>Object.defineProperties()</code></li>
+<li>Los métodos de un objeto, no se deben declarar en la función constructor, sino
+modificando el prototipo de la misma</li>
+<li>Se debe intentar conseguir un bajo acoplamiento, algunos patrones (Observer,
+Mediator,&#8230;) ayudan a ello</li>
+<li>Mixins</li>
+<li>Patrón Flyweight, consiste en agrupar o manejar conjuntamente funcionalidades
+que pueden compartir un subconjunto de sus datos</li>
+<li><p>Diferencias entre los distintos MVx</p>
+
+<ul>
+<li>En MVC, las Vistas tienen acceso directo al Modelo</li>
+<li>En MVP, los Presentadores escuchan eventos de la Vista y del Modelo y median en la acciones entre ellos</li>
+<li>MVVM nos permite crear partes específicas de las Vistas de un Modelo en concreto</li>
+</ul>
+</li>
+<li><p>Expresiones de Función Inmediatamente Invocadas (IIFE - Immediately-Invoked Function Expressions)</p></li>
+</ul>
+
+
+<h2>Recursos relacionados</h2>
+
+<ul>
+<li><a href="http://www.addyosmani.com/resources/essentialjsdesignpatterns/book">Learning JavaScript design patterns</a>, by Addy Osmani</li>
+<li><a href="http://www.2ality.com/2014/09/es6-modules-final.html">Sintaxis definitiva de módulos</a></li>
+<li><a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/learning-javascript-design-patterns.markdown">Notas tomadas</a></li>
+<li><a href="http://www.amazon.com/JavaScript-Patterns-Stoyan-Stefanov/dp/0596806752">JavaScript patterns</a>, de Stoyan Stefanov</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Dart Streams]]></title>
@@ -3278,110 +3365,6 @@ Angelina propone, me voy a quedar con dos de ellos que no me había planteado ha
 pregúntate por qué obsesivamente y experimenta alocadamente.</p>
 
 <p>Nos recomienda un libro, <em>The secrets of a JavaScript ninja</em>, de John Resig.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Mejora contínua y análisis estático de código]]></title>
-    <link href="http://rchavarria.github.io/blog/2014/05/05/mejora-continua-y-analisis-estatico-de-codigo/"/>
-    <updated>2014-05-05T20:00:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2014/05/05/mejora-continua-y-analisis-estatico-de-codigo</id>
-    <content type="html"><![CDATA[<p><img class="left" src="http://rchavarria.github.io/images/2014/phpcs-small.png" width="350" height="140" title="Evolución del análisis estático de código" ></p>
-
-<p>En una de las últimas retrospectivas de mi equipo de desarrollo, estuvimos
-hablando sobre la mejora contínua, y qué podríamos hacer sobre ella. Afortunadamente
-usamos <em>Jenkins</em> como servidor de integración contínua y hace ya tiempo configuré
-un proyecto en dicha herramienta para realizar análisis estático de código frecuentemente.</p>
-
-<p>Pero hasta ahora no habíamos tomado ninguna decisión sobre qué hacer con ella. Y
-en esta retro surgió la oportunidad.</p>
-
-<!-- more -->
-
-
-<h2>La herramienta</h2>
-
-<p>Como herramienta de análisis estático de código usamos
-<a href="https://github.com/squizlabs/PHP_CodeSniffer">PHP_CodeSniffer</a>. La razón
-principal es que es una herramienta adecuada al lenguaje que queremos analizar, y
-existe un proyecto que integra esta herramienta entre otras con Jenkins
-(<a href="http://phpqatools.org">PHP QA Tools</a>).</p>
-
-<p>Una vez instalada y configurada, activamos todas las reglas de estilo disponibles
-en la herramienta. Estas reglas incluyen comprobaciones para nombrado de funciones,
-nombrado de ficheros, uso de constantes en PHP como <code>true</code> o <code>false</code>, o ciertas
-reglas de espaciado: después del nombre de función, alineación del operador de
-asignación. Multitud de ellas.</p>
-
-<blockquote><p>Si no puedes medirlo, no puedes mejorarlo</p></blockquote>
-
-<h2>Violaciones del estándar de código</h2>
-
-<p><img class="center" src="http://rchavarria.github.io/images/2014/phpcs-large.png" title="Descenso del número de errores" ></p>
-
-<p>En el momento de la conversación sobre la mejora contínua nos encontrábamos en
-el máximo que se aprecia en el gráfico, unas 8000 violaciones de reglas de
-estilo.</p>
-
-<p>Y nos pusimos manos a la obra. Después de un pequeño análisis por nuestra parte,
-y unos pocos diálogos (la palabra discusiones tiene un pequeño significado de
-lucha que no encaja en esta situación), conseguimos bajar ese número a menos de
-30. Por lo tanto, está claro que hemos conseguido alguna <strong>mejora</strong>.</p>
-
-<h2>Qué mejoras obtuvimos</h2>
-
-<p>En el pequeños análisis realizado por nosotros, descubrimos que algunas reglas de
-estilo que teníamos activadas resultaban contradictorias. Mientras que una
-obligaba a abrir llaves en la misma línea que la definición de la función:</p>
-
-<pre><code>public function doSomething() {
-</code></pre>
-
-<p>existía otra regla que obligaba a abrir llaves en una línea nueva:</p>
-
-<pre><code>public function doSomething()
-{
-</code></pre>
-
-<p>Por lo tanto, una de las dos había que desactivarla, ¿pero cuál?. He aquí la
-verdadera mejora. La mejora no es utilizar una regla u otra, sino alcanzar un
-consenso dentro del equipo y decidir qué estilo queremos seguir a la hora de
-escribir código.</p>
-
-<p>Algunas otras reglas nos permitieron detectar qué clases necesitaban ser
-refactorizadas. Por ejemplo, si un método tiene una <em>complejidad ciclomática</em>
-elevada o si un método está escrito con demasiados niveles de anidamiento.</p>
-
-<p>Otras reglas simplemente nos enfrentaron a la toma de ciertas decisiones:</p>
-
-<ul>
-<li>Cómo queremos organizar nuestros ficheros</li>
-<li>Cómo queremos dar el nombre a nuestros métodos</li>
-<li>Cómo queremos indentar nuestro código</li>
-</ul>
-
-
-<h2>Conclusión</h2>
-
-<p>No me importa volver a repetirlo, la verdadera mejora no surge de seguir una
-regla u otra a la hora de escribir código. La verdadera mejora surge de las
-conversaciones, diálogos y <em>discusiones</em> entre los miembros del equipo.</p>
-
-<p>¿Y dónde está la parte de <em>contínua</em>? Se encuentra en el servidor de integración
-contínua. Nuestro código es analizado contínuamente, y en el caso de que haya
-un aumento significativo de violaciones de reglas de estilo en nuestro código,
-seremos avisados y podremos tomar la decisión sobre si retomamos el control
-o lo dejamos para más adelante.</p>
-
-<h2>Referencias</h2>
-
-<ul>
-<li><a href="https://es.wikipedia.org/wiki/Proceso_de_mejora_continua">Mejora contínua</a></li>
-<li><a href="https://es.wikipedia.org/wiki/Integraci%C3%B3n_continua">Integración contínua</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Static_code_analysis">Análisis estático de código</a>
-(inglés)</li>
-</ul>
-
 ]]></content>
   </entry>
   

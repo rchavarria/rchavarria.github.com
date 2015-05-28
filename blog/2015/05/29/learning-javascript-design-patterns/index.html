@@ -5,13 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Screencast de programacion: el Juego del disparejo - R. Chavarria's Blog</title>
+  <title>Learning JavaScript design patterns - R. Chavarria's Blog</title>
   <meta name="author" content="Rub&eacute;n Chavarr&iacute;a">
 
   
-  <meta name="description" content="En este post te presento un screencast que he creado mostrándote cómo resuelvo
-un problema de programación. Todo empezó viendo los
-Screencasts de &hellip;">
+  <meta name="description" content="de Addy Osmany Por qué lo he leído Ya llevo un tiempo programando con JavaScript de forma profesional, y empiezo
+a sentir que necesito ir un paso más &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +19,7 @@ Screencasts de &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://rchavarria.github.io/blog/2014/10/23/screencast-programacion-juego-disparejo/">
+  <link rel="canonical" href="http://rchavarria.github.io/blog/2015/05/29/learning-javascript-design-patterns/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -84,7 +83,7 @@ Screencasts de &hellip;">
   
   <header>
     
-      <h1 class="entry-title">Screencast de programacion: el Juego del disparejo</h1>
+      <h1 class="entry-title">Learning JavaScript design patterns</h1>
     
     
       <p class="meta">
@@ -100,45 +99,92 @@ Screencasts de &hellip;">
   
 
 
-<time datetime="2014-10-23T00:12:00+02:00" pubdate data-updated="true">Oct 23<span>rd</span>, 2014</time>
+<time datetime="2015-05-29T01:04:00+02:00" pubdate data-updated="true">May 29<span>th</span>, 2015</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>En este post te presento un screencast que he creado mostrándote cómo resuelvo
-un problema de programación. Todo empezó viendo los
-<a href="http://www.carlosble.com/screencasts/es/">Screencasts de programación de Carlos Blé</a>.
-Deberías echarles un vistazo, merecen la pena, en serio.</p>
+<div class="entry-content"><h5>de Addy Osmany</h5>
 
-<p>Me gustaron tanto que me pregunté si podría crear yo algunos. Por aquel tiempo
-estaba trasteando con un problema de solveet.com, el <a href="http://www.solveet.com/exercises/Juego-del-disparejo/306">Juego del disparejo</a>.
-Así que tenía todo: el gusanillo de crear algo, y un problema sobre el que
-trabajar.</p>
+<h2>Por qué lo he leído</h2>
+
+<p><img class="left" src="http://www.addyosmani.com/resources/essentialjsdesignpatterns/cover/cover.jpg" width="206" height="271" title="JavaScript desing patterns" ></p>
+
+<p>Ya llevo un tiempo programando con JavaScript de forma profesional, y empiezo
+a sentir que necesito ir un paso más allá con el lenguaje. No creo que conozca
+todo lo que ofrece el lenguaje, todo lo contrario, a veces siento que me queda
+mucho por aprender y que necesito profundizar en muchos y muchos temas. Con
+este libro pretendía trasladar mis conocimientos sobre patrones de diseño con
+Java a JavaScript.</p>
 
 <!-- more -->
 
 
+<h2>Qué esperaba</h2>
+
+<p>Esperaba grandes cosas de este libro. Ya tenía referencias anteriores del autor,
+creo que es un profesional como la copa de un pino. Así que un libro escrito
+por él, pues tenía buena pinta.</p>
+
+<p>Supongo que esperar encontrar una estructura de libro muy parecido a otros:
+clasificaciones, descripciones, catalogaciones,&#8230;</p>
+
+<h2>Qué encontré</h2>
+
+<p>Encontré un libro con mucho código, cosa que no tiene que ser ni bueno, ni malo.
+En el caso de este libro, es una ayuda muy buena. Las explicaciones de Addy son
+clarísimas y hay multitud de ejemplos y casos reales.</p>
+
+<h2>Conclusiones</h2>
+
+<p>Aunque es un libro que no miente, trata sobre patrones de diseño, el libro me
+ha defraudado un poco. Esperaba más del autor. Quizá no he sabido aprovechar
+el contenido del libro, pero me ha parecido superficial en algunos capítulos,
+y en otros ha entrado a describir con mucho detalle librerías como jQuery o
+plugins para él.</p>
+
+<p>En realidad, el libro que andaba buscando era <a href="http://www.amazon.com/JavaScript-Patterns-Stoyan-Stefanov/dp/0596806752">JavaScript patterns</a>, de
+Stoyan Stefanov, pero me daba más confianza Addy porque era un autor que ya
+conocía. Toca ponerle remedio y ya me he puesto con el libro de Stoyan.</p>
+
+<p>Eso sí, tengo que reconocer que es el primer lugar donde he encontrado una buena
+descripción de lo que son cada una de las arquitecturas MVx (MVC, MVP, MVVM,&#8230;)</p>
+
+<h2>Qué he aprendido</h2>
+
+<ul>
+<li>Se pueden añadir propiedades a objetos a través del método
+<code>Object.defineProperties()</code></li>
+<li>Los métodos de un objeto, no se deben declarar en la función constructor, sino
+modificando el prototipo de la misma</li>
+<li>Se debe intentar conseguir un bajo acoplamiento, algunos patrones (Observer,
+Mediator,&#8230;) ayudan a ello</li>
+<li>Mixins</li>
+<li>Patrón Flyweight, consiste en agrupar o manejar conjuntamente funcionalidades
+que pueden compartir un subconjunto de sus datos</li>
+<li><p>Diferencias entre los distintos MVx</p>
+
+<ul>
+<li>En MVC, las Vistas tienen acceso directo al Modelo</li>
+<li>En MVP, los Presentadores escuchan eventos de la Vista y del Modelo y median en la acciones entre ellos</li>
+<li>MVVM nos permite crear partes específicas de las Vistas de un Modelo en concreto</li>
+</ul>
+</li>
+<li><p>Expresiones de Función Inmediatamente Invocadas (IIFE - Immediately-Invoked Function Expressions)</p></li>
+</ul>
 
 
-<iframe src="//player.vimeo.com/video/109688257" 
-        width="500"
-        height="281"
-        frameborder="0"
-        webkitallowfullscreen mozallowfullscreen allowfullscreen>
-</iframe>
+<h2>Recursos relacionados</h2>
 
+<ul>
+<li><a href="http://www.addyosmani.com/resources/essentialjsdesignpatterns/book">Learning JavaScript design patterns</a>, by Addy Osmani</li>
+<li><a href="http://www.2ality.com/2014/09/es6-modules-final.html">Sintaxis definitiva de módulos</a></li>
+<li><a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/learning-javascript-design-patterns.markdown">Notas tomadas</a></li>
+<li><a href="http://www.amazon.com/JavaScript-Patterns-Stoyan-Stefanov/dp/0596806752">JavaScript patterns</a>, de Stoyan Stefanov</li>
+</ul>
 
-<p>El problema lo resuelvo con el lenguaje de programación <a href="http://dartlang.org/">Dart</a>. No por
-nada en particular, si no porque lo estoy aprendiendo, y para ello me
-da por resolver problemas de programación (donde solveet.com entra en
-juego).</p>
-
-<p>El proceso que sigo es el ciclo TDD: red ➭ green ➭ refactor. Para evolucionar
-el código y las refactorizaciones, aplico técnicas aprendidas de <a href="http://www.carlosble.com">Carlos</a> y
-sus screencasts, así como las <a href="http://blog.8thlight.com/uncle-bob/2013/05/27/TheTransformationPriorityPremise.html">Transformation Priority Premise</a> del
-gran maestro <a href="https://en.wikipedia.org/wiki/Robert_Cecil_Martin">Uncle Bob</a>.</p>
 </div>
 
 
@@ -161,12 +207,12 @@ gran maestro <a href="https://en.wikipedia.org/wiki/Robert_Cecil_Martin">Uncle B
   
 
 
-<time datetime="2014-10-23T00:12:00+02:00" pubdate data-updated="true">Oct 23<span>rd</span>, 2014</time>
+<time datetime="2015-05-29T01:04:00+02:00" pubdate data-updated="true">May 29<span>th</span>, 2015</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/dart/'>dart</a>, <a class='category' href='/blog/categories/screencasts/'>screencasts</a>
+    <a class='category' href='/blog/categories/book-reviews/'>book reviews</a>, <a class='category' href='/blog/categories/personal/'>personal</a>
   
 </span>
 
@@ -175,7 +221,7 @@ gran maestro <a href="https://en.wikipedia.org/wiki/Robert_Cecil_Martin">Uncle B
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rchavarria.github.io/blog/2014/10/23/screencast-programacion-juego-disparejo/" data-via="rchavarriat" data-counturl="http://rchavarria.github.io/blog/2014/10/23/screencast-programacion-juego-disparejo/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rchavarria.github.io/blog/2015/05/29/learning-javascript-design-patterns/" data-via="rchavarriat" data-counturl="http://rchavarria.github.io/blog/2015/05/29/learning-javascript-design-patterns/" >Tweet</a>
   
   
   
@@ -184,10 +230,8 @@ gran maestro <a href="https://en.wikipedia.org/wiki/Robert_Cecil_Martin">Uncle B
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/10/17/jenkins-ci-inyectar-variable-de-entorno/" title="Previous Post: Jenkins CI: inyectar variable de entorno">&laquo; Jenkins CI: inyectar variable de entorno</a>
+        <a class="basic-alignment left" href="/blog/2015/03/28/dart-streams/" title="Previous Post: Dart Streams">&laquo; Dart Streams</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2014/11/02/mi-primer-katayuno/" title="Next Post: Mi primer katayuno">Mi primer katayuno &raquo;</a>
       
     </p>
   </footer>
@@ -277,8 +321,8 @@ gran maestro <a href="https://en.wikipedia.org/wiki/Robert_Cecil_Martin">Uncle B
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://rchavarria.github.io/blog/2014/10/23/screencast-programacion-juego-disparejo/';
-        var disqus_url = 'http://rchavarria.github.io/blog/2014/10/23/screencast-programacion-juego-disparejo/';
+        var disqus_identifier = 'http://rchavarria.github.io/blog/2015/05/29/learning-javascript-design-patterns/';
+        var disqus_url = 'http://rchavarria.github.io/blog/2015/05/29/learning-javascript-design-patterns/';
         var disqus_script = 'embed.js';
       
     (function () {

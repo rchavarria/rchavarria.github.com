@@ -4,7 +4,7 @@
   <title><![CDATA[Category: personal | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/personal/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2015-03-29T01:22:58+01:00</updated>
+  <updated>2015-05-29T01:15:28+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,93 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Learning JavaScript design patterns]]></title>
+    <link href="http://rchavarria.github.io/blog/2015/05/29/learning-javascript-design-patterns/"/>
+    <updated>2015-05-29T01:04:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2015/05/29/learning-javascript-design-patterns</id>
+    <content type="html"><![CDATA[<h5>de Addy Osmany</h5>
+
+<h2>Por qué lo he leído</h2>
+
+<p><img class="left" src="http://www.addyosmani.com/resources/essentialjsdesignpatterns/cover/cover.jpg" width="206" height="271" title="JavaScript desing patterns" ></p>
+
+<p>Ya llevo un tiempo programando con JavaScript de forma profesional, y empiezo
+a sentir que necesito ir un paso más allá con el lenguaje. No creo que conozca
+todo lo que ofrece el lenguaje, todo lo contrario, a veces siento que me queda
+mucho por aprender y que necesito profundizar en muchos y muchos temas. Con
+este libro pretendía trasladar mis conocimientos sobre patrones de diseño con
+Java a JavaScript.</p>
+
+<!-- more -->
+
+
+<h2>Qué esperaba</h2>
+
+<p>Esperaba grandes cosas de este libro. Ya tenía referencias anteriores del autor,
+creo que es un profesional como la copa de un pino. Así que un libro escrito
+por él, pues tenía buena pinta.</p>
+
+<p>Supongo que esperar encontrar una estructura de libro muy parecido a otros:
+clasificaciones, descripciones, catalogaciones,...</p>
+
+<h2>Qué encontré</h2>
+
+<p>Encontré un libro con mucho código, cosa que no tiene que ser ni bueno, ni malo.
+En el caso de este libro, es una ayuda muy buena. Las explicaciones de Addy son
+clarísimas y hay multitud de ejemplos y casos reales.</p>
+
+<h2>Conclusiones</h2>
+
+<p>Aunque es un libro que no miente, trata sobre patrones de diseño, el libro me
+ha defraudado un poco. Esperaba más del autor. Quizá no he sabido aprovechar
+el contenido del libro, pero me ha parecido superficial en algunos capítulos,
+y en otros ha entrado a describir con mucho detalle librerías como jQuery o
+plugins para él.</p>
+
+<p>En realidad, el libro que andaba buscando era <a href="http://www.amazon.com/JavaScript-Patterns-Stoyan-Stefanov/dp/0596806752">JavaScript patterns</a>, de
+Stoyan Stefanov, pero me daba más confianza Addy porque era un autor que ya
+conocía. Toca ponerle remedio y ya me he puesto con el libro de Stoyan.</p>
+
+<p>Eso sí, tengo que reconocer que es el primer lugar donde he encontrado una buena
+descripción de lo que son cada una de las arquitecturas MVx (MVC, MVP, MVVM,...)</p>
+
+<h2>Qué he aprendido</h2>
+
+<ul>
+<li>Se pueden añadir propiedades a objetos a través del método
+<code>Object.defineProperties()</code></li>
+<li>Los métodos de un objeto, no se deben declarar en la función constructor, sino
+modificando el prototipo de la misma</li>
+<li>Se debe intentar conseguir un bajo acoplamiento, algunos patrones (Observer,
+Mediator,...) ayudan a ello</li>
+<li>Mixins</li>
+<li>Patrón Flyweight, consiste en agrupar o manejar conjuntamente funcionalidades
+que pueden compartir un subconjunto de sus datos</li>
+<li><p>Diferencias entre los distintos MVx</p>
+
+<ul>
+<li>En MVC, las Vistas tienen acceso directo al Modelo</li>
+<li>En MVP, los Presentadores escuchan eventos de la Vista y del Modelo y median en la acciones entre ellos</li>
+<li>MVVM nos permite crear partes específicas de las Vistas de un Modelo en concreto</li>
+</ul>
+</li>
+<li><p>Expresiones de Función Inmediatamente Invocadas (IIFE - Immediately-Invoked Function Expressions)</p></li>
+</ul>
+
+
+<h2>Recursos relacionados</h2>
+
+<ul>
+<li><a href="http://www.addyosmani.com/resources/essentialjsdesignpatterns/book">Learning JavaScript design patterns</a>, by Addy Osmani</li>
+<li><a href="http://www.2ality.com/2014/09/es6-modules-final.html">Sintaxis definitiva de módulos</a></li>
+<li><a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/learning-javascript-design-patterns.markdown">Notas tomadas</a></li>
+<li><a href="http://www.amazon.com/JavaScript-Patterns-Stoyan-Stefanov/dp/0596806752">JavaScript patterns</a>, de Stoyan Stefanov</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Stop stealing dreams]]></title>
@@ -430,79 +517,6 @@ introduce el BCID: 659-11704854</li>
 <li><a href="http://www.profiteditorial.com/libros-para-vivir-mejor/habilidades-personales/c%C3%B3mo-iniciar-una-conversaci%C3%B3n-y-hacer-amigos">Cómo iniciar una conversación y hacer amigos</a></li>
 <li>Vídeo explicativo acerca de
 <a href="http://www.youtube.com/watch?v=vCbfJGCda7E">«eficacia vs. eficiencia»</a></li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Instant Markdown]]></title>
-    <link href="http://rchavarria.github.io/blog/2013/10/07/instant-markdown/"/>
-    <updated>2013-10-07T09:38:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2013/10/07/instant-markdown</id>
-    <content type="html"><![CDATA[<h4>Instant Markdown</h4>
-
-<h5>Arturo Herrero</h5>
-
-<p><img class="right" src="http://www.packtpub.com/sites/default/files/9145OT_Instant%20Markdown_cov_0.jpg" width="195" height="300" title="Instant Markdown" ></p>
-
-<h2>Por qué lo he leído</h2>
-
-<p>El lenguaje Markdown me interesa, me parece una forma sencilla de formatear documentos
-sin usar grandes pomposidades, y <a href="http://twitter.com/arturoherrero">Arturo</a>, a través de twitter, dió la posibilidad
-de conseguir una copia (¡muchas gracias por cierto!). Había leído alguna <em>review</em>
-del libro, como la de <a href="http://kinisoftware.com/2013/09/revisando-el-libro-instant-markdown">Kinisoftware</a>, por lo que no podía desperdiciar la oportunidad.</p>
-
-<!-- more -->
-
-
-<h2>Qué esperaba</h2>
-
-<p>Ya conocía por encima la sintaxis de Markdown, la utilizo para escribir este post
-y cada vez más para tomar notas rápidas. También, al haber leído ya un par de
-revisiones, ya tenía más o menos una idea de lo que era el libro. Pero hasta que
-no lo lees no sabes con certeza si has acertado o no, así que allá que fui.</p>
-
-<h2>Qué encontre</h2>
-
-<p>Es un libro conciso, directo al grano y facilísimo de leer. Está en ingles, vale,
-pero de verdad que es sencillo de leer. Arturo expone el tema con claridad y sin
-andarse con rodeos.</p>
-
-<p>Aquí podrás encontrar una referencia rápida pero completa de la sintaxis oficial de
-Markdown así como algunos añadidos que ofrecen páginas como <a href="http://github.com">Github</a>, por ejemplo.</p>
-
-<p>También conocerás herramientas para trabajar con Markdown para tu día a día y para
-tareas tan comunes como escribir emails (está genial poder escribir un email, con
-formato, sin tener que levantar las manos del teclado).</p>
-
-<h2>Conclusiones</h2>
-
-<p><em>Instant Markdown</em> es un libro muy fácil de leer, y que te da unas cuantas ideas
-para profundizar en el tema, así que no decepciona. <strong>¿Quieres tener una referencia
-rápida del lenguaje?</strong> Aquí la encontrarás. <strong>¿Quieres conocer posibles usos diarios
-de una sintaxis sencillísima para escribir documentos formateado?</strong> Alimenta tu
-curiosidad con este libro.</p>
-
-<p>Una vez que pruebes la sencillez y rapidez de Markdown, querrás utilizarlo para
-todo, y este libro te indica unas cuantas herramientas para ello.</p>
-
-<h2>Qué he aprendido con este libro</h2>
-
-<ul>
-<li>Se pueden dibujar líneas horizontales, simplemente escribiendo 3 o más de estos
-carácteres en la misma línea: <code>-</code>, <code>*</code>, <code>_</code>. Así:</li>
-</ul>
-
-
-<hr />
-
-<ul>
-<li><p>Puedes escribir emails con la herramienta <a href="http://markdown-here.com">Markdown Here</a>.</p></li>
-<li><p>Puedes escribir listas de cosas por hacer, muy útil. <a href="http://cheddarapp.com">Cheddar</a>.</p></li>
-<li><p>Con la herramienta <a href="http://johnmacfarlane.net/pandoc">pandoc</a> podrás generar múltiples
-formatos a partir de Markdown: HTML, docx, odt, ebook, latex y pdf.</p></li>
-<li><p>Y si Markdown se queda corto en alǵun momento: <a href="http://fletcherpenney.net/multimarkdown">MultiMarkdown</a></p></li>
 </ul>
 
 ]]></content>
