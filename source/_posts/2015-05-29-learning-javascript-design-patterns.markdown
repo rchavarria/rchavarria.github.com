@@ -14,9 +14,9 @@ sidebar: true
 
 ##### de Addy Osmany
 
-{% img right http://www.addyosmani.com/resources/essentialjsdesignpatterns/cover/cover.jpg %}
-
 ## Por qué lo he leído
+
+{% img left http://www.addyosmani.com/resources/essentialjsdesignpatterns/cover/cover.jpg 206 271 JavaScript desing patterns %}
 
 Ya llevo un tiempo programando con JavaScript de forma profesional, y empiezo
 a sentir que necesito ir un paso más allá con el lenguaje. No creo que conozca
