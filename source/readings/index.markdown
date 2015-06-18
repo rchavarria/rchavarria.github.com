@@ -30,12 +30,12 @@ Así que aquí está mi Lista de Lectura:
 - [Slow burn](http://www.amazon.com/Slow-Burn-Faster-Exercising-Slower/dp/0062736744), de Stu Mittleman, recomendado por [Rick Rubin en una entrevisa de Tim Ferris](http://fourhourworkweek.com/2015/05/15/rick-rubin)
 - [The grumpy programmer's PHPUnit cookbook](https://leanpub.com/grumpy-phpunit), de Chris Hartjes, amigo de J.B.Rainsberger
 - [Software craftsmanship](https://leanpub.com/socra), de Sandro Mancuso, recomendado por [Carlos Ble](http://twitter.com/carlosble)
-- [Software craftsmanship](https://leanpub.com/socra), de Sandro Mancuso, recomendado por [Carlos Ble](http://twitter.com/carlosble)
 - [Tao Te Ching](http://www.amazon.com/Tao-Te-Ching-Laozi/dp/0060812451), de Stephen Mitchell, recomendado por [Rick Rubin en una entrevisa de Tim Ferris](http://fourhourworkweek.com/2015/05/15/rick-rubin) 
 - [The Passionate Programmer](http://pragprog.com/book/cfcar2/the-passionate-programmer), de Chad Fowler
 - [The five dysfunctions of a team](http://www.amazon.com/The-Five-Dysfunctions-Team-Leadership/dp/0787960756), de Patrick Lencioni, recomendado por @joserra_diaz y @rubenbpv (https://en.wikipedia.org/wiki/The_Five_Dysfunctions_of_a_Team)
 - [So good, they can't ignore you](http://www.amazon.com/dp/1455509124?tag=sivers-20), de Cal Newport, visto en [http://sivers.org/book/SoGood]
 - [Slack](http://www.amazon.es/s/ref=nb_sb_noss?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&url=search-alias%3Daps&field-keywords=slack+tom+demarco&rh=i%3Aaps%2Ck%3Aslack+tom+demarco), de Tom DeMarco, recomendado por un retweet de J.B.Rainsberger
+- [Cómo mentir con estadísticas](http://www.amazon.es/gp/product/8498922178), de Darrell Huff, recomendado por Bill Gates
 - [Getting real: how to build a successful web app](https://gettingreal.37signals.com/), de 37signals, recomendado por los organizadores del Codemotion 2014
 - [The craftsman](http://www.amazon.com/dp/0300151195/ref=cm_sw_su_dp), de Richard Sennet, creo que visto en el twitter de [Arturo Herrero](http://twitter.com/arturoherrero)
 - [Soft Skills: The software developer's life manual](http://www.amazon.com/gp/product/1617292397/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1617292397&linkCode=as2&tag=makithecompsi-20&linkId=YNX4566EEVSNF3IL), de John Sonmez, recomendado por [Alberto Moratilla](http://twitter.com/4lberto), dice que las valoraciones en Amazon son estupendas
@@ -50,6 +50,7 @@ Así que aquí está mi Lista de Lectura:
 - [Software craftsmanship: the new imperative](http://www.amazon.com/Software-Craftsmanship-Imperative-Pete-McBreen/dp/0201733862), de Pete McBreen
 - [The coding dojo handbook](https://leanpub.com/codingdojohandbook), de Emiliy Bache
 - [The Psycology of Computer Programming](http://www.amazon.com/exec/obidos/ASIN/0932633420/codihorr-20), de Gerald M. Weingerg
+- [¿Qué pasaría si...? (What if...?)](http://www.amazon.es/gp/product/B00TV7HI4E), de Randall Munrow (xkcd.com), recomendado por Bill Gates
 - [Bitter Java](http://books.google.co.in/books?id=U5dXq7FzvcIC), de Bruce A. Tate
 - Patterns of Enterprise Application Architecture, de Martin Fowler
 - [More Programming Pearls](http://search.barnesandnoble.com/More-Programming-Pearls/John-Bentley/e/9780201118896), de Jon Bentley
@@ -67,6 +68,8 @@ Así que aquí está mi Lista de Lectura:
 - [La lógica oculta de la vida](http://www.amazon.es/gp/product/8484607399/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=8484607399&linkCode=as2&tag=viviralmaximo-21), de Tim Harford, recomendado por Vivir al máximo y Joan Tubau
 - [Your money or your life](http://www.amazon.com/Your-Money-Life-Transforming-Relationship/dp/0143115766), de Vicki Robin y Joe Dominguez, recomendado por J. B. Rainsberger
 - [Software for your head](http://www.amazon.com/Software-Your-Head-Protocols-Maintaining/dp/0201604566), de Jim y Michele McCarthy, recomendado por el podcast [Ideas ágile](http://www.ideasagiles.com/podcast/)
+- [Una breve historia de casi todo](http://www.microsiervos.com/archivo/libros/una-breve-historia-de-casi-todo.html), de Bill Bryson, recomendado por Microsiervos
+- [Hipérbole y media](http://www.amazon.es/gp/product/8416223076), de Allie Brosh, recomendado por Bill Gates
 
 ## He leído
 
