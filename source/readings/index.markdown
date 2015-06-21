@@ -20,24 +20,25 @@ Así que aquí está mi Lista de Lectura:
 
 ## Estoy leyendo
 
+- [The Passionate Programmer](http://pragprog.com/book/cfcar2/the-passionate-programmer), de Chad Fowler
 - [Learning JavaScript design patterns](http://www.amazon.com/Learning-JavaScript-Design-Patterns-Osmani/dp/1449331815/), de Addy Osmani
-- [JavaScript patterns](http://www.amazon.com/JavaScript-Patterns-Stoyan-Stefanov/dp/0596806752), de Stoyan Stefanov
+- [Notes to a software team leader](https://leanpub.com/teamleader), de Roy Osherove
 - [Expertología](http://www.amazon.es/dp/8492414502), de Andrés Pérez Ortega
 
 ## Tengo pensado leer
 
-- [Notes to a software team leader](https://leanpub.com/teamleader), de Roy Osherove
+- [The martian](http://www.amazon.com/The-Martian-Novel-Andy-Weir-ebook/dp/B00EMXBDMA), de Andy Weir, recomendado por Scott Hanselman
 - [Slow burn](http://www.amazon.com/Slow-Burn-Faster-Exercising-Slower/dp/0062736744), de Stu Mittleman, recomendado por [Rick Rubin en una entrevisa de Tim Ferris](http://fourhourworkweek.com/2015/05/15/rick-rubin)
 - [The grumpy programmer's PHPUnit cookbook](https://leanpub.com/grumpy-phpunit), de Chris Hartjes, amigo de J.B.Rainsberger
 - [Software craftsmanship](https://leanpub.com/socra), de Sandro Mancuso, recomendado por [Carlos Ble](http://twitter.com/carlosble)
 - [Tao Te Ching](http://www.amazon.com/Tao-Te-Ching-Laozi/dp/0060812451), de Stephen Mitchell, recomendado por [Rick Rubin en una entrevisa de Tim Ferris](http://fourhourworkweek.com/2015/05/15/rick-rubin) 
-- [The Passionate Programmer](http://pragprog.com/book/cfcar2/the-passionate-programmer), de Chad Fowler
 - [The five dysfunctions of a team](http://www.amazon.com/The-Five-Dysfunctions-Team-Leadership/dp/0787960756), de Patrick Lencioni, recomendado por @joserra_diaz y @rubenbpv (https://en.wikipedia.org/wiki/The_Five_Dysfunctions_of_a_Team)
 - [So good, they can't ignore you](http://www.amazon.com/dp/1455509124?tag=sivers-20), de Cal Newport, visto en [http://sivers.org/book/SoGood]
 - [Slack](http://www.amazon.es/s/ref=nb_sb_noss?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&url=search-alias%3Daps&field-keywords=slack+tom+demarco&rh=i%3Aaps%2Ck%3Aslack+tom+demarco), de Tom DeMarco, recomendado por un retweet de J.B.Rainsberger
 - [Cómo mentir con estadísticas](http://www.amazon.es/gp/product/8498922178), de Darrell Huff, recomendado por Bill Gates
-- [Getting real: how to build a successful web app](https://gettingreal.37signals.com/), de 37signals, recomendado por los organizadores del Codemotion 2014
 - [The craftsman](http://www.amazon.com/dp/0300151195/ref=cm_sw_su_dp), de Richard Sennet, creo que visto en el twitter de [Arturo Herrero](http://twitter.com/arturoherrero)
+- [Coders at work](http://www.amazon.com/gp/product/1430219483), de Peter Seibel, visto en una lista de los 8 libros más influyentes en el desarrollo de software
+- [Getting real: how to build a successful web app](https://gettingreal.37signals.com/), de 37signals, recomendado por los organizadores del Codemotion 2014
 - [Soft Skills: The software developer's life manual](http://www.amazon.com/gp/product/1617292397/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1617292397&linkCode=as2&tag=makithecompsi-20&linkId=YNX4566EEVSNF3IL), de John Sonmez, recomendado por [Alberto Moratilla](http://twitter.com/4lberto), dice que las valoraciones en Amazon son estupendas
 - [Working effectively with Unit Tests](https://leanpub.com/wewut?a=240G6_z5rAtB5wcgCycYSB), de Jay Fields, recomendado en [That podcast](http://thatpodcast.io)
 - [Agile software development](http://www.amazon.com/Agile-Software-Development-Alistair-Cockburn/dp/0201699699), de Alistair Cockburn
@@ -73,6 +74,7 @@ Así que aquí está mi Lista de Lectura:
 
 ## He leído
 
+- [JavaScript patterns](/blog/2015/05/29/learning-javascript-design-patterns), de Stoyan Stefanov
 - [Extreme programming explained](/blog/2015/01/02/extreme-programming-explained), de Kent Beck ~ *Enero 2015*
 - [Stop stealing dreams](/blog/2015/03/13/stop-stealing-dreams), de Seth Godin ~ *Octubre 2014*
 - [How to start a conversation and make friends](/blog/2014/12/05/how-to-start-conversations-and-make-friends), de Don Gabor ~ *Julio 2014*
