@@ -4,7 +4,7 @@
   <title><![CDATA[Category: learning | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/learning/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2015-06-21T22:11:34+02:00</updated>
+  <updated>2015-06-23T00:15:49+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -542,6 +542,84 @@ set statusline=%&lt;%f%h%m%r%=%b\ 0x%B\ \ %l,%c%V\ %p\ %P
 <li>Tanto por ciento del fichero donde está el cursor</li>
 </ul>
 
+
+<h3>(Mayo 2015) <a href="http://www.viemu.com/a-why-vi-vim.html">Why, oh why, do those #?@! nutheads use vi?</a></h3>
+
+<p>Después de un cierto tiempo, tropecé con éste post, del cual extraje algún que
+otro comando que no conocía todavía. Y no solo comandos, sino secuencias de ellos
+que me permiten realizar tareas muy comunes en el desarrollo de software.</p>
+
+<p><em>Extraer una variable</em></p>
+
+<p>```
+if (!entry.used &amp;&amp; equivalent(entry.key(), qk.key) &amp;&amp; (curcontext &amp; entry.contexts)) {</p>
+
+<pre><code>// do something
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Situar el cursor al principio de <code>equivalent</code> y teclear el comando <code>c%</code>:</p>
+
+<p>```
+if (!entry.used &amp;&amp; <cursor will be here> &amp;&amp; (curcontext &amp; entry.contexts)) {</p>
+
+<pre><code>// do something
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Resulta que eso <strong>c</strong>orta el texto <code>equivalent(entry.key(), qk.key)</code> y entra en modo
+edición. Luego puedo escribir el nombre de la variable, cambiar a modo normal
+y pulsar <code>O</code> para insertar una línea arriba:</p>
+
+<p>```
+<cursor here>
+if (!entry.used &amp;&amp; equiv &amp;&amp; (curcontext &amp; entry.contexts)) {</p>
+
+<pre><code>// do something
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Luego, puedo declarar la variable, y pegar lo que hay en el portapapeles con <code>CTRL + R</code>:</p>
+
+<p>```
+bool equiv = equivalent(entry.key(), qk.key);
+if (!entry.used &amp;&amp; equiv &amp;&amp; (curcontext &amp; entry.contexts)) {</p>
+
+<pre><code>// do something
+</code></pre>
+
+<p>}
+```</p>
+
+<ul>
+<li><code>zt</code>: Mueve la línea (hace <strong>z</strong>oom) donde está el cursor arriba del todo
+(<strong>t</strong>op)</li>
+<li><code>zz</code>: Mueve la línea (hace <strong>z</strong>oom) donde está el cursor al centro de la
+pantalla</li>
+<li><code>zb</code>: Mueve la línea (hace <strong>z</strong>oom) donde está el cursor abajo del todo
+(<strong>b</strong>ottom)</li>
+<li><code>*</code>: busca hacia adelante la palabra seleccionada</li>
+<li><code>#</code>: busca hacia atrás</li>
+<li><code>=aB</code>: corregir la indentación (<code>=</code>) de un (<strong>a</strong>) <strong>Bloque</strong></li>
+<li>Comando <code>hlsearch</code>, por ejemplo: <code>:set hlsearch</code></li>
+<li><code>gU</code>: convierte a mayúsculas todo el texto seleccionado</li>
+<li><code>gu</code>: convierte a minúsculas todo el texto seleccionado</li>
+</ul>
+
+
+<h3>(Junio 2015) <a href="https://www.youtube.com/watch?v=xJz2Hq-jWxY">A casual introduction to Vim on Windows</a></h3>
+
+<p>Por casualidad encontré este vídeo de Roy Osherove, donde habla acerca de Vim
+(en Windows, aunque el sistema operativo tiene poca influencia para el nivel
+que Roy nos cuenta). No aprendí ningún comando nuevo, porque Roy habla de comandos
+básicos, para comenzar a usar Vim, pero creo que el vídeo es un recurso esencial
+para el aprendizaje de Vim, por lo que lo enlazo aquí.</p>
 
 <!--
 Next: [Globals, commands and functions](http://vimeo.com/15443936)
