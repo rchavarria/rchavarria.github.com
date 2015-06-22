@@ -483,6 +483,61 @@ La cual me muestra:
 - Fila
 - Tanto por ciento del fichero donde está el cursor
 
+### (Mayo 2015) [Why, oh why, do those #?@! nutheads use vi?](http://www.viemu.com/a-why-vi-vim.html)
+
+Después de un cierto tiempo, tropecé con éste post, del cual extraje algún que
+otro comando que no conocía todavía. Y no solo comandos, sino secuencias de ellos
+que me permiten realizar tareas muy comunes en el desarrollo de software.
+
+*Extraer una variable*
+
+```
+if (!entry.used && equivalent(entry.key(), qk.key) && (curcontext & entry.contexts)) {
+    // do something
+}
+```
+
+Situar el cursor al principio de `equivalent` y teclear el comando `c%`:
+
+```
+if (!entry.used && <cursor will be here> && (curcontext & entry.contexts)) {
+    // do something
+}
+```
+
+Resulta que eso **c**orta el texto `equivalent(entry.key(), qk.key)` y entra en modo
+edición. Luego puedo escribir el nombre de la variable, cambiar a modo normal
+y pulsar `O` para insertar una línea arriba:
+
+```
+<cursor here>
+if (!entry.used && equiv && (curcontext & entry.contexts)) {
+    // do something
+}
+```
+
+Luego, puedo declarar la variable, y pegar lo que hay en el portapapeles con `CTRL + R`:
+
+```
+bool equiv = equivalent(entry.key(), qk.key);
+if (!entry.used && equiv && (curcontext & entry.contexts)) {
+    // do something
+}
+```
+
+- `zt`: Mueve la línea (hace **z**oom) donde está el cursor arriba del todo
+(**t**op)
+- `zz`: Mueve la línea (hace **z**oom) donde está el cursor al centro de la
+pantalla
+- `zb`: Mueve la línea (hace **z**oom) donde está el cursor abajo del todo
+(**b**ottom)
+- `*`: busca hacia adelante la palabra seleccionada
+- `#`: busca hacia atrás
+- `=aB`: corregir la indentación (`=`) de un (**a**) **Bloque**
+- Comando `hlsearch`, por ejemplo: `:set hlsearch`
+- `gU`: convierte a mayúsculas todo el texto seleccionado
+- `gu`: convierte a minúsculas todo el texto seleccionado
+
 <!--
 Next: [Globals, commands and functions](http://vimeo.com/15443936)
 -->
