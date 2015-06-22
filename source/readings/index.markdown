@@ -38,6 +38,7 @@ Así que aquí está mi Lista de Lectura:
 - [Cómo mentir con estadísticas](http://www.amazon.es/gp/product/8498922178), de Darrell Huff, recomendado por Bill Gates
 - [The craftsman](http://www.amazon.com/dp/0300151195/ref=cm_sw_su_dp), de Richard Sennet, creo que visto en el twitter de [Arturo Herrero](http://twitter.com/arturoherrero)
 - [Coders at work](http://www.amazon.com/gp/product/1430219483), de Peter Seibel, visto en una lista de los 8 libros más influyentes en el desarrollo de software
+- [Practical object-oriented design with Ruby (POODR)](http://www.poodr.com), de Sandi Metz, visto en el blog de Carlos Blé
 - [Getting real: how to build a successful web app](https://gettingreal.37signals.com/), de 37signals, recomendado por los organizadores del Codemotion 2014
 - [Soft Skills: The software developer's life manual](http://www.amazon.com/gp/product/1617292397/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1617292397&linkCode=as2&tag=makithecompsi-20&linkId=YNX4566EEVSNF3IL), de John Sonmez, recomendado por [Alberto Moratilla](http://twitter.com/4lberto), dice que las valoraciones en Amazon son estupendas
 - [Working effectively with Unit Tests](https://leanpub.com/wewut?a=240G6_z5rAtB5wcgCycYSB), de Jay Fields, recomendado en [That podcast](http://thatpodcast.io)
