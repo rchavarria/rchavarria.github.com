@@ -538,13 +538,15 @@ pantalla
 - `gU`: convierte a mayúsculas todo el texto seleccionado
 - `gu`: convierte a minúsculas todo el texto seleccionado
 
+### (Junio 2015) [A casual introduction to Vim on Windows](https://www.youtube.com/watch?v=xJz2Hq-jWxY)
+
+Por casualidad encontré este vídeo de Roy Osherove, donde habla acerca de Vim
+(en Windows, aunque el sistema operativo tiene poca influencia para el nivel
+que Roy nos cuenta). No aprendí ningún comando nuevo, porque Roy habla de comandos
+básicos, para comenzar a usar Vim, pero creo que el vídeo es un recurso esencial
+para el aprendizaje de Vim, por lo que lo enlazo aquí.
+
 <!--
 Next: [Globals, commands and functions](http://vimeo.com/15443936)
 -->
-
-
-
-
-
-
 
