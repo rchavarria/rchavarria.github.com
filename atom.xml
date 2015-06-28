@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2015-06-23T00:15:49+02:00</updated>
+  <updated>2015-06-28T23:53:12+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,42 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Dando un empujón al blog]]></title>
+    <link href="http://rchavarria.github.io/blog/2015/06/28/dando-empujon-blog/"/>
+    <updated>2015-06-28T23:48:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2015/06/28/dando-empujon-blog</id>
+    <content type="html"><![CDATA[<p>No recuerdo con exactitud cuánto, pero ya llevo unos años escribiendo en este
+blog (aunque lo he movido de plataforma). No lo hago por nada en especial, no lo
+hago por complacer a nadie, ni por conseguir X visitas mensuales. Es más, a veces
+me sirve más para dejar notas a mi yo futuro que para servir a mi(s) lector(es).
+Tampoco es que tenga miles de lectores diarios, ni sea eso un objetivo que me haya
+marcado, pero&#8230;</p>
+
+<p>¿Por qué no? ¿Por qué no intentar tener un blog con un número decente de visitantes?</p>
+
+<p><-- more --></p>
+
+<p>No recuerdo cómo, supongo que <em>navegando por ahí</em>, terminé encontrando el blog
+<a href="http://simpleprogrammer.com">The simple programmer</a>, de <a href="http://simpleprogrammer.com/about-me">John Sonmez</a>, autor del libro <a href="http://www.amazon.com/gp/product/1617292397">Soft skills</a>. John tiene
+un <a href="http://devcareerboost.com/blog-course">curso gratuito sobre cómo crear un blog</a> y llevarlo un poco más allá (bueno, se
+supone que el objetivo del curso es impulsar tu carrera profesional, pero no tengo
+tan altas las espectativas para un curso gratuito), y me apunté. Me apunté más que
+nada por una lección que habla sobre cómo dar tu blog a conocer.</p>
+
+<p>En cada lección, John habla del los pasos a seguir para crear un blog: comenzando por
+darle un nombre, conseguir un hosting, hacer una lista de los primeros posts,&#8230; En
+general he encontrado muy buenas historias y muy buenos consejos. Seguro que todo el
+mundo aprende algo de este curso.</p>
+
+<p>Particularmente, alguna lección se me ha atragantado en el tiempo, me ha dado pereza
+hacerme con ella, pero sigo con el curso y estoy decidido a terminarlo. No voy a conseguir
+ningún diploma ni nada, pero espero poder seguir los consejos de John durant mucho
+tiempo y conseguir tener un blog útil para los lectores y que me permita conocer gente
+interesante.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Learning JavaScript design patterns]]></title>
@@ -3374,73 +3410,6 @@ JavaScript testeable.</p>
 
 <p>No estoy de acuerdo en todos los consejos que comenta Damian, pero la voz de
 la experiencia tiene muchísimo valor, por lo que la charla me parece fenomenal.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Charla técnica: JavaScript masterclass]]></title>
-    <link href="http://rchavarria.github.io/blog/2014/06/21/charla-tecnica-javascript-masterclass/"/>
-    <updated>2014-06-21T17:23:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2014/06/21/charla-tecnica-javascript-masterclass</id>
-    <content type="html"><![CDATA[<p>Recientemente he visto una charla técnica impartida por
-<a href="https://twitter.com/angelinamagnum">Angelina Fabro</a> titulada <em>JavaScript masterclass</em>.
-En este post quiero dejar unas notas que me gustaría recordar, no es un resumen de la
-charla, pero sí son algunas ideas que me gustaría resaltar.</p>
-
-<p>La primera parte de la charla Angelina explica qué no es un programador junior, y en la
-segunda parte qué no es un programador experto, para terminar sugiriendo unos cuantos
-consejos sobre cómo pasar de un estado a otro.</p>
-
-<!-- more -->
-
-
-<h3>Angelina Fabro, a JavaScript masterclass</h3>
-
-<iframe width="560" height="315" src="http://rchavarria.github.io//www.youtube.com/embed/v0TFmdO4ZP0" frameborder="0" allowfullscreen></iframe>
-
-
-<h3>¿Quién es un gran programador?</h3>
-
-<p>Bueno, pues eso depende de a quién le preguntes, pero algunas respuestas que te
-darán podrían ser:</p>
-
-<ul>
-<li>Aquel que cumple con todas las fechas de entrega (si dejamos a un lado la calidad).</li>
-<li>Aquel que soluciona de la forma más rápida los problemas de los clientes.</li>
-<li>Aquel que hace ganar el mayor dinero posible a los dueños de los negocios.</li>
-<li>Aquel que es el mejor mentor para un programador junior.</li>
-<li>Aquel a quien le encanta unirse a otros programadores en la <em>batalla</em>.</li>
-</ul>
-
-
-<h3>¿Qué necesito aprender para ser uno de ellos?</h3>
-
-<p>Como conclusión a su charla, Angelina nos deja unos cuantos consejos que podemos
-aplicar para dar un salto en nuestra carrera profesional:</p>
-
-<ul>
-<li>Pregúntate <em>¿por qué?</em> obsesivamente, hasta el punto de molestarte a tí mismo.</li>
-<li>Enseña y/o habla en un evento.</li>
-<li>Trabaja a través de una seria de libros recomendados por los que más saben.</li>
-<li>Experimenta alocadamente. Haz barbaridades, al código no le importa ni le hace daño.</li>
-<li>Modela tus propias opiniones, debes tenerlas, debes mojarte.</li>
-<li>Busca a un mentor que te guíe por el camino.</li>
-<li>Programa mucho, mucho. Pero para de vez en cuando, tu cerebro necesita descansos.</li>
-<li>Escribe en varios lenguajes.</li>
-<li>Piensa como un programador aunque no estés cerca de un teclado.</li>
-<li>Aprende a distinguir el buen feedback del malo, y desecha el malo claro.</li>
-<li>Libérate del <a href="https://es.wikipedia.org/wiki/S%C3%ADndrome_del_impostor">síndrome del impostor</a>.</li>
-</ul>
-
-
-<h2>Conclusiones</h2>
-
-<p>En general, la charla me ha encantado, y me ha dado un poquito de chispa para seguir mejorando
-como profesional y me ha dado nuevas ideas. Aunque no estoy de acuerdo con todos los consejos que
-Angelina propone, me voy a quedar con dos de ellos que no me había planteado hasta ahora:
-pregúntate por qué obsesivamente y experimenta alocadamente.</p>
-
-<p>Nos recomienda un libro, <em>The secrets of a JavaScript ninja</em>, de John Resig.</p>
 ]]></content>
   </entry>
   
