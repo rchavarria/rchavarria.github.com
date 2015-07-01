@@ -50,7 +50,7 @@ Para instalarlo en otros sistemas operativos, visitarla página
 
 Hay otra forma de instalarlo, y es a través de `nvm` ([Node Version Manager]).
 
-El resto de librarías las instalaremos a través de la herramienta `npm`.
+El resto de librerías las instalaremos a través de la herramienta `npm`.
 
 # Inicializar `npm`
 
