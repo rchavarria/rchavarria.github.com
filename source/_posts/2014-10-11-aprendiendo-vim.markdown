@@ -546,6 +546,19 @@ que Roy nos cuenta). No aprendí ningún comando nuevo, porque Roy habla de coma
 básicos, para comenzar a usar Vim, pero creo que el vídeo es un recurso esencial
 para el aprendizaje de Vim, por lo que lo enlazo aquí.
 
+### (Julio 2015) [Contar palabras](http://vim.wikia.com/wiki/Word_count)
+
+De repente, escribiendo un post para este blog, me pregunté: ¿Será muy largo
+el post?, ¿Cuántas palabras habrá?. Tampoco tengo claro cuantas palabras hacen
+que un post sea largo, pero bueno, tenía curiosidad por saber cuántas palabras
+había en el post.
+
+El problema es que escribí el post en Windows. Si hubiera estado en Linux, las
+hubiera contado con `wc -w`. Estaba en Vim, y decidí buscar algún plugin que
+contara las palabras por mí. En lugar de eso, encontré un comando:
+
+- `g` + `CTRL g`
+
 <!--
 Next: [Globals, commands and functions](http://vimeo.com/15443936)
 -->
