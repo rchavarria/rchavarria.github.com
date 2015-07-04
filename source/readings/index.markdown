@@ -36,6 +36,7 @@ Así que aquí está mi Lista de Lectura:
 - [So good, they can't ignore you](http://www.amazon.com/dp/1455509124?tag=sivers-20), de Cal Newport, visto en [http://sivers.org/book/SoGood]
 - [Slack](http://www.amazon.es/s/ref=nb_sb_noss?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&url=search-alias%3Daps&field-keywords=slack+tom+demarco&rh=i%3Aaps%2Ck%3Aslack+tom+demarco), de Tom DeMarco, recomendado por un retweet de J.B.Rainsberger
 - [Cómo mentir con estadísticas](http://www.amazon.es/gp/product/8498922178), de Darrell Huff, recomendado por Bill Gates
+- [Encambio: aprende a modificar tu cerebro para cambiar tu vida y sentirte mejor](http://m.casadellibro.com/libro-encambio-aprende-a-modificar-tu-cerebro-para-cambiar-tu-vida-y-sentirte-mejor/9788416029396/2548418), de Estanislao Bachrach, recomendado por Roberto Canales Mora
 - [The craftsman](http://www.amazon.com/dp/0300151195/ref=cm_sw_su_dp), de Richard Sennet, creo que visto en el twitter de [Arturo Herrero](http://twitter.com/arturoherrero)
 - [Coders at work](http://www.amazon.com/gp/product/1430219483), de Peter Seibel, visto en una lista de los 8 libros más influyentes en el desarrollo de software
 - [Practical object-oriented design with Ruby (POODR)](http://www.poodr.com), de Sandi Metz, visto en el blog de Carlos Blé
@@ -45,6 +46,9 @@ Así que aquí está mi Lista de Lectura:
 - [Agile software development](http://www.amazon.com/Agile-Software-Development-Alistair-Cockburn/dp/0201699699), de Alistair Cockburn
 - [Never eat alone](http://www.amazon.com/Never-Eat-Alone-Secrets-Relationship/dp/0385512058), de Keith Ferrazi
 - [Defiende tu dinero](http://www.casadellibro.com/libro-defiende-tu-dinero/9788466651899/2016460), de Simón Pérez y Marcos Cirera, recomendado por [Guillermo Montoya](https://twitter.com/gmfdsr)
+- [El hombre anumérico](http://www.amazon.com/El-Hombre-Anumerico-Spanish-Edition/dp/8472231496), de John Allen Paulos, recomendado por Alberto Vilches
+- [Pensar rápido, pensar despacio](www.amazon.com/Pensar-rápido-despacio-Spanish-Edition-ebook/dp/B008BPHBTO), de Daniel Kahneman, recomendado por Alberto Vilches
+- [Manual del ciberactivista](http://www.amazon.es/gp/product/8494408607), de Javier de la Cueva, visto en [Microsiervos](http://www.microsiervos.com/archivo/libros/manual-del-ciberactivista-o-como-la-politica-puede-ser-cosa-de-todos-gracias-a-internet.html)
 - [Introduction to the command line](http://shop.fsf.org/product/Introduction_to_Command_Line/), de la Free Software Foundation
 - [The art of Unix programming](http://www.catb.org/esr/writings/taoup), de Eric S. Raymond
 - [Test driven development: by example](http://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530), de Kent Beck
@@ -61,6 +65,7 @@ Así que aquí está mi Lista de Lectura:
 - [Facts and fallacies of software development](http://www.amazon.com/Facts-Fallacies-Software-Engineering-Robert/dp/0321117425, de Robert L. Glass, recomendado por [Rodrigo Corral](http://twitter.com/r_corral) en la CAS2013
 - [The twelve factor app](http://12factor.net/), de Adam Wiggins. The twelve-factor app is a methodology for building software-as-a-service apps. ([download de epub](http://12factor.net/12factor.epub))
 - [Teamwork is an individual skill](http://www.amazon.com/Teamwork-Is-Individual-Skill-Responsibility/dp/1576751554), de Christopher M. Avery, Meri Aaron Walker y Erin O'Toole, recomendado por @joserra_diaz y @rubenbpv
+- [El peligro de creer](http://www.amazon.es/gp/product/8415589271/ref=as_li_tf_tl?ie=UTF8&camp=3626&creative=24790&creativeASIN=8401346711&linkCode=as2&tag=microsiervos-21), de Luis Alfonso Gámez, visto en [Microsiervos](http://www.microsiervos.com/archivo/libros/el-peligro-de-creer-un-repaso-esceptico-a-las-pseudociencias-y-similares.html)
 - [The culture game](http://www.amazon.com/The-Culture-Game-Tools-Manager/dp/0984875301/), de DAniel Mezick, recomendado por @joserra_diaz y @rubenbpv
 - [Focus](http://www.amazon.es/gp/product/8499883052/), de Daniel Goleman
 - [The art of learning](http://www.amazon.com/The-Art-Learning-Journey-Performance/dp/0743277465), de Josh Waitzkin, recomendado por [Tim Ferris](http://fourhourworkweek.com/2014/03/20/the-art-of-learning-joshua-waitzkin/)
