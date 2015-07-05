@@ -4,7 +4,7 @@
   <title><![CDATA[Category: tutorial | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/tutorial/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2015-06-28T23:53:12+02:00</updated>
+  <updated>2015-07-06T01:58:26+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -60,7 +60,7 @@ todas estas librerías.</p>
 
 <p>Hay otra forma de instalarlo, y es a través de <code>nvm</code> (<a href="http://carlosazaustre.es/blog/como-instalar-node-js-en-ubuntu">Node Version Manager</a>).</p>
 
-<p>El resto de librarías las instalaremos a través de la herramienta <code>npm</code>.</p>
+<p>El resto de librerías las instalaremos a través de la herramienta <code>npm</code>.</p>
 
 <h1>Inicializar <code>npm</code></h1>
 

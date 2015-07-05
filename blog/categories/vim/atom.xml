@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Vim | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/vim/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2015-06-28T23:53:12+02:00</updated>
+  <updated>2015-07-06T01:58:26+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -620,6 +620,22 @@ pantalla</li>
 que Roy nos cuenta). No aprendí ningún comando nuevo, porque Roy habla de comandos
 básicos, para comenzar a usar Vim, pero creo que el vídeo es un recurso esencial
 para el aprendizaje de Vim, por lo que lo enlazo aquí.</p>
+
+<h3>(Julio 2015) <a href="http://vim.wikia.com/wiki/Word_count">Contar palabras</a></h3>
+
+<p>De repente, escribiendo un post para este blog, me pregunté: ¿Será muy largo
+el post?, ¿Cuántas palabras habrá?. Tampoco tengo claro cuantas palabras hacen
+que un post sea largo, pero bueno, tenía curiosidad por saber cuántas palabras
+había en el post.</p>
+
+<p>El problema es que escribí el post en Windows. Si hubiera estado en Linux, las
+hubiera contado con <code>wc -w</code>. Estaba en Vim, y decidí buscar algún plugin que
+contara las palabras por mí. En lugar de eso, encontré un comando:</p>
+
+<ul>
+<li><code>g</code> + <code>CTRL g</code></li>
+</ul>
+
 
 <!--
 Next: [Globals, commands and functions](http://vimeo.com/15443936)

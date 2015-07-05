@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ecmascript 6 | R. Chavarria's Blog]]></title>
+  <link href="http://rchavarria.github.io/blog/categories/ecmascript-6/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.io/"/>
+  <updated>2015-07-06T01:58:26+02:00</updated>
+  <id>http://rchavarria.github.io/</id>
+  <author>
+    <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Escribir y ejecutar tests de Mocha en ECMAScript 6]]></title>
+    <link href="http://rchavarria.github.io/blog/2015/07/05/escribir-tests-mocha-es6/"/>
+    <updated>2015-07-05T21:59:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2015/07/05/escribir-tests-mocha-es6</id>
+    <content type="html"><![CDATA[<p>Me gusta resolver puzzles, pero no puzzles de miles de piezas, si no más bien el
+tipo de puzzle en el que hay unas piezas de madera encajadas y hay que desencajarlas,
+o en el que hay una cuerdecita con una bola y tienes que sacar la bola y volverla
+a meter. Ese tipo de puzzles.</p>
+
+<p>Creo que de ahí me viene también el gusto de resolver pequeños problemas de
+programación. Me gusta programar. Me gusta aprender. Y qué mejor para aprender
+que practicar. En el mundo de la programación existe un concepto llamado
+<a href="https://en.wikipedia.org/wiki/Kata_%28programming%29">kata</a> (el concepto ha sido copiado de las artes marciales), el cual significa
+la realización de pequeños ejercicios focalizados en la solución a un pequeño
+problema muy concreto. Así que me gusta realizar katas de vez en cuando en algún
+lenguaje de programación, para practicar.</p>
+
+<!-- more -->
+
+
+<p>Hace un tiempo publiqué un tutorial sobre <a href="/blog/2014/09/24/plantilla-para-modulos-nodejs">cómo crear un módulo NodeJS</a>, el cual
+me servía de base para realizar algunas de estas katas. En este artículo me
+gustaría llevarlo un poco más allá. A ese proyecto, a esa plantilla, voy a
+añadirle lo siguiente:</p>
+
+<ul>
+<li><a href="http://babeljs.io">Babel</a>: voy a añadir un paso en la construcción del proyecto y ejecución de los
+tests, voy a transpilar código JavaScript ECMAScript 6 a ECMAScript 5. Esto me
+permite practicar con la nueva versión de JavaScript.</li>
+<li><a href="http://eslint.org">ESLint</a>: estoy convencido de que este tipo de herramientas ayudan en el día a
+día en el desarrollo con JavaScript. Me ayudan a detectar errores tontos a la
+hora de escribir mi código.</li>
+<li><a href="https://travis-ci.org">Travis CI</a>: todos los tests serán ejecutados en un servidor de integración
+contínua, para eliminar para siempre la excusa de <em>En mi ordenador funciona</em></li>
+</ul>
+
+
+<p>Si quieres dejarte de tonterías y ver todo montado ya y empezar a usar todo ello,
+puedes echar un vistazo a el repositorio <a href="https://github.com/rchavarria/solveet-exercises-js">solveet-exercises-js</a> y jugar con
+él.</p>
+
+<h2>Babel</h2>
+
+<p><a href="http://babeljs.io">Babel</a> es una herramienta para transformar código escrito en ECMAScript 6 en
+código ECMAScript 5, es decir, para transformar código JavaScript de una versión
+que todavía no está soportada completamente por los navegadores a una versión
+que sí lo está.</p>
+
+<p>Instalarlo es sencillísimo mediante <code>npm</code>:</p>
+
+<pre><code>npm install --save-dev babel gulp-babel
+</code></pre>
+
+<p>Con este comando instalaremos la herramienta en sí, y un plugin para <code>gulp</code> que
+nos permitirá usar Babel desde nuestro script Gulp. Modificaremos este script
+para que transforme nuestro código justo antes de ejecutar nuestros tests:</p>
+
+<p>``` javascript
+gulp.task('test', function () {</p>
+
+<pre><code>return gulp
+    .src([ 'test/bootstrap.js', 'test/scripts/**/*.js' ])
+    .pipe(mocha({
+        reporter: 'spec',
+        compilers: 'js:babel/register'  // tell mocha to compile with babel
+    }));
+</code></pre>
+
+<p>});
+```</p>
+
+<p>La parte diferente de otras configuraciones para lanzar los tests con mocha es
+la parte donde configuramos mocha para que use Babel como compilador de código
+JavaScript.</p>
+
+<h2>ESLint</h2>
+
+<p><a href="http://eslint.org">ESLint</a> es una herramienta que analiza nuestro código JavaScript y nos avisa de
+violaciones de reglas que tengamos configuradas. Estas reglas nos permiten
+definir patrones para detectar posibles fallos en nuestro código así como forzar
+a que todos los integrantes de nuestro equipo sigan el mismo estilo de programación.</p>
+
+<p>También utilizaremos <code>npm</code> para instalarlo, esta vez instalaremos solamente el
+plugin de <code>gulp</code>, que como depende de ESLint directamente, éste se instalará
+automáticamente:</p>
+
+<pre><code>npm install --save-dev gulp-eslint
+</code></pre>
+
+<p>Y podemos crear una nueva tarea en gulp para analizar nuestro código:</p>
+
+<p>``` javascript
+gulp.task('eslint', function () {</p>
+
+<pre><code>return gulp
+    .src([ 'gulpfile.js', 'src/scripts/**/*.js', 'test/scripts/**/*.js' ])
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failOnError());
+</code></pre>
+
+<p>});
+```</p>
+
+<p>Ahora, si queremos analizar todo nuestro código antes de lanzar nuestros tests,
+podemos hacer que la tarea <code>test</code> dependa de la nueva tarea <code>eslint</code>:</p>
+
+<pre><code>gulp.task('test', [ 'eslint' ], function () {
+    // ...
+}
+</code></pre>
+
+<p>El siguiente paso es configurar ESLint. Hay infinidad de reglas, incluso podemos
+definir las nuestras propias. Para comenzar, puedes echar un vistazo a un
+fichero <a href="https://raw.githubusercontent.com/rchavarria/solveet-exercises-js/master/.eslintrc"><code>.eslintrc</code> de ejemplo</a>.</p>
+
+<h2>Travis CI</h2>
+
+<p><a href="https://travis-ci.org">Travis CI</a> es una herramienta de integración contínua. La herramienta recupera
+nuestro código del repositorio de GitHub que le digamos y ejecuta todos los
+tests.</p>
+
+<p>Para ello debemos darnos de alta en la página. Podemos hacerlo con nuestra
+cuenta de GitHub. Luego, podemos ir a nuestro perfil e indicar a Travis CI
+qué repositorios debe <em>vigilar</em> para ejecutar los tests cada vez que hagamos
+un push al repositorio.</p>
+
+<p>Debemos indicar a Travis CI qué lenguaje y plataforma queremos testear, en
+nuestro caso se trata de NodeJS. Como configuración, añadimos simplemente un
+fichero llamado <code>.travis.yml</code> en el directorio raiz del proyecto con este
+contenido:</p>
+
+<pre><code>language: node_js
+node_js:
+    - "0.12"
+</code></pre>
+
+<p>De esta forma, cuando hagamos un push a nuestro repositorio en GitHub, Travis CI
+recuperará el código, instalará paquetes Node con <code>npm</code> y ejecutará el comando
+<code>npm test</code>.</p>
+
+<p>Para que Travis CI lanze nuestros tests, debemos configurar la respuesta al
+comando <code>npm test</code>. Para ello, modificaremos el fichero <code>package.json</code>:</p>
+
+<pre><code>//...
+"scripts": {
+    "test": "gulp test"
+},
+//...
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>

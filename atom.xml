@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2015-06-28T23:53:12+02:00</updated>
+  <updated>2015-07-06T01:58:26+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,169 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Escribir y ejecutar tests de Mocha en ECMAScript 6]]></title>
+    <link href="http://rchavarria.github.io/blog/2015/07/05/escribir-tests-mocha-es6/"/>
+    <updated>2015-07-05T21:59:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2015/07/05/escribir-tests-mocha-es6</id>
+    <content type="html"><![CDATA[<p>Me gusta resolver puzzles, pero no puzzles de miles de piezas, si no más bien el
+tipo de puzzle en el que hay unas piezas de madera encajadas y hay que desencajarlas,
+o en el que hay una cuerdecita con una bola y tienes que sacar la bola y volverla
+a meter. Ese tipo de puzzles.</p>
+
+<p>Creo que de ahí me viene también el gusto de resolver pequeños problemas de
+programación. Me gusta programar. Me gusta aprender. Y qué mejor para aprender
+que practicar. En el mundo de la programación existe un concepto llamado
+<a href="https://en.wikipedia.org/wiki/Kata_%28programming%29">kata</a> (el concepto ha sido copiado de las artes marciales), el cual significa
+la realización de pequeños ejercicios focalizados en la solución a un pequeño
+problema muy concreto. Así que me gusta realizar katas de vez en cuando en algún
+lenguaje de programación, para practicar.</p>
+
+<!-- more -->
+
+
+<p>Hace un tiempo publiqué un tutorial sobre <a href="http://rchavarria.github.io/blog/2014/09/24/plantilla-para-modulos-nodejs">cómo crear un módulo NodeJS</a>, el cual
+me servía de base para realizar algunas de estas katas. En este artículo me
+gustaría llevarlo un poco más allá. A ese proyecto, a esa plantilla, voy a
+añadirle lo siguiente:</p>
+
+<ul>
+<li><a href="http://babeljs.io">Babel</a>: voy a añadir un paso en la construcción del proyecto y ejecución de los
+tests, voy a transpilar código JavaScript ECMAScript 6 a ECMAScript 5. Esto me
+permite practicar con la nueva versión de JavaScript.</li>
+<li><a href="http://eslint.org">ESLint</a>: estoy convencido de que este tipo de herramientas ayudan en el día a
+día en el desarrollo con JavaScript. Me ayudan a detectar errores tontos a la
+hora de escribir mi código.</li>
+<li><a href="https://travis-ci.org">Travis CI</a>: todos los tests serán ejecutados en un servidor de integración
+contínua, para eliminar para siempre la excusa de <em>En mi ordenador funciona</em></li>
+</ul>
+
+
+<p>Si quieres dejarte de tonterías y ver todo montado ya y empezar a usar todo ello,
+puedes echar un vistazo a el repositorio <a href="https://github.com/rchavarria/solveet-exercises-js">solveet-exercises-js</a> y jugar con
+él.</p>
+
+<h2>Babel</h2>
+
+<p><a href="http://babeljs.io">Babel</a> es una herramienta para transformar código escrito en ECMAScript 6 en
+código ECMAScript 5, es decir, para transformar código JavaScript de una versión
+que todavía no está soportada completamente por los navegadores a una versión
+que sí lo está.</p>
+
+<p>Instalarlo es sencillísimo mediante <code>npm</code>:</p>
+
+<pre><code>npm install --save-dev babel gulp-babel
+</code></pre>
+
+<p>Con este comando instalaremos la herramienta en sí, y un plugin para <code>gulp</code> que
+nos permitirá usar Babel desde nuestro script Gulp. Modificaremos este script
+para que transforme nuestro código justo antes de ejecutar nuestros tests:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">gulp</span>
+</span><span class='line'>        <span class="p">.</span><span class="nx">src</span><span class="p">([</span> <span class="s1">&#39;test/bootstrap.js&#39;</span><span class="p">,</span> <span class="s1">&#39;test/scripts/**/*.js&#39;</span> <span class="p">])</span>
+</span><span class='line'>        <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">mocha</span><span class="p">({</span>
+</span><span class='line'>            <span class="nx">reporter</span><span class="o">:</span> <span class="s1">&#39;spec&#39;</span><span class="p">,</span>
+</span><span class='line'>            <span class="nx">compilers</span><span class="o">:</span> <span class="s1">&#39;js:babel/register&#39;</span>  <span class="c1">// tell mocha to compile with babel</span>
+</span><span class='line'>        <span class="p">}));</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>La parte diferente de otras configuraciones para lanzar los tests con mocha es
+la parte donde configuramos mocha para que use Babel como compilador de código
+JavaScript.</p>
+
+<h2>ESLint</h2>
+
+<p><a href="http://eslint.org">ESLint</a> es una herramienta que analiza nuestro código JavaScript y nos avisa de
+violaciones de reglas que tengamos configuradas. Estas reglas nos permiten
+definir patrones para detectar posibles fallos en nuestro código así como forzar
+a que todos los integrantes de nuestro equipo sigan el mismo estilo de programación.</p>
+
+<p>También utilizaremos <code>npm</code> para instalarlo, esta vez instalaremos solamente el
+plugin de <code>gulp</code>, que como depende de ESLint directamente, éste se instalará
+automáticamente:</p>
+
+<pre><code>npm install --save-dev gulp-eslint
+</code></pre>
+
+<p>Y podemos crear una nueva tarea en gulp para analizar nuestro código:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">&#39;eslint&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">gulp</span>
+</span><span class='line'>        <span class="p">.</span><span class="nx">src</span><span class="p">([</span> <span class="s1">&#39;gulpfile.js&#39;</span><span class="p">,</span> <span class="s1">&#39;src/scripts/**/*.js&#39;</span><span class="p">,</span> <span class="s1">&#39;test/scripts/**/*.js&#39;</span> <span class="p">])</span>
+</span><span class='line'>        <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">eslint</span><span class="p">())</span>
+</span><span class='line'>        <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">eslint</span><span class="p">.</span><span class="nx">format</span><span class="p">())</span>
+</span><span class='line'>        <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">eslint</span><span class="p">.</span><span class="nx">failOnError</span><span class="p">());</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Ahora, si queremos analizar todo nuestro código antes de lanzar nuestros tests,
+podemos hacer que la tarea <code>test</code> dependa de la nueva tarea <code>eslint</code>:</p>
+
+<pre><code>gulp.task('test', [ 'eslint' ], function () {
+    // ...
+}
+</code></pre>
+
+<p>El siguiente paso es configurar ESLint. Hay infinidad de reglas, incluso podemos
+definir las nuestras propias. Para comenzar, puedes echar un vistazo a un
+fichero <a href="https://raw.githubusercontent.com/rchavarria/solveet-exercises-js/master/.eslintrc"><code>.eslintrc</code> de ejemplo</a>.</p>
+
+<h2>Travis CI</h2>
+
+<p><a href="https://travis-ci.org">Travis CI</a> es una herramienta de integración contínua. La herramienta recupera
+nuestro código del repositorio de GitHub que le digamos y ejecuta todos los
+tests.</p>
+
+<p>Para ello debemos darnos de alta en la página. Podemos hacerlo con nuestra
+cuenta de GitHub. Luego, podemos ir a nuestro perfil e indicar a Travis CI
+qué repositorios debe <em>vigilar</em> para ejecutar los tests cada vez que hagamos
+un push al repositorio.</p>
+
+<p>Debemos indicar a Travis CI qué lenguaje y plataforma queremos testear, en
+nuestro caso se trata de NodeJS. Como configuración, añadimos simplemente un
+fichero llamado <code>.travis.yml</code> en el directorio raiz del proyecto con este
+contenido:</p>
+
+<pre><code>language: node_js
+node_js:
+    - "0.12"
+</code></pre>
+
+<p>De esta forma, cuando hagamos un push a nuestro repositorio en GitHub, Travis CI
+recuperará el código, instalará paquetes Node con <code>npm</code> y ejecutará el comando
+<code>npm test</code>.</p>
+
+<p>Para que Travis CI lanze nuestros tests, debemos configurar la respuesta al
+comando <code>npm test</code>. Para ello, modificaremos el fichero <code>package.json</code>:</p>
+
+<pre><code>//...
+"scripts": {
+    "test": "gulp test"
+},
+//...
+</code></pre>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Dando un empujón al blog]]></title>
@@ -27,7 +190,8 @@ marcado, pero&#8230;</p>
 
 <p>¿Por qué no? ¿Por qué no intentar tener un blog con un número decente de visitantes?</p>
 
-<p><-- more --></p>
+<!-- more -->
+
 
 <p>No recuerdo cómo, supongo que <em>navegando por ahí</em>, terminé encontrando el blog
 <a href="http://simpleprogrammer.com">The simple programmer</a>, de <a href="http://simpleprogrammer.com/about-me">John Sonmez</a>, autor del libro <a href="http://www.amazon.com/gp/product/1617292397">Soft skills</a>. John tiene
@@ -2746,6 +2910,22 @@ que Roy nos cuenta). No aprendí ningún comando nuevo, porque Roy habla de coma
 básicos, para comenzar a usar Vim, pero creo que el vídeo es un recurso esencial
 para el aprendizaje de Vim, por lo que lo enlazo aquí.</p>
 
+<h3>(Julio 2015) <a href="http://vim.wikia.com/wiki/Word_count">Contar palabras</a></h3>
+
+<p>De repente, escribiendo un post para este blog, me pregunté: ¿Será muy largo
+el post?, ¿Cuántas palabras habrá?. Tampoco tengo claro cuantas palabras hacen
+que un post sea largo, pero bueno, tenía curiosidad por saber cuántas palabras
+había en el post.</p>
+
+<p>El problema es que escribí el post en Windows. Si hubiera estado en Linux, las
+hubiera contado con <code>wc -w</code>. Estaba en Vim, y decidí buscar algún plugin que
+contara las palabras por mí. En lugar de eso, encontré un comando:</p>
+
+<ul>
+<li><code>g</code> + <code>CTRL g</code></li>
+</ul>
+
+
 <!--
 Next: [Globals, commands and functions](http://vimeo.com/15443936)
 -->
@@ -2802,7 +2982,7 @@ todas estas librerías.</p>
 
 <p>Hay otra forma de instalarlo, y es a través de <code>nvm</code> (<a href="http://carlosazaustre.es/blog/como-instalar-node-js-en-ubuntu">Node Version Manager</a>).</p>
 
-<p>El resto de librarías las instalaremos a través de la herramienta <code>npm</code>.</p>
+<p>El resto de librerías las instalaremos a través de la herramienta <code>npm</code>.</p>
 
 <h1>Inicializar <code>npm</code></h1>
 
@@ -3331,85 +3511,6 @@ antes una vez hayamos terminado de tomar notas.</p>
 <p>Al pie de página, reservar 5 o 7 líneas para hacer un resumen de las notas
 tomadas. Para estudiar, simplemente tapar con la mano la columna de notas y
 tratar de responder a las preguntas de la columna de preguntas.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Charla técnica: Escribiendo JavaScript sólido como una roca]]></title>
-    <link href="http://rchavarria.github.io/blog/2014/06/26/charla-tecnica-escribe-javascript-como-roca/"/>
-    <updated>2014-06-26T20:00:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2014/06/26/charla-tecnica-escribe-javascript-como-roca</id>
-    <content type="html"><![CDATA[<p>Hace poco, he visto una charla técnica impartida por
-<a href="https://twitter.com/damian">Damian Nicholson</a>
-titulada <em>Writing (testable | maintainable | scalable | rock solid) JavaScript</em>,
-que traduzco libremente como <em>Escribiendo JavaScript sólido como una roca</em>.</p>
-
-<p>En la charla, Damian analiza varios aspectos de porqué es difícil testear
-cierto código JavaScript y finaliza contando su experiencia escribiendo código
-para evitar todos esos errores.</p>
-
-<!-- more -->
-
-
-
-
-<iframe src="http://rchavarria.github.io//player.vimeo.com/video/68526881" width="500" height="161" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-
-<h3>Consejos</h3>
-
-<p>A lo largo de la charla, Damian suelta unos cuantos pequeños consejos:</p>
-
-<ol>
-<li>JavaScript + Unit testing = Good code</li>
-<li>Apóyate en los objetos. Según el conferenciante, los objetos te llevarán a
-diseñar clases, éstas a agruparlas en módulos, y los módulos a organizar mejor
-tus ficheros JavaScript.</li>
-<li>Sobretodo, uno debería testear su API pública, aunque no limitarse a ella.</li>
-</ol>
-
-
-<h3>Problemas a la hora de testear código JavaScript</h3>
-
-<p>A través de un sencillo snipet de código, Damian expone algunos de los problemas
-más comunes a la hora de escribir código JavaScript que lo hace difícilmente
-testeable:</p>
-
-<ul>
-<li>Funciones anónimas.</li>
-<li>Acoplamiento fuerte con el DOM, por ejemplo en el uso y abuso de ids en elementos
-HTML</li>
-<li>Hacer llamadas al servidor mezcladas con otra lógica de nuestra aplicación.</li>
-<li>Callbacks anidados.</li>
-<li>Mezclar código HTML y JavaScript, por ejemplo, excribiendo <em>templates</em> HTML a
-fuego en JavaScript.</li>
-</ul>
-
-
-<h3>Su propia experiencia</h3>
-
-<ul>
-<li>usar data-attributes para parametrizar, o configuraciones. Depender menos de ids
-en los elementos HTML.</li>
-<li>Conocer el ciclo de vida de los frameworks que utilizamos, y <em>engancharnos</em> a los
-eventos del ciclo que dirigen el proceso.</li>
-<li>Aislar nuestra aplicación de los detalles de plugins de terceros (gran consejo éste).</li>
-<li>Apóyate en <a href="http://lostechies.com/derickbailey/2012/10/07/javascript-mixins-beyond-simple-object-extension">mixins</a>.
-Con ellos podrás extender la funcionalidad de tus objetos, de una forma parecida a
-la herencia, aunque muy diferente a ella.</li>
-<li>Mantén funcionalidades privadas en ámbitos privados
-(patrón <a href="http://www.codeproject.com/Articles/247241/Javascript-Module-Pattern">módulo</a>).</li>
-</ul>
-
-
-<h3>Conclusión</h3>
-
-<p>Es una charla eminentemente práctica, por lo que es totalmente recomendable
-si quieres conocer de primera mano buenos consejos sobre cómo escribir código
-JavaScript testeable.</p>
-
-<p>No estoy de acuerdo en todos los consejos que comenta Damian, pero la voz de
-la experiencia tiene muchísimo valor, por lo que la charla me parece fenomenal.</p>
 ]]></content>
   </entry>
   

@@ -1,0 +1,432 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Escribir y ejecutar tests de Mocha en ECMAScript 6 - R. Chavarria's Blog</title>
+  <meta name="author" content="Rub&eacute;n Chavarr&iacute;a">
+
+  
+  <meta name="description" content="Me gusta resolver puzzles, pero no puzzles de miles de piezas, si no más bien el
+tipo de puzzle en el que hay unas piezas de madera encajadas y hay &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://rchavarria.github.io/blog/2015/07/05/escribir-tests-mocha-es6/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="R. Chavarria's Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36829645-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">R. Chavarria's Blog</a></h1>
+  
+    <h2>Proud of developing software, proud of being an Engineer</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:rchavarria.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archivos</a></li>
+  <li><a href="/readings">Lista de lectura</a></li>
+  <li><a href="/pet-projects">Proyectos</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Escribir y ejecutar tests de Mocha en ECMAScript 6</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-07-05T21:59:00+02:00" pubdate data-updated="true">Jul 5<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Me gusta resolver puzzles, pero no puzzles de miles de piezas, si no más bien el
+tipo de puzzle en el que hay unas piezas de madera encajadas y hay que desencajarlas,
+o en el que hay una cuerdecita con una bola y tienes que sacar la bola y volverla
+a meter. Ese tipo de puzzles.</p>
+
+<p>Creo que de ahí me viene también el gusto de resolver pequeños problemas de
+programación. Me gusta programar. Me gusta aprender. Y qué mejor para aprender
+que practicar. En el mundo de la programación existe un concepto llamado
+<a href="https://en.wikipedia.org/wiki/Kata_%28programming%29">kata</a> (el concepto ha sido copiado de las artes marciales), el cual significa
+la realización de pequeños ejercicios focalizados en la solución a un pequeño
+problema muy concreto. Así que me gusta realizar katas de vez en cuando en algún
+lenguaje de programación, para practicar.</p>
+
+<!-- more -->
+
+
+<p>Hace un tiempo publiqué un tutorial sobre <a href="/blog/2014/09/24/plantilla-para-modulos-nodejs">cómo crear un módulo NodeJS</a>, el cual
+me servía de base para realizar algunas de estas katas. En este artículo me
+gustaría llevarlo un poco más allá. A ese proyecto, a esa plantilla, voy a
+añadirle lo siguiente:</p>
+
+<ul>
+<li><a href="http://babeljs.io">Babel</a>: voy a añadir un paso en la construcción del proyecto y ejecución de los
+tests, voy a transpilar código JavaScript ECMAScript 6 a ECMAScript 5. Esto me
+permite practicar con la nueva versión de JavaScript.</li>
+<li><a href="http://eslint.org">ESLint</a>: estoy convencido de que este tipo de herramientas ayudan en el día a
+día en el desarrollo con JavaScript. Me ayudan a detectar errores tontos a la
+hora de escribir mi código.</li>
+<li><a href="https://travis-ci.org">Travis CI</a>: todos los tests serán ejecutados en un servidor de integración
+contínua, para eliminar para siempre la excusa de <em>En mi ordenador funciona</em></li>
+</ul>
+
+
+<p>Si quieres dejarte de tonterías y ver todo montado ya y empezar a usar todo ello,
+puedes echar un vistazo a el repositorio <a href="https://github.com/rchavarria/solveet-exercises-js">solveet-exercises-js</a> y jugar con
+él.</p>
+
+<h2>Babel</h2>
+
+<p><a href="http://babeljs.io">Babel</a> es una herramienta para transformar código escrito en ECMAScript 6 en
+código ECMAScript 5, es decir, para transformar código JavaScript de una versión
+que todavía no está soportada completamente por los navegadores a una versión
+que sí lo está.</p>
+
+<p>Instalarlo es sencillísimo mediante <code>npm</code>:</p>
+
+<pre><code>npm install --save-dev babel gulp-babel
+</code></pre>
+
+<p>Con este comando instalaremos la herramienta en sí, y un plugin para <code>gulp</code> que
+nos permitirá usar Babel desde nuestro script Gulp. Modificaremos este script
+para que transforme nuestro código justo antes de ejecutar nuestros tests:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">gulp</span>
+</span><span class='line'>        <span class="p">.</span><span class="nx">src</span><span class="p">([</span> <span class="s1">&#39;test/bootstrap.js&#39;</span><span class="p">,</span> <span class="s1">&#39;test/scripts/**/*.js&#39;</span> <span class="p">])</span>
+</span><span class='line'>        <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">mocha</span><span class="p">({</span>
+</span><span class='line'>            <span class="nx">reporter</span><span class="o">:</span> <span class="s1">&#39;spec&#39;</span><span class="p">,</span>
+</span><span class='line'>            <span class="nx">compilers</span><span class="o">:</span> <span class="s1">&#39;js:babel/register&#39;</span>  <span class="c1">// tell mocha to compile with babel</span>
+</span><span class='line'>        <span class="p">}));</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>La parte diferente de otras configuraciones para lanzar los tests con mocha es
+la parte donde configuramos mocha para que use Babel como compilador de código
+JavaScript.</p>
+
+<h2>ESLint</h2>
+
+<p><a href="http://eslint.org">ESLint</a> es una herramienta que analiza nuestro código JavaScript y nos avisa de
+violaciones de reglas que tengamos configuradas. Estas reglas nos permiten
+definir patrones para detectar posibles fallos en nuestro código así como forzar
+a que todos los integrantes de nuestro equipo sigan el mismo estilo de programación.</p>
+
+<p>También utilizaremos <code>npm</code> para instalarlo, esta vez instalaremos solamente el
+plugin de <code>gulp</code>, que como depende de ESLint directamente, éste se instalará
+automáticamente:</p>
+
+<pre><code>npm install --save-dev gulp-eslint
+</code></pre>
+
+<p>Y podemos crear una nueva tarea en gulp para analizar nuestro código:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">&#39;eslint&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">gulp</span>
+</span><span class='line'>        <span class="p">.</span><span class="nx">src</span><span class="p">([</span> <span class="s1">&#39;gulpfile.js&#39;</span><span class="p">,</span> <span class="s1">&#39;src/scripts/**/*.js&#39;</span><span class="p">,</span> <span class="s1">&#39;test/scripts/**/*.js&#39;</span> <span class="p">])</span>
+</span><span class='line'>        <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">eslint</span><span class="p">())</span>
+</span><span class='line'>        <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">eslint</span><span class="p">.</span><span class="nx">format</span><span class="p">())</span>
+</span><span class='line'>        <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">eslint</span><span class="p">.</span><span class="nx">failOnError</span><span class="p">());</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Ahora, si queremos analizar todo nuestro código antes de lanzar nuestros tests,
+podemos hacer que la tarea <code>test</code> dependa de la nueva tarea <code>eslint</code>:</p>
+
+<pre><code>gulp.task('test', [ 'eslint' ], function () {
+    // ...
+}
+</code></pre>
+
+<p>El siguiente paso es configurar ESLint. Hay infinidad de reglas, incluso podemos
+definir las nuestras propias. Para comenzar, puedes echar un vistazo a un
+fichero <a href="https://raw.githubusercontent.com/rchavarria/solveet-exercises-js/master/.eslintrc"><code>.eslintrc</code> de ejemplo</a>.</p>
+
+<h2>Travis CI</h2>
+
+<p><a href="https://travis-ci.org">Travis CI</a> es una herramienta de integración contínua. La herramienta recupera
+nuestro código del repositorio de GitHub que le digamos y ejecuta todos los
+tests.</p>
+
+<p>Para ello debemos darnos de alta en la página. Podemos hacerlo con nuestra
+cuenta de GitHub. Luego, podemos ir a nuestro perfil e indicar a Travis CI
+qué repositorios debe <em>vigilar</em> para ejecutar los tests cada vez que hagamos
+un push al repositorio.</p>
+
+<p>Debemos indicar a Travis CI qué lenguaje y plataforma queremos testear, en
+nuestro caso se trata de NodeJS. Como configuración, añadimos simplemente un
+fichero llamado <code>.travis.yml</code> en el directorio raiz del proyecto con este
+contenido:</p>
+
+<pre><code>language: node_js
+node_js:
+    - "0.12"
+</code></pre>
+
+<p>De esta forma, cuando hagamos un push a nuestro repositorio en GitHub, Travis CI
+recuperará el código, instalará paquetes Node con <code>npm</code> y ejecutará el comando
+<code>npm test</code>.</p>
+
+<p>Para que Travis CI lanze nuestros tests, debemos configurar la respuesta al
+comando <code>npm test</code>. Para ello, modificaremos el fichero <code>package.json</code>:</p>
+
+<pre><code>//...
+"scripts": {
+    "test": "gulp test"
+},
+//...
+</code></pre>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Rubén Chavarría</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-07-05T21:59:00+02:00" pubdate data-updated="true">Jul 5<span>th</span>, 2015</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/ecmascript-6/'>ecmascript 6</a>, <a class='category' href='/blog/categories/mocha/'>mocha</a>, <a class='category' href='/blog/categories/tdd/'>tdd</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rchavarria.github.io/blog/2015/07/05/escribir-tests-mocha-es6/" data-via="rchavarriat" data-counturl="http://rchavarria.github.io/blog/2015/07/05/escribir-tests-mocha-es6/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2015/06/28/dando-empujon-blog/" title="Previous Post: Dando un empujón al blog">&laquo; Dando un empujón al blog</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/07/05/escribir-tests-mocha-es6/">Escribir y ejecutar tests de Mocha en ECMAScript 6</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/06/28/dando-empujon-blog/">Dando un empujón al blog</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/05/29/learning-javascript-design-patterns/">Learning JavaScript design patterns</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/03/28/dart-streams/">Dart Streams</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/03/13/stop-stealing-dreams/">Stop stealing dreams</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("rchavarriat", 4, true);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/rchavarriat">@rchavarriat</a></p>
+  
+</section>
+
+
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/rchavarriat?count=5&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/rchavarriat">My Delicious Bookmarks &raquo;</a></p>
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Rub&eacute;n Chavarr&iacute;a -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'rchavarria-github-com';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://rchavarria.github.io/blog/2015/07/05/escribir-tests-mocha-es6/';
+        var disqus_url = 'http://rchavarria.github.io/blog/2015/07/05/escribir-tests-mocha-es6/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
