@@ -9,7 +9,6 @@ categories:
 published: true
 footer: false
 sidebar: true
-categories: 
 ---
 
 No recuerdo con exactitud cuánto, pero ya llevo unos años escribiendo en este
@@ -21,7 +20,7 @@ marcado, pero...
 
 ¿Por qué no? ¿Por qué no intentar tener un blog con un número decente de visitantes?
 
-<-- more -->
+<!-- more -->
 
 No recuerdo cómo, supongo que *navegando por ahí*, terminé encontrando el blog
 [The simple programmer], de [John Sonmez], autor del libro [Soft skills]. John tiene
