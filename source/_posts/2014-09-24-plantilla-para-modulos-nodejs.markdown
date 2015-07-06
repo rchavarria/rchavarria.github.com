@@ -208,6 +208,11 @@ Puedes leer documentación de [Gulp] para saber cómo crear más y mejores tarea
 [Chai] para aprender a escribir tests con el API `expect`, [Sinon] para aprender 
 sobre dobles de tests (mocks, spies, stubs) cuando escribas tests.
 
+# Actualización (05-07-2015)
+
+He seguido ampliando este proyecto, y lo he adaptado para poder escribir código
+ECMAScript 6: [Escribir y ejecutar tests de Mocha en ES6].
+
 [screencasts de Carlos Blé]: http://www.carlosble.com/screencasts/es/
 [proyecto NodeJS con Gulp, Mocha y Chai]: https://github.com/rchavarria/nodejs-module-template/tree/template-ready
 [NodeJS]: http://nodejs.org
@@ -218,3 +223,5 @@ sobre dobles de tests (mocks, spies, stubs) cuando escribas tests.
 [Sinon]: http://cjohansen.no/sinon
 [NodeJS download page]: http://nodejs.org/download
 [Node Version Manager]: http://carlosazaustre.es/blog/como-instalar-node-js-en-ubuntu
+[Escribir y ejecutar tests de Mocha en ES6]: /blog/2015/07/05/escribir-tests-mocha-es6
+
