@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2015-07-06T01:58:26+02:00</updated>
+  <updated>2015-07-12T19:16:19+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,76 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Charla técnica: Therapeutic refactoring]]></title>
+    <link href="http://rchavarria.github.io/blog/2015/07/12/charla-tecnica-therapeutic-refactoring/"/>
+    <updated>2015-07-12T19:09:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2015/07/12/charla-tecnica-therapeutic-refactoring</id>
+    <content type="html"><![CDATA[<p>Acabo de visualizar la charla <a href="https://www.youtube.com/watch?v=J4dlF0kcThQ">Therapeutical Refactoring</a>, de <a href="https://twitter.com/kytrinyx">Katrina Owen</a>,
+creadora de <a href="http://exercism.io">exercism.io</a>, y me ha encantado.</p>
+
+<p>Es una charla donde nos cuenta la historia de una refactorización. Me ha
+gustado especialmente cómo cuenta la refactorización. Ocultando las partes
+del código que no interesan en el paso actual y resaltando aquellas que
+sí.</p>
+
+<p>Me ha recordado mucho a cómo vemos los desarrolladores el código,
+focalizándonos en pequeños detalles, entremezclados en líneas y líneas de
+código.</p>
+
+<!-- more -->
+
+
+
+
+<iframe width="560"
+        height="315"
+        src="https://www.youtube.com/embed/J4dlF0kcThQ"
+        frameborder="0"
+        allowfullscreen></iframe>
+
+
+<p>En el repositorio <a href="https://github.com/kytrinyx/therapeutic-refactoring">therapeutic-refactoring</a> se pueden ver todos los pasos
+que Katrina ha dado en la refactorización.</p>
+
+<h2>Notas</h2>
+
+<p>Alrededor del minuto 19 nos habla del término <em>codejunk</em>. Codejunk trata
+sobre ruido, ruido que nos molesta para entender el código, pequeños detalles
+que hacen que gastemos más energía de la necesaria para entender qué hace
+el código. Algunos no son errores en sí, pero son como pequeños picores
+que no te dejan disfrutar.</p>
+
+<p>Describe 10 (de menos a más molestos):</p>
+
+<ol>
+<li>Comentarios penosos</li>
+<li>Espacios en blanco al final de las líneas</li>
+<li>Código comentado</li>
+<li>Paréntesis innecesarios</li>
+<li>Parámetros explícitos por defecto</li>
+<li><code>import</code>s o <code>require</code>s (dependiendo del lenguaje) innecesarios</li>
+<li><code>string</code>s hechas de <code>string</code>s</li>
+<li>Demasiado trabajo <em>manual</em> (deja que el pc haga el trabajo, no lo hagas tú)</li>
+<li>Tests duplicados, hay que poner el mismo mimo en el código de tests
+que en el de producción</li>
+<li>Una combinación de todos los anteriores</li>
+</ol>
+
+
+<h2>Moral de la historia</h2>
+
+<p>Refactorizar te da como un cerebro externo (exobrain).
+Cada uno de nosotros podemos retener una cantidad finita de detalles en la
+memoria (me recuerda al post de J.B.Rainsberger
+<a href="http://blog.thecodewhisperer.com/2015/03/28/your-tests-are-dragging-you-down">Your tests are dragging you down</a>). Programar es sobretodo, mantener en
+mente todos esos detalles. Nuestra memoria trabaja peor bajo condiciones
+de miedo o estrés. Refactorizar pone a salvo muchos de estos detalles,
+permitiéndonos trabajar más relajadamente y más confiados en que estamos
+haciendo un buen trabajo.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Escribir y ejecutar tests de Mocha en ECMAScript 6]]></title>
@@ -3150,6 +3220,11 @@ tú mismo un nuevo fichero con este test):</p>
 <a href="http://visionmedia.github.io/mocha/">Mocha</a> y <a href="https://github.com/sindresorhus/gulp-mocha">Mocha&#8217;s plugin for Gulp</a> para conocer más sobre las opciones de Mocha,
 <a href="http://chaijs.com">Chai</a> para aprender a escribir tests con el API <code>expect</code>, <a href="http://cjohansen.no/sinon">Sinon</a> para aprender
 sobre dobles de tests (mocks, spies, stubs) cuando escribas tests.</p>
+
+<h1>Actualización (05-07-2015)</h1>
+
+<p>He seguido ampliando este proyecto, y lo he adaptado para poder escribir código
+ECMAScript 6: <a href="http://rchavarria.github.io/blog/2015/07/05/escribir-tests-mocha-es6">Escribir y ejecutar tests de Mocha en ES6</a>.</p>
 ]]></content>
   </entry>
   
@@ -3426,91 +3501,6 @@ tareas.</li>
 <li><a href="http://www.amazon.com/Extreme-Programming-Explained-Embrace-Edition/dp/0321278658">Extreme programming explained</a></li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Efectividad de 10 técnicas para estudiar]]></title>
-    <link href="http://rchavarria.github.io/blog/2014/09/07/efectividad-de-10-tecnicas-para-estudiar/"/>
-    <updated>2014-09-07T10:23:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2014/09/07/efectividad-de-10-tecnicas-para-estudiar</id>
-    <content type="html"><![CDATA[<p>Hace poco, escuchando el episodio 20 del podcast
-<a href="http://www.bastayadepicar.com/episodio/020">Basta ya de picar</a>,
-los creadores del podcast proponían un artículo como muy interesante.
-Dicho artículo trataba de
-<a href="http://bigthink.com/neurobonkers/assessing-the-evidence-for-the-one-thing-you-never-get-taught-in-school-how-to-learn">cómo aprender a aprender</a>.</p>
-
-<p>Lo leí y me pareció tan interesante que no pude resistirme a hacer un pequeño
-resumen para poder consultarlo en un futuro, y ya de paso, ¿por qué no
-publicarlo?</p>
-
-<!-- more -->
-
-
-<h2>Técnicas</h2>
-
-<p>Aquí están las técnicas ordenadas de mayor a menor efectividad:</p>
-
-<ul>
-<li><p>Exámenes (efectifidad alta): la técnica es más efectiva cuanto más elaboradas
-tengan que ser las respuestas, pero incluso los de múltiples opciones son efectivos.
-También resultan muy efectivos si las preguntas las elige uno mismo.
-Relacionado: <a href="http://en.wikipedia.org/wiki/Cornell_Notes">Sistema para tomar notas de Cornell</a>,
-incluso se incluye una <a href="http://lsc.cornell.edu/LSC_Resources/cornellsystem.pdf">plantilla</a>.</p></li>
-<li><p>Práctica distribuida (efectividad alta): qué es mejor, ¿estudiarlo todo de
-golpe o dividirlo y planificarlo a lo largo del tiempo?. Algunos estudios
-recomiendan dividirlo y espaciarlo entre un 10% y 20% del tiempo que queremos
-retener lo aprendido. Por ejemplo, si disponemos de un año, estudiaríamos una
-vez al mes. esto contrasta mucho con la práctica habitual de los estudiantes
-de estudar todo el último momento (ese conocimiento no durará mucho).</p></li>
-<li><p>Elaborar preguntas (efectividad media): se trata de crear explicaciones de
-<strong>por qué</strong> los hechos estudiados son verdaderos. Se concentran los esfuerzos
-en el <em>por qué</em>, en lugar de en el <em>qué</em>. Suele ayudar tener conocimientos
-previos de lo que se está estudiando.</p></li>
-<li><p>Auto-explicación (efectividad media): es muy buena técnica para aprender
-conceptos abstractos. Se trata de explicar <strong>cómo</strong> uno resuelve o entiende
-el problema mientras se razonan las elecciones que se van tomando. Es más
-efectivo si se hace mientras se estudia que si se hace después.</p></li>
-<li><p>Práctica intercalada (efectividad media): qué es mejor, ¿estudiar temas en
-bloques o estudiarlos entrelazados? En realidad, no se sabe muy bien, pero parece
-que funciona bastante bien para aprendizajes que mezclan lo físico y lo mental.</p></li>
-<li><p>Resúmenes (efectividad baja): no es tan efectivo como las anteriores pero sí
-que es más que el subrayado, utilizar palabras claves y la re-lectura.</p></li>
-<li><p>Subrayado (efectividad baja): no es muy efectivo porque no necesita de una
-especial atención.</p></li>
-<li><p>Palabras claves como mnemónicos (efectividad baja): es efectiva para ciertos
-aprendizajes, como por ejemplo recordar nombres, nuevos idiomas, términos cienticios, &#8230;</p></li>
-<li><p>Asociar texto con imágenes (efectividad baja): es efectiva para recordar frases,
-pero no mucho para textos largos.</p></li>
-<li><p>Re-lectura (efectividad baja): es más eficiente si se espacia en el tiempo que
-si se realiza justo después de terminar la primera lectura.</p></li>
-</ul>
-
-
-<h2>Conclusión</h2>
-
-<p>Cada una de estas técnicas, por sí sola, no tendrá un efecto muy positivo en
-nuestro aprendizaje, pero si las combinamos, seguro que notamos mejoría. Por
-ejemplo, según el artículo, qué tal si la próxima vez que tengamos que
-aprender algo planificamos unos intervalos de estudio a lo largo del tiempo,
-mientras lo estudiamos por qué no nos formulamos una serie de preguntas
-(haciendo incapié en el <em>por qué</em> de los conceptos), para después responder
-con nuestras propias palabras a dichas preguntas.</p>
-
-<h3>Cómo funciona la técnica de tomar notas de Cornell</h3>
-
-<p>Resumen extraído de la entrada en la wikipedia:
-<a href="http://en.wikipedia.org/wiki/Cornell_Notes">Cornell note-taking system</a></p>
-
-<p>Dividir el papel en dos columnas: <em>columna de preguntas</em>, de 1/3 del ancho y
-<em>columna de notas</em>, 2/3 de ancho. La columna de notas es la de tomar notas de
-la lección que estamos recibiendo. La columna de preguntas es para anotar
-palabras claves y preguntas que nos surjan. Esta columna se rellena cuanto
-antes una vez hayamos terminado de tomar notas.</p>
-
-<p>Al pie de página, reservar 5 o 7 líneas para hacer un resumen de las notas
-tomadas. Para estudiar, simplemente tapar con la mano la columna de notas y
-tratar de responder a las preguntas de la columna de preguntas.</p>
 ]]></content>
   </entry>
   

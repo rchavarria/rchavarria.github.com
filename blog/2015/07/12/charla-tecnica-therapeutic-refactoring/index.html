@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Charla técnica: Therapeutic refactoring - R. Chavarria's Blog</title>
+  <meta name="author" content="Rub&eacute;n Chavarr&iacute;a">
+
+  
+  <meta name="description" content="Acabo de visualizar la charla Therapeutical Refactoring, de Katrina Owen,
+creadora de exercism.io, y me ha encantado. Es una charla donde nos cuenta &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://rchavarria.github.io/blog/2015/07/12/charla-tecnica-therapeutic-refactoring/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="R. Chavarria's Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36829645-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">R. Chavarria's Blog</a></h1>
+  
+    <h2>Proud of developing software, proud of being an Engineer</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:rchavarria.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archivos</a></li>
+  <li><a href="/readings">Lista de lectura</a></li>
+  <li><a href="/pet-projects">Proyectos</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Charla técnica: Therapeutic refactoring</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-07-12T19:09:00+02:00" pubdate data-updated="true">Jul 12<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Acabo de visualizar la charla <a href="https://www.youtube.com/watch?v=J4dlF0kcThQ">Therapeutical Refactoring</a>, de <a href="https://twitter.com/kytrinyx">Katrina Owen</a>,
+creadora de <a href="http://exercism.io">exercism.io</a>, y me ha encantado.</p>
+
+<p>Es una charla donde nos cuenta la historia de una refactorización. Me ha
+gustado especialmente cómo cuenta la refactorización. Ocultando las partes
+del código que no interesan en el paso actual y resaltando aquellas que
+sí.</p>
+
+<p>Me ha recordado mucho a cómo vemos los desarrolladores el código,
+focalizándonos en pequeños detalles, entremezclados en líneas y líneas de
+código.</p>
+
+<!-- more -->
+
+
+
+
+<iframe width="560"
+        height="315"
+        src="https://www.youtube.com/embed/J4dlF0kcThQ"
+        frameborder="0"
+        allowfullscreen></iframe>
+
+
+<p>En el repositorio <a href="https://github.com/kytrinyx/therapeutic-refactoring">therapeutic-refactoring</a> se pueden ver todos los pasos
+que Katrina ha dado en la refactorización.</p>
+
+<h2>Notas</h2>
+
+<p>Alrededor del minuto 19 nos habla del término <em>codejunk</em>. Codejunk trata
+sobre ruido, ruido que nos molesta para entender el código, pequeños detalles
+que hacen que gastemos más energía de la necesaria para entender qué hace
+el código. Algunos no son errores en sí, pero son como pequeños picores
+que no te dejan disfrutar.</p>
+
+<p>Describe 10 (de menos a más molestos):</p>
+
+<ol>
+<li>Comentarios penosos</li>
+<li>Espacios en blanco al final de las líneas</li>
+<li>Código comentado</li>
+<li>Paréntesis innecesarios</li>
+<li>Parámetros explícitos por defecto</li>
+<li><code>import</code>s o <code>require</code>s (dependiendo del lenguaje) innecesarios</li>
+<li><code>string</code>s hechas de <code>string</code>s</li>
+<li>Demasiado trabajo <em>manual</em> (deja que el pc haga el trabajo, no lo hagas tú)</li>
+<li>Tests duplicados, hay que poner el mismo mimo en el código de tests
+que en el de producción</li>
+<li>Una combinación de todos los anteriores</li>
+</ol>
+
+
+<h2>Moral de la historia</h2>
+
+<p>Refactorizar te da como un cerebro externo (exobrain).
+Cada uno de nosotros podemos retener una cantidad finita de detalles en la
+memoria (me recuerda al post de J.B.Rainsberger
+<a href="http://blog.thecodewhisperer.com/2015/03/28/your-tests-are-dragging-you-down">Your tests are dragging you down</a>). Programar es sobretodo, mantener en
+mente todos esos detalles. Nuestra memoria trabaja peor bajo condiciones
+de miedo o estrés. Refactorizar pone a salvo muchos de estos detalles,
+permitiéndonos trabajar más relajadamente y más confiados en que estamos
+haciendo un buen trabajo.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Rubén Chavarría</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-07-12T19:09:00+02:00" pubdate data-updated="true">Jul 12<span>th</span>, 2015</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/refactoring/'>refactoring</a>, <a class='category' href='/blog/categories/tech-talks/'>tech talks</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rchavarria.github.io/blog/2015/07/12/charla-tecnica-therapeutic-refactoring/" data-via="rchavarriat" data-counturl="http://rchavarria.github.io/blog/2015/07/12/charla-tecnica-therapeutic-refactoring/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2015/07/05/escribir-tests-mocha-es6/" title="Previous Post: Escribir y ejecutar tests de Mocha en ECMAScript 6">&laquo; Escribir y ejecutar tests de Mocha en ECMAScript 6</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/07/12/charla-tecnica-therapeutic-refactoring/">Charla técnica: Therapeutic refactoring</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/07/05/escribir-tests-mocha-es6/">Escribir y ejecutar tests de Mocha en ECMAScript 6</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/06/28/dando-empujon-blog/">Dando un empujón al blog</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/05/29/learning-javascript-design-patterns/">Learning JavaScript design patterns</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/03/28/dart-streams/">Dart Streams</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("rchavarriat", 4, true);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/rchavarriat">@rchavarriat</a></p>
+  
+</section>
+
+
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/rchavarriat?count=5&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/rchavarriat">My Delicious Bookmarks &raquo;</a></p>
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Rub&eacute;n Chavarr&iacute;a -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'rchavarria-github-com';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://rchavarria.github.io/blog/2015/07/12/charla-tecnica-therapeutic-refactoring/';
+        var disqus_url = 'http://rchavarria.github.io/blog/2015/07/12/charla-tecnica-therapeutic-refactoring/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

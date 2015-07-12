@@ -4,7 +4,7 @@
   <title><![CDATA[Category: tutorial | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/tutorial/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2015-07-06T01:58:26+02:00</updated>
+  <updated>2015-07-12T19:16:19+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -228,6 +228,11 @@ tú mismo un nuevo fichero con este test):</p>
 <a href="http://visionmedia.github.io/mocha/">Mocha</a> y <a href="https://github.com/sindresorhus/gulp-mocha">Mocha's plugin for Gulp</a> para conocer más sobre las opciones de Mocha,
 <a href="http://chaijs.com">Chai</a> para aprender a escribir tests con el API <code>expect</code>, <a href="http://cjohansen.no/sinon">Sinon</a> para aprender
 sobre dobles de tests (mocks, spies, stubs) cuando escribas tests.</p>
+
+<h1>Actualización (05-07-2015)</h1>
+
+<p>He seguido ampliando este proyecto, y lo he adaptado para poder escribir código
+ECMAScript 6: <a href="/blog/2015/07/05/escribir-tests-mocha-es6">Escribir y ejecutar tests de Mocha en ES6</a>.</p>
 ]]></content>
   </entry>
   

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: tech talks | R. Chavarria's Blog]]></title>
+  <link href="http://rchavarria.github.io/blog/categories/tech-talks/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.io/"/>
+  <updated>2015-07-12T19:16:19+02:00</updated>
+  <id>http://rchavarria.github.io/</id>
+  <author>
+    <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Charla técnica: Therapeutic refactoring]]></title>
+    <link href="http://rchavarria.github.io/blog/2015/07/12/charla-tecnica-therapeutic-refactoring/"/>
+    <updated>2015-07-12T19:09:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2015/07/12/charla-tecnica-therapeutic-refactoring</id>
+    <content type="html"><![CDATA[<p>Acabo de visualizar la charla <a href="https://www.youtube.com/watch?v=J4dlF0kcThQ">Therapeutical Refactoring</a>, de <a href="https://twitter.com/kytrinyx">Katrina Owen</a>,
+creadora de <a href="http://exercism.io">exercism.io</a>, y me ha encantado.</p>
+
+<p>Es una charla donde nos cuenta la historia de una refactorización. Me ha
+gustado especialmente cómo cuenta la refactorización. Ocultando las partes
+del código que no interesan en el paso actual y resaltando aquellas que
+sí.</p>
+
+<p>Me ha recordado mucho a cómo vemos los desarrolladores el código,
+focalizándonos en pequeños detalles, entremezclados en líneas y líneas de
+código.</p>
+
+<!-- more -->
+
+
+
+
+<iframe width="560"
+        height="315"
+        src="https://www.youtube.com/embed/J4dlF0kcThQ"
+        frameborder="0"
+        allowfullscreen></iframe>
+
+
+<p>En el repositorio <a href="https://github.com/kytrinyx/therapeutic-refactoring">therapeutic-refactoring</a> se pueden ver todos los pasos
+que Katrina ha dado en la refactorización.</p>
+
+<h2>Notas</h2>
+
+<p>Alrededor del minuto 19 nos habla del término <em>codejunk</em>. Codejunk trata
+sobre ruido, ruido que nos molesta para entender el código, pequeños detalles
+que hacen que gastemos más energía de la necesaria para entender qué hace
+el código. Algunos no son errores en sí, pero son como pequeños picores
+que no te dejan disfrutar.</p>
+
+<p>Describe 10 (de menos a más molestos):</p>
+
+<ol>
+<li>Comentarios penosos</li>
+<li>Espacios en blanco al final de las líneas</li>
+<li>Código comentado</li>
+<li>Paréntesis innecesarios</li>
+<li>Parámetros explícitos por defecto</li>
+<li><code>import</code>s o <code>require</code>s (dependiendo del lenguaje) innecesarios</li>
+<li><code>string</code>s hechas de <code>string</code>s</li>
+<li>Demasiado trabajo <em>manual</em> (deja que el pc haga el trabajo, no lo hagas tú)</li>
+<li>Tests duplicados, hay que poner el mismo mimo en el código de tests
+que en el de producción</li>
+<li>Una combinación de todos los anteriores</li>
+</ol>
+
+
+<h2>Moral de la historia</h2>
+
+<p>Refactorizar te da como un cerebro externo (exobrain).
+Cada uno de nosotros podemos retener una cantidad finita de detalles en la
+memoria (me recuerda al post de J.B.Rainsberger
+<a href="http://blog.thecodewhisperer.com/2015/03/28/your-tests-are-dragging-you-down">Your tests are dragging you down</a>). Programar es sobretodo, mantener en
+mente todos esos detalles. Nuestra memoria trabaja peor bajo condiciones
+de miedo o estrés. Refactorizar pone a salvo muchos de estos detalles,
+permitiéndonos trabajar más relajadamente y más confiados en que estamos
+haciendo un buen trabajo.</p>
+]]></content>
+  </entry>
+  
+</feed>
