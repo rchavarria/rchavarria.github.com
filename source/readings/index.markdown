@@ -20,8 +20,8 @@ Así que aquí está mi Lista de Lectura:
 
 ## Estoy leyendo
 
+- [JavaScript patterns](http://www.amazon.co.uk/JavaScript-Patterns-Stoyan-Stefanov/dp/0596806752), de Stoyan Stefanov
 - [The Passionate Programmer](http://pragprog.com/book/cfcar2/the-passionate-programmer), de Chad Fowler
-- [Learning JavaScript design patterns](http://www.amazon.com/Learning-JavaScript-Design-Patterns-Osmani/dp/1449331815/), de Addy Osmani
 - [Notes to a software team leader](https://leanpub.com/teamleader), de Roy Osherove
 - [Expertología](http://www.amazon.es/dp/8492414502), de Andrés Pérez Ortega
 
@@ -80,7 +80,7 @@ Así que aquí está mi Lista de Lectura:
 
 ## He leído
 
-- [JavaScript patterns](/blog/2015/05/29/learning-javascript-design-patterns), de Stoyan Stefanov
+- [Learning JavaScript design patterns](/blog/2015/05/29/learning-javascript-design-patterns), de Addy Osmani ~ *Mayo 2015*
 - [Extreme programming explained](/blog/2015/01/02/extreme-programming-explained), de Kent Beck ~ *Enero 2015*
 - [Stop stealing dreams](/blog/2015/03/13/stop-stealing-dreams), de Seth Godin ~ *Octubre 2014*
 - [How to start a conversation and make friends](/blog/2014/12/05/how-to-start-conversations-and-make-friends), de Don Gabor ~ *Julio 2014*
