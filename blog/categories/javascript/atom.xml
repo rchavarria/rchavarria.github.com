@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: JavaScript | R. Chavarria's Blog]]></title>
+  <title><![CDATA[Category: javascript | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/javascript/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2015-07-12T19:16:19+02:00</updated>
+  <updated>2015-07-20T01:17:08+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -14,496 +14,85 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Plantilla para módulos NodeJS]]></title>
-    <link href="http://rchavarria.github.io/blog/2014/09/24/plantilla-para-modulos-nodejs/"/>
-    <updated>2014-09-24T00:45:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2014/09/24/plantilla-para-modulos-nodejs</id>
-    <content type="html"><![CDATA[<p>Hace poco, viendo los <a href="http://www.carlosble.com/screencasts/es/">screencasts de Carlos Blé</a>
-sobre programación, a un compañero de trabajo le picó la curiosidad e
-intentó repetir el ejercicio que practicaba Carlos. Carlos desarrolla algunos
-screencasts en JavaScript, y utiliza <a href="http://visionmedia.github.io/mocha/">Mocha</a> y <a href="http://chaijs.com">Chai</a> como frameworks para tests.
-Yo recordé haber montado algo parecido algún día, y con este proyecto de github
-quiero ayudar a los demás a que puedan montar un <a href="https://github.com/rchavarria/nodejs-module-template/tree/template-ready">proyecto NodeJS con Gulp, Mocha y Chai</a>.</p>
+    <title type="html"><![CDATA[JavaScript patterns]]></title>
+    <link href="http://rchavarria.github.io/blog/2015/07/19/javascript-patterns/"/>
+    <updated>2015-07-19T21:10:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2015/07/19/javascript-patterns</id>
+    <content type="html"><![CDATA[<h5>de Stoyan Stefanov</h5>
+
+<p><img class="left" src="http://akamaicovers.oreilly.com/images/9780596806767/lrg.jpg" width="250" height="328" title="JavaScript patterns" ></p>
+
+<h2>Por qué lo he leído</h2>
+
+<p>Cuando leí <a href="/blog/2015/05/29/learning-javascript-design-patterns/">Learning JavaScript design patterns</a>, de Addy Osmany, me quedé con
+ganas de más, me equivoqué de libro. El que realmente quería leerme para
+aprender sobre patrones en JavaScript era éste. Pero me dejé llevar por la
+<em>fama</em> de Addy.</p>
+
+<p>El objetivo de leer estos dos libros era el de profundizar en el uso de patrones
+en JavaScript, poder trasladar conocimientos adquiridos en Java, a JavaScript.</p>
 
 <!-- more -->
 
 
-<h1>Plantilla para módulos NodeJS</h1>
+<h2>Qué esperaba</h2>
 
-<p>En este proyecto encontrarás una estructura para módulos <a href="http://nodejs.org">NodeJS</a> lista
-para comenzar a trabajar. El proyecto está compuesto de las siguientes
-librerías:</p>
+<p>Esperaba que fuera un libro muy parecido al mítico <a href="http://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented-ebook/dp/B000SEIBB8">Design patterns</a>, como si
+fuera un catálogo de patrones disponibles, con sus descripciones, situaciones
+donde es recomendable usarlos y también, por qué no, ejemplos de proyectos
+reales.</p>
 
-<ul>
-<li><a href="http://gulpjs.com">Gulp</a>: como herramienta para automatizar tareas</li>
-<li><a href="http://visionmedia.github.io/mocha/">Mocha</a>: como herramienta para ejecutar tests</li>
-<li><a href="http://chaijs.com">Chai</a>: como librería de checkeos (<em>asserts</em> a falta de una traducción mejor)
-para tests</li>
-<li><a href="http://cjohansen.no/sinon">Sinon</a>: como una librería de dobles de tests</li>
-</ul>
+<h2>Qué encontré</h2>
 
+<p>Por supuesto, encontré muchos patrones, pero eso no es lo más llamativo.</p>
 
-<p>En este fichero están las instrucciones para instalar y poner en funcionamiento
-todas estas librerías.</p>
+<p>El autor comenta varios aspectos del lenguaje que son cuanto menos, curiosos. No
+sé si llegan al nivel de <a href="http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742">JavaScript, the good parts</a>, pero deben de andar
+cerca.</p>
 
-<h1>¿Cómo instalar NodeJS?</h1>
-
-<p>Lo primero de todo, instalar NodeJS.</p>
-
-<p>Para instalarlo en Ubuntu, simplemente ejecutar el comando:</p>
-
-<pre><code>sudo apt-get install nodejs
-</code></pre>
-
-<p>Para instalarlo en otros sistemas operativos, visitarla página
-<a href="http://nodejs.org/download">NodeJS download page</a>.</p>
-
-<p>Hay otra forma de instalarlo, y es a través de <code>nvm</code> (<a href="http://carlosazaustre.es/blog/como-instalar-node-js-en-ubuntu">Node Version Manager</a>).</p>
-
-<p>El resto de librerías las instalaremos a través de la herramienta <code>npm</code>.</p>
-
-<h1>Inicializar <code>npm</code></h1>
-
-<p>Ejecutar el comando:</p>
-
-<pre><code>npm init
-</code></pre>
-
-<p>El comando te guiará por unos pasos para introducir información básica del módulo
-donde trabajarás. Entre esa información se encuentra el nombre del proyecto,
-la descripción y la version.</p>
-
-<p>Un fichero <code>package.json</code> tipo podría ser el siguiente:</p>
-
-<pre><code>{
-    "name": "nodejs-module-template",
-    "version": "0.0.0",
-    "description": "A template for NodeJS modules",
-    "main": "index.js",
-    "directories": {
-        "test": "test"
-    },
-    "dependencies": {},
-    "devDependencies": {},
-    "scripts": {
-        "test": "test"
-    },
-    "author": "Ruben Chavarria http://rchavarria.github.io",
-    "license": "BSD-2-Clause"
-}
-</code></pre>
-
-<h1>Instalar Gulp</h1>
-
-<p>Es muy fácil, con <code>npm</code>:</p>
-
-<pre><code>npm install --save-dev gulp
-</code></pre>
-
-<p>El flag <code>--save-dev</code> insertará una nueva línea en el fichero <code>package.json</code> para
-indicar a <code>npm</code> que hay una nueva dependencia para tiempo de desarrollo.</p>
-
-<p>Para comprobar que se ha instalado correctamente, ejecutar el comando
-<code>gulp --version</code>.</p>
-
-<h1>Configurar Gulp</h1>
-
-<p>Crea un fichero <code>gulpfile.js</code> en el directorio raiz del proyecto. El contenido
-del fichero podría ser el siguiente:</p>
-
-<pre><code>var gulp = require('gulp');
-
-gulp.task('default', function() {
-    console.log('Hello gulp!');
-});
-</code></pre>
-
-<p>Ejecuta el comando <code>gulp</code> para ver un mensaje por consola.</p>
-
-<h1>Instalar librerías de tests</h1>
-
-<p>Es tan fácil como instalar Gulp, simplemente escribir el comando:</p>
-
-<pre><code>npm install --save-dev mocha chai sinon sinon-chai
-</code></pre>
-
-<p>Para probar que se ha instalado Mocha adecuadamente, escribir
-<code>node node_modules/mocha/bin/mocha --version</code>.</p>
-
-<h1>Antes de escribir el primer test</h1>
-
-<p>Antes de escribir el primer test, crearemos un fichero de inicializacion para
-Mocha, para inicializar las librerias y evitar tener que escribir el mismo
-código una y otra vez en todos nuestros tests.</p>
-
-<p>Crea un fichero llamado <code>test/bootstrap.js</code> y escribe en él este contenido:</p>
-
-<pre><code>global.chai = require('chai');
-global.sinon = require('sinon');
-global.expect = chai.expect;
-
-var sinonChai = require('sinon-chai');
-chai.use(sinonChai);
-</code></pre>
-
-<p>Esto cargará las librerías Chai y Sinon, crea una variable global llamada
-<code>expect</code> (la usaremos en todos los tests) y configura Chai para que use métodos
-y funcionalidades proporcionados por Sinon.</p>
-
-<p>Ahora, crearemos una tarea en Gulp para ejecutar los tests. Para ello necesitamos
-un plugin de Gulp que sea capaz de lanzar Mocha. Tan fácil como lo anterior:</p>
-
-<pre><code>npm install --save-dev gulp-mocha
-</code></pre>
-
-<p>Luego, edita el fichero <code>gulpfile.js</code> y déjalo como el siguiente:</p>
-
-<pre><code>var gulp = require('gulp'),
-    mocha = require('gulp-mocha');
-
-gulp.task('test', function () {
-    return gulp
-        .src(['test/bootstrap.js', 'test/scripts/**/*.js'])
-        .pipe(mocha({ reporter: 'spec' }));
-});
-</code></pre>
-
-<h1>Ahora sí, el primer test</h1>
-
-<p>Crea un fichero llamado <code>test/scripts/firstSpec.js</code> con el siguiente contenido:</p>
-
-<pre><code>describe('Mocha', function() {
-    it('expects using Chai', function() {
-        expect(2 + 2).equals(4);
-    });
-});
-</code></pre>
-
-<p>Para ejecutar este sencillo test, escribe el comando <code>gulp test</code>.</p>
-
-<h1>Cómo escuchar cambios en ficheros de tests y de producción</h1>
-
-<p>Es posible configurar Gulp para ejecutar una tarea específica cada vez que un
-fichero (o varios) cambia. Configuraremos que se ejecute la tarea <code>test</code> cada
-vez que se cambie un fichero de test o de producción. Para ello, añade la
-siguiente tarea al fichero <code>gulpfile.js</code>.</p>
-
-<pre><code>gulp.task('test-watch', function () {
-    return gulp.watch(['src/scripts/**/*.js', 'test/scripts/**/*.js'], ['test']);
-});
-</code></pre>
-
-<p>Para probar que funciona, escribe el comando <code>gulp test-watch</code>, cambia <code>firstSpec.js</code>
-y guarda los cambios. Verás cómo el test se vuelve a ejecutar automáticamente.</p>
-
-<h1>Por fin, probar algún código de producción</h1>
-
-<p>Escribe un sencillo módulo NodeJS que sume dos enteros, guárdalo como
-<code>src/scripts/adder.js</code>:</p>
-
-<pre><code>module.exports = function adder(a, b) {
-    return a + b;
-};
-</code></pre>
-
-<p>Reemplaza el contenido de <code>test/scripts/firstSpec.js</code> por este otro (o escribe
-tú mismo un nuevo fichero con este test):</p>
-
-<pre><code>describe('Adder module', function() {
-    // imports the adder module
-    var adder = require('../../src/scripts/adder.js');
-
-    it('adds two integers', function() {
-        var sum = adder(2, 2);
-        expect(sum).equals(4);
-    });
-});
-</code></pre>
-
-<p>Lánzalos con <code>gulp test</code>.</p>
-
-<h1>Seguir leyendo</h1>
-
-<p>Puedes leer documentación de <a href="http://gulpjs.com">Gulp</a> para saber cómo crear más y mejores tareas,
-<a href="http://visionmedia.github.io/mocha/">Mocha</a> y <a href="https://github.com/sindresorhus/gulp-mocha">Mocha's plugin for Gulp</a> para conocer más sobre las opciones de Mocha,
-<a href="http://chaijs.com">Chai</a> para aprender a escribir tests con el API <code>expect</code>, <a href="http://cjohansen.no/sinon">Sinon</a> para aprender
-sobre dobles de tests (mocks, spies, stubs) cuando escribas tests.</p>
-
-<h1>Actualización (05-07-2015)</h1>
-
-<p>He seguido ampliando este proyecto, y lo he adaptado para poder escribir código
-ECMAScript 6: <a href="/blog/2015/07/05/escribir-tests-mocha-es6">Escribir y ejecutar tests de Mocha en ES6</a>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Charla técnica: Escribiendo JavaScript sólido como una roca]]></title>
-    <link href="http://rchavarria.github.io/blog/2014/06/26/charla-tecnica-escribe-javascript-como-roca/"/>
-    <updated>2014-06-26T20:00:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2014/06/26/charla-tecnica-escribe-javascript-como-roca</id>
-    <content type="html"><![CDATA[<p>Hace poco, he visto una charla técnica impartida por
-<a href="https://twitter.com/damian">Damian Nicholson</a>
-titulada <em>Writing (testable | maintainable | scalable | rock solid) JavaScript</em>,
-que traduzco libremente como <em>Escribiendo JavaScript sólido como una roca</em>.</p>
-
-<p>En la charla, Damian analiza varios aspectos de porqué es difícil testear
-cierto código JavaScript y finaliza contando su experiencia escribiendo código
-para evitar todos esos errores.</p>
-
-<!-- more -->
-
-
-
-
-<iframe src="http://rchavarria.github.io//player.vimeo.com/video/68526881" width="500" height="161" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-
-<h3>Consejos</h3>
-
-<p>A lo largo de la charla, Damian suelta unos cuantos pequeños consejos:</p>
-
-<ol>
-<li>JavaScript + Unit testing = Good code</li>
-<li>Apóyate en los objetos. Según el conferenciante, los objetos te llevarán a
-diseñar clases, éstas a agruparlas en módulos, y los módulos a organizar mejor
-tus ficheros JavaScript.</li>
-<li>Sobretodo, uno debería testear su API pública, aunque no limitarse a ella.</li>
-</ol>
-
-
-<h3>Problemas a la hora de testear código JavaScript</h3>
-
-<p>A través de un sencillo snipet de código, Damian expone algunos de los problemas
-más comunes a la hora de escribir código JavaScript que lo hace difícilmente
-testeable:</p>
-
-<ul>
-<li>Funciones anónimas.</li>
-<li>Acoplamiento fuerte con el DOM, por ejemplo en el uso y abuso de ids en elementos
-HTML</li>
-<li>Hacer llamadas al servidor mezcladas con otra lógica de nuestra aplicación.</li>
-<li>Callbacks anidados.</li>
-<li>Mezclar código HTML y JavaScript, por ejemplo, excribiendo <em>templates</em> HTML a
-fuego en JavaScript.</li>
-</ul>
-
-
-<h3>Su propia experiencia</h3>
-
-<ul>
-<li>usar data-attributes para parametrizar, o configuraciones. Depender menos de ids
-en los elementos HTML.</li>
-<li>Conocer el ciclo de vida de los frameworks que utilizamos, y <em>engancharnos</em> a los
-eventos del ciclo que dirigen el proceso.</li>
-<li>Aislar nuestra aplicación de los detalles de plugins de terceros (gran consejo éste).</li>
-<li>Apóyate en <a href="http://lostechies.com/derickbailey/2012/10/07/javascript-mixins-beyond-simple-object-extension">mixins</a>.
-Con ellos podrás extender la funcionalidad de tus objetos, de una forma parecida a
-la herencia, aunque muy diferente a ella.</li>
-<li>Mantén funcionalidades privadas en ámbitos privados
-(patrón <a href="http://www.codeproject.com/Articles/247241/Javascript-Module-Pattern">módulo</a>).</li>
-</ul>
-
-
-<h3>Conclusión</h3>
-
-<p>Es una charla eminentemente práctica, por lo que es totalmente recomendable
-si quieres conocer de primera mano buenos consejos sobre cómo escribir código
-JavaScript testeable.</p>
-
-<p>No estoy de acuerdo en todos los consejos que comenta Damian, pero la voz de
-la experiencia tiene muchísimo valor, por lo que la charla me parece fenomenal.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Charla técnica: JavaScript masterclass]]></title>
-    <link href="http://rchavarria.github.io/blog/2014/06/21/charla-tecnica-javascript-masterclass/"/>
-    <updated>2014-06-21T17:23:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2014/06/21/charla-tecnica-javascript-masterclass</id>
-    <content type="html"><![CDATA[<p>Recientemente he visto una charla técnica impartida por
-<a href="https://twitter.com/angelinamagnum">Angelina Fabro</a> titulada <em>JavaScript masterclass</em>.
-En este post quiero dejar unas notas que me gustaría recordar, no es un resumen de la
-charla, pero sí son algunas ideas que me gustaría resaltar.</p>
-
-<p>La primera parte de la charla Angelina explica qué no es un programador junior, y en la
-segunda parte qué no es un programador experto, para terminar sugiriendo unos cuantos
-consejos sobre cómo pasar de un estado a otro.</p>
-
-<!-- more -->
-
-
-<h3>Angelina Fabro, a JavaScript masterclass</h3>
-
-<iframe width="560" height="315" src="http://rchavarria.github.io//www.youtube.com/embed/v0TFmdO4ZP0" frameborder="0" allowfullscreen></iframe>
-
-
-<h3>¿Quién es un gran programador?</h3>
-
-<p>Bueno, pues eso depende de a quién le preguntes, pero algunas respuestas que te
-darán podrían ser:</p>
-
-<ul>
-<li>Aquel que cumple con todas las fechas de entrega (si dejamos a un lado la calidad).</li>
-<li>Aquel que soluciona de la forma más rápida los problemas de los clientes.</li>
-<li>Aquel que hace ganar el mayor dinero posible a los dueños de los negocios.</li>
-<li>Aquel que es el mejor mentor para un programador junior.</li>
-<li>Aquel a quien le encanta unirse a otros programadores en la <em>batalla</em>.</li>
-</ul>
-
-
-<h3>¿Qué necesito aprender para ser uno de ellos?</h3>
-
-<p>Como conclusión a su charla, Angelina nos deja unos cuantos consejos que podemos
-aplicar para dar un salto en nuestra carrera profesional:</p>
-
-<ul>
-<li>Pregúntate <em>¿por qué?</em> obsesivamente, hasta el punto de molestarte a tí mismo.</li>
-<li>Enseña y/o habla en un evento.</li>
-<li>Trabaja a través de una seria de libros recomendados por los que más saben.</li>
-<li>Experimenta alocadamente. Haz barbaridades, al código no le importa ni le hace daño.</li>
-<li>Modela tus propias opiniones, debes tenerlas, debes mojarte.</li>
-<li>Busca a un mentor que te guíe por el camino.</li>
-<li>Programa mucho, mucho. Pero para de vez en cuando, tu cerebro necesita descansos.</li>
-<li>Escribe en varios lenguajes.</li>
-<li>Piensa como un programador aunque no estés cerca de un teclado.</li>
-<li>Aprende a distinguir el buen feedback del malo, y desecha el malo claro.</li>
-<li>Libérate del <a href="https://es.wikipedia.org/wiki/S%C3%ADndrome_del_impostor">síndrome del impostor</a>.</li>
-</ul>
-
+<p>Además, alguno de los patrones difieren de la idea que yo tenía, son muy
+distintos a patrones con el mismo nombre, pero en otros lenguajes de
+programación.</p>
 
 <h2>Conclusiones</h2>
 
-<p>En general, la charla me ha encantado, y me ha dado un poquito de chispa para seguir mejorando
-como profesional y me ha dado nuevas ideas. Aunque no estoy de acuerdo con todos los consejos que
-Angelina propone, me voy a quedar con dos de ellos que no me había planteado hasta ahora:
-pregúntate por qué obsesivamente y experimenta alocadamente.</p>
+<p>Junto con <a href="http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742">JavaScript, the good parts</a>, considero que éste es un libro imprescindible
+para cualquier desarrollador que quiera dominar el lenguaje.</p>
 
-<p>Nos recomienda un libro, <em>The secrets of a JavaScript ninja</em>, de John Resig.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Mi primera aplicación web con AngularJS]]></title>
-    <link href="http://rchavarria.github.io/blog/2013/10/17/primera-aplicacion-angularjs/"/>
-    <updated>2013-10-17T22:00:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2013/10/17/primera-aplicacion-angularjs</id>
-    <content type="html"><![CDATA[<p>Esta semana no he podido aportar ningún tutorial a la serie de
-<a href="/blog/2013/09/03/demos-tecnologias-javaee">demos de tecnologías JavaEE</a> ya
-que he dedicado grandes esfuerzos a realizar una prueba técnica para una
-empresa.</p>
+<p>Explica en profundidad algunos de los patrones más usados en todo tipo de
+proyectos. Quizá, con el nuevo estándard recién aprobado, algunos de ellos
+(como la <em>herencia por prototipos</em>) queden algo obsoletos, creo que es
+un libro imprescindible para entender el lenguaje.</p>
 
-<p>La prueba consitía en realizar una aplicación web, donde el back-end está
-programado en PHP y el front-end en JavaScript, utilizando el framework MVC
-<a href="http://angularjs.org">AngularJS</a>.</p>
+<h2>Qué he aprendido</h2>
 
-<p>Ha sido una experiencia interesantísima. Ya tenía conocimientos de arquitecturas
-MVC, he participado profesionalmente en multitud de desarrollos siguiendo
-este modelo, pero ésta ha sido una oportunidad increíble de conocer un
-framework tan de moda y tan demandado como AngularJS. El proyecto consistía en
-implementar una <a href="http://rct-ytlibrary.herokuapp.com">librería de videos de youtube</a>.</p>
-
-<!-- more -->
-
-
-<p><img class="center" src="/images/2013/ytlibrary-dnd.png" title="Puedes añadir un vídeo arrastrando y soltando" ></p>
-
-<p>En definitiva, he aprovechado esta oportunidad, y con unas pequeñas modificaciones
-a la prueba técnica inicial, he eliminado la necesidad de un back-end, he creado
-un servidor web básico en <em>NodeJS</em>, y he desplegado la aplicación en <em>heroku</em>.</p>
-
-<p>Si te pica la curiosidad y quieres ver el código fuente, lo puedes encontrar en mi
-repositorio de github <a href="http://github.com/rchavarria/ytlibrary">rchavarria/ytlibrary</a>.</p>
-
-<p>La aplicación explota multitud de conceptos de AngularJS:</p>
+<p>Puedes consultar mis <a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/javascript-patterns-by-stoyan-stefanov.markdown">notas sobre el libro</a> si quieres ver todo lo que me
+ha llamado la atención de el mismo. Pero destacaría lo siguiente:</p>
 
 <ul>
-<li>Directivas más comunes: <code>ng-model</code>, <code>ng-repeat</code>, <code>ng-click</code>, ...</li>
-<li>Controladores, <code>angular.controller(...)</code>.</li>
-<li>Servicios, implementados como factorías con <code>angular.factory(...)</code>.</li>
-<li>Directivas, <code>angular.directive(...)</code>.</li>
-<li>Posibilidad de arrastrar y soltar vídeos para añadirlos a la lista.</li>
-<li>Animaciones con el módulo proporcionado por AngularJS <code>ngAnimate</code>.</li>
+<li>Una regla que se repite en muchos patrones: <strong>los miembros a compartir deben
+ir en el prototipo, nunca en el <code>this</code></strong></li>
+<li>Los constructors implícitamente devuelven <code>this</code>, incluso si no hay un
+<code>return</code>, pero tu puedes devolver lo que quieras, incluso puedes redefinir el
+constructor. Esto se hace, por ejemplo, en el patrón Singleton</li>
+<li>En la declaración de una función, su definición también sufre <em>hoisting</em>, no
+solo la declaración</li>
+<li>Métodos clásicos de herencia y herencia de prototipos, aunque esto vaya a
+cambiar con nuevas versiones del lenguaje, con la aparición de clases</li>
+<li>Unas cuantas sugerencias para desplegar grandes aplicaciones: combinar scripts,
+minificarlos, utilizar compresión de archivos, uso de cabeceras HTML, uso de
+CDNs, dónde situar las etiquetas <code>&lt;script&gt;</code>, enviar en trozos grandes ficheros
+HTML.</li>
 </ul>
 
 
-<p><img class="center" src="/images/2013/ytlibrary-video.png" title="Visualizar un vídeo desde la lista" ></p>
-
-<p>Si todavía tienes ganas de más, te invito a que eches un vistazo a
-<a href="http://rct-ytlibrary.herokuapp.com">Youtube library</a>. Por supuesto, si quieres,
-me encantaría que me contases qué te ha parecido.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[solveet: Torres de Hannoi]]></title>
-    <link href="http://rchavarria.github.io/blog/2012/12/12/solveet-torres-de-hannoi/"/>
-    <updated>2012-12-12T09:35:00+01:00</updated>
-    <id>http://rchavarria.github.io/blog/2012/12/12/solveet-torres-de-hannoi</id>
-    <content type="html"><![CDATA[<p>Simplemente para practicar y mejorar mis habilidades como programador, me gusta resolver problemas
-de programación regularmente. Hace un tiempo conocí la página <a href="http://solveet.com">Solveet</a>, y desde
-entonces intento aportar semanalmente alguna que otra solución a los problemas propuestos por otros
-profesionales del desarrollo software.</p>
-
-<p><img class="right" src="http://upload.wikimedia.org/wikipedia/commons/6/60/Tower_of_Hanoi_4.gif" width="320" height="125" title="By André Karwath aka Aka, Own work, CC-BY-SA-2.5, via Wikimedia Commons" ></p>
-
-<p>El problema que he solucionado esta semana es el de las
-<a href="http://www.solveet.com/exercises/Torres-de-Hannoi/72">Torres de Hannoi</a>, todo un clásico en el
-desarrollo software, y en este post intento describir detalladamente cómo he llegado a mi solución.</p>
-
-<!-- more -->
-
-
-<h2>Introducción</h2>
-
-<p>El punto de partida ha sido esta entrada en la wikipedia acerca de las
-<a href="http://es.wikipedia.org/wiki/Torres_de_Han%C3%B3i">Torres de Hannoi</a> donde explica de una forma muy
-básica la forma de solucionarlo. Ahora sólo hay que implementarlo.</p>
-
-<p>Decidí solucionar el problema en javascript, para aprender más sobre este lenguaje, y decidí solucionar
-el problema de forma iterativa, ya que me pareció más sencilla que la forma recursiva. Y ya que estoy
-practicando, intenté llegar a la solución definitiva practicando TDD.</p>
-
-<p>Puedes ver mi solución publicada en <a href="http://www.solveet.com/exercises/Torres-de-Hannoi/72/solution-1051">solveet</a>,
-así como el código completo de la solución y los tests en este repositorio de
-<a href="https://github.com/rchavarria/solveet-problems/tree/master/hannoi-js">github</a>.</p>
-
-<h2>Manos a la obra</h2>
-
-<p>La parte más fácil es mover el anillo más pequeño. Éste hay que moverlo siempre en los pasos impares,
-y siguiendo siempre un de estas dos secuencias:</p>
+<h2>Recursos relacionados</h2>
 
 <ul>
-<li>Si el número de anillos es impar, hay que moverlo a las siguientes torres o varillas:
-destino -> auxiliar -> origen, y así indefinidamente</li>
-<li>Si el número de anillos es par, la secuencia será: auxiliar -> destino -> origen, ...</li>
-</ul>
-
-
-<h2>Movimientos en los pasos pares</h2>
-
-<p>En los pasos pares hay que mover los anillos que no son el anillo más pequeño. El anillo a mover dependerá
-del número de anillos de los que conste el problema.</p>
-
-<p>Al utilizar TDD, he ido descubriendo poco a poco cómo escoger el anillo a mover y dónde moverlo:</p>
-
-<ul>
-<li>1 anillo: no hace falta mover otros anillos ya que con un movimiento está solucionado.</li>
-<li>2 anillos: solo es posible mover el anillo más grande a la torre destino, ya que el anillo más pequeño lo
-habremos movido en el primer movimiento a la torre auxiliar.</li>
-<li>3 anillos: desarrollando manualmente todos los movimientos, el anillo a mover es aquel que no está en la
-torre destino y que tampoco es el anillo más pequeño.</li>
-<li>4 anillos: desarrollando otra vez manualmente todos los movimientos, el anillo a mover es el menor anillo
-(sin ser el más pequeño) y se deberá mover a la única torre posible. Esta torre la sabremos porque es aquella
-torre que no contiene ni el anillo más pequeño ni el anillo a mover.</li>
-</ul>
-
-
-<p>A partir de los 4 anillos, la solución ya funciona con cualquier número de anillos.</p>
-
-<h4>Reconocimientos</h4>
-
-<ul>
-<li>Imagen By André Karwath aka Aka (Own work) <a href="http://creativecommons.org/licenses/by-sa/2.5">CC-BY-SA-2.5</a>, via <a href="http://commons.wikimedia.org/wiki/File%3ATower_of_Hanoi_4.gif">Wikimedia Commons</a></li>
+<li><a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/javascript-patterns-by-stoyan-stefanov.markdown">notas sobre el libro</a></li>
+<li><a href="/blog/2015/05/29/learning-javascript-design-patterns/">Learning JavaScript design patterns</a>, libro de Addy Osmany</li>
+<li><a href="http://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented-ebook/dp/B000SEIBB8">Design patterns</a>, libro de The Gang of Four</li>
+<li><a href="http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742">JavaScript, the good parts</a>, libro de Douglas Crockford</li>
 </ul>
 
 ]]></content>

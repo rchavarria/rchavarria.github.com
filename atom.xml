@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2015-07-12T19:16:19+02:00</updated>
+  <updated>2015-07-20T01:17:08+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,91 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript patterns]]></title>
+    <link href="http://rchavarria.github.io/blog/2015/07/19/javascript-patterns/"/>
+    <updated>2015-07-19T21:10:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2015/07/19/javascript-patterns</id>
+    <content type="html"><![CDATA[<h5>de Stoyan Stefanov</h5>
+
+<p><img class="left" src="http://akamaicovers.oreilly.com/images/9780596806767/lrg.jpg" width="250" height="328" title="JavaScript patterns" ></p>
+
+<h2>Por qué lo he leído</h2>
+
+<p>Cuando leí <a href="http://rchavarria.github.io/blog/2015/05/29/learning-javascript-design-patterns/">Learning JavaScript design patterns</a>, de Addy Osmany, me quedé con
+ganas de más, me equivoqué de libro. El que realmente quería leerme para
+aprender sobre patrones en JavaScript era éste. Pero me dejé llevar por la
+<em>fama</em> de Addy.</p>
+
+<p>El objetivo de leer estos dos libros era el de profundizar en el uso de patrones
+en JavaScript, poder trasladar conocimientos adquiridos en Java, a JavaScript.</p>
+
+<!-- more -->
+
+
+<h2>Qué esperaba</h2>
+
+<p>Esperaba que fuera un libro muy parecido al mítico <a href="http://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented-ebook/dp/B000SEIBB8">Design patterns</a>, como si
+fuera un catálogo de patrones disponibles, con sus descripciones, situaciones
+donde es recomendable usarlos y también, por qué no, ejemplos de proyectos
+reales.</p>
+
+<h2>Qué encontré</h2>
+
+<p>Por supuesto, encontré muchos patrones, pero eso no es lo más llamativo.</p>
+
+<p>El autor comenta varios aspectos del lenguaje que son cuanto menos, curiosos. No
+sé si llegan al nivel de <a href="http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742">JavaScript, the good parts</a>, pero deben de andar
+cerca.</p>
+
+<p>Además, alguno de los patrones difieren de la idea que yo tenía, son muy
+distintos a patrones con el mismo nombre, pero en otros lenguajes de
+programación.</p>
+
+<h2>Conclusiones</h2>
+
+<p>Junto con <a href="http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742">JavaScript, the good parts</a>, considero que éste es un libro imprescindible
+para cualquier desarrollador que quiera dominar el lenguaje.</p>
+
+<p>Explica en profundidad algunos de los patrones más usados en todo tipo de
+proyectos. Quizá, con el nuevo estándard recién aprobado, algunos de ellos
+(como la <em>herencia por prototipos</em>) queden algo obsoletos, creo que es
+un libro imprescindible para entender el lenguaje.</p>
+
+<h2>Qué he aprendido</h2>
+
+<p>Puedes consultar mis <a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/javascript-patterns-by-stoyan-stefanov.markdown">notas sobre el libro</a> si quieres ver todo lo que me
+ha llamado la atención de el mismo. Pero destacaría lo siguiente:</p>
+
+<ul>
+<li>Una regla que se repite en muchos patrones: <strong>los miembros a compartir deben
+ir en el prototipo, nunca en el <code>this</code></strong></li>
+<li>Los constructors implícitamente devuelven <code>this</code>, incluso si no hay un
+<code>return</code>, pero tu puedes devolver lo que quieras, incluso puedes redefinir el
+constructor. Esto se hace, por ejemplo, en el patrón Singleton</li>
+<li>En la declaración de una función, su definición también sufre <em>hoisting</em>, no
+solo la declaración</li>
+<li>Métodos clásicos de herencia y herencia de prototipos, aunque esto vaya a
+cambiar con nuevas versiones del lenguaje, con la aparición de clases</li>
+<li>Unas cuantas sugerencias para desplegar grandes aplicaciones: combinar scripts,
+minificarlos, utilizar compresión de archivos, uso de cabeceras HTML, uso de
+CDNs, dónde situar las etiquetas <code>&lt;script&gt;</code>, enviar en trozos grandes ficheros
+HTML.</li>
+</ul>
+
+
+<h2>Recursos relacionados</h2>
+
+<ul>
+<li><a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/javascript-patterns-by-stoyan-stefanov.markdown">notas sobre el libro</a></li>
+<li><a href="http://rchavarria.github.io/blog/2015/05/29/learning-javascript-design-patterns/">Learning JavaScript design patterns</a>, libro de Addy Osmany</li>
+<li><a href="http://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented-ebook/dp/B000SEIBB8">Design patterns</a>, libro de The Gang of Four</li>
+<li><a href="http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742">JavaScript, the good parts</a>, libro de Douglas Crockford</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Charla técnica: Therapeutic refactoring]]></title>
@@ -3225,282 +3310,6 @@ sobre dobles de tests (mocks, spies, stubs) cuando escribas tests.</p>
 
 <p>He seguido ampliando este proyecto, y lo he adaptado para poder escribir código
 ECMAScript 6: <a href="http://rchavarria.github.io/blog/2015/07/05/escribir-tests-mocha-es6">Escribir y ejecutar tests de Mocha en ES6</a>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Charla sobre eXtreme Programming]]></title>
-    <link href="http://rchavarria.github.io/blog/2014/09/20/charla-sobre-extreme-programming/"/>
-    <updated>2014-09-20T01:27:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2014/09/20/charla-sobre-extreme-programming</id>
-    <content type="html"><![CDATA[<p><img class="right" src="http://rchavarria.github.io/images/2014/xppractices.jpg" width="360" height="270" title="Prácticas de eXtreme Programming" ></p>
-
-<p>Recientemente he dado una charla en el trabajo acerca de <a href="http://www.extremeprogramming.org">eXtreme Programming</a>.
-No es nada del otro mundo, tampoco pretendo dar lecciones a nadie y tampoco
-he descubierto nada que no estuviera escrito ya. Pero al hacer la charla he
-reunido un poco de información de aquí y de allá, y ya que he hecho ese
-pequeño esfuerzo, ¿por qué no plasmarlo aquí?</p>
-
-<p>A continuación os dejo el guión que escribí mientras la preparaba. No conté
-todo lo que está, ni está todo lo que conté, pero este fue mi pequeño trabajo
-de campo.</p>
-
-<!-- more -->
-
-
-<h2>Introducción al desarrollo ágil de software</h2>
-
-<p>El desarrollo de software comenzó siendo hecho por ingenieros, de los de toda
-la vida (que no quiere decir que sea malo, pero como veremos fue diferente),
-lo que condicionó su forma de hacerlo, pero construir software es más parecido
-a crear una obra de arte: requiere <em>creatividad</em> y <em>artesanía</em>.</p>
-
-<p>A diferencia de otros productos de la ingeniería, el software es maleable,
-muchas veces ilógico y siempre se encuentra incompleto (por eso se parece
-a una obra de arte).</p>
-
-<p>Al entender estas diferencias es cuando empiezan a surgir nuevas forma de
-desarrollar software, como el desarrollo ágil de software.</p>
-
-<p>No existen metodologías o procesos ágiles (en contra de todo lo que se vende
-últimamente), sólo existen <strong>equipos ágiles</strong>. Eso que se describe como
-metodología ágil no es más que la construcción de un entorno para que los
-equipos aprendan a ser ágiles.</p>
-
-<p>Diferencias con lo que se venía haciendo hasta ahora:</p>
-
-<ul>
-<li>La forma en la que el equipo trabaja junto es más importante que cualquier
-proceso (gente y comunicación frente a procesos y herramientas).</li>
-<li>El cliente, el usuario, pasa a ser un miembro esencial del equipo.</li>
-<li>El mayor problema con el desarrollo de software son los requisitos
-cambiantes. Para la mayoría de los proyectos, aceptar los cambios puede
-costar menos que asegurar que los requisitos no van a cambiar nunca.</li>
-</ul>
-
-
-<p>Al cambiar la forma de ver los cambios, resulta que es más fácil cambiar cómo
-se gestionan los proyectos. En lugar de gestionar actividades y esperar al
-final del todo a tener una aplicación, los agilistas gestionan los requisitos
-(aceptando que éstos van a cambiar) y se muestra al cliente cómo la aplicación
-va cambiando con el tiempo.</p>
-
-<h2>Gestión por funcionalidades</h2>
-
-<p>En la gestión tradicional, se planifican las actividades una detrás de otra,
-cuando finaliza una comienza la siguiente. Así hasta el final del proyecto.
-Es entonces la única vez donde se muestra el software creado.</p>
-
-<p>¿Cómo funciona? Los requisitos son constantes a lo largo del tiempo, y fluyen a
-través de las actividades como por una línea de montaje. Cada actividad finaliza
-con los requisitos a la vez  y al final de la línea se entrega un software.
-Podemos tener gente especializada en cada actividad, e ir cambiando de equipo
-según vamos cambiando de actividad. La única pega que tiene es que los requisitos
-no son constantes, por lo que todo lo demás no sirve de nada.</p>
-
-<p>¿Y Agile? Agile considera que los requisitos no son constantes. Cada requisito,
-cada funcionalidad se presenta al cliente como una Historia de Usuario. El gráfico
-anterior se gira 90º y el proceso en sí mismo es el que permanece constante. Se
-planifican los requisitos por prioridad, y se va trabajando uno a uno pasándolo por
-todas las actividades, por lo que vamos teniendo requisitos completos poco a poco.
-Tener los requisitos priorizados permite cambiarlos a antojo. Y no solo eso,
-también permite finalizar el proyecto en el momento en el que queramos.</p>
-
-<p>Este giro de 90º permite a los managers a tener una estimación de coste por
-requisito, no por actividad.</p>
-
-<p>Uno de los costes de gestionar requisitos es que siempre hay que estar listo para
-nuevas funcionalidades, por lo que se debe mantener una calidad muy alta tanto en
-diseño como en código.</p>
-
-<h2>Cómo evoluciona el software</h2>
-
-<p>En todo desarrollo de software llega un momento en el al que arreglar un bug,
-resulta que se crean uno o varios pequeños bugs por ahí dispersos.</p>
-
-<p>Barry Boehm ya encontró que según va avanzando un proyecto software en su ciclo
-de vida, el coste de un cambio se vuelve cada vez más y más grande. Un concepto
-que lo explica mejor podría ser el Principio de Oxidación del Software.</p>
-
-<p>Esta curva se comenzó interpretando de forma que se debían crear documentos de
-requisitos lo más detallados y lo más estáticos posibles. Agile no lo considera
-así, en lugar de eso se prepara para que los cambios en los requisitos cuesten
-poco.</p>
-
-<p>Para eso, y para combatir la oxidación del software, Agile propone:</p>
-
-<ul>
-<li>Refactorizar: hacerlo sin descanso, sin límites, sin parar, sin excusas…
-refactoriza</li>
-<li>Tests: unitarios y de aceptación. También se aceptan otros: de integración,
-de sistema, de lo que sea, pero tests. Automáticos, eso si. Con ellos se logra
-eliminar el miedo a los cambios.</li>
-<li>Entrega temprana y frecuente: con ello se aumenta el feedback del cliente y
-ayuda a identificar cambios. Y cuanto antes se detecten estos cambios, menor
-coste tendrán.</li>
-</ul>
-
-
-<p>¿Cómo mantener la capacidad de poder realizar cambios manteniendo el coste en
-niveles aceptables? Sólo porque el cliente no vea el código no significa que
-no tengamos que hacer esfuerzo para mantener la capacidad de realizar cambios.
-Y esto se consigue manteniendo un alto nivel de calidad, una baja complejidad
-y una cobertura de tests lo más alta posible.</p>
-
-<h2>Introducción a XP</h2>
-
-<p>El primer proyecto en el que se usó eXtreme Programming comenzó el 6 de marzo
-de 1996. XP es uno de los famosos Procesos Ágiles, entre los que se encuentran
-Scrum, Kanban,…</p>
-
-<p>En lugar de entregar todo lo que el cliente desea en un futuro lejano, XP va
-entregando el software trocito a trocito, según se va necesitando.</p>
-
-<p>XP hace hincapié en el trabajo en equipo. Managers, clientes y programadores
-forman parte del mismo equipo. Los clientes se sienten bien siendo parte del
-equipo, los programadores contribuyen activamente y los managers se encargan
-de que exista una buena comunicación.</p>
-
-<p>¿Por qué extremo? Por una serie de reglas y prácticas las lleva a su máxima
-expresión, mucho más que en proyectos tradicionales.</p>
-
-<h2>De vuelta a lo básico, qué es lo que en realidad importa</h2>
-
-<p>Como ya sabemos, crear software es muy complicado. Por lo que no tiene sentido
-perder el tiempo en tareas que no importan. XP se deshace de tareas o actividades
-que se consideran que no aportan valor.</p>
-
-<p>XP tiene una serie de reglas que se pueden englobar en estos cuatro aspectos:</p>
-
-<ul>
-<li><em>Escuchar</em>: hay que aprender, hay que conocer el problema. Eso te dirá qué es
-lo que debes testear. Como probablemente no lo averigües tú solo, deberás
-escuchar a los clientes, a los usuarios, managers y demás gente de negocio.</li>
-<li><em>Diseñar</em>: hay que escuchar lo que el código nos cuenta acerca de cómo quiere
-estar estructurado, y darle forma poco a poco.</li>
-<li><em>Codificar</em>: si al final del día no hay un software ejecutable, no habrás
-hecho nada.</li>
-<li><em>Testear</em>: hay que saber cuándo hemos terminado. De otra forma, estarás atascado
-pensando si todo cumple con lo establecido o no. Pero lo peor de todo, es que
-tampoco vas a saber cómo de cerca estás de tu destino.</li>
-</ul>
-
-
-<h2>Reglas</h2>
-
-<p>Algunas reglas sueltas quizá no tengan sentido, pero combinadas se puede ver
-hacia dónde van, qué es lo que quieren conseguir.</p>
-
-<h3>Escuchar</h3>
-
-<p>Se escriben Historias de Usuario (las cuales son el corazón de la planificación
-en un proyecto XP).</p>
-
-<p>El proyecto se divide en iteraciones o sprints.</p>
-
-<p>Al final de cada iteración, se realiza una pequeña entrega de funcionalidades.</p>
-
-<p>Se crean tres niveles de planificación:</p>
-
-<ul>
-<li>Release plan: mira hacia el futuro unos cuantos meses y agrupa historias
-en grandes entregas.</li>
-<li>Next Iteration plan: se agrupan las historias que se van a realizar en
-la próxima iteración.</li>
-<li>Current Iteration plan: las historias definidas para esta iteración se
-dividen hasta que se encuentran tareas que se pueden acometer fácilmente.
-Los planes se toman como algo vivo, no como algo estático. Si el cliente
-cambia de idea, se cambian los planes. Si el equipo se retrasa en una entrega,
-se cambian los planes.</li>
-</ul>
-
-
-<p>Se intenta conseguir un Ritmo Sostenible.</p>
-
-<p>Cada dia comienza con un Stand-up Meeting.</p>
-
-<p>Se mide la Velocidad del Proyecto.</p>
-
-<p>Se favorecen los Espacios Abiertos y se fomenta la Movilidad de las Personas.</p>
-
-<h3>Diseñar</h3>
-
-<p>Simplicidad, se busca siempre lo más sencillo posible. Para poder mostrárselo
-al cliente lo antes posible y obtener feedback.</p>
-
-<p>Siempre se usa una Metáfora del Sistema, se busca usar el lenguaje propio
-del negocio, la jerga que se usa en el entorno para el cual se está
-desarrollando el software.</p>
-
-<p>Se crean Spikes, para reducir riesgos.</p>
-
-<p>Ninguna funcionalidad se añade prematuramente (yagni).</p>
-
-<p>Se Refactoriza en cualquier momento y en cualquier lugar que sea posible.</p>
-
-<p>Se usan Tarjetas CRC para las decisiones de diseño. Así, todos los miembros
-del equipo entienden y contribuyen al diseño.</p>
-
-<h3>Codificar</h3>
-
-<p>El cliente siempre está disponible para resolver dudas sobre el software.</p>
-
-<p>El código se escribe siguiendo unos Estándares consensuados por el equipo.</p>
-
-<p>Primero, se escriben los Tests Unitarios, luego el código de producción.</p>
-
-<p>Todo el código de producción se escribe mientras se Programa por Parejas.</p>
-
-<p>Se Integra Frecuentemente, mejor con Integración Contínua.</p>
-
-<p>El código es de todos, Collective Ownership.</p>
-
-<h3>Testear</h3>
-
-<p>En un proyecto XP, los programadores toman la actitud de ser ellos quien
-demuestran al cliente que los requisitos funcionan, y no al revés, no es
-el cliente quien demuestra que lo que pidió no funciona.</p>
-
-<p>Todo el código debe tener Tests Unitarios. Y todos los tests pasan antes
-de sacar una versión.</p>
-
-<p>Cuando se encuentra un bug, se crea un test para reproducirlo, arreglarlo,
-y que nunca vuelva a salir una versión con ese bug.</p>
-
-<p>Se escriben Tests de Aceptación. Se ejecutan frecuentemente y su puntuación
-se hace pública.</p>
-
-<h2>Valores</h2>
-
-<p>XP mejora un proyecto software en cinco aspectos fundamentales, que se han
-convertido en los valores de XP. Las reglas que acabamos de ver son consecuencia
-de maximizar estos valores.</p>
-
-<ul>
-<li>Simplicidad: se hace lo que es necesario, pero nada más. No se añade complejidad
-extra porque sí. Se avanza a pasos pequeños pero firmes.</li>
-<li>Comunicación: todo el mundo es parte del equipo. Siempre que se pueda, la
-comunicación es cara a cara.</li>
-<li>Feedback: al final de cada iteración se entrega un software ejecutable y
-válido. Se demuestra el software pronto y frecuentemente.</li>
-<li>Respeto: todo el mundo da y recibe respeto. Los programadores respetan la
-experiencia de los clientes y al revés.</li>
-<li>Coraje: siempre se dice la verdad sobre las estimaciones y el estado de las
-tareas.</li>
-</ul>
-
-
-<h2>Para seguir leyendo</h2>
-
-<ul>
-<li><a href="http://www.adictosaltrabajo.com/detalle-noticia.php?noticia=379">Principio de oxidación del software (Spanish)</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Barry_Boehm">Barry Boehm</a></li>
-<li><a href="http://www.extremeprogramming.org/lessons.html">XP lessons learned</a></li>
-<li><a href="http://www.extremeprogramming.org/when.html">When should XP be used</a></li>
-<li><a href="http://www.agile-process.org">Agile process</a></li>
-<li><a href="http://www.amazon.com/Extreme-Programming-Explained-Embrace-Edition/dp/0321278658">Extreme programming explained</a></li>
-</ul>
-
 ]]></content>
   </entry>
   
