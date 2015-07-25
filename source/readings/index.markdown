@@ -44,6 +44,7 @@ Así que aquí está mi Lista de Lectura:
 - [Getting real: how to build a successful web app](https://gettingreal.37signals.com/), de 37signals, recomendado por los organizadores del Codemotion 2014
 - [Soft Skills: The software developer's life manual](http://www.amazon.com/gp/product/1617292397/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1617292397&linkCode=as2&tag=makithecompsi-20&linkId=YNX4566EEVSNF3IL), de John Sonmez, recomendado por [Alberto Moratilla](http://twitter.com/4lberto), dice que las valoraciones en Amazon son estupendas
 - [Working effectively with Unit Tests](https://leanpub.com/wewut?a=240G6_z5rAtB5wcgCycYSB), de Jay Fields, recomendado en [That podcast](http://thatpodcast.io)
+- [Refactoring to patterns](http://www.amazon.com/gp/product/0321213351), de Joshua Kerievsky
 - [Agile software development](http://www.amazon.com/Agile-Software-Development-Alistair-Cockburn/dp/0201699699), de Alistair Cockburn
 - [Never eat alone](http://www.amazon.com/Never-Eat-Alone-Secrets-Relationship/dp/0385512058), de Keith Ferrazi
 - [Defiende tu dinero](http://www.casadellibro.com/libro-defiende-tu-dinero/9788466651899/2016460), de Simón Pérez y Marcos Cirera, recomendado por [Guillermo Montoya](https://twitter.com/gmfdsr)
