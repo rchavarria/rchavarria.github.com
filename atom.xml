@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2015-07-20T01:17:08+02:00</updated>
+  <updated>2015-07-27T01:30:44+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,112 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Análisis de consumo de memoria en tests de AngularJS]]></title>
+    <link href="http://rchavarria.github.io/blog/2015/07/26/consumo-memoria-tests-angularjs/"/>
+    <updated>2015-07-26T22:10:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2015/07/26/consumo-memoria-tests-angularjs</id>
+    <content type="html"><![CDATA[<p>Hoy en día no concibo desarrollar una aplicación sin una batería de tests
+automáticos (unitarios, de integración, end-to-end, del tipo que sean).
+Da igual el tamaño del proyecto. Pero además, si se trata de una aplicación
+JavaScript, tener tests es una obligación.</p>
+
+<p><a href="http://angularjs.org">AngularJS</a> es un framework que pone las cosas fáciles para comenzar a escribir
+tests. Incluso la propia aplicación de ejemplo ya viene preparada para
+escribir tests con <a href="https://jasmine.github.io">Jasmine</a> y ejecutarlos con <a href="https://karma-runner.github.io">KarmaJS</a> en tu navegador.</p>
+
+<p>Si el proyecto es muy grande, llegará un punto en el que haya cientos de tests
+automáticos, quizá miles, por lo que ejecutar todos los tests en el navegador
+se puede considerar como la ejecución de una gran aplicación. Por lo tanto
+habrá que tener en cuenta aspectos de rendimiento, consumo de memoria (y
+liberación de la misma), posibles <em>memory leaks</em>,&#8230;</p>
+
+<!-- more -->
+
+
+<p>Eso justo es lo que está pasando en mi equipo. Nuestro proyecto está en un
+estado avanzado de desarrollo, y comenzamos a tener un número considerable de
+tests automáticos en la parte cliente. Para ejecutar los tests en el servidor
+de integración contínua utilizamos <a href="http://phantomjs.org">PhantomJS</a>. Pero parece ser que PhantomJS
+tiene algunos problemillascon la gestión de memoria, y hemos sobrepasado su
+límite. PhantomJS no puede ejecutar toda nuestra batería de tests de una sola
+vez. Así que nos estamos planteando si quizá son nuestros tests quienes tienen
+algún problema con la memoria, quizá podríamos hacer algo para no consumir
+tantos recursos.</p>
+
+<h2>Hipótesis</h2>
+
+<p>Una idea para solucionarlo pasa por reducir la cantidad de código JavaScript a
+cargar y ejecutar en cada test. ¿Qué tal si en lugar de cargar el módulo
+principal de AngularJS completo (donde está contenida toda nuestra aplicación),
+cargamos solamente aquel módulo que contenga la funcionalidad a probar en el
+test?</p>
+
+<p>Pero esto es sólo una hipótesis, no vamos a modularizar toda la aplición en
+módulos minúsculos sin tener ningún dato sobre el que apoyarnos. Por lo tanto,
+vamos a realizar la siguiente prueba: añadiremos un nuevo módulo, minúsculo. En
+este módulo crearemos una factoría, con un método al que llamaremos tantas veces
+sea necesario para hacer que los tests consuman una cantidad apreciable de
+memoria y CPU. Ejecutaremos dos baterías de tests, con los mismos tests: una
+cargando el módulo que contiene toda la aplicación, otra cargando solamente el
+módulo pequeño.</p>
+
+<h2>Aplicación completa</h2>
+
+<p><img class="center" src="http://rchavarria.github.io/images/2015/memory-benchmark-big.thumbnail.png"></p>
+
+<p><a href="http://rchavarria.github.io/images/2015/memory-benchmark-big.png">Ver la imagen en grande</a></p>
+
+<p>Podemos apreciar como la ejecución de la batería de tests dura aproximadamente
+unos 8 segundos (desde 4.5s hasta 12.25s). En cuanto a consumo de memoria, el
+rango va de un mínimo de 10Mb a un máximo de 108Mb.</p>
+
+<p>Se puede apreciar cómo el consumo de memoria va dibujando unos dientes de sierra.
+Éste dibujo es muy típico en los análisis de memoria (hay momentos en los que
+se reserva memoria y el consumo aumenta, pasado un pequeño espacio de tiempo,
+objetos en memoria se dejan de usar y ésta es liberada, que es cuando la gráfica
+baja de golpe). Pero la mala noticia es que el consumo va cada vez a más, no se
+libera la misma cantidad que se reserva, lo que indica que hay muchas referencias
+a objectos que no se eliminan correctamente. Incluso después de haber terminado
+la ejecución de los tests, el navegador no considera que deba liberar memoria.</p>
+
+<h2>Módulo pequeño</h2>
+
+<p><img class="center" src="http://rchavarria.github.io/images/2015/memory-benchmark-small.thumbnail.png"></p>
+
+<p><a href="http://rchavarria.github.io/images/2015/memory-benchmark-small.png">Ver la imagen en grande</a></p>
+
+<p>El tiempo de ejecución de esta batería de tests es de 1s, de 3.25s a 4.25s,
+(esta gráfica muestra intervalos de 500ms). El consumo de memoria sube
+rápidamente, con un mínimo de 11Mb y un máximo de 42.5Mb.</p>
+
+<p>Esta vez, casi no se aprecian los dientes de sierra, quizá porque la ejecución
+es mucho más rápida y el navegador no considera que haya que liberar memoria de
+forma agresiva durante el tiempo que dura la ejecución. Aquí se puede observar
+claramente cómo después de que los tests hayan terminado, pasado un tiempo, el
+navegador es capaz de liberar prácticamente toda la memoria consumida por los
+tests. Esto es muy buena señal.</p>
+
+<h2>Conclusiones</h2>
+
+<p>Con este pequeño análisis queda bastante claro que tener módulos pequeños hace
+que nuestros tests se ejecuten mucho más rápido (el tiempo de ejecución baja de
+8s a 1s) y consuman mucha menos memoria (el máximo baja de 108Mb a 42.5Mb).
+También se puede deducir que en módulos pequeños hay un riesgo más bajo de sufrir <em>memory leaks</em>.</p>
+
+<p>En este caso, al usar un módulo muy pequeño y no observar <em>memory leaks</em>, se
+deduce que los <em>leaks</em> que se observan en la aplicación en su conjunto deben de
+estar en otro módulo. Esto nos ayuda a aislar partes de nuestra aplicación y
+poder reducir la cantidad de código a analizar para encontrar el problema.</p>
+
+<p>Estábamos en lo cierto con nuestra hipótesis, módulos pequeños hacen que los
+tests sean más rápidos y más eficientes en el consumo de memoria. Por lo tanto,
+parece buena idea <strong>modularizar una aplicación</strong> con un tamaño considerable, y al
+ejecutar los tests <strong>cargar sólo los módulos necesarios</strong> para que se ejecute esa
+suite de tests, no cargar módulos redundantes.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[JavaScript patterns]]></title>
@@ -3081,235 +3187,56 @@ contara las palabras por mí. En lugar de eso, encontré un comando:</p>
 </ul>
 
 
+<h3>(Julio 2015) <a href="https://www.youtube.com/watch?v=wlR5gYd6um0">Mastering the Vim language</a>, Chris Toomey</h3>
+
+<ul>
+<li>Priorizar <em>text objects</em> frente a movimientos (<code>iw</code> frente a <code>w</code>), hacen que
+los comandos sean más repetibles, ya que seleccionan mejor. El movimiento <code>w</code>
+sólo selecciona la palabra si el cursor está al inicio de la misma.</li>
+<li><a href="https://github.com/tpope/vim-repeat">repeat.vim</a> es un plugin que que remapea <code>.</code> (commando repetir) de tal forma
+que los comandos de los plugins sean compatibles con <code>.</code></li>
+<li><code>:set relativenumber</code>, <code>:set norelativenumber</code>, para ver el número de líneas
+relativas respecto a la que está el cursor</li>
+</ul>
+
+
+<p><strong>Algunos plugins</strong></p>
+
+<ul>
+<li><a href="https://github.com/tpope/vim-surround">surround plugin</a>:
+
+<ul>
+<li><code>ds"</code> : borra las comillas dobles de alrededor</li>
+<li><code>cs"'</code> : cambia las comillas dobles que encierran el texto por comillas simples</li>
+<li>y unos cuantos más, como <code>cst&lt;text&gt;</code> para cambiar tags HTML</li>
+</ul>
+</li>
+<li><a href="https://github.com/tpope/vim-commentary">commentary plugin</a>: parece mucho más potente que el que proporciona comandos
+<code>gcc</code> y demás. éste proporciona <code>cm&lt;motion&gt;</code>, por ejemplo: <code>cml</code> (comenta línea),
+<code>cm4j</code> (commenta 4 líneas hacia abajo)</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=2703">replace with register plugin</a>: con el comando <code>gr&lt;motion&gt;</code>, por ejemplo,
+si tengo copiada una palabra, puedo hacer <code>griw</code> para <em>go replace inner word</em></li>
+<li><a href="https://github.com/christoomey/vim-sort-motion">sort-motion plugin</a>: con el comando <code>gs&lt;motion&gt;</code> lo que hace es ordenar
+líneas alfabéticamente (para imports, requires,&#8230;)</li>
+<li><a href="https://github.com/christoomey/vim-system-copy">system-copy plugin</a>: para copiar al portapapeles del sistema</li>
+</ul>
+
+
+<p><strong>Text objects personalizados</strong></p>
+
+<ul>
+<li>indentación: <code>cmii</code>, <code>cmni"</code></li>
+<li>entero: <code>cmae</code> (<strong>c</strong>omment <strong>a</strong>ll <strong>e</strong>ntire, comenta el documento entero)</li>
+<li>línea: <code>cml</code></li>
+</ul>
+
+
 <!--
 Next: [Globals, commands and functions](http://vimeo.com/15443936)
 -->
 
 
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Plantilla para módulos NodeJS]]></title>
-    <link href="http://rchavarria.github.io/blog/2014/09/24/plantilla-para-modulos-nodejs/"/>
-    <updated>2014-09-24T00:45:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2014/09/24/plantilla-para-modulos-nodejs</id>
-    <content type="html"><![CDATA[<p>Hace poco, viendo los <a href="http://www.carlosble.com/screencasts/es/">screencasts de Carlos Blé</a>
-sobre programación, a un compañero de trabajo le picó la curiosidad e
-intentó repetir el ejercicio que practicaba Carlos. Carlos desarrolla algunos
-screencasts en JavaScript, y utiliza <a href="http://visionmedia.github.io/mocha/">Mocha</a> y <a href="http://chaijs.com">Chai</a> como frameworks para tests.
-Yo recordé haber montado algo parecido algún día, y con este proyecto de github
-quiero ayudar a los demás a que puedan montar un <a href="https://github.com/rchavarria/nodejs-module-template/tree/template-ready">proyecto NodeJS con Gulp, Mocha y Chai</a>.</p>
-
-<!-- more -->
-
-
-<h1>Plantilla para módulos NodeJS</h1>
-
-<p>En este proyecto encontrarás una estructura para módulos <a href="http://nodejs.org">NodeJS</a> lista
-para comenzar a trabajar. El proyecto está compuesto de las siguientes
-librerías:</p>
-
-<ul>
-<li><a href="http://gulpjs.com">Gulp</a>: como herramienta para automatizar tareas</li>
-<li><a href="http://visionmedia.github.io/mocha/">Mocha</a>: como herramienta para ejecutar tests</li>
-<li><a href="http://chaijs.com">Chai</a>: como librería de checkeos (<em>asserts</em> a falta de una traducción mejor)
-para tests</li>
-<li><a href="http://cjohansen.no/sinon">Sinon</a>: como una librería de dobles de tests</li>
-</ul>
-
-
-<p>En este fichero están las instrucciones para instalar y poner en funcionamiento
-todas estas librerías.</p>
-
-<h1>¿Cómo instalar NodeJS?</h1>
-
-<p>Lo primero de todo, instalar NodeJS.</p>
-
-<p>Para instalarlo en Ubuntu, simplemente ejecutar el comando:</p>
-
-<pre><code>sudo apt-get install nodejs
-</code></pre>
-
-<p>Para instalarlo en otros sistemas operativos, visitarla página
-<a href="http://nodejs.org/download">NodeJS download page</a>.</p>
-
-<p>Hay otra forma de instalarlo, y es a través de <code>nvm</code> (<a href="http://carlosazaustre.es/blog/como-instalar-node-js-en-ubuntu">Node Version Manager</a>).</p>
-
-<p>El resto de librerías las instalaremos a través de la herramienta <code>npm</code>.</p>
-
-<h1>Inicializar <code>npm</code></h1>
-
-<p>Ejecutar el comando:</p>
-
-<pre><code>npm init
-</code></pre>
-
-<p>El comando te guiará por unos pasos para introducir información básica del módulo
-donde trabajarás. Entre esa información se encuentra el nombre del proyecto,
-la descripción y la version.</p>
-
-<p>Un fichero <code>package.json</code> tipo podría ser el siguiente:</p>
-
-<pre><code>{
-    "name": "nodejs-module-template",
-    "version": "0.0.0",
-    "description": "A template for NodeJS modules",
-    "main": "index.js",
-    "directories": {
-        "test": "test"
-    },
-    "dependencies": {},
-    "devDependencies": {},
-    "scripts": {
-        "test": "test"
-    },
-    "author": "Ruben Chavarria http://rchavarria.github.io",
-    "license": "BSD-2-Clause"
-}
-</code></pre>
-
-<h1>Instalar Gulp</h1>
-
-<p>Es muy fácil, con <code>npm</code>:</p>
-
-<pre><code>npm install --save-dev gulp
-</code></pre>
-
-<p>El flag <code>--save-dev</code> insertará una nueva línea en el fichero <code>package.json</code> para
-indicar a <code>npm</code> que hay una nueva dependencia para tiempo de desarrollo.</p>
-
-<p>Para comprobar que se ha instalado correctamente, ejecutar el comando
-<code>gulp --version</code>.</p>
-
-<h1>Configurar Gulp</h1>
-
-<p>Crea un fichero <code>gulpfile.js</code> en el directorio raiz del proyecto. El contenido
-del fichero podría ser el siguiente:</p>
-
-<pre><code>var gulp = require('gulp');
-
-gulp.task('default', function() {
-    console.log('Hello gulp!');
-});
-</code></pre>
-
-<p>Ejecuta el comando <code>gulp</code> para ver un mensaje por consola.</p>
-
-<h1>Instalar librerías de tests</h1>
-
-<p>Es tan fácil como instalar Gulp, simplemente escribir el comando:</p>
-
-<pre><code>npm install --save-dev mocha chai sinon sinon-chai
-</code></pre>
-
-<p>Para probar que se ha instalado Mocha adecuadamente, escribir
-<code>node node_modules/mocha/bin/mocha --version</code>.</p>
-
-<h1>Antes de escribir el primer test</h1>
-
-<p>Antes de escribir el primer test, crearemos un fichero de inicializacion para
-Mocha, para inicializar las librerias y evitar tener que escribir el mismo
-código una y otra vez en todos nuestros tests.</p>
-
-<p>Crea un fichero llamado <code>test/bootstrap.js</code> y escribe en él este contenido:</p>
-
-<pre><code>global.chai = require('chai');
-global.sinon = require('sinon');
-global.expect = chai.expect;
-
-var sinonChai = require('sinon-chai');
-chai.use(sinonChai);
-</code></pre>
-
-<p>Esto cargará las librerías Chai y Sinon, crea una variable global llamada
-<code>expect</code> (la usaremos en todos los tests) y configura Chai para que use métodos
-y funcionalidades proporcionados por Sinon.</p>
-
-<p>Ahora, crearemos una tarea en Gulp para ejecutar los tests. Para ello necesitamos
-un plugin de Gulp que sea capaz de lanzar Mocha. Tan fácil como lo anterior:</p>
-
-<pre><code>npm install --save-dev gulp-mocha
-</code></pre>
-
-<p>Luego, edita el fichero <code>gulpfile.js</code> y déjalo como el siguiente:</p>
-
-<pre><code>var gulp = require('gulp'),
-    mocha = require('gulp-mocha');
-
-gulp.task('test', function () {
-    return gulp
-        .src(['test/bootstrap.js', 'test/scripts/**/*.js'])
-        .pipe(mocha({ reporter: 'spec' }));
-});
-</code></pre>
-
-<h1>Ahora sí, el primer test</h1>
-
-<p>Crea un fichero llamado <code>test/scripts/firstSpec.js</code> con el siguiente contenido:</p>
-
-<pre><code>describe('Mocha', function() {
-    it('expects using Chai', function() {
-        expect(2 + 2).equals(4);
-    });
-});
-</code></pre>
-
-<p>Para ejecutar este sencillo test, escribe el comando <code>gulp test</code>.</p>
-
-<h1>Cómo escuchar cambios en ficheros de tests y de producción</h1>
-
-<p>Es posible configurar Gulp para ejecutar una tarea específica cada vez que un
-fichero (o varios) cambia. Configuraremos que se ejecute la tarea <code>test</code> cada
-vez que se cambie un fichero de test o de producción. Para ello, añade la
-siguiente tarea al fichero <code>gulpfile.js</code>.</p>
-
-<pre><code>gulp.task('test-watch', function () {
-    return gulp.watch(['src/scripts/**/*.js', 'test/scripts/**/*.js'], ['test']);
-});
-</code></pre>
-
-<p>Para probar que funciona, escribe el comando <code>gulp test-watch</code>, cambia <code>firstSpec.js</code>
-y guarda los cambios. Verás cómo el test se vuelve a ejecutar automáticamente.</p>
-
-<h1>Por fin, probar algún código de producción</h1>
-
-<p>Escribe un sencillo módulo NodeJS que sume dos enteros, guárdalo como
-<code>src/scripts/adder.js</code>:</p>
-
-<pre><code>module.exports = function adder(a, b) {
-    return a + b;
-};
-</code></pre>
-
-<p>Reemplaza el contenido de <code>test/scripts/firstSpec.js</code> por este otro (o escribe
-tú mismo un nuevo fichero con este test):</p>
-
-<pre><code>describe('Adder module', function() {
-    // imports the adder module
-    var adder = require('../../src/scripts/adder.js');
-
-    it('adds two integers', function() {
-        var sum = adder(2, 2);
-        expect(sum).equals(4);
-    });
-});
-</code></pre>
-
-<p>Lánzalos con <code>gulp test</code>.</p>
-
-<h1>Seguir leyendo</h1>
-
-<p>Puedes leer documentación de <a href="http://gulpjs.com">Gulp</a> para saber cómo crear más y mejores tareas,
-<a href="http://visionmedia.github.io/mocha/">Mocha</a> y <a href="https://github.com/sindresorhus/gulp-mocha">Mocha&#8217;s plugin for Gulp</a> para conocer más sobre las opciones de Mocha,
-<a href="http://chaijs.com">Chai</a> para aprender a escribir tests con el API <code>expect</code>, <a href="http://cjohansen.no/sinon">Sinon</a> para aprender
-sobre dobles de tests (mocks, spies, stubs) cuando escribas tests.</p>
-
-<h1>Actualización (05-07-2015)</h1>
-
-<p>He seguido ampliando este proyecto, y lo he adaptado para poder escribir código
-ECMAScript 6: <a href="http://rchavarria.github.io/blog/2015/07/05/escribir-tests-mocha-es6">Escribir y ejecutar tests de Mocha en ES6</a>.</p>
 ]]></content>
   </entry>
   

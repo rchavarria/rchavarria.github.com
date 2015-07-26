@@ -4,7 +4,7 @@
   <title><![CDATA[Category: learning | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/learning/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2015-07-20T01:17:08+02:00</updated>
+  <updated>2015-07-27T01:30:44+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -634,6 +634,50 @@ contara las palabras por mí. En lugar de eso, encontré un comando:</p>
 
 <ul>
 <li><code>g</code> + <code>CTRL g</code></li>
+</ul>
+
+
+<h3>(Julio 2015) <a href="https://www.youtube.com/watch?v=wlR5gYd6um0">Mastering the Vim language</a>, Chris Toomey</h3>
+
+<ul>
+<li>Priorizar <em>text objects</em> frente a movimientos (<code>iw</code> frente a <code>w</code>), hacen que
+los comandos sean más repetibles, ya que seleccionan mejor. El movimiento <code>w</code>
+sólo selecciona la palabra si el cursor está al inicio de la misma.</li>
+<li><a href="https://github.com/tpope/vim-repeat">repeat.vim</a> es un plugin que que remapea <code>.</code> (commando repetir) de tal forma
+que los comandos de los plugins sean compatibles con <code>.</code></li>
+<li><code>:set relativenumber</code>, <code>:set norelativenumber</code>, para ver el número de líneas
+relativas respecto a la que está el cursor</li>
+</ul>
+
+
+<p><strong>Algunos plugins</strong></p>
+
+<ul>
+<li><a href="https://github.com/tpope/vim-surround">surround plugin</a>:
+
+<ul>
+<li><code>ds"</code> : borra las comillas dobles de alrededor</li>
+<li><code>cs"'</code> : cambia las comillas dobles que encierran el texto por comillas simples</li>
+<li>y unos cuantos más, como <code>cst&lt;text&gt;</code> para cambiar tags HTML</li>
+</ul>
+</li>
+<li><a href="https://github.com/tpope/vim-commentary">commentary plugin</a>: parece mucho más potente que el que proporciona comandos
+<code>gcc</code> y demás. éste proporciona <code>cm&lt;motion&gt;</code>, por ejemplo: <code>cml</code> (comenta línea),
+<code>cm4j</code> (commenta 4 líneas hacia abajo)</li>
+<li><a href="http://www.vim.org/scripts/script.php?script_id=2703">replace with register plugin</a>: con el comando <code>gr&lt;motion&gt;</code>, por ejemplo,
+si tengo copiada una palabra, puedo hacer <code>griw</code> para <em>go replace inner word</em></li>
+<li><a href="https://github.com/christoomey/vim-sort-motion">sort-motion plugin</a>: con el comando <code>gs&lt;motion&gt;</code> lo que hace es ordenar
+líneas alfabéticamente (para imports, requires,...)</li>
+<li><a href="https://github.com/christoomey/vim-system-copy">system-copy plugin</a>: para copiar al portapapeles del sistema</li>
+</ul>
+
+
+<p><strong>Text objects personalizados</strong></p>
+
+<ul>
+<li>indentación: <code>cmii</code>, <code>cmni"</code></li>
+<li>entero: <code>cmae</code> (<strong>c</strong>omment <strong>a</strong>ll <strong>e</strong>ntire, comenta el documento entero)</li>
+<li>línea: <code>cml</code></li>
 </ul>
 
 
