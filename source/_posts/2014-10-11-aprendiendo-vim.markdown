@@ -559,6 +559,45 @@ contara las palabras por mí. En lugar de eso, encontré un comando:
 
 - `g` + `CTRL g`
 
+### (Julio 2015) [Mastering the Vim language], Chris Toomey
+
+- Priorizar *text objects* frente a movimientos (`iw` frente a `w`), hacen que
+los comandos sean más repetibles, ya que seleccionan mejor. El movimiento `w`
+sólo selecciona la palabra si el cursor está al inicio de la misma.
+- [repeat.vim] es un plugin que que remapea `.` (commando repetir) de tal forma
+que los comandos de los plugins sean compatibles con `.`
+- `:set relativenumber`, `:set norelativenumber`, para ver el número de líneas
+relativas respecto a la que está el cursor
+
+**Algunos plugins**
+
+- [surround plugin]: 
+  - `ds"` : borra las comillas dobles de alrededor
+  - `cs"'` : cambia las comillas dobles que encierran el texto por comillas simples
+  - y unos cuantos más, como `cst<text>` para cambiar tags HTML
+- [commentary plugin]: parece mucho más potente que el que proporciona comandos
+`gcc` y demás. éste proporciona `cm<motion>`, por ejemplo: `cml` (comenta línea),
+`cm4j` (commenta 4 líneas hacia abajo)
+- [replace with register plugin]: con el comando `gr<motion>`, por ejemplo,
+si tengo copiada una palabra, puedo hacer `griw` para *go replace inner word*
+- [sort-motion plugin]: con el comando `gs<motion>` lo que hace es ordenar
+líneas alfabéticamente (para imports, requires,...)
+- [system-copy plugin]: para copiar al portapapeles del sistema
+
+**Text objects personalizados**
+
+- indentación: `cmii`, `cmni"`
+- entero: `cmae` (**c**omment **a**ll **e**ntire, comenta el documento entero)
+- línea: `cml` 
+
+[Mastering the Vim language]: https://www.youtube.com/watch?v=wlR5gYd6um0
+[repeat.vim]: https://github.com/tpope/vim-repeat
+[surround plugin]: https://github.com/tpope/vim-surround
+[commentary plugin]: https://github.com/tpope/vim-commentary
+[replace with register plugin]: http://www.vim.org/scripts/script.php?script_id=2703
+[sort-motion plugin]: https://github.com/christoomey/vim-sort-motion
+[system-copy plugin]: https://github.com/christoomey/vim-system-copy
+
 <!--
 Next: [Globals, commands and functions](http://vimeo.com/15443936)
 -->
