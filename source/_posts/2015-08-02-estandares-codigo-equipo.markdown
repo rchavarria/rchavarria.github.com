@@ -41,6 +41,8 @@ el equipo.
 
 <!-- more -->
 
+{% img center /images/2015/ruler.png %}
+
 ## Reglas
 
 Cada una de esas reglas puede hacer referencia a aspectos muy distintos de
