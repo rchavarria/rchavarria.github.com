@@ -57,6 +57,7 @@ Así que aquí está mi Lista de Lectura:
 - [Software craftsmanship: the new imperative](http://www.amazon.com/Software-Craftsmanship-Imperative-Pete-McBreen/dp/0201733862), de Pete McBreen
 - [The coding dojo handbook](https://leanpub.com/codingdojohandbook), de Emiliy Bache
 - [¿Qué pasaría si...? (What if...?)](http://www.amazon.es/gp/product/B00TV7HI4E), de Randall Munrow (xkcd.com), recomendado por Bill Gates
+- [Your code as a crime scene](https://pragprog.com/book/atcrime/your-code-as-a-crime-scene), de Adam Tornhill, The pragmatic bookshelf
 - [The Psycology of Computer Programming](http://www.amazon.com/exec/obidos/ASIN/0932633420/codihorr-20), de Gerald M. Weingerg
 - [The effective engineer](https://www.theeffectiveengineer.com/book), de Edmond Lau (para aprender técnicas de ingenieros software espectaculares)
 - Patterns of Enterprise Application Architecture, de Martin Fowler
