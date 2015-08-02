@@ -767,6 +767,38 @@ líneas alfabéticamente (para imports, requires,&#8230;)</li>
 </ul>
 
 
+<h3>(Agosto 2015) <a href="https://www.youtube.com/watch?v=3TX3kV3TICU">Let Vim do the typing</a>, by George Brocklehurst</h3>
+
+<ul>
+<li><code>"a</code> + <code>p</code>: pega lo que hay en el registro <code>a</code></li>
+<li>En modo inserción, <code>CTRL + r</code> + <code>&lt;letra del registro&gt;</code>, pega lo copiado en un
+registro</li>
+<li><code>CTRL + a</code>, en modo inserción, pega el último texto insertado</li>
+<li><code>CTRL + p</code>, <code>CTRL + SHIFT + p</code>, <code>CTRL + n</code>, para autocompletar palabras en los
+documentos abiertos de Vim</li>
+<li>Con un fichero CTAGS, si escribo el nombre de una clase y presiono <code>CTRL + }</code>
+(o <code>CRTL + ]</code> no lo tengo claro), Vim me lleva a la declaración de esa clase</li>
+<li>Con <code>CTRL + x</code> entra en el modo de autocompletado (palabras, líneas, párrafos,&#8230;)</li>
+<li>Después de un <code>CTRL + }</code>, puedes volver a navegar hacia atrás con <code>CTRL + o</code></li>
+<li><code>CTRL + x</code> seguido de <code>CTRL + f</code> entra en el modo autocompletar nombres de
+ficheros</li>
+<li>Con <code>CTRL + x</code> seguido de <code>CTRL + p</code> puedes ir autocompletando palabras de una
+frase. Cada vez que pulsas los dos, puedes ir autocompletando una palabra</li>
+<li>Con <code>CTRL + x</code> seguido de <code>CTRL + n</code> lo mismo pero en el otro sentido</li>
+<li>Con <code>CTRL + x</code> seguido de <code>CTRL + l</code> se autocompletan líneas. Si sigues con
+<code>CTRL + x</code> -> <code>CTRL + l</code> te va autocompletando siguientes líneas</li>
+<li>Con <code>CTRL + x</code> -> <code>CTRL + o</code>, qué tal si te puede autocompletar métodos en tu
+lenguaje de programación. No necesita plugin</li>
+<li><code>:set complete</code> muestra tu configuración de autocompletado. el valor por
+defecto que muestra es: <code>.,w,b,u,t,i,kspell</code>. <code>.</code> del buffer actual, <code>w</code> de
+las ventanas abiertas, <code>b</code> de los buffers abiertos, <code>u</code> de los buffers no
+activos, <code>t</code> de los ficheros CTAGS, <code>i</code> de los includes/requires, <code>kspell</code>
+en los diccionarios cuando tengas activado el chequeo de ortografía
+(<code>:set spell</code>)</li>
+<li><a href="https://georgebrock.github.io/talks/vim-completion">Repositorio de George</a>, por si se necesita algún documento de referencia</li>
+</ul>
+
+
 <!--
 Next: [Globals, commands and functions](http://vimeo.com/15443936)
 -->
@@ -842,6 +874,10 @@ Next: [Globals, commands and functions](http://vimeo.com/15443936)
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/08/02/estandares-codigo-equipo/">Estándares de código en tu equipo</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/07/26/consumo-memoria-tests-angularjs/">Análisis de consumo de memoria en tests de AngularJS</a>
       </li>
     
@@ -855,10 +891,6 @@ Next: [Globals, commands and functions](http://vimeo.com/15443936)
     
       <li class="post">
         <a href="/blog/2015/07/05/escribir-tests-mocha-es6/">Escribir y ejecutar tests de Mocha en ECMAScript 6</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/06/28/dando-empujon-blog/">Dando un empujón al blog</a>
       </li>
     
   </ul>

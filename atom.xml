@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2015-07-27T01:30:44+02:00</updated>
+  <updated>2015-08-03T01:23:26+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,243 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Estándares de código en tu equipo]]></title>
+    <link href="http://rchavarria.github.io/blog/2015/08/02/estandares-codigo-equipo/"/>
+    <updated>2015-08-02T21:58:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2015/08/02/estandares-codigo-equipo</id>
+    <content type="html"><![CDATA[<p>¿Has conducido alguna vez en el extranjero? Si has ido de acompañanate, ¿has
+prestado atención a la carretera?. Es todo tan distinto, pero a la vez es
+prácticamente igual a conducir en tu propio país (quitando alguna excepción
+como Inglaterra o Japón, que lo hacen por la izquierda). Seguro que encuentras
+los mismos elementos: semáforos, cruces, rotondas, carreteras de doble sentido,
+autovías,&#8230; y <strong>normas</strong>. Las normas de circulación no son las mismas en todos
+los lugares, pero podríamos encontrar algunas normas básicas que sí lo son.
+Esas normas básicas son las que nos permiten conducir en otros países con una
+cierta confianza.</p>
+
+<p>Cuando escribimos código dentro de un equipo de desarrollo ocurre algo similar.
+Cada uno tenemos nuestro estilo a la hora de escribir código: nombrado de
+variables, espaciado, paréntesis, indentación,&#8230; Si tuviéramos total libertad
+para desarrollar como nos apeteciera, el trabajo en equipo sería mucho más
+duro, ya que tendríamos que <em>entender</em> el estilo de cada uno de nuestros
+compañeros. Por curiosidad, ¿no te ha pasado nunca que has leído una clase e
+inmediatamente sabes quién la ha escrito? Para evitar esta sobrecarga conviene
+tener ciertas normas, unas <strong>reglas</strong> básicas de cómo escribir código, para
+que todos los miembros del equipo escriban código acorde a un cierto <em>estándar</em>.</p>
+
+<p>Aquí es donde aparece <a href="https://github.com/squizlabs/PHP_CodeSniffer">PHP_CodeSniffer</a>, una herramienta de análisis estático
+de código PHP (JavaScript y CSS) que genera informes sobre qué partes del
+código de nuestro equipo violan las reglas del estándar que previamente definió
+el equipo.</p>
+
+<!-- more -->
+
+
+<p><img class="center" src="http://rchavarria.github.io/images/2015/ruler.png"></p>
+
+<h2>Reglas</h2>
+
+<p>Cada una de esas reglas puede hacer referencia a aspectos muy distintos de
+nuestro código: indentación con espacios o tabuladores, apertura de llaves (<code>{</code>)
+en la misma línea o en la siguiente, sintaxis a la hora de manipular arrays
+(<code>array()</code> o <code>[]</code>),&#8230; Las reglas a utilizar deben ser consensuadas en el equipo
+y suelen estar definidas en un fichero llamado <code>ruleset.xml</code> que se pasará como
+parámetro a la herramienta <code>phpcs</code>. Aquí nos estamos centrando en código PHP,
+pero también se puede hacer análisis de código JavaScript y CSS.</p>
+
+<p>A la hora de poder definir un conjunto de reglas a utilizar dentro del equipo,
+sería conveniente tener una lista de todas ellas y una breve descripción de cada
+una para facilitar la discusión y la toma de decisiones. Lamentablemente, la
+documentation de la herramienta no proporciona esa lista, pero existe algunas
+posibilidades que nos pueden facilitar el trabajo.</p>
+
+<h3>Opción <code>-s</code></h3>
+
+<p>El comando <code>phpcs</code> se puede ejecutar con la opción <code>-s</code>, con la cual la
+herramienta indica qué regla (o <em>sniff</em>, como lo llama PHP_CodeSniffer) estamos
+incumpliendo en cada violación que aparece en el informe de la herramienta.
+El siguiente comando ejecuta <code>phpcs</code> mostrando el progreso (<code>-p</code>), analizando
+solo archivos con la extensión <code>.php</code> y por supuesto que nos muestre las
+reglas que no se cumplen (<code>-s</code>), como por ejemplo
+<code>Generic.Commenting.Todo.TaskFound</code>.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>phpcs -p -s --extensions<span class="o">=</span>php &lt;directory or file&gt;
+</span><span class='line'>
+</span><span class='line'>...E...E....W.....W..E.............W........................  60 / 723 <span class="o">(</span>8%<span class="o">)</span>
+</span><span class='line'>.......................W.................................... 120 / 723 <span class="o">(</span>17%<span class="o">)</span>
+</span><span class='line'>.............................W..W....E..................E..E 180 / 723 <span class="o">(</span>25%<span class="o">)</span>
+</span><span class='line'>
+</span><span class='line'>----------------------------------------------------------------------
+</span><span class='line'> 44 | ERROR   | Function<span class="err">&#39;</span>s cyclomatic complexity <span class="o">(</span>21<span class="o">)</span> exceeds allowed
+</span><span class='line'>    |         | maximum of 20
+</span><span class='line'>    |         | <span class="o">(</span>Generic.Metrics.CyclomaticComplexity.MaxExceeded<span class="o">)</span>
+</span><span class='line'>----------------------------------------------------------------------
+</span><span class='line'> 60 | ERROR | <span class="o">[</span>x<span class="o">]</span> Line indented incorrectly; expected at least 2 spaces,
+</span><span class='line'>    |       |     found 0 <span class="o">(</span>Generic.WhiteSpace.ScopeIndent.Incorrect<span class="o">)</span>
+</span><span class='line'>----------------------------------------------------------------------
+</span><span class='line'> 59 | WARNING | The method parameter <span class="nv">$userId</span> is never used
+</span><span class='line'>    |         | <span class="o">(</span>Generic.CodeAnalysis.UnusedFunctionParameter.Found<span class="o">)</span>
+</span><span class='line'>----------------------------------------------------------------------
+</span><span class='line'> 61 | WARNING | Comment refers to a TODO task <span class="s2">&quot;Improve readability&quot;</span>
+</span><span class='line'>    |         | <span class="o">(</span>Generic.Commenting.Todo.TaskFound<span class="o">)</span>
+</span><span class='line'>----------------------------------------------------------------------
+</span><span class='line'>
+</span><span class='line'>... output has been truncated
+</span><span class='line'>Time: 2 mins, 9.46 secs; Memory: 25.5Mb
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Código fuente</h3>
+
+<p>Al final, la documentación más fiable, más actualizada, más detallada y más de
+todo es el código fuente. Puede asustar un poco tener que mirar el código fuente,
+pero <a href="https://github.com/squizlabs/PHP_CodeSniffer">el código de PHP_CodeSniffer</a> es código abierto y se puede navegar en
+Github de forma sencilla. Además, no tendrás que consultarlo de arriba a abajo,
+aquí encontrarás unas pistas de donde encontrar las reglas.</p>
+
+<p>El código está organizado en varios directorios, en <code>CodeSniffer/Standards</code>
+encontraremos el código fuente que nos interesa. Cada subdirectorio
+contiene las reglas definidas por cada estándar: Generic, PEAR, PSR1, PSR2,&#8230;
+Dentro de cada uno de estos directorios, encontramos un fichero llamado
+<code>ruleset.xml</code>, donde podemos encontrar las reglas importadas de aquellos
+estándares que las definen. Por ejemplo, en el fichero <code>PSR2/ruleset.xml</code>
+podemos encontrar:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+</span><span class='line'><span class="nt">&lt;ruleset</span> <span class="na">name=</span><span class="s">&quot;PSR2&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'> <span class="nt">&lt;description&gt;</span>The PSR-2 coding standard.<span class="nt">&lt;/description&gt;</span>
+</span><span class='line'> <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&quot;tab-width&quot;</span> <span class="na">value=</span><span class="s">&quot;4&quot;</span><span class="nt">/&gt;</span>
+</span><span class='line'>
+</span><span class='line'> <span class="c">&lt;!-- Include the whole PSR-1 standard --&gt;</span>
+</span><span class='line'> <span class="nt">&lt;rule</span> <span class="na">ref=</span><span class="s">&quot;PSR1&quot;</span><span class="nt">/&gt;</span>
+</span><span class='line'>
+</span><span class='line'> <span class="c">&lt;!-- The soft limit on line length MUST be 120 characters;</span>
+</span><span class='line'><span class="c">      automated style checkers MUST warn but MUST NOT error at the soft limit. --&gt;</span>
+</span><span class='line'> <span class="nt">&lt;rule</span> <span class="na">ref=</span><span class="s">&quot;Generic.Files.LineLength&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;properties&gt;</span>
+</span><span class='line'>   <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;lineLimit&quot;</span> <span class="na">value=</span><span class="s">&quot;120&quot;</span><span class="nt">/&gt;</span>
+</span><span class='line'>   <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;absoluteLineLimit&quot;</span> <span class="na">value=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/properties&gt;</span>
+</span><span class='line'> <span class="nt">&lt;/rule&gt;</span>
+</span><span class='line'>
+</span><span class='line'> <span class="c">&lt;!-- ... --&gt;</span>
+</span><span class='line'>
+</span><span class='line'> <span class="c">&lt;!-- Visibility MUST be declared on all methods. --&gt;</span>
+</span><span class='line'> <span class="nt">&lt;rule</span> <span class="na">ref=</span><span class="s">&quot;Squiz.Scope.MethodScope&quot;</span><span class="nt">/&gt;</span>
+</span><span class='line'>
+</span><span class='line'> <span class="c">&lt;!-- Method arguments with default values MUST go at the end of the argument list. --&gt;</span>
+</span><span class='line'> <span class="nt">&lt;rule</span> <span class="na">ref=</span><span class="s">&quot;PEAR.Functions.ValidDefaultValue&quot;</span><span class="nt">/&gt;</span>
+</span><span class='line'>
+</span><span class='line'> <span class="c">&lt;!-- ... --&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nt">&lt;/ruleset&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>En este fichero podemos ver que se importan todas las reglas definidas en el
+estándar <em>PSR1</em> con <code>&lt;rule ref="PSR1"&gt;</code>. Y que se importan reglas individuales
+de otros estándares, por ejemplo <code>&lt;rule ref="Squiz.Scope.MethodScope"/&gt;</code>. O que
+incluso se pueden pasar parámetros a algunas reglas, como se hace con
+<code>Generic.Files.LineLengh</code>.</p>
+
+<h3>Guía definitiva</h3>
+
+<p>Si con todo esto todavía no has dado con las reglas que quieres, o si necesitas
+conocer alguna regla más en profundidad, podemos echar un vistazo a cómo se
+generan las referencias de las reglas para poder incluirlas, excluirlas o
+parametrizarlas en nuestro <code>ruleset.xml</code>.</p>
+
+<p>Tomemos como ejemplo las reglas <em>Generic</em>, ya que son las más utilizadas, más
+concretamente la regla <code>Generic.Files.LineLength</code>. Las reglas del estándar
+<em>Generic</em> están definidas en el directorio: <code>CodeSniffer/Standards/Generic</code>,
+y dentro de él, en el directorio <code>Sniffs</code>. El siguiente token, <code>Files</code>, indica
+un nuevo subdirectorio dentro de <code>Sniffs</code> con el mismo nombre. Y por último,
+<code>LineLength</code>, indica una clase PHP con ese mismo nombre más el sufijo <code>Sniff</code>.</p>
+
+<p>Así pues, para la regla <code>Generic.Files.LineLength</code>, encontraremos una clase PHP en
+<code>CodeSniffer/Standards/<strong>Generic</strong>/Sniffs/<strong>Files</strong>/<strong>LineLength</strong>Sniff.php</code></p>
+
+<p>Otros ejemplos podrían ser:</p>
+
+<ul>
+<li><code>PEAR.Commenting.InlineComment</code>: clase <code>CodeSniffer/Standards/<strong>PEAR</strong>/Sniffs/<strong>Commenting</strong>/<strong>InlineComment</strong>Sniff.php</code></li>
+<li><code>PSR1.Classes.ClassDeclaration</code>: clase <code>CodeSniffer/Standards/<strong>PSR1</strong>/Sniffs/<strong>Classes</strong>/<strong>ClassDeclaration</strong>Sniff.php</code></li>
+<li><code>Zend.Debug.CodeAnalyzer</code>: clase <code>CodeSniffer/Standards/<strong>Zend</strong>/Sniffs/<strong>Debug</strong>/<strong>CodeAnalyzer</strong>Sniff.php</code></li>
+</ul>
+
+
+<p>Pero aún hay más. En el <code>ruleset.xml</code> de ejemplo, veíamos cómo se pasaban
+parámetros a la regla <code>Generic.Files.LineLength</code>. Ahora ya conocemos la clase
+PHP que contiene el código que ejecuta esa regla:
+<code>CodeSniffer/Standards/Generic/Sniffs/Files/LineLengthSniff.php</code>. Dicha clase
+tiene dos variables públicas: <code>lineLimit</code> y <code>absoluteLineLimit</code>. Que precisamente
+son los parámetros que se pueden configurar. Así pues, variables públicas en
+las clases <code>*Sniff</code> no son más que posibles parámetros a usar en el
+<code>ruleset.xml</code> de nuestro proyecto.</p>
+
+<h3>Referencias y enlaces relacionados</h3>
+
+<ul>
+<li>Página de <a href="https://github.com/squizlabs/PHP_CodeSniffer">PHP_CodeSniffer</a></li>
+<li><a href="http://rchavarria.github.io/blog/2014/05/05/mejora-continua-y-analisis-estatico-de-codigo">Mejora contínua y análisis estático de código</a> en este mismo blog</li>
+<li><a href="http://stackoverflow.com/questions/16427207/php-codesniffer-rules-documentation">Documentación de las reglas de PHP_CodeSniffer</a> en Stack Overflow</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Análisis de consumo de memoria en tests de AngularJS]]></title>
@@ -2562,681 +2799,6 @@ se encuentra la aplicación que necesita el <em>job</em> que estoy configurando.
 <p>Este ejemplo muestra como se configura un Jenkins instalado en un Linux, en
 Windows se utilizaría de otra forma ya que las variables de entorno no
 son exactamente iguales, así como la configuración de las mismas.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Aprendiendo Vim]]></title>
-    <link href="http://rchavarria.github.io/blog/2014/10/11/aprendiendo-vim/"/>
-    <updated>2014-10-11T01:31:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2014/10/11/aprendiendo-vim</id>
-    <content type="html"><![CDATA[<p>Hubo un momento en mi carrera profesional en la que un compañero me dió a conocer
-<em>Vim</em>, el editor de código. Me pareció una herramienta arcaica, básica. Línea
-de comandos, nada de modo gráfico. ¿Pero dónde estaba? ¿En los años 80?. Pero la
-pasión con la que hablaba del editor mi picaba la curiosidad.</p>
-
-<p>Luego, en años venideros, he visto y usado muchos editores de texto, de código
-e incluso IDEs. Nunca me había atrevido a usar Vim, pero de vez en cuando
-escuchaba (de la forma que se escucha en internet: twitter, blogs, &#8230;) algunas
-campanadas de que Vim era un súper editor.</p>
-
-<p>Pero nunca me decidía a darle una oportunidad, hasta&#8230;</p>
-
-<!-- more -->
-
-
-<p>Hasta que cayó un post de <a href="http://elkarmadelteclado.com">Pablo Bernardo</a> en mi lector RSS:
-<a href="http://elkarmadelteclado.com/asi-que-quieres-aprender-usar-vim/">Asi que quieres aprender a usar Vim</a>.</p>
-
-<p>En este post, Pablo detalla toda una serie de recursos disponibles en <em>la nube</em>
-y no sé porqué, pero me tocó la fibra sensible. Y decidí empezar por uno de los
-videos.</p>
-
-<p>El video en cuestión, es un hangout de LinuxIO, de <a href="http://www.desarrolloweb.com">Desarrollo Web</a>, y que se
-titula &#8221;<a href="http://youtu.be/cpL32a_GP3k">El mítico editor Vim</a>&#8221;. Este video fue el detonante de que decidiera
-darle una oportunidad a Vim, una oportunidad seria. Así que decidí comenzar a
-aprenderlo.</p>
-
-<p>La idea es que este post no se acabe aquí, si no que vaya creciendo con el
-tiempo, que vaya actualizandolo según voy consumiendo los recursos que indica
-Pablo, y los que me encuentre por el camino. Para cada uno de ellos me gustaría
-ir describiendo qué es lo que he aprendido de él.</p>
-
-<p>De esta forma, según vaya pasando el tiempo, aquí tendré el camino recorrido,
-y así otros podrán saber cómo lo recorrí para aprender Vim.</p>
-
-<!--
-LinuxIO, con @ktzar, que anima bastante https://www.youtube.com/watch?feature=player_embedded&v=cpL32a_GP3k
-
-Segunda parte del LinuxIO: https://www.youtube.com/watch?feature=player_embedded&v=XvCD78eA46E
-
-Un semi-dios del vim, Drew Neil : https://vimeo.com/53144573
-
-Pagina de Drew Neil : http://drewneil.com/
-Con enlaces a vimcasts, peer-to-peer.io, ...
-
-Libros en open libra (no leidos) http://www.etnassoft.com/biblioteca/?search_term=VIM&books_category=libros_programacion&books_criteria=post_date_DESC&lang=all&since=all
-
-Videos de Derek Wyatt : http://derekwyatt.org/vim/tutorials/
-
--->
-
-
-<h2>El mítico editor Vim, #linuxIO</h2>
-
-<p><a href="https://twitter.com/ktzar">Miguel Luis González</a> y <a href="https://twitter.com/voylinux">Pablo</a> nos presentan <a href="http://youtu.be/cpL32a_GP3k">El mítico editor Vim</a>. Miguel pone tanta pasión,
-tanto conocimiento, que impresiona. Este es el video que me convenció. Y
-éste es un resumen de lo que aprendí de él (y estoy poniendo en práctica escribiendo
-este post :D ).</p>
-
-<ul>
-<li>Movimientos básicos: <code>h</code>, <code>j</code>, <code>k</code>, <code>l</code>. Nada de usar las flechas, ¡Cobarde!</li>
-<li><code>i</code> para <strong>i</strong>nsertar</li>
-<li><code>a</code> para <strong>a</strong>ñadir. Inserta, pero después de la posición del cursor</li>
-<li><code>:o &lt;fichero&gt;</code> para abrir (<strong>o</strong>pen) un fichero</li>
-<li><code>:q</code> para salir del Vim. <code>:q!</code> para salir ignorando los cambios</li>
-<li><code>:w</code> para guardar (<strong>w</strong>rite)</li>
-<li><code>u</code> para deshacer (<strong>u</strong>ndo)</li>
-<li><code>CTRL + r</code> para rehacer</li>
-<li><code>w</code> para mover el cursor a la siguiente palabra (<strong>w</strong>ord)</li>
-<li><code>b</code> para mover el cursor a la palabra anterior (<strong>b</strong>efore)</li>
-<li><code>e</code> para mover el cursor al final (<strong>e</strong>nd) de la siguiente palabra</li>
-<li><code>x</code> para borrar un carácter</li>
-<li><code>p</code> para <strong>p</strong>egar. <code>P</code> para hacerlo antes del cursor</li>
-<li><code>r</code> para reemplazar un carácter</li>
-<li><code>f&lt;carácter&gt;</code> para encontrar (<strong>f</strong>ind) el siguiente carácter en la línea</li>
-<li><code>0</code> mover el cursor al inicio de la línea. <code>$</code> para ir al final</li>
-<li><code>d</code> borrar (<strong>d</strong>elete). <code>dw</code> borra palabra. <code>dd</code> borra línea</li>
-<li><code>c</code> para <strong>c</strong>ambiar. Por ejemplo, <code>cw</code> cambia una palabra. <code>cc</code> cambia una linea</li>
-<li><code>y</code> para copiar (<strong>y</strong>ank). <code>yw</code> copia una palabra. <code>yy</code> una línea. <code>yf)</code> copia
-hasta que encuentra el caracter <code>)</code> inclusive.</li>
-<li><code>t&lt;carácter&gt;</code> para mover hasta (un<strong>t</strong>ill). <code>yt)</code> para copiar hasta el carácter
-<code>)</code> sin copiar el carácter.</li>
-<li><code>%</code> para mover el cursor al carácter complementario. Por ejemplo, si estamos en
-un carácter <code>(</code>, nos mueve hasta el siguiente <code>)</code>. De <code>[</code> al <code>]</code>. ¿Lo pillas?</li>
-</ul>
-
-
-<h2>(12-10-2014) Vim sobre Linux, comandos avanzados y plugins</h2>
-
-<p>Miguel y Pablo siguen hablando de Vim, de <a href="http://youtu.be/XvCD78eA46E">comandos avanzados y plugins</a>, temas más
-avanzados que en el anterior vídeo, pero con el mismo tono alegre y pasión.
-Esto es lo que aprendí en él:</p>
-
-<ul>
-<li><code>s</code> para sustituir un carácter. Borra el carácter donde está el cursor y entra
-en modo edición.</li>
-<li><code>C</code> para cambiar una línea entera.</li>
-<li>Números como modificadores de comandos. Por ejemplo, <code>5dd</code> borra 5 líneas. <code>3yy</code>
-copia 3 líneas.</li>
-<li><code>/&lt;texto&gt;</code> para buscar la cadena de texto hacia adelante</li>
-<li><code>n</code> para moverse a la siguiente (<strong>n</strong>ext) ocurrencia de la búsqueda. <code>N</code> para
-moverse a la anterior.</li>
-<li><code>?&lt;texto&gt;</code> para buscar la cadena de texto pero hacia atrás</li>
-<li><code>*</code> entra en modo búsqueda, usando la palabra donde estamos como texto de búsqueda</li>
-<li><em>Movimientos interiores</em>. <code>i</code> expande el cursor o la selección en el <strong>i</strong>nterior
-de un texto encerrado entre dos comillas, o dos paréntesis, o dos llaves.
-Por ejemplo, <code>ci'</code> <strong>c</strong>ambia el <strong>i</strong>nterior del texto entre comillas. <code>di(</code>
-borra (<strong>d</strong>elete) el <strong>i</strong>nterior del texto entre paréntesis. <code>cit</code> <strong>c</strong>ambia
-el <strong>i</strong>nterior del <strong>t</strong>ag HTML.</li>
-<li><code>v</code> entra en modo <strong>v</strong>isual. <code>V</code> modo <strong>v</strong>isual línea a línea</li>
-<li><code>CTRL + v</code> entra en modo <strong>v</strong>isual pero selecciona columnas</li>
-<li><code>CTRL + p</code> autocompletado, buscando en palabras anteriores a la actual y en todos
-los ficheros abiertos. <code>CTRL + n</code> muestra también una lista de posibles palabras
-para autocompletar, pero dando preferencia a texto encontrado hacia abajo</li>
-<li><code>%s/&lt;texto a buscar&gt;/&lt;texto a reemplazar&gt;/g</code> busca y reemplaza un texto por otro,
-se puede hacer en todo el fichero o dentro de una zona seleccionada con <code>v</code></li>
-<li><code>=</code> indenta un texto. <code>==</code> indenta una línea entera</li>
-<li><code>&lt;</code> y <code>&gt;</code> aumentan o disminuyen la indentación de la línea</li>
-<li><code>gg</code> mueve el cursor al inicio del fichero. <code>G</code> lo mueve al final del fichero</li>
-<li><code>:!&lt;comando unix&gt;</code> ejecuta un comando unix. <code>%</code> se reemplaza por la ruta del
-fichero actual. También puede actuar sobre regiones de selección visuales.
-<code>:'&lt;, '&gt;!sort</code> ordena la selección visual</li>
-<li><code>q&lt;tecla&gt;</code> comienza la grabación de una macro, almacenándola en <code>&lt;tecla&gt;</code>. Volver
-a pulsar <code>q</code> para parar la grabación.</li>
-<li><code>@&lt;tecla&gt;</code> ejecuta la macro almacenada en <code>&lt;tecla&gt;</code></li>
-<li><code>@@</code> ejecuta la última macro</li>
-<li><code>:split</code>, <code>:vsplit</code> para abrir varios ficheros y verlos simultáneamente</li>
-<li><code>:buffer &lt;número&gt;</code> para abrir un buffer o nuevo fichero. Por ahora los buffers
-es un tema algo complicado. Más adelante aprenderé más sobre ellos.</li>
-</ul>
-
-
-<p>Plugin <a href="http://vim.sourceforge.net/scripts/script.php?script_id=1658">NERDTree</a>.
-Con <code>CTRL + w</code> se entra en un modo para poder moverse por las
-ventanas (<strong>w</strong>indows). Se pueden utilizar las teclas de movimiento <code>h</code>, <code>j</code>, <code>k</code>, <code>l</code>
-para moverse por los ficheros que muestra el plugin en forma de árbol.</p>
-
-<p>Se puede utiliar Vim como una herramienta para comparar ficheros. El comando unix
-<code>vimdiff</code> abre Vim con dos ficheros para compararlos.</p>
-
-<p>Toda la configuración de Vim se guarda en el directorio <code>~/.vim</code>. Los plugins se
-guardan en <code>~/.vim/plugin</code> y los ficheros de ayuda en <code>~/.vim/doc</code>. Configuraciones
-de teclas, colores, indentación y otras se guardan en el fichero <code>~/.vimrc</code>.</p>
-
-<p>Plugin <a href="https://wincent.com/products/command-t">Command-T</a>. Para abrir ficheros con
-las teclas <code>CTRL + t</code>. Parecido a la misma funcionalidad de TextMate o Sublime. Al
-parecer necesita Ruby, así que la instalación quizá no sea muy sencilla.</p>
-
-<h2>(12-10-2014) Derek Wyatt: Basic movements II</h2>
-
-<p>El primer video de Derek decidí saltármelo, ya que todos los comandos estarían
-cubiertos con los videos de #LinuxIO. En el de <a href="http://vimeo.com/6185584">Movimientos básicos II</a>
-aprendí lo siguiente:</p>
-
-<ul>
-<li><code>H</code> mueve el cursor a la cabecera (<strong>h</strong>ead) del texto que se muestra en pantalla</li>
-<li><code>M</code> mueve el cursor a la parte <strong>m</strong>edia del texto en pantalla</li>
-<li><code>L</code> mueve el cursor a la última (<strong>l</strong>ast) línea del texto en pantalla</li>
-<li><code>&lt;número&gt;G</code> nos lleva a la línea número <code>&lt;número&gt;</code></li>
-<li><code>#</code> busca la palabra sobre la que buscamos, pero hacia atrás. Es como el comando
-que ya vi anteriormente <code>*</code></li>
-<li><code>g*</code> busca el texto, como <code>*</code>, pero no tiene porqué ser la palabra completa</li>
-</ul>
-
-
-<h2>(12-10-2014) Derek Wyatt: Basic movements III</h2>
-
-<p>En el video de <a href="http://vimeo.com/6216655">Movimientos básicos III</a> ya no podían quedar
-muchos más movimientos que aprender, y la verdad es que los que aquí aparecen son ya
-movimientos un poco más extraños, aunque no por eso dejan de ser útiles.</p>
-
-<ul>
-<li><code>:help motion.txt</code> para ver la ayuda sobre movimientos, para que no se olvide
-ninguno</li>
-<li><code>]]</code> mueve el cursor hasta el siguiente carácter <code>{</code> que exista en la columna 0.
-Ideal para movernos por ficheros de código. Existen otras combinaciones, como
-<code>[[</code>, <code>[]</code> y <code>][</code>, pero actuando sólo sobre la columna 0, no sé si les voy a sacar
-mucho provecho.</li>
-</ul>
-
-
-<p>El plugin <a href="http://www.vim.org/scripts/script.php?script_id=39">matchit</a> amplía la
-funcionalidad del comando <code>%</code> (que movía el cursor hasta el siguiente carácter
-complementario: de <code>(</code> a <code>)</code>, de <code>[</code> a <code>]</code>, &#8230;).</p>
-
-<p><code>:help marks</code> para conocer acerca de marcadores. No los suelo utilizar en mi día
-a día, pero no está de más saber que existen.</p>
-
-<ul>
-<li><code>m&lt;tecla&gt;</code> define un marcador en <code>&lt;tecla&gt;</code></li>
-<li><code>'&lt;tecla&gt;</code> nos mueve al marcador definido en <code>&lt;tecla&gt;</code></li>
-<li><code>''</code> nos lleva al último lugar donde editamos, ya que Vim almacena en <code>'</code> dicha
-posición de forma automática</li>
-</ul>
-
-
-<h2>(13-10-2014) Derek Wyatt: basic editing I</h2>
-
-<p>No es que aprendiera mucho en el video de <a href="http://vimeo.com/6329762">Edición básica</a> de
-Derek, pero la mayoría de comandos ya estaban cubiertos con los videos de #LinuxIO.</p>
-
-<ul>
-<li><code>x</code> borra el carácter donde esta el cursor. <code>X</code> borra hacia atrás</li>
-<li><code>r</code> <strong>r</strong>eemplaza un carácter. <code>R</code> <strong>r</strong>eemplaza varios carácteres, hasta que pulsemos <code>ESC</code>.
-<code>5rx</code> reemplaza 5 caracteres por una <code>x</code>.</li>
-</ul>
-
-
-<p>El comando <code>:set cpoptions+=$</code> configura una funcionalidad adicional para el
-comando <code>c</code> (<strong>c</strong>ambiar). Lo que hace es que aparezca el carácter <code>$</code> al
-final del texto que se va a cambiar.</p>
-
-<h2>(13-10-2104) Derek Wyatt: basic editing II</h2>
-
-<p>No hay gran cosa que destacar en el video de
-<a href="http://vimeo.com/6332848">Edición básica II</a>.</p>
-
-<ul>
-<li><code>F&lt;carácter&gt;</code> encontrar (<strong>f</strong>ind) un carácter hacia atrás</li>
-<li><code>J</code> une (<strong>j</strong>oin) una línea con la inmediatamente inferior. <code>gj</code> une dos líneas
-sin dejar ningún espacio en blanco.</li>
-<li><code>gv</code> selecciona el último bloque visual</li>
-</ul>
-
-
-<h2>(13-10-2014) Derek Wyatt: working with many files I</h2>
-
-<p>En el episodio de <a href="https://vimeo.com/6306508">Múltiples ficheros I</a> aprendí un
-manejo básico de buffers, es decir, manejar varios ficheros a la vez.</p>
-
-<ul>
-<li><code>:e &lt;fichero&gt;</code> abre un buffer con ese <fichero></li>
-<li><code>:ls</code> lista todos los buffers abiertos</li>
-<li><code>:buffer &lt;número&gt;</code> cambia al buffer número <code>&lt;número&gt;</code>. <code>:b &lt;nombre&gt;</code> cambia al
-buffer del fichero con el nombre <code>&lt;nombre&gt;</code>. <code>b#</code> cambia al buffer anterior.</li>
-<li><code>:bdelete</code> o <code>bd</code> cierra el buffer abierto en ese momento</li>
-<li><code>:%bd</code> cierra todos los buffers (<code>%</code> significa <em>todo el rango</em>)</li>
-</ul>
-
-
-<h2>(13-10-2014) Derek Wyatt: working with many files II</h2>
-
-<p>El episodio de <a href="https://vimeo.com/6307101">Múltiples ficheros II</a> sigue enseñándome
-a manejar varios buffers o ficheros a la vez.</p>
-
-<ul>
-<li><code>:wn</code> (<strong>w</strong>rite and move <strong>n</strong>ext), escribe el buffer actual y se mueve al
-siguiente</li>
-<li><code>:n</code> mueve al siguiente (<strong>n</strong>ext) buffer</li>
-<li><code>:bufdo &lt;comando&gt;</code> ejecuta el comando en todos y cada uno de los buffers
-abiertos</li>
-<li><code>:wall</code> escribe todos (<strong>all</strong>) los buffers</li>
-<li><code>:bfirst</code> se mueve al primer buffer. <code>:bn</code> se mueve al siguiente. <code>:bp</code> se
-mueve al anterior (<strong>p</strong>revious)</li>
-</ul>
-
-
-<p>Todos estos comandos son potentes si se usa <strong>una sola sesión de Vim</strong>, y
-son inútiles si tienes abiertos N Vims con N ficheros. Así que recuerda:
-una sola sesión de Vim.</p>
-
-<h2>(13-10-2014) Derek Wyatt: working with many files III</h2>
-
-<p>En el <a href="https://vimeo.com/6342264">último episodio sobre múltiples ficheros</a>
-hay más y más comandos que aprender, a cual más útil.</p>
-
-<ul>
-<li><code>CTRL-w o</code> te deja con sólo una ventana abierta</li>
-<li><code>:split &lt;fichero&gt;</code>, <code>:sp &lt;fichero&gt;</code> divide la pantalla y abre una ventana debajo
-de otra con el nuevo fichero</li>
-<li><code>CTRL-w x</code> intercambia (e<strong>x</strong>change) dos ventanas</li>
-<li><code>CTRL-w v</code> divide la pantalla en vertical, mostrando dos ventanas con el mismo
-buffer. También se puede hacer con <code>:vsplit</code> o <code>:vsp</code></li>
-<li><code>CTRL-w</code> seguido de <code>h</code>, <code>j</code>, <code>k</code> o <code>l</code> te permite moverte de ventana en ventana
-igual que si lo estuvieras haciendo dentro de un fichero</li>
-<li><code>CTRL-w</code> seguido de <code>H</code>, <code>J</code>, <code>K</code> o <code>L</code> mueve la ventana a la derecha, abajo,
-arriba o a la derecha</li>
-<li><code>CTRL-w p</code> mueve el cursor a la última ventana visitada</li>
-<li><code>CTRL-w c</code> <strong>c</strong>ierra la ventana</li>
-<li><p><code>CRTL-w</code> mueve el cursor a la siguiente ventana, de una en una, una especie de
-<code>CTRL-TAB</code> o así</p></li>
-<li><p><code>CTRL-w c</code> <strong>c</strong>ierra la ventana</p></li>
-<li><code>CRTL-w</code> mueve el cursor a la siguiente ventana, de una en una, una especie de
-<code>CTRL-TAB</code> o así</li>
-</ul>
-
-
-<h2>(14-10-2014) Derek Wyatt: how to use the help system</h2>
-
-<p>Para aprender acerca de <a href="http://vimeo.com/7035132">cómo usar la ayuda</a> este
-video es lo mejor, aquí va un resumen:</p>
-
-<ul>
-<li><code>:help</code> o <code>:h</code> abre una ventana como si fuera un buffer donde muestra la ayuda</li>
-<li><code>CTRL+]</code> para seguir un hiperenlace de la ayuda (no se si funcionara con
-teclado español). <code>CTRL+t</code> para volver hacia atrás</li>
-<li><code>:help &lt;tag&gt;</code> abre la ayuda de una etiqueta. Las etiquetas tienen la forma
-de <code>*:&lt;command&gt;*</code> en la ayuda.</li>
-<li><code>:help &lt;function&gt;()</code> abre la ayuda de una función</li>
-<li>the command <code>wildmenu</code> (o <code>wmnu</code>) habilita el autocompletado de comandos en
-con <code>TAB</code>. Para activarla, escribir <code>:set wildmenu</code>. Para desactivarla
-<code>:set nowildmenu</code></li>
-<li><code>:helpgrep</code> (<code>:helpg</code>) busca un patrón en los ficheros de ayuda. Con el
-filtro <code>[@xx]</code> busca sólo para el lenguaje <code>xx</code>. Para movernos por los resultados
-se puede hacer con <code>:cn</code> (siguiente o <strong>n</strong>ext) o con <code>:cwin</code> nos abre una
-ventana llamada <em>quickfix</em> (<code>:h quickfix</code> para saber más)</li>
-</ul>
-
-
-<h2>(23-10-2014) Derek Wyatt: Vim runtime y el fichero .vimrc</h2>
-
-<p>Sigo aprendiendo Vim con este tío, esta vez sobre el
-<a href="http://derekwyatt.org/vim/tutorials/intermediate/#vimrc">fichero de configuración .vimrc y el runtime</a>:</p>
-
-<ul>
-<li>El fichero <code>vimrc</code> se usa para configurar Vim cuando arranca</li>
-<li>En Linux, el fichero <code>vimrc</code> se encuentra en <code>~/.vimrc</code></li>
-<li>Puedes escribir los mismos comandos que en el modo comando, cuando empieza por <code>:</code></li>
-<li>Echar un vistazo a MiniBufExplorer plugin</li>
-<li><code>:h vimrc</code> para leer la ayuda</li>
-<li><code>nnoremap</code> es un comando interesante para remapear ciertos comandos</li>
-<li><code>:h 'runtimepath'</code> muestra la ayuda sobre vim runtime path</li>
-<li><code>~/.vim/</code> es el runtime path por defecto en Linux. Ahí es donde irán instalados
-los ficheros de ayuda, los plugins, los colores de syntaxis, &#8230;</li>
-<li><code>~/.vim/doc</code> es donde se guarda la ayuda</li>
-<li><code>~/.vim/colors</code> es donde se guardan los esquemas de colores</li>
-<li><code>~/.vim/plugin</code> es donde <em>viven</em> los plugins</li>
-</ul>
-
-
-<h2>(24-10-2014) Derek Wyatt: Vim modes introduction</h2>
-
-<p>Los modos es la característica que diferencia a Vim (sobre todo de emacs, su eterno
-enemigo), y ya iba siendo hora de apreder sobre ellos. Los modos de Vim son:
-normal, visual, inserción, comando y ¿¡ejecución!?, así que aquí va una
-<a href="http://derekwyatt.org/vim/tutorials/intermediate/#modes-intro">introducción a los modos de Vim</a>:</p>
-
-<ul>
-<li>modo <em>Normal</em>: donde puedes introducir los comandos del editor</li>
-<li>modo <em>Visual</em>: como el modo normal, pero según te mueves por el fichero, el texto
-se va resaltando, como si fuera una selección visual</li>
-<li>modo <em>Inserción</em>: es el modo donde se introduce el texto</li>
-<li>modo <em>Línea de comandos</em>: donde puedes introducir comandos en una línea abajo
-del todo de la ventana de Vim. Los comandos comienzan con <code>:</code>, <code>/</code>, <code>?</code> o <code>!</code></li>
-<li>Y hay otros modos menos usados, que más que modos distintos son como una
-mezcla de varios de los básicos, como el modo <em>Inserción Normal</em>, que, estando
-en el modo de inserción, te permite ejecutar un comando (uno sólo) y luego
-vuelve a entrar en el modo de inserción.</li>
-</ul>
-
-
-<h2>(28-10-2014) Derek Wyatt: Insert mode</h2>
-
-<p>En este video Derek profundiza en uno de los modos importantes de Vim, el
-<a href="https://vimeo.com/7133419">modo de inserción</a>, en el cual podemos usar
-autocompletado, indentar líneas y muchas cosas más.</p>
-
-<ul>
-<li><code>:help i_CTRL-A</code> muestra la ayuda para la combinación de teclas <code>CTRL a</code> pero
-exclusivamente para el modo de inserción, de ahí el <code>i_</code></li>
-<li><code>expandtab</code> es una opción que indica el número de espacios a insertar cuando
-se presiona la tecla <code>TAB</code></li>
-<li><code>CTRL w</code> borra la palabra anterior (si estamos en modo de inserción)</li>
-<li><code>CTRL t</code> incrementa en uno la indentación</li>
-<li><code>CTRL d</code> decrementa en uno la indentación</li>
-<li><code>:help ins-special-special</code> muestra la ayuda de comandos en el modo inserción,
-como por ejemplo <code>CTRL g j</code> para mover el cursor una línea abajo.</li>
-<li><code>CTRL m</code>, <code>CTRL p</code> busca palabras para autocompletar buscando hacia abajo o
-hacia arriba</li>
-<li><code>CTRL x</code> + <code>CTRL l</code> autocompleta líneas enteras, es decir, en lugar de buscar
-palabrejas, busca líneas completas.</li>
-<li><code>CTRL x</code> + <code>CTRL f</code> autocompleta rutas de ficheros</li>
-</ul>
-
-
-<h2>(02-11-2014) Derek Wyatt: One Vim&#8230; just one</h2>
-
-<p>Es cortito video acerca de <a href="http://vimeo.com/4446112">mantener una y solo una sesión de Vim</a>
-se enfoca en solamente un comando de la shell:</p>
-
-<pre><code>gvim --remote-silent
-</code></pre>
-
-<p>Este sencillo comando nos permite abrir varios ficheros en una única sesión
-gráfica de vim.</p>
-
-<p>Tal y como dicen los comentarios del vídeo, este comando solamente funciona por
-defecto en la interfaz gráfica de Vim, no en la versión de Vim que se ejecuta
-en la línea de comandos.</p>
-
-<h2>(02-11-2014) Derek Wyatt: Destruction is good</h2>
-
-<p>En este video Derek muestra cómo utilizar
-<a href="http://vimeo.com/6110008">comandos destructivos para editar</a>
-el contenido que queremos.</p>
-
-<p>Comandos utilizados:</p>
-
-<ul>
-<li><code>:v/&lt;some pattern&gt;/&lt;some command&gt;</code>: es el comando <code>:vglobal</code> (usar <code>:help :vglobal</code>
-para saber más). Este comando realiza acciones sobre líneas que NO cumplen el patrón
-especificado.</li>
-<li><code>:help :substitute</code> muestra ayuda del comando utilizado para sustituir unas cadenas
-por otras.</li>
-<li>Expresiones regulares, que son ya un problema en sí mismas y que darían para
-mucho tiempo de aprendizaje.</li>
-</ul>
-
-
-<h2>(24-11-2014) Derek Wyatt: Using a Vim macro to edit many files</h2>
-
-<p>Y después de un tiempo sin ver nada nuevo de Vim, hoy toca ver cómo se puede
-<a href="http://vimeo.com/4456458">utilizar una macro para editar varios ficheros</a>, del cual,
-se pueden sacar los siguientes macros y consejos:</p>
-
-<ul>
-<li><code>q + a</code> para comenzar a grabar una macro en la posición <code>a</code></li>
-<li><code>@ + a</code> para ejecutar la macro grabada en la posición <code>a</code></li>
-<li><code>@ + @</code> para ejecutar la última macro</li>
-<li><code>5 + @ + a</code> para ejecutar la macro en <code>a</code> 5 veces</li>
-<li><code>:wn</code> guardar todos los cambios y moverse al siguiente buffer</li>
-<li><code>:prev</code> moverse al buffer anterior</li>
-<li><code>" + a + p</code> imprime la macro guardada en la posición <code>a</code></li>
-</ul>
-
-
-<h2>(08-01-2015) Derek Wyatt: Vim macros and global commands</h2>
-
-<p>Sigo aprendiendo cosas sobre Vim, esta vez sigo con
-<a href="https://vimeo.com/4448635">macros en Vim y comandos globales</a>. Estos son los
-comandos y nuevos consejos que aprendí:</p>
-
-<ul>
-<li><code>CTRL + A</code> incrementa en uno el primer número que encuentra en la línea</li>
-<li><code>20 CTRL + A</code> incrementa en 20 el primer número de la línea</li>
-<li>Grabar y ejecutar macros, visto en el anterior</li>
-<li><code>:g/sometext/normal 20^A</code> es un comando global (en modo :normal, lo que sea eso
-que signifique), que busca la cadena <code>sometext</code> (ya he visto antes cómo buscar
-cadenas de texto) y ejecuta el comando <code>20 CTRL + A</code>. Para ello, para poder
-escribir <code>CTRL + A</code> como comando, hay que pulsar <code>CTRL + V</code> para que la
-siguiente pulsación la tome de forma literal, y luego pulsar <code>CTRL + A</code></li>
-<li><code>CTRL + V</code> hace que Vim tome la siguiente pulsación de forma literal, muy útil
-cuando se escriben comandos globales, por ejemplo.</li>
-</ul>
-
-
-<h2>(08-01-2015) Derek Wyatt: Vim expression register</h2>
-
-<p>Una vez acabados los vídeos de nivel intermedio, toca comenzar con los de
-nivel avanzado. Comienzo con el <a href="http://vimeo.com/4446843">registro de expresiones</a>. ¿Qué es?
-¿Para qué sirve? En el vídeo lo descubro:</p>
-
-<ul>
-<li>¿Qué es? Es un registro, un lugar donde almacenar <em>cosas</em>. ¿Y qué cosas
-son esas? Pues son comandos.</li>
-<li>¿Para qué sirve? Lo utilizan los programadores de plugins para extender
-Vim y para integrarlo con herramientas de terceros.</li>
-<li><code>:imap &lt;c-j&gt;d &lt;c-r&gt;=system('echo foo')&lt;cr&gt;</code> mapea (en modo <strong>i</strong>nserción)
-la combinación de teclas <code>CTRL + J, D</code> para que ejecute el comando de
-sistema <code>echo foo</code> e inserte el resultado en el archivo que estamos
-editando. <code>&lt;c-r&gt;</code> significa <code>CTRL + R</code>, que accede al <em>registro de expresiones</em>
-del que estamos hablando.</li>
-</ul>
-
-
-<h2>(18-01-2015) Derek Wyatt: Vim autocomands</h2>
-
-<p>Siguiendo con vídeos de nivel avanzado, esta vez toca <em>auto comandos</em>. Parece
-una funcionalidad super útil de Vim. Es una funcionalidad donde puedes configurar
-Vim para que realice los comandos que quieras cuando ocurra algún evento: por
-ejemplo, cuando se guarda un fichero en disco, o cuando se mueva el cursor.
-El vídeo está disponible en <a href="http://vimeo.com/4454614">Autocomandos</a>,
-y es muy cortito, que no te de pereza.</p>
-
-<ul>
-<li><code>:help :autocmd</code></li>
-</ul>
-
-
-<h3>(18-01-2015) Derek Wyatt: Find command and the path</h3>
-
-<p>El vídeo anterior era realmente corto, y solamente saqué en claro un comando
-para Vim, <code>:autocmd</code>, pero para su uso es necesario de tener funciones u
-otros comandos para que realmente haga algo.</p>
-
-<p>Así pues, el siguiente es <a href="http://vimeo.com/6154082">Find command and the Path</a>
-para aprender a buscar ficheros y cargarlos para su edición.</p>
-
-<ul>
-<li><code>:set path=&lt;directorio&gt;</code>: establece la variable <code>path</code> en Vim, para búsqueda
-de ficheros por ejemplo.</li>
-<li><code>:find &lt;filename&gt;</code>: busca por un fichero y lo abre para su edición</li>
-<li><code>:pwd</code>: muestra el directorio de trabajo actual</li>
-</ul>
-
-
-<h3>(Marzo 2015) Comando <code>set statusline</code></h3>
-
-<p>Esta vez no tengo nada de ningún video, pero es igualmente interesante. Mediante
-el comando <code>set statusline</code> se puede configurar la apariencia de la <em>barra de
-estado</em> de Vim. Existen muchos símbolos (por llamarlos de alguna manera) que a
-modo de función <code>printf</code> pueden ser sustituidos por diversos campos dentro del
-editor: nombre del fichero, número de línea, codificación del fichero,&#8230;</p>
-
-<p>A partir de <a href="http://stackoverflow.com/questions/21069164/osx-vim-set-laststatus-2-shows-only-the-filename-but-i-want-to-see-everythin">esta pregunta en Stack Overflow</a>
-encontré el fichero de configuración de <a href="https://github.com/sk1418/myConf/blob/master/common/.vimrc#L506">sk1418</a>
-en el cual me basé para crearme mi propia configuarción de la barra de estado:</p>
-
-<pre><code>set laststatus =2 " always show status bar
-set statusline=%&lt;%f%h%m%r%=%b\ 0x%B\ \ %l,%c%V\ %p\ %P
-</code></pre>
-
-<p>La cual me muestra:</p>
-
-<ul>
-<li>Nombre del fichero, con la ruta completa</li>
-<li>Una marca para saber si el fichero está modificado</li>
-<li>Valor decimal del carácter donde está situado el cursor</li>
-<li>Valor hexadecimal del mismo</li>
-<li>Columna o línea del fichero donde está el cursor</li>
-<li>Fila</li>
-<li>Tanto por ciento del fichero donde está el cursor</li>
-</ul>
-
-
-<h3>(Mayo 2015) <a href="http://www.viemu.com/a-why-vi-vim.html">Why, oh why, do those #?@! nutheads use vi?</a></h3>
-
-<p>Después de un cierto tiempo, tropecé con éste post, del cual extraje algún que
-otro comando que no conocía todavía. Y no solo comandos, sino secuencias de ellos
-que me permiten realizar tareas muy comunes en el desarrollo de software.</p>
-
-<p><em>Extraer una variable</em></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>if (!entry.used && equivalent(entry.key(), qk.key) && (curcontext & entry.contexts)) {
-</span><span class='line'>    // do something
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Situar el cursor al principio de <code>equivalent</code> y teclear el comando <code>c%</code>:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>if (!entry.used && &lt;cursor will be here&gt; && (curcontext & entry.contexts)) {
-</span><span class='line'>    // do something
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Resulta que eso <strong>c</strong>orta el texto <code>equivalent(entry.key(), qk.key)</code> y entra en modo
-edición. Luego puedo escribir el nombre de la variable, cambiar a modo normal
-y pulsar <code>O</code> para insertar una línea arriba:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;cursor here&gt;
-</span><span class='line'>if (!entry.used && equiv && (curcontext & entry.contexts)) {
-</span><span class='line'>    // do something
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Luego, puedo declarar la variable, y pegar lo que hay en el portapapeles con <code>CTRL + R</code>:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>bool equiv = equivalent(entry.key(), qk.key);
-</span><span class='line'>if (!entry.used && equiv && (curcontext & entry.contexts)) {
-</span><span class='line'>    // do something
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
-
-
-<ul>
-<li><code>zt</code>: Mueve la línea (hace <strong>z</strong>oom) donde está el cursor arriba del todo
-(<strong>t</strong>op)</li>
-<li><code>zz</code>: Mueve la línea (hace <strong>z</strong>oom) donde está el cursor al centro de la
-pantalla</li>
-<li><code>zb</code>: Mueve la línea (hace <strong>z</strong>oom) donde está el cursor abajo del todo
-(<strong>b</strong>ottom)</li>
-<li><code>*</code>: busca hacia adelante la palabra seleccionada</li>
-<li><code>#</code>: busca hacia atrás</li>
-<li><code>=aB</code>: corregir la indentación (<code>=</code>) de un (<strong>a</strong>) <strong>Bloque</strong></li>
-<li>Comando <code>hlsearch</code>, por ejemplo: <code>:set hlsearch</code></li>
-<li><code>gU</code>: convierte a mayúsculas todo el texto seleccionado</li>
-<li><code>gu</code>: convierte a minúsculas todo el texto seleccionado</li>
-</ul>
-
-
-<h3>(Junio 2015) <a href="https://www.youtube.com/watch?v=xJz2Hq-jWxY">A casual introduction to Vim on Windows</a></h3>
-
-<p>Por casualidad encontré este vídeo de Roy Osherove, donde habla acerca de Vim
-(en Windows, aunque el sistema operativo tiene poca influencia para el nivel
-que Roy nos cuenta). No aprendí ningún comando nuevo, porque Roy habla de comandos
-básicos, para comenzar a usar Vim, pero creo que el vídeo es un recurso esencial
-para el aprendizaje de Vim, por lo que lo enlazo aquí.</p>
-
-<h3>(Julio 2015) <a href="http://vim.wikia.com/wiki/Word_count">Contar palabras</a></h3>
-
-<p>De repente, escribiendo un post para este blog, me pregunté: ¿Será muy largo
-el post?, ¿Cuántas palabras habrá?. Tampoco tengo claro cuantas palabras hacen
-que un post sea largo, pero bueno, tenía curiosidad por saber cuántas palabras
-había en el post.</p>
-
-<p>El problema es que escribí el post en Windows. Si hubiera estado en Linux, las
-hubiera contado con <code>wc -w</code>. Estaba en Vim, y decidí buscar algún plugin que
-contara las palabras por mí. En lugar de eso, encontré un comando:</p>
-
-<ul>
-<li><code>g</code> + <code>CTRL g</code></li>
-</ul>
-
-
-<h3>(Julio 2015) <a href="https://www.youtube.com/watch?v=wlR5gYd6um0">Mastering the Vim language</a>, Chris Toomey</h3>
-
-<ul>
-<li>Priorizar <em>text objects</em> frente a movimientos (<code>iw</code> frente a <code>w</code>), hacen que
-los comandos sean más repetibles, ya que seleccionan mejor. El movimiento <code>w</code>
-sólo selecciona la palabra si el cursor está al inicio de la misma.</li>
-<li><a href="https://github.com/tpope/vim-repeat">repeat.vim</a> es un plugin que que remapea <code>.</code> (commando repetir) de tal forma
-que los comandos de los plugins sean compatibles con <code>.</code></li>
-<li><code>:set relativenumber</code>, <code>:set norelativenumber</code>, para ver el número de líneas
-relativas respecto a la que está el cursor</li>
-</ul>
-
-
-<p><strong>Algunos plugins</strong></p>
-
-<ul>
-<li><a href="https://github.com/tpope/vim-surround">surround plugin</a>:
-
-<ul>
-<li><code>ds"</code> : borra las comillas dobles de alrededor</li>
-<li><code>cs"'</code> : cambia las comillas dobles que encierran el texto por comillas simples</li>
-<li>y unos cuantos más, como <code>cst&lt;text&gt;</code> para cambiar tags HTML</li>
-</ul>
-</li>
-<li><a href="https://github.com/tpope/vim-commentary">commentary plugin</a>: parece mucho más potente que el que proporciona comandos
-<code>gcc</code> y demás. éste proporciona <code>cm&lt;motion&gt;</code>, por ejemplo: <code>cml</code> (comenta línea),
-<code>cm4j</code> (commenta 4 líneas hacia abajo)</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=2703">replace with register plugin</a>: con el comando <code>gr&lt;motion&gt;</code>, por ejemplo,
-si tengo copiada una palabra, puedo hacer <code>griw</code> para <em>go replace inner word</em></li>
-<li><a href="https://github.com/christoomey/vim-sort-motion">sort-motion plugin</a>: con el comando <code>gs&lt;motion&gt;</code> lo que hace es ordenar
-líneas alfabéticamente (para imports, requires,&#8230;)</li>
-<li><a href="https://github.com/christoomey/vim-system-copy">system-copy plugin</a>: para copiar al portapapeles del sistema</li>
-</ul>
-
-
-<p><strong>Text objects personalizados</strong></p>
-
-<ul>
-<li>indentación: <code>cmii</code>, <code>cmni"</code></li>
-<li>entero: <code>cmae</code> (<strong>c</strong>omment <strong>a</strong>ll <strong>e</strong>ntire, comenta el documento entero)</li>
-<li>línea: <code>cml</code></li>
-</ul>
-
-
-<!--
-Next: [Globals, commands and functions](http://vimeo.com/15443936)
--->
-
-
-
 ]]></content>
   </entry>
   
