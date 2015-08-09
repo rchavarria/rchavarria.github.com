@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2015-08-03T01:23:26+02:00</updated>
+  <updated>2015-08-09T19:30:20+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,100 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Navegando el código fuente con Vim]]></title>
+    <link href="http://rchavarria.github.io/blog/2015/08/09/navegando-codigo-fuente-vim/"/>
+    <updated>2015-08-09T22:16:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2015/08/09/navegando-codigo-fuente-vim</id>
+    <content type="html"><![CDATA[<p>Últimamente se están popularizando muchos editores de código (Atom, Brakets,
+Sublime Text,&#8230;). Pero mucho antes que ellos existieron al menos otros dos:
+Emacs y <a href="http://www.vim.org">Vim</a>. No se muy bien la razón, quizá fue simplemente por el placer
+de aprender, pero me decidí a <a href="http://rchavarria.github.io/blog/2014/10/11/aprendiendo-vim">aprender a utilizar Vim</a>. Ya llevo un tiempo
+con ello, aunque el aprendizaje va despacio.</p>
+
+<p>Hay muchas cosas que me encantan de Vim, pero echo de menos algunas cosas que
+me dan ciertos IDEs: refactorizaciones sencillas, búsqueda en múltiples
+ficheros, integración con otras herramientas,&#8230; En este post voy a contar
+cómo se puede <strong>solucionar el problema de la navegación de código</strong>.</p>
+
+<!-- more -->
+
+
+<p>Vim lo soluciona con un fichero de <em>tags</em>. Dentro de un lenguaje de programación,
+un tag es simplemente el nombre de una función, método, clase,&#8230; Cada tag va
+acompañado de una referencia para localizar dónde aparece: básicamente fichero y
+número de línea. Con la herramienta <a href="http://ctags.sourceforge.net">ctags</a> es posible generar un fichero que
+sirve a Vim a conocer todas las tags de nuestro proyecto, y mediante comandos de
+Vim, podemos movernos entre ellas de un fichero a otro.</p>
+
+<h2>Uso de la herramienta <code>ctags</code></h2>
+
+<p>Lo primero es instalar la herramienta. Para Linux es tan sencillo como ejecutar
+un simple comando. Para otros sistemas operativos es también bastante sencillo,
+pero se recomienda visitar la página del proyecto <a href="http://ctags.sourceforge.net">Exuberant Ctags</a> para
+conocer más detalles.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo apt-get install exuberant-ctags
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>El siguiente paso es generar el fichero de tags de nuestro proyecto:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span><span class="nb">cd</span> /home/rchavarria/my-super-interesting-project
+</span><span class='line'><span class="nv">$ </span>ctags -R .
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Y por último, indicar a Vim dónde está el fichero de tags que queremos usar.
+Para ello, una vez el editor está abierto, introducir el comando:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>:set <span class="nv">tags</span><span class="o">=</span>/path/to/tags/file
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Para facilitar las cosas y no tener que recordar cómo cargar el fichero de tags
+manualmente, es recomendable poner el comando anterior en el fichero <code>.vimrc</code>,
+de forma que al abrir Vim cargue siempre el fichero de tags.</p>
+
+<h2>Navegar</h2>
+
+<p>Ahora, veamos cómo podemos movernos entre tags. Estos movimientos permiten
+movernos dentro del mismo fichero, entre ficheros abiertos, o incluso ficheros
+que no estén abiertos (pero están referenciados en el fichero de tags claro).</p>
+
+<ul>
+<li><code>CTRL + ]</code>: en modo normal, nos lleva a la definición del tag donde está el
+cursor. Con el teclado español, para mostrar el carácter <code>]</code> es necesario pulsar
+<code>AlgGr</code> + <code>]</code>, pero para ejecutar este comando de Vim no se debe pulsar <code>AltGr</code>,
+es suficiente con pulsar la tecla que contiene los carácteres <code>+</code>, <code>*</code> y <code>]</code>.</li>
+<li><code>CTRL + t</code>: en modo normal, te lleva de vuelta al punto antes de navegar al tag.</li>
+<li><code>CTRL + w</code> + <code>CTRL + ]</code>: en modo normal, divide la pantalla horizontalmente y
+abre el fichero donde se encuentra la definición del tag.</li>
+<li><code>:tag &lt;tag name&gt;</code> para ir directamente a la definición de una tag cualquiera</li>
+<li><code>:tnext</code> y <code>:tprevious</code> (<code>:tn</code> y <code>:tp</code>) te llevan a la tag siguiente o anterior.
+hay quien recomienda mapear estos comandos a otra secuencia de carácteres, como
+por ejemplo: <code>]t</code> y <code>[t</code>.</li>
+<li><code>:ltag</code> carga las tags en la ventana de lista de localizaciones (como <code>:ls</code>
+cuando lista los búfferes abiertos)</li>
+<li><code>:lopen</code> abre dicha ventana</li>
+</ul>
+
+
+<h2>Referencias y enlaces relacionados</h2>
+
+<ul>
+<li><a href="http://andrewradev.com/2011/06/08/vim-and-ctags">Vim and Ctags</a>, fenomenal artículo que cubre casi todo lo relacionado con
+Vim y ctags.</li>
+<li><a href="http://rchavarria.github.io/blog/2014/10/11/aprendiendo-vim">Aprendiendo Vim</a>, en este mismo blog</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Estándares de código en tu equipo]]></title>
@@ -2747,58 +2841,6 @@ juego).</p>
 el código y las refactorizaciones, aplico técnicas aprendidas de <a href="http://www.carlosble.com">Carlos</a> y
 sus screencasts, así como las <a href="http://blog.8thlight.com/uncle-bob/2013/05/27/TheTransformationPriorityPremise.html">Transformation Priority Premise</a> del
 gran maestro <a href="https://en.wikipedia.org/wiki/Robert_Cecil_Martin">Uncle Bob</a>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Jenkins CI: inyectar variable de entorno]]></title>
-    <link href="http://rchavarria.github.io/blog/2014/10/17/jenkins-ci-inyectar-variable-de-entorno/"/>
-    <updated>2014-10-17T08:44:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2014/10/17/jenkins-ci-inyectar-variable-de-entorno</id>
-    <content type="html"><![CDATA[<p>Recientemente, me ha surgido la necesidad de inyectar, o modificar más bien, una
-variable de entorno en el servidor de integración contínua que usamos en el
-trabajo, <a href="http://www.jenkins-ci.org">Jenkins</a>.</p>
-
-<p>Uno de los <em>jobs</em> de Jenkins necesita una aplicación recientemente instalada, y
-dicha aplicación no está alojada en ningún directorio definido dentro de la
-variable de entorno <code>PATH</code>. Por lo cual, el <em>job</em> fallaba.</p>
-
-<p>Una posible solución a este problema era el de modificar la variable de entorno
-a nivel global, pero eso podría entrar en conflicto con otros <em>jobs</em>. Por lo cual
-decidí cambiarla sólo a nivel de <em>job</em>. Por lo que llegamos a la pregunta:
-¿Cómo se inyecta una variable de entorno en un <em>job</em> de Jenkins?</p>
-
-<!-- more -->
-
-
-<h2>Requisitos</h2>
-
-<p>Para poder hacerlo se requiere tener instalado en plugin
-&#8217;<a href="https://wiki.jenkins-ci.org/display/JENKINS/EnvInject+Plugin">Environment Injector Plugin</a>&#8217;. Este plugin añade una nueva sección en la página
-de configuracion de los trabajos de jenkins: <em>Build Environment</em>.</p>
-
-<h2>Proceso</h2>
-
-<p>Una vez que el plugin está instalado, seguir estos sencillos pasos:</p>
-
-<ol>
-<li>Ir a la página de configuración del trabajo.</li>
-<li>Localizar la sección <em>Build Environment</em>.</li>
-<li>Activar la opcion <em>Inject environment variables to the build process</em> (Inyectar
-variables de entorno en el proceso de construcción).</li>
-<li>En el campo <em>Properties Content</em>, modificar la variable de entorno que necesitamos.</li>
-</ol>
-
-
-<p>En la siguiente imagen se puede ver el texto necesario para inyectar la variable
-<code>PATH</code> en un entorno Linux. A dicha variable le estoy añadiendo una ruta donde
-se encuentra la aplicación que necesita el <em>job</em> que estoy configurando.</p>
-
-<p><img class="center" src="http://rchavarria.github.io/images/2014/jenkins-build-environment.png"></p>
-
-<p>Este ejemplo muestra como se configura un Jenkins instalado en un Linux, en
-Windows se utilizaría de otra forma ya que las variables de entorno no
-son exactamente iguales, así como la configuración de las mismas.</p>
 ]]></content>
   </entry>
   
