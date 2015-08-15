@@ -44,7 +44,7 @@ arte, que una crisis no dura 20 años.
 
 La Ingeniería del Software trata de solucionar 3 problemas:
 
-1. Eliminar complejidad interna: si no hay código fuente, no hay complejidad
+1. **Eliminar complejidad interna**: si no hay código fuente, no hay complejidad
 interna, no hay problema. De ahí que hayan intentado crear *lenguajes* con los
 que no se necesitarían progrmadores. Empezaron diciéndolo en los años 50, con
 Cobol. Lo vendían como que era un lenguaje que hasta los managers podrían
@@ -52,11 +52,11 @@ entender. El problema es que el desarrollo de software no es solamente
 **complejidad accidental** (no toda la complejidad es introducida por los
 programadores), sino también **complejidad esencial**, existe en el problema
 mismo.
-2. Eliminar errores humanos: intentaron utilizar las matemáticas, para probar
+2. **Eliminar errores humanos**: intentaron utilizar las matemáticas, para probar
 que el software era correcto. Y vinieron los *formal methods*, pero es muy caro.
 Aparentemente, un monton de matemáticas no pueden reemplazar los tests. Las
 matemáticas no pueden solucionar todos los problemas humanos.
-3. Eliminar variabilidad en el proyecto: otras ingenierías lo hacen: Ingeniería
+3. **Eliminar variabilidad en el proyecto**: otras ingenierías lo hacen: Ingeniería
 Civil, Ingeniería mecánica,... En Ingeniería Civil dicen que hay dos tipos de
 proyectos: los repetibles y los únicos. Adivinas qué tipo de proyectos no van
 tan bien, adivinas qué tipo se pasan de presupuesto. Si vas a hacer algo único,
@@ -100,7 +100,7 @@ no, pero justo el argumento que da el ponente para ello es uno de los argumentos
 que veo yo de por qué la Ingeniería del Software sí es una Ingeniería. Paolo
 dice que las bases de Agile son las mismas reglas que el método científico, por
 lo que el desarrollo de software es empírico, y que por eso no es Ingeniería.
-Pero yo no concibo in ingeniero sin un lado científico. ¿Qué es la Ingeniería si
+Pero yo no concibo un ingeniero sin un lado científico. ¿Qué es la Ingeniería si
 no identificar problemas (observar), idear una solución (hipótesis) y construirla
 (experimento)?.
 
