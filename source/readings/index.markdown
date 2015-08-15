@@ -28,6 +28,7 @@ Así que aquí está mi Lista de Lectura:
 ## Tengo pensado leer
 
 - [The martian](http://www.amazon.com/The-Martian-Novel-Andy-Weir-ebook/dp/B00EMXBDMA), de Andy Weir, recomendado por Scott Hanselman
+- [Soft Skills: The software developer's life manual](http://www.amazon.com/gp/product/1617292397/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1617292397&linkCode=as2&tag=makithecompsi-20&linkId=YNX4566EEVSNF3IL), de John Sonmez, recomendado por [Alberto Moratilla](http://twitter.com/4lberto), dice que las valoraciones en Amazon son estupendas
 - [How not to be wrong: the power of mathematical thinking](http://www.amazon.es/gp/product/0143127535), de Jordan Ellenberg, visto en [Microsiervos](http://www.microsiervos.com/archivo/libros/how-not-to-be-wrong.html)
 - [Slow burn](http://www.amazon.com/Slow-Burn-Faster-Exercising-Slower/dp/0062736744), de Stu Mittleman, recomendado por [Rick Rubin en una entrevisa de Tim Ferris](http://fourhourworkweek.com/2015/05/15/rick-rubin)
 - [The grumpy programmer's PHPUnit cookbook](https://leanpub.com/grumpy-phpunit), de Chris Hartjes, amigo de J.B.Rainsberger
@@ -42,7 +43,7 @@ Así que aquí está mi Lista de Lectura:
 - [Coders at work](http://www.amazon.com/gp/product/1430219483), de Peter Seibel, visto en una lista de los 8 libros más influyentes en el desarrollo de software
 - [Practical object-oriented design with Ruby (POODR)](http://www.poodr.com), de Sandi Metz, visto en el blog de Carlos Blé
 - [Getting real: how to build a successful web app](https://gettingreal.37signals.com/), de 37signals, recomendado por los organizadores del Codemotion 2014
-- [Soft Skills: The software developer's life manual](http://www.amazon.com/gp/product/1617292397/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1617292397&linkCode=as2&tag=makithecompsi-20&linkId=YNX4566EEVSNF3IL), de John Sonmez, recomendado por [Alberto Moratilla](http://twitter.com/4lberto), dice que las valoraciones en Amazon son estupendas
+- [Becoming a leader](http://www.amazon.com/On-Becoming-Leader-Warren-Bennis/dp/0465014089), de Warren Bennis, recomendado por Roy Osherove en Notes to a software team leader.
 - [Working effectively with Unit Tests](https://leanpub.com/wewut?a=240G6_z5rAtB5wcgCycYSB), de Jay Fields, recomendado en [That podcast](http://thatpodcast.io)
 - [Refactoring to patterns](http://www.amazon.com/gp/product/0321213351), de Joshua Kerievsky
 - [Agile software development](http://www.amazon.com/Agile-Software-Development-Alistair-Cockburn/dp/0201699699), de Alistair Cockburn
@@ -64,6 +65,7 @@ Así que aquí está mi Lista de Lectura:
 - [More Programming Pearls](http://search.barnesandnoble.com/More-Programming-Pearls/John-Bentley/e/9780201118896), de Jon Bentley
 - 7 languages in 7 weeks, de Bruce A. Tate
 - No me hagas pensar, de Steve Krug
+- [Influencer, The power to change anything](http://www.amazon.com/Influencer-Science-Leading-Change-Edition-ebook/dp/B00BPO7710), by Kerry Patterson, Joseph Grenny, David Maxfield, Ron McMillan, and Al Switzler, recomendado por Roy Osherove en su libro Notes to a software team leader.
 - [Rapid development](http://www.stevemcconnell.com/rd.htm), de Steve McConnel, recomendado por [Rodrigo Corral](http://twitter.com/r_corral) en la CAS2013
 - [Facts and fallacies of software development](http://www.amazon.com/Facts-Fallacies-Software-Engineering-Robert/dp/0321117425, de Robert L. Glass, recomendado por [Rodrigo Corral](http://twitter.com/r_corral) en la CAS2013
 - [The twelve factor app](http://12factor.net/), de Adam Wiggins. The twelve-factor app is a methodology for building software-as-a-service apps. ([download de epub](http://12factor.net/12factor.epub))
