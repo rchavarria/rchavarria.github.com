@@ -4,7 +4,7 @@
   <title><![CDATA[Category: talks | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/talks/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2015-08-09T19:30:20+02:00</updated>
+  <updated>2015-08-17T01:13:58+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,123 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Charla técnica: A short history of Software Engineering]]></title>
+    <link href="http://rchavarria.github.io/blog/2015/08/16/history-software-engineering/"/>
+    <updated>2015-08-16T21:42:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2015/08/16/history-software-engineering</id>
+    <content type="html"><![CDATA[<p>Estas son las notas de una charla técnica titulada
+<a href="https://www.youtube.com/watch?v=9IPn5Gk_OiM">A short history of software engineering</a>, por <a href="https://twitter.com/nusco">Paolo Perrota</a>. La charla,
+creo que la encontré por un tweet de <a href="https://twitter.com/jbrains">J.B.Rainsberger</a> recomendándola.</p>
+
+<p>La charla trata sobre la historia de la Ingeniería del Software. Un poco lo
+de siempre, que la Ingeniería de Software quizá no debiera llamarse
+<em>Ingeniería</em>, similitudes y diferencias con otras ingenierías,... Pero Paolo
+hace una presentación muy amena y divertida, sin duda merece la pena ver la
+charla para saber un poco más sobre nuestra pasión: el desarrollo de
+software.</p>
+
+<!-- more -->
+
+
+
+
+<iframe width="560"
+        height="315"
+        src="https://www.youtube.com/embed/9IPn5Gk_OiM"
+        frameborder="0"
+        allowfullscreen></iframe>
+
+
+<h2>Notas</h2>
+
+<p><strong>1968</strong> fue la primera vez que alguien (la OTAN) dijo que el software se
+entregaba tarde, fuera de presupuesto, con baja calidad y que no hacía
+exactamente lo que tenía que hacer (es decir, que contenía bugs).</p>
+
+<p>La solucion propuesta fue una nueva disciplina, que llamaron <strong>Ingeniería
+del Software</strong>, para tratar de salir de esa crisis de proyectos fallidos. Despues
+de más de 20 años, decidieron que ya no era una crisis, que era el estado del
+arte, que una crisis no dura 20 años.</p>
+
+<p>La Ingeniería del Software trata de solucionar 3 problemas:</p>
+
+<ol>
+<li><strong>Eliminar complejidad interna</strong>: si no hay código fuente, no hay complejidad
+interna, no hay problema. De ahí que hayan intentado crear <em>lenguajes</em> con los
+que no se necesitarían progrmadores. Empezaron diciéndolo en los años 50, con
+Cobol. Lo vendían como que era un lenguaje que hasta los managers podrían
+entender. El problema es que el desarrollo de software no es solamente
+<strong>complejidad accidental</strong> (no toda la complejidad es introducida por los
+programadores), sino también <strong>complejidad esencial</strong>, existe en el problema
+mismo.</li>
+<li><strong>Eliminar errores humanos</strong>: intentaron utilizar las matemáticas, para probar
+que el software era correcto. Y vinieron los <em>formal methods</em>, pero es muy caro.
+Aparentemente, un monton de matemáticas no pueden reemplazar los tests. Las
+matemáticas no pueden solucionar todos los problemas humanos.</li>
+<li><strong>Eliminar variabilidad en el proyecto</strong>: otras ingenierías lo hacen: Ingeniería
+Civil, Ingeniería mecánica,... En Ingeniería Civil dicen que hay dos tipos de
+proyectos: los repetibles y los únicos. Adivinas qué tipo de proyectos no van
+tan bien, adivinas qué tipo se pasan de presupuesto. Si vas a hacer algo único,
+va a llover dentro (anécdota de aquella casa única que hicieron, con tantas
+goteras).</li>
+</ol>
+
+
+<p>En Ingeniería Civil hay dos fases: proyecto y construcción. Similarmente, en
+Ingeniería del Software podríamos traducirlas a: diseño e implementación. ¡Pues
+no! Las fases, en realidad, son: desarrollo y compilación.</p>
+
+<p>Las economías de ambas ingenierías son muy distintas. En la charla hace
+referencia a otra charla, creo que es ésta:
+<a href="https://www.youtube.com/watch?v=zDEpeWQHtFU">Real Software Engineering, de Glenn Vaderburg</a>, donde habla precisamente de
+éstas diferencias económicas. Mientras que en Ingeniería Civil el mayor coste
+es el de construcción, en Ingeniería del Software, el mayor coste es el
+desarrollo, el diseño.</p>
+
+<p>Si en un proyecto software tienes 100 programadores, por analogías anticuadas,
+quizá creas que tienes 100 albañiles, pero en realidad es como si tuvieras 100
+arquitectos para diseñar el mismo edificio. ¿A que eso ya parece algo más
+complejo de gestionar?</p>
+
+<p>A continuación, pasa a hablar de metodologías (RUP, DSDM, Prince2, CMMI,...).
+Al final, no pudieron eliminar ninguna de las 3 cosas. Pero, y si en lugar de
+eliminarlas, ¿las aceptamos?</p>
+
+<p>Las metodologías Agile se basan en 3 puntos:</p>
+
+<ol>
+<li>Observa, mira alrededor</li>
+<li>Haz una hipótesis</li>
+<li>Haz un experimento</li>
+</ol>
+
+
+<p>Estos 3 puntos no son más que el <strong>método científico</strong>. Por lo que el desarrollo
+de software es empírico, no es <em>Ingeniería</em>.</p>
+
+<h2>Conclusiones</h2>
+
+<p>Esta es una de esas charlas en la que se discute la idea sobre si la Ingeniería
+del Software debería llamarse Ingeniería o no. La idea propuesta aquí es que
+no, pero justo el argumento que da el ponente para ello es uno de los argumentos
+que veo yo de por qué la Ingeniería del Software sí es una Ingeniería. Paolo
+dice que las bases de Agile son las mismas reglas que el método científico, por
+lo que el desarrollo de software es empírico, y que por eso no es Ingeniería.
+Pero yo no concibo un ingeniero sin un lado científico. ¿Qué es la Ingeniería si
+no identificar problemas (observar), idear una solución (hipótesis) y construirla
+(experimento)?.</p>
+
+<h2>Referencias</h2>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=9IPn5Gk_OiM">A short history of software engineering</a></li>
+<li><a href="https://www.youtube.com/watch?v=zDEpeWQHtFU">Real Software Engineering</a>, de Glenn Vanderburg</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Charla técnica: Is TDD dead? Of course not!]]></title>
