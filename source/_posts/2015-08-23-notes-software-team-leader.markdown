@@ -14,7 +14,7 @@ sidebar: true
 
 ##### de Roy Osherove
 
-{% img left https://s3.amazonaws.com/titlepages.leanpub.com/teamleader/large?1438389048 %}
+{% img left https://s3.amazonaws.com/titlepages.leanpub.com/teamleader/large?1438389048 200 260 Notes to a software team leader %}
 
 ## Por qué lo he leído
 
@@ -63,7 +63,7 @@ dedican unos consejos al lector que de otra forma sería imposible recopilar.
 
 Si lo que te interesa es el aspecto técnico del desarrollo, éste puede ser un
 libro para ti. Puedes leer mis notas en
-[Notas sobre Notes to a software team leader][1].
+[Notas sobre Notes to a software team leader][2].
 
 ## Qué he aprendido
 
