@@ -119,5 +119,5 @@ período de tiempo semanal para aprender nuevas habilidades o tecnologías.
 - [Notas que he tomado sobre el libro][2]
 
 [1]: https://leanpub.com/teamleader
-[2]: 
+[2]: https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/notes-software-team-leader.markdown
 
