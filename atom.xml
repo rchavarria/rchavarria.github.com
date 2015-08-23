@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2015-08-17T01:13:58+02:00</updated>
+  <updated>2015-08-23T18:34:58+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,129 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Notes to a software team leader]]></title>
+    <link href="http://rchavarria.github.io/blog/2015/08/23/notes-software-team-leader/"/>
+    <updated>2015-08-23T18:16:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2015/08/23/notes-software-team-leader</id>
+    <content type="html"><![CDATA[<h5>de Roy Osherove</h5>
+
+<p><img class="left" src="https://s3.amazonaws.com/titlepages.leanpub.com/teamleader/large?1438389048" width="200" height="260" title="Notes to a software team leader" ></p>
+
+<h2>Por qué lo he leído</h2>
+
+<p>Ya tengo unos años de experiencia en esto de desarrollar software. No me veo
+capaz todavía de liderar un gran equipo de desarrollo, pero me siento más
+inclinado hacia un liderazgo técnico que un liderazgo <em>de gestión</em>. Así que,
+¿por qué no aprender un poco sobre un rol que tengo ganas de hacer?</p>
+
+<!-- more -->
+
+
+<h2>Qué esperaba</h2>
+
+<p>El nombre del autor me sonaba de algo, no sé exactamente de qué, pero no recuerdo
+haber leído algún otro libro suyo. Pero me sonaba que era un autor muy práctico,
+con muchísima experiencia en la industria del software, por lo que esperaba un
+libro de lleno de vivencias y experiencias. Quizá una historia que guiara al lector
+por el camino de crear un equipo autoorganizado (que está tan de moda ahora con
+las metodologías ágiles).</p>
+
+<h2>Qué encontré</h2>
+
+<p>Encontré una descripción de las fases en las que se puede encontrar un equipo de
+desarrollo, bueno, la visión del autor, pero algo es algo. El libro también está
+lleno de ejemplos y consejos sobre cómo mejorar el equipo, cómo hacer que
+miembros de un equipo mejoren en su carrera profesional.</p>
+
+<p>También, una sección del libro está dedicada a <em>testimonios</em> de absolutos expertos
+en la materia. Estos últimos capítulos están llenos de experiencias reales y de
+consejos de gente brillante y con una ingente cantidad de experiencia en el
+desarrollo de software.</p>
+
+<h2>Conclusiones</h2>
+
+<p>El libro consta de varias partes. Comienza describiendo las fases en las que se
+puede encontrar un equipo de desarrollo, y cómo avanzar de una a otra, hasta
+conseguir el equipo perfecto.</p>
+
+<p>Es un libro muy <em>buen-rollista</em>, tanto que a veces da la impresión de ser un
+libro de autoayuda. Pero el libro está lleno de consejos super útiles. Quizá
+se echa de menos la parte contraria, por ningún lado se encuentra cómo arreglar
+problemas dentro del equipo. Supongo que no era el objetivo del libro.</p>
+
+<p>La última sección del libro, la dedicada a los testimonios, tiene muchísimo
+valor. Los mejores de los mejores ponen su granito de arena en el libro y
+dedican unos consejos al lector que de otra forma sería imposible recopilar.</p>
+
+<p>Si lo que te interesa es el aspecto técnico del desarrollo, éste puede ser un
+libro para ti. Puedes leer mis notas en
+<a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/notes-software-team-leader.markdown">Notas sobre Notes to a software team leader</a>.</p>
+
+<h2>Qué he aprendido</h2>
+
+<ul>
+<li>Usar la autoridad debe ser el último recurso. Ayudar a cada uno a encontrar
+su camino ayuda a que ambas partes ganen.</li>
+<li>Comunicación y traducción de información son habilidades críticas de un líder.</li>
+<li>Necesitas discutir, influenciar, negociar y no decirle a la gente lo que debe
+hacer.</li>
+<li>Dar feedback es una técnica muy efectiva, pero debe ser de confianza, concreto,
+constructivo, e incluir contexto.</li>
+<li>Un líder técnico debería programar, aunque no mucho, pero sobre todo debería
+practicar pair programming, design y code reviews y también debería buscar que
+no se genere demasiada deuda técnica.</li>
+</ul>
+
+
+<h2>Frases que me gustaría recordar</h2>
+
+<ul>
+<li>El autor identifica tres formas de liderar un equipo: comando y control, coach
+y facilitador. Simétricamente, identifica tres fases en las que se puede
+encontrar un equipo: supervivencia, aprendizaje, auto-organización.</li>
+<li>Para salir de la fase de supervivencia, hay que preocuparse de una cosa: crear
+tiempo libre (<em>slack time</em>) como un estándar en tu flujo de trabajo.</li>
+<li>Esto es por lo que te pagan: para hacer las cosas mejor y de la forma más
+profesional, clara y transparente posible. Te pagan por llevar al equipo a un
+nivel donde hacen las cosas profesionalmente, para llevar al equipo al próximo
+nivel de rendimiento y profesionalismo. Para ello, quizá tengas que tomar
+algunos riesgos.</li>
+<li>Para salir del modo de supervivencia, debes pasar al menos el 50% del tiempo
+con ellos. Lo primero que hay que hacer es una inversión de tiempo, y el que
+debe comenzar eres tú (no reuniones, quizá horas extra,&#8230;)</li>
+<li>El aprendizaje más rico y verdadero es cuando damos un salto en el conocimiento,
+no estando seguros en la parte plana del gráfico (hace referencia a un gráfico
+de aprendizaje de planicies seguidos de saltos, como escalones).</li>
+<li>Sumergirse en una nueva cultura de formas de trabajar es dar un salto
+cualitativo de conocimiento. Jugar a lo seguro no lo es.</li>
+<li>Crear un <em>lenguaje de compromiso</em> es un paso esencial para que los miembros
+del equipo mantengan sus promesas con los demás.</li>
+<li>Cuando la gente se te acerque con un problema, rétale a que lo resulva por
+sí mismo, pero que sepa que te tiene a tí como mentor, pero déjale claro que
+tú no vas a solucionar el problema.</li>
+<li>Miembros del equipo se pueden llevar deberes a casa, pero tiene que ser
+voluntario, no lo deben tomar como trabajo.</li>
+<li>Los problemas más difíciles de resolver nunca son técnicos, suelen involucrar
+a las personas.</li>
+<li>Un buen líder técnico mantiene siempre un ojo puesto en la calidad. Cuando el
+equipo crece, las personas de más confianza cumplen parte de esta misión.</li>
+<li>Una buena táctica para tener un equipo feliz es animar al equipo a usar un
+período de tiempo semanal para aprender nuevas habilidades o tecnologías.</li>
+<li>Las ideas de cambio deberían venir tanto de tí como de miembros del equipo.</li>
+</ul>
+
+
+<h2>Referencias y enlaces relacionados</h2>
+
+<ul>
+<li><a href="https://leanpub.com/teamleader">Notes to a software team leader</a> en Lean Pub</li>
+<li><a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/notes-software-team-leader.markdown">Notas que he tomado sobre el libro</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Charla técnica: A short history of Software Engineering]]></title>
@@ -2781,143 +2904,6 @@ jefes que te estén exigiendo resultados inmediatos,&#8230; es una liberación.<
 Code Retreat para mí, por lo que les estoy muy agradecido.</p>
 
 <p>El año que viene, más! Espero.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Mi primer katayuno]]></title>
-    <link href="http://rchavarria.github.io/blog/2014/11/02/mi-primer-katayuno/"/>
-    <updated>2014-11-02T01:14:00+01:00</updated>
-    <id>http://rchavarria.github.io/blog/2014/11/02/mi-primer-katayuno</id>
-    <content type="html"><![CDATA[<p>El pasado 25 de octubre asistí a un <a href="http://katayunos.com">katayuno</a> organizado por <a href="http://aprendiendotdd.com">Aprendiendo TDD</a>.
-Esta pequeña reunión tuvo lugar en <a href="http://www.materiagriscoworking.com">MateriaGris Coworking</a>, un espacio de coworking
-que ha montado un gran amigo mío.</p>
-
-<p>El katayuno consistía en resolver un sencillísimo problema (el tema no es resolver
-un gran problema sino practicar TDD): desarrollar un método que, tomando como parámetros
-dos números enteros <code>a</code> y <code>b</code>, devuelva una lista con el doble de todos los números
-impares entre ambos. Realizamos dos iteraciones, cada vez haciendo <em>pair programming</em>
-con una pareja distinta.</p>
-
-<p>En este post voy a describir cómo fueron mis dos iteraciones, y algo de código <a href="http://dartlang.org">Dart</a> que
-he escrito después intentando simularlas, para poder ilustrar todo el proceso.</p>
-
-<!-- more -->
-
-
-<h2>Iteración 1</h2>
-
-<p>En este primera iteración seguimos unos pasos que a mí me parecían correctos.
-Empezamos solucionando los casos más sencillos, como aquellos que el resultado
-era una lista vacía por ejemplo, para terminar con los más complicados. Estos
-pasos me parecían correctos, quizá porque estoy acostumbrado a resolverlos de
-ese modo.</p>
-
-<p>Más tarde, como vimos en la pequeña restrospectiva de la iteración mi pareja
-y yo mostramos nuestro código, y criticaron bastante nuestro código, la verdad.
-No es nada malo, de hecho, aprendimos bastante y otras parejas nos enseñaron
-otro enfoque que me pareció interesante.</p>
-
-<p>Al final de la iteración, nuestro código quedó más o menos así:</p>
-
-<pre><code>class OddDoubler {
-
-    List&lt;int&gt; compute(int a, int b) {
-        List&lt;int&gt; list = new List&lt;int&gt;();
-
-        while (a &lt;= b) {
-            if (isOdd(a)) {
-                list.add(a * 2);
-            }
-            a++;
-        }
-
-        return list;
-    }
-
-    boolean isOdd(n) =&gt; n % 2 != 0;
-}
-</code></pre>
-
-<p>El código completo, incluidos tests:
-<a href="https://github.com/rchavarria/katayuno-octubre-2014/blob/master/iteration-1/odd-doubles.dart">iteración 1</a>.</p>
-
-<p>A mí, personalmente, el código de producción me gusta, sencillo y
-al grano. Pero para llegar a él, hay un paso,
-<a href="https://github.com/rchavarria/katayuno-octubre-2014/commit/135d644fdbe75c5c8d6e17cd8f1461f7eaac67ce">donde introducimos el bucle while</a>
-que quizá sea un paso demasiado grande, por lo que quizá los tests
-elegidos no sean los más adecuados.</p>
-
-<h2>Iteración 2</h2>
-
-<p>En esta segunda iteración cambiamos de pareja. Y también cambiamos la forma
-de atacar el problema. Esta vez, siguiendo los consejos de los compañeros
-de la iteración anterior, decidimos resolver el problema avanzando por
-estados intermedios. Así que esta vez, no solucionamos el problema
-desde los casos más sencillos hasta los más complicados.</p>
-
-<p>Decidimos que los pasos intermedios serían:</p>
-
-<ul>
-<li>Decidir si un número is impar o no</li>
-<li>Implementar un método que nos diera una lista de todos los números entre
-dos números dados</li>
-<li>Implementar un método que nos eliminara de una lista los números pares</li>
-<li>Implementar un método que multiplicara por 2 todos los elementos de
-una lista</li>
-</ul>
-
-
-<p>No llegamos a completarlo del todo, la iteración se nos quedó corta, pero
-la idea la implementé más tarde y éste es el resultado de la
-segunda iteración:</p>
-
-<pre><code>class OddDoubler {
-
-    boolean isOdd(int n) =&gt; n % 2 != 0;
-
-    List&lt;int&gt; getNumbers(int a, int b) =&gt; new List&lt;int&gt;.generate((b - a + 1), (int index) =&gt; a + index);
-
-    List&lt;int&gt; filterOdds(List&lt;int&gt; numbers) {
-        numbers.removeWhere((n) =&gt; !isOdd(n));
-        return numbers;
-    }
-
-    List&lt;int&gt; doubleNumbers(List&lt;int&gt; numbers) =&gt; numbers.map((n) =&gt; n * 2);
-
-    // This method should be the only public method
-    // It resolves the KATA
-    List&lt;int&gt; compute(int a, int b) =&gt; doubleNumbers(filterOdds(getNumbers(a, b)));
-}
-</code></pre>
-
-<p>El código completo, incluidos tests:
-<a href="https://github.com/rchavarria/katayuno-octubre-2014/blob/master/iteration-2/odd-doubles.dart">iteración 2</a>.</p>
-
-<p>Me gusta más la aproximación de esta iteración, pero lo que no me gusta
-es que hay métodos públicos que en realidad deberían ser privados. Son
-públicos porque hemos creado tests para comprobar su funcionamiento, pero
-deberían ser privados porque no aportan nada fuera de la implementación
-de la clase.</p>
-
-<p>Como todo en el desarrollo del software, toda decisión tiene su parte
-buena y su parte no tan buena.</p>
-
-<h2>Conclusión</h2>
-
-<p>Es la primera vez que participo en un evento de este tipo, y espero que no
-sea la última. La experiencia me encantó.</p>
-
-<p>Sí, es cierto, en la primera iteración nos dieron bastante caña a mi pareja
-y a mí, pero eso nos sirvió para entender que no todas las aproximaciones son
-igual de buenas, y que hay que ser humilde para tener la mente abierta y
-poder aprender de los demás compañeros.</p>
-
-<p>Este tipo de eventos nos ayudan a ser mejores profesionales, y era mi objetivo
-al participar en él. Gracias a <a href="http://aprendiendotdd.com">Aprendiendo TDD</a> y a <a href="http://www.materiagriscoworking.com">MateriaGris Coworking</a>
-creo que todos aprendimos algo aquella mañana.</p>
-
-<p>Gracias chicos.</p>
 ]]></content>
   </entry>
   
