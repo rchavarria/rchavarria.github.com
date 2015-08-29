@@ -627,7 +627,37 @@ en los diccionarios cuando tengas activado el chequeo de ortografía
 (`:set spell`)
 - [Repositorio de George](https://georgebrock.github.io/talks/vim-completion), por si se necesita algún documento de referencia
 
-<!--
-Next: [Globals, commands and functions](http://vimeo.com/15443936)
+### (29-08-2015) Derek Wyatt: Globals, commands and functions
+
+El último vídeo de Derek, de su lista de [vídeos para aprender Vim]. Este vídeo se
+titula [Globals, commands and functions], y estas son las notas que tomé mientras
+lo estuve viendo:
+
+- `:saveas <path>`: para guardar un fichero con un nuevo nombre
+- `:set ft=xml`: establece el tipo de fichero (`ft`) a `xml`
+- `=g` (o `=gg`): para indentar todo el fichero
+- `:%s/<regexp>/<text>/`: sustituye globalmente en todo el fichero. Dentro de la expresión regular, podemos crear grupos de texto encerrados entre `\(` y `\)`. Estos grupos serán recordados y podrán incluirse en la parte del texto mediante `\1`, `\2`,...
+- `:g`: comando **g**lobal. Permite ejecutar comandos (**i**nsertar, borrrar, copiar,...) desde la línea de comandos. Ver `:help :g`
+- `:v`: igual que `:g` pero a la inversa. Por ejemplo, `:v/^foo/d`, busca las líneas que empiezan con `foo`, y las que no lo hacen, las borra. Es decir, ejecuta un comando en las líneas que NO cumplen una condición
+- `:normal`: te permite ejecutar comandos del modo normal desde la línea de comandos
+- `:normal gggqG`: ejecuta los comandos `gg` (ir al inicio del fichero), `gq` (corta las líneas al ancho especificado con `set tw=<width>`), `G` hasta el final del fichero
+- `gq`: inserta carácteres de nueva línea para adecuar el ancho de línea al especificado con `:set tw=<width>`
+- `:g/^-/s/- //`: es un comando global (`:g`), para aquellas líneas que
+  comienzen con `-`. El comando es **s**ustituir (`s`) los carácters `- ` con
+`vacío`
+- `:%s/\s\{4}//`: sustituye en todo el fichero exactamente 4 espacios en blanco
+  (`\s\{4}`) con `vacío`
+- `\zs` en medio de una expresión regular de sustitución: hace que la
+  sustitución comienze a partir de ahí. Por ejemplo: `:%s/\s\{8}\zs-/#/` hace
+que busque 8 espacios en blanco seguidos de un guión, y que sustituya a partir
+de los 8 espacios en blanco, que no los toque
+- `:history`: muestra un histórico de los últimos comandos de la línea de
+  comandos (`:history : -20` muestra sólo los últimos 20)
+
+[vídeos para aprender Vim]: http://derekwyatt.org/vim/tutorials/advanced/
+[Globals, commands and functions]: https://vimeo.com/15443936
+
+<!-- 
+  ¿Queda algo por aprender por aquí, o simplemente repasar ya?
 -->
 
