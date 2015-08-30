@@ -4,7 +4,7 @@
   <title><![CDATA[Category: learning | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/learning/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2015-08-23T18:34:58+02:00</updated>
+  <updated>2015-08-30T19:18:06+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -713,8 +713,38 @@ en los diccionarios cuando tengas activado el chequeo de ortografía
 </ul>
 
 
-<!--
-Next: [Globals, commands and functions](http://vimeo.com/15443936)
+<h3>(29-08-2015) Derek Wyatt: Globals, commands and functions</h3>
+
+<p>El último vídeo de Derek, de su lista de <a href="http://derekwyatt.org/vim/tutorials/advanced/">vídeos para aprender Vim</a>. Este vídeo se
+titula <a href="https://vimeo.com/15443936">Globals, commands and functions</a>, y estas son las notas que tomé mientras
+lo estuve viendo:</p>
+
+<ul>
+<li><code>:saveas &lt;path&gt;</code>: para guardar un fichero con un nuevo nombre</li>
+<li><code>:set ft=xml</code>: establece el tipo de fichero (<code>ft</code>) a <code>xml</code></li>
+<li><code>=g</code> (o <code>=gg</code>): para indentar todo el fichero</li>
+<li><code>:%s/&lt;regexp&gt;/&lt;text&gt;/</code>: sustituye globalmente en todo el fichero. Dentro de la expresión regular, podemos crear grupos de texto encerrados entre <code>\(</code> y <code>\)</code>. Estos grupos serán recordados y podrán incluirse en la parte del texto mediante <code>\1</code>, <code>\2</code>,...</li>
+<li><code>:g</code>: comando <strong>g</strong>lobal. Permite ejecutar comandos (<strong>i</strong>nsertar, borrrar, copiar,...) desde la línea de comandos. Ver <code>:help :g</code></li>
+<li><code>:v</code>: igual que <code>:g</code> pero a la inversa. Por ejemplo, <code>:v/^foo/d</code>, busca las líneas que empiezan con <code>foo</code>, y las que no lo hacen, las borra. Es decir, ejecuta un comando en las líneas que NO cumplen una condición</li>
+<li><code>:normal</code>: te permite ejecutar comandos del modo normal desde la línea de comandos</li>
+<li><code>:normal gggqG</code>: ejecuta los comandos <code>gg</code> (ir al inicio del fichero), <code>gq</code> (corta las líneas al ancho especificado con <code>set tw=&lt;width&gt;</code>), <code>G</code> hasta el final del fichero</li>
+<li><code>gq</code>: inserta carácteres de nueva línea para adecuar el ancho de línea al especificado con <code>:set tw=&lt;width&gt;</code></li>
+<li><code>:g/^-/s/- //</code>: es un comando global (<code>:g</code>), para aquellas líneas que
+comienzen con <code>-</code>. El comando es <strong>s</strong>ustituir (<code>s</code>) los carácters <code>-</code> con
+<code>vacío</code></li>
+<li><code>:%s/\s\{4}//</code>: sustituye en todo el fichero exactamente 4 espacios en blanco
+(<code>\s\{4}</code>) con <code>vacío</code></li>
+<li><code>\zs</code> en medio de una expresión regular de sustitución: hace que la
+sustitución comienze a partir de ahí. Por ejemplo: <code>:%s/\s\{8}\zs-/#/</code> hace
+que busque 8 espacios en blanco seguidos de un guión, y que sustituya a partir
+de los 8 espacios en blanco, que no los toque</li>
+<li><code>:history</code>: muestra un histórico de los últimos comandos de la línea de
+comandos (<code>:history : -20</code> muestra sólo los últimos 20)</li>
+</ul>
+
+
+<!-- 
+  ¿Queda algo por aprender por aquí, o simplemente repasar ya?
 -->
 
 

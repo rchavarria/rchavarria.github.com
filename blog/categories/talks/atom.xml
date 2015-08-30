@@ -4,7 +4,7 @@
   <title><![CDATA[Category: talks | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/talks/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2015-08-23T18:34:58+02:00</updated>
+  <updated>2015-08-30T19:18:06+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,79 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Charla no técnica: How to learn anything... fast]]></title>
+    <link href="http://rchavarria.github.io/blog/2015/08/30/how-learn-anything-fast/"/>
+    <updated>2015-08-30T19:09:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2015/08/30/how-learn-anything-fast</id>
+    <content type="html"><![CDATA[<p>En los trabajos creativos, como en el desarrollo de software, la capacidad para
+aprender es un elemento diferenciador. A mí me encanta aprender. Cualquier
+cosa. Aunque normalmente siempre elijo temas relacionados con la ciencia,
+matemáticas, juegos de ingenio o, cómo no, el desarrollo de software. Cuando vi
+el título de la charla (<a href="https://www.youtube.com/watch?v=EtJy69cEOtQ">How to learn anything... fast</a>) me interesó
+bastante. ¿Aprender cualquier cosa rápidamente?. ¡Ya me ha cazado!.</p>
+
+<p>En esta charla, <a href="http://joshkaufman.net/">Josh Kaufman</a> indica 5 pasos para aprender cualquier cosa en 20
+horas. Típicamente se acepta que para dominar una habilidad, para ser maestro
+en algún arte, hacen falta <strong>10.000 horas de práctica deliberada</strong> en esa habilidad
+o arte. Josh dice que no tenemos que ir tan lejos, que con <strong>20 horas podemos ser
+suficientemente competentes</strong> en cualquier cosa que nos propongamos.</p>
+
+<!-- more -->
+
+
+
+
+<iframe width="560"
+        height="315"
+        src="https://www.youtube.com/embed/EtJy69cEOtQ"
+        frameborder="0"
+        allowfullscreen></iframe>
+
+
+<h2>Pasos</h2>
+
+<ol>
+<li>Decidir <strong>qué</strong> aprender.</li>
+<li><strong>Dividir</strong> aquello que queremos aprender en habilidades más pequeñas y que
+puedan ser practicadas de forma independiente, e identificar aquellas
+habilidades más importantes, aquellas habilidades esenciales que te van a
+permitir aprender lo que quieres.</li>
+<li><strong>Investigar</strong> esas habilidades esenciales. Investiga lo justo y necesario para
+saber las mejores formas de realizar las habilidades. Elige de 3 a 5
+recursos y pasa rápido por ellos, no profundices (en esta fase) en ellos, ya lo
+harás cuando practiques. No uses esta fase para procrastinar, para retrasar el
+aprendizaje.</li>
+<li>Hacer fácil la práctica. <strong>Elimina distraciones</strong> (TV, móvil, internet,
+familiares,...), elimina fricciones, reduce el esfuerzo de comenzar a
+practicar, que sea fácil ponerte a ello.</li>
+<li>Antes de comenzar, <strong>comprometerse</strong> a realizar al menos 20 horas de práctica
+deliberada y enfocada, sin distracciones. Con este compromiso se trata de
+eliminar la frustración de todo comienzo, donde somos patéticos con la nueva
+habilidad, pero que después de unas prácticas deliberadas, podremos comprobar
+nuestro avance.</li>
+</ol>
+
+
+<h2>Conclusión</h2>
+
+<p>Bueno, no creo que 20 horas sean suficientes para aprender <em>cualquier</em> cosa.
+Creo que hay materias, habilidades, que necesitan más que eso. Yo no me tomo al
+pie de la letra lo que afirma Josh, pero creo que parte de razón sí que tiene.
+Puede que 20 horas no sean suficientes para dominar una materia, pero los
+consejos que encontramos en esta charla sí me parecen fundamentales para
+aprender cualquier cosa, específicamente dividir en partes esenciales aquello
+que queremos aprender, eliminar distracciones y fricción y comprometernos con
+nosotros mismos a realizar un mínimo de horas de práctica deliberada y
+enfocada.</p>
+
+<p>En todo el proceso, echo de menos la recogida de feedback y la medida del
+progreso. Quizá el autor lo ha diseñado así para mantener el proceso lo más
+simple y más corto posible. Pero aún así, yo añadiría alguna forma de saber si
+al final de todo el proceso he llegado donde quería.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Charla técnica: A short history of Software Engineering]]></title>
@@ -525,73 +598,6 @@ JavaScript testeable.</p>
 
 <p>No estoy de acuerdo en todos los consejos que comenta Damian, pero la voz de
 la experiencia tiene muchísimo valor, por lo que la charla me parece fenomenal.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Charla técnica: JavaScript masterclass]]></title>
-    <link href="http://rchavarria.github.io/blog/2014/06/21/charla-tecnica-javascript-masterclass/"/>
-    <updated>2014-06-21T17:23:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2014/06/21/charla-tecnica-javascript-masterclass</id>
-    <content type="html"><![CDATA[<p>Recientemente he visto una charla técnica impartida por
-<a href="https://twitter.com/angelinamagnum">Angelina Fabro</a> titulada <em>JavaScript masterclass</em>.
-En este post quiero dejar unas notas que me gustaría recordar, no es un resumen de la
-charla, pero sí son algunas ideas que me gustaría resaltar.</p>
-
-<p>La primera parte de la charla Angelina explica qué no es un programador junior, y en la
-segunda parte qué no es un programador experto, para terminar sugiriendo unos cuantos
-consejos sobre cómo pasar de un estado a otro.</p>
-
-<!-- more -->
-
-
-<h3>Angelina Fabro, a JavaScript masterclass</h3>
-
-<iframe width="560" height="315" src="http://rchavarria.github.io//www.youtube.com/embed/v0TFmdO4ZP0" frameborder="0" allowfullscreen></iframe>
-
-
-<h3>¿Quién es un gran programador?</h3>
-
-<p>Bueno, pues eso depende de a quién le preguntes, pero algunas respuestas que te
-darán podrían ser:</p>
-
-<ul>
-<li>Aquel que cumple con todas las fechas de entrega (si dejamos a un lado la calidad).</li>
-<li>Aquel que soluciona de la forma más rápida los problemas de los clientes.</li>
-<li>Aquel que hace ganar el mayor dinero posible a los dueños de los negocios.</li>
-<li>Aquel que es el mejor mentor para un programador junior.</li>
-<li>Aquel a quien le encanta unirse a otros programadores en la <em>batalla</em>.</li>
-</ul>
-
-
-<h3>¿Qué necesito aprender para ser uno de ellos?</h3>
-
-<p>Como conclusión a su charla, Angelina nos deja unos cuantos consejos que podemos
-aplicar para dar un salto en nuestra carrera profesional:</p>
-
-<ul>
-<li>Pregúntate <em>¿por qué?</em> obsesivamente, hasta el punto de molestarte a tí mismo.</li>
-<li>Enseña y/o habla en un evento.</li>
-<li>Trabaja a través de una seria de libros recomendados por los que más saben.</li>
-<li>Experimenta alocadamente. Haz barbaridades, al código no le importa ni le hace daño.</li>
-<li>Modela tus propias opiniones, debes tenerlas, debes mojarte.</li>
-<li>Busca a un mentor que te guíe por el camino.</li>
-<li>Programa mucho, mucho. Pero para de vez en cuando, tu cerebro necesita descansos.</li>
-<li>Escribe en varios lenguajes.</li>
-<li>Piensa como un programador aunque no estés cerca de un teclado.</li>
-<li>Aprende a distinguir el buen feedback del malo, y desecha el malo claro.</li>
-<li>Libérate del <a href="https://es.wikipedia.org/wiki/S%C3%ADndrome_del_impostor">síndrome del impostor</a>.</li>
-</ul>
-
-
-<h2>Conclusiones</h2>
-
-<p>En general, la charla me ha encantado, y me ha dado un poquito de chispa para seguir mejorando
-como profesional y me ha dado nuevas ideas. Aunque no estoy de acuerdo con todos los consejos que
-Angelina propone, me voy a quedar con dos de ellos que no me había planteado hasta ahora:
-pregúntate por qué obsesivamente y experimenta alocadamente.</p>
-
-<p>Nos recomienda un libro, <em>The secrets of a JavaScript ninja</em>, de John Resig.</p>
 ]]></content>
   </entry>
   
