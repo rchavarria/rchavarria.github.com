@@ -21,9 +21,9 @@ bastante. ¿Aprender cualquier cosa rápidamente?. ¡Ya me ha cazado!.
 
 En esta charla, [Josh Kaufman][2] indica 5 pasos para aprender cualquier cosa en 20
 horas. Típicamente se acepta que para dominar una habilidad, para ser maestro
-en algún arte, hacen falta 10.000 horas de práctica deliberada en esa habilidad
-o arte. Josh dice que no tenemos que ir tan lejos, que con 20 horas podemos ser
-suficientemente competentes en cualquier cosa que nos propongamos.
+en algún arte, hacen falta **10.000 horas de práctica deliberada** en esa habilidad
+o arte. Josh dice que no tenemos que ir tan lejos, que con **20 horas podemos ser
+suficientemente competentes** en cualquier cosa que nos propongamos.
 
 <!-- more -->
 
@@ -35,11 +35,11 @@ suficientemente competentes en cualquier cosa que nos propongamos.
 
 ## Pasos
 
-1. Decidir **qué** aprender
+1. Decidir **qué** aprender.
 2. **Dividir** aquello que queremos aprender en habilidades más pequeñas y que
-puedan ser practicadas de forma independiente, e identifica aquellas
+puedan ser practicadas de forma independiente, e identificar aquellas
 habilidades más importantes, aquellas habilidades esenciales que te van a
-permitir aprender lo que quieres
+permitir aprender lo que quieres.
 3. **Investigar** esas habilidades esenciales. Investiga lo justo y necesario para
 saber las mejores formas de realizar las habilidades. Elige de 3 a 5
 recursos y pasa rápido por ellos, no profundices (en esta fase) en ellos, ya lo
@@ -67,9 +67,9 @@ nosotros mismos a realizar un mínimo de horas de práctica deliberada y
 enfocada.
 
 En todo el proceso, echo de menos la recogida de feedback y la medida del
-progreso. Quizá para mantener el proceso lo más simple y más corto posible.
-Pero aún así, yo añadiría alguna forma de saber si al final de todo el proceso
-he llegado donde quería.
+progreso. Quizá el autor lo ha diseñado así para mantener el proceso lo más
+simple y más corto posible. Pero aún así, yo añadiría alguna forma de saber si
+al final de todo el proceso he llegado donde quería.
 
 [1]: https://www.youtube.com/watch?v=EtJy69cEOtQ
 [2]: http://joshkaufman.net/
