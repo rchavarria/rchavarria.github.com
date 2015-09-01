@@ -111,8 +111,15 @@ parece buena idea **modularizar una aplicación** con un tamaño considerable, y
 ejecutar los tests **cargar sólo los módulos necesarios** para que se ejecute esa
 suite de tests, no cargar módulos redundantes.
 
+## Referencias
+
+En el artículo [Speed up JavaScript test time 1000x] podemos encontrar unos
+cuantos consejos acerca de cómo hacer que nuestros tests JavaScript se ejecuten
+mucho más rápido, ya sea una aplicación Angular o no.
+
 [AngularJS]: http://angularjs.org
 [Jasmine]: https://jasmine.github.io
 [KarmaJS]: https://karma-runner.github.io
 [PhantomJS]: http://phantomjs.org
+[Speed up JavaScript test time 1000x]: http://shyp.github.io/2015/07/13/speed-up-your-javascript-tests.html
 
