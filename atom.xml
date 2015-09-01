@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2015-08-30T19:18:06+02:00</updated>
+  <updated>2015-09-01T23:49:49+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -760,6 +760,12 @@ tests sean más rápidos y más eficientes en el consumo de memoria. Por lo tant
 parece buena idea <strong>modularizar una aplicación</strong> con un tamaño considerable, y al
 ejecutar los tests <strong>cargar sólo los módulos necesarios</strong> para que se ejecute esa
 suite de tests, no cargar módulos redundantes.</p>
+
+<h2>Referencias</h2>
+
+<p>En el artículo <a href="http://shyp.github.io/2015/07/13/speed-up-your-javascript-tests.html">Speed up JavaScript test time 1000x</a> podemos encontrar unos
+cuantos consejos acerca de cómo hacer que nuestros tests JavaScript se ejecuten
+mucho más rápido, ya sea una aplicación Angular o no.</p>
 ]]></content>
   </entry>
   
