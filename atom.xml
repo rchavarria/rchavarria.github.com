@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2015-09-05T00:43:39+02:00</updated>
+  <updated>2015-09-06T16:11:04+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,83 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[The Martian]]></title>
+    <link href="http://rchavarria.github.io/blog/2015/09/06/the-martian/"/>
+    <updated>2015-09-06T16:05:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2015/09/06/the-martian</id>
+    <content type="html"><![CDATA[<h5>de Andy Weir</h5>
+
+<p><img class="right" src="http://www.ew.com/sites/default/files/i/2014/02/04/The-Martian.jpg" width="201" height="306"></p>
+
+<h2>Por qué lo he leído</h2>
+
+<p>Hace un tiempo que escucho semanalmente los podcasts de Scott Hanselman:
+<a href="http://www.hanselminutes.com/">Hanselminutes</a>. Son unos podcasts muy variados que tratan temas relacionados
+con el mundo del software y la tecnología en general: lenguajes de programación,
+iniciativas,&#8230;</p>
+
+<p>En varios de sus podcasts, y probablemente en varios de sus posts, Scott dice
+que uno de los libros que más recomienda es <a href="http://www.amazon.es/gp/product/B00OXYQR38/">El marciano</a>, que es un libro
+que le encanta. No creo que se lleve ninguna comisión por hacer publicidad,
+pero si alguien como Scott recomienda una y otra vez un libro, será por algo.
+Además, es un libro no técnico, por lo que me serviría para desconectar un poco
+en vacaciones.</p>
+
+<!-- more -->
+
+
+<h2>Qué esperaba</h2>
+
+<p>Al estar tan recomendado, esperaba una novela muy bien escrita. Según Scott, es
+una novela de ciencia ficción, pero que es mucho más de ciencia que de ficción,
+de hecho, con el estado actual de la tecnología, se podría dar la situación
+perfectamente. Lo único que quizá no se ha invertido el tiempo y el dinero en
+hacerlo realidad, pero podría serlo.</p>
+
+<h2>Qué encontre</h2>
+
+<p>Evidentemente, encontré todo lo que esperaba. Una novela de ciencia ficción, con
+más ciencia que ficción, describiendo una situación que podría ser totalmente
+cierta actualmente. Una novela magníficamente escrita, con muchos tecnicismos,
+llena de vocabulario aeroespacial, describiendo personalidades muy distintas,
+pero que el autor usa inteligentemente.</p>
+
+<h2>Conclusiones</h2>
+
+<p>Sin duda, una novela a recomendar. Si te gusta el espacio, si te gusta la ciencia,
+y si te gusta la ficción; ésta es una novela para tí. O película, porque mientras
+estaba a mitad del libro, me entero de que van a <em>sacar</em> la película y que ya hay
+disponible algún <a href="https://www.youtube.com/watch?v=ej3ioOneTy8">trailer</a>. Así que eso me animó a terminarme antes aún el
+libro, a devorarlo en vacaciones.</p>
+
+<p>Aunque la situación podría darse hoy en día, también hay que hacer un acto de fe
+para creerse todo lo que cuenta. En muchas ocasiones, el protagonista describe
+procesos químicos, o físicos, que pueden funcionar por casualidad, pero que al
+final, por <em>necesidades del guión</em>, terminan funcionando. No son situaciones
+increíbles, pero sí que uno tiene que relajarse un poco y creer en la fortuna
+del protagonista.</p>
+
+<h2>Qué he aprendido</h2>
+
+<p>No es que pueda sacar lecciones aprendidas, como si fuera un libro técnico
+describiendo un proceso o una tecnología, pero sí que he aprendido un montón
+de cosas sobre Marte: lugares, condiciones en la superficie, cómo viajar al
+planeta, cómo funcionan las comunicaciones, un poco sobre viajes
+interplanetarios, cómo funciona la NASA por dentro. Aunque sé que es una novela,
+no me lo tengo que tomar todo al pie de la letra.</p>
+
+<h2>Recursos relacionados</h2>
+
+<ul>
+<li><a href="http://www.hanselminutes.com/">Hanselminutes podcast</a></li>
+<li><a href="http://www.amazon.es/gp/product/B00OXYQR38/">El marciano</a>, de Andy Weir, o en versión original: <a href="http://www.amazon.com/The-Martian-Novel-Andy-Weir-ebook/dp/B00EMXBDMA">The Martian</a></li>
+<li><a href="https://www.youtube.com/watch?v=ej3ioOneTy8">Trailer de The Martian</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Charla no técnica: How to learn anything... fast]]></title>
@@ -2513,409 +2590,6 @@ que quiero recordar ya lo he escrito antes, aquí dejo un enlace a
 <ul>
 <li><a href="http://www.amazon.com/How-Start-Conversation-Make-Friends/dp/1451610998">Comprar el libro en Amazon</a></li>
 <li><a href="https://github.com/rchavarria/book-notes/blob/master/published/how-start-conversation-make-friends-by-don-gabor.md">Mis notas sobre How to start conversations and make friends</a></li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Mis notas sobre Codemotion 2014]]></title>
-    <link href="http://rchavarria.github.io/blog/2014/11/29/notas-codemotion-2014/"/>
-    <updated>2014-11-29T00:48:00+01:00</updated>
-    <id>http://rchavarria.github.io/blog/2014/11/29/notas-codemotion-2014</id>
-    <content type="html"><![CDATA[<p>Por tercer año consecutivo asistí al evento Codemotion, &#8220;un evento de
-desarrolladores para desarrolladores&#8221;. Me encanta la descripcion del
-evento. La verdad es que es una pasada, un evento al que este año acudimos
-casi 2000 profesionales del desarrollo sofware, donde unos ponente (incluso
-extranjeros) cuentan sus experiencias en la vida real. Impresionante.</p>
-
-<p>Antes de nada me gustaría agradecer a los organizadores del evento, a todos
-los voluntarios que nos soportan, a los patrocinadores y no me puedo olvidar
-de la Universidad San Pablo CEU, que cedió las instalaciones.
-Hay muchas quejas por <em>el intenné</em> sobre ciertos aspectos de la organización:
-salas abarrotadas, comida insuficiente,&#8230; Creo que tienen razón, pero
-también hay que entender que un evento así no es fácil organizarlo. A mí
-me ha encantado la cantidad de tiempo disponible entre charla y charla. No
-me he perdido ninguna de las charlas a las que quería asistir.</p>
-
-<p><img class="center" src="http://rchavarria.github.io/images/2014/codemotion.png"></p>
-
-<!-- more -->
-
-
-<p>Este año he podido disfrutar más de las charlas técnicas que el año pasado,
-por lo que he aprendido y conocido multitud de nuevas herramientas,
-técnicas e ideas.</p>
-
-<p>Aún así, me he quedado con una espinita clavada. Me hubiera gustado
-<em>pasillear</em> algo más, pero no se puede tener todo, o pasillo o charla.
-También me hubiera gustado acercarme a más ponentes para darles las gracias
-y comentar con ellos las tecnologías o herramientas que expusieron.</p>
-
-<p>Pero no todo está perdido, he conocido a unos cuantos buenos profesionales
-más y eso es una parte importante de estos eventos: ver viejos amigos y
-hacer nuevos.</p>
-
-<h2>Notas sobre las charlas</h2>
-
-<p>Y a continuación, una transcripción de algunas notas que fuí tomando en
-todas las charlas a las que asistí. En la
-<a href="2014.codemotion.es/es/agenda.html">agenda del Codemotion</a>
-podrás encontrar cada una de las charlas que se impartieron con detalles
-del ponente, presentaciones, vídeos,&#8230; Para ir aguantando hasta el año
-que viene.</p>
-
-<h3>What if everything is awesome, Christian Heilmann</h3>
-
-<p>Opinión de la charla: muy amena, se nota que Christian es un profesional dando
-charlas por todo el mundo; muy buena historia, muy bien hilada y cortita, al
-grano.</p>
-
-<p>La prensa publicita casos demasiado idílicos.</p>
-
-<p>Los programadores tenemos tendencia a recrear (reinventar la rueda) en lugar de
-mejorar (¿porqué si no hay N variantes de frameworks web, por ejemplo?). <strong>Mejora
-las cosas que ya existen</strong></p>
-
-<p>No expliques, demuéstralo con código o algo mejor, arregla el bug.</p>
-
-<p>Si tus aplicaciones están dirigidas por datos, duraran mucho tiempo.</p>
-
-<p>Agradece, da feedback, a tus usuarios y a los creadores de tus apps.</p>
-
-<p><strong>Acción</strong>: Echar un vistazo a los recursos de las diapositivas.</p>
-
-<h3>Lean Node.js, Ricardo Borillo</h3>
-
-<p>Opinión: multitud de herramientas, multitud de consejos prácticos. De la charla
-salí con alguna idea para poner en práctica inmediatamente.</p>
-
-<p>Ricardo hace incapié en cuatro puntos lean:</p>
-
-<ol>
-<li>eficiencia / automatización</li>
-<li>no cometer errores</li>
-<li>evitar desperdicios</li>
-<li>mejora contínua</li>
-</ol>
-
-
-<p>Relativo a la construcción de nuestra aplicación:</p>
-
-<ul>
-<li>grung Vs gulp para automatización de tareas</li>
-<li>browser sync: inyecta CSS en el navegador sin recargar la página, para evitar
-errores y conseguir un desarrollo más rápido.</li>
-</ul>
-
-
-<p>Relativo a testear nuestra aplicación:</p>
-
-<ul>
-<li>Solo se puede reducir el numero de errores con tests.</li>
-<li>karma, jasmine, karma + virtual box (probar IE en Linux o Mac), protractor</li>
-</ul>
-
-
-<p>Relativo al despliegue:</p>
-
-<ul>
-<li>upstart (reinicia servidor en caso de que caiga)</li>
-<li>forever (nodejitsu)</li>
-<li>fusion passenger, nginx + docker</li>
-<li>pm2 (cluster, monitorización, &#8230;)</li>
-</ul>
-
-
-<p>Código y ejemplos en el <a href="https://github.com/borillo/codemotion-2014">repo Codemotion de R. Borillo</a></p>
-
-<h3>Workshop, designing a release pipeline, Jose Luis Soria</h3>
-
-<p>Opinión: el taller me defraudó un poco, porque al final fue más una charla larga
-que un taller propiamente dicho. Aunque me llevé algunos consejos e ideas que me
-pueden servir en mi día a día.</p>
-
-<p>9 pasos a seguir para diseñar una pipeline de entrega:</p>
-
-<ol>
-<li>Definir componentes: nombre, dependencias, deploy target, &#8230;</li>
-<li>Identificar subpipelines: 1 solo pipeline o 1 pipeline por componente o 1 pipeline por
-equipo</li>
-<li>Definir etapas y orquestación
-a. cada etapa me tiene que dar feedback, información
-b. crecer a lo ancho, no a lo largo (en el flujo, paralelizando etapas)
-c. necesito: nombre, meta a conseguir, fuentes, flujo, &#8230;</li>
-<li>Definir entornos (no deben estar atados a etapas)</li>
-<li>Definir los pasos (partes de cada una de las etapas)</li>
-<li>Definir automatizacion y herramientas</li>
-<li>Definir modelo ejecucion</li>
-<li>Planificar para futuras mejoras: comienza simple y evoluciona</li>
-<li>Inspecciona y adáptate (mejora contínua)</li>
-</ol>
-
-
-<p>Recursos:</p>
-
-<ul>
-<li>libro Continuous Delivery</li>
-<li>Agile testing cuadrant</li>
-<li>Herramientas de orquestación: ThoughtWorks Go, MS VS Release Management</li>
-</ul>
-
-
-<h3>Loves always takes care and humility, Chema Alonso</h3>
-
-<p>Opinión: la charla comenzó muy bien, una bonita historia (aunque me perdí la
-primera parte el año pasado), va contando conceptos de seguridad,&#8230; Hasta que
-aparece en pantalla <em>LATCH</em>. A partir de ahí, todo pareció un anuncio, y mi
-cerebro desconectó.</p>
-
-<p>La charla cuenta una historia entre una Developar y un Hacker.</p>
-
-<p>Dev: preocupada por la seguridad. Cree que algo está seguro si está bien hecho
-(best practices).</p>
-
-<p>Hacker: tiene muchas otras maneras de romper la seguirdad.</p>
-
-<p>Hacker: quiere nuevos metodos aplicando la ciencia: doble factor autenticación, usb con llave,
-matrices de numeros, &#8230;</p>
-
-<p>Dev: ve problemas, a cada nuevo método le encuentra una debilidad.</p>
-
-<h3>20 languages in 40 minutes, Alonso Torres</h3>
-
-<p>Opinión: charla muy amena y friki, una pasada. El tono fue muy tranquilizador y
-Alonso transmitia confianza. En definitiva, me encantó.</p>
-
-<p>¿programar es un arte? no lo sé, pero sí se que es creativo</p>
-
-<p>Alonso nos quiere dar una razón para cada uno de los lenguajes, porque en charlas
-técnicas de 1h intentan venderte de usar su lenguaje. Alotor le sobra con 2 min/lenguaje</p>
-
-<p>OOP Vs Functional</p>
-
-<ul>
-<li>scala tiene ambos</li>
-<li>haskell</li>
-<li>F#</li>
-<li>clojure: lenguaje funcional con cierta flexibilidad</li>
-</ul>
-
-
-<p>Estático Vs Dinámico</p>
-
-<ul>
-<li>groovy: ambos</li>
-<li>python: para aprender dinámico</li>
-<li>ruby: favorece implícito (potencia sin control)</li>
-<li>php: desarrollo rápido</li>
-<li>js: para integración con otros sistemas</li>
-</ul>
-
-
-<p>De sistema, de bajo nivel</p>
-
-<ul>
-<li>C: potencia</li>
-<li>C++: añade cierta estructura a C</li>
-<li>Go: concurrencia</li>
-<li>Rust: gestión memoria</li>
-</ul>
-
-
-<p>Lenguajes del sigle XXI</p>
-
-<ul>
-<li>ceylon: modularidad</li>
-<li>elm: funcional en interactivo (I/O): es un haskell para el navegador</li>
-<li>julia: cálculo científico y macros</li>
-</ul>
-
-
-<p>Y para terminar, Piet: cada pixel, con su color, es una instruccion. El
-hola mundo con este lenguaje es el más bonito que he visto nunca.</p>
-
-<p>Las slides y los ejemplos de código en el <a href="https://github.com/Alotor/20-languages-demos">repo Codemotion de Alotor</a></p>
-
-<h3>Keynote del segundo día</h3>
-
-<p>Presentación del producto IBM Bluemix, una especie de heroku, Google App Engine,&#8230;</p>
-
-<ul>
-<li>learn</li>
-<li>be fast</li>
-<li>avoid the grind</li>
-</ul>
-
-
-<p><strong>Acción</strong>: buscar presentacion para dar con los 3 consejos.</p>
-
-<h3>Teaching programming online, Pamela Fox</h3>
-
-<p>Opinión: no venía muy convencido a la charla, pensaba que trataría de docencia, de
-cómo enseñar a programar online. En lugar de eso Pamela destripó el curso que da
-sobre ciencia de la programación: herramientas, problemas, diversas actividades, &#8230;</p>
-
-<p>Si quieres que la gente vea tus vídeos, haz que duren menos de 10min</p>
-
-<p>Frameworks y herramientas: Backbone, FB React Vs Angular; js parsers, js hint, js babyhint,&#8230;</p>
-
-<p>Si alguna vez creas un sistema de programación online, chequea los bucles infinitos.
-Los tendrás que sufrir, seguro.</p>
-
-<p>También, deberás tener herramientas, que mediante diferenciación, sea capaz de
-detectar si dos alumnos han copiado. Estos cursos suelen tener miles de alumnos, y
-es imposible detectarlas manualmente.</p>
-
-<p>Actividades de las que consta el curso en Kahn Academy:</p>
-
-<ul>
-<li>Exercises</li>
-<li>Projects: permiten a los alumnos ser más creativos.</li>
-<li>Algoritmo de votado para crear una lista de los proyectos más llamativos, y cómo
-los alumnos se las ingenian para engañar al sistema.</li>
-<li>Spin­offs: o una vuelta de tuerca más a los proyectos.</li>
-</ul>
-
-
-<p>En definitiva:
-aprende > practica > crea > comparte > ayuda</p>
-
-<p><a href="https://github.com/Khan/live-editor">Live editor</a> es el proyecto en el que está
-trabajando la ponente.</p>
-
-<h3>Analizando y debuggeando tu plataforma, Luis Bosque</h3>
-
-<p>Opinión: esperaba algo diferente de la charla, no sé muy bien el qué, pero algo
-diferente. Con todo esto, estuvo muy bien. Multitud de herramientas, multitud de
-consejos y muchos ejemplos reales usados en CartoDB.</p>
-
-<p>No valen las sensaciones, debes analizar tu plataforma para saber cómo se comportan
-tus usuarios y para saber cómo afectan los cambios que haces.</p>
-
-<p>No hay un manual sobre que medir, pero no hay que medir todo.</p>
-
-<p>Analisis corto plazo: monitoring, alerting.</p>
-
-<p>Analisis medio plazo: buscar patrones de uso, optimizar para su uso. Análisis de casos
-especiales te pueden llevar a optimizaciones a incorporar</p>
-
-<p>Stadísticas al usuario:</p>
-
-<ul>
-<li>tiempo de sus queries en ejecutarse</li>
-<li>número de visualizaciones de su app</li>
-<li>widgets más usados</li>
-</ul>
-
-
-<p>Herramientas análisis logs: logstash, fluentd, splunk, syslog</p>
-
-<p>No volverte loco con las métricas, no se puede medir todo, debes decidir qué
-precisión quieres (queries de mas de 30seg), definir una politica de retención de
-datos (no todas las métricas tienen el mismo ciclo de vida)</p>
-
-<p>Ante todo, ten en cuenta el impacto técnico, es muy, muy grande.</p>
-
-<h3>Lo que la cafeína le hizo a JavaScript, Sergio Arbeo</h3>
-
-<p>Opinión: charla muy divertida y amena, Sergio comunica muy bien y se nota que sabe
-de lo que habla. La charla es muy técnica y va de cosas muy sencillas hasta
-ciertos problemas que te hacen estrujarte la mente un poco.</p>
-
-<p>CoffeeScript mejor que ES5, CoffeeScript peor que ES6</p>
-
-<p>¿Qué trae ES6?</p>
-
-<ul>
-<li>Destructuring, con su operación inversa, funciona con arrays</li>
-<li>Modules</li>
-<li>let / const</li>
-<li>classes</li>
-<li>propiedades computadas (ejemplo de código implementando <code>pluck</code></li>
-<li>function: sspread operator: convierte varios argumentos en un array</li>
-<li>function: sdefault parameters</li>
-<li>arrow functions</li>
-</ul>
-
-
-<p><strong>Acción</strong>: Librería ESNext para usar ES6 hoy</p>
-
-<h3>The Google Glass revolution, Alain Regnier, @altolabs, GDG Paris</h3>
-
-<p>Opinión: impresionante por la demo en vivo de las gafas. Me sirvió para
-conocer de primera mano las Google Glass y pasar un poco de envidia de
-poder cacharrear con un prototipo tecnológico.</p>
-
-<ul>
-<li>Multitud de sensores</li>
-<li>Organizado en Cards: como si fuera un timeline</li>
-<li>Controles: voz, táctil, mover cabeza</li>
-<li>Glass Mobile, MyGlass web</li>
-<li>Un detalle queno me gustó nada es que parece muy enlazado a tu móvil</li>
-</ul>
-
-
-<p>Programar para GGlass</p>
-
-<ol>
-<li>Mirror API: nunca te conectas a tu GGlass
-tu server ­> google server ­> tus gafas</li>
-<li>GDK: accede a hardware de tu GGlass</li>
-<li>WearScript: javascript para wearables</li>
-</ol>
-
-
-<h3>Usando behat para no abusar de F5, Alfonso Machado, GeeksHub</h3>
-
-<p>Opinión: una charla muy práctica, donde Alfonso nos cuenta su experiencia con <code>behat</code> a raiz
-de unos problemas que tuvo él. Ejemplos con código y demo en vivo. Muy interesante.</p>
-
-<p>Implementación de Gerkin inspirado en Cucumber</p>
-
-<p>Mink: drivers para emular navegadores con Selenium (java and the like) + acciones predefinidas</p>
-
-<p>Instalacion difícil, mejor con composer</p>
-
-<h3>Scrum bad smells, Juanma Gómez</h3>
-
-<p>Opinión: muy animada, Juanma conecta perfectamente con la gente. Intentó tirar de nosotros,
-pero era la última hora y nos resistíamos un poco. Eso sí, a la hora de las preguntas la
-gente se extendió bastante. Buena señal.</p>
-
-<p>Patrones en la implantación agile</p>
-
-<ul>
-<li>2 trampas: yo ya lo se todo; esto no se puede hacer</li>
-<li>Las empresas esperan que no cambien nada</li>
-<li>“nosotros hacemos nuestro scrum”</li>
-<li>equipo multidisciplinar no es que todos hacemos de todo, no es un hombre orquesta, sino que es
-un equipo con perfiles especializados que se complementan</li>
-<li>dueño de producto sin capacidad (o experiencia) en la toma de decisiones o de visión estratégica</li>
-<li>jefe de proyecto que pasa a scrum master: el rol del SM es complejo porque debe tratar
-sobretodo de personas</li>
-<li>Iteraciones variables</li>
-<li>Definir todo al principio (como en cascada)</li>
-<li>Hacer cascadas pequeñas</li>
-<li>Control y seguimiento en lugar de responsabilidad y confianza</li>
-<li>“yo ya he hecho mi trabajo”</li>
-</ul>
-
-
-<p>Mitos:</p>
-
-<ul>
-<li>ser agil es ser rápido</li>
-<li>en scrum sólo hay visión a corto plazo: debemos tener una visión a largo plazo</li>
-</ul>
-
-
-<p>Como resumen:</p>
-
-<ul>
-<li>1º aprender</li>
-<li>siempre hay alcantarillas que abrir, siempre va a salir algo que huele mal</li>
-<li>scrum conlleva un cambio cultural</li>
 </ul>
 
 ]]></content>

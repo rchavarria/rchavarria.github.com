@@ -4,7 +4,7 @@
   <title><![CDATA[Category: book reviews | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/book-reviews/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2015-09-05T00:43:39+02:00</updated>
+  <updated>2015-09-06T16:11:04+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,83 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[The Martian]]></title>
+    <link href="http://rchavarria.github.io/blog/2015/09/06/the-martian/"/>
+    <updated>2015-09-06T16:05:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2015/09/06/the-martian</id>
+    <content type="html"><![CDATA[<h5>de Andy Weir</h5>
+
+<p><img class="right" src="http://www.ew.com/sites/default/files/i/2014/02/04/The-Martian.jpg" width="201" height="306"></p>
+
+<h2>Por qué lo he leído</h2>
+
+<p>Hace un tiempo que escucho semanalmente los podcasts de Scott Hanselman:
+<a href="http://www.hanselminutes.com/">Hanselminutes</a>. Son unos podcasts muy variados que tratan temas relacionados
+con el mundo del software y la tecnología en general: lenguajes de programación,
+iniciativas,...</p>
+
+<p>En varios de sus podcasts, y probablemente en varios de sus posts, Scott dice
+que uno de los libros que más recomienda es <a href="http://www.amazon.es/gp/product/B00OXYQR38/">El marciano</a>, que es un libro
+que le encanta. No creo que se lleve ninguna comisión por hacer publicidad,
+pero si alguien como Scott recomienda una y otra vez un libro, será por algo.
+Además, es un libro no técnico, por lo que me serviría para desconectar un poco
+en vacaciones.</p>
+
+<!-- more -->
+
+
+<h2>Qué esperaba</h2>
+
+<p>Al estar tan recomendado, esperaba una novela muy bien escrita. Según Scott, es
+una novela de ciencia ficción, pero que es mucho más de ciencia que de ficción,
+de hecho, con el estado actual de la tecnología, se podría dar la situación
+perfectamente. Lo único que quizá no se ha invertido el tiempo y el dinero en
+hacerlo realidad, pero podría serlo.</p>
+
+<h2>Qué encontre</h2>
+
+<p>Evidentemente, encontré todo lo que esperaba. Una novela de ciencia ficción, con
+más ciencia que ficción, describiendo una situación que podría ser totalmente
+cierta actualmente. Una novela magníficamente escrita, con muchos tecnicismos,
+llena de vocabulario aeroespacial, describiendo personalidades muy distintas,
+pero que el autor usa inteligentemente.</p>
+
+<h2>Conclusiones</h2>
+
+<p>Sin duda, una novela a recomendar. Si te gusta el espacio, si te gusta la ciencia,
+y si te gusta la ficción; ésta es una novela para tí. O película, porque mientras
+estaba a mitad del libro, me entero de que van a <em>sacar</em> la película y que ya hay
+disponible algún <a href="https://www.youtube.com/watch?v=ej3ioOneTy8">trailer</a>. Así que eso me animó a terminarme antes aún el
+libro, a devorarlo en vacaciones.</p>
+
+<p>Aunque la situación podría darse hoy en día, también hay que hacer un acto de fe
+para creerse todo lo que cuenta. En muchas ocasiones, el protagonista describe
+procesos químicos, o físicos, que pueden funcionar por casualidad, pero que al
+final, por <em>necesidades del guión</em>, terminan funcionando. No son situaciones
+increíbles, pero sí que uno tiene que relajarse un poco y creer en la fortuna
+del protagonista.</p>
+
+<h2>Qué he aprendido</h2>
+
+<p>No es que pueda sacar lecciones aprendidas, como si fuera un libro técnico
+describiendo un proceso o una tecnología, pero sí que he aprendido un montón
+de cosas sobre Marte: lugares, condiciones en la superficie, cómo viajar al
+planeta, cómo funcionan las comunicaciones, un poco sobre viajes
+interplanetarios, cómo funciona la NASA por dentro. Aunque sé que es una novela,
+no me lo tengo que tomar todo al pie de la letra.</p>
+
+<h2>Recursos relacionados</h2>
+
+<ul>
+<li><a href="http://www.hanselminutes.com/">Hanselminutes podcast</a></li>
+<li><a href="http://www.amazon.es/gp/product/B00OXYQR38/">El marciano</a>, de Andy Weir, o en versión original: <a href="http://www.amazon.com/The-Martian-Novel-Andy-Weir-ebook/dp/B00EMXBDMA">The Martian</a></li>
+<li><a href="https://www.youtube.com/watch?v=ej3ioOneTy8">Trailer de The Martian</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Notes to a software team leader]]></title>
@@ -440,96 +517,6 @@ pérdida de tiempo, pero no llegué a ver el problema expuesto por Seth.</p>
 <li><a href="https://www.khanacademy.org">Khan Academy</a></li>
 <li><a href="http://online.stanford.edu">Stanford University online</a></li>
 <li><a href="http://ocw.mit.edu/index.htm">MIT open courses</a></li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Extreme Programming explained]]></title>
-    <link href="http://rchavarria.github.io/blog/2015/01/02/extreme-programming-explained/"/>
-    <updated>2015-01-02T10:24:00+01:00</updated>
-    <id>http://rchavarria.github.io/blog/2015/01/02/extreme-programming-explained</id>
-    <content type="html"><![CDATA[<h5>de Kent Beck</h5>
-
-<p><img class="right" src="http://ecx.images-amazon.com/images/I/71kDsLjbnsL.jpg" width="240" height="300"></p>
-
-<h2>Por qué lo he leído</h2>
-
-<p>Estoy muy interesado en las metodologías ágiles, pero yo osy más una persona
-técnica, un ingeniero preocupado por los aspectos técnicos de los proyectos,
-más que por los aspectos de gestión. Creo que Extreme Programming explica lo
-básico, los inicios de Agile.</p>
-
-<p>Ya conocía algunas prácticas de XP, pero quería conocerlas más a fondo.</p>
-
-<!-- more -->
-
-
-<h2>Qué esperaba</h2>
-
-<p>Sencillo, buscaba un libro que me explicara los valores, principios y prácticas
-de XP. Existe un recurso online donde poder encontrar estos recursos,
-<a href="http://www.extremeprogramming.org">http://www.extremeprogramming.org</a>,
-pero buscaba algún recurso que los tratara con más profundidad.</p>
-
-<h2>Qué encontre</h2>
-
-<p>Justamente lo que buscaba. El libro trata XP a fondo, no sólo explicando y
-dando sentido a los valores, principios y prácticas, sino también multitud
-de experiencias reales.</p>
-
-<p>También encontré mucha información acerca de <em>pair programming</em>, práctica
-en la que estoy muy interesado, así como la forma en que las distintas
-prácticas se interconectan entre sí.</p>
-
-<p><img class="center" src="/images/2015/xp-practices.jpg" title="Cómo están interconectadas las prácticas XP" ></p>
-
-<h2>Conclusiones</h2>
-
-<p>Un libro totalmente recomendable. Trata el tema de Extreme Programming con
-mucha claridad, exponiendo todas las partes que lo componen, explica cada
-uno de los papeles que juegan los integrantes de un equipo XP (aunque se
-ha quedado un poco obsoleto para hoy en día, pero puesto en perspectiva
-toma mucho sentido).</p>
-
-<p>La verdad es que parece mentira que el autor esté hablando sobre estos
-temas por el año 1999/2000 y que todavía en 2015 estemos como estamos.</p>
-
-<h2>Frases que me gustaría recordar</h2>
-
-<blockquote><p>XP es un experimento para responder a la pregunta: ¿Cómo programarías si
-tuvieras suficiente tiempo? Donde se explica la diferencia entre la <em>Mentalidad
-de la suficiencia</em> frente a la <em>Mentalidad de la escasez</em> (parábola de la
-tribu del bosque y de la montaña)</p>
-
-<p>Si no cambiaran los requisitos o no aprendiéramos nada durante el proceso
-sería mejor diseñar para el futuro pero <strong>yo no me
-arriesgo</strong> a que no haya cambios y mucho menos a no aprender nada.</p>
-
-<p>Los Programadores confiados y agresivos son valiosos precisamente porque ellos
-son confiados y agresivos</p>
-
-<p>Primordialmente las emociones (especialmente el miedo) son lo que hace que XP
-sea tan duro de practicar y aplicar</p>
-
-<p>Los cuatro valores de XP: comunicación, simplicidad, feedback y coraje</p>
-
-<p>Cuatro actividades básicas: codificar, testear, escuchar y diseñar</p>
-
-<p>El trabajo del programador no se acaba cuando el ordenador entiende qué es lo
-que tiene que hacer. Su trabajo más importante es la comunicación con el resto
-de la gente</p>
-
-<p>Una habilidad necesaria para los programadores es <em>pair programming</em></p>
-
-<p>Otra habilidad necesaria es el hábito de la simplicidad</p></blockquote>
-
-<h2>Recursos relacionados</h2>
-
-<ul>
-<li><a href="https://github.com/rchavarria/book-notes/blob/master/published/extreme-programming-explained-by-kent-beck.md">Extensas notas sobre el libro</a></li>
-<li><a href="http://www.amazon.es/Extreme-Programming-Explained-Embrace-Embracing/dp/0321278658/ref=sr_1_1?ie=UTF8&amp;qid=1420044502&amp;sr=8-1&amp;keywords=extreme+programming+explained">Extreme Programming explained, en Amazon</a></li>
 </ul>
 
 ]]></content>
