@@ -14,7 +14,7 @@ sidebar: true
 
 ##### de Andy Weir
 
-{% img right http://www.amazon.com/The-Martian-Novel-Andy-Weir-ebook/dp/B00EMXBDMA %}
+{% img right http://www.ew.com/sites/default/files/i/2014/02/04/The-Martian.jpg 201 306 %}
 
 ## Por qué lo he leído
 
