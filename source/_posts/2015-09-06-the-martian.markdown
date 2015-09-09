@@ -6,7 +6,7 @@ author: Rubén Chavarría
 comments: true
 categories: 
 - book reviews
-- non-techincal books
+- non-technical books
 published: true
 footer: false
 sidebar: true
