@@ -4,7 +4,7 @@
   <title><![CDATA[Category: refactoring | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/refactoring/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2015-09-13T22:26:29+02:00</updated>
+  <updated>2015-09-13T22:46:42+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -14,12 +14,12 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Charla técnica: Workflows of refactorings]]></title>
-    <link href="http://rchavarria.github.io/blog/2015/09/13/charla-tecnica-workflows-refactorings/"/>
+    <title type="html"><![CDATA[Charla técnica: Workflows of refactoring]]></title>
+    <link href="http://rchavarria.github.io/blog/2015/09/13/charla-tecnica-workflows-refactoring/"/>
     <updated>2015-09-13T10:08:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2015/09/13/charla-tecnica-workflows-refactorings</id>
+    <id>http://rchavarria.github.io/blog/2015/09/13/charla-tecnica-workflows-refactoring</id>
     <content type="html"><![CDATA[<p>Esta semana el post trata sobre las notas que he tomado de una charla técnica
-titulada <a href="https://www.youtube.com/watch?v=vqEg37e4Mkw">Workflows of refactorings</a>. El autor de la charla, hablando de
+titulada <a href="https://www.youtube.com/watch?v=vqEg37e4Mkw">Workflows of refactoring</a>. El autor de la charla, hablando de
 <em>refactoring</em>, no podría ser otro que <a href="http://www.martinfowler.com/">Martin Fowler</a>. En la charla, Martin
 comienza hablando de distintos modos de trabajar, dependiendo de la situación,
 por ejemplo, nos encontraremos añadiendo funcionalidad o limpiando el código.
