@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Charla técnica: Workflows of refactorings"
+title: "Charla técnica: Workflows of refactoring"
 date: 2015-09-13 10:08
 author: Rubén Chavarría
 comments: true
@@ -14,7 +14,7 @@ sidebar: true
 ---
 
 Esta semana el post trata sobre las notas que he tomado de una charla técnica
-titulada [Workflows of refactorings]. El autor de la charla, hablando de
+titulada [Workflows of refactoring]. El autor de la charla, hablando de
 *refactoring*, no podría ser otro que [Martin Fowler]. En la charla, Martin
 comienza hablando de distintos modos de trabajar, dependiendo de la situación,
 por ejemplo, nos encontraremos añadiendo funcionalidad o limpiando el código.
@@ -110,6 +110,6 @@ desarrollando en años venideros.
 
 Así que ya sabes, haz un hueco en la agenda, y ¡a visualizar la charla!
 
-[Workflows of refactorings]: https://www.youtube.com/watch?v=vqEg37e4Mkw
+[Workflows of refactoring]: https://www.youtube.com/watch?v=vqEg37e4Mkw
 [Martin Fowler]: http://www.martinfowler.com/
 
