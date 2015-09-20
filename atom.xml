@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2015-09-13T22:46:42+02:00</updated>
+  <updated>2015-09-20T19:23:30+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,242 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[The passionate programmer]]></title>
+    <link href="http://rchavarria.github.io/blog/2015/09/20/passionate-programmer/"/>
+    <updated>2015-09-20T19:07:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2015/09/20/passionate-programmer</id>
+    <content type="html"><![CDATA[<h5>de Chad Fowler</h5>
+
+<p><img class="left" src="http://chadfowler.com/images/books/passionate-programmer.jpg" width="200" height="300" title="The passionate programmer" ></p>
+
+<h2>Por qué lo he leído</h2>
+
+<p>Suelo elegir los libros por el título, por lo que me sugiera. Y el título de
+este libro me sugiere todo: pasión y programación. ¿Qué más se puede pedir?.
+Uno de mis libros favoritos es <a href="https://pragprog.com/book/tpp/the-pragmatic-programmer">The pragmatic programmer</a>, que más adelante
+dió lugar a una editorial de libros técnicos. <em>The passionate programmer</em> tenía
+la misma pinta, así que seguro que lo tenía que leer, tarde o temprano.</p>
+
+<!-- more -->
+
+
+<h2>Qué esperaba</h2>
+
+<p>Me esperaba un libro con una estructura parecida a <em>The pragmatic programmer</em>,
+con capítulos cortos, y cada capítulo finalizando con una serie de posibles
+acciones para mejorar en tu carrera profesional. Bueno, esta vez, en lugar de
+mejorar, esperaba que estuviera relacionado con sentir la pasión por la
+programación.</p>
+
+<h2>Qué encontre</h2>
+
+<p>El libro está organizado en 5 grandes secciones:</p>
+
+<ol>
+<li>Elige tu mercado</li>
+<li>Invierte en tu producto</li>
+<li>Ejecución</li>
+<li>El marketing&#8230; no es sólo para los trajeados</li>
+<li>Manteniéndote al día</li>
+</ol>
+
+
+<p>Cada uno de ellos está dividido en capítulos más pequeños (lo que me
+imaginaba), y cada uno de ellos termina en uno o varios consejos para que
+aprendas el concepto que desarrolla el capítulo. Idéntica estructura a <em>The
+pragmatic programmer</em> que tanto me gustó y tanto me ayudó.</p>
+
+<p>Cada una de las secciones anteriores explorar un aspecto de la carrera de un
+profesional del desarrollo software, aunque no cubre todos. Guía al lector
+sobre cómo y por qué debe elegir un mercado, una industria, ya que el software
+se encuentra en todas partes hoy en día. Hay consejos sobre cómo deberías
+trabajar, qué actitud deberías tener, tanto si trabajas por cuenta ajena como
+por tu propia cuenta y también cómo poder <em>venderte</em> dentro y fuera de tu
+empresa.</p>
+
+<h2>Conclusiones</h2>
+
+<p>Me parece un libro muy recomendable. Está enfocado al desarrollo del software,
+pero podría ser aplicable (más o menos) a otras profesiones. De lo que trata es
+de buscar la pasión por lo que haces.</p>
+
+<p>Cada capítulo termina con una o varias acciones a tomar, algunas son sencillas,
+otras te llevarán cierto tiempo, otras son arriesgadas y no todo el mundo se
+sentiría cómodo llevándolas a cabo. No creo que tenga tiempo ni energía para
+llevarlas todas a cabo, pero sí que me gustaría poner en práctica algunas de
+ellas: comunicarme más con gente de negocio, ponerme en situaciones donde yo
+sea el <em>peor</em>, invertir en mi conocimiento, encontrar un mentor, seguir alguno
+de los consejos para contribuir a algún proyecto de software libre,&#8230;</p>
+
+<p>Creo que este es un libro para tener al lado de <em>The pragmatic programmer</em> y
+releerlos de vez en cuando.</p>
+
+<h2>Qué he aprendido</h2>
+
+<blockquote><p>No puedes competir en precio, pero puedes competir en habilidad.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>Tienes que ser apasionado sobre tu trabajo si quieres ser excelente
+en tu trabajo.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>Un aprendiz no se encuentra saliendo por ahí y declarándote un <em>gurú</em>, si no
+acumulando conocimiento y teniendo la voluntad y paciencia para compartirlo.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>Es mucho más fácil encontrar alguien que haga que el software funciona que
+encontrar a alguien que haga que funcione el <em>hacer software</em> (It’s much
+easier to find someone who can make software work than it is to find someone
+who can make the making of software work).</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>Crea movimiento. Se de los que empujan hacia adelante. No te acomodes.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>La mayor barrera entre nosotros, los mortales, y aquellos a los que admiramos
+son nuestros propios miedos.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>El proceso aquí descrito es un bucle que se repite hasta que te jubilas:
+investiga, invierte, ejecuta, anúncialo, repite.</p></blockquote>
+
+<h2>Frases que me gustaría recordar</h2>
+
+<blockquote><p>At least when starting out, greatness is binary in the music world. A
+musician wants to either be great (and famous for it!) or not do it at all.
+I’m often asked why it is that there are so many good musicians who are also
+good software developers. That’s the reason.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>Think of your career as if it is the life cycle of a product that you are
+creating. That product is made up of you and your skills.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>If you want to stay relevant, you’re going to have to dive into the domain of
+the business you’re in.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>Legendary jazz guitarist Pat Metheny: “Always be the worst guy in every band
+you’re in.”</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>Fear-driven advice is geared toward not losing. Thinking about not losing is
+not the way to win!</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>Teaching is one of the best ways to learn.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>Cuando estudias soluciones de código abierto, en lugar de propietarias, en
+profundidad empiezas a reconocer patrones que te sirven más allá de la
+tecnología.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>The most obvious place to start your lifelong learning is in learning the
+tools of your trade.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>Without a role model, there’s no incentive to get better.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>You have to make time for practice. It’s your responsibility.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>Studying the work of masters is an essential part of becoming a master.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>I learned that no matter how cool the technology seemed to be, it was
+valuable only if it solved a real problem that was urgent and provided
+quantifiable benefits. Over time, this helped me change my way of thinking
+from being technology-centric to being solution-centric.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>Attempting to be irreplaceable is a defensive maneuver that creates a hostile
+relationship with your employer.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>We judge each other on how we deal with those inevitable mistakes.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>If you don’t have a deadline, you don’t have any pressure or much incentive
+to finish something.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>There is no way to objectively measure the quality of a knowledge worker, and
+there is no way to objectively measure the quality of their work. That means
+you are always going to be measured based on someone else’s perception of
+you.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>You need to make it personal. Try to actually learn about the people you work
+with.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>Set big goals, but make constant corrections along the way. Learn from the
+experience, and change the goals as you go.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>Software development is both challenging and rewarding. It’s creative like an
+art-form, but (unlike art) it provides concrete, measurable value.</p></blockquote>
+
+<h2>Recursos relacionados</h2>
+
+<ul>
+<li><a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/passionate-programmer-by-chad-fowler.markdown">Notas tomadas sobre el libro</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Charla técnica: Workflows of refactoring]]></title>
@@ -2311,320 +2547,6 @@ de la gente</p>
 <li><a href="http://www.amazon.es/Extreme-Programming-Explained-Embrace-Embracing/dp/0321278658/ref=sr_1_1?ie=UTF8&amp;qid=1420044502&amp;sr=8-1&amp;keywords=extreme+programming+explained">Extreme Programming explained, en Amazon</a></li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Crear Web Components con Dart y Polymer]]></title>
-    <link href="http://rchavarria.github.io/blog/2014/12/13/crear-web-components-con-dart-y-polymer/"/>
-    <updated>2014-12-13T18:42:00+01:00</updated>
-    <id>http://rchavarria.github.io/blog/2014/12/13/crear-web-components-con-dart-y-polymer</id>
-    <content type="html"><![CDATA[<p><a href="http://dartlang.org">Dart</a> es un lenguaje de programación, no muy conocido hoy en día, pero
-que tiene un gran potencial, ya que está pensado para aplicaciones
-web, tanto para la parte servidora como para la parte cliente. Así,
-con Dart puedes escribir código que se ejecuta en el navegador y
-código ejecutándose en un servidor que responda a ese cliente.</p>
-
-<p><a href="http://polymer-project.org">Polymer</a> es una implementación del estándar HTML Web Components,
-un estándar que quiere revolucionar la manera en la que se desarrollan
-aplicaciones web en los navegadores.</p>
-
-<p>En este tutorial describo lo que he aprendido siguiendo el tutorial acerca
-de <a href="https://www.dartlang.org/docs/tutorials/polymer-intro/">Cómo crear un Web Component con Dart y Polymer</a>. Si quieres bucear
-en el código directamente, puedes hacerlo en mi repositorio de Github
-<a href="https://github.com/rchavarria/dart-tutorials/tree/master/custom-element-dart-tutorial">Custom element Dart tutorial</a>.</p>
-
-<!-- more -->
-
-
-<h2>Qué vamos a crear</h2>
-
-<p>El Web Component que crearemos con este tutorial es un sencillo cronómetro,
-con el cual podremos comenzar a contar el tiempo, pausarlo o detenerlo completamente.</p>
-
-<p>Rápidamente, los pasos que vamos a seguir son:</p>
-
-<ol>
-<li>Importar el fichero HTML que contiene la definición del Web Component</li>
-<li>Usar el Web Component en nuestra propia página web</li>
-<li>Inicializar Polymer. La librería de Dart que vamos a usar ya proporciona
-el mecanismo para hacerlo, no te preocupes</li>
-</ol>
-
-
-<h2>Ficheros de los que consta el tutorial</h2>
-
-<ul>
-<li><code>web/index.html</code>: es el punto de entrada de la aplicación. Inicializa Polymer,
-importa el Web Component y usa el mismo.</li>
-<li><code>web/tute_stopwatch.html</code>: código HTML que define el Web Component.
-importa el Web Component y usa el mismo.</li>
-<li><code>web/tute_stopwatch.dart</code>: código Dart que implementa el Web Component.</li>
-</ul>
-
-
-<h2>Instalando Polymer.dart</h2>
-
-<p>Para poder usar Polymer, primero es necesario instalarlo como una dependencia del
-proyecto. Para ello, modificar el fichero <code>pubspec.yaml</code> y añadir el siguiente
-contenido:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>dependencies:
-</span><span class='line'>  polymer: "&gt;=0.15.1 &lt;0.16.0"</span></code></pre></td></tr></table></div></figure>
-
-
-<p></p>
-
-<p>Después, ejecutar el comando <code>pub get</code>. <code>pub</code> es una herramienta que viene con el
-SDK de Dart. Dart Editor también puede ejecutar este comando para instalar todas
-las dependencias del proyecto.</p>
-
-<p>Para inicializar Polymer, modificar <code>web/index.html</code> y añadir esta línea al final
-del mismo:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'>...
-</span><span class='line'><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;application/dart&quot;</span><span class="nt">&gt;</span><span class="kr">export</span> <span class="s2">&quot;package:polymer/init.dart&quot;</span><span class="p">;</span><span class="nt">&lt;/script&gt;</span>
-</span><span class='line'>...
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>Incluir Polymer en la aplicación</h2>
-
-<p>Estos son los ficheros a modificar para usar Polymer en la creación del
-Web Component:</p>
-
-<p><code>web/tute_stopwatch.html</code>: importar el fichero <code>packages/polymer/polymer.html</code>
-antes de definir cualquier Web Component en la aplicación:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;import&quot;</span> <span class="na">href=</span><span class="s">&quot;packages/polymer/polymer.html&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'><span class="nt">&lt;polymer</span><span class="na">-element</span> <span class="na">name=</span><span class="s">&quot;tute-stopwatch&quot;</span><span class="nt">&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><code>web/tute_stopwatch.dart</code>: importar la librería Polymer en el fichero Dart:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'>import &#39;dart:html&#39;;
-</span><span class='line'>import &#39;package:polymer/polymer.dart&#39;;
-</span><span class='line'>// ...
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>Instanciar un Web Component</h2>
-
-<p>En la página web donde se va a usar el Web Component, debemos importar la definición
-del mismo, usar un tag con su nombre (como si fuera un componente HTML normal) e
-inicializar Polymer. De forma que <code>web/index.html</code> quedaría parecido a:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="cp">&lt;!DOCTYPE html&gt;</span>
-</span><span class='line'><span class="nt">&lt;html&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;head&gt;</span>
-</span><span class='line'>    <span class="c">&lt;!-- importa la definición del Web Component --&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;import&quot;</span> <span class="na">href=</span><span class="s">&quot;tute_stopwatch.html&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;/head&gt;</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="nt">&lt;body&gt;</span>
-</span><span class='line'>    <span class="c">&lt;!-- usa el Web Component --&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;tute</span><span class="na">-stopwatch</span><span class="nt">&gt;</span><span class="err">&lt;</span>/tute-stopwatch&gt;
-</span><span class='line'>
-</span><span class='line'>    <span class="c">&lt;!-- inicializa Polymer --&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;application/dart&quot;</span><span class="nt">&gt;</span><span class="kr">export</span> <span class="s2">&quot;package:polymer/init.dart&quot;</span><span class="p">;</span><span class="nt">&lt;/script&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;/body&gt;</span>
-</span><span class='line'><span class="nt">&lt;/html&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>Definiendo el Web Component</h2>
-
-<p>La definición del mismo está en el fichero <code>web/tute_stopwatch.html</code>. Para definirlo
-hay que usar el tag <code>&lt;polymer-element&gt;</code> y asignar un nombre al Web Component. En
-este caso <code>tute-stopwatch</code>.</p>
-
-<p>El tag <code>&lt;polymer-element&gt;</code> puede tener dos tags hijos: <code>&lt;template&gt;</code>, que contiene
-el código HTML; y <code>&lt;script&gt;</code>, que contiene el código Dart.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;polymer</span><span class="na">-element</span> <span class="na">name=</span><span class="s">&quot;tute-stopwatch&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;template&gt;</span>
-</span><span class='line'>    ...
-</span><span class='line'>  <span class="nt">&lt;/template&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;application/dart&quot;</span> <span class="na">src=</span><span class="s">&quot;tute_stopwatch.dart&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-</span><span class='line'><span class="err">&lt;</span>/polymer-element&gt;
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>Dando comportamiento al Web Component</h2>
-
-<p>El comportamiento es implementado en Dart, en el fichero <code>web/tute_stopwatch.dart</code>.
-En este fichero, se declara una clase que extiende de <code>PolymerElement</code> y está
-anotada con <code>@CustomTag</code>. El contenido de <code>@CustomTag</code> debe coincidir con el
-nombre dado en la definición del Web Component.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'>@CustomTag(&#39;tute-stopwatch&#39;)
-</span><span class='line'>class TuteStopwatch extends PolymerElement {
-</span><span class='line'>    TuteStopwatch.created() : super.created();
-</span><span class='line'>}
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Para que todo esté correcto, la clase <code>TuteStopwatch</code> debe heredar de <code>PolymerElement</code> o
-implementar las interfaces <code>Polymer</code> y <code>Observable</code>. Además, debe definir un
-constructor <em>nombrado</em> que llame a <code>super.created()</code>.</p>
-
-<h2>Enlazando datos entre Dart y HTML</h2>
-
-<p>En la parte visual (HTML) se pueden usar las llaves dobles <code>{{...}}</code> para utilizar una
-variable anotada como <code>@observable</code> en la parte de comportamiento (Dart). Por ejemplo,
-para usar una <code>String</code> que al modificarla en Dart se actualice la vista HTML, los
-ficheros <code>web/tute_stopwatch.html</code> y <code>web/tute_stopwatch.dart</code> quedarían:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;polymer</span><span class="na">-element</span> <span class="na">name=</span><span class="s">&quot;tute-stopwatch&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;template&gt;</span>
-</span><span class='line'>    <span class="nt">&lt;div&gt;</span>{{counter}}<span class="nt">&lt;/div&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;/template&gt;</span>
-</span><span class='line'>  ...
-</span><span class='line'><span class="err">&lt;</span>/polymer-element&gt;
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'>@CustomTag(&#39;tute-stopwatch&#39;)
-</span><span class='line'>class TuteStopwatch extends PolymerElement {
-</span><span class='line'>    ...
-</span><span class='line'>    @observable String counter;
-</span><span class='line'>
-</span><span class='line'>    void aMethod() {
-</span><span class='line'>        counter = &#39;14:59&#39;;
-</span><span class='line'>    }
-</span><span class='line'>}
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Para hacer un doble enlace, de Dart a HTML y viceversa, se puede consultar en enlace
-<a href="https://www.dartlang.org/docs/tutorials/forms/#binding-data">Two-way data binding using Polymer</a>.</p>
-
-<h2>Creando manejadores de eventos</h2>
-
-<p>De la misma forma que se puede enlazar variables, se pueden enlazar manejadores de
-eventos que gestionen las interacciones del usuario. Por ejemplo, para responder
-ante un click del usuario, en HTML:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;button</span> <span class="na">on-click=</span><span class="s">&quot;{{start}}&quot;</span><span class="nt">&gt;</span>Start<span class="nt">&lt;/button&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Mientras que en Dart:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'>@CustomTag(&#39;tute-stopwatch&#39;)
-</span><span class='line'>class TuteStopwatch extends PolymerElement {
-</span><span class='line'>    ...
-</span><span class='line'>    void start(Event evt, var detail, Node target) {
-</span><span class='line'>        ...
-</span><span class='line'>    }
-</span><span class='line'>}
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Donde:</p>
-
-<ul>
-<li><code>evt</code>: contiene información sobre el evento</li>
-<li><code>detail</code>: puede proveer información adicional sobre el evento</li>
-<li><code>target</code>: el nodo HTML que lanzó el evento</li>
-</ul>
-
-
-<p>Para más información, como los manejadores de eventos disponibles y más, consultar
-<a href="http://www.polymer-project.org/polymer.html#declarative-event-mapping">Declarative event mapping</a>.</p>
-
-<h2>Desplegando la aplicación</h2>
-
-<p>Antes de desplegar, es necesario el uso de <em>transformadores</em> de Polymer para
-completar el proceso. Para ello, modificar <code>pubspec.yaml</code> añadiendo las siguientes
-líneas:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='html'><span class='line'>...
-</span><span class='line'>dependencies:
-</span><span class='line'>  polymer: ...
-</span><span class='line'>transformers:
-</span><span class='line'>- polymer:
-</span><span class='line'>    entry_points: web/index.html
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Definiendo <code>entry_points</code> indicamos a Polymer qué ficheros HTML queremos que transforme.</p>
-
-<p>Para probar el Web Component desarrollado podemos seleccionar <em>Ejecutar como JavaScript</em>
-sobre el fichero <code>web/index.html</code> desde Dart Editor.</p>
-
-<p>O también, tenemos el comando <code>pub serve</code> en línea de comandos. Este comando nos indicará
-una dirección URL donde poder probar la aplicación.</p>
-
-<p>El comando <code>pub build</code> genera ficheros que pueden ser desplegados en un servidor
-aparte y que hará posible ejecutar la aplicación en cualquier navegador moderno.</p>
 ]]></content>
   </entry>
   

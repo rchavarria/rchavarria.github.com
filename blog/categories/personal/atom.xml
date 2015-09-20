@@ -4,7 +4,7 @@
   <title><![CDATA[Category: personal | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/personal/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2015-09-13T22:46:42+02:00</updated>
+  <updated>2015-09-20T19:23:30+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,242 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[The passionate programmer]]></title>
+    <link href="http://rchavarria.github.io/blog/2015/09/20/passionate-programmer/"/>
+    <updated>2015-09-20T19:07:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2015/09/20/passionate-programmer</id>
+    <content type="html"><![CDATA[<h5>de Chad Fowler</h5>
+
+<p><img class="left" src="http://chadfowler.com/images/books/passionate-programmer.jpg" width="200" height="300" title="The passionate programmer" ></p>
+
+<h2>Por qué lo he leído</h2>
+
+<p>Suelo elegir los libros por el título, por lo que me sugiera. Y el título de
+este libro me sugiere todo: pasión y programación. ¿Qué más se puede pedir?.
+Uno de mis libros favoritos es <a href="https://pragprog.com/book/tpp/the-pragmatic-programmer">The pragmatic programmer</a>, que más adelante
+dió lugar a una editorial de libros técnicos. <em>The passionate programmer</em> tenía
+la misma pinta, así que seguro que lo tenía que leer, tarde o temprano.</p>
+
+<!-- more -->
+
+
+<h2>Qué esperaba</h2>
+
+<p>Me esperaba un libro con una estructura parecida a <em>The pragmatic programmer</em>,
+con capítulos cortos, y cada capítulo finalizando con una serie de posibles
+acciones para mejorar en tu carrera profesional. Bueno, esta vez, en lugar de
+mejorar, esperaba que estuviera relacionado con sentir la pasión por la
+programación.</p>
+
+<h2>Qué encontre</h2>
+
+<p>El libro está organizado en 5 grandes secciones:</p>
+
+<ol>
+<li>Elige tu mercado</li>
+<li>Invierte en tu producto</li>
+<li>Ejecución</li>
+<li>El marketing... no es sólo para los trajeados</li>
+<li>Manteniéndote al día</li>
+</ol>
+
+
+<p>Cada uno de ellos está dividido en capítulos más pequeños (lo que me
+imaginaba), y cada uno de ellos termina en uno o varios consejos para que
+aprendas el concepto que desarrolla el capítulo. Idéntica estructura a <em>The
+pragmatic programmer</em> que tanto me gustó y tanto me ayudó.</p>
+
+<p>Cada una de las secciones anteriores explorar un aspecto de la carrera de un
+profesional del desarrollo software, aunque no cubre todos. Guía al lector
+sobre cómo y por qué debe elegir un mercado, una industria, ya que el software
+se encuentra en todas partes hoy en día. Hay consejos sobre cómo deberías
+trabajar, qué actitud deberías tener, tanto si trabajas por cuenta ajena como
+por tu propia cuenta y también cómo poder <em>venderte</em> dentro y fuera de tu
+empresa.</p>
+
+<h2>Conclusiones</h2>
+
+<p>Me parece un libro muy recomendable. Está enfocado al desarrollo del software,
+pero podría ser aplicable (más o menos) a otras profesiones. De lo que trata es
+de buscar la pasión por lo que haces.</p>
+
+<p>Cada capítulo termina con una o varias acciones a tomar, algunas son sencillas,
+otras te llevarán cierto tiempo, otras son arriesgadas y no todo el mundo se
+sentiría cómodo llevándolas a cabo. No creo que tenga tiempo ni energía para
+llevarlas todas a cabo, pero sí que me gustaría poner en práctica algunas de
+ellas: comunicarme más con gente de negocio, ponerme en situaciones donde yo
+sea el <em>peor</em>, invertir en mi conocimiento, encontrar un mentor, seguir alguno
+de los consejos para contribuir a algún proyecto de software libre,...</p>
+
+<p>Creo que este es un libro para tener al lado de <em>The pragmatic programmer</em> y
+releerlos de vez en cuando.</p>
+
+<h2>Qué he aprendido</h2>
+
+<blockquote><p>No puedes competir en precio, pero puedes competir en habilidad.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>Tienes que ser apasionado sobre tu trabajo si quieres ser excelente
+en tu trabajo.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>Un aprendiz no se encuentra saliendo por ahí y declarándote un <em>gurú</em>, si no
+acumulando conocimiento y teniendo la voluntad y paciencia para compartirlo.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>Es mucho más fácil encontrar alguien que haga que el software funciona que
+encontrar a alguien que haga que funcione el <em>hacer software</em> (It’s much
+easier to find someone who can make software work than it is to find someone
+who can make the making of software work).</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>Crea movimiento. Se de los que empujan hacia adelante. No te acomodes.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>La mayor barrera entre nosotros, los mortales, y aquellos a los que admiramos
+son nuestros propios miedos.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>El proceso aquí descrito es un bucle que se repite hasta que te jubilas:
+investiga, invierte, ejecuta, anúncialo, repite.</p></blockquote>
+
+<h2>Frases que me gustaría recordar</h2>
+
+<blockquote><p>At least when starting out, greatness is binary in the music world. A
+musician wants to either be great (and famous for it!) or not do it at all.
+I’m often asked why it is that there are so many good musicians who are also
+good software developers. That’s the reason.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>Think of your career as if it is the life cycle of a product that you are
+creating. That product is made up of you and your skills.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>If you want to stay relevant, you’re going to have to dive into the domain of
+the business you’re in.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>Legendary jazz guitarist Pat Metheny: “Always be the worst guy in every band
+you’re in.”</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>Fear-driven advice is geared toward not losing. Thinking about not losing is
+not the way to win!</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>Teaching is one of the best ways to learn.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>Cuando estudias soluciones de código abierto, en lugar de propietarias, en
+profundidad empiezas a reconocer patrones que te sirven más allá de la
+tecnología.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>The most obvious place to start your lifelong learning is in learning the
+tools of your trade.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>Without a role model, there’s no incentive to get better.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>You have to make time for practice. It’s your responsibility.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>Studying the work of masters is an essential part of becoming a master.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>I learned that no matter how cool the technology seemed to be, it was
+valuable only if it solved a real problem that was urgent and provided
+quantifiable benefits. Over time, this helped me change my way of thinking
+from being technology-centric to being solution-centric.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>Attempting to be irreplaceable is a defensive maneuver that creates a hostile
+relationship with your employer.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>We judge each other on how we deal with those inevitable mistakes.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>If you don’t have a deadline, you don’t have any pressure or much incentive
+to finish something.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>There is no way to objectively measure the quality of a knowledge worker, and
+there is no way to objectively measure the quality of their work. That means
+you are always going to be measured based on someone else’s perception of
+you.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>You need to make it personal. Try to actually learn about the people you work
+with.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>Set big goals, but make constant corrections along the way. Learn from the
+experience, and change the goals as you go.</p></blockquote>
+
+<!-- para separar quotes -->
+
+
+<blockquote><p>Software development is both challenging and rewarding. It’s creative like an
+art-form, but (unlike art) it provides concrete, measurable value.</p></blockquote>
+
+<h2>Recursos relacionados</h2>
+
+<ul>
+<li><a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/passionate-programmer-by-chad-fowler.markdown">Notas tomadas sobre el libro</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[JavaScript patterns]]></title>
@@ -407,89 +643,6 @@ de la gente</p>
 <ul>
 <li><a href="https://github.com/rchavarria/book-notes/blob/master/published/extreme-programming-explained-by-kent-beck.md">Extensas notas sobre el libro</a></li>
 <li><a href="http://www.amazon.es/Extreme-Programming-Explained-Embrace-Embracing/dp/0321278658/ref=sr_1_1?ie=UTF8&amp;qid=1420044502&amp;sr=8-1&amp;keywords=extreme+programming+explained">Extreme Programming explained, en Amazon</a></li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How to start conversations and make friends]]></title>
-    <link href="http://rchavarria.github.io/blog/2014/12/05/how-to-start-conversations-and-make-friends/"/>
-    <updated>2014-12-05T18:11:00+01:00</updated>
-    <id>http://rchavarria.github.io/blog/2014/12/05/how-to-start-conversations-and-make-friends</id>
-    <content type="html"><![CDATA[<h5>de Don Gabor</h5>
-
-<p><img class="left" src="/images/2014/how-to-start-conversation.jpg" width="200" height="306" title="Portada del libro How to start a conversation" ></p>
-
-<h2>Por qué lo he leído</h2>
-
-<p>En el mundo del software se suele hablar mucho de la excelencia técnica, de
-tecnologías, de las últimas buenas prácticas,... Y también de las personas.
-Yo soy de esos que está convencido de que en esta profesión (en realidad en
-todas las profesiones) las relaciones personales son una parte vital de la
-misma.</p>
-
-<p>Como buen técnico, se me da mejor tratar con las máquinas que con las personas,
-así que, ¿por qué no aprender un poco más acerca de ellas?</p>
-
-<!-- more -->
-
-
-<h2>Qué esperaba</h2>
-
-<p>Por un lado me apetecía leer el libro, para aprender cosas nuevas y leer algo
-<em>no-técnico</em>, pero por otro lado me daba pereza porque esperaba algún tipo
-de libro de autoayuda, de <em>buenrrollismo</em>,... Bueno, un poco de americanada
-para vender la moto, poco más.</p>
-
-<h2>Qué encontre</h2>
-
-<p>Bueno, pues un libro un poco de autoayuda la verdad es que sí. Pero también
-encontré trucos útiles para recordar nombres, por ejemplo, y algún que
-otro consejo que sirve perfectamente para la vida real.</p>
-
-<h2>Conclusiones</h2>
-
-<p>Aunque el libro lo veo ahora como un poquitín de autoayuda, no se me hizo
-pesado de leer, y tampoco muy repetitivo (como suelen pecar aquellos).
-El autor enfatiza algunos aspectos una y otra vez, pero está bien.</p>
-
-<p>También utiliza algunos conceptos propios, pero son sencillos de compreder,
-y aunque el libro está lleno de conceptos de sentido común, creo que
-cualquier persona encontrará ideas que, o no se había dado cuenta, o no
-se había planteado.</p>
-
-<h2>Qué he aprendido</h2>
-
-<p>Sobretodo he recordado algo que ya sabía: para conectar con la gente hay que
-ser educado y detallista.</p>
-
-<p>Aparte de esto, estas son unas ideas que debería tener en cuenta a partir de
-ahora:</p>
-
-<ol>
-<li>Mira a los ojos, sonríe y saluda</li>
-<li>Se el primero en decir <em>Hola</em></li>
-<li>Preséntate a los demás</li>
-<li>Deja que los demás te conozcan</li>
-<li>Que no te importe responder a <em>preguntas rituales</em> cotidianas</li>
-<li>Mantén el contacto con los amigos y conocidos</li>
-<li>Pregunta a los demás acerca de temas que hablásteis la última vez que os vísteis</li>
-<li>Escucha atentamente acerca de <em>información gratuita</em></li>
-</ol>
-
-
-<h2>Frases que me gustaría recordar</h2>
-
-<p>Como son muchísimas las notas que he tomado de este libro, y básicamente lo
-que quiero recordar ya lo he escrito antes, aquí dejo un enlace a
-<a href="https://github.com/rchavarria/book-notes/blob/master/published/how-start-conversation-make-friends-by-don-gabor.md">Mis notas sobre How to start conversations and make friends</a>.</p>
-
-<h2>Recursos relacionados</h2>
-
-<ul>
-<li><a href="http://www.amazon.com/How-Start-Conversation-Make-Friends/dp/1451610998">Comprar el libro en Amazon</a></li>
-<li><a href="https://github.com/rchavarria/book-notes/blob/master/published/how-start-conversation-make-friends-by-don-gabor.md">Mis notas sobre How to start conversations and make friends</a></li>
 </ul>
 
 ]]></content>
