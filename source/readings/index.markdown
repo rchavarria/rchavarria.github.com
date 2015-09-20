@@ -20,12 +20,11 @@ Así que aquí está mi Lista de Lectura:
 
 ## Estoy leyendo
 
+- [Soft Skills: The software developer's life manual](http://www.amazon.com/gp/product/1617292397/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1617292397&linkCode=as2&tag=makithecompsi-20&linkId=YNX4566EEVSNF3IL), de John Sonmez, recomendado por [Alberto Moratilla](http://twitter.com/4lberto), dice que las valoraciones en Amazon son estupendas
 - [Expertología](http://www.amazon.es/dp/8492414502), de Andrés Pérez Ortega
-- [The martian](http://www.amazon.com/The-Martian-Novel-Andy-Weir-ebook/dp/B00EMXBDMA), de Andy Weir, recomendado por Scott Hanselman
 
 ## Tengo pensado leer
 
-- [Soft Skills: The software developer's life manual](http://www.amazon.com/gp/product/1617292397/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1617292397&linkCode=as2&tag=makithecompsi-20&linkId=YNX4566EEVSNF3IL), de John Sonmez, recomendado por [Alberto Moratilla](http://twitter.com/4lberto), dice que las valoraciones en Amazon son estupendas
 - [How not to be wrong: the power of mathematical thinking](http://www.amazon.es/gp/product/0143127535), de Jordan Ellenberg, visto en [Microsiervos](http://www.microsiervos.com/archivo/libros/how-not-to-be-wrong.html)
 - [Ten-day MBA](http://www.amazon.es/MBA-10-d%C3%ADas-ense%C3%B1anzas-escuelas-ebook/dp/B00D59QW6O/), de Steven Silbiger, recomendado por Chad Fowler en su libro. Se puede econtrar también en [inglés](http://www.amazon.com/The-Ten-Day-MBA-Step-Step/dp/0062199579)
 - [Practical Vim](https://pragprog.com/book/dnvim/practical-vim), de Drew Neil, recomendado por el podcast Giant Robots
@@ -83,7 +82,8 @@ Así que aquí está mi Lista de Lectura:
 
 ## He leído
 
-- [The Passionate Programmer](/blog/2015/09/06/passionate-programmer/), de Chad Fowler ~ *Septiembre 2015*
+- [The Passionate Programmer](/blog/2015/09/20/passionate-programmer/), de Chad Fowler ~ *Septiembre 2015*
+- [The martian](/blog/2015/09/06/the-martian/), de Andy Weir, *Septiembre 2015*
 - [Notes to a software team leader](/blog/2015/08/23/notes-software-team-leader/), de Roy Osherove ~ *Agosto 2015*
 - [JavaScript patterns](/blog/2015/07/19/javascript-patterns/), de Stoyan Stefanov ~ *Julio 2015*
 - [Learning JavaScript design patterns](/blog/2015/05/29/learning-javascript-design-patterns), de Addy Osmani ~ *Mayo 2015*
