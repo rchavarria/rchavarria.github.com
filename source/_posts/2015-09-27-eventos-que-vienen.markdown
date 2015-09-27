@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Las eventos que vienen"
+title: "Los eventos que vienen"
 date: 2015-09-27 23:11
 author: Rubén Chavarría
 comments: true
