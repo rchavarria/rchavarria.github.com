@@ -4,7 +4,7 @@
   <title><![CDATA[Category: personal | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/personal/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2015-09-20T19:23:30+02:00</updated>
+  <updated>2015-09-27T21:43:59+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,91 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Las eventos que vienen]]></title>
+    <link href="http://rchavarria.github.io/blog/2015/09/27/eventos-que-vienen/"/>
+    <updated>2015-09-27T23:11:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2015/09/27/eventos-que-vienen</id>
+    <content type="html"><![CDATA[<p>Cuando leí el post de <a href="https://twitter.com/voylinux">Pablo Bernardo</a>, <a href="http://voylinux.com/yo-voy-al-gnu-social-camp-2015/">Yo voy al GNU Social Camp 2015</a>, me
+sentí inspirado para escribir algo parecido. La recta final del año viene
+cargadito de eventos, y les tengo ganas, muchas ganas. Y que mejor manera de ir
+calentando motores que hacer como Pablo y escribir sobre dichos eventos.</p>
+
+<p>¿De qué eventos estoy hablando?</p>
+
+<ol>
+<li><a href="http://globalday.coderetreat.org/">Global Day of Coderetreat</a>, que se celebrará el 14 de noviembre de 2015, a
+nivel mundial.</li>
+<li><a href="http://2015.codemotion.es/">Codemotion 2015</a>, allá por el 27 y 28 de noviembre de 2015.</li>
+<li><a href="http://cas2015.agile-spain.org/">Conferencia Agile Spain 2015</a>, los días 3 y 4 de diciembre de 2015.</li>
+</ol>
+
+
+<p>La agenda está apretada, ¿eh?</p>
+
+<!-- more -->
+
+
+<h2>Global Day of Coderetreat</h2>
+
+<blockquote><p>A day to celebrate passion and software craftsmanship</p></blockquote>
+
+<p>El año pasado fue <a href="/blog/2014/11/18/mi-primer-code-retreat/">mi primer Code Retreat</a>, y me encantó la experiencia. Este
+año está más difícil, y a estas alturas todavía no tengo claro si podré ir. Si
+tú puedes, te lo recomiendo. Lo pasarás bien.</p>
+
+<p>Es un evento a nivel global, estiman que este año lo celebren de 100 a 150
+ciudades. ¡Increíble!</p>
+
+<h2>Codemotion</h2>
+
+<blockquote><p>Codemotion gets all the IT communities in Spain together for two days. We
+take an entire university building to present the best of each technology and
+get you far away from your comfort zone.</p></blockquote>
+
+<p>Este año el Codemotion vuelve a repetirse en la Universidad San Pablo CEU, en
+el campus de Boadilla del Monte (Madrid). Ésta es la madre de las conferencias.
+El año pasado hubo casi 2000 asistentes. <strong>¡2000!</strong>. Una locura, es
+prácticamente imposible no encontrarse con alguien conocido en ella.
+<a href="/blog/2014/11/29/notas-codemotion-2014/">El año pasado pude asistir</a>, y este año también espero poder hacerlo.</p>
+
+<p>Es una conferencia donde se involucran muchísimas comunidades locales, donde
+acuden ponentes internacionales de muy alto nivel. No solo hay charlas, también
+hay talleres, los patrocinadores montan pequeñas fiestas y muchos de ellos
+organizan concursos para disfrute de los asistentes.</p>
+
+<p>Si crees que por dos días de conocer a gente interesantísima te va a salir por
+un ojo de la cara te equivocas. El Codemotion debe ser uno de los eventos más
+accesibles (en cuanto a coste de entrada) de toda España. Por menos de 50€
+tienes derecho a poder absorber cuanta información y contactos puedas durante
+dos días. A tí no se, pero a mí me parece alucinante.</p>
+
+<h2>Conferencia Agile Spain</h2>
+
+<blockquote><p>Es un evento anual que generan las personas que viven el desarrollo de
+productos de software de una manera diferente</p></blockquote>
+
+<p>En el 2012 acudí a esta misma conferencia, cuando se celebró en Cáceres
+(<a href="/blog/2012/11/08/mi-experiencia-en-la-cas2012/">la CAS2012 fue toda un experiencia para mí</a>). Quedé tan prendado del ambiente, de
+las charlas, de todo en general, que desde entonces he querido asistir a todas
+las que se ha celebrado. Otros años me he quedado con las ganas de ir porque se
+celebraba lejos de casa y la pereza de organizarme el viaje pudo con las ganas
+de asistir. Este año se celebra en Madrid, en el <a href="http://www.circulobellasartes.com/">Círculo de Bellas Artes</a>, así
+que este año no hay excusa.</p>
+
+<p>Como muestra de lo genial de la conferencia, existe un
+<a href="https://trello.com/chairscas2015">proceso de votación de charlas</a>. Asi que tú mismo participas en el proceso de
+creación del evento. Existen distintos tracks, distintas temáticas de las
+charlas, para que ningún tema <em>Agile</em> se quede sin representación.</p>
+
+<p>Si participas en el proceso te darás cuenta del nivel de los ponentes. Si echas
+un vistazo, seguro que te convence y te apetecerá asistir. Si no, no sé qué más
+te puedo contar para que te pases por allí: se celebra en un lugar emblemático,
+con ponentes astronómicos, con charlas de temáticas muy variadas y con unos
+asistentes inmejorables. ¿A qué esperas?</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The passionate programmer]]></title>
@@ -553,96 +638,6 @@ pérdida de tiempo, pero no llegué a ver el problema expuesto por Seth.</p>
 <li><a href="https://www.khanacademy.org">Khan Academy</a></li>
 <li><a href="http://online.stanford.edu">Stanford University online</a></li>
 <li><a href="http://ocw.mit.edu/index.htm">MIT open courses</a></li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Extreme Programming explained]]></title>
-    <link href="http://rchavarria.github.io/blog/2015/01/02/extreme-programming-explained/"/>
-    <updated>2015-01-02T10:24:00+01:00</updated>
-    <id>http://rchavarria.github.io/blog/2015/01/02/extreme-programming-explained</id>
-    <content type="html"><![CDATA[<h5>de Kent Beck</h5>
-
-<p><img class="right" src="http://ecx.images-amazon.com/images/I/71kDsLjbnsL.jpg" width="240" height="300"></p>
-
-<h2>Por qué lo he leído</h2>
-
-<p>Estoy muy interesado en las metodologías ágiles, pero yo osy más una persona
-técnica, un ingeniero preocupado por los aspectos técnicos de los proyectos,
-más que por los aspectos de gestión. Creo que Extreme Programming explica lo
-básico, los inicios de Agile.</p>
-
-<p>Ya conocía algunas prácticas de XP, pero quería conocerlas más a fondo.</p>
-
-<!-- more -->
-
-
-<h2>Qué esperaba</h2>
-
-<p>Sencillo, buscaba un libro que me explicara los valores, principios y prácticas
-de XP. Existe un recurso online donde poder encontrar estos recursos,
-<a href="http://www.extremeprogramming.org">http://www.extremeprogramming.org</a>,
-pero buscaba algún recurso que los tratara con más profundidad.</p>
-
-<h2>Qué encontre</h2>
-
-<p>Justamente lo que buscaba. El libro trata XP a fondo, no sólo explicando y
-dando sentido a los valores, principios y prácticas, sino también multitud
-de experiencias reales.</p>
-
-<p>También encontré mucha información acerca de <em>pair programming</em>, práctica
-en la que estoy muy interesado, así como la forma en que las distintas
-prácticas se interconectan entre sí.</p>
-
-<p><img class="center" src="/images/2015/xp-practices.jpg" title="Cómo están interconectadas las prácticas XP" ></p>
-
-<h2>Conclusiones</h2>
-
-<p>Un libro totalmente recomendable. Trata el tema de Extreme Programming con
-mucha claridad, exponiendo todas las partes que lo componen, explica cada
-uno de los papeles que juegan los integrantes de un equipo XP (aunque se
-ha quedado un poco obsoleto para hoy en día, pero puesto en perspectiva
-toma mucho sentido).</p>
-
-<p>La verdad es que parece mentira que el autor esté hablando sobre estos
-temas por el año 1999/2000 y que todavía en 2015 estemos como estamos.</p>
-
-<h2>Frases que me gustaría recordar</h2>
-
-<blockquote><p>XP es un experimento para responder a la pregunta: ¿Cómo programarías si
-tuvieras suficiente tiempo? Donde se explica la diferencia entre la <em>Mentalidad
-de la suficiencia</em> frente a la <em>Mentalidad de la escasez</em> (parábola de la
-tribu del bosque y de la montaña)</p>
-
-<p>Si no cambiaran los requisitos o no aprendiéramos nada durante el proceso
-sería mejor diseñar para el futuro pero <strong>yo no me
-arriesgo</strong> a que no haya cambios y mucho menos a no aprender nada.</p>
-
-<p>Los Programadores confiados y agresivos son valiosos precisamente porque ellos
-son confiados y agresivos</p>
-
-<p>Primordialmente las emociones (especialmente el miedo) son lo que hace que XP
-sea tan duro de practicar y aplicar</p>
-
-<p>Los cuatro valores de XP: comunicación, simplicidad, feedback y coraje</p>
-
-<p>Cuatro actividades básicas: codificar, testear, escuchar y diseñar</p>
-
-<p>El trabajo del programador no se acaba cuando el ordenador entiende qué es lo
-que tiene que hacer. Su trabajo más importante es la comunicación con el resto
-de la gente</p>
-
-<p>Una habilidad necesaria para los programadores es <em>pair programming</em></p>
-
-<p>Otra habilidad necesaria es el hábito de la simplicidad</p></blockquote>
-
-<h2>Recursos relacionados</h2>
-
-<ul>
-<li><a href="https://github.com/rchavarria/book-notes/blob/master/published/extreme-programming-explained-by-kent-beck.md">Extensas notas sobre el libro</a></li>
-<li><a href="http://www.amazon.es/Extreme-Programming-Explained-Embrace-Embracing/dp/0321278658/ref=sr_1_1?ie=UTF8&amp;qid=1420044502&amp;sr=8-1&amp;keywords=extreme+programming+explained">Extreme Programming explained, en Amazon</a></li>
 </ul>
 
 ]]></content>
