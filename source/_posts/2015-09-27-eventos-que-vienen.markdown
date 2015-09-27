@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Las conferencias que vienen"
-date: 2015-09-24 23:11
+title: "Las eventos que vienen"
+date: 2015-09-27 23:11
 author: Rubén Chavarría
 comments: true
 categories: 
@@ -36,7 +36,7 @@ El año pasado fue [mi primer Code Retreat], y me encantó la experiencia. Este
 año está más difícil, y a estas alturas todavía no tengo claro si podré ir. Si
 tú puedes, te lo recomiendo. Lo pasarás bien. 
 
-Es un evento a nivel global, estiman que este año se celebre de 100 a 150
+Es un evento a nivel global, estiman que este año lo celebren de 100 a 150
 ciudades. ¡Increíble!
 
 ## Codemotion
