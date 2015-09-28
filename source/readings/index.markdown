@@ -31,6 +31,7 @@ Así que aquí está mi Lista de Lectura:
 - [Slow burn](http://www.amazon.com/Slow-Burn-Faster-Exercising-Slower/dp/0062736744), de Stu Mittleman, recomendado por [Rick Rubin en una entrevisa de Tim Ferris](http://fourhourworkweek.com/2015/05/15/rick-rubin)
 - [The grumpy programmer's PHPUnit cookbook](https://leanpub.com/grumpy-phpunit), de Chris Hartjes, amigo de J.B.Rainsberger
 - [Software craftsmanship](https://leanpub.com/socra), de Sandro Mancuso, recomendado por [Carlos Ble](http://twitter.com/carlosble)
+- [Test driven development: by example](http://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530), de Kent Beck
 - [57 exercises for programmers](https://pragprog.com/book/bhwb/exercises-for-programmers), de Brian P. Hogan
 - [So good, they can't ignore you](http://www.amazon.com/dp/1455509124?tag=sivers-20), de Cal Newport, visto en [http://sivers.org/book/SoGood]
 - [Responsive design by example](http://www.amazon.com/Responsive-Design-Example-Thoriq-Firdaus/dp/1849695423/ref=sr_1_1?ie=UTF8&qid=1443036924&sr=8-1&keywords=Thoriq+Firdaus), de Thoriq Firdaus (almacenado en Drive)
@@ -54,7 +55,7 @@ Así que aquí está mi Lista de Lectura:
 - [Manual del ciberactivista](http://www.amazon.es/gp/product/8494408607), de Javier de la Cueva, visto en [Microsiervos](http://www.microsiervos.com/archivo/libros/manual-del-ciberactivista-o-como-la-politica-puede-ser-cosa-de-todos-gracias-a-internet.html)
 - [Introduction to the command line](http://shop.fsf.org/product/Introduction_to_Command_Line/), de la Free Software Foundation
 - [The art of Unix programming](http://www.catb.org/esr/writings/taoup), de Eric S. Raymond
-- [Test driven development: by example](http://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530), de Kent Beck
+- [Beautiul Code](http://www.amazon.es/gp/product/0596510047/ref=as_li_tf_tl?ie=UTF8&camp=3626&creative=24790&creativeASIN=0596510047&linkCode=as2&tag=koalite-21), de Greg Wilson y Andy Oram, recomendado por Juanma (Gulnor), de Koalite, descrito como *porno (para desarrolladores) puro*
 - [Software craftsmanship: the new imperative](http://www.amazon.com/Software-Craftsmanship-Imperative-Pete-McBreen/dp/0201733862), de Pete McBreen
 - [The coding dojo handbook](https://leanpub.com/codingdojohandbook), de Emiliy Bache
 - [¿Qué pasaría si...? (What if...?)](http://www.amazon.es/gp/product/B00TV7HI4E), de Randall Munrow (xkcd.com), recomendado por Bill Gates
