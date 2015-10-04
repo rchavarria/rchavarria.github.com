@@ -4,7 +4,7 @@
   <title><![CDATA[Category: technical talks | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/technical-talks/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2015-09-27T22:29:21+02:00</updated>
+  <updated>2015-10-04T15:48:08+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,87 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Charla técnica: Follow my leader]]></title>
+    <link href="http://rchavarria.github.io/blog/2015/10/04/charla-tecnica-follow-my-leader/"/>
+    <updated>2015-10-04T15:21:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2015/10/04/charla-tecnica-follow-my-leader</id>
+    <content type="html"><![CDATA[<p>Estas notas podrían encajar perfectamente en el post que voy actualizando
+regularmente <a href="/blog/2014/10/11/aprendiendo-vim/">Aprendiendo Vim</a>, pero creo que esta la charla de Drew Neail se
+desmarca ya un poco del proceso de aprendizaje. En esta charla no se busca
+enseñar nuevos comandos de Vim, si no que se trata más de un tema cultural
+acerca del editor. Drew trata de animar a la gente a que busque nuevas
+combinaciones de teclas que se conviertan en nuevos comandos y de esta forma
+hacer Vim más potente todavía.</p>
+
+<!-- more -->
+
+
+<h2>Notas tomadas de la charla <a href="https://vimeo.com/85343734">Follow my leader</a></h2>
+
+<iframe src="https://player.vimeo.com/video/85343734"
+        width="500"
+        height="281"
+        frameborder="0"
+        webkitallowfullscreen mozallowfullscreen allowfullscreen>
+</iframe>
+
+
+<p><em><a href="https://vimeo.com/85343734">Follow my leader</a>, por <a href="http://drewneil.com/">Drew Neil</a>, en un encuentro del grupo local
+<a href="https://vimeo.com/vimlondon">Vim London</a></em></p>
+
+<ul>
+<li><code>let mapleader = ","</code> para mapear <code>,</code> como tecla <code>&lt;leader&gt;</code> en Vim. Otra
+tecla muy común para utilizarla como <code>&lt;leader&gt;</code> es la barra espaciadora.</li>
+<li><code>nnoremap &lt;leader&gt;&lt;space&gt; :noh&lt;cr&gt;</code> : remapea la secuencia de teclas
+<code>&lt;leader&gt;&lt;space&gt;</code> para que se ejecute el comando <code>:nohlsearch</code>, que desactiva
+el resaltado de términos de búsqueda.</li>
+<li>La tecla <code>&lt;leader&gt;</code> te permite crear mapeos personalizados, es donde los
+usuarios pueden crear sus mapeos sin interferir con Vim</li>
+<li>En lugar de usar <code>leader</code>, algunos plugins, como los que escribe <a href="http://tpo.pe/">Tim Pope</a>
+siguen otro patrón. hay teclas que son <em>operadores</em>, por ejemplo la <strong>d</strong>
+para borrar, o la <strong>y</strong> para copiar. a estos operadores le puede seguir el
+mismo operador o una movimiento. Teclas que producen un movimiento son <strong>j</strong>
+para ir hacia abajo, <strong>$</strong> para ir al final de la línea, ... Pero, qué pasa si
+despues de un operador pulsamos una tecla de <em>no movimiento</em>? No pasa nada. Y
+ahí están las combinaciones de teclas dsiponibles para tus plugins.</li>
+<li>En la imagen de la <a href="http://www.viemu.com/vi-vim-cheat-sheet.gif">chuleta de Vim</a>, los naranjas son operadores, los
+verdes movimientos y los amarillos son comandos.</li>
+</ul>
+
+
+<p><img class="center" src="/images/2015/tiny-vi-vim-cheat-sheet.gif"></p>
+
+<ul>
+<li>El plugin <a href="https://github.com/tpope/vim-unimpaired">unimpaired.vim</a> añade mapeos como <code>con</code> para habilitar/deshabilitar los
+nuḿeros de línea, o <code>cos</code> para habilitar/deshabilitar el chequeo ortográfico.
+Son <code>c</code> + <code>o</code> + otras teclas</li>
+<li>También hay disponibles combinaciones como operador + operador : <code>d</code> + <code>c</code></li>
+<li>Los <em>text objects</em> (<code>i</code> y <code>a</code>) también tienen vacantes.</li>
+<li>Los <em>namespaced mappings</em> también tienen vacantes. Por ejemplo, <code>g</code> es como
+un prefijo para muchos mapeos. <code>z</code> es otro, y <code>[</code> y <code>]</code> son más.</li>
+<li><code>:help g</code> te muestra todos los mapeos que siguen a <code>g</code>. Te puede servir para
+ver huecos donde poner tus mapeos</li>
+<li>Comando inútiles, hay algunos comandos que no usa nadie. Sobreescríbelos. Por
+ejemplo, <code>g</code> + <code>s</code>.</li>
+<li>Sobreescribir, sobrecargar comandos que ya existen, vamos, ampliar los
+existentes.</li>
+</ul>
+
+
+<h2>Conclusiones</h2>
+
+<p>Como puedes ver, el editor Vim es todo un mundo de posibilidades. Hay veces que
+abruma, pero hay tanta gente apasionada por él que está claro que algo debe de
+tener. Esta charla es una muestra de las posibilidades de personalización que
+esta herramienta ofrece. Drew nos abre las puertas a un mundo nuevo de posibles
+comandos.</p>
+
+<p>Si te gusta Vim, y no conoces el plugin <a href="https://github.com/tpope/vim-unimpaired">unimpaired.vim</a>, échale un vistazo. Sin
+duda es uno de los imprescindibles, como tantos otros de Tim Pope.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Charla técnica: Workflows of refactoring]]></title>

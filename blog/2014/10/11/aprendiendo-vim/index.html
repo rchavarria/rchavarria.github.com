@@ -829,6 +829,75 @@ comandos (<code>:history : -20</code> muestra sólo los últimos 20)</li>
 </ul>
 
 
+<h1>(Septiembre 2015) <a href="https://www.youtube.com/watch?v=lwD8G1P52Sk">My first Vim plugin</a>, de Chris Toomey</h1>
+
+<p>En la charla <a href="https://www.youtube.com/watch?v=lwD8G1P52Sk">My first Vim plugin</a> aprenderemos a crear plugins para Vim. No te
+asustes, no es para tanto. También aprenderemos a crear funciones que se puedan
+llamar desde la línea de comandos de Vim, éste es el inicio de cualquier
+plugin.</p>
+
+<ul>
+<li><code>:set spell</code>: activa la corrección ortográfica</li>
+<li><code>]s</code>: lleva el cursor al primer error ortográfico que encuentre</li>
+<li><code>z=</code>: muestra un menú con las opciones para corregir el error ortográfico</li>
+<li><code>1z=</code>: selecciona (sin abrir el menú) la primera opción de correción</li>
+<li><code>m&lt;letra&gt;</code>: establece un marcador en la posición donde está el cursor ahora mismo.</li>
+<li><code>&lt;backtic&gt;&lt;backtic&gt;&lt;letra&gt;</code>: mueve el cursor hasta el marcador que diga <code>&lt;letra&gt;</code></li>
+<li><code>:normal! &lt;comando&gt;</code>: ejecuta tal cual el comando que le escribamos. Por
+ejemplo, si escribimos <code>:normal! mm]s1z=&lt;back-tick&gt;m</code>, ejecuta lo siguiente:
+establece un marcador en <code>m</code> (<code>mm</code>), va al primer error ortográfico (<code>]s</code>),
+lo corrige con la primera opción (<code>1z=</code>), vuelve el cursor a la posición donde
+estábamos (<code>&lt;back-tick&gt;m</code>)</li>
+<li>En un fichero de configuración de Vim:</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>nnoremap &lt;leader&gt;sp :normal! mm]s1z=`m&lt;cr&gt;
+</span><span class='line'># no olvidar &lt;cr&gt; al final, es como pulsar &lt;enter&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Lo que hace es asignar la sequencia de comandos <code>&lt;leader&gt;sp</code> para que ejecute
+el comando que hemos estado hablando. Y qué tecla es <code>&lt;leader&gt;</code>? Dice que
+normalemente es <code>\</code>, pero que él la tiene mapeada a <code>&lt;spacebar&gt;</code>. Otra gente
+la suele tener mapeada a la coma.</p>
+
+<p>Ahora, lo englobamos en una función:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>function! FixLastSpellingError() {
+</span><span class='line'>    normal! mm]s1z=`m
+</span><span class='line'>}
+</span><span class='line'>nnoremap &lt;leader&gt;sp :call FixLastSpellingError</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li><code>{</code> mueve el cursor al inicio del párrafo, <code>}</code> lo mueve al final</li>
+<li>con <code>kmmjdd{p&lt;back-tick&gt;m</code> podemos mover una línea arriba del todo del párrafo (al principio
+de una lista, por ejemplo): sube una línea, pone un marcador, baja, borra la línea,
+se mueve al principio del párrafo, pega y vuelve al marcador.</li>
+<li><code>yypVr=&lt;cr&gt;</code>: marca una línea como el primer título de Markdown:
+copia la línea, la pega debajo, se mueve debajo, selecciona
+visualmente la línea completa, reemplaza todo con <code>=</code>.</li>
+</ul>
+
+
+<p><strong>Plugins</strong></p>
+
+<ul>
+<li>quicklink: para visitar enlaces que tengas en un fichero Markdown</li>
+<li>text-obj-indent: son objectos de texto adicionales, como por ejemplo un nivel
+de indentación</li>
+<li>sort-motion: permite ordenar con comandos de movimiento: palabra, linea, párrafo,&#8230;</li>
+<li>tmux_nav y tmux_runner: para manejar sessiones de tmux desde Vim, abriendo
+ventanas en Vim y enviando comandos a ellas</li>
+</ul>
+
+
 <!-- 
   ¿Queda algo por aprender por aquí, o simplemente repasar ya?
 -->
@@ -904,6 +973,10 @@ comandos (<code>:history : -20</code> muestra sólo los últimos 20)</li>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/10/04/charla-tecnica-follow-my-leader/">Charla técnica: Follow my leader</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/09/27/eventos-que-vienen/">Los eventos que vienen</a>
       </li>
     
@@ -917,10 +990,6 @@ comandos (<code>:history : -20</code> muestra sólo los últimos 20)</li>
     
       <li class="post">
         <a href="/blog/2015/09/06/the-martian/">The Martian</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/08/30/how-learn-anything-fast/">Charla no técnica: How to learn anything... fast</a>
       </li>
     
   </ul>
