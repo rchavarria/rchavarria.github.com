@@ -4,7 +4,7 @@
   <title><![CDATA[Category: technical talks | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/technical-talks/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2015-10-12T19:21:02+02:00</updated>
+  <updated>2015-10-18T19:01:54+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,214 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Charla técnica: Effective learning for programmers]]></title>
+    <link href="http://rchavarria.github.io/blog/2015/10/18/charla-tecnica-effective-learning-for-programmers/"/>
+    <updated>2015-10-18T18:46:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2015/10/18/charla-tecnica-effective-learning-for-programmers</id>
+    <content type="html"><![CDATA[<p>Me gustaría compartir una charla de <a href="http://akaptur.com/">Allison Kaptur</a>, en un grupo de usuarios
+de Python de Nueva Zelanda, titulada <a href="https://www.youtube.com/embed/Mcc6JEhDSpo">Effective learning for programmers</a>,
+donde habla acerca de encontrar ciertas estrategias para el aprendizaje.</p>
+
+<iframe width="420"
+        height="315"
+        src="https://www.youtube.com/embed/Mcc6JEhDSpo"
+        frameborder="0"
+        allowfullscreen></iframe>
+
+
+
+
+<!-- more -->
+
+
+<h2>Notas tomadas</h2>
+
+<p>La charla consta de dos partes: mentalidad (<em>mindset</em>) y estrategias</p>
+
+<h3>Mentalidad</h3>
+
+<p>Allison habla de dos tipos:</p>
+
+<ol>
+<li><strong>Mentalidad de crecimiento</strong>: la inteligencia es algo que se puede trabajar y
+desarrollar con <strong>esfuerzo</strong></li>
+<li><strong>Mentalidad fija</strong>: la inteligencia es la que es y no puede ir a más, la
+inteligencia es fija, y cada uno tiene una cierta cantidad de ella</li>
+</ol>
+
+
+<p>La diferencia fundamental radica en que quien posee una mentalidad de
+crecimiento, piensa que si algo no es fácil, puede trabajar duro para
+aprenderlo. Mientras que quien posee una mentalidad fija, piensa que si algo es
+fácil, se trata de una cualidad con la que ha nacido, que es de lo suyo.</p>
+
+<p>Alabanzas contraproducentes: ante alabanzas de un trabajo realizado, los de
+mentalidad fija se contentan, mientras que los de mentalidad de crecimiento se
+sienten animados para superarse a sí mismos.</p>
+
+<p>Respuesta a la confusión: los de mentalidad fija se quedan bloqueados, y los de
+mentalidad de crecimiento se esfuerzan en entender la parte complicada, hasta
+que superan el obstáculo.</p>
+
+<p><strong>Está claro que los desarrolladores necesitamos una mentalidad de
+crecimiento</strong>. Pero, ¿se puede cambiar una mentalidad fija?</p>
+
+<ol>
+<li>Reformula las alabanzas: cuando alaben tu trabajo: "eres un máquina",... te
+dices a tí internamente: "no soy un máquina, he trabajado duro para llegar
+hasta aquí"</li>
+<li>Reformula los fallos</li>
+<li>Celebra los desafíos: cuando te toca arreglar un bug, decirte a tí mismo:
+"genial! que se prepare ese bug, porque le voy a patear el culo"</li>
+<li>Pregunta sobre el proceso seguido: pregunta siempre, "¿cómo has hecho eso?",
+"¿cómo funciona eso?", muestra curiosidad por cómo se hacen las cosas,
+aprende de los que más saben</li>
+</ol>
+
+
+<h3>Estrategias</h3>
+
+<p>El aprendizaje es una habilidad adquirida, por lo que se puede mejorar
+practicando:</p>
+
+<ol>
+<li>Recuperación con esfuerzo (<em>effortful retrieval</em>): aprender mediante
+preguntas que te obligan a encontrar una respuesta. Es maś efectivo que una
+relectura, incluso mejor que una relectura de las notas que has tomado en una
+clase. La relectura te da la ilusión de que ya te sabes la lección.</li>
+<li>Práctica espaciada (<em>spaced practice</em>): es mejor que una práctica masiva. La
+práctica debe ser espaciada en el tiempo, variada y que mezcle conceptos de
+todo el proceso de aprendizaje. Es mejor un curso de 1h durante 5 días que uno
+de 5 horas en un día.</li>
+<li>Dificultad y errores: cierta dificultad suele ser lo deseable. Cometer
+errores suele ser también recomendable durante el aprendizaje.</li>
+</ol>
+
+
+<h4>Implementando <em>recuperación con esfuerzo</em></h4>
+
+<ul>
+<li>Las tarjetas de conceptos (<em>flashcards</em>) es un ejemplo de esto, pero quizá no
+es la mejor forma de implementarlo</li>
+<li>Cuando no sabes a ciencia cierta algo, intenta adivinarlo. Por ejemplo, los
+argumentos de un comando, o intentar deducir algún aspecto de la lección que
+estas estudiando</li>
+<li>Intentar adivinar cual es la causa de un bug antes siquiera de empezar a
+solucionarlo</li>
+<li>Cuando te preguntan por algún concepto que te suena, pero no lo conoces en
+profundidad, puedes intentar deducir de qué trata y así confirmar tus
+suposiciones</li>
+</ul>
+
+
+<h4>Implementando <em>práctica espaciada</em></h4>
+
+<ul>
+<li>Trabajar en tus proyectos personales los fines de semana. Así cuando vayas a
+comenzar el sábado, debes recordar lo que trabajaste hace un tiempo. Eso
+ayuda al aprendizaje.</li>
+</ul>
+
+
+<h4>Implementando <em>dificultad y errores</em></h4>
+
+<ul>
+<li>La dificultad vienen implícita en muchos de nuestros aprendizajes, así que no
+hace falta que hagamos algo extra para ello</li>
+<li>Para descubrir errores: intentar buscar un feedback rápido, revisiones de
+código, post-mortems,...</li>
+<li>Generar un entorno donde los pequeños errores no tienen consecuencias, o que
+cuando tú sepas algo que tus compañeros no saben, no te burles de ellos</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Charla técnica: All the little things]]></title>
+    <link href="http://rchavarria.github.io/blog/2015/10/18/charla-tecnica-all-the-little-things/"/>
+    <updated>2015-10-18T18:40:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2015/10/18/charla-tecnica-all-the-little-things</id>
+    <content type="html"><![CDATA[<p>A través del blog <a href="http://garajeando.blogspot.com.es/2015/08/interesting-talk-all-little-things.html">Garajeando</a> llegué a esta charla de <a href="http://www.sandimetz.com">Sandi Metz</a> que se
+titula <a href="https://www.youtube.com/watch?v=8bZh5LMaSmE">All the little things</a>. Sandi Metz es autora del libro
+<a href="http://www.sandimetz.com/products">Practical Object Oriented Design in Ruby</a> y ya he visto algunas de sus charlas, por lo
+que la calidad estaba asegurada. Sandi es muy defensora de la OOP y es una
+profesional excelente.</p>
+
+<p>La charla trata de una refactorización siguiendo la kata <a href="https://github.com/emilybache/GildedRose-Refactoring-Kata">The Gilded Rose</a>. La
+refactorización parte de un método gigante lleno de <code>if</code>s y lleva el código
+hacia clases pequeñas, métodos pequeños.</p>
+
+<!-- more -->
+
+
+
+
+<iframe width="560"
+        height="315"
+        src="https://www.youtube.com/embed/8bZh5LMaSmE"
+        frameborder="0"
+        allowfullscreen></iframe>
+
+
+<h2>Notas tomadas de la charla</h2>
+
+<blockquote><p>Es preferible algo de duplicación a una mala abstracción</p></blockquote>
+
+<p>La duplicación es fácil de detectar y de eliminar llegado el caso. Una mala
+abstracción al arrastraremos toda la vida del proyecto.</p>
+
+<p>Unos días después, Sandi publicó un <a href="http://us3.campaign-archive2.com/?u=1090565ccff48ac602d0a84b4&amp;id=92902a19e4&amp;e=072f6853e8">artículo en forma de newsletter</a>
+explicando algo más esta frase, porque parece que creó confusión o al menos,
+causó reacciones que hicieron pensar a Sandi que la gente no entendió realmente
+lo que ella quería transmitir.</p>
+
+<p>La idea principal de ese artículo es que una vez identificada una mala
+abstracción en el código (le pasan parámetros y hay <code>if</code>s y más <code>if</code>s), es
+recomendable recrear la duplicación en el código y dejar que él mismo nos
+indique nuevas abstracciones.</p>
+
+<blockquote><p>Que tu objetivo sea llegar a Open/Closed</p></blockquote>
+
+<p>Uno de los principios de la Programación Orientada a Objectos, es el
+Open/Closed Principle. Que para añadir nueva funcionalidad, no tengas que
+modificar código existente (abierto a extensión, cerrado a modificación). Lo
+ideal es que toda la aplicación siguiera este principio, no vas a llegar nunca,
+pero cuanto más lo sigas, más fácil será añadir nueva funcionalidad sin romper
+la existente.</p>
+
+<blockquote><p>Crea cosas pequeñas</p></blockquote>
+
+<p>Clases pequeñas, métodos pequeños,...</p>
+
+<blockquote><p>Refactoriza basándote en la complejidad, mediante la complejidad</p></blockquote>
+
+<p>Uno de los objetivos de las refactorizaciones es hacer el código más sencillo.
+Puedes utilizar métricas de complejidad para hacer un seguimiento de la
+refactorización. En pasos intermedios, ésta puede crecer, pero debes tener
+confianza en que la refactorización dará sus frutos y conseguirás un código más
+sencillo y limpio.</p>
+
+<blockquote><p>Refactoriza hacia la simplicidad</p>
+
+<p>La herencia no siempre es mala</p></blockquote>
+
+<p>Se habla mucho de composición en lugar de herencia, pero para Sandi hay una
+ocasión, donde si se dan las siguientes circunstancias, la herencia es la mejor
+solución:</p>
+
+<ol>
+<li>La jerarquía no es profunda ni ancha, es poco profunda y estrecha (no
+involucra muchas clases hijas)</li>
+<li>Las subclases son hojas dentro de tu árbol de clases, las subclases están en
+los extremos de tu árbol de clases, no entre medias</li>
+<li>Las subclases usan todo el código de la clase padre</li>
+</ol>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Charla técnica: Follow my leader]]></title>

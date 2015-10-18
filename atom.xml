@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2015-10-12T19:21:02+02:00</updated>
+  <updated>2015-10-18T19:01:54+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,214 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Charla técnica: Effective learning for programmers]]></title>
+    <link href="http://rchavarria.github.io/blog/2015/10/18/charla-tecnica-effective-learning-for-programmers/"/>
+    <updated>2015-10-18T18:46:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2015/10/18/charla-tecnica-effective-learning-for-programmers</id>
+    <content type="html"><![CDATA[<p>Me gustaría compartir una charla de <a href="http://akaptur.com/">Allison Kaptur</a>, en un grupo de usuarios
+de Python de Nueva Zelanda, titulada <a href="https://www.youtube.com/embed/Mcc6JEhDSpo">Effective learning for programmers</a>,
+donde habla acerca de encontrar ciertas estrategias para el aprendizaje.</p>
+
+<iframe width="420"
+        height="315"
+        src="https://www.youtube.com/embed/Mcc6JEhDSpo"
+        frameborder="0"
+        allowfullscreen></iframe>
+
+
+
+
+<!-- more -->
+
+
+<h2>Notas tomadas</h2>
+
+<p>La charla consta de dos partes: mentalidad (<em>mindset</em>) y estrategias</p>
+
+<h3>Mentalidad</h3>
+
+<p>Allison habla de dos tipos:</p>
+
+<ol>
+<li><strong>Mentalidad de crecimiento</strong>: la inteligencia es algo que se puede trabajar y
+desarrollar con <strong>esfuerzo</strong></li>
+<li><strong>Mentalidad fija</strong>: la inteligencia es la que es y no puede ir a más, la
+inteligencia es fija, y cada uno tiene una cierta cantidad de ella</li>
+</ol>
+
+
+<p>La diferencia fundamental radica en que quien posee una mentalidad de
+crecimiento, piensa que si algo no es fácil, puede trabajar duro para
+aprenderlo. Mientras que quien posee una mentalidad fija, piensa que si algo es
+fácil, se trata de una cualidad con la que ha nacido, que es de lo suyo.</p>
+
+<p>Alabanzas contraproducentes: ante alabanzas de un trabajo realizado, los de
+mentalidad fija se contentan, mientras que los de mentalidad de crecimiento se
+sienten animados para superarse a sí mismos.</p>
+
+<p>Respuesta a la confusión: los de mentalidad fija se quedan bloqueados, y los de
+mentalidad de crecimiento se esfuerzan en entender la parte complicada, hasta
+que superan el obstáculo.</p>
+
+<p><strong>Está claro que los desarrolladores necesitamos una mentalidad de
+crecimiento</strong>. Pero, ¿se puede cambiar una mentalidad fija?</p>
+
+<ol>
+<li>Reformula las alabanzas: cuando alaben tu trabajo: &#8220;eres un máquina&#8221;,&#8230; te
+dices a tí internamente: &#8220;no soy un máquina, he trabajado duro para llegar
+hasta aquí&#8221;</li>
+<li>Reformula los fallos</li>
+<li>Celebra los desafíos: cuando te toca arreglar un bug, decirte a tí mismo:
+&#8220;genial! que se prepare ese bug, porque le voy a patear el culo&#8221;</li>
+<li>Pregunta sobre el proceso seguido: pregunta siempre, &#8220;¿cómo has hecho eso?&#8221;,
+&#8220;¿cómo funciona eso?&#8221;, muestra curiosidad por cómo se hacen las cosas,
+aprende de los que más saben</li>
+</ol>
+
+
+<h3>Estrategias</h3>
+
+<p>El aprendizaje es una habilidad adquirida, por lo que se puede mejorar
+practicando:</p>
+
+<ol>
+<li>Recuperación con esfuerzo (<em>effortful retrieval</em>): aprender mediante
+preguntas que te obligan a encontrar una respuesta. Es maś efectivo que una
+relectura, incluso mejor que una relectura de las notas que has tomado en una
+clase. La relectura te da la ilusión de que ya te sabes la lección.</li>
+<li>Práctica espaciada (<em>spaced practice</em>): es mejor que una práctica masiva. La
+práctica debe ser espaciada en el tiempo, variada y que mezcle conceptos de
+todo el proceso de aprendizaje. Es mejor un curso de 1h durante 5 días que uno
+de 5 horas en un día.</li>
+<li>Dificultad y errores: cierta dificultad suele ser lo deseable. Cometer
+errores suele ser también recomendable durante el aprendizaje.</li>
+</ol>
+
+
+<h4>Implementando <em>recuperación con esfuerzo</em></h4>
+
+<ul>
+<li>Las tarjetas de conceptos (<em>flashcards</em>) es un ejemplo de esto, pero quizá no
+es la mejor forma de implementarlo</li>
+<li>Cuando no sabes a ciencia cierta algo, intenta adivinarlo. Por ejemplo, los
+argumentos de un comando, o intentar deducir algún aspecto de la lección que
+estas estudiando</li>
+<li>Intentar adivinar cual es la causa de un bug antes siquiera de empezar a
+solucionarlo</li>
+<li>Cuando te preguntan por algún concepto que te suena, pero no lo conoces en
+profundidad, puedes intentar deducir de qué trata y así confirmar tus
+suposiciones</li>
+</ul>
+
+
+<h4>Implementando <em>práctica espaciada</em></h4>
+
+<ul>
+<li>Trabajar en tus proyectos personales los fines de semana. Así cuando vayas a
+comenzar el sábado, debes recordar lo que trabajaste hace un tiempo. Eso
+ayuda al aprendizaje.</li>
+</ul>
+
+
+<h4>Implementando <em>dificultad y errores</em></h4>
+
+<ul>
+<li>La dificultad vienen implícita en muchos de nuestros aprendizajes, así que no
+hace falta que hagamos algo extra para ello</li>
+<li>Para descubrir errores: intentar buscar un feedback rápido, revisiones de
+código, post-mortems,&#8230;</li>
+<li>Generar un entorno donde los pequeños errores no tienen consecuencias, o que
+cuando tú sepas algo que tus compañeros no saben, no te burles de ellos</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Charla técnica: All the little things]]></title>
+    <link href="http://rchavarria.github.io/blog/2015/10/18/charla-tecnica-all-the-little-things/"/>
+    <updated>2015-10-18T18:40:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2015/10/18/charla-tecnica-all-the-little-things</id>
+    <content type="html"><![CDATA[<p>A través del blog <a href="http://garajeando.blogspot.com.es/2015/08/interesting-talk-all-little-things.html">Garajeando</a> llegué a esta charla de <a href="http://www.sandimetz.com">Sandi Metz</a> que se
+titula <a href="https://www.youtube.com/watch?v=8bZh5LMaSmE">All the little things</a>. Sandi Metz es autora del libro
+<a href="http://www.sandimetz.com/products">Practical Object Oriented Design in Ruby</a> y ya he visto algunas de sus charlas, por lo
+que la calidad estaba asegurada. Sandi es muy defensora de la OOP y es una
+profesional excelente.</p>
+
+<p>La charla trata de una refactorización siguiendo la kata <a href="https://github.com/emilybache/GildedRose-Refactoring-Kata">The Gilded Rose</a>. La
+refactorización parte de un método gigante lleno de <code>if</code>s y lleva el código
+hacia clases pequeñas, métodos pequeños.</p>
+
+<!-- more -->
+
+
+
+
+<iframe width="560"
+        height="315"
+        src="https://www.youtube.com/embed/8bZh5LMaSmE"
+        frameborder="0"
+        allowfullscreen></iframe>
+
+
+<h2>Notas tomadas de la charla</h2>
+
+<blockquote><p>Es preferible algo de duplicación a una mala abstracción</p></blockquote>
+
+<p>La duplicación es fácil de detectar y de eliminar llegado el caso. Una mala
+abstracción al arrastraremos toda la vida del proyecto.</p>
+
+<p>Unos días después, Sandi publicó un <a href="http://us3.campaign-archive2.com/?u=1090565ccff48ac602d0a84b4&amp;id=92902a19e4&amp;e=072f6853e8">artículo en forma de newsletter</a>
+explicando algo más esta frase, porque parece que creó confusión o al menos,
+causó reacciones que hicieron pensar a Sandi que la gente no entendió realmente
+lo que ella quería transmitir.</p>
+
+<p>La idea principal de ese artículo es que una vez identificada una mala
+abstracción en el código (le pasan parámetros y hay <code>if</code>s y más <code>if</code>s), es
+recomendable recrear la duplicación en el código y dejar que él mismo nos
+indique nuevas abstracciones.</p>
+
+<blockquote><p>Que tu objetivo sea llegar a Open/Closed</p></blockquote>
+
+<p>Uno de los principios de la Programación Orientada a Objectos, es el
+Open/Closed Principle. Que para añadir nueva funcionalidad, no tengas que
+modificar código existente (abierto a extensión, cerrado a modificación). Lo
+ideal es que toda la aplicación siguiera este principio, no vas a llegar nunca,
+pero cuanto más lo sigas, más fácil será añadir nueva funcionalidad sin romper
+la existente.</p>
+
+<blockquote><p>Crea cosas pequeñas</p></blockquote>
+
+<p>Clases pequeñas, métodos pequeños,&#8230;</p>
+
+<blockquote><p>Refactoriza basándote en la complejidad, mediante la complejidad</p></blockquote>
+
+<p>Uno de los objetivos de las refactorizaciones es hacer el código más sencillo.
+Puedes utilizar métricas de complejidad para hacer un seguimiento de la
+refactorización. En pasos intermedios, ésta puede crecer, pero debes tener
+confianza en que la refactorización dará sus frutos y conseguirás un código más
+sencillo y limpio.</p>
+
+<blockquote><p>Refactoriza hacia la simplicidad</p>
+
+<p>La herencia no siempre es mala</p></blockquote>
+
+<p>Se habla mucho de composición en lugar de herencia, pero para Sandi hay una
+ocasión, donde si se dan las siguientes circunstancias, la herencia es la mejor
+solución:</p>
+
+<ol>
+<li>La jerarquía no es profunda ni ancha, es poco profunda y estrecha (no
+involucra muchas clases hijas)</li>
+<li>Las subclases son hojas dentro de tu árbol de clases, las subclases están en
+los extremos de tu árbol de clases, no entre medias</li>
+<li>Las subclases usan todo el código de la clase padre</li>
+</ol>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Deuda técnica]]></title>
@@ -2237,330 +2445,6 @@ utilizar dicha referencia para cancelar la suscripción con el método <code>can
 <li><a href="http://api.dartlang.org/dart_async/Stream.html">API Streams</a></li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Stop stealing dreams]]></title>
-    <link href="http://rchavarria.github.io/blog/2015/03/13/stop-stealing-dreams/"/>
-    <updated>2015-03-13T00:39:00+01:00</updated>
-    <id>http://rchavarria.github.io/blog/2015/03/13/stop-stealing-dreams</id>
-    <content type="html"><![CDATA[<h5>de Seth Godin</h5>
-
-<h2>Por qué lo he leído</h2>
-
-<p><img class="right" src="http://s1.hubimg.com/u/11789820_f260.jpg" width="200" height="300" title="Stop stealing dreams" ></p>
-
-<p>Decidí leerlo básicamente porque tengo un hijo. Empezó el <em>colegio de mayores</em>
-el pasado mes de septiembre, y desde un tiempo atrás ya me empezó a preocupar
-el tema de su educación.</p>
-
-<p>Y la verdad, con todos las reformas que ha sufrido la educación en España en
-los últimos años, creo que la calidad de la misma se ha visto bastante reducida.</p>
-
-<p>Por otra parte, he leído algún libro de Seth Godin, y sigo su blog, y creo que
-tiene muchas ideas revolucionarias (con otras no estoy muy de acuerdo, o
-simplemente no me interesan mucho), pero tenía ganas de saber qué piensa Seth
-sobre la educación.</p>
-
-<!-- more -->
-
-
-<h2>Qué esperaba</h2>
-
-<p>Viniendo de Seth Goding, me esperaba una serie de ideas revolucionarias sobre
-cómo educar a los hijos, o consejos sobre cómo comportarse para intentar conseguir
-que los pequeños sean más independientes, estén más preparados para un mundo
-cambiante, que sean más individuales pero colaborativos.</p>
-
-<h2>Qué encontre</h2>
-
-<p>En parte encontré lo que buscaba, pero gran parte del libro (o <em>manifiesto</em> como
-le llama el autor) está dedicado a criticar el sistema educativo (está centrado
-en el norteamericano, pero es extrapolable a otros, por lo menos al
-español sí lo es, más o menos), desde primaria hasta la universidad.</p>
-
-<h2>Conclusiones</h2>
-
-<p>Es un libro que no defraudará a ningún padre, y tampoco a ningún profesor de
-escuela, instituto o universidad que esté preocupado hacia dónde va la educación.
-La idea principal es que la escuela pública, o la educación para la mayoría,
-nació como una necesidad de crear obreros, de crear una clase obrera. Pero
-ya no existe esa necesidad de la era industrial, ahora las necesidades han
-cambiado, y la escuela debe cambiar.</p>
-
-<p>No estoy seguro de si el autor tiene toda la razón en su idea principal, pero
-de lo que sí estoy seguro es que existen iniciativas distintas para la educación
-(<a href="https://www.khanacademy.org">Khan Academy</a>, <a href="http://online.stanford.edu">Stanford University online</a>, <a href="http://ocw.mit.edu/index.htm">MIT open courses</a>,&#8230;) y que pueden ser pioneras
-en el cambio que la educación necesita.</p>
-
-<p>Estoy de acuerdo en que el profesor no debería malgastar su tiempo en dar una
-clase estándar, para todos igual, si no que cada alumno disponga de toda la
-información de la materia a estudiar, haga el progreso a su ritmo, y que el
-profesor sea la persona que le guie, le ayude cuando se encuentre en un callejón
-sin salida. Sentí algo parecido en la universidad, las clases parecían una
-pérdida de tiempo, pero no llegué a ver el problema expuesto por Seth.</p>
-
-<h2>Frases que me gustaría recordar</h2>
-
-<ul>
-<li>La educación a gran escala no fue desarrollada para motivar a los niños o para crear eruditos, fue para crear adultos sumisos, trabajadores para líneas de montaje en las fábricas</li>
-<li>¿Para qué es la escuela?
-
-<ol>
-<li>Para crear una sociedad culturalmente coordinada. La televisión gana</li>
-<li>Para llevar más lejos la ciencia y el conocimineto y perseguir la información por placer. Eso está bien, pero luego asociamos leer libros con los exámenes, poca gente lee por el placer de leer y aprender</li>
-<li>Para mejorar la civilización mientras le damos a la gente herramientas para tomar decisiones conscientes e informadas. Pero fallamos al elevar los estándares del pensamiento racional, investigación escéptica, y la toma de decisiones financieras de utilidad</li>
-<li>Para entrenar a gente en ser trabajadores productivos. Este punto es en el que hemos destacado en los últimos tiempos, según el autor.</li>
-</ol>
-</li>
-<li>Podemos enseñar a la gente a comprometerse, a superar sus miedos, a negociar transarentemente, a iniciar y planificar un curso, a desear tener una vida de contínuo aprendizaje, a expresarse por sí mismos y a innovar. Pero en lugar de eso, hemos hecho que se olviden del coraje, la creatividad y la iniciativa</li>
-<li>He aquí 12 formas en las que la escuela puede ser reformada:
-
-<ol>
-<li>Deberes por el día, en clase; las clases orales del profesor por la noche, en casa</li>
-<li>Libro abierto, cuaderno abierto, todo el tiempo</li>
-<li>Acceso a cualquier curso y asignatura, desde cualquier parte del mundo</li>
-<li>Instruciones precisas y focalizadas, en lugar de instrucciones generalizadas y en masa</li>
-<li>Prohibidos exámenes tipo test</li>
-<li>Experiencias en lugar de notas en los examenes como medida de logros</li>
-<li>Dejemos de medir como un resultado la obediencia (el silencio, el aceptar las cosas porque sí)</li>
-<li>Cooperacion en lugar de aislamiento (en lugar de aislar estudiantes, deberiamos conectarlos : trabajo en grupo, clases intractivas, &#8230;)</li>
-<li>Amplificacion de los estudiantes sobresalientes, de los profesores y de las ideas</li>
-<li>Transformación del rol del profesor</li>
-<li>Aprendizaje contínuo, trabajo más temprano</li>
-<li>Dejemos de pensar que la universidad famosa, la que tiene fama, es la mejor en cuanto a educación</li>
-</ol>
-</li>
-<li><em>Economía conectada</em>: los estudiantes tienen la habilidad y la facilidad de investigar lo que hay fuera y descubrir que el profesor (o libro de texto) está equivocado</li>
-<li>El atajo para alcanzar el objetivo de las escuelas (crear ciudadanos sumisos) es el <strong>miedo</strong>. Haz esto y &#8230;, &#8220;se lo diremos a tus padres&#8221;, &#8220;o te suspenderemos&#8221;,&#8230;</li>
-<li>El atrevimiento (a probar cosas nuevas, a salirse del guión) en la escuela está castigado, no recompensado</li>
-<li>Tener habilidades que escasean combinadas con actitudes aún más escasas casi siempre llevan a un desempleo bajo y altos salarios</li>
-<li>Solía ser sencillo: el profesor era el policía, el maestro, la fuente de todas las respuestas y el guardián de los recursos. Ahora, no necesitamos un humano a nuestro lado para enseñarnos como buscar la raiz cuadrada de un número, o cómo afilar un hacha. Lo que necesitamos es alguien que nos convenza de que queremos aprender esas cosas</li>
-<li>Estamos entrando en una revolución de ideas mientras producimos una generación que, en lugar de ideas, lo que quiere son instrucciones</li>
-<li>¿Es muy peligroso hacer lo correcto? ¿Pueden los padres hacerlo bien? ¿Porqué debería la escuela hacer ese trabajo y no los padres? Lo que importa es que buscar un camino que <em>podría</em> ser mejor es demasiado riesgo para alquien que sólo tiene una oportunidad de educar a sus hijos correctamente</li>
-<li>La única forma para un estudiante de obtener respeto en la escuela es ganarse la aprovación temporal de un profesor al que probablemente no volverá a ver en un futuro cercano. Si el profesor es temperamental, inconsistente, mal profesor, el estudiante está obligado a aguantarle. ¿No te parece que debe ser muy frustrante tener que contentar a alquien a quien no vas a volver a ver en la vida?</li>
-<li>Lo que se necesita de los profesores no es dar cuantas más clases mejor, o corregir exámenes o gestionar una clase de estudiantes. Lo que se necesita es una atención individualizada, trabajo emocional y la habilidad de motivar</li>
-<li>Debemos tener en cuenta que no hay que valorar simplemente la habilidad, porque el niño mayor tiene ventaja, hay que valorar pasión, los sueños del niño</li>
-<li>Debemos inculcar a los niños la pasión por leer</li>
-<li>La universidad proporciona 4 cosas:
-
-<ol>
-<li>Acceso a la información. Pero ya tenemos acceso online, por lo que no necesitamos a la universidad para esto</li>
-<li>Acreditación o un título (que antes era escaso). Pero ahora todo el mundo puede tener un título</li>
-<li>Membresía a una tribu. Esta es quizá la mejor razón por la que mudarse a un campus universitario para conseguir una carrera</li>
-<li>Una situación para el crecimiento y desarrollo. Ésta sería la razón por la que elegir la universidad, porque es imposible de imitar en una experiencia online. La universidad adecuada es la última y mejor oportunidad para multitud de adolescentes de encontrarse a sí mismos en situaciones donde no hay otra opción nada más que la de crecer, y rápido</li>
-</ol>
-</li>
-<li><strong>¿Qué enseñamos?</strong>:
-
-<ol>
-<li>Cuando enseñamos a un niño a tomar buenas decisiones, nos beneficiamos de una vida llena de buenas decisiones</li>
-<li>Cuando enseñamos a un niño a amar el aprendizaje, la cantidad de aprendizaje se volverá ilimitada</li>
-<li>Cuando enseñamos a un niño a lidiar con un mundo cambiante, nunca se quedará obsoleto</li>
-<li>Cuando somos lo suficientemente valientes como para enseñar a un niño que cuestione la autoridad, incluso la nuestra, nos protegemos a nosotros mismos de quien usaría su autoridad en contra de cada uno de nosotros</li>
-<li>Y cuando le damos a los estudiantes el deseo de hacer cosas, aunque sean elecciones, creamos un mundo repleto de gente que consigue crear e inventar cosas</li>
-</ol>
-</li>
-</ul>
-
-
-<h2>Recursos relacionados</h2>
-
-<ul>
-<li><a href="https://github.com/rchavarria/book-notes/tree/master/published/stop-stealing-dreams-by-seth-godin.md">Notas extendidas sobre el libro</a></li>
-<li><a href="https://www.khanacademy.org">Khan Academy</a></li>
-<li><a href="http://online.stanford.edu">Stanford University online</a></li>
-<li><a href="http://ocw.mit.edu/index.htm">MIT open courses</a></li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Operaciones asíncronas en Dart con Futures]]></title>
-    <link href="http://rchavarria.github.io/blog/2015/01/29/operaciones-asincronas-en-dart-con-futures/"/>
-    <updated>2015-01-29T22:06:00+01:00</updated>
-    <id>http://rchavarria.github.io/blog/2015/01/29/operaciones-asincronas-en-dart-con-futures</id>
-    <content type="html"><![CDATA[<p><a href="http://dartlang.org">Dart</a> es un lenguaje de programación que se ejecuta en un único hilo. Si un
-bloque de código bloquea dicho hilo (por ejemplo haciendo una operación de
-entrada-salida de larga duración), la aplicación quedará <em>congelada</em>. Las
-operaciones asíncronas permiten al programador crear operaciones sin bloquear
-la aplicación entera. Dart usa la clase <code>Future</code> para realizar estas
-operaciones asíncronas.</p>
-
-<p>En el <a href="https://www.dartlang.org/docs/tutorials/futures/">tutorial sobre Futures</a> podrás encontrar información acerca de cómo
-usar esta API de Dart.</p>
-
-<!-- more -->
-
-
-<h2>Introducción</h2>
-
-<p>El siguiente código haría que la aplicación quedara congelada:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>import 'dart:io';
-</span><span class='line'>
-</span><span class='line'>void printDailyNewsDigest() {
-</span><span class='line'>  File file = new File("dailyNewsDigest.txt");
-</span><span class='line'>  print(file.readAsStringSync());
-</span><span class='line'>}
-</span><span class='line'>
-</span><span class='line'>void main() {
-</span><span class='line'>  printDailyNewsDigest();
-</span><span class='line'>  printWinningLotteryNumbers();
-</span><span class='line'>  printWeatherForecast();
-</span><span class='line'>  printBaseballScore();
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
-
-
-<p>El problema de este código es que <code>readAsStringSync()</code> no retorna hasta que no
-termina, con lo que las llamadas al resto de métodos serán retrasadas.</p>
-
-<p>Para lograr hacer que esa llamada no bloquee la ejecución del resto, Dart proporciona
-los <em>Futures</em>.</p>
-
-<h2>¿Qué es un <em>Future</em>?</h2>
-
-<p>Es simplemente un medio para obtener un valor en algún momento en el futuro.</p>
-
-<p>La forma en la que funciona es la siguiente: una función que necesita hacer una
-acción muy costosa en el tiempo, encola dicha acción como un trabajo para hacer y
-devuelve un objeto <code>Future</code> inmediatamente, de esta forma se consigue no bloquear
-el hilo de ejecución de Dart. Más adelante, cuando el trabajo ha terminado, y el
-valor está disponible, se dice que el <code>Future</code> se ha completado con dicho valor.</p>
-
-<p>Para obtener el valor que representa <code>Future</code>, se usa el método <code>then()</code>, pasándole
-como parámetro una función de callback que será llamada con el valor del <code>Future</code>.</p>
-
-<h2>¿Cómo se usa?</h2>
-
-<p>El método bloqueante anterior quedaría así usando <code>Future</code>:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>import 'dart:io';
-</span><span class='line'>import 'dart:async';
-</span><span class='line'>
-</span><span class='line'>void printDailyNewsDigest() {
-</span><span class='line'>  File file = new File("dailyNewsDigest.txt");
-</span><span class='line'>  Future future = file.readAsString();
-</span><span class='line'>  future.then((content) {
-</span><span class='line'>    print(content);
-</span><span class='line'>  });
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Esta vez, para leer el fichero se usa el método <code>readAsString()</code>, el cual no bloquea
-el hilo y retorna un <code>Future</code>. Después, se registra un callback a través del método
-<code>then()</code>. Este callback recibe como parámetro el valor que esperamos que retorne
-<code>readAsString()</code>, que es el contenido del fichero. Es en este callback donde
-se imprime el contenido del fichero leído.</p>
-
-<p>El propio método <code>then()</code> devuelve también un <code>Future</code>, por lo cual se pueden
-encadenar distintas llamadas <code>then()</code>.</p>
-
-<h2>Gestión de errores</h2>
-
-<p>La gestión de errores con <code>Future</code> es muy sencilla, ya que la clase proporciona el
-método <code>catchError()</code> que será llamado si se produce un error a la hora de conseguir
-el valor que representa el <code>Future</code>.</p>
-
-<p>El método anterior se puede reescribir así:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>void printDailyNewsDigest() {
-</span><span class='line'>  File file = new File("dailyNewsDigest.txt");
-</span><span class='line'>  Future future = file.readAsString();
-</span><span class='line'>  future.then((content) =&gt; doSomethingWith(content))
-</span><span class='line'>        .catchError((e) =&gt; handleError(e));
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
-
-
-<p>De esta forma, si <code>readAsString()</code> produce un error, la variable <code>future</code> se completará
-con error (en lugar de completarse con el valor del contenido del fichero), lo que
-provocará que el <code>Future</code> devuelto por <code>then()</code> se complete también con error, lo que hará
-que se llame al método <code>catchError()</code>, el cual gestionará el error.</p>
-
-<h2>Encadenando múltiples llamadas a <code>then()</code></h2>
-
-<p>Supongamos que existen tres funciones: <code>expensiveA()</code>, <code>expensiveB()</code> y <code>expensiveC()</code>. Todas
-ellas devolviendo <code>Future</code>s, de forma que se pueden encadenar llamadas a <code>then()</code> de esta
-forma:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>expensiveA().then((aValue) =&gt; expensiveB()) 
-</span><span class='line'>            .then((bValue) =&gt; expensiveC()) 
-</span><span class='line'>            .then((cValue) =&gt; doSomethingWith(cValue));</span></code></pre></td></tr></table></div></figure>
-
-
-<p>También existe otra posibilidad, y es esperar a que termine la ejecución de las tres, para
-realizar alguna acción solamente cuando los tres <code>Future</code>s se hayan completado. Para ello,
-el API proporciona el método <code>wait()</code>.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Future.wait([expensiveA(), expensiveB(), expensiveC()])
-</span><span class='line'>      .then((List responses) =&gt; chooseBestResponse(responses));</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Aquí, <code>wait()</code> devuelve un <code>Future</code> cuyo valor es una lista con los valores de todos los
-<code>Future</code>s pasados como parámetros.</p>
-
-<h2>Creando tus propios <code>Future</code></h2>
-
-<p>De acuerdo, entendido cómo se usan. Pero, ¿y si lo que quiero es ser yo quien comienza la
-cadena de <code>Future</code>s? ¿Cómo se crea el primero de ellos?</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Future methodReturningAFuture() {
-</span><span class='line'>    return new Future.value('foo bar');
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
-
-
-<p>El método del código anterior devuelve un valor, un <code>Future</code> que se resuelve al valor
-<code>foo bar</code>. Si quisiéramos imprimir esa cadena por consola, haríamos lo siguiente:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>methodReturningAFuture()
-</span><span class='line'>    .then((message) =&gt; print(message));</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>Conclusión</h2>
-
-<p>Si así <em>en papel</em> no te ha quedado lo suficientemente claro, te recomiendo que te pases
-por el <a href="https://www.dartlang.org/docs/tutorials/futures/">tutorial sobre Futures</a> o que le eches un ojo al <a href="https://github.com/rchavarria/dart-tutorials/tree/master/futures">código completo</a> del tutorial.</p>
 ]]></content>
   </entry>
   
