@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2015-10-18T19:01:54+02:00</updated>
+  <updated>2015-10-25T16:22:43+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,121 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[You've got commit!]]></title>
+    <link href="http://rchavarria.github.io/blog/2015/10/25/youve-got-commit/"/>
+    <updated>2015-10-25T15:18:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2015/10/25/youve-got-commit</id>
+    <content type="html"><![CDATA[<p>Una de las mejores formas de aprender es haciendo cosas (<em>learning by doing</em>,
+que está muy de moda ahora). Y otra forma muy buena es manteniendo
+conversaciones con profesionales de tu sector. Por todo lo aprendido hay que
+estar agradecido, y qué mejor forma de agradecer que contribuir a la comunidad,
+a tu profesión, realizando algún trabajo del que se puedan beneficiar otros. La
+siguiente historia cuenta un camino que estoy recorriendo, de cómo empezé algo
+por el simple hecho de aprender y terminé participando en un proyecto open
+source como es <a href="http://exercism.io/">exercism.io</a>.</p>
+
+<p><img class="center" style="width: 225px" src="http://rchavarria.github.io/images/2015/exercism-logo.svg"/></p>
+
+<!-- more -->
+
+
+<h2>El origen</h2>
+
+<p>Llevaba un tiempo utilizando <a href="http://www.solveet.com/">solveet.com</a> para practicar con pequeños
+ejercicios de programación. De hecho, utilicé la plataforma con distintos
+lenguajes que estaba interesado en aprender. Pero poco a poco fui perdiendo la
+motivación para usarla. No recibía feedback de mis soluciones, de lo cual se
+pueden deducir dos cosas: que mis soluciones eran penosas o que la mayoría de
+los usuarios no estaban por la labor de compartir.</p>
+
+<p>En realidad, creo que la causa principal era que yo aportaba mi solución tiempo
+después de la última aportada, así que los usuarios probablemente ya habrían
+perdido interés en ese problema en concreto. No le puedo echar la culpa a
+Solveet, es una plataforma estupenda. Si estás buscando algo para practicar, y
+en español, te lo recomiendo. Disfrutarás de lo lindo.</p>
+
+<h2>Expandiendo horizontes</h2>
+
+<p>Con esa falta de motivación, llevaba rondando por la cabeza probar otras
+plataformas similares, y me decidí por <a href="https://projecteuler.net/">Project Euler</a>. Hablaban muy bien de
+ella, lleva mucho tiempo en funcionamiento y goza de fama, así que tenía que
+ser buena. Pero no duré mucho. Una de las <em>normas</em> de la casa pide que no hagas
+público tu código con el que resuelves los problemas. Pero ese es uno de los
+objetivos que busco, que la gente critique mi código y poco a poco vaya
+aprendiendo.</p>
+
+<p>Por casualidad, vi esta <a href="http://passionatevoices.org/2015/06/27/episode-3-katrina-owen/">entrevista a Katrina Owen</a>, creadora de exercism.io y
+me pareció que sería buena idea probar la plataforma. Uno de los requisitos es
+instalar un programa, para poder bajarte problemas a tu ordenador, resolverlos
+y poder subirlos a la plataforma, lo cual no me llamaba mucho la atención. Pero
+<a href="http://garajeando.blogspot.com.es/">Manuel Rivero, en Garajeando</a>, un blog que sigo, tiene varios post de sus
+soluciones en exercism.io, así que malo no podía ser.</p>
+
+<h2>Los baches del camino</h2>
+
+<p>Yo quería practicar resolviendo problemas con ECMAScript 2015. Ahí me llevé el
+primer chasco. Existía un track para JavaScript, pero no para ES2015. No se por
+qué, pero miré el código fuente en GitHub de exercism.io. Vi que había un
+repositorio para ECMAScript, pero en la página no existían esos ejercicios.
+Descubrí que era porque todavía no tenía el número de problemas necesarios para
+ser público. Hice un fork del proyecto, y me puse a juguetear.</p>
+
+<p>Me encontré con unos cuantos problemas para ser capaz de montar el entorno de
+desarrollo y ejecutar los tests: dependencias desactualizadas, comandos que no
+se ejecutaban bien en Windows (parecía que solo funcionaba en Mac). Después de
+pelearme un poco con el código y la configuración, con unas pequeñas
+modificaciones solucioné los problemas que tenía. Subí el código a
+<a href="https://github.com/rchavarria">mi cuenta de GitHub</a> e hize un <em>Pull Request</em> al proyecto.</p>
+
+<h2>Sorpresa</h2>
+
+<p>¡Y contestaron!  Después de pulir un par de detalles (es bastante común para
+primerizos y también la razón por la que muchos se echan para atrás a la hora
+de contribuir al open source) aceptaron mi solución. ¡Había contribuido a un
+proyecto open source!</p>
+
+<p>Pero todavía había cosas que me molestaban. Detalles. <em>El diablo está en los
+detalles</em>, dicen. La verdad es que no recuerdo exactamente qué era, pero tenía
+<em>trabajo</em> por hacer. Pregunté un par de cosas a Katrina, arreglé un par de
+detalles más, algún Pull Request más, y sin esperarlo:</p>
+
+<blockquote><p>You&#8217;ve got commit!</p></blockquote>
+
+<p>¿Qué es eso? ¿Qué significa? Tuve que leer el correo varias veces. No entendía.
+bla bla bla, <em>te han añadido a un par de grupos en GitHub</em>, bla bla bla,
+<em>permisos de escritura</em>, bla bla bla, &#8230; ¡Me estaban dando permisos de
+escritura en el proyecto! Sienta bastante bien saber que estás contribuyendo a
+un proyecto open source, y que lo están utilizando muchos usuarios.</p>
+
+<h2>¿El final?</h2>
+
+<p>¿Y ahora qué? Tenía que seguir. No podía dejarlo ahí. Asi que me puse como
+objetivo que exercism.io tendría su <a href="http://exercism.io/languages/ecmascript">track de ECMAScript 2015</a>.</p>
+
+<p>Un punto para lograrlo era incorporar al menos 10 ejercicios al track. Fácil.
+Un poco de trabajo&#8230; y conseguido. Pero otro punto requería de varias
+personas. La idea es que haya varias personas encargadas de gestionar el track,
+dando feedback a los primeros usuarios, para que no se sientan desamparados, e
+ir manteniendo el código con nuevos cambios provenientes del proyecto global.
+Pequeñas tareas comunes a todos los lenguages.</p>
+
+<p>¡Me quedé flipado! Cuando contacté por email con varios usuarios de
+exercism.io, sin conocerlos de nada,&#8230; ¡Me respondieron todos! ¡Todos! Algunos
+de ellos no podían embarcarse en el proyecto, pero respondieron. Flipando. Con
+su ayuda, el track se hizo público y el trabajo duro acaba de comenzar. Ahora
+toca dar feedback a los usuarios y seguir incorporando ejercicios, para que los
+usuarios vean que el track está vivo y se animen a seguir practicando sus
+habilidades como programadores.</p>
+
+<h2>¿Te animas?</h2>
+
+<p>Así que, ya hay <a href="http://exercism.io/languages/ecmascript">track de ECMAScript 2015</a> en exercism.io. Os animo a probar la
+plataforma, a practicar, a mejorar y a comentar las soluciones de los demás.
+Espero veros por allí. Si decidis probarlo, veréis mi careto.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Charla técnica: Effective learning for programmers]]></title>
@@ -2141,308 +2256,6 @@ que pueden compartir un subconjunto de sus datos</li>
 <li><a href="http://www.2ality.com/2014/09/es6-modules-final.html">Sintaxis definitiva de módulos</a></li>
 <li><a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/learning-javascript-design-patterns-by-addy-oshmany.markdown">Notas tomadas</a></li>
 <li><a href="http://www.amazon.com/JavaScript-Patterns-Stoyan-Stefanov/dp/0596806752">JavaScript patterns</a>, de Stoyan Stefanov</li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Dart Streams]]></title>
-    <link href="http://rchavarria.github.io/blog/2015/03/28/dart-streams/"/>
-    <updated>2015-03-28T01:39:00+01:00</updated>
-    <id>http://rchavarria.github.io/blog/2015/03/28/dart-streams</id>
-    <content type="html"><![CDATA[<p>Siendo Dart un lenguaje muy influenciado por JavaScript, no podría dejar de lado
-conceptos como la <strong>programación asíncrona</strong>. Existen varios métodos para manejar
-la asincronía, y uno de ellos son los <strong>Streams</strong>. Si estás muy interesado en
-el método te recomiendo una charla de <a href="http://r.va.gg">Rod Vagg</a>, <a href="https://www.youtube.com/watch?v=oeKkwZhKgP0">Embrace the asynchronous</a>.</p>
-
-<p>Los <em>Streams</em> en Dart forman una interfaz única para cualquier cosa que necesite
-enviar repetidamente una serie de datos de forma asíncrona, ya sean eventos HTML
-(como escuchar clicks del usuario), o eventos de entrada/salida en una aplicación
-de servidor.</p>
-
-<p>Operaciones sobre <em>Streams</em>:</p>
-
-<ul>
-<li>Consumir: los datos son sacados de un <code>Stream</code> a uno o varios <code>StreamSubscriber</code></li>
-<li>Producir: los datos son introducidos en un <code>Stream</code> desde un <code>StreamController</code></li>
-</ul>
-
-
-<!-- more -->
-
-
-<h2>Consumiendo un <code>Stream</code></h2>
-
-<p>En lugar de introducir datos al Stream a través de un <code>StreamController</code>,
-que podría ser algo largo de contar, vamos a utilizar el constructor
-<code>Stream.fromIterable()</code>, el cual nos permite construir un <code>Stream</code> a partir de
-una lista de objetos, por ejemplo.</p>
-
-<p>Típicamente, se usa el método <code>listen()</code> para subscribirse a un <code>Stream</code>. Este método
-es llamado cada vez que se recibe un dato:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>var data = [1, 2, 3, 4, 5];
-</span><span class='line'>var stream = new Stream.fromIterable(data);
-</span><span class='line'>
-</span><span class='line'>// subscribe to the streams events
-</span><span class='line'>stream.listen((value) {
-</span><span class='line'>  print("Received: $value");
-</span><span class='line'>});</span></code></pre></td></tr></table></div></figure>
-
-
-<p><code>Stream</code> también tiene otros métodos: <code>first</code>, <code>last</code>, <code>length</code> y <code>isEmpty</code>. Todos
-ellos devuelven un <code>Future</code>, como los que estudiamos en <a href="http://rchavarria.github.io/blog/2015/01/29/operaciones-asincronas-en-dart-con-futures/">Futures con Dart</a>, el cual
-se completará con el valor apropiado dentro del <code>Stream</code>:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>streamProperties() {
-</span><span class='line'>  var stream;
-</span><span class='line'>
-</span><span class='line'>  stream = new Stream.fromIterable([1, 2, 3, 4, 5]);
-</span><span class='line'>  stream.first.then((value) =&gt; print("stream.first: $value"));  // 1
-</span><span class='line'>
-</span><span class='line'>  stream = new Stream.fromIterable([1, 2, 3, 4, 5]);
-</span><span class='line'>  stream.last.then((value) =&gt; print("stream.last: $value"));  // 5  
-</span><span class='line'>
-</span><span class='line'>  stream = new Stream.fromIterable([1, 2, 3, 4, 5]);
-</span><span class='line'>  stream.isEmpty.then((value) =&gt; print("stream.isEmpty: $value")); // false
-</span><span class='line'>
-</span><span class='line'>  stream = new Stream.fromIterable([1, 2, 3, 4, 5]);
-</span><span class='line'>  stream.length.then((value) =&gt; print("stream.length: $value")); // 5
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
-
-
-<p>También se pueden tener varios listeners, pero para eso hay que convertir el <code>Stream</code>
-en un stream de broadcast con <code>asBroadcastStream()</code>. Podremos comprobar de qué tipo
-es un stream con la propiedad <code>isBroadcast</code>.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>var data = [1, 2, 3, 4, 5];
-</span><span class='line'>var stream = new Stream.fromIterable(data);
-</span><span class='line'>var broadcastStream = stream.asBroadcastStream();
-</span><span class='line'>
-</span><span class='line'>broadcastStream.listen((value) =&gt; print("stream.listen: $value")); 
-</span><span class='line'>broadcastStream.first.then((value) =&gt; print("stream.first: $value"));
-</span><span class='line'>//...</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>Subconjuntos de datos de un <code>Stream</code></h2>
-
-<p>Los <code>Stream</code>s tienen algunos métodos de utilidad que permiten seleccionar un subconjunto
-de los datos que vendrán en él. Cada uno de estos métodos devuelve un
-<code>Stream</code> al que podemos registrar un listener. Para una lista completa de estos métodos
-se puede consultar la documentación oficial: <a href="http://api.dartlang.org/dart_async/Stream.html">API Streams</a>.</p>
-
-<p><code>where</code>: selecciona aquellos datos que cumplen una condición:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>broadcastStream
-</span><span class='line'>    .where((value) =&gt; value % 2 == 0) 
-</span><span class='line'>    .listen((value) =&gt; print("where: $value"));</span></code></pre></td></tr></table></div></figure>
-
-
-<p><code>take</code>: toma solo los <code>n</code> primeros elementos:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>broadcastStream
-</span><span class='line'>    .take(3) 
-</span><span class='line'>    .listen((value) =&gt; print("take: $value"));</span></code></pre></td></tr></table></div></figure>
-
-
-<p><code>skip</code>: se salta los <code>n</code> primeros elementos:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>broadcastStream
-</span><span class='line'>    .skip(3)
-</span><span class='line'>    .listen((value) =&gt; print("skip: $value"));</span></code></pre></td></tr></table></div></figure>
-
-
-<p><code>takeWhile</code>: va tomando datos mientras la condición sea verdadera:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>broadcastStream
-</span><span class='line'>    .takeWhile((value) =&gt; value &lt; 3) 
-</span><span class='line'>    .listen((value) =&gt; print("takeWhile: $value"));</span></code></pre></td></tr></table></div></figure>
-
-
-<p><code>skipWhile</code>: va saltando datos mientras la condición sea verdadera:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>broadcastStream
-</span><span class='line'>    .skipWhile((value) =&gt; value &lt; 3)
-</span><span class='line'>    .listen((value) =&gt; print("skipWhile: $value"));</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>Transformando streams</h2>
-
-<p>El método <code>Stream.transform()</code> admite un parámetro de tipo <code>StreamTransformer</code>.
-Es posible crear uno con el método <code>fromHandlers()</code>, el cual admite un
-método como parámetro. Este método se llamará con 2 parámetros: cada uno de
-los valores del <code>Stream</code> original, y un <code>StreamSink</code> al cual podremos añadir
-el valor transformado. La salida de <code>transform()</code> es un nuevo <code>Stream</code> cuyos
-valores han sido transformados por el <code>StreamTransformer</code>.</p>
-
-<p>Todo esto se ve mucho más claro con un poco de código:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>var transformer = new StreamTransformer.fromHandlers(handleData: (value, sink) {
-</span><span class='line'>  // create two new values from the original value
-</span><span class='line'>  sink.add("Message: $value");
-</span><span class='line'>  sink.add("Body: $value");
-</span><span class='line'>});
-</span><span class='line'>    
-</span><span class='line'>// transform the stream and listen to its output
-</span><span class='line'>stream.transform(transformer).listen((value) =&gt; print("listen: $value"));</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Un ejemplo de la vida real podría ser la lectura de un fichero o de una
-petición HTTP, transformando los datos recibidos a <code>String</code> con el decodificador
-<code>UTF8.decoder()</code> del paquete <code>dart:convert</code>.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>File file = new File("some_file.txt");
-</span><span class='line'>file.openRead()
-</span><span class='line'>    .transform(UTF8.decoder) // use a UTF8.decoder
-</span><span class='line'>    .listen((String data) =&gt; print(data));</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>Validando los valores de un <code>Stream</code></h2>
-
-<p>Otros métodos útiles podrían ser <code>any()</code>, <code>every()</code> y <code>contains()</code>, los cuales
-devuelven todos <code>Future&lt;boolean&gt;</code>, es decir, un <code>Future</code> que se completa con un
-valor de <code>true</code> o <code>false</code>.</p>
-
-<p>Estos métodos servirían para realizar ciertas comprobaciones sobre los datos
-recibidos por el <code>Stream</code>. Siguiendo con el ejemplo que crea un <code>Stream</code> a partir
-de un array con los valores del 1 al 5:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>broadcastStream
-</span><span class='line'>    .any((value) =&gt; value &lt; 5)
-</span><span class='line'>    .then((result) =&gt; print("Any less than 5?: $result")); // true
-</span><span class='line'>  
-</span><span class='line'>broadcastStream
-</span><span class='line'>    .every((value) =&gt; value &lt; 5)
-</span><span class='line'>    .then((result) =&gt; print("All less than 5?: $result")); // false
-</span><span class='line'>  
-</span><span class='line'>broadcastStream
-</span><span class='line'>    .contains(4)
-</span><span class='line'>    .then((result) =&gt; print("Contains 4?: $result")); // true</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>Gestión de errores con <code>StreamSubscription</code></h2>
-
-<p>Existen dos alternativas para la gestión de errores en los streams. Usando el
-objeto <code>StreamSubscription</code> que retorna <code>listen()</code> o pasando los manejadores de
-eventos al propio método <code>listen()</code>.</p>
-
-<p>Usando <code>StreamSubscription</code> devuelto por <code>listen()</code>:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>var subscription = stream.listen(null);
-</span><span class='line'>subscription.onData((value) =&gt; print("listen: $value"));
-</span><span class='line'>subscription.onError((err) =&gt; print("error: $err"));
-</span><span class='line'>subscription.onDone(() =&gt; print("done"));</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Pásandolos como parámetros:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>var subscription = stream.listen(
-</span><span class='line'>    (value) =&gt; print("listen: $value"),
-</span><span class='line'>    onError: (err) =&gt; print("error: $err"),
-</span><span class='line'>    onDone: () =&gt; print("done")
-</span><span class='line'>    );</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>Eliminando la suscripción a un <code>Stream</code></h2>
-
-<p>Con el método anterior de obtener un objeto <code>StreamSubscription</code>, podemos
-utilizar dicha referencia para cancelar la suscripción con el método <code>cancel()</code>.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>var subscription = stream.listen(null);
-</span><span class='line'>subscription.onData((value) {
-</span><span class='line'>  print("listen: $value");
-</span><span class='line'>  if (value == 2) subscription.cancel();
-</span><span class='line'>});</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>Referencias:</h2>
-
-<ul>
-<li><a href="https://www.youtube.com/watch?v=oeKkwZhKgP0">Embrace the asynchronous</a></li>
-<li><a href="http://rchavarria.github.io/blog/2015/01/29/operaciones-asincronas-en-dart-con-futures/">Futures con Dart</a>, en este propio blog</li>
-<li><a href="http://api.dartlang.org/dart_async/Stream.html">API Streams</a></li>
 </ul>
 
 ]]></content>
