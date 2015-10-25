@@ -20,12 +20,12 @@ Así que aquí está mi Lista de Lectura:
 
 ## Estoy leyendo
 
+- [How not to be wrong: the power of mathematical thinking](http://www.amazon.es/gp/product/0143127535), de Jordan Ellenberg, visto en [Microsiervos](http://www.microsiervos.com/archivo/libros/how-not-to-be-wrong.html)
 - [Soft Skills: The software developer's life manual](http://www.amazon.com/gp/product/1617292397/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=1617292397&linkCode=as2&tag=makithecompsi-20&linkId=YNX4566EEVSNF3IL), de John Sonmez, recomendado por [Alberto Moratilla](http://twitter.com/4lberto), dice que las valoraciones en Amazon son estupendas
 - [Expertología](http://www.amazon.es/dp/8492414502), de Andrés Pérez Ortega
 
 ## Tengo pensado leer
 
-- [How not to be wrong: the power of mathematical thinking](http://www.amazon.es/gp/product/0143127535), de Jordan Ellenberg, visto en [Microsiervos](http://www.microsiervos.com/archivo/libros/how-not-to-be-wrong.html)
 - [Ten-day MBA](http://www.amazon.es/MBA-10-d%C3%ADas-ense%C3%B1anzas-escuelas-ebook/dp/B00D59QW6O/), de Steven Silbiger, recomendado por Chad Fowler en su libro. Se puede econtrar también en [inglés](http://www.amazon.com/The-Ten-Day-MBA-Step-Step/dp/0062199579)
 - [Practical Vim](https://pragprog.com/book/dnvim/practical-vim), de Drew Neil, recomendado por el podcast Giant Robots
 - [Slow burn](http://www.amazon.com/Slow-Burn-Faster-Exercising-Slower/dp/0062736744), de Stu Mittleman, recomendado por [Rick Rubin en una entrevisa de Tim Ferris](http://fourhourworkweek.com/2015/05/15/rick-rubin)
@@ -55,6 +55,7 @@ Así que aquí está mi Lista de Lectura:
 - [El hombre anumérico](http://www.amazon.com/El-Hombre-Anumerico-Spanish-Edition/dp/8472231496), de John Allen Paulos, recomendado por Alberto Vilches
 - [Pensar rápido, pensar despacio](www.amazon.com/Pensar-rápido-despacio-Spanish-Edition-ebook/dp/B008BPHBTO), de Daniel Kahneman, recomendado por Alberto Vilches
 - [Manual del ciberactivista](http://www.amazon.es/gp/product/8494408607), de Javier de la Cueva, visto en [Microsiervos](http://www.microsiervos.com/archivo/libros/manual-del-ciberactivista-o-como-la-politica-puede-ser-cosa-de-todos-gracias-a-internet.html)
+- [Eloquen JavaScript](http://www.amazon.com/Eloquent-JavaScript-Modern-Introduction-Programming/dp/1593272820), de Marijn Haverbeke, recomendado por Kyle Simpson (You don't know JavaScript) en el podcast Developer on fire
 - [Introduction to the command line](http://shop.fsf.org/product/Introduction_to_Command_Line/), de la Free Software Foundation
 - [The art of Unix programming](http://www.catb.org/esr/writings/taoup), de Eric S. Raymond
 - [Beautiul Code](http://www.amazon.es/gp/product/0596510047/ref=as_li_tf_tl?ie=UTF8&camp=3626&creative=24790&creativeASIN=0596510047&linkCode=as2&tag=koalite-21), de Greg Wilson y Andy Oram, recomendado por Juanma (Gulnor), de Koalite, descrito como *porno (para desarrolladores) puro*
