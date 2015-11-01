@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2015-10-25T16:22:43+01:00</updated>
+  <updated>2015-11-01T23:28:12+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,80 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Screencast de programación: Robot name en exercism.io]]></title>
+    <link href="http://rchavarria.github.io/blog/2015/11/01/screencast-robot-name-exercism/"/>
+    <updated>2015-11-01T09:16:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2015/11/01/screencast-robot-name-exercism</id>
+    <content type="html"><![CDATA[<p>En el <a href="http://rchavarria.github.io/blog/2015/10/25/youve-got-commit/">post anterior</a> contaba que me gusta aprender, y que una de las mejoras
+formas era practicando. Y que actualmente estaba usando la plataforma
+<a href="http://exercism.io/">exercism.io</a> para ello, concretamente el <a href="http://exercism.io/languages/ecmascript">track de ECMAScript</a> para practicar
+escribiendo código en ES2015. Es muy fácil decir que te gusta aprender, y que
+te gusta practicar. En esta ocasión lo demuestro.</p>
+
+<p>He grabado un breve screencast, de menos de 10 minutos, donde muestro cómo de
+fácil es usar exercism.io. En el screencast resuelvo un ejercicio llamado
+<em>Robot name</em>, donde se trata de generar nombres aleatorios para cada uno de los
+robots que crea el cliente de la clase <code>Robot</code>.</p>
+
+<!-- more -->
+
+
+<h2>Screencast</h2>
+
+<iframe src="https://player.vimeo.com/video/144259723"
+        width="500"
+        height="281"
+        frameborder="0"
+        webkitallowfullscreen
+        mozallowfullscreen
+        allowfullscreen></iframe>
+
+
+<p>El proceso a seguir es muy sencillo. El primer paso es descargar el problema
+mediante el comando:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>exercism fetch ecmascript robot-name
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>el cual indica a exercism.io obtener un ejercicio del track de ECMAScript
+llamado robot-name.</p>
+
+<p>Una vez descargado, podemos leer el fichero <code>README</code> para saber de qué trata el
+problema. Lo siguiente que deberíamos leer son los tests, obtenidos
+directamente de la plataforma. Los tests nos indicaran qué fichero debemos
+crear, y nos darán pistas sobre el código que deberemos escribir. Al final, de
+lo que se trata, es de resolver los problemas uno a uno, hasta completarlos
+todos.</p>
+
+<p>En ese punto el problema estaría resuelto. Podemos subir nuestra solución a la
+plataforma con el comando:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>exercism submit robot-name.js
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>donde <code>robot-name.js</code> es el nombre del fichero donde está implementada nuestra
+solución.</p>
+
+<p>Por fin, el último paso, es usar exercism.io para comentar soluciones de otros
+usuarios, aprender de las soluciones de otros, e ir iterando sobre nuestra
+propia solución para ir perfeccionándola. O al menos para aprender nuevas
+técnicas de nuestro lenguaje de programación resolviendo de distintas formas el
+mismo problema, a modo de kata.</p>
+
+<h2>Otros screencasts</h2>
+
+<ul>
+<li><a href="http://rchavarria.github.io/blog/2014/10/23/screencast-programacion-juego-disparejo/">El juego del disparejo</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[You've got commit!]]></title>
@@ -2171,93 +2245,6 @@ hacerme con ella, pero sigo con el curso y estoy decidido a terminarlo. No voy a
 ningún diploma ni nada, pero espero poder seguir los consejos de John durant mucho
 tiempo y conseguir tener un blog útil para los lectores y que me permita conocer gente
 interesante.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Learning JavaScript design patterns]]></title>
-    <link href="http://rchavarria.github.io/blog/2015/05/29/learning-javascript-design-patterns/"/>
-    <updated>2015-05-29T01:04:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2015/05/29/learning-javascript-design-patterns</id>
-    <content type="html"><![CDATA[<h5>de Addy Osmany</h5>
-
-<h2>Por qué lo he leído</h2>
-
-<p><img class="left" src="http://www.addyosmani.com/resources/essentialjsdesignpatterns/cover/cover.jpg" width="206" height="271" title="JavaScript desing patterns" ></p>
-
-<p>Ya llevo un tiempo programando con JavaScript de forma profesional, y empiezo
-a sentir que necesito ir un paso más allá con el lenguaje. No creo que conozca
-todo lo que ofrece el lenguaje, todo lo contrario, a veces siento que me queda
-mucho por aprender y que necesito profundizar en muchos y muchos temas. Con
-este libro pretendía trasladar mis conocimientos sobre patrones de diseño con
-Java a JavaScript.</p>
-
-<!-- more -->
-
-
-<h2>Qué esperaba</h2>
-
-<p>Esperaba grandes cosas de este libro. Ya tenía referencias anteriores del autor,
-creo que es un profesional como la copa de un pino. Así que un libro escrito
-por él, pues tenía buena pinta.</p>
-
-<p>Supongo que esperar encontrar una estructura de libro muy parecido a otros:
-clasificaciones, descripciones, catalogaciones,&#8230;</p>
-
-<h2>Qué encontré</h2>
-
-<p>Encontré un libro con mucho código, cosa que no tiene que ser ni bueno, ni malo.
-En el caso de este libro, es una ayuda muy buena. Las explicaciones de Addy son
-clarísimas y hay multitud de ejemplos y casos reales.</p>
-
-<h2>Conclusiones</h2>
-
-<p>Aunque es un libro que no miente, trata sobre patrones de diseño, el libro me
-ha defraudado un poco. Esperaba más del autor. Quizá no he sabido aprovechar
-el contenido del libro, pero me ha parecido superficial en algunos capítulos,
-y en otros ha entrado a describir con mucho detalle librerías como jQuery o
-plugins para él.</p>
-
-<p>En realidad, el libro que andaba buscando era <a href="http://www.amazon.com/JavaScript-Patterns-Stoyan-Stefanov/dp/0596806752">JavaScript patterns</a>, de
-Stoyan Stefanov, pero me daba más confianza Addy porque era un autor que ya
-conocía. Toca ponerle remedio y ya me he puesto con el libro de Stoyan.</p>
-
-<p>Eso sí, tengo que reconocer que es el primer lugar donde he encontrado una buena
-descripción de lo que son cada una de las arquitecturas MVx (MVC, MVP, MVVM,&#8230;)</p>
-
-<h2>Qué he aprendido</h2>
-
-<ul>
-<li>Se pueden añadir propiedades a objetos a través del método
-<code>Object.defineProperties()</code></li>
-<li>Los métodos de un objeto, no se deben declarar en la función constructor, sino
-modificando el prototipo de la misma</li>
-<li>Se debe intentar conseguir un bajo acoplamiento, algunos patrones (Observer,
-Mediator,&#8230;) ayudan a ello</li>
-<li>Mixins</li>
-<li>Patrón Flyweight, consiste en agrupar o manejar conjuntamente funcionalidades
-que pueden compartir un subconjunto de sus datos</li>
-<li><p>Diferencias entre los distintos MVx</p>
-
-<ul>
-<li>En MVC, las Vistas tienen acceso directo al Modelo</li>
-<li>En MVP, los Presentadores escuchan eventos de la Vista y del Modelo y median en la acciones entre ellos</li>
-<li>MVVM nos permite crear partes específicas de las Vistas de un Modelo en concreto</li>
-</ul>
-</li>
-<li><p>Expresiones de Función Inmediatamente Invocadas (IIFE - Immediately-Invoked Function Expressions)</p></li>
-</ul>
-
-
-<h2>Recursos relacionados</h2>
-
-<ul>
-<li><a href="http://www.addyosmani.com/resources/essentialjsdesignpatterns/book">Learning JavaScript design patterns</a>, by Addy Osmani</li>
-<li><a href="http://www.2ality.com/2014/09/es6-modules-final.html">Sintaxis definitiva de módulos</a></li>
-<li><a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/learning-javascript-design-patterns-by-addy-oshmany.markdown">Notas tomadas</a></li>
-<li><a href="http://www.amazon.com/JavaScript-Patterns-Stoyan-Stefanov/dp/0596806752">JavaScript patterns</a>, de Stoyan Stefanov</li>
-</ul>
-
 ]]></content>
   </entry>
   

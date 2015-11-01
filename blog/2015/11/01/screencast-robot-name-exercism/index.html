@@ -1,0 +1,343 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Screencast de programación: Robot name en exercism.io - R. Chavarria's Blog</title>
+  <meta name="author" content="Rub&eacute;n Chavarr&iacute;a">
+
+  
+  <meta name="description" content="En el post anterior contaba que me gusta aprender, y que una de las mejoras
+formas era practicando. Y que actualmente estaba usando la plataforma &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://rchavarria.github.io/blog/2015/11/01/screencast-robot-name-exercism/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="R. Chavarria's Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36829645-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">R. Chavarria's Blog</a></h1>
+  
+    <h2>Proud of developing software, proud of being an Engineer</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:rchavarria.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archivos</a></li>
+  <li><a href="/readings">Lista de lectura</a></li>
+  <li><a href="/pet-projects">Proyectos</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Screencast de programación: Robot name en exercism.io</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-11-01T09:16:00+01:00" pubdate data-updated="true">Nov 1<span>st</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>En el <a href="/blog/2015/10/25/youve-got-commit/">post anterior</a> contaba que me gusta aprender, y que una de las mejoras
+formas era practicando. Y que actualmente estaba usando la plataforma
+<a href="http://exercism.io/">exercism.io</a> para ello, concretamente el <a href="http://exercism.io/languages/ecmascript">track de ECMAScript</a> para practicar
+escribiendo código en ES2015. Es muy fácil decir que te gusta aprender, y que
+te gusta practicar. En esta ocasión lo demuestro.</p>
+
+<p>He grabado un breve screencast, de menos de 10 minutos, donde muestro cómo de
+fácil es usar exercism.io. En el screencast resuelvo un ejercicio llamado
+<em>Robot name</em>, donde se trata de generar nombres aleatorios para cada uno de los
+robots que crea el cliente de la clase <code>Robot</code>.</p>
+
+<!-- more -->
+
+
+<h2>Screencast</h2>
+
+<iframe src="https://player.vimeo.com/video/144259723"
+        width="500"
+        height="281"
+        frameborder="0"
+        webkitallowfullscreen
+        mozallowfullscreen
+        allowfullscreen></iframe>
+
+
+<p>El proceso a seguir es muy sencillo. El primer paso es descargar el problema
+mediante el comando:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>exercism fetch ecmascript robot-name
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>el cual indica a exercism.io obtener un ejercicio del track de ECMAScript
+llamado robot-name.</p>
+
+<p>Una vez descargado, podemos leer el fichero <code>README</code> para saber de qué trata el
+problema. Lo siguiente que deberíamos leer son los tests, obtenidos
+directamente de la plataforma. Los tests nos indicaran qué fichero debemos
+crear, y nos darán pistas sobre el código que deberemos escribir. Al final, de
+lo que se trata, es de resolver los problemas uno a uno, hasta completarlos
+todos.</p>
+
+<p>En ese punto el problema estaría resuelto. Podemos subir nuestra solución a la
+plataforma con el comando:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>exercism submit robot-name.js
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>donde <code>robot-name.js</code> es el nombre del fichero donde está implementada nuestra
+solución.</p>
+
+<p>Por fin, el último paso, es usar exercism.io para comentar soluciones de otros
+usuarios, aprender de las soluciones de otros, e ir iterando sobre nuestra
+propia solución para ir perfeccionándola. O al menos para aprender nuevas
+técnicas de nuestro lenguaje de programación resolviendo de distintas formas el
+mismo problema, a modo de kata.</p>
+
+<h2>Otros screencasts</h2>
+
+<ul>
+<li><a href="/blog/2014/10/23/screencast-programacion-juego-disparejo/">El juego del disparejo</a></li>
+</ul>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Rubén Chavarría</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-11-01T09:16:00+01:00" pubdate data-updated="true">Nov 1<span>st</span>, 2015</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/ecmascript-2015/'>ECMAScript 2015</a>, <a class='category' href='/blog/categories/exercism-io/'>exercism.io</a>, <a class='category' href='/blog/categories/screencast/'>screencast</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rchavarria.github.io/blog/2015/11/01/screencast-robot-name-exercism/" data-via="rchavarriat" data-counturl="http://rchavarria.github.io/blog/2015/11/01/screencast-robot-name-exercism/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2015/10/25/youve-got-commit/" title="Previous Post: You've got commit!">&laquo; You've got commit!</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/11/01/screencast-robot-name-exercism/">Screencast de programación: Robot name en exercism.io</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/10/25/youve-got-commit/">You've got commit!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/10/18/charla-tecnica-effective-learning-for-programmers/">Charla técnica: Effective learning for programmers</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/10/18/charla-tecnica-all-the-little-things/">Charla técnica: All the little things</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/10/12/deuda-tecnica/">Deuda técnica</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("rchavarriat", 4, true);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/rchavarriat">@rchavarriat</a></p>
+  
+</section>
+
+
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/rchavarriat?count=5&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/rchavarriat">My Delicious Bookmarks &raquo;</a></p>
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Rub&eacute;n Chavarr&iacute;a -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'rchavarria-github-com';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://rchavarria.github.io/blog/2015/11/01/screencast-robot-name-exercism/';
+        var disqus_url = 'http://rchavarria.github.io/blog/2015/11/01/screencast-robot-name-exercism/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
