@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Screencast de programación: Robot name en exercism.io"
+title: "Screencast de programación: Robot name (exercism.io)"
 date: 2015-11-01 09:16
 author: Rubén Chavarría
 comments: true
