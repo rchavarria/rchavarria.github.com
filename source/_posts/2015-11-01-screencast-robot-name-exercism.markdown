@@ -5,7 +5,7 @@ date: 2015-11-01 09:16
 author: Rubén Chavarría
 comments: true
 categories: 
-- screencast
+- screencasts
 - exercism.io
 - ECMAScript 2015
 published: true
