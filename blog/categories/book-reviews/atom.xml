@@ -4,7 +4,7 @@
   <title><![CDATA[Category: book reviews | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/book-reviews/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2015-11-02T00:03:45+01:00</updated>
+  <updated>2015-11-08T18:50:50+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,229 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Soft skills]]></title>
+    <link href="http://rchavarria.github.io/blog/2015/11/08/soft-skills/"/>
+    <updated>2015-11-08T18:36:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2015/11/08/soft-skills</id>
+    <content type="html"><![CDATA[<h6>de John Sonmez</h6>
+
+<p><img class="left" src="/images/2015/soft-skills.jpg" width="239" height="300" title="Soft skills" ></p>
+
+<h3>Por qué lo he leído</h3>
+
+<p>Creo recordar que vi que Miguel, autor del blog <a href="http://ocana.github.io/">Dev's kitchen</a>, lo marcaba
+como pendiente para leer y le di un vistazo. Por aquel momento seguía
+el blog del autor del libro, y tenía varios posts interesantes. Y el libro
+también me lo pareció: ¿Mejorar en tu carrera? ¿Aprender habilidades no
+técnica?</p>
+
+<p>Me gusta intercalar libros técnicos y no técnicos, y este libro parecía estar a
+medio camino entre ambos. Parecía una buena elección, así que me decidí leerlo.</p>
+
+<!-- more -->
+
+
+<h3>Qué esperaba</h3>
+
+<p>Esperaba consejos e historias relacionadas con el software, pero ninguna
+historia técnica: cómo relacionarte con tus compañeros, cómo resolver
+conflictos, cómo negociar con tu jefe. Esperaba más temas relacionados con la
+relación de las persona que otra cosa. Bueno, y también un poco de
+productividad. Quién sabe.</p>
+
+<h3>Qué encontre</h3>
+
+<p>Encontré todo eso y más, mucho más. El libro trata temas tan dispares que hay
+veces que no sabes qué tipo de libro estas leyendo. Hay tantos consejos, y de
+temáticas tan variadas, que es imposible no encontrar algún consejo o idea
+nuevos.</p>
+
+<p>El libro está dividido en secciones, englobando cada uno una temática general:
+carrera profesional, marca personal, aprendizaje, producividad, economía,
+salud y espiritualidad. Cada sección está formada por una serie de capítulos, y
+cada capítulo contiene varios <em>artículos</em>. La verdad es casi como leer su blog,
+pero un post detrás de otro y organizados por temáticas.</p>
+
+<h3>Conclusiones</h3>
+
+<p>El libro es tan variado que cualquier persona encontraría algún consejo
+valioso. John Sonmez se gana la vida de esta forma, aconsejando a programadores
+acerca de cómo mejorar en su carrera. En este libro encontrarás consejos de lo
+más variopintos: desde cómo aprender, a cómo invertir en el negocio
+inmoviliario, pasando por practicar deporte. Incluso hay consejos espirituales.
+En ese punto el libro me dejó un poco de piedra, creo que ahí se pasó, y el
+libro pierde un poco su identidad.</p>
+
+<p>Destacaría las primeras secciones: cuando habla de la carrera profesional y el
+aprendizaje. También me gustó el apartado dedicado a temas financieros, siempre
+es intersante conocer cómo funciona el dinero.</p>
+
+<p>El que menos me gustó fue el espiritual, lleno de buenrollismo y autoayuda. No
+sé, no le cogí el punto. Aún así, en general, me parece un libro bastante recomendable.</p>
+
+<h3>Qué he aprendido</h3>
+
+<p>Cómo hackear una entrevista de trabajo: la idea es no tener que mandar
+currículums a las empresas, si no que ellas te contacten. Te contacten porque
+han tenido noticias tuyas de alguien <em>de dentro</em>. Para ello, deberás establecer
+relaciones personales con trabajadores de la empresa en la que deseas trabajar:
+lee sus blogs,... Piensa diferente y encuentra formas de acercarte a ellos.</p>
+
+<p>Algunas de las habilidades que necesitarás para tu próximo trabajo no las
+tienes todavía. La clave es <strong>todavía</strong>. Hay que ir con la confianza de que las
+conseguirás.</p>
+
+<p>John habla mucho de construir una marca personal, para ello necesitarías: un
+mensaje (la frase por la que te reconocerán), elementos visuales (un logo,...),
+consistencia y una exposición contínua (no necesariamente en Twitter
+solamente).</p>
+
+<p>Me ha encantado los capítulos donde describe su proceso de aprendizaje en 10
+pasos. Parece mucho de libro de autoayuda, pero la verdad es que cuenta muy
+buenas ideas. El proceso sería algo tal que así:</p>
+
+<ol>
+<li>Entender la habilidad que se quiere aprender</li>
+<li>Delimitar el ámbito</li>
+<li>Definir qué se va a considerar como éxito</li>
+<li>Encontrar recursos</li>
+<li>Crear un plan de aprendizaje</li>
+<li>Filtrar los recursos</li>
+<li>Aprender lo suficiente para comenzar</li>
+<li>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</li>
+<li>Aprender lo suficiente para hacer algo de utilidad</li>
+<li>Enseñar lo aprendido, y repetir desde el paso 7</li>
+</ol>
+
+
+<p>Me ha interesado mucho el concepto de <em>cuotas</em> para conseguir objetivos.
+Funciona para los objetivos en los que hay que ir haciendo pequeñas acciones a
+lo largo de mucho tiempo, por ejemplo, a la hora de hacer ejercicio. La idea es
+crear una cuota de cuánto hay que conseguir tener hecho para un determinado
+período de tiempo. Por ejemplo: salir a correr 3 veces por semana, o hacer
+100km en bicicleta cada semana, o leer 3 artículos técnicos al mes.</p>
+
+<p>El concepto de meta, de objetivo, está presente a lo largo de todo el libro.
+Tus objectivos pueden estar formados por tareas demasiado grandes, que parece
+imposible de realizar. El truco está en dividir esa gran tarea en tareas
+secuenciales más pequeñas. Lo más importante aquí es la palabra
+<strong>secuenciales</strong>.</p>
+
+<h3>Frases que me gustaría recordar</h3>
+
+<blockquote><p>Un profesional comprende qué trabajo ha de hacerse, lo prioriza y se pone
+manos a la obra</p></blockquote>
+
+<!-- -->
+
+
+<blockquote><p>Divide un gran objetivo en pequeños objectivos que puedan corresponder a
+meses, semanas o días. Escribe el gran objetivo donde lo veas todos los días
+para recordarte en qué tienes que trabajar</p></blockquote>
+
+<!-- -->
+
+
+<blockquote><p>Por enésima vez: si quieres se un buen programador, debes aprender a cómo
+trabajar de forma efectiva con gente, incluso si la mayor parte de tu trabajo
+es escribir código</p></blockquote>
+
+<!-- -->
+
+
+<blockquote><p>Cuando el foco de una compañía no es el software, normalmente los
+programadores no son muy respetados. Aquellas empresas que dependen de un
+producto software tienen muchas más probabilidades de valorar mucho mejor a
+los profesionales que contratan</p></blockquote>
+
+<!-- -->
+
+
+<blockquote><p>Si debes elegir entre dinero o responsabilidad, la mejor opción (para el
+largo plazo) es siempre más responsabilidad</p></blockquote>
+
+<!-- -->
+
+
+<blockquote><p>Deberías estar siempre aprendiendo algo nuevo o mejorando de alguna forma tus
+habilidades</p></blockquote>
+
+<!-- -->
+
+
+<blockquote><p>¿Cómo crear un producto? Identifica unas cuantas audiencias objetivo para las
+que puedas crear un producto potencial. Elige una de estas audiencias e
+identifica donde puedes encontrar a miembros de ese grupo. Contacta con ellos
+y averigua si puedes resolver alguno de sus problemas</p></blockquote>
+
+<!-- -->
+
+
+<blockquote><p>La manera correcta de promocionarse a sí mismo es proporcionar valor a los
+demás</p></blockquote>
+
+<!-- -->
+
+
+<blockquote><p>Tu objectivo principal debería ser proporcionar valor a los demás. Si lo que
+dices o haces no ayuda a nadie, todo el mundo te ignorará. Cada vez que
+decidas crear algo (escribir un artículo, grabar un podcast o screencast,...)
+deberías mirarlo desde la perspectiva de cómo estás creando valor para los
+demás</p></blockquote>
+
+<!-- -->
+
+
+<blockquote><p>El enfoque es una cosa del momento: es muy difícil conseguir el foco, pero
+relativamente sencillo mantenerlo una vez que lo has adquirido</p></blockquote>
+
+<!-- -->
+
+
+<blockquote><p>La multitarea es posible. Es posible combinar una tarea que no requiere
+concentración con algunas tareas que sí lo requieran</p></blockquote>
+
+<!-- -->
+
+
+<blockquote><p><em>Burnout</em>: Tendemos a estar ilusionados y motivados sobre las cosas nuevas al
+principio, pero cuanto más avanzamos, más rápido nos acercamos a ese
+sentimiento de no poder más. En realidad, estamos topándonos con una pared.
+¿Cuál es la solución? Intentarlo más fuerte. Esforzándonos contra la
+dificultad es el secreto para superar ese sentimiento</p></blockquote>
+
+<!-- -->
+
+
+<blockquote><p>Los hábitos consisten básicamente de tres cosas: una señal (qué causa la
+acción del hábito), una rutina (el hábito en sí mismo) y una recompensa (es
+lo que hace que el hábito se mantenga interesante)</p></blockquote>
+
+<!-- -->
+
+
+<blockquote><p>Una razón para el salario que estás demandando nunca puede ser <em>porque lo
+necesito</em>. En vez de eso, debes enfocarlo desde la perspectiva de demostrar
+que vales esa cantidad de dinero o que lo vale el beneficio que estás
+poniendo encima de la mesa</p></blockquote>
+
+<!-- -->
+
+
+<blockquote><p>De todos los errores financieros que se pueden cometer, el mayor de ellos es
+incurrir en una deuda</p></blockquote>
+
+<h3>Recursos relacionados</h3>
+
+<ul>
+<li><a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/soft-skills-by-john-sonmez.markdown">Notas tomadas sobre Soft skills</a></li>
+<li>Blog <a href="http://ocana.github.io/">Dev's kitchen</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The passionate programmer]]></title>
@@ -529,93 +752,6 @@ HTML.</li>
 <li><a href="/blog/2015/05/29/learning-javascript-design-patterns/">Learning JavaScript design patterns</a>, libro de Addy Osmany</li>
 <li><a href="http://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented-ebook/dp/B000SEIBB8">Design patterns</a>, libro de The Gang of Four</li>
 <li><a href="http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742">JavaScript, the good parts</a>, libro de Douglas Crockford</li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Learning JavaScript design patterns]]></title>
-    <link href="http://rchavarria.github.io/blog/2015/05/29/learning-javascript-design-patterns/"/>
-    <updated>2015-05-29T01:04:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2015/05/29/learning-javascript-design-patterns</id>
-    <content type="html"><![CDATA[<h5>de Addy Osmany</h5>
-
-<h2>Por qué lo he leído</h2>
-
-<p><img class="left" src="http://www.addyosmani.com/resources/essentialjsdesignpatterns/cover/cover.jpg" width="206" height="271" title="JavaScript desing patterns" ></p>
-
-<p>Ya llevo un tiempo programando con JavaScript de forma profesional, y empiezo
-a sentir que necesito ir un paso más allá con el lenguaje. No creo que conozca
-todo lo que ofrece el lenguaje, todo lo contrario, a veces siento que me queda
-mucho por aprender y que necesito profundizar en muchos y muchos temas. Con
-este libro pretendía trasladar mis conocimientos sobre patrones de diseño con
-Java a JavaScript.</p>
-
-<!-- more -->
-
-
-<h2>Qué esperaba</h2>
-
-<p>Esperaba grandes cosas de este libro. Ya tenía referencias anteriores del autor,
-creo que es un profesional como la copa de un pino. Así que un libro escrito
-por él, pues tenía buena pinta.</p>
-
-<p>Supongo que esperar encontrar una estructura de libro muy parecido a otros:
-clasificaciones, descripciones, catalogaciones,...</p>
-
-<h2>Qué encontré</h2>
-
-<p>Encontré un libro con mucho código, cosa que no tiene que ser ni bueno, ni malo.
-En el caso de este libro, es una ayuda muy buena. Las explicaciones de Addy son
-clarísimas y hay multitud de ejemplos y casos reales.</p>
-
-<h2>Conclusiones</h2>
-
-<p>Aunque es un libro que no miente, trata sobre patrones de diseño, el libro me
-ha defraudado un poco. Esperaba más del autor. Quizá no he sabido aprovechar
-el contenido del libro, pero me ha parecido superficial en algunos capítulos,
-y en otros ha entrado a describir con mucho detalle librerías como jQuery o
-plugins para él.</p>
-
-<p>En realidad, el libro que andaba buscando era <a href="http://www.amazon.com/JavaScript-Patterns-Stoyan-Stefanov/dp/0596806752">JavaScript patterns</a>, de
-Stoyan Stefanov, pero me daba más confianza Addy porque era un autor que ya
-conocía. Toca ponerle remedio y ya me he puesto con el libro de Stoyan.</p>
-
-<p>Eso sí, tengo que reconocer que es el primer lugar donde he encontrado una buena
-descripción de lo que son cada una de las arquitecturas MVx (MVC, MVP, MVVM,...)</p>
-
-<h2>Qué he aprendido</h2>
-
-<ul>
-<li>Se pueden añadir propiedades a objetos a través del método
-<code>Object.defineProperties()</code></li>
-<li>Los métodos de un objeto, no se deben declarar en la función constructor, sino
-modificando el prototipo de la misma</li>
-<li>Se debe intentar conseguir un bajo acoplamiento, algunos patrones (Observer,
-Mediator,...) ayudan a ello</li>
-<li>Mixins</li>
-<li>Patrón Flyweight, consiste en agrupar o manejar conjuntamente funcionalidades
-que pueden compartir un subconjunto de sus datos</li>
-<li><p>Diferencias entre los distintos MVx</p>
-
-<ul>
-<li>En MVC, las Vistas tienen acceso directo al Modelo</li>
-<li>En MVP, los Presentadores escuchan eventos de la Vista y del Modelo y median en la acciones entre ellos</li>
-<li>MVVM nos permite crear partes específicas de las Vistas de un Modelo en concreto</li>
-</ul>
-</li>
-<li><p>Expresiones de Función Inmediatamente Invocadas (IIFE - Immediately-Invoked Function Expressions)</p></li>
-</ul>
-
-
-<h2>Recursos relacionados</h2>
-
-<ul>
-<li><a href="http://www.addyosmani.com/resources/essentialjsdesignpatterns/book">Learning JavaScript design patterns</a>, by Addy Osmani</li>
-<li><a href="http://www.2ality.com/2014/09/es6-modules-final.html">Sintaxis definitiva de módulos</a></li>
-<li><a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/learning-javascript-design-patterns-by-addy-oshmany.markdown">Notas tomadas</a></li>
-<li><a href="http://www.amazon.com/JavaScript-Patterns-Stoyan-Stefanov/dp/0596806752">JavaScript patterns</a>, de Stoyan Stefanov</li>
 </ul>
 
 ]]></content>
