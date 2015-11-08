@@ -54,6 +54,7 @@ Así que aquí está mi Lista de Lectura:
 - [Defiende tu dinero](http://www.casadellibro.com/libro-defiende-tu-dinero/9788466651899/2016460), de Simón Pérez y Marcos Cirera, recomendado por [Guillermo Montoya](https://twitter.com/gmfdsr)
 - [El hombre anumérico](http://www.amazon.com/El-Hombre-Anumerico-Spanish-Edition/dp/8472231496), de John Allen Paulos, recomendado por Alberto Vilches
 - [Pensar rápido, pensar despacio](www.amazon.com/Pensar-rápido-despacio-Spanish-Edition-ebook/dp/B008BPHBTO), de Daniel Kahneman, recomendado por Alberto Vilches
+- [Think and Grow Rich](), de Napoleon Hill, recomendado por John Sonmez en su libro Soft Skills
 - [Manual del ciberactivista](http://www.amazon.es/gp/product/8494408607), de Javier de la Cueva, visto en [Microsiervos](http://www.microsiervos.com/archivo/libros/manual-del-ciberactivista-o-como-la-politica-puede-ser-cosa-de-todos-gracias-a-internet.html)
 - [Eloquen JavaScript](http://www.amazon.com/Eloquent-JavaScript-Modern-Introduction-Programming/dp/1593272820), de Marijn Haverbeke, recomendado por Kyle Simpson (You don't know JavaScript) en el podcast Developer on fire
 - [Introduction to the command line](http://shop.fsf.org/product/Introduction_to_Command_Line/), de la Free Software Foundation
