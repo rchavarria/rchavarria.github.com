@@ -69,6 +69,14 @@ sé, no le cogí el punto. Aún así, en general, me parece un libro bastante re
 
 ### Qué he aprendido
 
+Casi todo el libro habla de ponerse objetivos, de establecer metas intermedias
+y de hacer seguimiento, de empezar poco a poco, de ser constante, y de trabajar
+duro. Conceptos aplicables a cualquier aspecto de la vida. Cuando habla de
+objetivos, éstos pueden estar formados por tareas demasiado grandes, que
+parece imposible de realizar. El truco está en dividir esa gran tarea en tareas
+secuenciales más pequeñas. Lo más importante aquí es la palabra
+**secuenciales**.
+
 Cómo hackear una entrevista de trabajo: la idea es no tener que mandar
 currículums a las empresas, si no que ellas te contacten. Te contacten porque
 han tenido noticias tuyas de alguien *de dentro*. Para ello, deberás establecer
@@ -105,12 +113,6 @@ lo largo de mucho tiempo, por ejemplo, a la hora de hacer ejercicio. La idea es
 crear una cuota de cuánto hay que conseguir tener hecho para un determinado
 período de tiempo. Por ejemplo: salir a correr 3 veces por semana, o hacer
 100km en bicicleta cada semana, o leer 3 artículos técnicos al mes.
-
-El concepto de meta, de objetivo, está presente a lo largo de todo el libro.
-Tus objectivos pueden estar formados por tareas demasiado grandes, que parece
-imposible de realizar. El truco está en dividir esa gran tarea en tareas
-secuenciales más pequeñas. Lo más importante aquí es la palabra
-**secuenciales**.
 
 ### Frases que me gustaría recordar
 
