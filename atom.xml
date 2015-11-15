@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2015-11-08T18:50:50+01:00</updated>
+  <updated>2015-11-15T23:20:26+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,358 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Aprendiendo Ionic 2]]></title>
+    <link href="http://rchavarria.github.io/blog/2015/11/15/aprendiendo-ionic-2/"/>
+    <updated>2015-11-15T22:49:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2015/11/15/aprendiendo-ionic-2</id>
+    <content type="html"><![CDATA[<p>Recientemente se ha celebrado la conferencia <a href="http://angularconnect.com/">Angular Connect</a> en Londres,
+donde se ha hablado mucho de <a href="https://angular.io/">Angular 2</a>, framework de desarrollo de
+aplicaciones web en el que estoy muy interesado (de hecho estoy desarrollando
+una pequeña aplicación para diversión de mi hijo, <a href="https://play.google.com/store/apps/details?id=es.rchavarria.englishbyeinar">English by Einar</a>). También
+estoy enteresado en el framework <a href="http://ionicframework.com/">Ionic</a>, que aúna los proyectos de Angular y
+<a href="http://cordova.apache.org/">Cordova</a> y que permite desarrollar aplicaciones para móviles con herramientas
+de desarrollo web: HTML5, CSS3 y JavaScript.</p>
+
+<p>En dicha conferencia se hizo público la versión alpha de <a href="http://ionicframework.com/docs/v2/">Ionic 2</a>, la versión
+de Ionic que incluye la nueva versión de Angular. Ionic es un framework para
+desarrollo de aplicaciones cliente móviles híbridas con tecnologías web y en su
+versión 2 siguen con la filosofía de estar muy preocupados por el rendimiento.
+En este post veremos lo realmente fácil que es comenzar a desarrollar con estas
+herrmientas.</p>
+
+<p><img class="center" src="http://rchavarria.github.io/images/2015/ionic-framework.jpg" width="350" height="185" title="Ionic Framework" ></p>
+
+<!-- more -->
+
+
+<h2>Requisitos</h2>
+
+<p>Ionic se apoya en Cordova y en las plataformas de desarrollo nativas
+dependiendo de la plataforma móvil en la que estemos enfocados, normalmente
+Android o iOS. Antes de comenzar a desarrollar con él deberemos actualizar a
+las versiones más modernas posibles, ya que la versión alpha de Ionic 2
+requiere de los últimos avances.</p>
+
+<p>En mi caso particular, he necesitado actualizar mi SDK de Android para Linux:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rchavarria@home$ ./AndroidSDK/tools/android sdk</span></code></pre></td></tr></table></div></figure>
+
+
+<p>para abrir la interfaz gráfica y poder actualizar algunos paquetes del SDK.</p>
+
+<p>Y también he necesitado actualizar las versiones de NodeJS (a través de <code>nvm</code>,
+Node Version Manager), la herramienta <code>npm</code> y Cordova:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rchavarria@home$ nvm install v5.0.0
+</span><span class='line'>rchavarria@home$ npm install -g npm
+</span><span class='line'>rchavarria@home$ npm install -g cordova@5.3.3</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Por último, instalar la versión alpha de Ionic 2. No temas, no hay peligro de
+romper proyectos desarrollados con la versión 1 de Ionic.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rchavarria@home$ npm install -g ionic@alpha</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Creación del primer proyecto</h2>
+
+<p>Para mi primer proyecto he usado una plantilla desarrollada por la gente de
+Ionic, <a href="https://github.com/driftyco/ionic2-starter-tutorial">tutorial</a>. Estas plantillas permiten tener una aplicación muy básica
+funcionando en unos minutos. Esta plantilla contiene un menú deslizante
+lateral, pero hay otras muchas plantillas. Crear el proyecto es un simple
+comando:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rchavarria@home$ ionic start MyFirstIonic2Project tutorial --v2</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Este comando descarga la plantilla indicada, <code>tutorial</code>, instala dependencias
+de NodeJS y nos deja el proyecto listo para ser ejecutado. De hecho, para poder
+probarlo en un navegador, basta con escribir los comandos:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rchavarria@home$ cd MyFirstIonic2Project
+</span><span class='line'>rchavarria@home$ ionic serve</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Estructura del proyecto</h2>
+
+<p>Prácticamente todos los ficheros de la aplicación están localizados en el
+directorio <code>www</code>, como en todo proyecto de Cordova.</p>
+
+<p>El punto de entrada principal es <code>www/index.html</code>. Como página principal, carga
+los ficheros CSS, incluye los JavaScript y arranca la aplicación. Ionic busca
+una etiqueta <code>ion-app</code> dentro de esta primera página HTML.</p>
+
+<p>Todo el código JavaScript que se encuentra en el directorio <code>www/app</code> se
+transpila a la versión correcta de JavaScript que soporte el navegador para el
+que está dirigida la aplicación. En este directorio podremos encontrar código
+tanto TypeScript como ECMAScript 2015.</p>
+
+<p>En el archivo <code>www/app/app.js</code> podemos encontrar la entrada a nuestra
+aplicación. Crea un component con el decorador <code>@App</code>, componente necesario
+para toda aplicación Ionic.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>@App({
+</span><span class='line'>  templateUrl: 'app/app.html'
+</span><span class='line'>})
+</span><span class='line'>class MyApp {
+</span><span class='line'>//...
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>El código de <code>@App</code> configura el archivo <code>www/app/app.html</code> como plantilla para
+la aplicacion. Veámoslo:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;ion-menu [content]="content"&gt;
+</span><span class='line'>
+</span><span class='line'>  &lt;ion-content&gt;
+</span><span class='line'>    &lt;ion-list&gt;
+</span><span class='line'>      &lt;button ion-item *ng-for="#p of pages" (click)="openPage(p)"&gt;
+</span><span class='line'>      &lt;/button&gt;
+</span><span class='line'>    &lt;/ion-list&gt;
+</span><span class='line'>  &lt;/ion-content&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;/ion-menu&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;ion-nav id="nav" [root]="rootPage" #content swipe-back-enabled="false"&gt;&lt;/ion-nav&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Esta plantilla define un menu bajo la etiqueta <code>ion-menu</code>, y un componente de
+navegación, <code>ion-nav</code>, ambos proporcionados por Ionic. <code>ion-menu</code> toma una
+propiedad para mostrar un contenido, <code>content</code>, la cual se la podemos
+proporcionar a través de la variable <code>#content</code> desde nuestro <code>ion-nav</code>.</p>
+
+<p><code>ion-nav</code> define un <em>data binding</em> a la propiedad <code>root</code> del componente, igual
+que <code>ion-menu</code> define un <em>data binding</em> a la propiedad <code>content</code> (en Angular 2,
+los <em>data binding</em> son unidireccionales por defecto y se declaran mediante
+corchetes en atributos de las etiquetas HTML). Cuando se cargue el controlador
+de la navegación, el componente referenciado por la variable <code>rootPage</code> será
+mostrada como la página principal de nuestra aplicación.</p>
+
+<p>En <code>www/app/app.js</code>, el componente raiz de la aplicación, <code>MyApp</code>, especifica
+dos propiedades: <code>pages</code> y <code>rootPage</code></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>import {App, IonicApp, IonicPlatform} from 'ionic/ionic';
+</span><span class='line'>import {HelloIonicPage} from './hello-ionic/hello-ionic';
+</span><span class='line'>import {ListPage} from './list/list';
+</span><span class='line'>// ...
+</span><span class='line'>class MyApp {
+</span><span class='line'>  constructor(app: IonicApp, platform: IonicPlatform) {
+</span><span class='line'>    // set up our app
+</span><span class='line'>    // ...
+</span><span class='line'>
+</span><span class='line'>    // set our app's pages
+</span><span class='line'>    this.pages = [
+</span><span class='line'>      { title: 'Hello Ionic', component: HelloIonicPage },
+</span><span class='line'>      { title: 'My First List', component: ListPage }
+</span><span class='line'>    ];
+</span><span class='line'>
+</span><span class='line'>    // make HelloIonicPage the root page
+</span><span class='line'>    this.rootPage = HelloIonicPage;
+</span><span class='line'>  }
+</span><span class='line'>  // ...
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Cómo se crea un página</h2>
+
+<p>El componente <code>HelloIonicPage</code> se define en el fichero
+<code>www/hello-ionic/hello-ionic.js</code>. Contiene un decorador <code>@Page</code>, proporcionado
+por Ionic, y su nombre lo dice todo. Este componente crea una página Ionic, que
+consta de un componente y una vista de Angular 2.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>import {Page, NavController} from 'ionic/ionic';
+</span><span class='line'>
+</span><span class='line'>@Page({
+</span><span class='line'>  templateUrl: 'app/hello-ionic/hello-ionic.html'
+</span><span class='line'>})
+</span><span class='line'>export class HelloIonicPage {
+</span><span class='line'>  constructor(nav: NavController) {
+</span><span class='line'>    this.nav = nav;
+</span><span class='line'>  }
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Cada página se compone de un componente JavaScript y de una plantilla HTML.
+Veamos ésta última:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;ion-navbar *navbar&gt;
+</span><span class='line'>  &lt;a menu-toggle&gt;&lt;icon menu /&gt;&lt;/a&gt;
+</span><span class='line'>  &lt;ion-title&gt;Hello Ionic&lt;/ion-title&gt;
+</span><span class='line'>&lt;/ion-navbar&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;ion-content&gt;
+</span><span class='line'>  &lt;h3&gt;Welcome to your first Ionic app!&lt;/h3&gt;
+</span><span class='line'>  &lt;p&gt;
+</span><span class='line'>    ...
+</span><span class='line'>  &lt;/p&gt;
+</span><span class='line'>&lt;/ion-content&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>La etiqueta <code>&lt;ion-navbar *navbar&gt;</code> funciona como configuración para la barra de navegación. Es quien incluye los botones a mostrar en dicha barra, así como el título.</p>
+
+<h2>Navegando entre páginas</h2>
+
+<p>La otra página, <code>ListPage</code>, contiene una lista de elementos que el usuario
+puede tocar (o hacer click) para acceder a ellas. Dicha página está definida en
+el archivo <code>www/app/list/list.js</code>.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>import {IonicApp, Page, NavController, NavParams} from 'ionic/ionic';
+</span><span class='line'>
+</span><span class='line'>@Page({
+</span><span class='line'>  templateUrl: 'app/list/list.html'
+</span><span class='line'>})
+</span><span class='line'>export class ListPage {
+</span><span class='line'>  constructor(app: IonicApp, nav: NavController, navParams: NavParams) {
+</span><span class='line'>    this.nav = nav;
+</span><span class='line'>    // ...
+</span><span class='line'>   }
+</span><span class='line'>
+</span><span class='line'>   itemTapped(event, item) {
+</span><span class='line'>     // ...
+</span><span class='line'>   }
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>La plantilla de esta página, definida en <code>www/app/list/list.html</code>, es quien
+mostrará una lista de elementos. <code>*ng-for</code> es la sintaxis de Angular 2 para
+reproducir la misma funcionalidad que <code>ng-repeat</code> en AngularJS. El manejador
+del evento click se establece con <code>(click)=itemTapped(...)</code> (en Angular 2, se
+utilizan los paréntesis en atributos de las etiquetas HTML para establecer los
+manejadores de eventos). De esta forma, cada vez que el usuario toque/haga
+click en un elemento, el método <code>itemTapped</code> será llamado.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;ion-item *ng-for="#item of items" (click)="itemTapped($event, item)"&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Para navegar a una nueva página, se puede usar el componente <code>NavController</code>,
+también proporcionado por Ionic. Anteriormente, se ha almacenado una referencia
+a dicho componente en el atributo <code>nav</code> de <code>ListPage</code>.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>import {ItemDetailsPage} from '../item-details/item-details';
+</span><span class='line'>// ...
+</span><span class='line'>itemTapped(event, item) {
+</span><span class='line'>  this.nav.push(ItemDetailsPage, {
+</span><span class='line'>    item: item
+</span><span class='line'>  });
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>La navegación en Ionic funciona como una <em>pila</em> (o <em>stack</em>), donde podemos poner (<code>push</code>)
+o quitar (<code>pop</code>) páginas de la pila.</p>
+
+<h2>¿Y ahora qué?</h2>
+
+<p>Ya tenemos una estructura muy básica para el proyecto, y ya sabemos cómo crear
+páginas y cómo funciona la navegación en Ionic 2. El siguiente paso se me
+ocurre que podría ser incluir las herramientas y la estrutura necesaria para
+poder incluir tests en nuestro proyecto. Lo siento si te parece una lata, pero
+creo que los tests son una herramienta imprescindible en cualquier proyecto,
+sea de la embergadura que sea. Considero que los tests son básicos para tener
+un mínimo de calidad en cualquier proyecto software.</p>
+
+<h2>Referencias</h2>
+
+<ul>
+<li>Documentación sobre <a href="http://ionicframework.com/docs/v2/components">componentes de Ionic 2</a></li>
+<li>Documentación sobre <a href="http://ionicframework.com/docs/v2/platform">el API de dispositivos de Ionic 2</a></li>
+<li><a href="http://ionicframework.com/docs/v2/resources/">Recursos</a>, en general, de Ionic 2</li>
+<li><a href="https://angular.io/docs/ts/latest/testing/">Tests en Angular 2</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Soft skills]]></title>
@@ -76,6 +428,14 @@ sé, no le cogí el punto. Aún así, en general, me parece un libro bastante re
 
 <h3>Qué he aprendido</h3>
 
+<p>Casi todo el libro habla de ponerse objetivos, de establecer metas intermedias
+y de hacer seguimiento, de empezar poco a poco, de ser constante, y de trabajar
+duro. Conceptos aplicables a cualquier aspecto de la vida. Cuando habla de
+objetivos, éstos pueden estar formados por tareas demasiado grandes, que
+parece imposible de realizar. El truco está en dividir esa gran tarea en tareas
+secuenciales más pequeñas. Lo más importante aquí es la palabra
+<strong>secuenciales</strong>.</p>
+
 <p>Cómo hackear una entrevista de trabajo: la idea es no tener que mandar
 currículums a las empresas, si no que ellas te contacten. Te contacten porque
 han tenido noticias tuyas de alguien <em>de dentro</em>. Para ello, deberás establecer
@@ -115,12 +475,6 @@ lo largo de mucho tiempo, por ejemplo, a la hora de hacer ejercicio. La idea es
 crear una cuota de cuánto hay que conseguir tener hecho para un determinado
 período de tiempo. Por ejemplo: salir a correr 3 veces por semana, o hacer
 100km en bicicleta cada semana, o leer 3 artículos técnicos al mes.</p>
-
-<p>El concepto de meta, de objetivo, está presente a lo largo de todo el libro.
-Tus objectivos pueden estar formados por tareas demasiado grandes, que parece
-imposible de realizar. El truco está en dividir esa gran tarea en tareas
-secuenciales más pequeñas. Lo más importante aquí es la palabra
-<strong>secuenciales</strong>.</p>
 
 <h3>Frases que me gustaría recordar</h3>
 
@@ -2268,169 +2622,6 @@ mente todos esos detalles. Nuestra memoria trabaja peor bajo condiciones
 de miedo o estrés. Refactorizar pone a salvo muchos de estos detalles,
 permitiéndonos trabajar más relajadamente y más confiados en que estamos
 haciendo un buen trabajo.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Escribir y ejecutar tests de Mocha en ECMAScript 6]]></title>
-    <link href="http://rchavarria.github.io/blog/2015/07/05/escribir-tests-mocha-es6/"/>
-    <updated>2015-07-05T21:59:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2015/07/05/escribir-tests-mocha-es6</id>
-    <content type="html"><![CDATA[<p>Me gusta resolver puzzles, pero no puzzles de miles de piezas, si no más bien el
-tipo de puzzle en el que hay unas piezas de madera encajadas y hay que desencajarlas,
-o en el que hay una cuerdecita con una bola y tienes que sacar la bola y volverla
-a meter. Ese tipo de puzzles.</p>
-
-<p>Creo que de ahí me viene también el gusto de resolver pequeños problemas de
-programación. Me gusta programar. Me gusta aprender. Y qué mejor para aprender
-que practicar. En el mundo de la programación existe un concepto llamado
-<a href="https://en.wikipedia.org/wiki/Kata_%28programming%29">kata</a> (el concepto ha sido copiado de las artes marciales), el cual significa
-la realización de pequeños ejercicios focalizados en la solución a un pequeño
-problema muy concreto. Así que me gusta realizar katas de vez en cuando en algún
-lenguaje de programación, para practicar.</p>
-
-<!-- more -->
-
-
-<p>Hace un tiempo publiqué un tutorial sobre <a href="http://rchavarria.github.io/blog/2014/09/24/plantilla-para-modulos-nodejs">cómo crear un módulo NodeJS</a>, el cual
-me servía de base para realizar algunas de estas katas. En este artículo me
-gustaría llevarlo un poco más allá. A ese proyecto, a esa plantilla, voy a
-añadirle lo siguiente:</p>
-
-<ul>
-<li><a href="http://babeljs.io">Babel</a>: voy a añadir un paso en la construcción del proyecto y ejecución de los
-tests, voy a transpilar código JavaScript ECMAScript 6 a ECMAScript 5. Esto me
-permite practicar con la nueva versión de JavaScript.</li>
-<li><a href="http://eslint.org">ESLint</a>: estoy convencido de que este tipo de herramientas ayudan en el día a
-día en el desarrollo con JavaScript. Me ayudan a detectar errores tontos a la
-hora de escribir mi código.</li>
-<li><a href="https://travis-ci.org">Travis CI</a>: todos los tests serán ejecutados en un servidor de integración
-contínua, para eliminar para siempre la excusa de <em>En mi ordenador funciona</em></li>
-</ul>
-
-
-<p>Si quieres dejarte de tonterías y ver todo montado ya y empezar a usar todo ello,
-puedes echar un vistazo a el repositorio <a href="https://github.com/rchavarria/solveet-exercises-js">solveet-exercises-js</a> y jugar con
-él.</p>
-
-<h2>Babel</h2>
-
-<p><a href="http://babeljs.io">Babel</a> es una herramienta para transformar código escrito en ECMAScript 6 en
-código ECMAScript 5, es decir, para transformar código JavaScript de una versión
-que todavía no está soportada completamente por los navegadores a una versión
-que sí lo está.</p>
-
-<p>Instalarlo es sencillísimo mediante <code>npm</code>:</p>
-
-<pre><code>npm install --save-dev babel gulp-babel
-</code></pre>
-
-<p>Con este comando instalaremos la herramienta en sí, y un plugin para <code>gulp</code> que
-nos permitirá usar Babel desde nuestro script Gulp. Modificaremos este script
-para que transforme nuestro código justo antes de ejecutar nuestros tests:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">return</span> <span class="nx">gulp</span>
-</span><span class='line'>        <span class="p">.</span><span class="nx">src</span><span class="p">([</span> <span class="s1">&#39;test/bootstrap.js&#39;</span><span class="p">,</span> <span class="s1">&#39;test/scripts/**/*.js&#39;</span> <span class="p">])</span>
-</span><span class='line'>        <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">mocha</span><span class="p">({</span>
-</span><span class='line'>            <span class="nx">reporter</span><span class="o">:</span> <span class="s1">&#39;spec&#39;</span><span class="p">,</span>
-</span><span class='line'>            <span class="nx">compilers</span><span class="o">:</span> <span class="s1">&#39;js:babel/register&#39;</span>  <span class="c1">// tell mocha to compile with babel</span>
-</span><span class='line'>        <span class="p">}));</span>
-</span><span class='line'><span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>La parte diferente de otras configuraciones para lanzar los tests con mocha es
-la parte donde configuramos mocha para que use Babel como compilador de código
-JavaScript.</p>
-
-<h2>ESLint</h2>
-
-<p><a href="http://eslint.org">ESLint</a> es una herramienta que analiza nuestro código JavaScript y nos avisa de
-violaciones de reglas que tengamos configuradas. Estas reglas nos permiten
-definir patrones para detectar posibles fallos en nuestro código así como forzar
-a que todos los integrantes de nuestro equipo sigan el mismo estilo de programación.</p>
-
-<p>También utilizaremos <code>npm</code> para instalarlo, esta vez instalaremos solamente el
-plugin de <code>gulp</code>, que como depende de ESLint directamente, éste se instalará
-automáticamente:</p>
-
-<pre><code>npm install --save-dev gulp-eslint
-</code></pre>
-
-<p>Y podemos crear una nueva tarea en gulp para analizar nuestro código:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">&#39;eslint&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>    <span class="k">return</span> <span class="nx">gulp</span>
-</span><span class='line'>        <span class="p">.</span><span class="nx">src</span><span class="p">([</span> <span class="s1">&#39;gulpfile.js&#39;</span><span class="p">,</span> <span class="s1">&#39;src/scripts/**/*.js&#39;</span><span class="p">,</span> <span class="s1">&#39;test/scripts/**/*.js&#39;</span> <span class="p">])</span>
-</span><span class='line'>        <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">eslint</span><span class="p">())</span>
-</span><span class='line'>        <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">eslint</span><span class="p">.</span><span class="nx">format</span><span class="p">())</span>
-</span><span class='line'>        <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">eslint</span><span class="p">.</span><span class="nx">failOnError</span><span class="p">());</span>
-</span><span class='line'><span class="p">});</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Ahora, si queremos analizar todo nuestro código antes de lanzar nuestros tests,
-podemos hacer que la tarea <code>test</code> dependa de la nueva tarea <code>eslint</code>:</p>
-
-<pre><code>gulp.task('test', [ 'eslint' ], function () {
-    // ...
-}
-</code></pre>
-
-<p>El siguiente paso es configurar ESLint. Hay infinidad de reglas, incluso podemos
-definir las nuestras propias. Para comenzar, puedes echar un vistazo a un
-fichero <a href="https://raw.githubusercontent.com/rchavarria/solveet-exercises-js/master/.eslintrc"><code>.eslintrc</code> de ejemplo</a>.</p>
-
-<h2>Travis CI</h2>
-
-<p><a href="https://travis-ci.org">Travis CI</a> es una herramienta de integración contínua. La herramienta recupera
-nuestro código del repositorio de GitHub que le digamos y ejecuta todos los
-tests.</p>
-
-<p>Para ello debemos darnos de alta en la página. Podemos hacerlo con nuestra
-cuenta de GitHub. Luego, podemos ir a nuestro perfil e indicar a Travis CI
-qué repositorios debe <em>vigilar</em> para ejecutar los tests cada vez que hagamos
-un push al repositorio.</p>
-
-<p>Debemos indicar a Travis CI qué lenguaje y plataforma queremos testear, en
-nuestro caso se trata de NodeJS. Como configuración, añadimos simplemente un
-fichero llamado <code>.travis.yml</code> en el directorio raiz del proyecto con este
-contenido:</p>
-
-<pre><code>language: node_js
-node_js:
-    - "0.12"
-</code></pre>
-
-<p>De esta forma, cuando hagamos un push a nuestro repositorio en GitHub, Travis CI
-recuperará el código, instalará paquetes Node con <code>npm</code> y ejecutará el comando
-<code>npm test</code>.</p>
-
-<p>Para que Travis CI lanze nuestros tests, debemos configurar la respuesta al
-comando <code>npm test</code>. Para ello, modificaremos el fichero <code>package.json</code>:</p>
-
-<pre><code>//...
-"scripts": {
-    "test": "gulp test"
-},
-//...
-</code></pre>
 ]]></content>
   </entry>
   

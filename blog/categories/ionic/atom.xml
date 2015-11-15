@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ionic | R. Chavarria's Blog]]></title>
+  <link href="http://rchavarria.github.io/blog/categories/ionic/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.io/"/>
+  <updated>2015-11-15T23:20:26+01:00</updated>
+  <id>http://rchavarria.github.io/</id>
+  <author>
+    <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Aprendiendo Ionic 2]]></title>
+    <link href="http://rchavarria.github.io/blog/2015/11/15/aprendiendo-ionic-2/"/>
+    <updated>2015-11-15T22:49:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2015/11/15/aprendiendo-ionic-2</id>
+    <content type="html"><![CDATA[<p>Recientemente se ha celebrado la conferencia <a href="http://angularconnect.com/">Angular Connect</a> en Londres,
+donde se ha hablado mucho de <a href="https://angular.io/">Angular 2</a>, framework de desarrollo de
+aplicaciones web en el que estoy muy interesado (de hecho estoy desarrollando
+una pequeña aplicación para diversión de mi hijo, <a href="https://play.google.com/store/apps/details?id=es.rchavarria.englishbyeinar">English by Einar</a>). También
+estoy enteresado en el framework <a href="http://ionicframework.com/">Ionic</a>, que aúna los proyectos de Angular y
+<a href="http://cordova.apache.org/">Cordova</a> y que permite desarrollar aplicaciones para móviles con herramientas
+de desarrollo web: HTML5, CSS3 y JavaScript.</p>
+
+<p>En dicha conferencia se hizo público la versión alpha de <a href="http://ionicframework.com/docs/v2/">Ionic 2</a>, la versión
+de Ionic que incluye la nueva versión de Angular. Ionic es un framework para
+desarrollo de aplicaciones cliente móviles híbridas con tecnologías web y en su
+versión 2 siguen con la filosofía de estar muy preocupados por el rendimiento.
+En este post veremos lo realmente fácil que es comenzar a desarrollar con estas
+herrmientas.</p>
+
+<p><img class="center" src="/images/2015/ionic-framework.jpg" width="350" height="185" title="Ionic Framework" ></p>
+
+<!-- more -->
+
+
+<h2>Requisitos</h2>
+
+<p>Ionic se apoya en Cordova y en las plataformas de desarrollo nativas
+dependiendo de la plataforma móvil en la que estemos enfocados, normalmente
+Android o iOS. Antes de comenzar a desarrollar con él deberemos actualizar a
+las versiones más modernas posibles, ya que la versión alpha de Ionic 2
+requiere de los últimos avances.</p>
+
+<p>En mi caso particular, he necesitado actualizar mi SDK de Android para Linux:</p>
+
+<p><code>
+rchavarria@home$ ./AndroidSDK/tools/android sdk
+</code></p>
+
+<p>para abrir la interfaz gráfica y poder actualizar algunos paquetes del SDK.</p>
+
+<p>Y también he necesitado actualizar las versiones de NodeJS (a través de <code>nvm</code>,
+Node Version Manager), la herramienta <code>npm</code> y Cordova:</p>
+
+<p><code>
+rchavarria@home$ nvm install v5.0.0
+rchavarria@home$ npm install -g npm
+rchavarria@home$ npm install -g cordova@5.3.3
+</code></p>
+
+<p>Por último, instalar la versión alpha de Ionic 2. No temas, no hay peligro de
+romper proyectos desarrollados con la versión 1 de Ionic.</p>
+
+<p><code>
+rchavarria@home$ npm install -g ionic@alpha
+</code></p>
+
+<h2>Creación del primer proyecto</h2>
+
+<p>Para mi primer proyecto he usado una plantilla desarrollada por la gente de
+Ionic, <a href="https://github.com/driftyco/ionic2-starter-tutorial">tutorial</a>. Estas plantillas permiten tener una aplicación muy básica
+funcionando en unos minutos. Esta plantilla contiene un menú deslizante
+lateral, pero hay otras muchas plantillas. Crear el proyecto es un simple
+comando:</p>
+
+<p><code>
+rchavarria@home$ ionic start MyFirstIonic2Project tutorial --v2
+</code></p>
+
+<p>Este comando descarga la plantilla indicada, <code>tutorial</code>, instala dependencias
+de NodeJS y nos deja el proyecto listo para ser ejecutado. De hecho, para poder
+probarlo en un navegador, basta con escribir los comandos:</p>
+
+<p><code>
+rchavarria@home$ cd MyFirstIonic2Project
+rchavarria@home$ ionic serve
+</code></p>
+
+<h2>Estructura del proyecto</h2>
+
+<p>Prácticamente todos los ficheros de la aplicación están localizados en el
+directorio <code>www</code>, como en todo proyecto de Cordova.</p>
+
+<p>El punto de entrada principal es <code>www/index.html</code>. Como página principal, carga
+los ficheros CSS, incluye los JavaScript y arranca la aplicación. Ionic busca
+una etiqueta <code>ion-app</code> dentro de esta primera página HTML.</p>
+
+<p>Todo el código JavaScript que se encuentra en el directorio <code>www/app</code> se
+transpila a la versión correcta de JavaScript que soporte el navegador para el
+que está dirigida la aplicación. En este directorio podremos encontrar código
+tanto TypeScript como ECMAScript 2015.</p>
+
+<p>En el archivo <code>www/app/app.js</code> podemos encontrar la entrada a nuestra
+aplicación. Crea un component con el decorador <code>@App</code>, componente necesario
+para toda aplicación Ionic.</p>
+
+<p><code>
+@App({
+  templateUrl: 'app/app.html'
+})
+class MyApp {
+//...
+}
+</code></p>
+
+<p>El código de <code>@App</code> configura el archivo <code>www/app/app.html</code> como plantilla para
+la aplicacion. Veámoslo:</p>
+
+<p>```
+<ion-menu [content]="content"></p>
+
+<p>  <ion-content></p>
+
+<pre><code>&lt;ion-list&gt;
+  &lt;button ion-item *ng-for="#p of pages" (click)="openPage(p)"&gt;
+  &lt;/button&gt;
+&lt;/ion-list&gt;
+</code></pre>
+
+<p>  </ion-content></p>
+
+<p></ion-menu></p>
+
+<p><ion-nav id="nav" [root]="rootPage" #content swipe-back-enabled="false"></ion-nav>
+```</p>
+
+<p>Esta plantilla define un menu bajo la etiqueta <code>ion-menu</code>, y un componente de
+navegación, <code>ion-nav</code>, ambos proporcionados por Ionic. <code>ion-menu</code> toma una
+propiedad para mostrar un contenido, <code>content</code>, la cual se la podemos
+proporcionar a través de la variable <code>#content</code> desde nuestro <code>ion-nav</code>.</p>
+
+<p><code>ion-nav</code> define un <em>data binding</em> a la propiedad <code>root</code> del componente, igual
+que <code>ion-menu</code> define un <em>data binding</em> a la propiedad <code>content</code> (en Angular 2,
+los <em>data binding</em> son unidireccionales por defecto y se declaran mediante
+corchetes en atributos de las etiquetas HTML). Cuando se cargue el controlador
+de la navegación, el componente referenciado por la variable <code>rootPage</code> será
+mostrada como la página principal de nuestra aplicación.</p>
+
+<p>En <code>www/app/app.js</code>, el componente raiz de la aplicación, <code>MyApp</code>, especifica
+dos propiedades: <code>pages</code> y <code>rootPage</code></p>
+
+<p>```
+import {App, IonicApp, IonicPlatform} from 'ionic/ionic';
+import {HelloIonicPage} from './hello-ionic/hello-ionic';
+import {ListPage} from './list/list';
+// ...
+class MyApp {
+  constructor(app: IonicApp, platform: IonicPlatform) {</p>
+
+<pre><code>// set up our app
+// ...
+
+// set our app's pages
+this.pages = [
+  { title: 'Hello Ionic', component: HelloIonicPage },
+  { title: 'My First List', component: ListPage }
+];
+
+// make HelloIonicPage the root page
+this.rootPage = HelloIonicPage;
+</code></pre>
+
+<p>  }
+  // ...
+}
+```</p>
+
+<h2>Cómo se crea un página</h2>
+
+<p>El componente <code>HelloIonicPage</code> se define en el fichero
+<code>www/hello-ionic/hello-ionic.js</code>. Contiene un decorador <code>@Page</code>, proporcionado
+por Ionic, y su nombre lo dice todo. Este componente crea una página Ionic, que
+consta de un componente y una vista de Angular 2.</p>
+
+<p>```
+import {Page, NavController} from 'ionic/ionic';</p>
+
+<p>@Page({
+  templateUrl: 'app/hello-ionic/hello-ionic.html'
+})
+export class HelloIonicPage {
+  constructor(nav: NavController) {</p>
+
+<pre><code>this.nav = nav;
+</code></pre>
+
+<p>  }
+}
+```</p>
+
+<p>Cada página se compone de un componente JavaScript y de una plantilla HTML.
+Veamos ésta última:</p>
+
+<p>```
+<ion-navbar *navbar>
+  <a menu-toggle><icon menu /></a>
+  <ion-title>Hello Ionic</ion-title>
+</ion-navbar></p>
+
+<p><ion-content>
+  <h3>Welcome to your first Ionic app!</h3>
+  <p></p>
+
+<pre><code>...
+</code></pre>
+
+<p>  </p>
+</ion-content>
+```</p>
+
+<p>La etiqueta <code>&lt;ion-navbar *navbar&gt;</code> funciona como configuración para la barra de navegación. Es quien incluye los botones a mostrar en dicha barra, así como el título.</p>
+
+<h2>Navegando entre páginas</h2>
+
+<p>La otra página, <code>ListPage</code>, contiene una lista de elementos que el usuario
+puede tocar (o hacer click) para acceder a ellas. Dicha página está definida en
+el archivo <code>www/app/list/list.js</code>.</p>
+
+<p>```
+import {IonicApp, Page, NavController, NavParams} from 'ionic/ionic';</p>
+
+<p>@Page({
+  templateUrl: 'app/list/list.html'
+})
+export class ListPage {
+  constructor(app: IonicApp, nav: NavController, navParams: NavParams) {</p>
+
+<pre><code>this.nav = nav;
+// ...
+</code></pre>
+
+<p>   }</p>
+
+<p>   itemTapped(event, item) {</p>
+
+<pre><code> // ...
+</code></pre>
+
+<p>   }
+}
+```</p>
+
+<p>La plantilla de esta página, definida en <code>www/app/list/list.html</code>, es quien
+mostrará una lista de elementos. <code>*ng-for</code> es la sintaxis de Angular 2 para
+reproducir la misma funcionalidad que <code>ng-repeat</code> en AngularJS. El manejador
+del evento click se establece con <code>(click)=itemTapped(...)</code> (en Angular 2, se
+utilizan los paréntesis en atributos de las etiquetas HTML para establecer los
+manejadores de eventos). De esta forma, cada vez que el usuario toque/haga
+click en un elemento, el método <code>itemTapped</code> será llamado.</p>
+
+<p><code>
+&lt;ion-item *ng-for="#item of items" (click)="itemTapped($event, item)"&gt;
+</code></p>
+
+<p>Para navegar a una nueva página, se puede usar el componente <code>NavController</code>,
+también proporcionado por Ionic. Anteriormente, se ha almacenado una referencia
+a dicho componente en el atributo <code>nav</code> de <code>ListPage</code>.</p>
+
+<p>```
+import {ItemDetailsPage} from '../item-details/item-details';
+// ...
+itemTapped(event, item) {
+  this.nav.push(ItemDetailsPage, {</p>
+
+<pre><code>item: item
+</code></pre>
+
+<p>  });
+}
+```</p>
+
+<p>La navegación en Ionic funciona como una <em>pila</em> (o <em>stack</em>), donde podemos poner (<code>push</code>)
+o quitar (<code>pop</code>) páginas de la pila.</p>
+
+<h2>¿Y ahora qué?</h2>
+
+<p>Ya tenemos una estructura muy básica para el proyecto, y ya sabemos cómo crear
+páginas y cómo funciona la navegación en Ionic 2. El siguiente paso se me
+ocurre que podría ser incluir las herramientas y la estrutura necesaria para
+poder incluir tests en nuestro proyecto. Lo siento si te parece una lata, pero
+creo que los tests son una herramienta imprescindible en cualquier proyecto,
+sea de la embergadura que sea. Considero que los tests son básicos para tener
+un mínimo de calidad en cualquier proyecto software.</p>
+
+<h2>Referencias</h2>
+
+<ul>
+<li>Documentación sobre <a href="http://ionicframework.com/docs/v2/components">componentes de Ionic 2</a></li>
+<li>Documentación sobre <a href="http://ionicframework.com/docs/v2/platform">el API de dispositivos de Ionic 2</a></li>
+<li><a href="http://ionicframework.com/docs/v2/resources/">Recursos</a>, en general, de Ionic 2</li>
+<li><a href="https://angular.io/docs/ts/latest/testing/">Tests en Angular 2</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

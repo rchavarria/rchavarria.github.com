@@ -1,0 +1,621 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Aprendiendo Ionic 2 - R. Chavarria's Blog</title>
+  <meta name="author" content="Rub&eacute;n Chavarr&iacute;a">
+
+  
+  <meta name="description" content="Recientemente se ha celebrado la conferencia Angular Connect en Londres,
+donde se ha hablado mucho de Angular 2, framework de desarrollo de &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://rchavarria.github.io/blog/2015/11/15/aprendiendo-ionic-2/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="R. Chavarria's Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36829645-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">R. Chavarria's Blog</a></h1>
+  
+    <h2>Proud of developing software, proud of being an Engineer</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:rchavarria.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archivos</a></li>
+  <li><a href="/readings">Lista de lectura</a></li>
+  <li><a href="/pet-projects">Proyectos</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Aprendiendo Ionic 2</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-11-15T22:49:00+01:00" pubdate data-updated="true">Nov 15<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Recientemente se ha celebrado la conferencia <a href="http://angularconnect.com/">Angular Connect</a> en Londres,
+donde se ha hablado mucho de <a href="https://angular.io/">Angular 2</a>, framework de desarrollo de
+aplicaciones web en el que estoy muy interesado (de hecho estoy desarrollando
+una pequeña aplicación para diversión de mi hijo, <a href="https://play.google.com/store/apps/details?id=es.rchavarria.englishbyeinar">English by Einar</a>). También
+estoy enteresado en el framework <a href="http://ionicframework.com/">Ionic</a>, que aúna los proyectos de Angular y
+<a href="http://cordova.apache.org/">Cordova</a> y que permite desarrollar aplicaciones para móviles con herramientas
+de desarrollo web: HTML5, CSS3 y JavaScript.</p>
+
+<p>En dicha conferencia se hizo público la versión alpha de <a href="http://ionicframework.com/docs/v2/">Ionic 2</a>, la versión
+de Ionic que incluye la nueva versión de Angular. Ionic es un framework para
+desarrollo de aplicaciones cliente móviles híbridas con tecnologías web y en su
+versión 2 siguen con la filosofía de estar muy preocupados por el rendimiento.
+En este post veremos lo realmente fácil que es comenzar a desarrollar con estas
+herrmientas.</p>
+
+<p><img class="center" src="/images/2015/ionic-framework.jpg" width="350" height="185" title="Ionic Framework" ></p>
+
+<!-- more -->
+
+
+<h2>Requisitos</h2>
+
+<p>Ionic se apoya en Cordova y en las plataformas de desarrollo nativas
+dependiendo de la plataforma móvil en la que estemos enfocados, normalmente
+Android o iOS. Antes de comenzar a desarrollar con él deberemos actualizar a
+las versiones más modernas posibles, ya que la versión alpha de Ionic 2
+requiere de los últimos avances.</p>
+
+<p>En mi caso particular, he necesitado actualizar mi SDK de Android para Linux:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rchavarria@home$ ./AndroidSDK/tools/android sdk</span></code></pre></td></tr></table></div></figure>
+
+
+<p>para abrir la interfaz gráfica y poder actualizar algunos paquetes del SDK.</p>
+
+<p>Y también he necesitado actualizar las versiones de NodeJS (a través de <code>nvm</code>,
+Node Version Manager), la herramienta <code>npm</code> y Cordova:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rchavarria@home$ nvm install v5.0.0
+</span><span class='line'>rchavarria@home$ npm install -g npm
+</span><span class='line'>rchavarria@home$ npm install -g cordova@5.3.3</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Por último, instalar la versión alpha de Ionic 2. No temas, no hay peligro de
+romper proyectos desarrollados con la versión 1 de Ionic.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rchavarria@home$ npm install -g ionic@alpha</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Creación del primer proyecto</h2>
+
+<p>Para mi primer proyecto he usado una plantilla desarrollada por la gente de
+Ionic, <a href="https://github.com/driftyco/ionic2-starter-tutorial">tutorial</a>. Estas plantillas permiten tener una aplicación muy básica
+funcionando en unos minutos. Esta plantilla contiene un menú deslizante
+lateral, pero hay otras muchas plantillas. Crear el proyecto es un simple
+comando:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rchavarria@home$ ionic start MyFirstIonic2Project tutorial --v2</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Este comando descarga la plantilla indicada, <code>tutorial</code>, instala dependencias
+de NodeJS y nos deja el proyecto listo para ser ejecutado. De hecho, para poder
+probarlo en un navegador, basta con escribir los comandos:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rchavarria@home$ cd MyFirstIonic2Project
+</span><span class='line'>rchavarria@home$ ionic serve</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Estructura del proyecto</h2>
+
+<p>Prácticamente todos los ficheros de la aplicación están localizados en el
+directorio <code>www</code>, como en todo proyecto de Cordova.</p>
+
+<p>El punto de entrada principal es <code>www/index.html</code>. Como página principal, carga
+los ficheros CSS, incluye los JavaScript y arranca la aplicación. Ionic busca
+una etiqueta <code>ion-app</code> dentro de esta primera página HTML.</p>
+
+<p>Todo el código JavaScript que se encuentra en el directorio <code>www/app</code> se
+transpila a la versión correcta de JavaScript que soporte el navegador para el
+que está dirigida la aplicación. En este directorio podremos encontrar código
+tanto TypeScript como ECMAScript 2015.</p>
+
+<p>En el archivo <code>www/app/app.js</code> podemos encontrar la entrada a nuestra
+aplicación. Crea un component con el decorador <code>@App</code>, componente necesario
+para toda aplicación Ionic.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>@App({
+</span><span class='line'>  templateUrl: 'app/app.html'
+</span><span class='line'>})
+</span><span class='line'>class MyApp {
+</span><span class='line'>//...
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>El código de <code>@App</code> configura el archivo <code>www/app/app.html</code> como plantilla para
+la aplicacion. Veámoslo:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;ion-menu [content]="content"&gt;
+</span><span class='line'>
+</span><span class='line'>  &lt;ion-content&gt;
+</span><span class='line'>    &lt;ion-list&gt;
+</span><span class='line'>      &lt;button ion-item *ng-for="#p of pages" (click)="openPage(p)"&gt;
+</span><span class='line'>      &lt;/button&gt;
+</span><span class='line'>    &lt;/ion-list&gt;
+</span><span class='line'>  &lt;/ion-content&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;/ion-menu&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;ion-nav id="nav" [root]="rootPage" #content swipe-back-enabled="false"&gt;&lt;/ion-nav&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Esta plantilla define un menu bajo la etiqueta <code>ion-menu</code>, y un componente de
+navegación, <code>ion-nav</code>, ambos proporcionados por Ionic. <code>ion-menu</code> toma una
+propiedad para mostrar un contenido, <code>content</code>, la cual se la podemos
+proporcionar a través de la variable <code>#content</code> desde nuestro <code>ion-nav</code>.</p>
+
+<p><code>ion-nav</code> define un <em>data binding</em> a la propiedad <code>root</code> del componente, igual
+que <code>ion-menu</code> define un <em>data binding</em> a la propiedad <code>content</code> (en Angular 2,
+los <em>data binding</em> son unidireccionales por defecto y se declaran mediante
+corchetes en atributos de las etiquetas HTML). Cuando se cargue el controlador
+de la navegación, el componente referenciado por la variable <code>rootPage</code> será
+mostrada como la página principal de nuestra aplicación.</p>
+
+<p>En <code>www/app/app.js</code>, el componente raiz de la aplicación, <code>MyApp</code>, especifica
+dos propiedades: <code>pages</code> y <code>rootPage</code></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>import {App, IonicApp, IonicPlatform} from 'ionic/ionic';
+</span><span class='line'>import {HelloIonicPage} from './hello-ionic/hello-ionic';
+</span><span class='line'>import {ListPage} from './list/list';
+</span><span class='line'>// ...
+</span><span class='line'>class MyApp {
+</span><span class='line'>  constructor(app: IonicApp, platform: IonicPlatform) {
+</span><span class='line'>    // set up our app
+</span><span class='line'>    // ...
+</span><span class='line'>
+</span><span class='line'>    // set our app's pages
+</span><span class='line'>    this.pages = [
+</span><span class='line'>      { title: 'Hello Ionic', component: HelloIonicPage },
+</span><span class='line'>      { title: 'My First List', component: ListPage }
+</span><span class='line'>    ];
+</span><span class='line'>
+</span><span class='line'>    // make HelloIonicPage the root page
+</span><span class='line'>    this.rootPage = HelloIonicPage;
+</span><span class='line'>  }
+</span><span class='line'>  // ...
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Cómo se crea un página</h2>
+
+<p>El componente <code>HelloIonicPage</code> se define en el fichero
+<code>www/hello-ionic/hello-ionic.js</code>. Contiene un decorador <code>@Page</code>, proporcionado
+por Ionic, y su nombre lo dice todo. Este componente crea una página Ionic, que
+consta de un componente y una vista de Angular 2.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>import {Page, NavController} from 'ionic/ionic';
+</span><span class='line'>
+</span><span class='line'>@Page({
+</span><span class='line'>  templateUrl: 'app/hello-ionic/hello-ionic.html'
+</span><span class='line'>})
+</span><span class='line'>export class HelloIonicPage {
+</span><span class='line'>  constructor(nav: NavController) {
+</span><span class='line'>    this.nav = nav;
+</span><span class='line'>  }
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Cada página se compone de un componente JavaScript y de una plantilla HTML.
+Veamos ésta última:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;ion-navbar *navbar&gt;
+</span><span class='line'>  &lt;a menu-toggle&gt;&lt;icon menu /&gt;&lt;/a&gt;
+</span><span class='line'>  &lt;ion-title&gt;Hello Ionic&lt;/ion-title&gt;
+</span><span class='line'>&lt;/ion-navbar&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;ion-content&gt;
+</span><span class='line'>  &lt;h3&gt;Welcome to your first Ionic app!&lt;/h3&gt;
+</span><span class='line'>  &lt;p&gt;
+</span><span class='line'>    ...
+</span><span class='line'>  &lt;/p&gt;
+</span><span class='line'>&lt;/ion-content&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>La etiqueta <code>&lt;ion-navbar *navbar&gt;</code> funciona como configuración para la barra de navegación. Es quien incluye los botones a mostrar en dicha barra, así como el título.</p>
+
+<h2>Navegando entre páginas</h2>
+
+<p>La otra página, <code>ListPage</code>, contiene una lista de elementos que el usuario
+puede tocar (o hacer click) para acceder a ellas. Dicha página está definida en
+el archivo <code>www/app/list/list.js</code>.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>import {IonicApp, Page, NavController, NavParams} from 'ionic/ionic';
+</span><span class='line'>
+</span><span class='line'>@Page({
+</span><span class='line'>  templateUrl: 'app/list/list.html'
+</span><span class='line'>})
+</span><span class='line'>export class ListPage {
+</span><span class='line'>  constructor(app: IonicApp, nav: NavController, navParams: NavParams) {
+</span><span class='line'>    this.nav = nav;
+</span><span class='line'>    // ...
+</span><span class='line'>   }
+</span><span class='line'>
+</span><span class='line'>   itemTapped(event, item) {
+</span><span class='line'>     // ...
+</span><span class='line'>   }
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>La plantilla de esta página, definida en <code>www/app/list/list.html</code>, es quien
+mostrará una lista de elementos. <code>*ng-for</code> es la sintaxis de Angular 2 para
+reproducir la misma funcionalidad que <code>ng-repeat</code> en AngularJS. El manejador
+del evento click se establece con <code>(click)=itemTapped(...)</code> (en Angular 2, se
+utilizan los paréntesis en atributos de las etiquetas HTML para establecer los
+manejadores de eventos). De esta forma, cada vez que el usuario toque/haga
+click en un elemento, el método <code>itemTapped</code> será llamado.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;ion-item *ng-for="#item of items" (click)="itemTapped($event, item)"&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Para navegar a una nueva página, se puede usar el componente <code>NavController</code>,
+también proporcionado por Ionic. Anteriormente, se ha almacenado una referencia
+a dicho componente en el atributo <code>nav</code> de <code>ListPage</code>.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>import {ItemDetailsPage} from '../item-details/item-details';
+</span><span class='line'>// ...
+</span><span class='line'>itemTapped(event, item) {
+</span><span class='line'>  this.nav.push(ItemDetailsPage, {
+</span><span class='line'>    item: item
+</span><span class='line'>  });
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>La navegación en Ionic funciona como una <em>pila</em> (o <em>stack</em>), donde podemos poner (<code>push</code>)
+o quitar (<code>pop</code>) páginas de la pila.</p>
+
+<h2>¿Y ahora qué?</h2>
+
+<p>Ya tenemos una estructura muy básica para el proyecto, y ya sabemos cómo crear
+páginas y cómo funciona la navegación en Ionic 2. El siguiente paso se me
+ocurre que podría ser incluir las herramientas y la estrutura necesaria para
+poder incluir tests en nuestro proyecto. Lo siento si te parece una lata, pero
+creo que los tests son una herramienta imprescindible en cualquier proyecto,
+sea de la embergadura que sea. Considero que los tests son básicos para tener
+un mínimo de calidad en cualquier proyecto software.</p>
+
+<h2>Referencias</h2>
+
+<ul>
+<li>Documentación sobre <a href="http://ionicframework.com/docs/v2/components">componentes de Ionic 2</a></li>
+<li>Documentación sobre <a href="http://ionicframework.com/docs/v2/platform">el API de dispositivos de Ionic 2</a></li>
+<li><a href="http://ionicframework.com/docs/v2/resources/">Recursos</a>, en general, de Ionic 2</li>
+<li><a href="https://angular.io/docs/ts/latest/testing/">Tests en Angular 2</a></li>
+</ul>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Rubén Chavarría</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-11-15T22:49:00+01:00" pubdate data-updated="true">Nov 15<span>th</span>, 2015</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/angular/'>angular</a>, <a class='category' href='/blog/categories/ionic/'>ionic</a>, <a class='category' href='/blog/categories/javascript/'>javascript</a>, <a class='category' href='/blog/categories/learning/'>learning</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rchavarria.github.io/blog/2015/11/15/aprendiendo-ionic-2/" data-via="rchavarriat" data-counturl="http://rchavarria.github.io/blog/2015/11/15/aprendiendo-ionic-2/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2015/11/08/soft-skills/" title="Previous Post: Soft skills">&laquo; Soft skills</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/11/15/aprendiendo-ionic-2/">Aprendiendo Ionic 2</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/11/08/soft-skills/">Soft skills</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/11/01/screencast-robot-name-exercism/">Screencast de programación: Robot name (exercism.io)</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/10/25/youve-got-commit/">You've got commit!</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/10/18/charla-tecnica-effective-learning-for-programmers/">Charla técnica: Effective learning for programmers</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("rchavarriat", 4, true);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/rchavarriat">@rchavarriat</a></p>
+  
+</section>
+
+
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/rchavarriat?count=5&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/rchavarriat">My Delicious Bookmarks &raquo;</a></p>
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Rub&eacute;n Chavarr&iacute;a -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'rchavarria-github-com';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://rchavarria.github.io/blog/2015/11/15/aprendiendo-ionic-2/';
+        var disqus_url = 'http://rchavarria.github.io/blog/2015/11/15/aprendiendo-ionic-2/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
