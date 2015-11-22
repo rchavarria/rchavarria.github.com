@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2015-11-15T23:20:26+01:00</updated>
+  <updated>2015-11-22T22:47:36+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,262 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Se aceptan mejoras]]></title>
+    <link href="http://rchavarria.github.io/blog/2015/11/22/se-aceptan-mejoras/"/>
+    <updated>2015-11-22T22:27:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2015/11/22/se-aceptan-mejoras</id>
+    <content type="html"><![CDATA[<p>Existe una cosa maravillosa en el mundo de open source, y es que personas que
+ni siquiera sabes que existen, usan tu trabajo, lo mejoran con el suyo, y te lo
+donan a tí para que otra gente se beneficie del trabajo de ambos.</p>
+
+<p><img class="left" src="http://rchavarria.github.io/images/2015/contribution.png"></p>
+
+<p>Imagina que tienes una librería y tienes una base de usuarios. Ningún software
+se adapta a todos sus usuarios, así que lo más seguro es que los usuarios de tu
+librería encuentren algún detalle que no encaja a la perfección con sus
+necesidades. ¿No sería incríble que tus propios usuarios mejoraran la librería y
+te dieran su trabajo así como les das tú el tuyo? Pues eso es lo que pasa
+precisamente con el open source.</p>
+
+<p>Y algo parecido pasa cuando contribuyes a algún proyecto open source. Tus
+contribuciones son usadas por los usuarios del proyecto. Y algunos de ellos
+proponen nuevas mejoras al proyecto. Quizá algunas de estas mejoras sean sobre
+el trabajo que tú has realizado. Gente que ni conoces está aportando su
+experiencia para mejorar tu trabajo. Hay que ser muy tonto para no aprovechar
+esta oportunidad para aprender.</p>
+
+<!-- more -->
+
+
+<p>Este artículo describe el proceso a seguir para aceptar mejoras en un proyecto
+publicado en <a href="https://github.com/">Github</a>, donde [<code>git</code>] es usada como herramienta de control de
+versiones. Estas mejoras son propuestas por usuarios externos al proyecto a
+través de <a href="https://help.github.com/articles/using-pull-requests/">Pull Requests</a> (o también PR). Github te ayuda a la hora de
+incorporar esas mejoras a tu proyecto, pero hacerlo así deja la historia de tu
+control de versiones hecha unos zorros (en <a href="http://blog.differential.com/best-way-to-merge-a-github-pull-request/">Best way to merge a pull request</a>
+lo cuentan más detalladamente).</p>
+
+<p>Ésta es la secuencia de comandos mediante los cuales se incoroporarían los
+cambios propuestos en un Pull Request con número <code>pr-number</code> desde una rama
+creada por el autor llamada <code>user-working-branch</code>:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rchavarria@proyect$ git checkout master
+</span><span class='line'>rchavarria@proyect$ git fetch origin
+</span><span class='line'>rchavarria@proyect$ git reset --hard origin/master
+</span><span class='line'>
+</span><span class='line'>rchavarria@proyect$ git fetch origin refs/pull/&lt;pr-number&gt;/head
+</span><span class='line'>rchavarria@proyect$ git checkout -b &lt;user-working-branch&gt; FETCH_HEAD
+</span><span class='line'>rchavarria@proyect$ git rebase master
+</span><span class='line'>
+</span><span class='line'>rchavarria@proyect$ git checkout master
+</span><span class='line'>rchavarria@proyect$ git merge --no-ff &lt;user-working-branch&gt;
+</span><span class='line'>rchavarria@proyect$ git push origin master</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Limpiar el espacio de trabajo</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rchavarria@proyect$ git checkout master
+</span><span class='line'>Already on 'master'
+</span><span class='line'>Your branch is up-to-date with 'origin/master'.
+</span><span class='line'>rchavarria@proyect$ git fetch origin
+</span><span class='line'>remote: Counting objects: 66, done.
+</span><span class='line'>remote: Compressing objects: 100% (43/43), done.
+</span><span class='line'>remote: Total 66 (delta 14), reused 6 (delta 6), pack-reused 17
+</span><span class='line'>Unpacking objects: 100% (66/66), done.
+</span><span class='line'>From https://github.com/exercism/xecmascript
+</span><span class='line'>   9b32d79..de450d0  master     -&gt; origin/master
+</span><span class='line'> * [new branch]      new-exercise-raindrops -&gt; origin/new-exercise-raindrops</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Con estos comandos simplemente se cambia a la rama <code>master</code> y se descargan los
+cambios que existan en el repositorio remoto (sin aplicar los cambios a ningún
+archivo todavía). En este caso, el repositorio es uno de Github. En el código
+anterior se puede ver cómo existe una nueva rama en remoto,
+<code>new-exercise-raindrops</code>, que se corresponde con el Pull Request que vamos a
+incorporar al repositorio.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rchavarria@proyect$ git reset --hard origin/master
+</span><span class='line'>HEAD is now at de450d0 Merge pull request #78 from rchavarria/new-exercise-roman-numerals</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Este comando elimina cualquier cambio en local y lo sobreescribe exactamente
+con los cambios que ha tomado del repositorio remoto. De esta forma <strong>se tiene
+en local exactamente lo mismo que en remoto</strong>, y es un punto de partida seguro.</p>
+
+<h2>Descargar las mejoras</h2>
+
+<p>Anteriormente git ha avisado de que hay una nueva rama, un nuevo Pull Request.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rchavarria@proyect$ git fetch origin refs/pull/80/head
+</span><span class='line'>From https://github.com/exercism/xecmascript
+</span><span class='line'> * branch            refs/pull/80/head -&gt; FETCH_HEAD</span></code></pre></td></tr></table></div></figure>
+
+
+<p>El anterior comando descarga los cambios contenido en el Pull Request con
+número <code>&lt;pr-number&gt;</code>, que podría ser por ejemplo el <code>80</code>.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rchavarria@proyect$ git checkout -b new-exercise-raindrops FETCH_HEAD
+</span><span class='line'>Switched to a new branch 'new-exercise-raindrops'</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Así, se crea una nueva rama, llamada <code>new-exercise-raindrops</code> que contiene los
+cambios del Pull Request.</p>
+
+<p>Y ahora llega un momento delicado. Se debe hacer que el commit por el que
+comienza la rama recién creada sea el último commit que existía en <code>master</code>. De
+esta forma se consigue que la historia del control de versiones sea la más
+legible. En este punto es posible que se produzcan conflictos. Ese es otro tema
+que daría para muchas explicaciones. Si se quiere profundizar, se puede echar
+un vistazo a la propia [documentación de <code>git</code> sobre el comando <code>rebase</code>].</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rchavarria@proyect$ git rebase master
+</span><span class='line'>Current branch new-exercise-raindrops is up to date.</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Si no hay conflictos, perfecto, ya está.</p>
+
+<h2>Comprobar las mejoras</h2>
+
+<p>Ahora es el momento de hacer comprobaciones:</p>
+
+<ul>
+<li>Se deberían ejecutar los tests del proyecto</li>
+<li>Chequear los cambios, comparándolos con versiones anteriores</li>
+<li>Comprobar que se siguen las reglas de estilo en el código</li>
+<li>En general, asegurarse de que el código a incorporar es un código con el que
+estamos contentos</li>
+</ul>
+
+
+<p>En esta fase se pueden hacer nuevos cambios o pedir al programador que
+contribuye que realice algunos cambios por sí mismo y que actualize el Pull
+Request.</p>
+
+<p><img class="center" src="http://rchavarria.github.io/images/2015/github-diff.png"></p>
+
+<h2>Incorporar los cambios</h2>
+
+<p>Una vez está todo comprobado y se está de acuerdo con los cambios, ha llegado
+la hora de incorporar los cambios a la rama <code>master</code> para que finalmente formen
+parte del código del proyecto.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rchavarria@proyect$ git checkout master
+</span><span class='line'>Switched to branch 'master'
+</span><span class='line'>Your branch is up-to-date with 'origin/master'.
+</span><span class='line'>rchavarria@proyect$ git merge --no-ff new-exercise-raindrops
+</span><span class='line'>Merge made by the 'recursive' strategy.
+</span><span class='line'> config.json                 |  3 ++-
+</span><span class='line'> raindrops/example.js        | 17 +++++++++++++++++
+</span><span class='line'> raindrops/gulpfile.js       | 42 ++++++++++++++++++++++++++++++++++++++++++
+</span><span class='line'> raindrops/package.json      | 24 ++++++++++++++++++++++++
+</span><span class='line'> raindrops/raindrops.spec.js | 38 ++++++++++++++++++++++++++++++++++++++
+</span><span class='line'> 5 files changed, 123 insertions(+), 1 deletion(-)
+</span><span class='line'> create mode 100644 raindrops/example.js
+</span><span class='line'> create mode 100644 raindrops/gulpfile.js
+</span><span class='line'> create mode 100644 raindrops/package.json
+</span><span class='line'> create mode 100644 raindrops/raindrops.spec.js</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Los comandos cambian el espacio de trabajo a la rama <code>master</code> e incorporan los
+cambios a la misma. Se deberá proporcionar un mensaje para el commit que va a
+generar <code>git merge</code>. Un ejemplo sería:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Merge pull request #80 from matthewmorgan/new-exercise-raindrops
+</span><span class='line'>
+</span><span class='line'>Closes #80</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Donde <code>80</code> es el número del Pull Request, <code>matthewmorgan</code> es el nombre del
+programador que contribuye y <code>new-exercise-raindrops</code> es el nombre de la rama
+que le dió el programador y el que se ha utilizado para la incorporación de los
+cambios.</p>
+
+<p>Finalmente, se suben los cambios al repositorio remoto y &#8230;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rchavarria@proyect$ git push origin master
+</span><span class='line'>Username for 'https://github.com': rchavarria
+</span><span class='line'>Password for 'https://rchavarria@github.com': 
+</span><span class='line'>Counting objects: 1, done.
+</span><span class='line'>Writing objects: 100% (1/1), 273 bytes | 0 bytes/s, done.
+</span><span class='line'>Total 1 (delta 0), reused 0 (delta 0)
+</span><span class='line'>To https://github.com/exercism/xecmascript.git
+</span><span class='line'>   de450d0..eae366a  master -&gt; master</span></code></pre></td></tr></table></div></figure>
+
+
+<p>&#8230; ¡magia!</p>
+
+<p><img class="center" src="http://rchavarria.github.io/images/2015/pull-request-merged.png"></p>
+
+<h2>Referencias</h2>
+
+<ul>
+<li><a href="http://blog.differential.com/best-way-to-merge-a-github-pull-request/">Best way to merge a pull request</a></li>
+<li><a href="https://www.youtube.com/watch?v=1ffBJ4sVUb4">Git for 4 and up</a></li>
+<li><a href="http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">Better commit messages</a></li>
+<li><a href="https://www.youtube.com/watch?v=8YjSty6bfog">Do your commits suck?</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Aprendiendo Ionic 2]]></title>
@@ -2552,76 +2808,6 @@ HTML.</li>
 <li><a href="http://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742">JavaScript, the good parts</a>, libro de Douglas Crockford</li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Charla técnica: Therapeutic refactoring]]></title>
-    <link href="http://rchavarria.github.io/blog/2015/07/12/charla-tecnica-therapeutic-refactoring/"/>
-    <updated>2015-07-12T19:09:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2015/07/12/charla-tecnica-therapeutic-refactoring</id>
-    <content type="html"><![CDATA[<p>Acabo de visualizar la charla <a href="https://www.youtube.com/watch?v=J4dlF0kcThQ">Therapeutical Refactoring</a>, de <a href="https://twitter.com/kytrinyx">Katrina Owen</a>,
-creadora de <a href="http://exercism.io">exercism.io</a>, y me ha encantado.</p>
-
-<p>Es una charla donde nos cuenta la historia de una refactorización. Me ha
-gustado especialmente cómo cuenta la refactorización. Ocultando las partes
-del código que no interesan en el paso actual y resaltando aquellas que
-sí.</p>
-
-<p>Me ha recordado mucho a cómo vemos los desarrolladores el código,
-focalizándonos en pequeños detalles, entremezclados en líneas y líneas de
-código.</p>
-
-<!-- more -->
-
-
-
-
-<iframe width="560"
-        height="315"
-        src="https://www.youtube.com/embed/J4dlF0kcThQ"
-        frameborder="0"
-        allowfullscreen></iframe>
-
-
-<p>En el repositorio <a href="https://github.com/kytrinyx/therapeutic-refactoring">therapeutic-refactoring</a> se pueden ver todos los pasos
-que Katrina ha dado en la refactorización.</p>
-
-<h2>Notas</h2>
-
-<p>Alrededor del minuto 19 nos habla del término <em>codejunk</em>. Codejunk trata
-sobre ruido, ruido que nos molesta para entender el código, pequeños detalles
-que hacen que gastemos más energía de la necesaria para entender qué hace
-el código. Algunos no son errores en sí, pero son como pequeños picores
-que no te dejan disfrutar.</p>
-
-<p>Describe 10 (de menos a más molestos):</p>
-
-<ol>
-<li>Comentarios penosos</li>
-<li>Espacios en blanco al final de las líneas</li>
-<li>Código comentado</li>
-<li>Paréntesis innecesarios</li>
-<li>Parámetros explícitos por defecto</li>
-<li><code>import</code>s o <code>require</code>s (dependiendo del lenguaje) innecesarios</li>
-<li><code>string</code>s hechas de <code>string</code>s</li>
-<li>Demasiado trabajo <em>manual</em> (deja que el pc haga el trabajo, no lo hagas tú)</li>
-<li>Tests duplicados, hay que poner el mismo mimo en el código de tests
-que en el de producción</li>
-<li>Una combinación de todos los anteriores</li>
-</ol>
-
-
-<h2>Moral de la historia</h2>
-
-<p>Refactorizar te da como un cerebro externo (exobrain).
-Cada uno de nosotros podemos retener una cantidad finita de detalles en la
-memoria (me recuerda al post de J.B.Rainsberger
-<a href="http://blog.thecodewhisperer.com/2015/03/28/your-tests-are-dragging-you-down">Your tests are dragging you down</a>). Programar es sobretodo, mantener en
-mente todos esos detalles. Nuestra memoria trabaja peor bajo condiciones
-de miedo o estrés. Refactorizar pone a salvo muchos de estos detalles,
-permitiéndonos trabajar más relajadamente y más confiados en que estamos
-haciendo un buen trabajo.</p>
 ]]></content>
   </entry>
   

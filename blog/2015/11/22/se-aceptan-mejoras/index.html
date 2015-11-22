@@ -1,0 +1,525 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Se aceptan mejoras - R. Chavarria's Blog</title>
+  <meta name="author" content="Rub&eacute;n Chavarr&iacute;a">
+
+  
+  <meta name="description" content="Existe una cosa maravillosa en el mundo de open source, y es que personas que
+ni siquiera sabes que existen, usan tu trabajo, lo mejoran con el suyo &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://rchavarria.github.io/blog/2015/11/22/se-aceptan-mejoras/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="R. Chavarria's Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36829645-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">R. Chavarria's Blog</a></h1>
+  
+    <h2>Proud of developing software, proud of being an Engineer</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:rchavarria.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archivos</a></li>
+  <li><a href="/readings">Lista de lectura</a></li>
+  <li><a href="/pet-projects">Proyectos</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Se aceptan mejoras</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-11-22T22:27:00+01:00" pubdate data-updated="true">Nov 22<span>nd</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Existe una cosa maravillosa en el mundo de open source, y es que personas que
+ni siquiera sabes que existen, usan tu trabajo, lo mejoran con el suyo, y te lo
+donan a tí para que otra gente se beneficie del trabajo de ambos.</p>
+
+<p><img class="left" src="/images/2015/contribution.png"></p>
+
+<p>Imagina que tienes una librería y tienes una base de usuarios. Ningún software
+se adapta a todos sus usuarios, así que lo más seguro es que los usuarios de tu
+librería encuentren algún detalle que no encaja a la perfección con sus
+necesidades. ¿No sería incríble que tus propios usuarios mejoraran la librería y
+te dieran su trabajo así como les das tú el tuyo? Pues eso es lo que pasa
+precisamente con el open source.</p>
+
+<p>Y algo parecido pasa cuando contribuyes a algún proyecto open source. Tus
+contribuciones son usadas por los usuarios del proyecto. Y algunos de ellos
+proponen nuevas mejoras al proyecto. Quizá algunas de estas mejoras sean sobre
+el trabajo que tú has realizado. Gente que ni conoces está aportando su
+experiencia para mejorar tu trabajo. Hay que ser muy tonto para no aprovechar
+esta oportunidad para aprender.</p>
+
+<!-- more -->
+
+
+<p>Este artículo describe el proceso a seguir para aceptar mejoras en un proyecto
+publicado en <a href="https://github.com/">Github</a>, donde [<code>git</code>] es usada como herramienta de control de
+versiones. Estas mejoras son propuestas por usuarios externos al proyecto a
+través de <a href="https://help.github.com/articles/using-pull-requests/">Pull Requests</a> (o también PR). Github te ayuda a la hora de
+incorporar esas mejoras a tu proyecto, pero hacerlo así deja la historia de tu
+control de versiones hecha unos zorros (en <a href="http://blog.differential.com/best-way-to-merge-a-github-pull-request/">Best way to merge a pull request</a>
+lo cuentan más detalladamente).</p>
+
+<p>Ésta es la secuencia de comandos mediante los cuales se incoroporarían los
+cambios propuestos en un Pull Request con número <code>pr-number</code> desde una rama
+creada por el autor llamada <code>user-working-branch</code>:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rchavarria@proyect$ git checkout master
+</span><span class='line'>rchavarria@proyect$ git fetch origin
+</span><span class='line'>rchavarria@proyect$ git reset --hard origin/master
+</span><span class='line'>
+</span><span class='line'>rchavarria@proyect$ git fetch origin refs/pull/&lt;pr-number&gt;/head
+</span><span class='line'>rchavarria@proyect$ git checkout -b &lt;user-working-branch&gt; FETCH_HEAD
+</span><span class='line'>rchavarria@proyect$ git rebase master
+</span><span class='line'>
+</span><span class='line'>rchavarria@proyect$ git checkout master
+</span><span class='line'>rchavarria@proyect$ git merge --no-ff &lt;user-working-branch&gt;
+</span><span class='line'>rchavarria@proyect$ git push origin master</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Limpiar el espacio de trabajo</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rchavarria@proyect$ git checkout master
+</span><span class='line'>Already on 'master'
+</span><span class='line'>Your branch is up-to-date with 'origin/master'.
+</span><span class='line'>rchavarria@proyect$ git fetch origin
+</span><span class='line'>remote: Counting objects: 66, done.
+</span><span class='line'>remote: Compressing objects: 100% (43/43), done.
+</span><span class='line'>remote: Total 66 (delta 14), reused 6 (delta 6), pack-reused 17
+</span><span class='line'>Unpacking objects: 100% (66/66), done.
+</span><span class='line'>From https://github.com/exercism/xecmascript
+</span><span class='line'>   9b32d79..de450d0  master     -&gt; origin/master
+</span><span class='line'> * [new branch]      new-exercise-raindrops -&gt; origin/new-exercise-raindrops</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Con estos comandos simplemente se cambia a la rama <code>master</code> y se descargan los
+cambios que existan en el repositorio remoto (sin aplicar los cambios a ningún
+archivo todavía). En este caso, el repositorio es uno de Github. En el código
+anterior se puede ver cómo existe una nueva rama en remoto,
+<code>new-exercise-raindrops</code>, que se corresponde con el Pull Request que vamos a
+incorporar al repositorio.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rchavarria@proyect$ git reset --hard origin/master
+</span><span class='line'>HEAD is now at de450d0 Merge pull request #78 from rchavarria/new-exercise-roman-numerals</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Este comando elimina cualquier cambio en local y lo sobreescribe exactamente
+con los cambios que ha tomado del repositorio remoto. De esta forma <strong>se tiene
+en local exactamente lo mismo que en remoto</strong>, y es un punto de partida seguro.</p>
+
+<h2>Descargar las mejoras</h2>
+
+<p>Anteriormente git ha avisado de que hay una nueva rama, un nuevo Pull Request.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rchavarria@proyect$ git fetch origin refs/pull/80/head
+</span><span class='line'>From https://github.com/exercism/xecmascript
+</span><span class='line'> * branch            refs/pull/80/head -&gt; FETCH_HEAD</span></code></pre></td></tr></table></div></figure>
+
+
+<p>El anterior comando descarga los cambios contenido en el Pull Request con
+número <code>&lt;pr-number&gt;</code>, que podría ser por ejemplo el <code>80</code>.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rchavarria@proyect$ git checkout -b new-exercise-raindrops FETCH_HEAD
+</span><span class='line'>Switched to a new branch 'new-exercise-raindrops'</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Así, se crea una nueva rama, llamada <code>new-exercise-raindrops</code> que contiene los
+cambios del Pull Request.</p>
+
+<p>Y ahora llega un momento delicado. Se debe hacer que el commit por el que
+comienza la rama recién creada sea el último commit que existía en <code>master</code>. De
+esta forma se consigue que la historia del control de versiones sea la más
+legible. En este punto es posible que se produzcan conflictos. Ese es otro tema
+que daría para muchas explicaciones. Si se quiere profundizar, se puede echar
+un vistazo a la propia [documentación de <code>git</code> sobre el comando <code>rebase</code>].</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rchavarria@proyect$ git rebase master
+</span><span class='line'>Current branch new-exercise-raindrops is up to date.</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Si no hay conflictos, perfecto, ya está.</p>
+
+<h2>Comprobar las mejoras</h2>
+
+<p>Ahora es el momento de hacer comprobaciones:</p>
+
+<ul>
+<li>Se deberían ejecutar los tests del proyecto</li>
+<li>Chequear los cambios, comparándolos con versiones anteriores</li>
+<li>Comprobar que se siguen las reglas de estilo en el código</li>
+<li>En general, asegurarse de que el código a incorporar es un código con el que
+estamos contentos</li>
+</ul>
+
+
+<p>En esta fase se pueden hacer nuevos cambios o pedir al programador que
+contribuye que realice algunos cambios por sí mismo y que actualize el Pull
+Request.</p>
+
+<p><img class="center" src="/images/2015/github-diff.png"></p>
+
+<h2>Incorporar los cambios</h2>
+
+<p>Una vez está todo comprobado y se está de acuerdo con los cambios, ha llegado
+la hora de incorporar los cambios a la rama <code>master</code> para que finalmente formen
+parte del código del proyecto.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rchavarria@proyect$ git checkout master
+</span><span class='line'>Switched to branch 'master'
+</span><span class='line'>Your branch is up-to-date with 'origin/master'.
+</span><span class='line'>rchavarria@proyect$ git merge --no-ff new-exercise-raindrops
+</span><span class='line'>Merge made by the 'recursive' strategy.
+</span><span class='line'> config.json                 |  3 ++-
+</span><span class='line'> raindrops/example.js        | 17 +++++++++++++++++
+</span><span class='line'> raindrops/gulpfile.js       | 42 ++++++++++++++++++++++++++++++++++++++++++
+</span><span class='line'> raindrops/package.json      | 24 ++++++++++++++++++++++++
+</span><span class='line'> raindrops/raindrops.spec.js | 38 ++++++++++++++++++++++++++++++++++++++
+</span><span class='line'> 5 files changed, 123 insertions(+), 1 deletion(-)
+</span><span class='line'> create mode 100644 raindrops/example.js
+</span><span class='line'> create mode 100644 raindrops/gulpfile.js
+</span><span class='line'> create mode 100644 raindrops/package.json
+</span><span class='line'> create mode 100644 raindrops/raindrops.spec.js</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Los comandos cambian el espacio de trabajo a la rama <code>master</code> e incorporan los
+cambios a la misma. Se deberá proporcionar un mensaje para el commit que va a
+generar <code>git merge</code>. Un ejemplo sería:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Merge pull request #80 from matthewmorgan/new-exercise-raindrops
+</span><span class='line'>
+</span><span class='line'>Closes #80</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Donde <code>80</code> es el número del Pull Request, <code>matthewmorgan</code> es el nombre del
+programador que contribuye y <code>new-exercise-raindrops</code> es el nombre de la rama
+que le dió el programador y el que se ha utilizado para la incorporación de los
+cambios.</p>
+
+<p>Finalmente, se suben los cambios al repositorio remoto y &#8230;</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rchavarria@proyect$ git push origin master
+</span><span class='line'>Username for 'https://github.com': rchavarria
+</span><span class='line'>Password for 'https://rchavarria@github.com': 
+</span><span class='line'>Counting objects: 1, done.
+</span><span class='line'>Writing objects: 100% (1/1), 273 bytes | 0 bytes/s, done.
+</span><span class='line'>Total 1 (delta 0), reused 0 (delta 0)
+</span><span class='line'>To https://github.com/exercism/xecmascript.git
+</span><span class='line'>   de450d0..eae366a  master -&gt; master</span></code></pre></td></tr></table></div></figure>
+
+
+<p>&#8230; ¡magia!</p>
+
+<p><img class="center" src="/images/2015/pull-request-merged.png"></p>
+
+<h2>Referencias</h2>
+
+<ul>
+<li><a href="http://blog.differential.com/best-way-to-merge-a-github-pull-request/">Best way to merge a pull request</a></li>
+<li><a href="https://www.youtube.com/watch?v=1ffBJ4sVUb4">Git for 4 and up</a></li>
+<li><a href="http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">Better commit messages</a></li>
+<li><a href="https://www.youtube.com/watch?v=8YjSty6bfog">Do your commits suck?</a></li>
+</ul>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Rubén Chavarría</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-11-22T22:27:00+01:00" pubdate data-updated="true">Nov 22<span>nd</span>, 2015</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/git/'>git</a>, <a class='category' href='/blog/categories/learning/'>learning</a>, <a class='category' href='/blog/categories/open-source/'>open source</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rchavarria.github.io/blog/2015/11/22/se-aceptan-mejoras/" data-via="rchavarriat" data-counturl="http://rchavarria.github.io/blog/2015/11/22/se-aceptan-mejoras/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2015/11/15/aprendiendo-ionic-2/" title="Previous Post: Aprendiendo Ionic 2">&laquo; Aprendiendo Ionic 2</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/11/22/se-aceptan-mejoras/">Se aceptan mejoras</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/11/15/aprendiendo-ionic-2/">Aprendiendo Ionic 2</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/11/08/soft-skills/">Soft skills</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/11/01/screencast-robot-name-exercism/">Screencast de programación: Robot name (exercism.io)</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/10/25/youve-got-commit/">You've got commit!</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("rchavarriat", 4, true);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/rchavarriat">@rchavarriat</a></p>
+  
+</section>
+
+
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/rchavarriat?count=5&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/rchavarriat">My Delicious Bookmarks &raquo;</a></p>
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Rub&eacute;n Chavarr&iacute;a -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'rchavarria-github-com';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://rchavarria.github.io/blog/2015/11/22/se-aceptan-mejoras/';
+        var disqus_url = 'http://rchavarria.github.io/blog/2015/11/22/se-aceptan-mejoras/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
