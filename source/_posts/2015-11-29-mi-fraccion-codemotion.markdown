@@ -218,5 +218,5 @@ me llevo para casa:
 [Pablo Ruiz]: https://twitter.com/diacritica
 [Gente que hace cosas con cacharros]: http://2015.codemotion.es/agenda.html#5699289732874240/43004009
 [Miguel Ángel López]: https://www.koliseo.com/miguelangellv
-[Jose Juan Sánchez]: https://www.koliseo.com/josejuansanchez
+[Jose Juan Sánchez]: https://twitter.com/josejuansanchez
 
