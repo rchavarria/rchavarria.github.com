@@ -133,6 +133,14 @@ todas las funcionalidades que ellos quieren.
 - [Cálculo de la deuda técnica basado en fórmulas]
 - [Technical Debt: From Metaphor to Theory and Practice]
 
+## Actualización (01-12-2015)
+
+Por twitter encontré esto de [J.B.Rainsberger](https://twitter.com/jbrains/status/665625243382325251)
+
+> Para la mayoría de aplicaciones, el camino rápido siempre lleva a la muerte y
+destrucción del proyecto; para aplicaciones pequeñas, el buen camino siempre
+parece una exageración
+
 [Wikipedia en español sobre la deuda técnica]: https://es.wikipedia.org/wiki/Deuda_t%C3%A9cnica
 [Javier Garzás sobre la deuda técnica]: http://www.javiergarzas.com/2012/11/deuda-tecnica-2.html
 [cuadrante de la deuda técnica]: http://martinfowler.com/bliki/TechnicalDebtQuadrant.html
