@@ -195,7 +195,7 @@ me llevo para casa:
 [El arte de ser vago]: http://2015.codemotion.es/agenda.html#5677904553836544/43004005
 [Camilo Galiana]: http://cjgaliana.com/
 [Technical debt for developers... and managers!]: http://2015.codemotion.es/agenda.html#5677904553836544/50404003
-[Luis García Castro]: https://www.koliseo.com/luisgc
+[Luis García Castro]: https://twitter.com/luiyo
 [deuda técnica]: /blog/2015/10/12/deuda-tecnica/
 [Dando amor a los tests]: http://2015.codemotion.es/agenda.html#5677904553836544/48514002
 [Joaquín Engelmo]: https://twitter.com/kinisoftware
