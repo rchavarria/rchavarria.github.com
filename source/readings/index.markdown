@@ -36,6 +36,8 @@ Así que aquí está mi Lista de Lectura:
 - [Test driven development: by example](http://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530), de Kent Beck
 - [Las reglas no escritas para triunfar en la empresa](http://www.amazon.es/escritas-triunfar-empresa-Inform%C3%A1tica-Profesional/dp/8492650435), de Roberto Canales (disponible en tu drive, conseguido gratuitamente gracias a Autentia)
 - [Guía de supervivencia: puntos historia](http://www.javiergarzas.com/2015/10/nueva-guia-de-supervivencia-agil-estimacion-con-puntos-historia-si-gratis.html), de Javier Garzás
+- [Ready player one](http://www.amazon.es/gp/product/B00UVAREXK/), de Ernest Cline, recomendado por Microsiervos varias veces
+- [Thing explainer](http://www.amazon.es/gp/product/1473620910/), de [Randall Munroe (xkcd.com)](http://xkcd.com), recomendado por Microsiervos varias veces
 - [57 exercises for programmers](https://pragprog.com/book/bhwb/exercises-for-programmers), de Brian P. Hogan
 - [So good, they can't ignore you](http://www.amazon.com/dp/1455509124?tag=sivers-20), de Cal Newport, visto en [http://sivers.org/book/SoGood]
 - [Responsive design by example](http://www.amazon.com/Responsive-Design-Example-Thoriq-Firdaus/dp/1849695423/ref=sr_1_1?ie=UTF8&qid=1443036924&sr=8-1&keywords=Thoriq+Firdaus), de Thoriq Firdaus (almacenado en Drive)
