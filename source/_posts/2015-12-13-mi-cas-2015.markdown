@@ -104,30 +104,32 @@ Todo comenzó con el dilema: ¿debo testear cada clase individual o todo el sist
 - [Charlas, artículos y más sobre la CAS 2015]
 - [Streaming del día 1]
 - [Streaming del día 2]
+- [Martin Fowler acerca de CQRS]
 
 [Apertura]: http://www.slideshare.net/carlosble/cas2015-opening-improving-the-software
 [Carlos Blé]: https://twitter.com/carlosble
-[Your application is not your framework]
+[Your application is not your framework]: https://www.youtube.com/watch?v=C6Sy0v19RAc&t=2h14m00s
 [Enrique Comba]: https://twitter.com/ecomba
 [Continuous delivery]: http://www.slideshare.net/PeterMarshall10/pete-marshall-casmadrid2015-continuous-delivery-in-legacy-environments
 [Peter Marshal]: https://twitter.com/petemar5hall
-[Building resilient integrations]
+[Building resilient integrations]: http://cas2015.agile-spain.org/charlas/
 [Dave Moore]: https://twitter.com/cuvuligio
 [Continuous integration in CartoBD]: http://es.slideshare.net/juanignaciosl/continuous-integration-at-cartodb
 [Juan Ignacio Sánchez]: https://twitter.com/juanignaciosl
 [Keynote técnica]: http://www.slideshare.net/lantoli/believe-it-or-not-keynote-cas-2015-55802209
 [Leo Antolí]: https://twitter.com/lantoli
-[Keynote viernes]
+[Keynote viernes]: https://www.youtube.com/watch?v=_CcO9upHiDU&t=9m20s
 [Rachel Davis]: https://twitter.com/rachelcdavies
-[Escapando del modelo mete-saca]
+[Escapando del modelo mete-saca]: https://medium.com/@borillo/el-modelo-de-desarrollo-mete-saca-be17304ad1df#.b0vwf7ben
 [Ricardo Borillo]: https://twitter.com/borillo
 [Economía del software]: http://www.slideshare.net/programania/software-economics-tradeoffs-of-decoupled-softwre
 [Luis Artola]: https://twitter.com/artolamola
 [Guillermo Gutierrez]: https://twitter.com/ggalmazor
 [Effective UI testing]: http://eamodeorubio.github.io/effective-ui-bdd-with-js/short.html#/
 [Enrique Amodeo]: https://twitter.com/eamodeorubio
-[CQRS]
+[CQRS]: https://en.wikipedia.org/wiki/Command%E2%80%93query_separation#Command_Query_Responsibility_Segregation
 [Charlas, artículos y más sobre la CAS 2015]: https://gist.github.com/nhpatt/89f90a27042e4fd1db7b
 [Streaming del día 1]: https://www.youtube.com/watch?v=C6Sy0v19RAc
 [Streaming del día 2]: https://www.youtube.com/watch?v=_CcO9upHiDU
+[Martin Fowler acerca de CQRS]: http://martinfowler.com/bliki/CQRS.html
 
