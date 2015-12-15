@@ -4,7 +4,7 @@
   <title><![CDATA[Category: codemotion | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/codemotion/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2015-12-13T23:12:32+01:00</updated>
+  <updated>2015-12-15T21:29:36+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -35,7 +35,7 @@
 
 <blockquote><p>Tú eres el único responsable de tu carrera</p></blockquote>
 
-<h2>[Your application is not your framework], de <a href="https://twitter.com/ecomba">Enrique Comba</a></h2>
+<h2><a href="https://www.youtube.com/watch?v=C6Sy0v19RAc&amp;t=2h14m00s">Your application is not your framework</a>, de <a href="https://twitter.com/ecomba">Enrique Comba</a></h2>
 
 <p>¿Por qué cuando te preguntan por tu applicación dices qué framework estás usando? Habla sobre qué hace de verdad tu aplicación. Enrique habló de muchos conceptos alrededor de los frameworks: <em>convention over configuration</em>, mezcla de lógica de negocio con la lógica impuesta por el framework. ¿Qué beneficios trae separar la lógica de tu aplicación del framework? Separación de responsabilidades, velocidad en los tests automáticos y sobretodo claridad en el <strong>propósito</strong> y <strong>estructura</strong> de tu aplicación.</p>
 
@@ -51,7 +51,7 @@
 </ul>
 
 
-<h2>[Building resilient integrations], de <a href="https://twitter.com/cuvuligio">Dave Moore</a></h2>
+<h2><a href="http://cas2015.agile-spain.org/charlas/">Building resilient integrations</a>, de <a href="https://twitter.com/cuvuligio">Dave Moore</a></h2>
 
 <p>Esta charla tuvo su parte teórica y su parte práctica. De la parte teórica, decir que debemos entender que los fallos están en todas partes, por lo que es nuestro trabajo hacer software que no falle, que sea tolerante a fallos de sistemas externos. Algunas técnicas para hacerlo podrían ser: tests automáticos (no mienten, la documentación sí), aislar integraciones que herramientas de terceros (creando interfaces que las separen de nuestra applicación), utilizar nuestro propio modelo de datos, política de reintentos de conexión,...</p>
 
@@ -69,19 +69,19 @@
 
 <p>Como buena keynote, lo que me llevo de esta charla son pensamientos, dudas, cuestiones. Debo entender que el software no es el fin, es un medio para conseguir un fin. Deja de usar números no probados. Cuenta experiencias propias (no sirven para demostrar nada, pero son algo real). Y sobretodo, mantén un <strong>espiritu crítico</strong>.</p>
 
-<h2>[Keynote viernes], de <a href="https://twitter.com/rachelcdavies">Rachel Davis</a></h2>
+<h2><a href="https://www.youtube.com/watch?v=_CcO9upHiDU&amp;t=9m20s">Keynote viernes</a>, de <a href="https://twitter.com/rachelcdavies">Rachel Davis</a></h2>
 
 <p>Esta keynote trató de introducir cambios, de introducir tiempo para el aprendizaje. Debemos crear tiempo para ello a lo largo de nuestra semana. No tengas prisa en introducir cambios, la gente necesita <strong>tiempo</strong>.</p>
 
 <p>De esta keynote quiero recordar dos consejos de Rachel: comparte lo aprendido (por ejemplo en esta CAS), invierte tiempo en profundizar en lo aprendido.</p>
 
-<h2>[Escapando del modelo mete-saca], de <a href="https://twitter.com/borillo">Ricardo Borillo</a></h2>
+<h2><a href="https://medium.com/@borillo/el-modelo-de-desarrollo-mete-saca-be17304ad1df#.b0vwf7ben">Escapando del modelo mete-saca</a>, de <a href="https://twitter.com/borillo">Ricardo Borillo</a></h2>
 
 <p>¿Estamos seguros de que lo que quiere el usuario es un simple sistema CRUD? ¿No hay una forma de aportar más valor? Un CRUD es muy genérico, seguro que no resuelve las necesidades del usuario con la mejor eficiencia.</p>
 
 <p>Ricardo analizó qué nos lleva a este modelo: pobres historias de usuario, mal definidas, que nos llevan a hacer cosas generales; los frameworks (como ORMs); y arquitecturas de usuario pobres, con componentes maestro-detalle, consumo de apis REST,... todo esto nos conduce al modelo mete-saca.</p>
 
-<p>La solución propuesta por Ricardo, un único punto de entrada (en contraposición a los múltiples endpoints REST) con una arquitectura [CQRS]. Cada <em>comando</em> correspondería con una acción del usuario, una historia de usuario, un caso de uso muy específico, que nos conduciría a tener las mínimas funcionalidades desarrolladas con la máxima eficiencia y la mejor usabilidad para el usuario.</p>
+<p>La solución propuesta por Ricardo, un único punto de entrada (en contraposición a los múltiples endpoints REST) con una arquitectura <a href="https://en.wikipedia.org/wiki/Command%E2%80%93query_separation#Command_Query_Responsibility_Segregation">CQRS</a>. Cada <em>comando</em> correspondería con una acción del usuario, una historia de usuario, un caso de uso muy específico, que nos conduciría a tener las mínimas funcionalidades desarrolladas con la máxima eficiencia y la mejor usabilidad para el usuario.</p>
 
 <h2><a href="http://www.slideshare.net/programania/software-economics-tradeoffs-of-decoupled-softwre">Economía del software</a>, de <a href="https://twitter.com/artolamola">Luis Artola</a> y <a href="https://twitter.com/ggalmazor">Guillermo Gutierrez</a></h2>
 
@@ -116,14 +116,9 @@
 <li><a href="https://gist.github.com/nhpatt/89f90a27042e4fd1db7b">Charlas, artículos y más sobre la CAS 2015</a></li>
 <li><a href="https://www.youtube.com/watch?v=C6Sy0v19RAc">Streaming del día 1</a></li>
 <li><a href="https://www.youtube.com/watch?v=_CcO9upHiDU">Streaming del día 2</a></li>
+<li><a href="http://martinfowler.com/bliki/CQRS.html">Martin Fowler acerca de CQRS</a></li>
 </ul>
 
-
-<p>[Your application is not your framework]
-[Building resilient integrations]
-[Keynote viernes]
-[Escapando del modelo mete-saca]
-[CQRS]</p>
 ]]></content>
   </entry>
   
