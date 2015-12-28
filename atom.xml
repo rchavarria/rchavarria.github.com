@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2015-12-15T21:29:36+01:00</updated>
+  <updated>2015-12-28T21:57:23+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,217 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Artículo técnico: Getting testy]]></title>
+    <link href="http://rchavarria.github.io/blog/2015/12/28/getting-testy/"/>
+    <updated>2015-12-28T21:33:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2015/12/28/getting-testy</id>
+    <content type="html"><![CDATA[<p><img class="right" style="width: 250px" src="http://rchavarria.github.io/images/2015/getting-testy.svg"/></p>
+
+<p>Dando una vuelta por Twitter descubrí una serie de artículos sobre testing
+titulados <a href="http://randycoulman.com/blog/2015/08/04/getting-testy-redux/">Getting testy</a>, de <a href="http://randycoulman.com/">Randy Coulman</a>. Parecían artículos interesantes,
+pero era mucha lectura para ser tratada como un blog. Así que decidí leerlo
+como si fuera un libro. Aunque un libro cortito.</p>
+
+<p>Es una serie de artículos muy recomendable sobre TDD y cómo escribir buen
+software. Trata muchísimos temas relacionados con escribir tests para nuestro
+código. Conceptos sencillos y conceptos avanzados. Diferencias entre los dos
+estilos principales de hacer TDD. Qué hacer y qué no hacer a la hora de
+escribir tests. Y un sinfín de cosas más. Todas interesantísimas.</p>
+
+<!-- more -->
+
+
+<h2>Frases a destacar</h2>
+
+<blockquote><p>A la hora de tomar decisiones entre dos extremos, el autor se fija en los más
+  y en los menos de cada extremo y trata de sintetizar las mejores partes de
+  cada uno en algo sobre lo que pueda trabajar</p></blockquote>
+
+<!-- -->
+
+
+<blockquote><p>Los problemas a la hora de testear son una buena indicación de los problemas
+  que encontrará el código cliente de esos mismos APIs</p></blockquote>
+
+<!-- -->
+
+
+<blockquote><p>Los tests de aceptación nos dicen si vamos a <strong>construir el sistema
+  correcto</strong>. Los tests de más bajo nivel nos dicen si vamos a <strong>construir el
+  sistema correctamente</strong> (build the right thing, build the thing right)</p></blockquote>
+
+<!-- -->
+
+
+<blockquote><p>No se recomiendan tests que prueben métodos específicos: se deberían testear
+  las responsabilidades, no los métodos</p></blockquote>
+
+<!-- -->
+
+
+<blockquote><p>Guard the borders, not the hinterlands</p></blockquote>
+
+<!-- -->
+
+
+<blockquote><p>No escribas el test que te fuerza a escribir el código que tu quieres.
+  Escribe el test que fuerza a tu objeto a tener las responsabilidades que
+  quieres que tenga</p></blockquote>
+
+<h2>Notas tomadas</h2>
+
+<p><strong>Historia y mecanismos</strong></p>
+
+<p><em>Dobles de tests</em> es una analogía de la idea de la situación en la que en una
+película de acción, un doble suplanta al actor profesional en una escena
+peligrosa</p>
+
+<p><strong>Filosofía</strong></p>
+
+<p>A la hora de tomar decisiones entre dos extremos, el autor se fija en los más y
+en los menos de cada extremo y trata de sintetizar las mejores partes de cada
+uno en algo sobre lo que pueda trabajar.</p>
+
+<p>Dos escuelas fundamentales de hacer TDD:</p>
+
+<ol>
+<li>Statist, Detroit: se enfocan en los objetos de tu sistema, lo que lleva a
+escribir tests basados en estado.</li>
+<li>Mockist, Londres: se enfocan en los mensajes enviados en el sistema, lo que
+lleva a escribir tests basados en mocks (o dobles de tests).</li>
+</ol>
+
+
+<p><em>Nota: existe un vídeo, de <a href="https://twitter.com/searls">Justin Searls</a>, donde compara detalladamente estas
+dos escuelas: <a href="https://www.youtube.com/watch?v=aeX5OXO-w30">Comparación escuelas TDD</a></em></p>
+
+<p>Un proceso ingenioso para añadir tests a código que existe actualmente:</p>
+
+<ol>
+<li>Comenta el codigo que quieres probar</li>
+<li>Escribe un test que falle</li>
+<li>descomenta el mínimo código que haga que ese test pase</li>
+<li>Refactorizar y repetir</li>
+</ol>
+
+
+<p>No tengas miedo a borrar tests. Es más, hay ocasiones en las que querrás
+escribir tests para después borrarlos. En ocasiones, cuando estás escribiendo
+un algoritmo complejo, querrás escribir tests para las partes que más tarde
+serán privadas. Necesitas probar esos pasos intermedios que te lleven a la
+solución. Más tarde, cuando hagas esas partes privadas, podrás borrar los tests
+<em>temporales</em>.</p>
+
+<p><strong>Funciones</strong></p>
+
+<p>Deja que los tests guíen tu diseño, especialmente la API pública de tus
+objetos. Los problemas a la hora de testear son una buena indicación de los
+problemas que encontrará el código cliente de esos mismos APIs.</p>
+
+<p>Haz que cada test <em>se pague</em> a sí mismo. Los tests cuestan tiempo y dinero de
+ejecutar y mantener. No escribas tests que no añadan suficiente valor para
+sobrepasar esos costes. O escríbelos hasta que consigas tener el código que
+buscas. Luego, bórralos.</p>
+
+<p><strong>Abstracciones</strong></p>
+
+<p>Cuando crees abstracciones en tu código, es importante elegir aquellas que son
+de alguna utilidad. Muchas veces escogemos las abstracciones equivocadas y eso
+hace nuestro código más confuso para los que vendrán después de nosotros. Esto
+me recuerda a una charla de Sandi Metz, en la que recomendaba algo de
+duplicación en lugar de una mala abstracción o mala legibilidad
+(<a href="http://rchavarria.github.io/blog/2015/10/18/charla-tecnica-all-the-little-things/">All the little things</a>)</p>
+
+<p><strong>Capas</strong></p>
+
+<p>Los tests de aceptación nos dicen si vamos a <strong>construir el sistema correcto</strong>.
+Los tests de más bajo nivel nos dicen si vamos a <strong>construir el sistema
+correctamente</strong> (build the right thing, build the thing right)</p>
+
+<p><strong>Aceptación</strong></p>
+
+<p>En la mayoría de los sistemas, los tests de la capa más externa son los tests
+más lentos que tenemos. Así pues, queremos cuantos menos de ellos mejor, que no
+es lo mismo que decir que no los queremos en absoluto.</p>
+
+<p>Cuando usamos una herramienta como Cucumber of Fitnesse, deberíamos ser capaces
+de portar nuestra aplicación a un lenguaje de programación completemante
+diferente y seguir manteniendo estos tests. Es decir, los tests de aceptación
+deben tener su propio lenguaje, el del negocio, el del dominio del cliente que
+va a usar el software.</p>
+
+<p>Cuando estés escribiendo tests para la capa más externa de tu sistema,
+pregúntate continuamente si esos tests sobrevivirian si cambias
+signficativamente la implementación del sistema que están probando.</p>
+
+<p><strong>Outside-in</strong></p>
+
+<p>Si sientes la necesidad de testear detalles internos de una clase,
+probablemente es que hay un objeto que está intentando <em>salir</em>.</p>
+
+<p>Trata de no limitar tus pensamientos a los objetos que ya tienes. No tengas
+miedo de introducir nuevos objectos si eso mejora el diseño.</p>
+
+<p><strong>APIs</strong></p>
+
+<p>Para aislarnos de sistemas externos (normalmente escritos por terceros),
+debemos ocultar el servicio detrás de un interfaz que definamos y controlemos
+nosotros.</p>
+
+<p>No se recomiendan tests que prueben métodos específicos: se deberían testear
+las responsabilidades, no los métodos. Los detalles de implementación deberían
+estar fuera de los tests.</p>
+
+<p><strong>Pasos</strong></p>
+
+<p>Generalmente, es mejor hacer todo el saneamiento, validaciones y
+normalizaciones en los bordes del sistema. Protege las fronteras, no el
+interior (Guard the borders, not the hinterlands).</p>
+
+<p><strong>¿Por qué?</strong></p>
+
+<p>Por cada verificación que quieras escribir, pregúntate el por qué de dicha
+verificación. ¿La razón tiene que ver con detalles de implementación o tiene
+que ver con responsabilidades esenciales del código que estás probando? Si es
+la primera, párate un poco y recapacita. Si es la segunda, probablemente vayas
+en la buena dirección.</p>
+
+<p>Cuando realizamos verificaciones sobre el estado de la aplicaión antes de hacer
+nada en nuestros tests, estamos comunicando algo al lector del código. Es
+preferible hacer esa comunicación en un tests separado antes que hacer esas
+verificaciones una y otra vez, lo que nos llevaría a tener duplicación en
+muchos tests</p>
+
+<p>Otro caso en el que puede haber valor al realizar <em>verificaciones de setup</em>
+(verificaciones antes de hacer el propio test) es en código legacy.</p>
+
+<p>No escribas el test que te fuerza a escribir el código que tu quieres. Escribe
+el test que fuerza a tu objeto a tener las responsabilidades que quieres que
+tenga.</p>
+
+<p><strong>Dobles de tests</strong></p>
+
+<p>¿Cómo saber si un doble de test es un colaborador o un detalle interno? Podemos
+hacernos las siguientes preguntas: ¿está al mismo nivel de abstracción que el
+objeto que estoy probando? ¿tiene su propio ciclo de vida? Si es así,
+probablemente es un colaborador y estaría bien utilizar un doble de tests. En
+otro caso, podría ser un detalle interno de implementación, donde deberíamos
+plantearnos seriamente si usar el doble de test o no.</p>
+
+<p><strong>Antipatrones</strong></p>
+
+<p>Un buen test unitario debería responder a las siglas en inglés <a href="http://agileinaflash.blogspot.de/2009/02/first.html">F.I.R.S.T.</a>:
+Fast, Isolated, Repeatable, Self-verifying, Timely.</p>
+
+<p><strong>Legacy</strong></p>
+
+<p>Al escribir tests para código legacy, no nos debería importar si el código está
+dando la respuesa correcta. Solo nos interesa si el código está dando la
+<strong>misma</strong> respuesta que antes de realizar los cambios.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Mi CAS 2015]]></title>
@@ -2677,243 +2888,6 @@ cuando lista los búfferes abiertos)</li>
 <li><a href="http://andrewradev.com/2011/06/08/vim-and-ctags">Vim and Ctags</a>, fenomenal artículo que cubre casi todo lo relacionado con
 Vim y ctags.</li>
 <li><a href="http://rchavarria.github.io/blog/2014/10/11/aprendiendo-vim">Aprendiendo Vim</a>, en este mismo blog</li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Estándares de código en tu equipo]]></title>
-    <link href="http://rchavarria.github.io/blog/2015/08/02/estandares-codigo-equipo/"/>
-    <updated>2015-08-02T21:58:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2015/08/02/estandares-codigo-equipo</id>
-    <content type="html"><![CDATA[<p>¿Has conducido alguna vez en el extranjero? Si has ido de acompañanate, ¿has
-prestado atención a la carretera?. Es todo tan distinto, pero a la vez es
-prácticamente igual a conducir en tu propio país (quitando alguna excepción
-como Inglaterra o Japón, que lo hacen por la izquierda). Seguro que encuentras
-los mismos elementos: semáforos, cruces, rotondas, carreteras de doble sentido,
-autovías,&#8230; y <strong>normas</strong>. Las normas de circulación no son las mismas en todos
-los lugares, pero podríamos encontrar algunas normas básicas que sí lo son.
-Esas normas básicas son las que nos permiten conducir en otros países con una
-cierta confianza.</p>
-
-<p>Cuando escribimos código dentro de un equipo de desarrollo ocurre algo similar.
-Cada uno tenemos nuestro estilo a la hora de escribir código: nombrado de
-variables, espaciado, paréntesis, indentación,&#8230; Si tuviéramos total libertad
-para desarrollar como nos apeteciera, el trabajo en equipo sería mucho más
-duro, ya que tendríamos que <em>entender</em> el estilo de cada uno de nuestros
-compañeros. Por curiosidad, ¿no te ha pasado nunca que has leído una clase e
-inmediatamente sabes quién la ha escrito? Para evitar esta sobrecarga conviene
-tener ciertas normas, unas <strong>reglas</strong> básicas de cómo escribir código, para
-que todos los miembros del equipo escriban código acorde a un cierto <em>estándar</em>.</p>
-
-<p>Aquí es donde aparece <a href="https://github.com/squizlabs/PHP_CodeSniffer">PHP_CodeSniffer</a>, una herramienta de análisis estático
-de código PHP (JavaScript y CSS) que genera informes sobre qué partes del
-código de nuestro equipo violan las reglas del estándar que previamente definió
-el equipo.</p>
-
-<!-- more -->
-
-
-<p><img class="center" src="http://rchavarria.github.io/images/2015/ruler.png"></p>
-
-<h2>Reglas</h2>
-
-<p>Cada una de esas reglas puede hacer referencia a aspectos muy distintos de
-nuestro código: indentación con espacios o tabuladores, apertura de llaves (<code>{</code>)
-en la misma línea o en la siguiente, sintaxis a la hora de manipular arrays
-(<code>array()</code> o <code>[]</code>),&#8230; Las reglas a utilizar deben ser consensuadas en el equipo
-y suelen estar definidas en un fichero llamado <code>ruleset.xml</code> que se pasará como
-parámetro a la herramienta <code>phpcs</code>. Aquí nos estamos centrando en código PHP,
-pero también se puede hacer análisis de código JavaScript y CSS.</p>
-
-<p>A la hora de poder definir un conjunto de reglas a utilizar dentro del equipo,
-sería conveniente tener una lista de todas ellas y una breve descripción de cada
-una para facilitar la discusión y la toma de decisiones. Lamentablemente, la
-documentation de la herramienta no proporciona esa lista, pero existe algunas
-posibilidades que nos pueden facilitar el trabajo.</p>
-
-<h3>Opción <code>-s</code></h3>
-
-<p>El comando <code>phpcs</code> se puede ejecutar con la opción <code>-s</code>, con la cual la
-herramienta indica qué regla (o <em>sniff</em>, como lo llama PHP_CodeSniffer) estamos
-incumpliendo en cada violación que aparece en el informe de la herramienta.
-El siguiente comando ejecuta <code>phpcs</code> mostrando el progreso (<code>-p</code>), analizando
-solo archivos con la extensión <code>.php</code> y por supuesto que nos muestre las
-reglas que no se cumplen (<code>-s</code>), como por ejemplo
-<code>Generic.Commenting.Todo.TaskFound</code>.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>phpcs -p -s --extensions<span class="o">=</span>php &lt;directory or file&gt;
-</span><span class='line'>
-</span><span class='line'>...E...E....W.....W..E.............W........................  60 / 723 <span class="o">(</span>8%<span class="o">)</span>
-</span><span class='line'>.......................W.................................... 120 / 723 <span class="o">(</span>17%<span class="o">)</span>
-</span><span class='line'>.............................W..W....E..................E..E 180 / 723 <span class="o">(</span>25%<span class="o">)</span>
-</span><span class='line'>
-</span><span class='line'>----------------------------------------------------------------------
-</span><span class='line'> 44 | ERROR   | Function<span class="err">&#39;</span>s cyclomatic complexity <span class="o">(</span>21<span class="o">)</span> exceeds allowed
-</span><span class='line'>    |         | maximum of 20
-</span><span class='line'>    |         | <span class="o">(</span>Generic.Metrics.CyclomaticComplexity.MaxExceeded<span class="o">)</span>
-</span><span class='line'>----------------------------------------------------------------------
-</span><span class='line'> 60 | ERROR | <span class="o">[</span>x<span class="o">]</span> Line indented incorrectly; expected at least 2 spaces,
-</span><span class='line'>    |       |     found 0 <span class="o">(</span>Generic.WhiteSpace.ScopeIndent.Incorrect<span class="o">)</span>
-</span><span class='line'>----------------------------------------------------------------------
-</span><span class='line'> 59 | WARNING | The method parameter <span class="nv">$userId</span> is never used
-</span><span class='line'>    |         | <span class="o">(</span>Generic.CodeAnalysis.UnusedFunctionParameter.Found<span class="o">)</span>
-</span><span class='line'>----------------------------------------------------------------------
-</span><span class='line'> 61 | WARNING | Comment refers to a TODO task <span class="s2">&quot;Improve readability&quot;</span>
-</span><span class='line'>    |         | <span class="o">(</span>Generic.Commenting.Todo.TaskFound<span class="o">)</span>
-</span><span class='line'>----------------------------------------------------------------------
-</span><span class='line'>
-</span><span class='line'>... output has been truncated
-</span><span class='line'>Time: 2 mins, 9.46 secs; Memory: 25.5Mb
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>Código fuente</h3>
-
-<p>Al final, la documentación más fiable, más actualizada, más detallada y más de
-todo es el código fuente. Puede asustar un poco tener que mirar el código fuente,
-pero <a href="https://github.com/squizlabs/PHP_CodeSniffer">el código de PHP_CodeSniffer</a> es código abierto y se puede navegar en
-Github de forma sencilla. Además, no tendrás que consultarlo de arriba a abajo,
-aquí encontrarás unas pistas de donde encontrar las reglas.</p>
-
-<p>El código está organizado en varios directorios, en <code>CodeSniffer/Standards</code>
-encontraremos el código fuente que nos interesa. Cada subdirectorio
-contiene las reglas definidas por cada estándar: Generic, PEAR, PSR1, PSR2,&#8230;
-Dentro de cada uno de estos directorios, encontramos un fichero llamado
-<code>ruleset.xml</code>, donde podemos encontrar las reglas importadas de aquellos
-estándares que las definen. Por ejemplo, en el fichero <code>PSR2/ruleset.xml</code>
-podemos encontrar:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-</pre></td><td class='code'><pre><code class='xml'><span class='line'><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
-</span><span class='line'><span class="nt">&lt;ruleset</span> <span class="na">name=</span><span class="s">&quot;PSR2&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'> <span class="nt">&lt;description&gt;</span>The PSR-2 coding standard.<span class="nt">&lt;/description&gt;</span>
-</span><span class='line'> <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&quot;tab-width&quot;</span> <span class="na">value=</span><span class="s">&quot;4&quot;</span><span class="nt">/&gt;</span>
-</span><span class='line'>
-</span><span class='line'> <span class="c">&lt;!-- Include the whole PSR-1 standard --&gt;</span>
-</span><span class='line'> <span class="nt">&lt;rule</span> <span class="na">ref=</span><span class="s">&quot;PSR1&quot;</span><span class="nt">/&gt;</span>
-</span><span class='line'>
-</span><span class='line'> <span class="c">&lt;!-- The soft limit on line length MUST be 120 characters;</span>
-</span><span class='line'><span class="c">      automated style checkers MUST warn but MUST NOT error at the soft limit. --&gt;</span>
-</span><span class='line'> <span class="nt">&lt;rule</span> <span class="na">ref=</span><span class="s">&quot;Generic.Files.LineLength&quot;</span><span class="nt">&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;properties&gt;</span>
-</span><span class='line'>   <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;lineLimit&quot;</span> <span class="na">value=</span><span class="s">&quot;120&quot;</span><span class="nt">/&gt;</span>
-</span><span class='line'>   <span class="nt">&lt;property</span> <span class="na">name=</span><span class="s">&quot;absoluteLineLimit&quot;</span> <span class="na">value=</span><span class="s">&quot;0&quot;</span><span class="nt">/&gt;</span>
-</span><span class='line'>  <span class="nt">&lt;/properties&gt;</span>
-</span><span class='line'> <span class="nt">&lt;/rule&gt;</span>
-</span><span class='line'>
-</span><span class='line'> <span class="c">&lt;!-- ... --&gt;</span>
-</span><span class='line'>
-</span><span class='line'> <span class="c">&lt;!-- Visibility MUST be declared on all methods. --&gt;</span>
-</span><span class='line'> <span class="nt">&lt;rule</span> <span class="na">ref=</span><span class="s">&quot;Squiz.Scope.MethodScope&quot;</span><span class="nt">/&gt;</span>
-</span><span class='line'>
-</span><span class='line'> <span class="c">&lt;!-- Method arguments with default values MUST go at the end of the argument list. --&gt;</span>
-</span><span class='line'> <span class="nt">&lt;rule</span> <span class="na">ref=</span><span class="s">&quot;PEAR.Functions.ValidDefaultValue&quot;</span><span class="nt">/&gt;</span>
-</span><span class='line'>
-</span><span class='line'> <span class="c">&lt;!-- ... --&gt;</span>
-</span><span class='line'>
-</span><span class='line'><span class="nt">&lt;/ruleset&gt;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>En este fichero podemos ver que se importan todas las reglas definidas en el
-estándar <em>PSR1</em> con <code>&lt;rule ref="PSR1"&gt;</code>. Y que se importan reglas individuales
-de otros estándares, por ejemplo <code>&lt;rule ref="Squiz.Scope.MethodScope"/&gt;</code>. O que
-incluso se pueden pasar parámetros a algunas reglas, como se hace con
-<code>Generic.Files.LineLengh</code>.</p>
-
-<h3>Guía definitiva</h3>
-
-<p>Si con todo esto todavía no has dado con las reglas que quieres, o si necesitas
-conocer alguna regla más en profundidad, podemos echar un vistazo a cómo se
-generan las referencias de las reglas para poder incluirlas, excluirlas o
-parametrizarlas en nuestro <code>ruleset.xml</code>.</p>
-
-<p>Tomemos como ejemplo las reglas <em>Generic</em>, ya que son las más utilizadas, más
-concretamente la regla <code>Generic.Files.LineLength</code>. Las reglas del estándar
-<em>Generic</em> están definidas en el directorio: <code>CodeSniffer/Standards/Generic</code>,
-y dentro de él, en el directorio <code>Sniffs</code>. El siguiente token, <code>Files</code>, indica
-un nuevo subdirectorio dentro de <code>Sniffs</code> con el mismo nombre. Y por último,
-<code>LineLength</code>, indica una clase PHP con ese mismo nombre más el sufijo <code>Sniff</code>.</p>
-
-<p>Así pues, para la regla <code>Generic.Files.LineLength</code>, encontraremos una clase PHP en
-<code>CodeSniffer/Standards/<strong>Generic</strong>/Sniffs/<strong>Files</strong>/<strong>LineLength</strong>Sniff.php</code></p>
-
-<p>Otros ejemplos podrían ser:</p>
-
-<ul>
-<li><code>PEAR.Commenting.InlineComment</code>: clase <code>CodeSniffer/Standards/<strong>PEAR</strong>/Sniffs/<strong>Commenting</strong>/<strong>InlineComment</strong>Sniff.php</code></li>
-<li><code>PSR1.Classes.ClassDeclaration</code>: clase <code>CodeSniffer/Standards/<strong>PSR1</strong>/Sniffs/<strong>Classes</strong>/<strong>ClassDeclaration</strong>Sniff.php</code></li>
-<li><code>Zend.Debug.CodeAnalyzer</code>: clase <code>CodeSniffer/Standards/<strong>Zend</strong>/Sniffs/<strong>Debug</strong>/<strong>CodeAnalyzer</strong>Sniff.php</code></li>
-</ul>
-
-
-<p>Pero aún hay más. En el <code>ruleset.xml</code> de ejemplo, veíamos cómo se pasaban
-parámetros a la regla <code>Generic.Files.LineLength</code>. Ahora ya conocemos la clase
-PHP que contiene el código que ejecuta esa regla:
-<code>CodeSniffer/Standards/Generic/Sniffs/Files/LineLengthSniff.php</code>. Dicha clase
-tiene dos variables públicas: <code>lineLimit</code> y <code>absoluteLineLimit</code>. Que precisamente
-son los parámetros que se pueden configurar. Así pues, variables públicas en
-las clases <code>*Sniff</code> no son más que posibles parámetros a usar en el
-<code>ruleset.xml</code> de nuestro proyecto.</p>
-
-<h3>Referencias y enlaces relacionados</h3>
-
-<ul>
-<li>Página de <a href="https://github.com/squizlabs/PHP_CodeSniffer">PHP_CodeSniffer</a></li>
-<li><a href="http://rchavarria.github.io/blog/2014/05/05/mejora-continua-y-analisis-estatico-de-codigo">Mejora contínua y análisis estático de código</a> en este mismo blog</li>
-<li><a href="http://stackoverflow.com/questions/16427207/php-codesniffer-rules-documentation">Documentación de las reglas de PHP_CodeSniffer</a> en Stack Overflow</li>
 </ul>
 
 ]]></content>
