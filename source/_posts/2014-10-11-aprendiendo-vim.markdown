@@ -68,6 +68,17 @@ Videos de Derek Wyatt : http://derekwyatt.org/vim/tutorials/
 
 -->
 
+## Recursos para aprender
+
+- [Primera parte del LinuxIO](https://www.youtube.com/watch?feature=player_embedded&v=cpL32a_GP3k): con @ktzar que anima bastante
+- [Segunda parte del LinuxIO](https://www.youtube.com/watch?feature=player_embedded&v=XvCD78eA46E)
+- [Charla de Drew Neal](https://vimeo.com/53144573), un semidios de Vim. Página de Drew [http://drewneil.com/](http://drewneil.com/), con enlaces a VimCasts, peer-to-peer.io,...
+- [Libros de Vim](http://www.etnassoft.com/biblioteca/?search_term=VIM&books_category=libros_programacion&books_criteria=post_date_DESC&lang=all&since=all) en OpenLibra
+- [Videos de Derek Wyatt](http://derekwyatt.org/vim/tutorials/)
+- [Vim golf](http://vimgolf.com/)
+- [Vim Kata meetup](https://github.com/christoomey/vim-kata-meetup), de Chris Toomey
+- [Vim galore](https://github.com/mhinz/vim-galore)
+
 ## El mítico editor Vim, #linuxIO
 
 [Miguel Luis González] y [Pablo] nos presentan [El mítico editor Vim]. Miguel pone tanta pasión,
@@ -657,7 +668,7 @@ de los 8 espacios en blanco, que no los toque
 [vídeos para aprender Vim]: http://derekwyatt.org/vim/tutorials/advanced/
 [Globals, commands and functions]: https://vimeo.com/15443936
 
-# (Septiembre 2015) [My first Vim plugin], de Chris Toomey
+### (Septiembre 2015) [My first Vim plugin], de Chris Toomey
 
 En la charla [My first Vim plugin] aprenderemos a crear plugins para Vim. No te
 asustes, no es para tanto. También aprenderemos a crear funciones que se puedan
