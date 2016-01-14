@@ -109,8 +109,13 @@ task :new_post, :title do |t, args|
     post.puts "layout: post"
     post.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
     post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
+    post.puts "author: Rubén Chavarría"
     post.puts "comments: true"
     post.puts "categories: "
+    post.puts "- "
+    post.puts "published: true"
+    post.puts "footer: false"
+    post.puts "sidebar: true"
     post.puts "---"
   end
 end
