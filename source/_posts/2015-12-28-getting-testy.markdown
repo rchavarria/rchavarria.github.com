@@ -9,7 +9,6 @@ categories:
 published: true
 footer: false
 sidebar: true
-categories: 
 ---
 
 <img class="right" style="width: 250px" src="/images/2015/getting-testy.svg"/>
