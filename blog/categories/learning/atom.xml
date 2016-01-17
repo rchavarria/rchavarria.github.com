@@ -4,7 +4,7 @@
   <title><![CDATA[Category: learning | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/learning/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2016-01-13T22:48:55+01:00</updated>
+  <updated>2016-01-17T17:02:25+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,116 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Aprendiendo Elixir]]></title>
+    <link href="http://rchavarria.github.io/blog/2016/01/17/aprendiendo-elixir/"/>
+    <updated>2016-01-17T16:39:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2016/01/17/aprendiendo-elixir</id>
+    <content type="html"><![CDATA[<p><img class="left" src="/images/2016/elixir.png" width="200" height="266"></p>
+
+<p>No es una propósito de año nuevo ni nada, pero me apetece aprender un lenguaje
+puramente funcional por el simple hecho de aprender. He estado dudando entre
+Clojure y Elixir. Al final me he decidido por Elixir porque lo <em>venden</em> como
+divertido y porque sigo a varias personas en Twitter que están haciendo lo
+mismo (durante la redacción de este post me he enterado que hay un meetup nuevo
+del lenguaje en Madrid, <a href="http://www.meetup.com/Madrid-Elixir/">Madrid |> Elixir</a>), por lo que podré compartir lo
+aprendido. Dicen de Elixir que se parece mucho a Ruby, y que es un lenguaje
+moderno que se ejecuta la máquina virtual de Erlang. Con esos <em>hermanos
+mayores</em> promete mucho, la verdad.</p>
+
+<!-- more -->
+
+
+<p>Para ir aprendiendo el lenguaje, voy a poner en práctica el proceso de
+aprendizaje que descubrí leyendo el libro <a href="http://rchavarria.github.io/blog/2015/11/08/soft-skills/">Soft Skills</a>, de John Sonmetz:</p>
+
+<ol>
+<li>Entender la habilidad que se quiere aprender</li>
+<li>Delimitar el ámbito</li>
+<li>Definir qué se va a considerar como éxito</li>
+<li>Encontrar recursos</li>
+<li>Crear un plan de aprendizaje</li>
+<li>Filtrar los recursos</li>
+<li>Aprender lo suficiente para comenzar</li>
+<li>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</li>
+<li>Aprender lo suficiente para hacer algo de utilidad</li>
+<li>Enseñar lo aprendido, y repetir desde el paso 7</li>
+</ol>
+
+
+<p>Antes de llegar a los puntos 7-10, que son como un bucle, ahí van los primeros.</p>
+
+<h2>¿Qué habilidad quiero aprender?</h2>
+
+<p><strong>Quiero aprender a programar en Elixir</strong>. La frase es sencilla, pero ¿qué
+significa? ¿Significa que solamente quiero aprender la sintaxis? No, eso no es
+aprender un lenguaje de programación. ¿Significa que debo aprender todas las
+herramientas, frameworks, librerías, sistemas,...? Tampoco. Eso es imposible.
+He programado durante años en Java o JavaScript y lo que desconozco de ellos es
+mucho más de lo que conozco.</p>
+
+<p>Así pues, delimitaré el aprendizaje a conocer lo suficientemente el lenguaje y
+su ecosistema para ser capaz de escribir la parte servidora de una aplicación
+web.</p>
+
+<h2>¿Qué voy a considerar como éxito?</h2>
+
+<p>Tengo que poner algún límite. Creo que algo realmente interesante sería
+considerar un éxito poder <strong>desarrollar la parte servidora de una aplicación web</strong>,
+una API REST o algo así, que gestionara algún tipo de recurso (usuarios,
+tareas,... todavía no lo se). Si además soy capaz de desplegar la aplicación en
+alguna plataforma como Heroku o similar, el éxito sería rotundo.</p>
+
+<p>No me planteo nada de conectarlo a una base de datos, porque por ahora no he
+leído nada acerca de ello. Supongo que habrá alguna posibilidad, pero por ahora
+lo voy a dejar fuera.</p>
+
+<h2>Recursos</h2>
+
+<p>Esta es una lista inicial de recursos que voy a ir consumiendo:</p>
+
+<ul>
+<li>Web <a href="http://elixir-lang.org/">elixir-lang.org</a>. Web oficial. Creo que me puede servir para tener
+documentación rápida de forma online.</li>
+<li>Libro <a href="https://pragprog.com/book/elixir/programming-elixir">Programming Elixir, de Dave Thomas</a>. Parece ser el libro de
+referencia, así que es un recurso indispensable.
+<a href="https://forums.pragprog.com/forums/322">Foros de discusión del libro</a>.</li>
+<li><a href="https://github.com/elixir-lang/elixir">Código elixir en GitHub</a>. Código, código, código.</li>
+<li>Screencasts <a href="http://elixirsips.com/">elixir sips</a>. Videos sobre Elixir, muchos de ellos bajo
+suscripción.</li>
+<li><a href="https://www.learnelixir.tv/episodes">LearnElixitTV</a>. Más videos sobre Elixir, en este caso son de pago pero no de
+suscripción.</li>
+<li><a href="http://elixirdose.com/">Elixir Dose</a>. Un blog sobre este lenguaje de programación.</li>
+<li>Blog de <a href="http://benjamintan.io/blog/">Benjamin Tan</a>. Un blog sobre Ruby y Elixir del autor de un libro
+sobre Elixir. Parece venir del mundo Ruby. Tiene una charla en una
+conferencia de Ruby que hay que ver.</li>
+<li>Track de Elixir de <a href="http://exercism.io/languages/elixir">exercism.io</a>, una plataforma social donde resolver
+problemas y comentar las soluciones del resto de usuarios.</li>
+<li><a href="https://github.com/niftyn8/elixir_style_guide">Guía de estilo</a> para programar en Elixir. De obligado conocimiento para que
+tu código sea más legible por la comunidad.</li>
+</ul>
+
+
+<p>También espero que poco a poco, según vaya necesitando saber más sobre cómo
+hacer cosas con el lenguaje, vaya descubriendo blogs y autores acerca del
+lenguaje.</p>
+
+<h2>Plan de aprendizaje</h2>
+
+<p>Por ahora no tengo ningún plan. El más básico que tengo es empezar a leer el
+libro Programming Elixir y cuando sea capaz de escribir algún programa más
+complejo que un <em>Hola mundo</em> empezar a resolver problemas en exercism.io.</p>
+
+<p>A partir de ahí, el tiempo dirá.</p>
+
+<h2>Recursos filtrados</h2>
+
+<p>Creo que no tengo tantos recursos como para filtrarlos. Empezando con el libro,
+con exercism.io y de vez en cuando la web oficial del lenguaje puede ser
+suficiente para ir cogiendo ritmo.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Se aceptan mejoras]]></title>
@@ -1418,91 +1528,6 @@ ventanas en Vim y enviando comandos a ellas</li>
 
 
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Efectividad de 10 técnicas para estudiar]]></title>
-    <link href="http://rchavarria.github.io/blog/2014/09/07/efectividad-de-10-tecnicas-para-estudiar/"/>
-    <updated>2014-09-07T10:23:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2014/09/07/efectividad-de-10-tecnicas-para-estudiar</id>
-    <content type="html"><![CDATA[<p>Hace poco, escuchando el episodio 20 del podcast
-<a href="http://www.bastayadepicar.com/episodio/020">Basta ya de picar</a>,
-los creadores del podcast proponían un artículo como muy interesante.
-Dicho artículo trataba de
-<a href="http://bigthink.com/neurobonkers/assessing-the-evidence-for-the-one-thing-you-never-get-taught-in-school-how-to-learn">cómo aprender a aprender</a>.</p>
-
-<p>Lo leí y me pareció tan interesante que no pude resistirme a hacer un pequeño
-resumen para poder consultarlo en un futuro, y ya de paso, ¿por qué no
-publicarlo?</p>
-
-<!-- more -->
-
-
-<h2>Técnicas</h2>
-
-<p>Aquí están las técnicas ordenadas de mayor a menor efectividad:</p>
-
-<ul>
-<li><p>Exámenes (efectifidad alta): la técnica es más efectiva cuanto más elaboradas
-tengan que ser las respuestas, pero incluso los de múltiples opciones son efectivos.
-También resultan muy efectivos si las preguntas las elige uno mismo.
-Relacionado: <a href="http://en.wikipedia.org/wiki/Cornell_Notes">Sistema para tomar notas de Cornell</a>,
-incluso se incluye una <a href="http://lsc.cornell.edu/LSC_Resources/cornellsystem.pdf">plantilla</a>.</p></li>
-<li><p>Práctica distribuida (efectividad alta): qué es mejor, ¿estudiarlo todo de
-golpe o dividirlo y planificarlo a lo largo del tiempo?. Algunos estudios
-recomiendan dividirlo y espaciarlo entre un 10% y 20% del tiempo que queremos
-retener lo aprendido. Por ejemplo, si disponemos de un año, estudiaríamos una
-vez al mes. esto contrasta mucho con la práctica habitual de los estudiantes
-de estudar todo el último momento (ese conocimiento no durará mucho).</p></li>
-<li><p>Elaborar preguntas (efectividad media): se trata de crear explicaciones de
-<strong>por qué</strong> los hechos estudiados son verdaderos. Se concentran los esfuerzos
-en el <em>por qué</em>, en lugar de en el <em>qué</em>. Suele ayudar tener conocimientos
-previos de lo que se está estudiando.</p></li>
-<li><p>Auto-explicación (efectividad media): es muy buena técnica para aprender
-conceptos abstractos. Se trata de explicar <strong>cómo</strong> uno resuelve o entiende
-el problema mientras se razonan las elecciones que se van tomando. Es más
-efectivo si se hace mientras se estudia que si se hace después.</p></li>
-<li><p>Práctica intercalada (efectividad media): qué es mejor, ¿estudiar temas en
-bloques o estudiarlos entrelazados? En realidad, no se sabe muy bien, pero parece
-que funciona bastante bien para aprendizajes que mezclan lo físico y lo mental.</p></li>
-<li><p>Resúmenes (efectividad baja): no es tan efectivo como las anteriores pero sí
-que es más que el subrayado, utilizar palabras claves y la re-lectura.</p></li>
-<li><p>Subrayado (efectividad baja): no es muy efectivo porque no necesita de una
-especial atención.</p></li>
-<li><p>Palabras claves como mnemónicos (efectividad baja): es efectiva para ciertos
-aprendizajes, como por ejemplo recordar nombres, nuevos idiomas, términos cienticios, ...</p></li>
-<li><p>Asociar texto con imágenes (efectividad baja): es efectiva para recordar frases,
-pero no mucho para textos largos.</p></li>
-<li><p>Re-lectura (efectividad baja): es más eficiente si se espacia en el tiempo que
-si se realiza justo después de terminar la primera lectura.</p></li>
-</ul>
-
-
-<h2>Conclusión</h2>
-
-<p>Cada una de estas técnicas, por sí sola, no tendrá un efecto muy positivo en
-nuestro aprendizaje, pero si las combinamos, seguro que notamos mejoría. Por
-ejemplo, según el artículo, qué tal si la próxima vez que tengamos que
-aprender algo planificamos unos intervalos de estudio a lo largo del tiempo,
-mientras lo estudiamos por qué no nos formulamos una serie de preguntas
-(haciendo incapié en el <em>por qué</em> de los conceptos), para después responder
-con nuestras propias palabras a dichas preguntas.</p>
-
-<h3>Cómo funciona la técnica de tomar notas de Cornell</h3>
-
-<p>Resumen extraído de la entrada en la wikipedia:
-<a href="http://en.wikipedia.org/wiki/Cornell_Notes">Cornell note-taking system</a></p>
-
-<p>Dividir el papel en dos columnas: <em>columna de preguntas</em>, de 1/3 del ancho y
-<em>columna de notas</em>, 2/3 de ancho. La columna de notas es la de tomar notas de
-la lección que estamos recibiendo. La columna de preguntas es para anotar
-palabras claves y preguntas que nos surjan. Esta columna se rellena cuanto
-antes una vez hayamos terminado de tomar notas.</p>
-
-<p>Al pie de página, reservar 5 o 7 líneas para hacer un resumen de las notas
-tomadas. Para estudiar, simplemente tapar con la mano la columna de notas y
-tratar de responder a las preguntas de la columna de preguntas.</p>
 ]]></content>
   </entry>
   

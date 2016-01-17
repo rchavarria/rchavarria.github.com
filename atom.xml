@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2016-01-13T22:48:55+01:00</updated>
+  <updated>2016-01-17T17:02:25+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,116 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Aprendiendo Elixir]]></title>
+    <link href="http://rchavarria.github.io/blog/2016/01/17/aprendiendo-elixir/"/>
+    <updated>2016-01-17T16:39:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2016/01/17/aprendiendo-elixir</id>
+    <content type="html"><![CDATA[<p><img class="left" src="http://rchavarria.github.io/images/2016/elixir.png" width="200" height="266"></p>
+
+<p>No es una propósito de año nuevo ni nada, pero me apetece aprender un lenguaje
+puramente funcional por el simple hecho de aprender. He estado dudando entre
+Clojure y Elixir. Al final me he decidido por Elixir porque lo <em>venden</em> como
+divertido y porque sigo a varias personas en Twitter que están haciendo lo
+mismo (durante la redacción de este post me he enterado que hay un meetup nuevo
+del lenguaje en Madrid, <a href="http://www.meetup.com/Madrid-Elixir/">Madrid |> Elixir</a>), por lo que podré compartir lo
+aprendido. Dicen de Elixir que se parece mucho a Ruby, y que es un lenguaje
+moderno que se ejecuta la máquina virtual de Erlang. Con esos <em>hermanos
+mayores</em> promete mucho, la verdad.</p>
+
+<!-- more -->
+
+
+<p>Para ir aprendiendo el lenguaje, voy a poner en práctica el proceso de
+aprendizaje que descubrí leyendo el libro <a href="http://rchavarria.github.io/blog/2015/11/08/soft-skills/">Soft Skills</a>, de John Sonmetz:</p>
+
+<ol>
+<li>Entender la habilidad que se quiere aprender</li>
+<li>Delimitar el ámbito</li>
+<li>Definir qué se va a considerar como éxito</li>
+<li>Encontrar recursos</li>
+<li>Crear un plan de aprendizaje</li>
+<li>Filtrar los recursos</li>
+<li>Aprender lo suficiente para comenzar</li>
+<li>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</li>
+<li>Aprender lo suficiente para hacer algo de utilidad</li>
+<li>Enseñar lo aprendido, y repetir desde el paso 7</li>
+</ol>
+
+
+<p>Antes de llegar a los puntos 7-10, que son como un bucle, ahí van los primeros.</p>
+
+<h2>¿Qué habilidad quiero aprender?</h2>
+
+<p><strong>Quiero aprender a programar en Elixir</strong>. La frase es sencilla, pero ¿qué
+significa? ¿Significa que solamente quiero aprender la sintaxis? No, eso no es
+aprender un lenguaje de programación. ¿Significa que debo aprender todas las
+herramientas, frameworks, librerías, sistemas,&#8230;? Tampoco. Eso es imposible.
+He programado durante años en Java o JavaScript y lo que desconozco de ellos es
+mucho más de lo que conozco.</p>
+
+<p>Así pues, delimitaré el aprendizaje a conocer lo suficientemente el lenguaje y
+su ecosistema para ser capaz de escribir la parte servidora de una aplicación
+web.</p>
+
+<h2>¿Qué voy a considerar como éxito?</h2>
+
+<p>Tengo que poner algún límite. Creo que algo realmente interesante sería
+considerar un éxito poder <strong>desarrollar la parte servidora de una aplicación web</strong>,
+una API REST o algo así, que gestionara algún tipo de recurso (usuarios,
+tareas,&#8230; todavía no lo se). Si además soy capaz de desplegar la aplicación en
+alguna plataforma como Heroku o similar, el éxito sería rotundo.</p>
+
+<p>No me planteo nada de conectarlo a una base de datos, porque por ahora no he
+leído nada acerca de ello. Supongo que habrá alguna posibilidad, pero por ahora
+lo voy a dejar fuera.</p>
+
+<h2>Recursos</h2>
+
+<p>Esta es una lista inicial de recursos que voy a ir consumiendo:</p>
+
+<ul>
+<li>Web <a href="http://elixir-lang.org/">elixir-lang.org</a>. Web oficial. Creo que me puede servir para tener
+documentación rápida de forma online.</li>
+<li>Libro <a href="https://pragprog.com/book/elixir/programming-elixir">Programming Elixir, de Dave Thomas</a>. Parece ser el libro de
+referencia, así que es un recurso indispensable.
+<a href="https://forums.pragprog.com/forums/322">Foros de discusión del libro</a>.</li>
+<li><a href="https://github.com/elixir-lang/elixir">Código elixir en GitHub</a>. Código, código, código.</li>
+<li>Screencasts <a href="http://elixirsips.com/">elixir sips</a>. Videos sobre Elixir, muchos de ellos bajo
+suscripción.</li>
+<li><a href="https://www.learnelixir.tv/episodes">LearnElixitTV</a>. Más videos sobre Elixir, en este caso son de pago pero no de
+suscripción.</li>
+<li><a href="http://elixirdose.com/">Elixir Dose</a>. Un blog sobre este lenguaje de programación.</li>
+<li>Blog de <a href="http://benjamintan.io/blog/">Benjamin Tan</a>. Un blog sobre Ruby y Elixir del autor de un libro
+sobre Elixir. Parece venir del mundo Ruby. Tiene una charla en una
+conferencia de Ruby que hay que ver.</li>
+<li>Track de Elixir de <a href="http://exercism.io/languages/elixir">exercism.io</a>, una plataforma social donde resolver
+problemas y comentar las soluciones del resto de usuarios.</li>
+<li><a href="https://github.com/niftyn8/elixir_style_guide">Guía de estilo</a> para programar en Elixir. De obligado conocimiento para que
+tu código sea más legible por la comunidad.</li>
+</ul>
+
+
+<p>También espero que poco a poco, según vaya necesitando saber más sobre cómo
+hacer cosas con el lenguaje, vaya descubriendo blogs y autores acerca del
+lenguaje.</p>
+
+<h2>Plan de aprendizaje</h2>
+
+<p>Por ahora no tengo ningún plan. El más básico que tengo es empezar a leer el
+libro Programming Elixir y cuando sea capaz de escribir algún programa más
+complejo que un <em>Hola mundo</em> empezar a resolver problemas en exercism.io.</p>
+
+<p>A partir de ahí, el tiempo dirá.</p>
+
+<h2>Recursos filtrados</h2>
+
+<p>Creo que no tengo tantos recursos como para filtrarlos. Empezando con el libro,
+con exercism.io y de vez en cuando la web oficial del lenguaje puede ser
+suficiente para ir cogiendo ritmo.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Artículo técnico: Getting testy]]></title>
@@ -229,34 +339,60 @@ dando la respuesa correcta. Solo nos interesa si el código está dando la
     <link href="http://rchavarria.github.io/blog/2015/12/13/mi-cas-2015/"/>
     <updated>2015-12-13T21:48:00+01:00</updated>
     <id>http://rchavarria.github.io/blog/2015/12/13/mi-cas-2015</id>
-    <content type="html"><![CDATA[<p>Me quedé sin chapa. Sin chapa de &#8220;Mi primera CAS&#8221;. Conocí a varias personas que la llevaban orgullosos. Espero que para ellos significara lo mismo que significó para mí <a href="">mi primera CAS</a>.</p>
+    <content type="html"><![CDATA[<p>Me quedé sin chapa. Sin chapa de &#8220;Mi primera CAS&#8221;. Conocí a varias personas que
+la llevaban orgullosos. Espero que para ellos significara lo mismo que
+significó para mí <a href="http://rchavarria.github.io/blog/2012/11/08/mi-experiencia-en-la-cas2012/">mi primera CAS</a>.</p>
 
-<p>Ésta, como aquella, ha sido una gran experiencia. La de este año ha sido enooorme, comparada con la de Cáceres. Hemos asistido más de 700 personas. Ha tenido que ser un trabajo monumental organizarla, así que desde aquí mis agradecimientos y admiración a todos los que la han hecho posible: organizadores, patrocinadores y voluntarios. Olé!</p>
+<p>Ésta, como aquella, ha sido una gran experiencia. La de este año ha sido
+enooorme, comparada con la de Cáceres. Hemos asistido más de 700 personas. Ha
+tenido que ser un trabajo monumental organizarla, así que desde aquí mis
+agradecimientos y admiración a todos los que la han hecho posible:
+organizadores, patrocinadores y voluntarios. Olé!</p>
 
 <!-- more -->
 
 
-<p>La conferencia fueron dos intensos días llenos de charlas interesantísimas. Dos días que saben a poco. Sobretodo porque no he podido disfrutar de las cañas de después, o las quedadas fuera del evento. Y también porque, a pesar de que todos los asistentes estuviéramos en la misma sala para tomar café y comer, me ha resultado imposible entablar conversaciones con todas las personas que quería. ¡Agotador! Pero muy motivador a la vez.</p>
+<p>La conferencia fueron dos intensos días llenos de charlas interesantísimas. Dos
+días que saben a poco. Sobretodo porque no he podido disfrutar de las cañas de
+después, o las quedadas fuera del evento. Y también porque, a pesar de que
+todos los asistentes estuviéramos en la misma sala para tomar café y comer, me
+ha resultado imposible entablar conversaciones con todas las personas que
+quería. ¡Agotador! Pero muy motivador a la vez.</p>
 
 <p>Sigamos con las charlas a las que asistí, y qué me llevé de ellas:</p>
 
 <h2><a href="http://www.slideshare.net/carlosble/cas2015-opening-improving-the-software">Apertura</a>, <a href="https://twitter.com/carlosble">Carlos Blé</a></h2>
 
-<p>Carlos habló de la necesidad de hablar inglés, no porque sí, si no para aprender de las fuentes. También habló de la importancia de hablar otro lenguaje, extraño para los desarrolladores, el de negocio. De esta forma nos entenderemos mejor ambas partes. Fue una charla muy inspiradora, fenommenal como apertura. Me quedaría con la frase:</p>
+<p>Carlos habló de la necesidad de hablar inglés, no porque sí, si no para
+aprender de las fuentes. También habló de la importancia de hablar otro
+lenguaje, extraño para los desarrolladores, el de negocio. De esta forma nos
+entenderemos mejor ambas partes. Fue una charla muy inspiradora, fenommenal
+como apertura. Me quedaría con la frase:</p>
 
 <blockquote><p>Tú eres el único responsable de tu carrera</p></blockquote>
 
 <h2><a href="https://www.youtube.com/watch?v=C6Sy0v19RAc&amp;t=2h14m00s">Your application is not your framework</a>, de <a href="https://twitter.com/ecomba">Enrique Comba</a></h2>
 
-<p>¿Por qué cuando te preguntan por tu applicación dices qué framework estás usando? Habla sobre qué hace de verdad tu aplicación. Enrique habló de muchos conceptos alrededor de los frameworks: <em>convention over configuration</em>, mezcla de lógica de negocio con la lógica impuesta por el framework. ¿Qué beneficios trae separar la lógica de tu aplicación del framework? Separación de responsabilidades, velocidad en los tests automáticos y sobretodo claridad en el <strong>propósito</strong> y <strong>estructura</strong> de tu aplicación.</p>
+<p>¿Por qué cuando te preguntan por tu applicación dices qué framework estás
+usando? Habla sobre qué hace de verdad tu aplicación. Enrique habló de muchos
+conceptos alrededor de los frameworks: <em>convention over configuration</em>, mezcla
+de lógica de negocio con la lógica impuesta por el framework. ¿Qué beneficios
+trae separar la lógica de tu aplicación del framework? Separación de
+responsabilidades, velocidad en los tests automáticos y sobretodo claridad en
+el <strong>propósito</strong> y <strong>estructura</strong> de tu aplicación.</p>
 
 <h2><a href="http://www.slideshare.net/PeterMarshall10/pete-marshall-casmadrid2015-continuous-delivery-in-legacy-environments">Continuous delivery</a>, de <a href="https://twitter.com/petemar5hall">Peter Marshal</a></h2>
 
-<p>Peter compartió su experiencia en llevar a un equipo desde el desarrollo de una aplicación <em>a la vieja usanza</em> hasta alcanzar puestas en producción diarias. En las slides de la presentación encontrarás multitud de consejos para llevarlo a cabo, pero yo me quedaría con estos conceptos o enseñanzas:</p>
+<p>Peter compartió su experiencia en llevar a un equipo desde el desarrollo de una
+aplicación <em>a la vieja usanza</em> hasta alcanzar puestas en producción diarias. En
+las slides de la presentación encontrarás multitud de consejos para llevarlo a
+cabo, pero yo me quedaría con estos conceptos o enseñanzas:</p>
 
 <ul>
 <li>La entrega contínua es enfocarse en la excelencia técnica</li>
-<li>Conforme avanza el tiempo, el mayor problema de las aplicaciones con problemas es que los bugs aumentan mientras que las funcionalidades desplegadas disminuyen.</li>
+<li>Conforme avanza el tiempo, el mayor problema de las aplicaciones con
+problemas es que los bugs aumentan mientras que las funcionalidades
+desplegadas disminuyen.</li>
 <li>La clave está en la simplicidad</li>
 <li>Lleva su tiempo madurar (equipo, producto, compañía,&#8230;)</li>
 </ul>
@@ -264,53 +400,107 @@ dando la respuesa correcta. Solo nos interesa si el código está dando la
 
 <h2><a href="http://cas2015.agile-spain.org/charlas/">Building resilient integrations</a>, de <a href="https://twitter.com/cuvuligio">Dave Moore</a></h2>
 
-<p>Esta charla tuvo su parte teórica y su parte práctica. De la parte teórica, decir que debemos entender que los fallos están en todas partes, por lo que es nuestro trabajo hacer software que no falle, que sea tolerante a fallos de sistemas externos. Algunas técnicas para hacerlo podrían ser: tests automáticos (no mienten, la documentación sí), aislar integraciones que herramientas de terceros (creando interfaces que las separen de nuestra applicación), utilizar nuestro propio modelo de datos, política de reintentos de conexión,&#8230;</p>
+<p>Esta charla tuvo su parte teórica y su parte práctica. De la parte teórica,
+decir que debemos entender que los fallos están en todas partes, por lo que es
+nuestro trabajo hacer software que no falle, que sea tolerante a fallos de
+sistemas externos. Algunas técnicas para hacerlo podrían ser: tests automáticos
+(no mienten, la documentación sí), aislar integraciones que herramientas de
+terceros (creando interfaces que las separen de nuestra applicación), utilizar
+nuestro propio modelo de datos, política de reintentos de conexión,&#8230;</p>
 
-<p>En el taller de después tuvimos la oportunidad de poner todo esto en prática. Un taller super divertido.</p>
+<p>En el taller de después tuvimos la oportunidad de poner todo esto en prática.
+Un taller super divertido.</p>
 
 <h2><a href="http://es.slideshare.net/juanignaciosl/continuous-integration-at-cartodb">Continuous integration in CartoBD</a>, de <a href="https://twitter.com/juanignaciosl">Juan Ignacio Sánchez</a></h2>
 
-<p>Juan Ignacio empezó fuerte, comentando que, aunque hay millones de herramientas, es el <strong>equipo</strong> quien realmente puede hacer que la integración, entrega y despliegue contínuo funcionen.</p>
+<p>Juan Ignacio empezó fuerte, comentando que, aunque hay millones de
+herramientas, es el <strong>equipo</strong> quien realmente puede hacer que la integración,
+entrega y despliegue contínuo funcionen.</p>
 
-<p>¿Cómo lo hacen en CartoDB? Planeándolo desde antes que la gente entre a trabajar con ellos, despligando desde el primer día, planes iterativos e incrementales, tests, code reviews, pull requests, feature toggles, pequeñas releases a grupos controlados de usuarios (canary releases), posibilidad de hacer rollback rápidamente (pequeños despliegues llevan a que esto sea posible), análisis post-mortem de grandes fallos, mucha instrumentación y monitorización.</p>
+<p>¿Cómo lo hacen en CartoDB? Planeándolo desde antes que la gente entre a
+trabajar con ellos, despligando desde el primer día, planes iterativos e
+incrementales, tests, code reviews, pull requests, feature toggles, pequeñas
+releases a grupos controlados de usuarios (canary releases), posibilidad de
+hacer rollback rápidamente (pequeños despliegues llevan a que esto sea
+posible), análisis post-mortem de grandes fallos, mucha instrumentación y
+monitorización.</p>
 
 <h2><a href="http://www.slideshare.net/lantoli/believe-it-or-not-keynote-cas-2015-55802209">Keynote técnica</a>, de <a href="https://twitter.com/lantoli">Leo Antolí</a></h2>
 
-<p>Leo hizo incapié en lo más profundo de agile y lean: no te creas lo que te cuenten, pruébalo y si te funciona úsalo, si no te funciona, descártalo. Hay mucho estudios que dicen que una práctica es X veces mejor. Analiza esos estudios y te darás cuenta de que son humo. Pon en duda el pair programming, TDD, mejoras en productividad, code dojos, code retreats, craftsmanship, deuda técnica, tasa de proyectos software fallidos,&#8230;</p>
+<p>Leo hizo incapié en lo más profundo de agile y lean: no te creas lo que te
+cuenten, pruébalo y si te funciona úsalo, si no te funciona, descártalo. Hay
+mucho estudios que dicen que una práctica es X veces mejor. Analiza esos
+estudios y te darás cuenta de que son humo. Pon en duda el pair programming,
+TDD, mejoras en productividad, code dojos, code retreats, craftsmanship, deuda
+técnica, tasa de proyectos software fallidos,&#8230;</p>
 
-<p>Como buena keynote, lo que me llevo de esta charla son pensamientos, dudas, cuestiones. Debo entender que el software no es el fin, es un medio para conseguir un fin. Deja de usar números no probados. Cuenta experiencias propias (no sirven para demostrar nada, pero son algo real). Y sobretodo, mantén un <strong>espiritu crítico</strong>.</p>
+<p>Como buena keynote, lo que me llevo de esta charla son pensamientos, dudas,
+cuestiones. Debo entender que el software no es el fin, es un medio para
+conseguir un fin. Deja de usar números no probados. Cuenta experiencias propias
+(no sirven para demostrar nada, pero son algo real). Y sobretodo, mantén un
+<strong>espiritu crítico</strong>.</p>
 
 <h2><a href="https://www.youtube.com/watch?v=_CcO9upHiDU&amp;t=9m20s">Keynote viernes</a>, de <a href="https://twitter.com/rachelcdavies">Rachel Davis</a></h2>
 
-<p>Esta keynote trató de introducir cambios, de introducir tiempo para el aprendizaje. Debemos crear tiempo para ello a lo largo de nuestra semana. No tengas prisa en introducir cambios, la gente necesita <strong>tiempo</strong>.</p>
+<p>Esta keynote trató de introducir cambios, de introducir tiempo para el
+aprendizaje. Debemos crear tiempo para ello a lo largo de nuestra semana. No
+tengas prisa en introducir cambios, la gente necesita <strong>tiempo</strong>.</p>
 
-<p>De esta keynote quiero recordar dos consejos de Rachel: comparte lo aprendido (por ejemplo en esta CAS), invierte tiempo en profundizar en lo aprendido.</p>
+<p>De esta keynote quiero recordar dos consejos de Rachel: comparte lo aprendido
+(por ejemplo en esta CAS), invierte tiempo en profundizar en lo aprendido.</p>
 
 <h2><a href="https://medium.com/@borillo/el-modelo-de-desarrollo-mete-saca-be17304ad1df#.b0vwf7ben">Escapando del modelo mete-saca</a>, de <a href="https://twitter.com/borillo">Ricardo Borillo</a></h2>
 
-<p>¿Estamos seguros de que lo que quiere el usuario es un simple sistema CRUD? ¿No hay una forma de aportar más valor? Un CRUD es muy genérico, seguro que no resuelve las necesidades del usuario con la mejor eficiencia.</p>
+<p>¿Estamos seguros de que lo que quiere el usuario es un simple sistema CRUD? ¿No
+hay una forma de aportar más valor? Un CRUD es muy genérico, seguro que no
+resuelve las necesidades del usuario con la mejor eficiencia.</p>
 
-<p>Ricardo analizó qué nos lleva a este modelo: pobres historias de usuario, mal definidas, que nos llevan a hacer cosas generales; los frameworks (como ORMs); y arquitecturas de usuario pobres, con componentes maestro-detalle, consumo de apis REST,&#8230; todo esto nos conduce al modelo mete-saca.</p>
+<p>Ricardo analizó qué nos lleva a este modelo: pobres historias de usuario, mal
+definidas, que nos llevan a hacer cosas generales; los frameworks (como ORMs);
+y arquitecturas de usuario pobres, con componentes maestro-detalle, consumo de
+apis REST,&#8230; todo esto nos conduce al modelo mete-saca.</p>
 
-<p>La solución propuesta por Ricardo, un único punto de entrada (en contraposición a los múltiples endpoints REST) con una arquitectura <a href="https://en.wikipedia.org/wiki/Command%E2%80%93query_separation#Command_Query_Responsibility_Segregation">CQRS</a>. Cada <em>comando</em> correspondería con una acción del usuario, una historia de usuario, un caso de uso muy específico, que nos conduciría a tener las mínimas funcionalidades desarrolladas con la máxima eficiencia y la mejor usabilidad para el usuario.</p>
+<p>La solución propuesta por Ricardo, un único punto de entrada (en contraposición
+a los múltiples endpoints REST) con una arquitectura <a href="https://en.wikipedia.org/wiki/Command%E2%80%93query_separation#Command_Query_Responsibility_Segregation">CQRS</a>. Cada <em>comando</em>
+correspondería con una acción del usuario, una historia de usuario, un caso de
+uso muy específico, que nos conduciría a tener las mínimas funcionalidades
+desarrolladas con la máxima eficiencia y la mejor usabilidad para el usuario.</p>
 
 <h2><a href="http://www.slideshare.net/programania/software-economics-tradeoffs-of-decoupled-softwre">Economía del software</a>, de <a href="https://twitter.com/artolamola">Luis Artola</a> y <a href="https://twitter.com/ggalmazor">Guillermo Gutierrez</a></h2>
 
-<p>Luis y Guillermo nos condujeron en un viaje apasionante desde las necesidades de negocio hasta detalles del código, tales como las dependencias. En el camino, comentaron multitud de conceptos, de buenas prácticas, hicieron referencia a charlas de todo el evento (lo que pone de manifiesto lo amplio de su charla).</p>
+<p>Luis y Guillermo nos condujeron en un viaje apasionante desde las necesidades
+de negocio hasta detalles del código, tales como las dependencias. En el
+camino, comentaron multitud de conceptos, de buenas prácticas, hicieron
+referencia a charlas de todo el evento (lo que pone de manifiesto lo amplio de
+su charla).</p>
 
-<p>Concepto clave: negocio quiere entrega de <strong>valor</strong>, minimizando <strong>costes</strong> y <strong>riesgos</strong> pero manteniendo <strong>opciones</strong> abiertas. El mayor en el software es el coste de evolución. Cuanto más difícil sea cambiar algo, más costoso será a lo largo del tiempo. El desarrollo iterativo e incremental reduce los riestos. El despliegue de pequeñas funcionalidades, interfaces, inversión de control son formas de crear opciones.</p>
+<p>Concepto clave: negocio quiere entrega de <strong>valor</strong>, minimizando <strong>costes</strong> y
+<strong>riesgos</strong> pero manteniendo <strong>opciones</strong> abiertas. El mayor en el software es
+el coste de evolución. Cuanto más difícil sea cambiar algo, más costoso será a
+lo largo del tiempo. El desarrollo iterativo e incremental reduce los riestos.
+El despliegue de pequeñas funcionalidades, interfaces, inversión de control son
+formas de crear opciones.</p>
 
 <h2><a href="http://eamodeorubio.github.io/effective-ui-bdd-with-js/short.html#/">Effective UI testing</a>, de <a href="https://twitter.com/eamodeorubio">Enrique Amodeo</a></h2>
 
-<p>Todo comenzó con el dilema: ¿debo testear cada clase individual o todo el sistema? Pues ni lo uno, ni lo otro. En cuanto a la interfaz gráfica, la podríamos dividir en dos dominios: la presentación y la lógica de usabilidad.</p>
+<p>Todo comenzó con el dilema: ¿debo testear cada clase individual o todo el
+sistema? Pues ni lo uno, ni lo otro. En cuanto a la interfaz gráfica, la
+podríamos dividir en dos dominios: la presentación y la lógica de usabilidad.</p>
 
-<p>¿Como testear cada parte? Para testear la presentación debemos mockear el DOM del navegador. Para testear la lógica de usabilida, debemos mockear el acceso al servidor. Basándose en eso, Enrique recomienda seguir dos prácticas: encapsular los accesos al servidor y los accesos al DOM.</p>
+<p>¿Como testear cada parte? Para testear la presentación debemos mockear el DOM
+del navegador. Para testear la lógica de usabilida, debemos mockear el acceso
+al servidor. Basándose en eso, Enrique recomienda seguir dos prácticas:
+encapsular los accesos al servidor y los accesos al DOM.</p>
 
 <h2>Trabajo para casa</h2>
 
 <ul>
 <li>Parece que integración, entrega y despliegue contínuos son prácticas básicas para empresas exitosas.</li>
-<li>Prepara las conferencias a las que asistas: busca el lugar donde se va a celebrar e imprime un plano de las salas que se van a utilizar, crea una checklist con las cosas que hacer antes de asistir a un evento. Como por ejemplo prepar preguntas a hacer a gente interesante que quiero conocer (me gustó aquello que hiciste/dijiste, discrepo con aquello que &#8230;)</li>
+<li>Prepara las conferencias a las que asistas: busca el lugar donde se va a
+celebrar e imprime un plano de las salas que se van a utilizar, crea una
+checklist con las cosas que hacer antes de asistir a un evento. Como por
+ejemplo prepar preguntas a hacer a gente interesante que quiero conocer (me
+gustó aquello que hiciste/dijiste, discrepo con aquello que &#8230;)</li>
 <li>Echar un vistazo a la herramienta Screen Hero</li>
 <li>Libro recomendado por Leo Antolí: Pensar rápido, pensar despacio</li>
 <li>Libro recomendado por Rachel Davis: Drive (cómo introducir cambios)</li>
@@ -2794,100 +2984,6 @@ no identificar problemas (observar), idear una solución (hipótesis) y construi
 <ul>
 <li><a href="https://www.youtube.com/watch?v=9IPn5Gk_OiM">A short history of software engineering</a></li>
 <li><a href="https://www.youtube.com/watch?v=zDEpeWQHtFU">Real Software Engineering</a>, de Glenn Vanderburg</li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Navegando el código fuente con Vim]]></title>
-    <link href="http://rchavarria.github.io/blog/2015/08/09/navegando-codigo-fuente-vim/"/>
-    <updated>2015-08-09T22:16:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2015/08/09/navegando-codigo-fuente-vim</id>
-    <content type="html"><![CDATA[<p>Últimamente se están popularizando muchos editores de código (Atom, Brakets,
-Sublime Text,&#8230;). Pero mucho antes que ellos existieron al menos otros dos:
-Emacs y <a href="http://www.vim.org">Vim</a>. No se muy bien la razón, quizá fue simplemente por el placer
-de aprender, pero me decidí a <a href="http://rchavarria.github.io/blog/2014/10/11/aprendiendo-vim">aprender a utilizar Vim</a>. Ya llevo un tiempo
-con ello, aunque el aprendizaje va despacio.</p>
-
-<p>Hay muchas cosas que me encantan de Vim, pero echo de menos algunas cosas que
-me dan ciertos IDEs: refactorizaciones sencillas, búsqueda en múltiples
-ficheros, integración con otras herramientas,&#8230; En este post voy a contar
-cómo se puede <strong>solucionar el problema de la navegación de código</strong>.</p>
-
-<!-- more -->
-
-
-<p>Vim lo soluciona con un fichero de <em>tags</em>. Dentro de un lenguaje de programación,
-un tag es simplemente el nombre de una función, método, clase,&#8230; Cada tag va
-acompañado de una referencia para localizar dónde aparece: básicamente fichero y
-número de línea. Con la herramienta <a href="http://ctags.sourceforge.net">ctags</a> es posible generar un fichero que
-sirve a Vim a conocer todas las tags de nuestro proyecto, y mediante comandos de
-Vim, podemos movernos entre ellas de un fichero a otro.</p>
-
-<h2>Uso de la herramienta <code>ctags</code></h2>
-
-<p>Lo primero es instalar la herramienta. Para Linux es tan sencillo como ejecutar
-un simple comando. Para otros sistemas operativos es también bastante sencillo,
-pero se recomienda visitar la página del proyecto <a href="http://ctags.sourceforge.net">Exuberant Ctags</a> para
-conocer más detalles.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>sudo apt-get install exuberant-ctags
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>El siguiente paso es generar el fichero de tags de nuestro proyecto:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span><span class="nb">cd</span> /home/rchavarria/my-super-interesting-project
-</span><span class='line'><span class="nv">$ </span>ctags -R .
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Y por último, indicar a Vim dónde está el fichero de tags que queremos usar.
-Para ello, una vez el editor está abierto, introducir el comando:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>:set <span class="nv">tags</span><span class="o">=</span>/path/to/tags/file
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Para facilitar las cosas y no tener que recordar cómo cargar el fichero de tags
-manualmente, es recomendable poner el comando anterior en el fichero <code>.vimrc</code>,
-de forma que al abrir Vim cargue siempre el fichero de tags.</p>
-
-<h2>Navegar</h2>
-
-<p>Ahora, veamos cómo podemos movernos entre tags. Estos movimientos permiten
-movernos dentro del mismo fichero, entre ficheros abiertos, o incluso ficheros
-que no estén abiertos (pero están referenciados en el fichero de tags claro).</p>
-
-<ul>
-<li><code>CTRL + ]</code>: en modo normal, nos lleva a la definición del tag donde está el
-cursor. Con el teclado español, para mostrar el carácter <code>]</code> es necesario pulsar
-<code>AlgGr</code> + <code>]</code>, pero para ejecutar este comando de Vim no se debe pulsar <code>AltGr</code>,
-es suficiente con pulsar la tecla que contiene los carácteres <code>+</code>, <code>*</code> y <code>]</code>.</li>
-<li><code>CTRL + t</code>: en modo normal, te lleva de vuelta al punto antes de navegar al tag.</li>
-<li><code>CTRL + w</code> + <code>CTRL + ]</code>: en modo normal, divide la pantalla horizontalmente y
-abre el fichero donde se encuentra la definición del tag.</li>
-<li><code>:tag &lt;tag name&gt;</code> para ir directamente a la definición de una tag cualquiera</li>
-<li><code>:tnext</code> y <code>:tprevious</code> (<code>:tn</code> y <code>:tp</code>) te llevan a la tag siguiente o anterior.
-hay quien recomienda mapear estos comandos a otra secuencia de carácteres, como
-por ejemplo: <code>]t</code> y <code>[t</code>.</li>
-<li><code>:ltag</code> carga las tags en la ventana de lista de localizaciones (como <code>:ls</code>
-cuando lista los búfferes abiertos)</li>
-<li><code>:lopen</code> abre dicha ventana</li>
-</ul>
-
-
-<h2>Referencias y enlaces relacionados</h2>
-
-<ul>
-<li><a href="http://andrewradev.com/2011/06/08/vim-and-ctags">Vim and Ctags</a>, fenomenal artículo que cubre casi todo lo relacionado con
-Vim y ctags.</li>
-<li><a href="http://rchavarria.github.io/blog/2014/10/11/aprendiendo-vim">Aprendiendo Vim</a>, en este mismo blog</li>
 </ul>
 
 ]]></content>
