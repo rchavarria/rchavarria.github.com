@@ -76,6 +76,9 @@ Esta es una lista inicial de recursos que voy a ir consumiendo:
 - Libro [Programming Elixir, de Dave Thomas]. Parece ser el libro de
   referencia, así que es un recurso indispensable.
   [Foros de discusión del libro].
+- Libro [Programming Phoenix], también de la editorial The Pragmatic
+  Programmer. Phoenix es un framework para desarrollar aplicaciones web con
+  Elixir ([recomendado por Rubén Fernández], gracias).
 - [Código elixir en GitHub]. Código, código, código. 
 - Screencasts [elixir sips]. Videos sobre Elixir, muchos de ellos bajo
   suscripción.
@@ -113,6 +116,8 @@ suficiente para ir cogiendo ritmo.
 [elixir-lang.org]: http://elixir-lang.org/
 [Programming Elixir, de Dave Thomas]: https://pragprog.com/book/elixir/programming-elixir
 [Foros de discusión del libro]: https://forums.pragprog.com/forums/322
+[Programming Phoenix]: https://pragprog.com/book/phoenix/programming-phoenix
+[recomendado por Rubén Fernández]: https://twitter.com/_rubenfa/status/689356164082049024
 [Código elixir en GitHub]: https://github.com/elixir-lang/elixir
 [elixir sips]: http://elixirsips.com/
 [LearnElixitTV]: https://www.learnelixir.tv/episodes
