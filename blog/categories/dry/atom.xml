@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: dry | R. Chavarria's Blog]]></title>
+  <link href="http://rchavarria.github.io/blog/categories/dry/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.io/"/>
+  <updated>2016-01-31T20:54:48+01:00</updated>
+  <id>http://rchavarria.github.io/</id>
+  <author>
+    <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[El código fuente no es suficientemente grande para los dos]]></title>
+    <link href="http://rchavarria.github.io/blog/2016/01/31/codigo-no-suficientemente-grande-para-dos/"/>
+    <updated>2016-01-31T20:29:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2016/01/31/codigo-no-suficientemente-grande-para-dos</id>
+    <content type="html"><![CDATA[<p>En biología, el concepto de repetirse a uno mismo es fundamental. Ninguno de
+nosotros existiríamos si los primeros organismos unicelulares no hubieran sido
+capaces de desarrollar el mecanismo de mitosis, la capacidad de multiplicarse,
+de crear réplicas de sí mismos. Para los niños, la repetición también es
+importante. Aprenden por imitación, repitiendo lo que observan en el
+comportamiento de los demás.</p>
+
+<p><img class="right" src="/images/2016/mitosis.png"></p>
+
+<p>A la hora de desarrollar software, la repetición no está vista con tan buenos
+ojos. Por ejemplo, se ha dado un nombre despectivo a los programas que crean
+copias de sí mismos, como los <em>virus</em>. Por otro lado, la duplicidad de código
+de una aplicación produce muchos quebraderos de cabeza a aquellos de nosotros
+que nos dedicamos al software. Para recordárnoslo, contamos con el <strong>principio
+<em>D.R.Y., don't repeat yourself</em>, o dicho de otro modo, no te repitas a tí mismo</strong>.</p>
+
+<!-- more -->
+
+
+<blockquote><p>Cada pieza de conocimiento debe tener una representación dentro de un sistema
+  única, inequívoca y acreditada ~ <em>C2 Wiki</em> (traducción libre)</p></blockquote>
+
+<p>Normalmente este concepto se cumple cuando hay dos segmentos de código con el
+mismo texto, pero no se limita a ello. Puede que existan dos clases que hace
+exactamente lo mismo, pero los métodos o las variables tienen distinto nombre.
+También puede haber duplicidades en ficheros de configuración, o en la
+documentación. Por lo tanto, hay que tener en cuenta que <strong>D.R.Y. no es
+duplicidad de texto, si no de conceptos</strong>.</p>
+
+<p>Debemos prestar atención a duplicidades en los tests, por ejemplo a la hora de
+realizar las verificaciones. En muchas herramientas de testing existen los
+<em>custom matchers</em>, que nos ayudan precisamente a reducir estas duplicidades.</p>
+
+<p>J.B.Rainsberger ha escrito mucho sobre el tema, muy relacionado con el libro
+<em><a href="https://leanpub.com/4rulesofsimpledesign">4 rules of simple design</a></em>, de Corey Haines, quien al final las reduce a dos
+reglas básicas: dar nombre a las abstracciones y eliminar duplicidades creando
+nuevas abstracciones. Pero también existen otras técnicas para reducir
+conceptos duplicados, como las refactorizaciones <strong>extraer método</strong> y <strong>extraer
+clase</strong>, sin olvidar la más usada, la <strong>herencia</strong>, aunque no está muy bien
+considerada.</p>
+
+<p>Menos duplicaciones puede significar <strong>mayores niveles de indirección</strong>, lo que
+puede hacer que el código sea algo más difícil de leer y seguir la pista,
+porque para no duplicar, los detalles están dispersos en distintos lugares. La
+<strong>metaprogramación</strong> puede ser también una técnica para eliminar duplicados,
+pero hace el código mucho más difícil de leer. Más incluso que la indirección.</p>
+
+<p>En contraposición al principio D.R.Y., está el principio W.E.T. Pensaba que
+significaba <strong>W</strong>rite <strong>E</strong>verything <strong>T</strong>wice (escríbelo todo dos veces), pero
+también he leído que las siglas pueden significar: <strong>W</strong>e <strong>E</strong>dit
+<strong>T</strong>erribly, o <strong>W</strong>e <strong>E</strong>njoy <strong>T</strong>yping (mucho más divertidos, ¿verdad?).</p>
+
+<p>Por último, algo que me ha parecido fabuloso, una frase que describe la
+programación orientada a objetos, donde recuerda los conceptos de encapsulación
+(<em>shy</em>), eliminar duplicados (<em>dry</em>) y paso de mensajes entre objetos (<em>tell, don't
+ask</em>):</p>
+
+<blockquote><p>Keep it shy, dry, and tell the other guy</p></blockquote>
+
+<h2>Recursos</h2>
+
+<ul>
+<li>Charla <a href="https://www.youtube.com/watch?v=Is8ThG6Fetg">Mantaining balance while reducing duplication</a>, de David Chelimsky</li>
+<li>Dave Thomas en CodeNewbie podcast: en la <a href="http://www.codenewbie.org/podcast/the-pragmatic-programmer-i">parte 1</a> cuenta la historia de cómo
+nació el libro <em>The pragmatic programmer</em>, sobre cómo decidieron hacer todo
+ellos mismos y cómo de ahí nació su editorial. En la <a href="http://www.codenewbie.org/podcast/the-pragmatic-programmer-part-ii">parte 2</a> me ha llamado la
+atención su opinión sobre las Katas. Comenta que lo importante de la kata no es
+el ejercicio en sí, sino la repetición, hacer el ejercicio sin pensar en la
+solución. De esta forma hacemos que nuestro cerebro reconozca patrones y
+aprendamos sin darnos cuenta.</li>
+<li><a href="http://www.c2.com/cgi/wiki?DontRepeatYourself">DontRepeatYourself</a> en la C2 Wiki</li>
+<li>Artículo sobre <a href="http://blog.thecodewhisperer.com/2013/12/07/putting-an-age-old-battle-to-rest/">los 4 elementos del diseño simple</a>, de J.B.Rainsberger</li>
+<li>Charla de la CAS2015: <a href="http://www.slideshare.net/programania/software-economics-tradeoffs-of-decoupled-softwre">Economía del software y dependencias</a>, de Luis Artola
+y Guillermo Gutiérrez</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

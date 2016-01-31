@@ -4,7 +4,7 @@
   <title><![CDATA[Category: learning | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/learning/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2016-01-17T17:02:25+01:00</updated>
+  <updated>2016-01-31T20:54:48+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -87,6 +87,9 @@ documentación rápida de forma online.</li>
 <li>Libro <a href="https://pragprog.com/book/elixir/programming-elixir">Programming Elixir, de Dave Thomas</a>. Parece ser el libro de
 referencia, así que es un recurso indispensable.
 <a href="https://forums.pragprog.com/forums/322">Foros de discusión del libro</a>.</li>
+<li>Libro <a href="https://pragprog.com/book/phoenix/programming-phoenix">Programming Phoenix</a>, también de la editorial The Pragmatic
+Programmer. Phoenix es un framework para desarrollar aplicaciones web con
+Elixir (<a href="https://twitter.com/_rubenfa/status/689356164082049024">recomendado por Rubén Fernández</a>, gracias).</li>
 <li><a href="https://github.com/elixir-lang/elixir">Código elixir en GitHub</a>. Código, código, código.</li>
 <li>Screencasts <a href="http://elixirsips.com/">elixir sips</a>. Videos sobre Elixir, muchos de ellos bajo
 suscripción.</li>

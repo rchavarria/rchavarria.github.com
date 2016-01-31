@@ -1,0 +1,353 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>El código fuente no es suficientemente grande para los dos - R. Chavarria's Blog</title>
+  <meta name="author" content="Rub&eacute;n Chavarr&iacute;a">
+
+  
+  <meta name="description" content="En biología, el concepto de repetirse a uno mismo es fundamental. Ninguno de
+nosotros existiríamos si los primeros organismos unicelulares no &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://rchavarria.github.io/blog/2016/01/31/codigo-no-suficientemente-grande-para-dos/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="R. Chavarria's Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36829645-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">R. Chavarria's Blog</a></h1>
+  
+    <h2>Proud of developing software, proud of being an Engineer</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:rchavarria.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archivos</a></li>
+  <li><a href="/readings">Lista de lectura</a></li>
+  <li><a href="/pet-projects">Proyectos</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">El código fuente no es suficientemente grande para los dos</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-01-31T20:29:00+01:00" pubdate data-updated="true">Jan 31<span>st</span>, 2016</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>En biología, el concepto de repetirse a uno mismo es fundamental. Ninguno de
+nosotros existiríamos si los primeros organismos unicelulares no hubieran sido
+capaces de desarrollar el mecanismo de mitosis, la capacidad de multiplicarse,
+de crear réplicas de sí mismos. Para los niños, la repetición también es
+importante. Aprenden por imitación, repitiendo lo que observan en el
+comportamiento de los demás.</p>
+
+<p><img class="right" src="/images/2016/mitosis.png"></p>
+
+<p>A la hora de desarrollar software, la repetición no está vista con tan buenos
+ojos. Por ejemplo, se ha dado un nombre despectivo a los programas que crean
+copias de sí mismos, como los <em>virus</em>. Por otro lado, la duplicidad de código
+de una aplicación produce muchos quebraderos de cabeza a aquellos de nosotros
+que nos dedicamos al software. Para recordárnoslo, contamos con el <strong>principio
+<em>D.R.Y., don&#8217;t repeat yourself</em>, o dicho de otro modo, no te repitas a tí mismo</strong>.</p>
+
+<!-- more -->
+
+
+<blockquote><p>Cada pieza de conocimiento debe tener una representación dentro de un sistema
+  única, inequívoca y acreditada ~ <em>C2 Wiki</em> (traducción libre)</p></blockquote>
+
+<p>Normalmente este concepto se cumple cuando hay dos segmentos de código con el
+mismo texto, pero no se limita a ello. Puede que existan dos clases que hace
+exactamente lo mismo, pero los métodos o las variables tienen distinto nombre.
+También puede haber duplicidades en ficheros de configuración, o en la
+documentación. Por lo tanto, hay que tener en cuenta que <strong>D.R.Y. no es
+duplicidad de texto, si no de conceptos</strong>.</p>
+
+<p>Debemos prestar atención a duplicidades en los tests, por ejemplo a la hora de
+realizar las verificaciones. En muchas herramientas de testing existen los
+<em>custom matchers</em>, que nos ayudan precisamente a reducir estas duplicidades.</p>
+
+<p>J.B.Rainsberger ha escrito mucho sobre el tema, muy relacionado con el libro
+<em><a href="https://leanpub.com/4rulesofsimpledesign">4 rules of simple design</a></em>, de Corey Haines, quien al final las reduce a dos
+reglas básicas: dar nombre a las abstracciones y eliminar duplicidades creando
+nuevas abstracciones. Pero también existen otras técnicas para reducir
+conceptos duplicados, como las refactorizaciones <strong>extraer método</strong> y <strong>extraer
+clase</strong>, sin olvidar la más usada, la <strong>herencia</strong>, aunque no está muy bien
+considerada.</p>
+
+<p>Menos duplicaciones puede significar <strong>mayores niveles de indirección</strong>, lo que
+puede hacer que el código sea algo más difícil de leer y seguir la pista,
+porque para no duplicar, los detalles están dispersos en distintos lugares. La
+<strong>metaprogramación</strong> puede ser también una técnica para eliminar duplicados,
+pero hace el código mucho más difícil de leer. Más incluso que la indirección.</p>
+
+<p>En contraposición al principio D.R.Y., está el principio W.E.T. Pensaba que
+significaba <strong>W</strong>rite <strong>E</strong>verything <strong>T</strong>wice (escríbelo todo dos veces), pero
+también he leído que las siglas pueden significar: <strong>W</strong>e <strong>E</strong>dit
+<strong>T</strong>erribly, o <strong>W</strong>e <strong>E</strong>njoy <strong>T</strong>yping (mucho más divertidos, ¿verdad?).</p>
+
+<p>Por último, algo que me ha parecido fabuloso, una frase que describe la
+programación orientada a objetos, donde recuerda los conceptos de encapsulación
+(<em>shy</em>), eliminar duplicados (<em>dry</em>) y paso de mensajes entre objetos (<em>tell, don&#8217;t
+ask</em>):</p>
+
+<blockquote><p>Keep it shy, dry, and tell the other guy</p></blockquote>
+
+<h2>Recursos</h2>
+
+<ul>
+<li>Charla <a href="https://www.youtube.com/watch?v=Is8ThG6Fetg">Mantaining balance while reducing duplication</a>, de David Chelimsky</li>
+<li>Dave Thomas en CodeNewbie podcast: en la <a href="http://www.codenewbie.org/podcast/the-pragmatic-programmer-i">parte 1</a> cuenta la historia de cómo
+nació el libro <em>The pragmatic programmer</em>, sobre cómo decidieron hacer todo
+ellos mismos y cómo de ahí nació su editorial. En la <a href="http://www.codenewbie.org/podcast/the-pragmatic-programmer-part-ii">parte 2</a> me ha llamado la
+atención su opinión sobre las Katas. Comenta que lo importante de la kata no es
+el ejercicio en sí, sino la repetición, hacer el ejercicio sin pensar en la
+solución. De esta forma hacemos que nuestro cerebro reconozca patrones y
+aprendamos sin darnos cuenta.</li>
+<li><a href="http://www.c2.com/cgi/wiki?DontRepeatYourself">DontRepeatYourself</a> en la C2 Wiki</li>
+<li>Artículo sobre <a href="http://blog.thecodewhisperer.com/2013/12/07/putting-an-age-old-battle-to-rest/">los 4 elementos del diseño simple</a>, de J.B.Rainsberger</li>
+<li>Charla de la CAS2015: <a href="http://www.slideshare.net/programania/software-economics-tradeoffs-of-decoupled-softwre">Economía del software y dependencias</a>, de Luis Artola
+y Guillermo Gutiérrez</li>
+</ul>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Rubén Chavarría</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-01-31T20:29:00+01:00" pubdate data-updated="true">Jan 31<span>st</span>, 2016</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/dry/'>dry</a>, <a class='category' href='/blog/categories/priciples/'>priciples</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rchavarria.github.io/blog/2016/01/31/codigo-no-suficientemente-grande-para-dos/" data-via="rchavarriat" data-counturl="http://rchavarria.github.io/blog/2016/01/31/codigo-no-suficientemente-grande-para-dos/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2016/01/17/aprendiendo-elixir/" title="Previous Post: Aprendiendo Elixir">&laquo; Aprendiendo Elixir</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2016/01/31/codigo-no-suficientemente-grande-para-dos/">El código fuente no es suficientemente grande para los dos</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/01/17/aprendiendo-elixir/">Aprendiendo Elixir</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/12/28/getting-testy/">Artículo técnico: Getting testy</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/12/13/mi-cas-2015/">Mi CAS 2015</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/11/29/mi-fraccion-codemotion/">Mi fracción del Codemotion 2015</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("rchavarriat", 4, true);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/rchavarriat">@rchavarriat</a></p>
+  
+</section>
+
+
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/rchavarriat?count=5&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/rchavarriat">My Delicious Bookmarks &raquo;</a></p>
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2016 - Rub&eacute;n Chavarr&iacute;a -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'rchavarria-github-com';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://rchavarria.github.io/blog/2016/01/31/codigo-no-suficientemente-grande-para-dos/';
+        var disqus_url = 'http://rchavarria.github.io/blog/2016/01/31/codigo-no-suficientemente-grande-para-dos/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
