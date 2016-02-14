@@ -111,6 +111,10 @@ Creo que no tengo tantos recursos como para filtrarlos. Empezando con el libro,
 con exercism.io y de vez en cuando la web oficial del lenguaje puede ser
 suficiente para ir cogiendo ritmo.
 
+## Asaltos
+
+1. [Primer asalto]: tipos, funciones, pattern matching y módulos
+
 [Madrid |> Elixir]: http://www.meetup.com/Madrid-Elixir/
 [Soft Skills]: http://rchavarria.github.io/blog/2015/11/08/soft-skills/
 [elixir-lang.org]: http://elixir-lang.org/
@@ -125,4 +129,6 @@ suficiente para ir cogiendo ritmo.
 [Benjamin Tan]: http://benjamintan.io/blog/
 [exercism.io]: http://exercism.io/languages/elixir
 [Guía de estilo]: https://github.com/niftyn8/elixir_style_guide
+
+[Primer asalto]: http://localhost:4000/blog/2016/02/09/elixir-primer-asalto/
 
