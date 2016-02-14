@@ -22,11 +22,11 @@ Así que aquí está mi Lista de Lectura:
 
 - [Software craftsmanship](https://leanpub.com/socra), de Sandro Mancuso, recomendado por [Carlos Ble](http://twitter.com/carlosble)
 - [Ten-day MBA](http://www.amazon.es/MBA-10-d%C3%ADas-ense%C3%B1anzas-escuelas-ebook/dp/B00D59QW6O/), de Steven Silbiger, recomendado por Chad Fowler en su libro. Se puede econtrar también en [inglés](http://www.amazon.com/The-Ten-Day-MBA-Step-Step/dp/0062199579)
+- [Code: the hidden language of computer hardware and software](http://www.amazon.com/Code-Language-Computer-Hardware-Software/dp/0735611319/), de Charles Petzold, recomendado por Scott Hanselman y Dave Rael en el [episodio 83 de Developer on Fire podcast](http://developeronfire.com/Podcast/Episodes/scott-hanselman-learn-balance)
 - [Expertología](http://www.amazon.es/dp/8492414502), de Andrés Pérez Ortega
 
 ## Tengo pensado leer
 
-- [Code: the hidden language of computer hardware and software](http://www.amazon.com/Code-Language-Computer-Hardware-Software/dp/0735611319/), de Charles Petzold, recomendado por Scott Hanselman y Dave Rael en el [episodio 83 de Developer on Fire podcast](http://developeronfire.com/Podcast/Episodes/scott-hanselman-learn-balance)
 - [Practical Vim](https://pragprog.com/book/dnvim/practical-vim), de Drew Neil, recomendado por el podcast Giant Robots
 - [Slow burn](http://www.amazon.com/Slow-Burn-Faster-Exercising-Slower/dp/0062736744), de Stu Mittleman, recomendado por [Rick Rubin en una entrevisa de Tim Ferris](http://fourhourworkweek.com/2015/05/15/rick-rubin)
 - [The grumpy programmer's PHPUnit cookbook](https://leanpub.com/grumpy-phpunit), de Chris Hartjes, amigo de J.B.Rainsberger
@@ -38,6 +38,7 @@ Así que aquí está mi Lista de Lectura:
 - [Las reglas no escritas para triunfar en la empresa](http://www.amazon.es/escritas-triunfar-empresa-Inform%C3%A1tica-Profesional/dp/8492650435), de Roberto Canales (disponible en tu drive, conseguido gratuitamente gracias a Autentia)
 - [Guía de supervivencia: puntos historia](http://www.javiergarzas.com/2015/10/nueva-guia-de-supervivencia-agil-estimacion-con-puntos-historia-si-gratis.html), de Javier Garzás
 - [Pragmatic thinking and learning](https://pragprog.com/book/ahptl/pragmatic-thinking-and-learning), de Andy Hunt, recomendado por [Alvaro García](http://alvarogarcia7.github.io/blog/2015/12/31/books-read-in-2015q4/) en su blog
+- [Zen y el arte del mantenimiento de motocicletas](http://www.amazon.es/Arte-Mantenimiento-Motocicleta-Narrativa-Sexto/dp/8415601956/), de Robert M. Pirsig, recomendado por @mpjme en FunFunFunction #18](https://www.youtube.com/watch?v=lrf6xuFq1Ms&t=90)
 - [Ready player one](http://www.amazon.es/gp/product/B00UVAREXK/), de Ernest Cline, recomendado por Microsiervos varias veces
 - [Thing explainer](http://www.amazon.es/gp/product/1473620910/), de [Randall Munroe (xkcd.com)](http://xkcd.com), recomendado por Microsiervos varias veces
 - [57 exercises for programmers](https://pragprog.com/book/bhwb/exercises-for-programmers), de Brian P. Hogan
@@ -93,6 +94,7 @@ Así que aquí está mi Lista de Lectura:
 - [Software for your head](http://www.amazon.com/Software-Your-Head-Protocols-Maintaining/dp/0201604566), de Jim y Michele McCarthy, recomendado por el podcast [Ideas ágile](http://www.ideasagiles.com/podcast/)
 - [Una breve historia de casi todo](http://www.microsiervos.com/archivo/libros/una-breve-historia-de-casi-todo.html), de Bill Bryson, recomendado por Microsiervos
 - [Hipérbole y media](http://www.amazon.es/gp/product/8416223076), de Allie Brosh, recomendado por Bill Gates
+- [Unstoppable: harnessing science to change the world](http://www.amazon.es/gp/product/B00XU114R4/ref=as_li_tf_tl), de Bill Nye, the Science Guy, creo que recomendado por Microsiervos
 
 ## He leído
 
