@@ -9,8 +9,8 @@
   <meta name="author" content="Rub&eacute;n Chavarr&iacute;a">
 
   
-  <meta name="description" content="de Seth Godin Por qué lo he leído Decidí leerlo básicamente porque tengo un hijo. Empezó el colegio de mayores
-el pasado mes de septiembre, y desde &hellip;">
+  <meta name="description" content="Siendo Dart un lenguaje muy influenciado por JavaScript, no podría dejar de lado
+conceptos como la programación asíncrona. Existen varios métodos &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -80,6 +80,63 @@ el pasado mes de septiembre, y desde &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/03/28/dart-streams/">Dart Streams</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-03-28T01:39:00+01:00" pubdate data-updated="true">Mar 28<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Siendo Dart un lenguaje muy influenciado por JavaScript, no podría dejar de lado
+conceptos como la <strong>programación asíncrona</strong>. Existen varios métodos para manejar
+la asincronía, y uno de ellos son los <strong>Streams</strong>. Si estás muy interesado en
+el método te recomiendo una charla de <a href="http://r.va.gg">Rod Vagg</a>, <a href="https://www.youtube.com/watch?v=oeKkwZhKgP0">Embrace the asynchronous</a>.</p>
+
+<p>Los <em>Streams</em> en Dart forman una interfaz única para cualquier cosa que necesite
+enviar repetidamente una serie de datos de forma asíncrona, ya sean eventos HTML
+(como escuchar clicks del usuario), o eventos de entrada/salida en una aplicación
+de servidor.</p>
+
+<p>Operaciones sobre <em>Streams</em>:</p>
+
+<ul>
+<li>Consumir: los datos son sacados de un <code>Stream</code> a uno o varios <code>StreamSubscriber</code></li>
+<li>Producir: los datos son introducidos en un <code>Stream</code> desde un <code>StreamController</code></li>
+</ul>
+
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2015/03/28/dart-streams/">Continuar leyendo &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -547,58 +604,6 @@ El año pasado ya me quedé con ganas de participar, pero este año
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/11/02/mi-primer-katayuno/">Mi primer katayuno</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-11-02T01:14:00+01:00" pubdate data-updated="true">Nov 2<span>nd</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>El pasado 25 de octubre asistí a un <a href="http://katayunos.com">katayuno</a> organizado por <a href="http://aprendiendotdd.com">Aprendiendo TDD</a>.
-Esta pequeña reunión tuvo lugar en <a href="http://www.materiagriscoworking.com">MateriaGris Coworking</a>, un espacio de coworking
-que ha montado un gran amigo mío.</p>
-
-<p>El katayuno consistía en resolver un sencillísimo problema (el tema no es resolver
-un gran problema sino practicar TDD): desarrollar un método que, tomando como parámetros
-dos números enteros <code>a</code> y <code>b</code>, devuelva una lista con el doble de todos los números
-impares entre ambos. Realizamos dos iteraciones, cada vez haciendo <em>pair programming</em>
-con una pareja distinta.</p>
-
-<p>En este post voy a describir cómo fueron mis dos iteraciones, y algo de código <a href="http://dartlang.org">Dart</a> que
-he escrito después intentando simularlas, para poder ilustrar todo el proceso.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/11/02/mi-primer-katayuno/">Continuar leyendo &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/5/">&larr; Older</a>
@@ -616,6 +621,10 @@ he escrito después intentando simularlas, para poder ilustrar todo el proceso.<
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2016/02/09/elixir-primer-asalto/">Elixir: primer asalto</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2016/01/31/codigo-no-suficientemente-grande-para-dos/">El código fuente no es suficientemente grande para los dos</a>
       </li>
     
@@ -629,10 +638,6 @@ he escrito después intentando simularlas, para poder ilustrar todo el proceso.<
     
       <li class="post">
         <a href="/blog/2015/12/13/mi-cas-2015/">Mi CAS 2015</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/11/29/mi-fraccion-codemotion/">Mi fracción del Codemotion 2015</a>
       </li>
     
   </ul>

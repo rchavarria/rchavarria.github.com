@@ -484,13 +484,17 @@
     </url>
     <url>
         <loc>http://rchavarria.github.io/blog/2016/01/17/aprendiendo-elixir/</loc>
-        <lastmod>2016-01-20T22:32:46+01:00</lastmod>
+        <lastmod>2016-02-09T22:48:22+01:00</lastmod>
     </url>
     <url>
         <loc>
             http://rchavarria.github.io/blog/2016/01/31/codigo-no-suficientemente-grande-para-dos/
         </loc>
         <lastmod>2016-01-31T20:50:31+01:00</lastmod>
+    </url>
+    <url>
+        <loc>http://rchavarria.github.io/blog/2016/02/09/elixir-primer-asalto/</loc>
+        <lastmod>2016-02-14T19:40:12+01:00</lastmod>
     </url>
     <url>
         <loc>http://rchavarria.github.io/pet-projects/</loc>
@@ -506,14 +510,14 @@
     </url>
     <url>
         <loc>http://rchavarria.github.io/readings/</loc>
-        <lastmod>2016-01-20T22:28:31+01:00</lastmod>
+        <lastmod>2016-02-14T19:48:42+01:00</lastmod>
     </url>
     <url>
         <loc>http://rchavarria.github.io/</loc>
-        <lastmod>2016-01-31T20:50:31+01:00</lastmod>
+        <lastmod>2016-02-14T19:40:12+01:00</lastmod>
     </url>
     <url>
         <loc>http://rchavarria.github.io/blog/archives/</loc>
-        <lastmod>2016-01-31T20:50:31+01:00</lastmod>
+        <lastmod>2016-02-14T19:40:12+01:00</lastmod>
     </url>
 </urlset>

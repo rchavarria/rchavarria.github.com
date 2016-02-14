@@ -4,7 +4,7 @@
   <title><![CDATA[Category: learning | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/learning/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2016-01-31T20:54:48+01:00</updated>
+  <updated>2016-02-14T19:49:36+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,387 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Elixir: primer asalto]]></title>
+    <link href="http://rchavarria.github.io/blog/2016/02/09/elixir-primer-asalto/"/>
+    <updated>2016-02-09T21:57:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2016/02/09/elixir-primer-asalto</id>
+    <content type="html"><![CDATA[<p>Éste es el primer asalto de mi aprendizaje de <a href="http://elixir-lang.org/">Elixir</a>. En él, no espero
+resolver problemas súper complicados, es un primer contacto con el lenguaje. Me
+conformaré con ser capaz de escribir un programa algo más complicado que un
+simple hola mundo. En este primer asalto, lucho con tipos de datos, funciones
+(anónimas y con nombre), pattern matching, claúsulas de guarda y módulos.</p>
+
+<p>En estos asaltos, intentaré seguir los siguientes pasos:</p>
+
+<ul>
+<li>Aprender lo suficiente para comenzar</li>
+<li>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</li>
+<li>Aprender lo suficiente para hacer algo de utilidad</li>
+<li>Enseñar lo aprendido</li>
+</ul>
+
+
+<p><img class="center" src="/images/2016/touch-gloves-derived-small.png"></p>
+
+<div style="text-align: center">
+  <span style="font-size: 60%">
+Imagen basada en <a href="https://flic.kr/p/awy1vc">Touch Gloves</a> de <a href="https://www.flickr.com/photos/kaiban/">Jack Zallum</a>, <a href="https://creativecommons.org/licenses/by-nc/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by-nc/2.0/legalcode">CC BY-NC 2.0</a>
+  </span>
+</div>
+
+
+
+
+<!-- more -->
+
+
+<h2>Aprender lo suficiente para comenzar</h2>
+
+<p><strong>Instalación</strong></p>
+
+<p>Instalar la máquina virtual de Erlang y el entorno de Elixir es extremadamente
+sencillo. Aquí están los comandos para hacerlo en una máquina con Ubuntu como
+sistema operativo. En la <a href="http://elixir-lang.org/install.html">documentación de Elixir</a> hay instrucciones para otros
+sistemas operativos.</p>
+
+<p><code>
+$ wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb
+$ sudo dpkg -i erlang-solutions_1.0_all.deb
+$ sudo apt-get update
+$ sudo apt-get install esl-erlang
+$ sudo apt-get install elixir
+</code></p>
+
+<p><strong>Editores</strong></p>
+
+<p>La comunidad de Elixir ha creado plugins para los editores de código más
+famosos, entre ellos <a href="http://www.vim.org/">Vim</a>, que utilizo para mis <a href="http://rchavarria.github.io/pet-projects/">proyectos personales</a>.</p>
+
+<p>Instalar el plugin <a href="https://github.com/elixir-lang/vim-elixir">vim-elixir</a> en Vim es facilísimo si instalas plugins con
+pathogen:</p>
+
+<p><code>
+$ git clone https://github.com/elixir-lang/vim-elixir.git ~/.vim/bundle/vim-elixir
+</code></p>
+
+<p><strong>Herramientas</strong></p>
+
+<p><code>iex</code> es una herramienta de tipo REPL (read, evaluate, print, loop), que nos
+permite ejecutar código Elixir de forma rápida. El comando <code>iex &lt;fichero.exs&gt;</code>
+compila un script de Elixir y lo carga en la herramienta. Si ya estamos dentro
+de ella, el comando para compilar el código Elixir de un fichero sería <code>c
+"&lt;fichero exs&gt;"</code>.</p>
+
+<p><strong>Pattern matching</strong></p>
+
+<p>El operador <code>=</code> es muy diferente a lo que esperamos de él los que estamos
+acostumbrados a la programación orientada a objetos. Tiene una apariencia
+similar, pero no se comporta de la misma forma. Con este operador, Elixir trata
+de hacer coincidir los valores de la izquierda con los valores de la derecha.</p>
+
+<p><code>
+a = 2
+[a, b, a] = [1, 2, 1]
+[^a, b] = [2, 3]
+[a, b, c] = [1, 2, [3, 4, 5]]   # c vale [3, 4, 5]
+</code></p>
+
+<p><strong>Inmutabilidad</strong></p>
+
+<p>¿Es eficiente devolver una copia de los datos? En los lenguajes funcionales, no
+se modifican los datos, se devuelve una copia de ellos transformados. Parece
+ineficiente, pero es todo lo contrario. Al no modificarse los originales, éstos
+pueden compartirse por muchas variables, y pueden estar tranquilos, ya que no
+se va a modificar. En los lenguajes no funcionales, se devuelve una copia (no
+eficiente), en los funcionales, en realidad no se devuelve una copia, se
+comparte todo lo que se puede. Por lo que es más eficiente.</p>
+
+<p>¿Qué pasa con el recolector de basura? ¿Consume muchos recursos para deshacerse
+de todos esos datos transformados que ya no se utilizan? No consume mucho, en
+Elixir (en Erlang en realidad), hay muchos procesos, cada uno con un <em>heap</em>
+distinto, por lo que el heap es más pequeño que en otros lenguajes, y el
+recolector de basura se ejecuta bastante más rápido.</p>
+
+<p><strong>Tipos de datos</strong></p>
+
+<p>Y por fin algo de código:</p>
+
+<p>```</p>
+
+<h1>enteros</h1>
+
+<p>this_is_an_int = 1234
+this_is_an_int = 0xcafe    # admite hexadecimal
+this_is_an_int = 0o765     # octal
+this_is_an_int = 0b01010   # binario
+this_is_an_int = 1_000_000</p>
+
+<h1>en coma flotante</h1>
+
+<p>this_is_a_float = 1.0
+this_is_a_float = 0.245
+this_is_a_float = .342        # error
+this_is_a_float = 314159.0e-5</p>
+
+<h1>rangos</h1>
+
+<p>this_is_a_range = 1..100</p>
+
+<h1>expresiones regulares</h1>
+
+<p>this_is_a_regexp = ~r{regexp}options</p>
+
+<h1>tuplas</h1>
+
+<p>this_is_a_tuple = { :ok, 42, "next" }</p>
+
+<h1>listas: se parecen a los arrays de otros lenguajes, pero no</h1>
+
+<h1>lo son. Son estructuras enlazadas. Una lista o está vacía, o</h1>
+
+<h1>contiene un head y un tail, donde tail es otra lista</h1>
+
+<p>this_is_a_list = [ 1, 2, 3 ]</p>
+
+<h1>mapas: lista de parejas clave/valor</h1>
+
+<p>this_is_a_map = %{ key => value, key => value }</p>
+
+<h1>si las claves son Atoms, se puede escribir</h1>
+
+<p>this_is_a_map = %{ red: 0xFF0000, green: 0x00FF00, blue: 0x0000FF }</p>
+
+<h1>binarios: para acceder a datos como una secuencia de bits y bytes (para muy bajo nivel)</h1>
+
+<p>```</p>
+
+<p>Hay otros tipos de datos, como los PIDs (referencias a procesos locales o
+remotos) o los puertos (referencias a recursos sobre los cuales leeremos o
+escribiremos).</p>
+
+<p>Un tipo de datos muy interesante (y que yo personalmente no conocía) son los
+<em>Atoms</em>: constantes representando el nombre de algo. Su nombre es su valor. Dos
+Atoms son igules si tienen el mismo nombre, vengan de donde vengan (incluso de
+máquinas diferentes)</p>
+
+<p>```</p>
+
+<h1>atoms</h1>
+
+<p>this_is_an_atom = :fred
+this_is_an_atom = :is_binary?
+this_is_an_atom = :var@32
+this_is_an_atom = :&lt;>
+this_is_an_atom = :"lo john silver"
+```</p>
+
+<p>Hay dos estructuras muy similares, la lista de palabras clave: <code>[red: 0xFF000,
+green: 0x00FF00]</code>, que se transforma en <code>[{:red, 0xFF0000}, {:green,
+0x00FF00}]</code> y un mapa <code>%{red: 0xFF000, green: 0x00FF00}</code>. Se recomienda usar la
+lista de palabras clave para pasar parámetros y usar los mapas cuando se
+necesite un array asociativo.</p>
+
+<p>No hemos dicho nada de las cadenas. Pertenecen al tipo <em>Binario</em>. Existe
+interpolación de cadenas, con <code>#{...}</code> se evalúa el código de dentro y se
+formatea la cadena con el valor obtenido.</p>
+
+<p><strong>Funciones anónimas</strong></p>
+
+<p><code>
+sum = fn (a, b) -&gt; a + b end
+sum.(2, 3)   # devuelve 5
+</code></p>
+
+<p>Las funciones pueden devolver otras funciones. Las funciones recuerdan su
+entorno original. Forman lo que se conoce como <em>closures</em>. Me recuerda mucho a
+las funciones de JavaScript en este aspecto.</p>
+
+<p>Existe una forma de crear funciones anónimas de una forma muy concisa, con el
+operador <code>&amp;...</code></p>
+
+<p>```
+sum = fn (a, b) -> a + b end
+sum2 = &amp;(&amp;1 + &amp;2)   # idéntica a la función anterior</p>
+
+<h1>devuelve lista con dos elementos: doble del primer parámetro, y cuadrado del mismo</h1>
+
+<p>returns_a_list = &amp;[2 * &amp;1, &amp;1 * &amp;1]</p>
+
+<h1>esta notación viene muy bien para pasar funciones por parámetro</h1>
+
+<p>Enum.map [1, 2, 3] &amp;(&amp;1 * &amp;1)   # devuelve [1, 4, 9]
+```</p>
+
+<p>Es normal ver la definición de una función como <code>&amp;map/2</code>, donde <code>map</code> es el
+nombre de la función y <code>2</code> es el <em>arity</em>, el número de parámetros de la misma.</p>
+
+<p><strong>Módulos, funciones con nombre y funciones privadas</strong></p>
+
+<p>```
+defmodule Times do
+  ## define una función en una única línea
+  def double(n), do: n * 2</p>
+
+<p>  ## define una función en varias líneas
+  def triple(n) do</p>
+
+<pre><code>n * 3
+</code></pre>
+
+<p>  end</p>
+
+<p>  ## define una función privada
+  defp quadruple(n) do: n * 4
+end
+```</p>
+
+<p>Las funciones con nombre pueden tener varios cuerpos. Eso ayuda a utilizar
+<em>pattern matching</em> a la hora de implementar una solución.</p>
+
+<p>```
+defmodule Factorial do
+  # el factorial de 0, siempre es 1, esta definición es quien para la recursividad
+  def of(0), do: 1</p>
+
+<p>  # el factorial de cualquier otro número, es recursivo
+  def of(n), do: n * factorial(n - 1)
+end</p>
+
+<p>Factor.of(5)
+  # => 120
+```</p>
+
+<p>También, las definiciones pueden tener claúsulas de guarda, mediante <code>when
+&lt;condition&gt;</code>, lo que ayuda a tener un pattern matching más específico.</p>
+
+<p>```
+defmodule Guard do
+  def what_is(x) when is_number(x) do</p>
+
+<pre><code>IO.puts "#{x} is a number"
+</code></pre>
+
+<p>  end
+  def what_is(x) when is_list(x) do</p>
+
+<pre><code>IO.puts "#{x} is a list"
+</code></pre>
+
+<p>  end
+  def what_is(x) when is_atom(x) do</p>
+
+<pre><code>IO.puts "#{x} is an atom"
+</code></pre>
+
+<p>  end
+end
+```</p>
+
+<p><strong>El operador tubería (pipe)</strong></p>
+
+<p>El operador <code>|&gt;</code> toma el resultado de una función y lo pasa como primer
+parámetro de la segunda función. <code>String.reverse "foobar" |&gt; String.capitalize</code></p>
+
+<p>```
+filing = DB.find_customers</p>
+
+<pre><code>       |&gt; Orders.for_customers
+       |&gt; sales_tax(2016)
+       |&gt; prepare_filing
+</code></pre>
+
+<p>list
+  |> sales_taxes(2016)
+  |> prepare_filing</p>
+
+<h1>es lo mismo que llamar</h1>
+
+<p>prepare_filing( sales_taxes(list, 2016) )
+```</p>
+
+<p><strong>Parámetros por defecto</strong></p>
+
+<p>```
+defmodule DefaultParams do
+  def func(p1, p2 \ 2) do</p>
+
+<pre><code>IO.inspect [p1, p2]
+</code></pre>
+
+<p>  end
+end</p>
+
+<p>Example.func("a", "b")
+  # => ["a", "b"]</p>
+
+<p>Example.func("a")
+  # => ["a", 2]
+```</p>
+
+<p><strong>Librerías</strong></p>
+
+<p>Se pueden buscar módulos y librerías ya implementados para realizar ciertas
+tareas que necesitemos, para ello, está la documentación de <a href="http://elixir-lang.org/docs.html">librerías de Elixir</a>.
+Si no encontramos ahí lo que buscamos, lo podemos buscar en <a href="http://erlang.org/doc/">librerías de Erlang</a>.</p>
+
+<h2>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</h2>
+
+<p><strong>¿Qué hace <code>^</code> en el pattern matching?</strong></p>
+
+<p>El operador <code>^</code> obliga a que el valor actual de una variable coincida con el
+valor en la expresión de <em>pattern matching</em>. En caso de no coincidir, se
+producirá un error.</p>
+
+<p><code>
+a = 2
+[^a, b] = [2, 3]  ## no hay error, `a` valía `2` y aquí coinciden
+[^a, b] = [1, 3]  ## error
+</code></p>
+
+<p><strong>Tuplas, <em>keyword list</em> y mapas</strong></p>
+
+<p>Las <em>keyword list</em> son una lista usadas muy a menudo, tienen la forma:</p>
+
+<p><code>
+keyword_list = [ red: 0xFF0000, green: 0x00FF00, blue: 0x0000FF ]
+</code></p>
+
+<p>Pero no es más que una forma simplificada de escribir una lista de tuplas,
+donde el primer valor de cada una de ellas es un Atom:</p>
+
+<p><code>
+tuple_list = [ {:red, 0xFF000}, {:green, 0x00FF00}, {:blue, 0x0000FF} ]
+</code></p>
+
+<p>Una estructura muy parecida a estas son los mapas, que no son más que un
+conjunto de parejas clave-valor:</p>
+
+<p><code>
+a_map = %{ :red =&gt; 0xFF000, :green =&gt; 0x00FF00, :blue =&gt; 0x0000FF }
+</code></p>
+
+<h2>Aprender lo suficiente para hacer algo de utilidad</h2>
+
+<ul>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-01/round-01-exercise-01.exs">round-01-exercise-01.exs</a>: utilizar varios cuerpos de una función y
+recursividad para implementar una función que calcule la suma de <code>1</code> hasta
+<code>n</code></li>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-01/round-01-exercise-02.exs">round-01-exercise-02.exs</a>: implementar la función <code>gcd(x, y)</code> que calcule el
+máximo común divisor. Matemáticamente: <code>gcd(x, y)</code> es <code>x</code> si <code>y</code> es cero y es
+<code>gcd(y, rem(x, y))</code> en caso contrario</li>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-01/round-01-exercise-03.exs">round-01-exercise-03.exs</a>: crear el juego <em>Estoy pensando en un número entre
+el 1 y el 100</em>: rangos, div(a, b), claúsulas de guarda, pattern matching en
+rangos: <code>a..b = 4..8</code>, funciones privadas</li>
+</ul>
+
+
+<h2>Enseñar lo aprendido</h2>
+
+<p>Aquí está, este post, mis notas, mis pensamientos, mis dudas y mi código. Hasta el siguiente asalto.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Aprendiendo Elixir]]></title>
@@ -123,6 +504,13 @@ complejo que un <em>Hola mundo</em> empezar a resolver problemas en exercism.io.
 <p>Creo que no tengo tantos recursos como para filtrarlos. Empezando con el libro,
 con exercism.io y de vez en cuando la web oficial del lenguaje puede ser
 suficiente para ir cogiendo ritmo.</p>
+
+<h2>Asaltos</h2>
+
+<ol>
+<li><a href="http://localhost:4000/blog/2016/02/09/elixir-primer-asalto/">Primer asalto</a>: tipos, funciones, pattern matching y módulos</li>
+</ol>
+
 ]]></content>
   </entry>
   
@@ -708,829 +1096,6 @@ comandos.</p>
 
 <p>Si te gusta Vim, y no conoces el plugin <a href="https://github.com/tpope/vim-unimpaired">unimpaired.vim</a>, échale un vistazo. Sin
 duda es uno de los imprescindibles, como tantos otros de Tim Pope.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Aprendiendo Vim]]></title>
-    <link href="http://rchavarria.github.io/blog/2014/10/11/aprendiendo-vim/"/>
-    <updated>2014-10-11T01:31:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2014/10/11/aprendiendo-vim</id>
-    <content type="html"><![CDATA[<p>Hubo un momento en mi carrera profesional en la que un compañero me dió a conocer
-<em>Vim</em>, el editor de código. Me pareció una herramienta arcaica, básica. Línea
-de comandos, nada de modo gráfico. ¿Pero dónde estaba? ¿En los años 80?. Pero la
-pasión con la que hablaba del editor mi picaba la curiosidad.</p>
-
-<p>Luego, en años venideros, he visto y usado muchos editores de texto, de código
-e incluso IDEs. Nunca me había atrevido a usar Vim, pero de vez en cuando
-escuchaba (de la forma que se escucha en internet: twitter, blogs, ...) algunas
-campanadas de que Vim era un súper editor.</p>
-
-<p>Pero nunca me decidía a darle una oportunidad, hasta...</p>
-
-<!-- more -->
-
-
-<p>Hasta que cayó un post de <a href="http://elkarmadelteclado.com">Pablo Bernardo</a> en mi lector RSS:
-<a href="http://elkarmadelteclado.com/asi-que-quieres-aprender-usar-vim/">Asi que quieres aprender a usar Vim</a>.</p>
-
-<p>En este post, Pablo detalla toda una serie de recursos disponibles en <em>la nube</em>
-y no sé porqué, pero me tocó la fibra sensible. Y decidí empezar por uno de los
-videos.</p>
-
-<p>El video en cuestión, es un hangout de LinuxIO, de <a href="http://www.desarrolloweb.com">Desarrollo Web</a>, y que se
-titula "<a href="http://youtu.be/cpL32a_GP3k">El mítico editor Vim</a>". Este video fue el detonante de que decidiera
-darle una oportunidad a Vim, una oportunidad seria. Así que decidí comenzar a
-aprenderlo.</p>
-
-<p>La idea es que este post no se acabe aquí, si no que vaya creciendo con el
-tiempo, que vaya actualizandolo según voy consumiendo los recursos que indica
-Pablo, y los que me encuentre por el camino. Para cada uno de ellos me gustaría
-ir describiendo qué es lo que he aprendido de él.</p>
-
-<p>De esta forma, según vaya pasando el tiempo, aquí tendré el camino recorrido,
-y así otros podrán saber cómo lo recorrí para aprender Vim.</p>
-
-<!--
-LinuxIO, con @ktzar, que anima bastante https://www.youtube.com/watch?feature=player_embedded&v=cpL32a_GP3k
-
-Segunda parte del LinuxIO: https://www.youtube.com/watch?feature=player_embedded&v=XvCD78eA46E
-
-Un semi-dios del vim, Drew Neil : https://vimeo.com/53144573
-
-Pagina de Drew Neil : http://drewneil.com/
-Con enlaces a vimcasts, peer-to-peer.io, ...
-
-Libros en open libra (no leidos) http://www.etnassoft.com/biblioteca/?search_term=VIM&books_category=libros_programacion&books_criteria=post_date_DESC&lang=all&since=all
-
-Videos de Derek Wyatt : http://derekwyatt.org/vim/tutorials/
-
--->
-
-
-<h2>Recursos para aprender</h2>
-
-<ul>
-<li><a href="https://www.youtube.com/watch?feature=player_embedded&amp;v=cpL32a_GP3k">Primera parte del LinuxIO</a>: con @ktzar que anima bastante</li>
-<li><a href="https://www.youtube.com/watch?feature=player_embedded&amp;v=XvCD78eA46E">Segunda parte del LinuxIO</a></li>
-<li><a href="https://vimeo.com/53144573">Charla de Drew Neal</a>, un semidios de Vim. Página de Drew <a href="http://drewneil.com/">http://drewneil.com/</a>, con enlaces a VimCasts, peer-to-peer.io,...</li>
-<li><a href="http://www.etnassoft.com/biblioteca/?search_term=VIM&amp;books_category=libros_programacion&amp;books_criteria=post_date_DESC&amp;lang=all&amp;since=all">Libros de Vim</a> en OpenLibra</li>
-<li><a href="http://derekwyatt.org/vim/tutorials/">Videos de Derek Wyatt</a></li>
-<li><a href="http://vimgolf.com/">Vim golf</a></li>
-<li><a href="https://github.com/christoomey/vim-kata-meetup">Vim Kata meetup</a>, de Chris Toomey</li>
-<li><a href="https://github.com/mhinz/vim-galore">Vim galore</a></li>
-</ul>
-
-
-<h2>El mítico editor Vim, #linuxIO</h2>
-
-<p><a href="https://twitter.com/ktzar">Miguel Luis González</a> y <a href="https://twitter.com/voylinux">Pablo</a> nos presentan <a href="http://youtu.be/cpL32a_GP3k">El mítico editor Vim</a>. Miguel pone tanta pasión,
-tanto conocimiento, que impresiona. Este es el video que me convenció. Y
-éste es un resumen de lo que aprendí de él (y estoy poniendo en práctica escribiendo
-este post :D ).</p>
-
-<ul>
-<li>Movimientos básicos: <code>h</code>, <code>j</code>, <code>k</code>, <code>l</code>. Nada de usar las flechas, ¡Cobarde!</li>
-<li><code>i</code> para <strong>i</strong>nsertar</li>
-<li><code>a</code> para <strong>a</strong>ñadir. Inserta, pero después de la posición del cursor</li>
-<li><code>:o &lt;fichero&gt;</code> para abrir (<strong>o</strong>pen) un fichero</li>
-<li><code>:q</code> para salir del Vim. <code>:q!</code> para salir ignorando los cambios</li>
-<li><code>:w</code> para guardar (<strong>w</strong>rite)</li>
-<li><code>u</code> para deshacer (<strong>u</strong>ndo)</li>
-<li><code>CTRL + r</code> para rehacer</li>
-<li><code>w</code> para mover el cursor a la siguiente palabra (<strong>w</strong>ord)</li>
-<li><code>b</code> para mover el cursor a la palabra anterior (<strong>b</strong>efore)</li>
-<li><code>e</code> para mover el cursor al final (<strong>e</strong>nd) de la siguiente palabra</li>
-<li><code>x</code> para borrar un carácter</li>
-<li><code>p</code> para <strong>p</strong>egar. <code>P</code> para hacerlo antes del cursor</li>
-<li><code>r</code> para reemplazar un carácter</li>
-<li><code>f&lt;carácter&gt;</code> para encontrar (<strong>f</strong>ind) el siguiente carácter en la línea</li>
-<li><code>0</code> mover el cursor al inicio de la línea. <code>$</code> para ir al final</li>
-<li><code>d</code> borrar (<strong>d</strong>elete). <code>dw</code> borra palabra. <code>dd</code> borra línea</li>
-<li><code>c</code> para <strong>c</strong>ambiar. Por ejemplo, <code>cw</code> cambia una palabra. <code>cc</code> cambia una linea</li>
-<li><code>y</code> para copiar (<strong>y</strong>ank). <code>yw</code> copia una palabra. <code>yy</code> una línea. <code>yf)</code> copia
-hasta que encuentra el caracter <code>)</code> inclusive.</li>
-<li><code>t&lt;carácter&gt;</code> para mover hasta (un<strong>t</strong>ill). <code>yt)</code> para copiar hasta el carácter
-<code>)</code> sin copiar el carácter.</li>
-<li><code>%</code> para mover el cursor al carácter complementario. Por ejemplo, si estamos en
-un carácter <code>(</code>, nos mueve hasta el siguiente <code>)</code>. De <code>[</code> al <code>]</code>. ¿Lo pillas?</li>
-</ul>
-
-
-<h2>(12-10-2014) Vim sobre Linux, comandos avanzados y plugins</h2>
-
-<p>Miguel y Pablo siguen hablando de Vim, de <a href="http://youtu.be/XvCD78eA46E">comandos avanzados y plugins</a>, temas más
-avanzados que en el anterior vídeo, pero con el mismo tono alegre y pasión.
-Esto es lo que aprendí en él:</p>
-
-<ul>
-<li><code>s</code> para sustituir un carácter. Borra el carácter donde está el cursor y entra
-en modo edición.</li>
-<li><code>C</code> para cambiar una línea entera.</li>
-<li>Números como modificadores de comandos. Por ejemplo, <code>5dd</code> borra 5 líneas. <code>3yy</code>
-copia 3 líneas.</li>
-<li><code>/&lt;texto&gt;</code> para buscar la cadena de texto hacia adelante</li>
-<li><code>n</code> para moverse a la siguiente (<strong>n</strong>ext) ocurrencia de la búsqueda. <code>N</code> para
-moverse a la anterior.</li>
-<li><code>?&lt;texto&gt;</code> para buscar la cadena de texto pero hacia atrás</li>
-<li><code>*</code> entra en modo búsqueda, usando la palabra donde estamos como texto de búsqueda</li>
-<li><em>Movimientos interiores</em>. <code>i</code> expande el cursor o la selección en el <strong>i</strong>nterior
-de un texto encerrado entre dos comillas, o dos paréntesis, o dos llaves.
-Por ejemplo, <code>ci'</code> <strong>c</strong>ambia el <strong>i</strong>nterior del texto entre comillas. <code>di(</code>
-borra (<strong>d</strong>elete) el <strong>i</strong>nterior del texto entre paréntesis. <code>cit</code> <strong>c</strong>ambia
-el <strong>i</strong>nterior del <strong>t</strong>ag HTML.</li>
-<li><code>v</code> entra en modo <strong>v</strong>isual. <code>V</code> modo <strong>v</strong>isual línea a línea</li>
-<li><code>CTRL + v</code> entra en modo <strong>v</strong>isual pero selecciona columnas</li>
-<li><code>CTRL + p</code> autocompletado, buscando en palabras anteriores a la actual y en todos
-los ficheros abiertos. <code>CTRL + n</code> muestra también una lista de posibles palabras
-para autocompletar, pero dando preferencia a texto encontrado hacia abajo</li>
-<li><code>%s/&lt;texto a buscar&gt;/&lt;texto a reemplazar&gt;/g</code> busca y reemplaza un texto por otro,
-se puede hacer en todo el fichero o dentro de una zona seleccionada con <code>v</code></li>
-<li><code>=</code> indenta un texto. <code>==</code> indenta una línea entera</li>
-<li><code>&lt;</code> y <code>&gt;</code> aumentan o disminuyen la indentación de la línea</li>
-<li><code>gg</code> mueve el cursor al inicio del fichero. <code>G</code> lo mueve al final del fichero</li>
-<li><code>:!&lt;comando unix&gt;</code> ejecuta un comando unix. <code>%</code> se reemplaza por la ruta del
-fichero actual. También puede actuar sobre regiones de selección visuales.
-<code>:'&lt;, '&gt;!sort</code> ordena la selección visual</li>
-<li><code>q&lt;tecla&gt;</code> comienza la grabación de una macro, almacenándola en <code>&lt;tecla&gt;</code>. Volver
-a pulsar <code>q</code> para parar la grabación.</li>
-<li><code>@&lt;tecla&gt;</code> ejecuta la macro almacenada en <code>&lt;tecla&gt;</code></li>
-<li><code>@@</code> ejecuta la última macro</li>
-<li><code>:split</code>, <code>:vsplit</code> para abrir varios ficheros y verlos simultáneamente</li>
-<li><code>:buffer &lt;número&gt;</code> para abrir un buffer o nuevo fichero. Por ahora los buffers
-es un tema algo complicado. Más adelante aprenderé más sobre ellos.</li>
-</ul>
-
-
-<p>Plugin <a href="http://vim.sourceforge.net/scripts/script.php?script_id=1658">NERDTree</a>.
-Con <code>CTRL + w</code> se entra en un modo para poder moverse por las
-ventanas (<strong>w</strong>indows). Se pueden utilizar las teclas de movimiento <code>h</code>, <code>j</code>, <code>k</code>, <code>l</code>
-para moverse por los ficheros que muestra el plugin en forma de árbol.</p>
-
-<p>Se puede utiliar Vim como una herramienta para comparar ficheros. El comando unix
-<code>vimdiff</code> abre Vim con dos ficheros para compararlos.</p>
-
-<p>Toda la configuración de Vim se guarda en el directorio <code>~/.vim</code>. Los plugins se
-guardan en <code>~/.vim/plugin</code> y los ficheros de ayuda en <code>~/.vim/doc</code>. Configuraciones
-de teclas, colores, indentación y otras se guardan en el fichero <code>~/.vimrc</code>.</p>
-
-<p>Plugin <a href="https://wincent.com/products/command-t">Command-T</a>. Para abrir ficheros con
-las teclas <code>CTRL + t</code>. Parecido a la misma funcionalidad de TextMate o Sublime. Al
-parecer necesita Ruby, así que la instalación quizá no sea muy sencilla.</p>
-
-<h2>(12-10-2014) Derek Wyatt: Basic movements II</h2>
-
-<p>El primer video de Derek decidí saltármelo, ya que todos los comandos estarían
-cubiertos con los videos de #LinuxIO. En el de <a href="http://vimeo.com/6185584">Movimientos básicos II</a>
-aprendí lo siguiente:</p>
-
-<ul>
-<li><code>H</code> mueve el cursor a la cabecera (<strong>h</strong>ead) del texto que se muestra en pantalla</li>
-<li><code>M</code> mueve el cursor a la parte <strong>m</strong>edia del texto en pantalla</li>
-<li><code>L</code> mueve el cursor a la última (<strong>l</strong>ast) línea del texto en pantalla</li>
-<li><code>&lt;número&gt;G</code> nos lleva a la línea número <code>&lt;número&gt;</code></li>
-<li><code>#</code> busca la palabra sobre la que buscamos, pero hacia atrás. Es como el comando
-que ya vi anteriormente <code>*</code></li>
-<li><code>g*</code> busca el texto, como <code>*</code>, pero no tiene porqué ser la palabra completa</li>
-</ul>
-
-
-<h2>(12-10-2014) Derek Wyatt: Basic movements III</h2>
-
-<p>En el video de <a href="http://vimeo.com/6216655">Movimientos básicos III</a> ya no podían quedar
-muchos más movimientos que aprender, y la verdad es que los que aquí aparecen son ya
-movimientos un poco más extraños, aunque no por eso dejan de ser útiles.</p>
-
-<ul>
-<li><code>:help motion.txt</code> para ver la ayuda sobre movimientos, para que no se olvide
-ninguno</li>
-<li><code>]]</code> mueve el cursor hasta el siguiente carácter <code>{</code> que exista en la columna 0.
-Ideal para movernos por ficheros de código. Existen otras combinaciones, como
-<code>[[</code>, <code>[]</code> y <code>][</code>, pero actuando sólo sobre la columna 0, no sé si les voy a sacar
-mucho provecho.</li>
-</ul>
-
-
-<p>El plugin <a href="http://www.vim.org/scripts/script.php?script_id=39">matchit</a> amplía la
-funcionalidad del comando <code>%</code> (que movía el cursor hasta el siguiente carácter
-complementario: de <code>(</code> a <code>)</code>, de <code>[</code> a <code>]</code>, ...).</p>
-
-<p><code>:help marks</code> para conocer acerca de marcadores. No los suelo utilizar en mi día
-a día, pero no está de más saber que existen.</p>
-
-<ul>
-<li><code>m&lt;tecla&gt;</code> define un marcador en <code>&lt;tecla&gt;</code></li>
-<li><code>'&lt;tecla&gt;</code> nos mueve al marcador definido en <code>&lt;tecla&gt;</code></li>
-<li><code>''</code> nos lleva al último lugar donde editamos, ya que Vim almacena en <code>'</code> dicha
-posición de forma automática</li>
-</ul>
-
-
-<h2>(13-10-2014) Derek Wyatt: basic editing I</h2>
-
-<p>No es que aprendiera mucho en el video de <a href="http://vimeo.com/6329762">Edición básica</a> de
-Derek, pero la mayoría de comandos ya estaban cubiertos con los videos de #LinuxIO.</p>
-
-<ul>
-<li><code>x</code> borra el carácter donde esta el cursor. <code>X</code> borra hacia atrás</li>
-<li><code>r</code> <strong>r</strong>eemplaza un carácter. <code>R</code> <strong>r</strong>eemplaza varios carácteres, hasta que pulsemos <code>ESC</code>.
-<code>5rx</code> reemplaza 5 caracteres por una <code>x</code>.</li>
-</ul>
-
-
-<p>El comando <code>:set cpoptions+=$</code> configura una funcionalidad adicional para el
-comando <code>c</code> (<strong>c</strong>ambiar). Lo que hace es que aparezca el carácter <code>$</code> al
-final del texto que se va a cambiar.</p>
-
-<h2>(13-10-2104) Derek Wyatt: basic editing II</h2>
-
-<p>No hay gran cosa que destacar en el video de
-<a href="http://vimeo.com/6332848">Edición básica II</a>.</p>
-
-<ul>
-<li><code>F&lt;carácter&gt;</code> encontrar (<strong>f</strong>ind) un carácter hacia atrás</li>
-<li><code>J</code> une (<strong>j</strong>oin) una línea con la inmediatamente inferior. <code>gj</code> une dos líneas
-sin dejar ningún espacio en blanco.</li>
-<li><code>gv</code> selecciona el último bloque visual</li>
-</ul>
-
-
-<h2>(13-10-2014) Derek Wyatt: working with many files I</h2>
-
-<p>En el episodio de <a href="https://vimeo.com/6306508">Múltiples ficheros I</a> aprendí un
-manejo básico de buffers, es decir, manejar varios ficheros a la vez.</p>
-
-<ul>
-<li><code>:e &lt;fichero&gt;</code> abre un buffer con ese <fichero></li>
-<li><code>:ls</code> lista todos los buffers abiertos</li>
-<li><code>:buffer &lt;número&gt;</code> cambia al buffer número <code>&lt;número&gt;</code>. <code>:b &lt;nombre&gt;</code> cambia al
-buffer del fichero con el nombre <code>&lt;nombre&gt;</code>. <code>b#</code> cambia al buffer anterior.</li>
-<li><code>:bdelete</code> o <code>bd</code> cierra el buffer abierto en ese momento</li>
-<li><code>:%bd</code> cierra todos los buffers (<code>%</code> significa <em>todo el rango</em>)</li>
-</ul>
-
-
-<h2>(13-10-2014) Derek Wyatt: working with many files II</h2>
-
-<p>El episodio de <a href="https://vimeo.com/6307101">Múltiples ficheros II</a> sigue enseñándome
-a manejar varios buffers o ficheros a la vez.</p>
-
-<ul>
-<li><code>:wn</code> (<strong>w</strong>rite and move <strong>n</strong>ext), escribe el buffer actual y se mueve al
-siguiente</li>
-<li><code>:n</code> mueve al siguiente (<strong>n</strong>ext) buffer</li>
-<li><code>:bufdo &lt;comando&gt;</code> ejecuta el comando en todos y cada uno de los buffers
-abiertos</li>
-<li><code>:wall</code> escribe todos (<strong>all</strong>) los buffers</li>
-<li><code>:bfirst</code> se mueve al primer buffer. <code>:bn</code> se mueve al siguiente. <code>:bp</code> se
-mueve al anterior (<strong>p</strong>revious)</li>
-</ul>
-
-
-<p>Todos estos comandos son potentes si se usa <strong>una sola sesión de Vim</strong>, y
-son inútiles si tienes abiertos N Vims con N ficheros. Así que recuerda:
-una sola sesión de Vim.</p>
-
-<h2>(13-10-2014) Derek Wyatt: working with many files III</h2>
-
-<p>En el <a href="https://vimeo.com/6342264">último episodio sobre múltiples ficheros</a>
-hay más y más comandos que aprender, a cual más útil.</p>
-
-<ul>
-<li><code>CTRL-w o</code> te deja con sólo una ventana abierta</li>
-<li><code>:split &lt;fichero&gt;</code>, <code>:sp &lt;fichero&gt;</code> divide la pantalla y abre una ventana debajo
-de otra con el nuevo fichero</li>
-<li><code>CTRL-w x</code> intercambia (e<strong>x</strong>change) dos ventanas</li>
-<li><code>CTRL-w v</code> divide la pantalla en vertical, mostrando dos ventanas con el mismo
-buffer. También se puede hacer con <code>:vsplit</code> o <code>:vsp</code></li>
-<li><code>CTRL-w</code> seguido de <code>h</code>, <code>j</code>, <code>k</code> o <code>l</code> te permite moverte de ventana en ventana
-igual que si lo estuvieras haciendo dentro de un fichero</li>
-<li><code>CTRL-w</code> seguido de <code>H</code>, <code>J</code>, <code>K</code> o <code>L</code> mueve la ventana a la derecha, abajo,
-arriba o a la derecha</li>
-<li><code>CTRL-w p</code> mueve el cursor a la última ventana visitada</li>
-<li><code>CTRL-w c</code> <strong>c</strong>ierra la ventana</li>
-<li><p><code>CRTL-w</code> mueve el cursor a la siguiente ventana, de una en una, una especie de
-<code>CTRL-TAB</code> o así</p></li>
-<li><p><code>CTRL-w c</code> <strong>c</strong>ierra la ventana</p></li>
-<li><code>CRTL-w</code> mueve el cursor a la siguiente ventana, de una en una, una especie de
-<code>CTRL-TAB</code> o así</li>
-</ul>
-
-
-<h2>(14-10-2014) Derek Wyatt: how to use the help system</h2>
-
-<p>Para aprender acerca de <a href="http://vimeo.com/7035132">cómo usar la ayuda</a> este
-video es lo mejor, aquí va un resumen:</p>
-
-<ul>
-<li><code>:help</code> o <code>:h</code> abre una ventana como si fuera un buffer donde muestra la ayuda</li>
-<li><code>CTRL+]</code> para seguir un hiperenlace de la ayuda (no se si funcionara con
-teclado español). <code>CTRL+t</code> para volver hacia atrás</li>
-<li><code>:help &lt;tag&gt;</code> abre la ayuda de una etiqueta. Las etiquetas tienen la forma
-de <code>*:&lt;command&gt;*</code> en la ayuda.</li>
-<li><code>:help &lt;function&gt;()</code> abre la ayuda de una función</li>
-<li>the command <code>wildmenu</code> (o <code>wmnu</code>) habilita el autocompletado de comandos en
-con <code>TAB</code>. Para activarla, escribir <code>:set wildmenu</code>. Para desactivarla
-<code>:set nowildmenu</code></li>
-<li><code>:helpgrep</code> (<code>:helpg</code>) busca un patrón en los ficheros de ayuda. Con el
-filtro <code>[@xx]</code> busca sólo para el lenguaje <code>xx</code>. Para movernos por los resultados
-se puede hacer con <code>:cn</code> (siguiente o <strong>n</strong>ext) o con <code>:cwin</code> nos abre una
-ventana llamada <em>quickfix</em> (<code>:h quickfix</code> para saber más)</li>
-</ul>
-
-
-<h2>(23-10-2014) Derek Wyatt: Vim runtime y el fichero .vimrc</h2>
-
-<p>Sigo aprendiendo Vim con este tío, esta vez sobre el
-<a href="http://derekwyatt.org/vim/tutorials/intermediate/#vimrc">fichero de configuración .vimrc y el runtime</a>:</p>
-
-<ul>
-<li>El fichero <code>vimrc</code> se usa para configurar Vim cuando arranca</li>
-<li>En Linux, el fichero <code>vimrc</code> se encuentra en <code>~/.vimrc</code></li>
-<li>Puedes escribir los mismos comandos que en el modo comando, cuando empieza por <code>:</code></li>
-<li>Echar un vistazo a MiniBufExplorer plugin</li>
-<li><code>:h vimrc</code> para leer la ayuda</li>
-<li><code>nnoremap</code> es un comando interesante para remapear ciertos comandos</li>
-<li><code>:h 'runtimepath'</code> muestra la ayuda sobre vim runtime path</li>
-<li><code>~/.vim/</code> es el runtime path por defecto en Linux. Ahí es donde irán instalados
-los ficheros de ayuda, los plugins, los colores de syntaxis, ...</li>
-<li><code>~/.vim/doc</code> es donde se guarda la ayuda</li>
-<li><code>~/.vim/colors</code> es donde se guardan los esquemas de colores</li>
-<li><code>~/.vim/plugin</code> es donde <em>viven</em> los plugins</li>
-</ul>
-
-
-<h2>(24-10-2014) Derek Wyatt: Vim modes introduction</h2>
-
-<p>Los modos es la característica que diferencia a Vim (sobre todo de emacs, su eterno
-enemigo), y ya iba siendo hora de apreder sobre ellos. Los modos de Vim son:
-normal, visual, inserción, comando y ¿¡ejecución!?, así que aquí va una
-<a href="http://derekwyatt.org/vim/tutorials/intermediate/#modes-intro">introducción a los modos de Vim</a>:</p>
-
-<ul>
-<li>modo <em>Normal</em>: donde puedes introducir los comandos del editor</li>
-<li>modo <em>Visual</em>: como el modo normal, pero según te mueves por el fichero, el texto
-se va resaltando, como si fuera una selección visual</li>
-<li>modo <em>Inserción</em>: es el modo donde se introduce el texto</li>
-<li>modo <em>Línea de comandos</em>: donde puedes introducir comandos en una línea abajo
-del todo de la ventana de Vim. Los comandos comienzan con <code>:</code>, <code>/</code>, <code>?</code> o <code>!</code></li>
-<li>Y hay otros modos menos usados, que más que modos distintos son como una
-mezcla de varios de los básicos, como el modo <em>Inserción Normal</em>, que, estando
-en el modo de inserción, te permite ejecutar un comando (uno sólo) y luego
-vuelve a entrar en el modo de inserción.</li>
-</ul>
-
-
-<h2>(28-10-2014) Derek Wyatt: Insert mode</h2>
-
-<p>En este video Derek profundiza en uno de los modos importantes de Vim, el
-<a href="https://vimeo.com/7133419">modo de inserción</a>, en el cual podemos usar
-autocompletado, indentar líneas y muchas cosas más.</p>
-
-<ul>
-<li><code>:help i_CTRL-A</code> muestra la ayuda para la combinación de teclas <code>CTRL a</code> pero
-exclusivamente para el modo de inserción, de ahí el <code>i_</code></li>
-<li><code>expandtab</code> es una opción que indica el número de espacios a insertar cuando
-se presiona la tecla <code>TAB</code></li>
-<li><code>CTRL w</code> borra la palabra anterior (si estamos en modo de inserción)</li>
-<li><code>CTRL t</code> incrementa en uno la indentación</li>
-<li><code>CTRL d</code> decrementa en uno la indentación</li>
-<li><code>:help ins-special-special</code> muestra la ayuda de comandos en el modo inserción,
-como por ejemplo <code>CTRL g j</code> para mover el cursor una línea abajo.</li>
-<li><code>CTRL m</code>, <code>CTRL p</code> busca palabras para autocompletar buscando hacia abajo o
-hacia arriba</li>
-<li><code>CTRL x</code> + <code>CTRL l</code> autocompleta líneas enteras, es decir, en lugar de buscar
-palabrejas, busca líneas completas.</li>
-<li><code>CTRL x</code> + <code>CTRL f</code> autocompleta rutas de ficheros</li>
-</ul>
-
-
-<h2>(02-11-2014) Derek Wyatt: One Vim... just one</h2>
-
-<p>Es cortito video acerca de <a href="http://vimeo.com/4446112">mantener una y solo una sesión de Vim</a>
-se enfoca en solamente un comando de la shell:</p>
-
-<pre><code>gvim --remote-silent
-</code></pre>
-
-<p>Este sencillo comando nos permite abrir varios ficheros en una única sesión
-gráfica de vim.</p>
-
-<p>Tal y como dicen los comentarios del vídeo, este comando solamente funciona por
-defecto en la interfaz gráfica de Vim, no en la versión de Vim que se ejecuta
-en la línea de comandos.</p>
-
-<h2>(02-11-2014) Derek Wyatt: Destruction is good</h2>
-
-<p>En este video Derek muestra cómo utilizar
-<a href="http://vimeo.com/6110008">comandos destructivos para editar</a>
-el contenido que queremos.</p>
-
-<p>Comandos utilizados:</p>
-
-<ul>
-<li><code>:v/&lt;some pattern&gt;/&lt;some command&gt;</code>: es el comando <code>:vglobal</code> (usar <code>:help :vglobal</code>
-para saber más). Este comando realiza acciones sobre líneas que NO cumplen el patrón
-especificado.</li>
-<li><code>:help :substitute</code> muestra ayuda del comando utilizado para sustituir unas cadenas
-por otras.</li>
-<li>Expresiones regulares, que son ya un problema en sí mismas y que darían para
-mucho tiempo de aprendizaje.</li>
-</ul>
-
-
-<h2>(24-11-2014) Derek Wyatt: Using a Vim macro to edit many files</h2>
-
-<p>Y después de un tiempo sin ver nada nuevo de Vim, hoy toca ver cómo se puede
-<a href="http://vimeo.com/4456458">utilizar una macro para editar varios ficheros</a>, del cual,
-se pueden sacar los siguientes macros y consejos:</p>
-
-<ul>
-<li><code>q + a</code> para comenzar a grabar una macro en la posición <code>a</code></li>
-<li><code>@ + a</code> para ejecutar la macro grabada en la posición <code>a</code></li>
-<li><code>@ + @</code> para ejecutar la última macro</li>
-<li><code>5 + @ + a</code> para ejecutar la macro en <code>a</code> 5 veces</li>
-<li><code>:wn</code> guardar todos los cambios y moverse al siguiente buffer</li>
-<li><code>:prev</code> moverse al buffer anterior</li>
-<li><code>" + a + p</code> imprime la macro guardada en la posición <code>a</code></li>
-</ul>
-
-
-<h2>(08-01-2015) Derek Wyatt: Vim macros and global commands</h2>
-
-<p>Sigo aprendiendo cosas sobre Vim, esta vez sigo con
-<a href="https://vimeo.com/4448635">macros en Vim y comandos globales</a>. Estos son los
-comandos y nuevos consejos que aprendí:</p>
-
-<ul>
-<li><code>CTRL + A</code> incrementa en uno el primer número que encuentra en la línea</li>
-<li><code>20 CTRL + A</code> incrementa en 20 el primer número de la línea</li>
-<li>Grabar y ejecutar macros, visto en el anterior</li>
-<li><code>:g/sometext/normal 20^A</code> es un comando global (en modo :normal, lo que sea eso
-que signifique), que busca la cadena <code>sometext</code> (ya he visto antes cómo buscar
-cadenas de texto) y ejecuta el comando <code>20 CTRL + A</code>. Para ello, para poder
-escribir <code>CTRL + A</code> como comando, hay que pulsar <code>CTRL + V</code> para que la
-siguiente pulsación la tome de forma literal, y luego pulsar <code>CTRL + A</code></li>
-<li><code>CTRL + V</code> hace que Vim tome la siguiente pulsación de forma literal, muy útil
-cuando se escriben comandos globales, por ejemplo.</li>
-</ul>
-
-
-<h2>(08-01-2015) Derek Wyatt: Vim expression register</h2>
-
-<p>Una vez acabados los vídeos de nivel intermedio, toca comenzar con los de
-nivel avanzado. Comienzo con el <a href="http://vimeo.com/4446843">registro de expresiones</a>. ¿Qué es?
-¿Para qué sirve? En el vídeo lo descubro:</p>
-
-<ul>
-<li>¿Qué es? Es un registro, un lugar donde almacenar <em>cosas</em>. ¿Y qué cosas
-son esas? Pues son comandos.</li>
-<li>¿Para qué sirve? Lo utilizan los programadores de plugins para extender
-Vim y para integrarlo con herramientas de terceros.</li>
-<li><code>:imap &lt;c-j&gt;d &lt;c-r&gt;=system('echo foo')&lt;cr&gt;</code> mapea (en modo <strong>i</strong>nserción)
-la combinación de teclas <code>CTRL + J, D</code> para que ejecute el comando de
-sistema <code>echo foo</code> e inserte el resultado en el archivo que estamos
-editando. <code>&lt;c-r&gt;</code> significa <code>CTRL + R</code>, que accede al <em>registro de expresiones</em>
-del que estamos hablando.</li>
-</ul>
-
-
-<h2>(18-01-2015) Derek Wyatt: Vim autocomands</h2>
-
-<p>Siguiendo con vídeos de nivel avanzado, esta vez toca <em>auto comandos</em>. Parece
-una funcionalidad super útil de Vim. Es una funcionalidad donde puedes configurar
-Vim para que realice los comandos que quieras cuando ocurra algún evento: por
-ejemplo, cuando se guarda un fichero en disco, o cuando se mueva el cursor.
-El vídeo está disponible en <a href="http://vimeo.com/4454614">Autocomandos</a>,
-y es muy cortito, que no te de pereza.</p>
-
-<ul>
-<li><code>:help :autocmd</code></li>
-</ul>
-
-
-<h3>(18-01-2015) Derek Wyatt: Find command and the path</h3>
-
-<p>El vídeo anterior era realmente corto, y solamente saqué en claro un comando
-para Vim, <code>:autocmd</code>, pero para su uso es necesario de tener funciones u
-otros comandos para que realmente haga algo.</p>
-
-<p>Así pues, el siguiente es <a href="http://vimeo.com/6154082">Find command and the Path</a>
-para aprender a buscar ficheros y cargarlos para su edición.</p>
-
-<ul>
-<li><code>:set path=&lt;directorio&gt;</code>: establece la variable <code>path</code> en Vim, para búsqueda
-de ficheros por ejemplo.</li>
-<li><code>:find &lt;filename&gt;</code>: busca por un fichero y lo abre para su edición</li>
-<li><code>:pwd</code>: muestra el directorio de trabajo actual</li>
-</ul>
-
-
-<h3>(Marzo 2015) Comando <code>set statusline</code></h3>
-
-<p>Esta vez no tengo nada de ningún video, pero es igualmente interesante. Mediante
-el comando <code>set statusline</code> se puede configurar la apariencia de la <em>barra de
-estado</em> de Vim. Existen muchos símbolos (por llamarlos de alguna manera) que a
-modo de función <code>printf</code> pueden ser sustituidos por diversos campos dentro del
-editor: nombre del fichero, número de línea, codificación del fichero,...</p>
-
-<p>A partir de <a href="http://stackoverflow.com/questions/21069164/osx-vim-set-laststatus-2-shows-only-the-filename-but-i-want-to-see-everythin">esta pregunta en Stack Overflow</a>
-encontré el fichero de configuración de <a href="https://github.com/sk1418/myConf/blob/master/common/.vimrc#L506">sk1418</a>
-en el cual me basé para crearme mi propia configuarción de la barra de estado:</p>
-
-<pre><code>set laststatus =2 " always show status bar
-set statusline=%&lt;%f%h%m%r%=%b\ 0x%B\ \ %l,%c%V\ %p\ %P
-</code></pre>
-
-<p>La cual me muestra:</p>
-
-<ul>
-<li>Nombre del fichero, con la ruta completa</li>
-<li>Una marca para saber si el fichero está modificado</li>
-<li>Valor decimal del carácter donde está situado el cursor</li>
-<li>Valor hexadecimal del mismo</li>
-<li>Columna o línea del fichero donde está el cursor</li>
-<li>Fila</li>
-<li>Tanto por ciento del fichero donde está el cursor</li>
-</ul>
-
-
-<h3>(Mayo 2015) <a href="http://www.viemu.com/a-why-vi-vim.html">Why, oh why, do those #?@! nutheads use vi?</a></h3>
-
-<p>Después de un cierto tiempo, tropecé con éste post, del cual extraje algún que
-otro comando que no conocía todavía. Y no solo comandos, sino secuencias de ellos
-que me permiten realizar tareas muy comunes en el desarrollo de software.</p>
-
-<p><em>Extraer una variable</em></p>
-
-<p>```
-if (!entry.used &amp;&amp; equivalent(entry.key(), qk.key) &amp;&amp; (curcontext &amp; entry.contexts)) {</p>
-
-<pre><code>// do something
-</code></pre>
-
-<p>}
-```</p>
-
-<p>Situar el cursor al principio de <code>equivalent</code> y teclear el comando <code>c%</code>:</p>
-
-<p>```
-if (!entry.used &amp;&amp; <cursor will be here> &amp;&amp; (curcontext &amp; entry.contexts)) {</p>
-
-<pre><code>// do something
-</code></pre>
-
-<p>}
-```</p>
-
-<p>Resulta que eso <strong>c</strong>orta el texto <code>equivalent(entry.key(), qk.key)</code> y entra en modo
-edición. Luego puedo escribir el nombre de la variable, cambiar a modo normal
-y pulsar <code>O</code> para insertar una línea arriba:</p>
-
-<p>```
-<cursor here>
-if (!entry.used &amp;&amp; equiv &amp;&amp; (curcontext &amp; entry.contexts)) {</p>
-
-<pre><code>// do something
-</code></pre>
-
-<p>}
-```</p>
-
-<p>Luego, puedo declarar la variable, y pegar lo que hay en el portapapeles con <code>CTRL + R</code>:</p>
-
-<p>```
-bool equiv = equivalent(entry.key(), qk.key);
-if (!entry.used &amp;&amp; equiv &amp;&amp; (curcontext &amp; entry.contexts)) {</p>
-
-<pre><code>// do something
-</code></pre>
-
-<p>}
-```</p>
-
-<ul>
-<li><code>zt</code>: Mueve la línea (hace <strong>z</strong>oom) donde está el cursor arriba del todo
-(<strong>t</strong>op)</li>
-<li><code>zz</code>: Mueve la línea (hace <strong>z</strong>oom) donde está el cursor al centro de la
-pantalla</li>
-<li><code>zb</code>: Mueve la línea (hace <strong>z</strong>oom) donde está el cursor abajo del todo
-(<strong>b</strong>ottom)</li>
-<li><code>*</code>: busca hacia adelante la palabra seleccionada</li>
-<li><code>#</code>: busca hacia atrás</li>
-<li><code>=aB</code>: corregir la indentación (<code>=</code>) de un (<strong>a</strong>) <strong>Bloque</strong></li>
-<li>Comando <code>hlsearch</code>, por ejemplo: <code>:set hlsearch</code></li>
-<li><code>gU</code>: convierte a mayúsculas todo el texto seleccionado</li>
-<li><code>gu</code>: convierte a minúsculas todo el texto seleccionado</li>
-</ul>
-
-
-<h3>(Junio 2015) <a href="https://www.youtube.com/watch?v=xJz2Hq-jWxY">A casual introduction to Vim on Windows</a></h3>
-
-<p>Por casualidad encontré este vídeo de Roy Osherove, donde habla acerca de Vim
-(en Windows, aunque el sistema operativo tiene poca influencia para el nivel
-que Roy nos cuenta). No aprendí ningún comando nuevo, porque Roy habla de comandos
-básicos, para comenzar a usar Vim, pero creo que el vídeo es un recurso esencial
-para el aprendizaje de Vim, por lo que lo enlazo aquí.</p>
-
-<h3>(Julio 2015) <a href="http://vim.wikia.com/wiki/Word_count">Contar palabras</a></h3>
-
-<p>De repente, escribiendo un post para este blog, me pregunté: ¿Será muy largo
-el post?, ¿Cuántas palabras habrá?. Tampoco tengo claro cuantas palabras hacen
-que un post sea largo, pero bueno, tenía curiosidad por saber cuántas palabras
-había en el post.</p>
-
-<p>El problema es que escribí el post en Windows. Si hubiera estado en Linux, las
-hubiera contado con <code>wc -w</code>. Estaba en Vim, y decidí buscar algún plugin que
-contara las palabras por mí. En lugar de eso, encontré un comando:</p>
-
-<ul>
-<li><code>g</code> + <code>CTRL g</code></li>
-</ul>
-
-
-<h3>(Julio 2015) <a href="https://www.youtube.com/watch?v=wlR5gYd6um0">Mastering the Vim language</a>, Chris Toomey</h3>
-
-<ul>
-<li>Priorizar <em>text objects</em> frente a movimientos (<code>iw</code> frente a <code>w</code>), hacen que
-los comandos sean más repetibles, ya que seleccionan mejor. El movimiento <code>w</code>
-sólo selecciona la palabra si el cursor está al inicio de la misma.</li>
-<li><a href="https://github.com/tpope/vim-repeat">repeat.vim</a> es un plugin que que remapea <code>.</code> (commando repetir) de tal forma
-que los comandos de los plugins sean compatibles con <code>.</code></li>
-<li><code>:set relativenumber</code>, <code>:set norelativenumber</code>, para ver el número de líneas
-relativas respecto a la que está el cursor</li>
-</ul>
-
-
-<p><strong>Algunos plugins</strong></p>
-
-<ul>
-<li><a href="https://github.com/tpope/vim-surround">surround plugin</a>:
-
-<ul>
-<li><code>ds"</code> : borra las comillas dobles de alrededor</li>
-<li><code>cs"'</code> : cambia las comillas dobles que encierran el texto por comillas simples</li>
-<li>y unos cuantos más, como <code>cst&lt;text&gt;</code> para cambiar tags HTML</li>
-</ul>
-</li>
-<li><a href="https://github.com/tpope/vim-commentary">commentary plugin</a>: parece mucho más potente que el que proporciona comandos
-<code>gcc</code> y demás. éste proporciona <code>cm&lt;motion&gt;</code>, por ejemplo: <code>cml</code> (comenta línea),
-<code>cm4j</code> (commenta 4 líneas hacia abajo)</li>
-<li><a href="http://www.vim.org/scripts/script.php?script_id=2703">replace with register plugin</a>: con el comando <code>gr&lt;motion&gt;</code>, por ejemplo,
-si tengo copiada una palabra, puedo hacer <code>griw</code> para <em>go replace inner word</em></li>
-<li><a href="https://github.com/christoomey/vim-sort-motion">sort-motion plugin</a>: con el comando <code>gs&lt;motion&gt;</code> lo que hace es ordenar
-líneas alfabéticamente (para imports, requires,...)</li>
-<li><a href="https://github.com/christoomey/vim-system-copy">system-copy plugin</a>: para copiar al portapapeles del sistema</li>
-</ul>
-
-
-<p><strong>Text objects personalizados</strong></p>
-
-<ul>
-<li>indentación: <code>cmii</code>, <code>cmni"</code></li>
-<li>entero: <code>cmae</code> (<strong>c</strong>omment <strong>a</strong>ll <strong>e</strong>ntire, comenta el documento entero)</li>
-<li>línea: <code>cml</code></li>
-</ul>
-
-
-<h3>(Agosto 2015) <a href="https://www.youtube.com/watch?v=3TX3kV3TICU">Let Vim do the typing</a>, by George Brocklehurst</h3>
-
-<ul>
-<li><code>"a</code> + <code>p</code>: pega lo que hay en el registro <code>a</code></li>
-<li>En modo inserción, <code>CTRL + r</code> + <code>&lt;letra del registro&gt;</code>, pega lo copiado en un
-registro</li>
-<li><code>CTRL + a</code>, en modo inserción, pega el último texto insertado</li>
-<li><code>CTRL + p</code>, <code>CTRL + SHIFT + p</code>, <code>CTRL + n</code>, para autocompletar palabras en los
-documentos abiertos de Vim</li>
-<li>Con un fichero CTAGS, si escribo el nombre de una clase y presiono <code>CTRL + }</code>
-(o <code>CRTL + ]</code> no lo tengo claro), Vim me lleva a la declaración de esa clase</li>
-<li>Con <code>CTRL + x</code> entra en el modo de autocompletado (palabras, líneas, párrafos,...)</li>
-<li>Después de un <code>CTRL + }</code>, puedes volver a navegar hacia atrás con <code>CTRL + o</code></li>
-<li><code>CTRL + x</code> seguido de <code>CTRL + f</code> entra en el modo autocompletar nombres de
-ficheros</li>
-<li>Con <code>CTRL + x</code> seguido de <code>CTRL + p</code> puedes ir autocompletando palabras de una
-frase. Cada vez que pulsas los dos, puedes ir autocompletando una palabra</li>
-<li>Con <code>CTRL + x</code> seguido de <code>CTRL + n</code> lo mismo pero en el otro sentido</li>
-<li>Con <code>CTRL + x</code> seguido de <code>CTRL + l</code> se autocompletan líneas. Si sigues con
-<code>CTRL + x</code> -> <code>CTRL + l</code> te va autocompletando siguientes líneas</li>
-<li>Con <code>CTRL + x</code> -> <code>CTRL + o</code>, qué tal si te puede autocompletar métodos en tu
-lenguaje de programación. No necesita plugin</li>
-<li><code>:set complete</code> muestra tu configuración de autocompletado. el valor por
-defecto que muestra es: <code>.,w,b,u,t,i,kspell</code>. <code>.</code> del buffer actual, <code>w</code> de
-las ventanas abiertas, <code>b</code> de los buffers abiertos, <code>u</code> de los buffers no
-activos, <code>t</code> de los ficheros CTAGS, <code>i</code> de los includes/requires, <code>kspell</code>
-en los diccionarios cuando tengas activado el chequeo de ortografía
-(<code>:set spell</code>)</li>
-<li><a href="https://georgebrock.github.io/talks/vim-completion">Repositorio de George</a>, por si se necesita algún documento de referencia</li>
-</ul>
-
-
-<h3>(29-08-2015) Derek Wyatt: Globals, commands and functions</h3>
-
-<p>El último vídeo de Derek, de su lista de <a href="http://derekwyatt.org/vim/tutorials/advanced/">vídeos para aprender Vim</a>. Este vídeo se
-titula <a href="https://vimeo.com/15443936">Globals, commands and functions</a>, y estas son las notas que tomé mientras
-lo estuve viendo:</p>
-
-<ul>
-<li><code>:saveas &lt;path&gt;</code>: para guardar un fichero con un nuevo nombre</li>
-<li><code>:set ft=xml</code>: establece el tipo de fichero (<code>ft</code>) a <code>xml</code></li>
-<li><code>=g</code> (o <code>=gg</code>): para indentar todo el fichero</li>
-<li><code>:%s/&lt;regexp&gt;/&lt;text&gt;/</code>: sustituye globalmente en todo el fichero. Dentro de la expresión regular, podemos crear grupos de texto encerrados entre <code>\(</code> y <code>\)</code>. Estos grupos serán recordados y podrán incluirse en la parte del texto mediante <code>\1</code>, <code>\2</code>,...</li>
-<li><code>:g</code>: comando <strong>g</strong>lobal. Permite ejecutar comandos (<strong>i</strong>nsertar, borrrar, copiar,...) desde la línea de comandos. Ver <code>:help :g</code></li>
-<li><code>:v</code>: igual que <code>:g</code> pero a la inversa. Por ejemplo, <code>:v/^foo/d</code>, busca las líneas que empiezan con <code>foo</code>, y las que no lo hacen, las borra. Es decir, ejecuta un comando en las líneas que NO cumplen una condición</li>
-<li><code>:normal</code>: te permite ejecutar comandos del modo normal desde la línea de comandos</li>
-<li><code>:normal gggqG</code>: ejecuta los comandos <code>gg</code> (ir al inicio del fichero), <code>gq</code> (corta las líneas al ancho especificado con <code>set tw=&lt;width&gt;</code>), <code>G</code> hasta el final del fichero</li>
-<li><code>gq</code>: inserta carácteres de nueva línea para adecuar el ancho de línea al especificado con <code>:set tw=&lt;width&gt;</code></li>
-<li><code>:g/^-/s/- //</code>: es un comando global (<code>:g</code>), para aquellas líneas que
-comienzen con <code>-</code>. El comando es <strong>s</strong>ustituir (<code>s</code>) los carácters <code>-</code> con
-<code>vacío</code></li>
-<li><code>:%s/\s\{4}//</code>: sustituye en todo el fichero exactamente 4 espacios en blanco
-(<code>\s\{4}</code>) con <code>vacío</code></li>
-<li><code>\zs</code> en medio de una expresión regular de sustitución: hace que la
-sustitución comienze a partir de ahí. Por ejemplo: <code>:%s/\s\{8}\zs-/#/</code> hace
-que busque 8 espacios en blanco seguidos de un guión, y que sustituya a partir
-de los 8 espacios en blanco, que no los toque</li>
-<li><code>:history</code>: muestra un histórico de los últimos comandos de la línea de
-comandos (<code>:history : -20</code> muestra sólo los últimos 20)</li>
-</ul>
-
-
-<h3>(Septiembre 2015) <a href="https://www.youtube.com/watch?v=lwD8G1P52Sk">My first Vim plugin</a>, de Chris Toomey</h3>
-
-<p>En la charla <a href="https://www.youtube.com/watch?v=lwD8G1P52Sk">My first Vim plugin</a> aprenderemos a crear plugins para Vim. No te
-asustes, no es para tanto. También aprenderemos a crear funciones que se puedan
-llamar desde la línea de comandos de Vim, éste es el inicio de cualquier
-plugin.</p>
-
-<ul>
-<li><code>:set spell</code>: activa la corrección ortográfica</li>
-<li><code>]s</code>: lleva el cursor al primer error ortográfico que encuentre</li>
-<li><code>z=</code>: muestra un menú con las opciones para corregir el error ortográfico</li>
-<li><code>1z=</code>: selecciona (sin abrir el menú) la primera opción de correción</li>
-<li><code>m&lt;letra&gt;</code>: establece un marcador en la posición donde está el cursor ahora mismo.</li>
-<li><code>&lt;backtic&gt;&lt;backtic&gt;&lt;letra&gt;</code>: mueve el cursor hasta el marcador que diga <code>&lt;letra&gt;</code></li>
-<li><code>:normal! &lt;comando&gt;</code>: ejecuta tal cual el comando que le escribamos. Por
-ejemplo, si escribimos <code>:normal! mm]s1z=&lt;back-tick&gt;m</code>, ejecuta lo siguiente:
-establece un marcador en <code>m</code> (<code>mm</code>), va al primer error ortográfico (<code>]s</code>),
-lo corrige con la primera opción (<code>1z=</code>), vuelve el cursor a la posición donde
-estábamos (<code>&lt;back-tick&gt;m</code>)</li>
-<li>En un fichero de configuración de Vim:</li>
-</ul>
-
-
-<p><code>``
-nnoremap &lt;leader&gt;sp :normal! mm]s1z=</code>m<cr></p>
-
-<h1>no olvidar <cr> al final, es como pulsar <enter></h1>
-
-<p>```</p>
-
-<p>Lo que hace es asignar la sequencia de comandos <code>&lt;leader&gt;sp</code> para que ejecute
-el comando que hemos estado hablando. Y qué tecla es <code>&lt;leader&gt;</code>? Dice que
-normalemente es <code>\</code>, pero que él la tiene mapeada a <code>&lt;spacebar&gt;</code>. Otra gente
-la suele tener mapeada a la coma.</p>
-
-<p>Ahora, lo englobamos en una función:</p>
-
-<p>```
-function! FixLastSpellingError() {</p>
-
-<pre><code>normal! mm]s1z=`m
-</code></pre>
-
-<p>}
-nnoremap <leader>sp :call FixLastSpellingError
-```</p>
-
-<ul>
-<li><code>{</code> mueve el cursor al inicio del párrafo, <code>}</code> lo mueve al final</li>
-<li>con <code>kmmjdd{p&lt;back-tick&gt;m</code> podemos mover una línea arriba del todo del párrafo (al principio
-de una lista, por ejemplo): sube una línea, pone un marcador, baja, borra la línea,
-se mueve al principio del párrafo, pega y vuelve al marcador.</li>
-<li><code>yypVr=&lt;cr&gt;</code>: marca una línea como el primer título de Markdown:
-copia la línea, la pega debajo, se mueve debajo, selecciona
-visualmente la línea completa, reemplaza todo con <code>=</code>.</li>
-</ul>
-
-
-<p><strong>Plugins</strong></p>
-
-<ul>
-<li>quicklink: para visitar enlaces que tengas en un fichero Markdown</li>
-<li>text-obj-indent: son objectos de texto adicionales, como por ejemplo un nivel
-de indentación</li>
-<li>sort-motion: permite ordenar con comandos de movimiento: palabra, linea, párrafo,...</li>
-<li>tmux_nav y tmux_runner: para manejar sessiones de tmux desde Vim, abriendo
-ventanas en Vim y enviando comandos a ellas</li>
-</ul>
-
-
-<!-- 
-  ¿Queda algo por aprender por aquí, o simplemente repasar ya?
--->
-
-
-
 ]]></content>
   </entry>
   
