@@ -64,7 +64,8 @@ Así que aquí está mi Lista de Lectura:
 - [Pensar rápido, pensar despacio](www.amazon.com/Pensar-rápido-despacio-Spanish-Edition-ebook/dp/B008BPHBTO), de Daniel Kahneman, recomendado por Alberto Vilches
 - [Think and Grow Rich](), de Napoleon Hill, recomendado por John Sonmez en su libro Soft Skills
 - [Manual del ciberactivista](http://www.amazon.es/gp/product/8494408607), de Javier de la Cueva, visto en [Microsiervos](http://www.microsiervos.com/archivo/libros/manual-del-ciberactivista-o-como-la-politica-puede-ser-cosa-de-todos-gracias-a-internet.html)
-- [Eloquen JavaScript](http://www.amazon.com/Eloquent-JavaScript-Modern-Introduction-Programming/dp/1593272820), de Marijn Haverbeke, recomendado por Kyle Simpson (You don't know JavaScript) en el podcast Developer on fire
+- [Eloquent JavaScript](http://www.amazon.com/Eloquent-JavaScript-Modern-Introduction-Programming/dp/1593272820), de Marijn Haverbeke, recomendado por Kyle Simpson (You don't know JavaScript) en el podcast Developer on fire
+- [The two awesome hours](http://www.amazon.es/Two-Awesome-Hours-Science-Based-Strategies-ebook/dp/B00LSRU7CK/), de Josh Davis, recomendado por Chad Fowler en Developer on Fire #95
 - [Introduction to the command line](http://shop.fsf.org/product/Introduction_to_Command_Line/), de la Free Software Foundation
 - [The art of Unix programming](http://www.catb.org/esr/writings/taoup), de Eric S. Raymond
 - [Beautiul Code](http://www.amazon.es/gp/product/0596510047/ref=as_li_tf_tl?ie=UTF8&camp=3626&creative=24790&creativeASIN=0596510047&linkCode=as2&tag=koalite-21), de Greg Wilson y Andy Oram, recomendado por Juanma (Gulnor), de Koalite, descrito como *porno (para desarrolladores) puro*
