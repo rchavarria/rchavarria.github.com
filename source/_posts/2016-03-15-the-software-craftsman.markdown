@@ -19,17 +19,63 @@ sidebar: true
 
 ### Por qué lo he leído
 
-Me encanta programar, me encanta escribir software, escribir código. Me encanta resolver problemas, puzles. Me encanta la tecnología. Y me encanta hacer las cosas bien, poner cariño en lo que hago. La ideología de Software Craftsmanship va de todo esto. Y me gusta la metáfora. Mi padre es carpintero, artesano, y me gustaría poner el mismo cuidado en mi trabajo que él pone en el suyo. La excelencia técnica es lo que más me gusta del desarrollo software.
+Me encanta programar, me encanta escribir software, escribir código. Me encanta
+resolver problemas, puzles. Me encanta la tecnología. Y me encanta hacer las
+cosas bien, poner cariño en lo que hago. La ideología de Software Craftsmanship
+va de todo esto. Y me gusta la metáfora. Mi padre es carpintero, artesano, y me
+gustaría poner el mismo cuidado en mi trabajo que él pone en el suyo. La
+excelencia técnica es lo que más me gusta del desarrollo software.
 
 <!-- more -->
 
 ### Qué esperaba
 
-### Qué encontre
+Me esperaba un libro donde se hablara de buenas prácticas, de ningún lenguaje
+de programación en particular, si no de todos en general. De qué significa ser
+un artesano, de dedicar tu vida a una profesión, de hacer lo que te gusta, de
+pasión, de profesionalidad.
+
+Esperaba consejos sobre qué hacer, qué no hacer, a quién considerar un modelo.
+¿Una guía paso a paso de cómo ser considerado un craftsman? Nooo, pero sí
+muchas acciones que me acercaría a ello.
+
+### Qué encontré
+
+Todo eso y más. Aparte de todo lo esperado, Sandro tiene muchísimas
+*batallitas* que contar. No solamente encontré conceptos ampliamente aceptados,
+también encontré multitud de experiencias personales de una persona que ha
+trabajado y trabaja muy duro para hacer de la profesión una profesión mucho
+mejor.
+
+Un capítulo interesantísimo es el que trata sobre la historia del Software
+Craftsmanship.
 
 ### Conclusiones
 
+Sandro ha escrito un libro espectacular y soberbio. El libro cubre el concepto
+de Craftsmanship de arriba a abajo y está ejemplificado con experiencias
+personales. El libro está recomendado por muchísimo profesionales muy valorados
+en la industria del software, y con razón. Es un placer leerlo. 
+
+De acuerdo, el tema me interesa, y me apasiona, así que yo encuentro normal que
+el libro me haya encantado. Lo recomendaría a todos aquellos que estén
+preocupados por escribir software de calidad, para aquellos que les preocupe
+los aspectos técnicos del desarrollo del software.
+
 ### Qué he aprendido
+
+Escribir temas técnicos en tu blog ayudarán a quien venga después de ti. Porque
+encontrarán los conceptos descritos con los mismos ojos que tienen ellos ahora.
+Incluso si programadores más experimentados han escrito sobre el tema
+anteriormente, siempre merece la pena escribir sobre lo que estamos aprendiendo
+en este momento.
+
+Es muy fácil decir que un software está muy mal escrito. Es más fácil quejarse,
+o incluso reírse del autor. Pero la pregunta es: eres lo suficientemente bueno
+como para hacerlo mejor?
+
+¿Qué motiva al trabajor del conocimiento? **Autonomía**, **maestría** y
+**propósito**.
 
 ### Frases que me gustaría recordar
 
@@ -49,19 +95,6 @@ Me encanta programar, me encanta escribir software, escribir código. Me encanta
 
 <!-- -->
 
-> *Esta muy interesante el capítulo sobre la historia del Software
-> Craftsmanship*
-
-<!-- -->
-
-> Blogs: eso ayudará a quien venga después de nosotros. Porque encontrarán los
-> conceptos descritos con los mismos ojos que tienen ellos ahora. Incluso si
-> programadores más experimentados han escrito sobre el tema anteriormente,
-> siempre merece la pena escribir sobre lo que estamos aprendiendo en este
-> momento.
-
-<!-- -->
-
 > Descubrimiento deliberado: hay que intentar expandir el conocimiento que
 > tenemos en lo que estemos trabajando, aunque creamos que lo conocemos siempre
 > habrá algún asunto que podemos explorar. Debemos exponernos constantemente a
@@ -74,12 +107,6 @@ Me encanta programar, me encanta escribir software, escribir código. Me encanta
 > tests. **Esto es ser egocéntrico**. Sólo piensa en sus tareas, no en el resto
 > de la gente involucrada en el proyecto y todo el tiempo que les consumirá no
 > tener tests.
-
-<!-- -->
-
-> Es muy fácil decir que un software está muy mal escrito. Es más fácil
-> quejarse, o incluso reírse del autor. Pero la pregunta es: eres lo
-> suficientemente bueno como para hacerlo mejor?
 
 <!-- -->
 
@@ -116,7 +143,7 @@ Me encanta programar, me encanta escribir software, escribir código. Me encanta
 
 <!-- -->
 
-> No tengas miedo de ser viejo y seguir programando. No tengas miedo de hacer
+> No tengas miedo de ser *viejo* y seguir programando. No tengas miedo de hacer
 > lo que te gusta.
 
 <!-- -->
