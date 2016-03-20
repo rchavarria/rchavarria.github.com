@@ -4,7 +4,7 @@
   <title><![CDATA[Category: learning | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/learning/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2016-03-20T15:54:15+01:00</updated>
+  <updated>2016-03-20T17:27:06+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -484,8 +484,17 @@ conferencia de Ruby que hay que ver.</li>
 problemas y comentar las soluciones del resto de usuarios.</li>
 <li><a href="https://github.com/niftyn8/elixir_style_guide">Guía de estilo</a> para programar en Elixir. De obligado conocimiento para que
 tu código sea más legible por la comunidad.</li>
+<li><a href="https://www.youtube.com/watch?v=fklep3sUSWo">The climb experiencing the rise of Elixir from the inside</a>: una charla
+impresionante de Dave Thomas y Bruce Tate sobre Elixir, comparando el
+desarrollo de un lenguaje con subir al Everest. Todos somos Sherpas y debemos
+compartir la carga (de José Valim y su equipo) para hacer de Elixr, Phoenix y
+Elm un gran lenguaje y una gran plataforma. También hablan de QWAN (quality
+without a name) en Elixir. <em>QWAN is two way</em>, nos sentimos inspirados por la
+calidad</li>
 </ul>
 
+
+<p>Comparativa entre subir al Everest y desarrollar un lenguaje, Sherpas, todos somos Sherpas, y debemos compartir la carga (de José Valim y su equipo) para hacer de Elixir, Phoenix y Elm un gran lenguaje.</p>
 
 <p>También espero que poco a poco, según vaya necesitando saber más sobre cómo
 hacer cosas con el lenguaje, vaya descubriendo blogs y autores acerca del
