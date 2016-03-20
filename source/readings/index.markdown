@@ -20,19 +20,19 @@ Así que aquí está mi Lista de Lectura:
 
 ## Estoy leyendo
 
-- [Software craftsmanship](https://leanpub.com/socra), de Sandro Mancuso, recomendado por [Carlos Ble](http://twitter.com/carlosble)
 - [Ten-day MBA](http://www.amazon.es/MBA-10-d%C3%ADas-ense%C3%B1anzas-escuelas-ebook/dp/B00D59QW6O/), de Steven Silbiger, recomendado por Chad Fowler en su libro. Se puede econtrar también en [inglés](http://www.amazon.com/The-Ten-Day-MBA-Step-Step/dp/0062199579)
 - [Code: the hidden language of computer hardware and software](http://www.amazon.com/Code-Language-Computer-Hardware-Software/dp/0735611319/), de Charles Petzold, recomendado por Scott Hanselman y Dave Rael en el [episodio 83 de Developer on Fire podcast](http://developeronfire.com/Podcast/Episodes/scott-hanselman-learn-balance)
+- [Practical Vim](https://pragprog.com/book/dnvim/practical-vim), de Drew Neil, recomendado por el podcast Giant Robots
 - [Expertología](http://www.amazon.es/dp/8492414502), de Andrés Pérez Ortega
 
 ## Tengo pensado leer
 
-- [Practical Vim](https://pragprog.com/book/dnvim/practical-vim), de Drew Neil, recomendado por el podcast Giant Robots
-- [Slow burn](http://www.amazon.com/Slow-Burn-Faster-Exercising-Slower/dp/0062736744), de Stu Mittleman, recomendado por [Rick Rubin en una entrevisa de Tim Ferris](http://fourhourworkweek.com/2015/05/15/rick-rubin)
+- [The four hour body](https://www.amazon.es/cuerpo-perfecto-cuatro-horas-FICCION/dp/8466650210/), de Tim Ferris
 - [The grumpy programmer's PHPUnit cookbook](https://leanpub.com/grumpy-phpunit), de Chris Hartjes, amigo de J.B.Rainsberger
 - [Mientras escribo](http://www.amazon.es/Mientras-escribo-BEST-SELLER-Stephen/dp/849759732X/), de Stephen King (traducción de *On writing*), recomendado por [Kathleen Dollard](https://twitter.com/KathleenDollard/) en el podcast [Developer on Fire #65](http://developeronfire.com/Podcast/Episodes/kathleen-dollard-relentless-dedication)
 - [La trilogía de la biblioteca de los muertos](www.amazon.com/Biblioteca-los-muertos-Spanish-Edition/dp/0307882268), de Glenn Cooper, recomendado por Ismael, compañero de curro.
 - [Growing object oriented design guided by tests](), de Nat Pryce y Steve Freeman. Ideal para conocer la escuela de Londres (mockist) sobre TDD
+- [Slow burn](http://www.amazon.com/Slow-Burn-Faster-Exercising-Slower/dp/0062736744), de Stu Mittleman, recomendado por [Rick Rubin en una entrevisa de Tim Ferris](http://fourhourworkweek.com/2015/05/15/rick-rubin)
 - [The Leprechauns of software development](https://leanpub.com/leprechauns), de Laurent Bossavit, recomendado por [Alvaro García](http://twitter.com/alvaroviz) a [Leo Antolí](http://twitter.com/lantoli)
 - [Test driven development: by example](http://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530), de Kent Beck
 - [Las reglas no escritas para triunfar en la empresa](http://www.amazon.es/escritas-triunfar-empresa-Inform%C3%A1tica-Profesional/dp/8492650435), de Roberto Canales (disponible en tu drive, conseguido gratuitamente gracias a Autentia)
@@ -40,8 +40,10 @@ Así que aquí está mi Lista de Lectura:
 - [Pragmatic thinking and learning](https://pragprog.com/book/ahptl/pragmatic-thinking-and-learning), de Andy Hunt, recomendado por [Alvaro García](http://alvarogarcia7.github.io/blog/2015/12/31/books-read-in-2015q4/) en su blog
 - [Zen y el arte del mantenimiento de motocicletas](http://www.amazon.es/Arte-Mantenimiento-Motocicleta-Narrativa-Sexto/dp/8415601956/), de Robert M. Pirsig, recomendado por @mpjme en FunFunFunction #18](https://www.youtube.com/watch?v=lrf6xuFq1Ms&t=90)
 - [Ready player one](http://www.amazon.es/gp/product/B00UVAREXK/), de Ernest Cline, recomendado por Microsiervos varias veces
+- [Object thinking](http://www.amazon.com/dp/0735619654), de David West, recomendado por [Avdi Grimm](http://devblog.avdi.org/), en [Developer on Fire #108](http://developeronfire.com/episode-108-avdi-grimm-your-passion-is-yours-and-yours-alone)
 - [Thing explainer](http://www.amazon.es/gp/product/1473620910/), de [Randall Munroe (xkcd.com)](http://xkcd.com), recomendado por Microsiervos varias veces
 - [57 exercises for programmers](https://pragprog.com/book/bhwb/exercises-for-programmers), de Brian P. Hogan
+- [Momentos estelares de la humanidad](https://www.amazon.es/Momentos-estelares-humanidad-miniaturas-hist%C3%B3ricas/dp/8495359928/), de Stefan Zweigh, recomendado por [Miguel Ocaña](http://ocana.github.io)
 - [So good, they can't ignore you](http://www.amazon.com/dp/1455509124?tag=sivers-20), de Cal Newport, visto en [http://sivers.org/book/SoGood]
 - [Responsive design by example](http://www.amazon.com/Responsive-Design-Example-Thoriq-Firdaus/dp/1849695423/ref=sr_1_1?ie=UTF8&qid=1443036924&sr=8-1&keywords=Thoriq+Firdaus), de Thoriq Firdaus (almacenado en Drive)
 - [El arte de la guerra](http://www.amazon.es/El-Arte-Guerra-Sun-Tzu/dp/148407291X), de Sun Tzu
@@ -99,6 +101,7 @@ Así que aquí está mi Lista de Lectura:
 
 ## He leído
 
+- [Software craftsmanship](/blog/2016/03/15/the-software-craftsman/), de Sandro Mancuso ~ *Marzo 2016*
 - [Soft Skills: The software developer's life manual](/blog/2015/11/08/soft-skills/), de John Sonmez ~ *Noviembre 2015*
 - [How not to be wrong: the power of mathematical thinking](http://www.amazon.es/gp/product/0143127535), de Jordan Ellenberg, visto en [Microsiervos](http://www.microsiervos.com/archivo/libros/how-not-to-be-wrong.html). No lo terminé. No me interesó lo suficiente. Tenía buena pinta, pero cuenta demasiadas historias, el idioma,...
 - [The Passionate Programmer](/blog/2015/09/20/passionate-programmer/), de Chad Fowler ~ *Septiembre 2015*
