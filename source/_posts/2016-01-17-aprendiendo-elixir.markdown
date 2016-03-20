@@ -92,6 +92,15 @@ Esta es una lista inicial de recursos que voy a ir consumiendo:
   problemas y comentar las soluciones del resto de usuarios.
 - [Guía de estilo] para programar en Elixir. De obligado conocimiento para que
   tu código sea más legible por la comunidad.
+- [The climb experiencing the rise of Elixir from the inside]: una charla
+  impresionante de Dave Thomas y Bruce Tate sobre Elixir, comparando el
+  desarrollo de un lenguaje con subir al Everest. Todos somos Sherpas y debemos
+  compartir la carga (de José Valim y su equipo) para hacer de Elixr, Phoenix y
+  Elm un gran lenguaje y una gran plataforma. También hablan de QWAN (quality
+  without a name) en Elixir. *QWAN is two way*, nos sentimos inspirados por la
+  calidad
+
+Comparativa entre subir al Everest y desarrollar un lenguaje, Sherpas, todos somos Sherpas, y debemos compartir la carga (de José Valim y su equipo) para hacer de Elixir, Phoenix y Elm un gran lenguaje.
 
 También espero que poco a poco, según vaya necesitando saber más sobre cómo
 hacer cosas con el lenguaje, vaya descubriendo blogs y autores acerca del
@@ -129,6 +138,7 @@ suficiente para ir cogiendo ritmo.
 [Benjamin Tan]: http://benjamintan.io/blog/
 [exercism.io]: http://exercism.io/languages/elixir
 [Guía de estilo]: https://github.com/niftyn8/elixir_style_guide
+[The climb experiencing the rise of Elixir from the inside]: https://www.youtube.com/watch?v=fklep3sUSWo
 
 [Primer asalto]: http://localhost:4000/blog/2016/02/09/elixir-primer-asalto/
 
