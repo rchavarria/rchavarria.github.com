@@ -123,6 +123,7 @@ suficiente para ir cogiendo ritmo.
 ## Asaltos
 
 1. [Primer asalto]: tipos, funciones, pattern matching y módulos
+2. [Segundo asalto]: listas, diccionarios, structs y sets
 
 [Madrid |> Elixir]: http://www.meetup.com/Madrid-Elixir/
 [Soft Skills]: http://rchavarria.github.io/blog/2015/11/08/soft-skills/
@@ -140,5 +141,6 @@ suficiente para ir cogiendo ritmo.
 [Guía de estilo]: https://github.com/niftyn8/elixir_style_guide
 [The climb experiencing the rise of Elixir from the inside]: https://www.youtube.com/watch?v=fklep3sUSWo
 
-[Primer asalto]: http://localhost:4000/blog/2016/02/09/elixir-primer-asalto/
+[Primer asalto]: /blog/2016/02/09/elixir-primer-asalto/
+[Segundo asalto]: /blog/2016/03/27/elixir-segundo-asalto/
 
