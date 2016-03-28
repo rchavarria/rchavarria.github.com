@@ -4,7 +4,7 @@
   <title><![CDATA[Category: learning | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/learning/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2016-03-20T17:27:06+01:00</updated>
+  <updated>2016-03-28T19:33:03+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,300 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Elixir: segundo asalto]]></title>
+    <link href="http://rchavarria.github.io/blog/2016/03/27/elixir-segundo-asalto/"/>
+    <updated>2016-03-27T17:42:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2016/03/27/elixir-segundo-asalto</id>
+    <content type="html"><![CDATA[<p>Sigo aprendiendo <a href="http://elixir-lang.org/">Elixir</a>, despacio, pero sigo con ello. Éste es el segundo
+asalto del aprendizaje. En este asalto, lucho con estructuras de datos un poco
+más complejas, como listas, diccionarios, <em>structs</em> o <em>sets</em>. Estas estructuras
+ya existen en otros lenguajes de programación, pero en Elixir son tratadas de
+una forma un poco diferente.</p>
+
+<p>Por supuesto, en este asalto también sigo el método de aprendizaje descrito
+desde el post sobre <a href="/blog/2016/01/17/aprendiendo-elixir/">aprender Elixir</a>:</p>
+
+<ul>
+<li>Aprender lo suficiente para comenzar</li>
+<li>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</li>
+<li>Aprender lo suficiente para hacer algo de utilidad</li>
+<li>Enseñar lo aprendido</li>
+</ul>
+
+
+<p><img class="center" src="/images/2016/rms-won.jpg"></p>
+
+<div style="text-align: center">
+  <span style="font-size: 60%">
+Imagen basada en <a href="https://flic.kr/p/2PDNng">RMS won</a> de <a href="https://www.flickr.com/photos/kmerenkov/">Konstantin Merenkov</a>, <a href="https://creativecommons.org/licenses/by-nc/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by-nc/2.0/legalcode">CC BY-NC 2.0</a>
+  </span>
+</div>
+
+
+
+
+<!-- more -->
+
+
+<h2>Aprender lo suficiente para comenzar</h2>
+
+<p><strong>Listas</strong></p>
+
+<p>Una lista es recursiva. Está formada por una cabecera (<em>head</em>) y una cola
+(<em>tail</em>). La cabecera es unicamente el primer elemento. La cola, es una lista
+con el resto de elementos. De esta forma, la lista <code>[1, 2, 3]</code>, en realidad es
+<code>[1 | [2 | [3 | [] ] ] ]</code> (al final se concatena una lista vacía).</p>
+
+<p>Como las listas son recursivas, muchas funciones que manipulan listas lo son.
+Elixir hace super sencilla la recursividad. Mezclando recursividad y pattern
+matching, se pueden hacer virgerías. Super fácil implementar el cifrado César
+(ver <a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-02/exercise-04-round-02.exs">exercise-04-round-02.exs</a>).</p>
+
+<p><strong>Diccionarios</strong></p>
+
+<p>Existen varios tipos de diccionarios: <code>Maps</code>, <code>HashDicts</code>, <code>Keywords</code>, <code>Sets</code> y
+<code>Structs</code>.</p>
+
+<p>Para acceder a una clave del diccionario: <code>dict[:key]</code>, las claves son Atoms.</p>
+
+<p><code>Enum.into</code> convierte entre tipos enumerados, por ejemplo, entre tipos de
+diccionarios.</p>
+
+<p>```</p>
+
+<h1>Distintas operaciones que podemos hacer sobre diccionarios</h1>
+
+<p>dict = %{ key1: "Clave 1", key2: "Clave 2" }%
+ticd = %{ key9: "Clave 9", key8: "Clave 8" }%</p>
+
+<h1>eliminar claves de un diccionario</h1>
+
+<p>Dict.drop(dict, [:key2])</p>
+
+<h1>añadir claves</h1>
+
+<p>Dict.put(dict, :key3, "Clave 3")</p>
+
+<h1>unir diccionarios</h1>
+
+<p>Dict.merge(dict, tcid)</p>
+
+<h1>obtener valores, similar a dict[:key1]</h1>
+
+<p>Dict.get(dict, :key1)</p>
+
+<h1>obtener todos los valores</h1>
+
+<p>Dict.values(dict)</p>
+
+<h1>el pattern matching en diccionarios es muy útil</h1>
+
+<p>person = %{ name: "Dave", height: 1.88 }</p>
+
+<h1>establecer a_name = "Dave"</h1>
+
+<p>%{ name: a_name } = person</p>
+
+<h1>pattern matching que no falla</h1>
+
+<p>%{ name: _, height: _ } = person</p>
+
+<h1>pattern matching que no falla</h1>
+
+<p>%{ name: "Dave" } = person</p>
+
+<h1>falla</h1>
+
+<p>%{ name: _, weight: _ } = person
+** (Match error) no ...</p>
+
+<h1>pattern matching no puede enlazar claves de diccionarios</h1>
+
+<p>%{ 2 => state } = %{ 1 => ok:, 2 => error: }
+=> state = :error</p>
+
+<p>%{ state => ok: } = %{...}
+=> Error ...</p>
+
+<h1>para actualizar un mapa, se usa la siguiente estructura, muy parecida a <code>List</code></h1>
+
+<h1>Puede actualizar pero no añadir</h1>
+
+<p>new_map = %{ old_map | key => value, ... }
+```</p>
+
+<p><strong>Mapas tipados (typed maps)</strong></p>
+
+<p>Son como un mapa que tiene un conjunto de campos fijos y valores por defecto
+para ellos. Se puede utilizar <em>pattern matching</em> por tipo y por contenido.</p>
+
+<p>Estos mapas son los llamados <code>Struct</code>. Los <code>Struct</code>s son mapas limitados: las
+claves deben ser <em>Atoms</em>. Se crean con <code>defstruct</code>, y el nombre del módulo pasa
+a ser el nombre del struct:</p>
+
+<p>```
+defmodule Subscribrer do
+  defstruct name: "", paid: false, over_18: true
+end</p>
+
+<p>s1 = %Subscribrer{}
+=> %Subscribrer{ name: "", paid: false, over_18: true }</p>
+
+<p>s2 = %Subscribrer{ name: "Dave" }</p>
+
+<h1>a las claves se accede mediante un punto <struct>.<key></h1>
+
+<p>s2.name
+=> "Dave"</p>
+
+<p>%Subscribrer{ name: name } = s2
+name
+=> "Dave"</p>
+
+<h1>así se actualizan los datos</h1>
+
+<p>s3 = %Subscribrer{ s2 | name: "Marie" }</p>
+
+<h1>la idea de que el nombre del módulo sea el nombre del Struct</h1>
+
+<h1>es que se puedan añadir métodos al módulo que modifiquen la</h1>
+
+<h1>estructura del Struct (esto me suena mucho a las clases de la</h1>
+
+<h1>Programación Orientada a Objetos).</h1>
+
+<p>defmodule Attendee do
+  defstruct name: "", paid: false, over_18: true</p>
+
+<p>  def may_attend_after_party(attendee = %Attendee{}) do</p>
+
+<pre><code>attendee.paid &amp;&amp; attendee.over_18
+</code></pre>
+
+<p>  end</p>
+
+<p>  ...
+end
+```</p>
+
+<p>El autor reconoce que los <code>Struct</code>s se parecen mucho a los objectos de la
+Programación Orientada a Objetos. Y también nos advierte que tengamos cuidado,
+que no caigamos en la tentación, que nos mantengamos puros, que no mezclemos
+paradigmas.</p>
+
+<p><strong>Estructuras de diccionario anidadas</strong></p>
+
+<p>Las <code>Structs</code> se pueden anidar. Se consigue haciendo que el valor de una de las
+claves sea otro <code>Struct</code>.</p>
+
+<p>Imagina que tenemos dos <code>Struct</code>s anidadas así:</p>
+
+<p>```
+report = %BugReport{
+  owner: %Customer{</p>
+
+<pre><code>name: "Dave",
+company: "Pragmatic"
+</code></pre>
+
+<p>  },
+  details: "broken"
+}</p>
+
+<h1>se puede acceder a company</h1>
+
+<p>company = report.owner.company</p>
+
+<h1>podemos modificarla con la macro put_in</h1>
+
+<p>put_in(report.owner.company, "PragProg")
+```</p>
+
+<p>Con <code>update_in</code> podemos modificar el valor actual (accesible a través de un
+parámetro de la macro). También existen las macros <code>get_in</code> y
+<code>get_and_update_in</code></p>
+
+<p>Esas macros también funcionan con mapas y keyword lists. Si en lugar de una
+clave o lista de claves, se pasa una función, las macros se convierten en
+funciones dinámicas y llamarán a esta función con tres parámetros.</p>
+
+<p><strong>Sets</strong></p>
+
+<p>Actualmente solo hay una implementación de ellos, <code>HashSet</code>.</p>
+
+<p>```
+one_to_five = Enum.into 1..5, HashSet.new</p>
+
+<h1>comprueba si un valor existe o no</h1>
+
+<p>Set.member(one_to_five, 5)
+=> true</p>
+
+<h1>concatena varios Set's</h1>
+
+<p>three_to_eight = Enum.into 3..8, HashSet.new
+Set.union(one_to_five, three_to_eight)
+=> #Hashset[ 1, 2, 3, 4, 5, 6, 7, 8]</p>
+
+<h1>qué elementos estań en el primero que no están en el segundo</h1>
+
+<p>Set.difference(one_to_five, three_to_eight)
+=> #Hashset[ 1, 2 ]
+Set.difference(three_to_eight, one_to_five)
+=> #Hashset[ 6, 7, 8 ]</p>
+
+<h1>qué valores están en ambos</h1>
+
+<p>Set.intersection(one_to_five, three_to_eight)
+=> #Hashset[ 3, 4, 5 ]
+```</p>
+
+<h2>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</h2>
+
+<p>Algunos métodos intersantes del módulo <code>List</code>: operadores para concatenar <code>++</code>,
+diferencia <code>--</code>, pertenencia <code>in</code> y métodos tales como <code>flatten</code>, <code>foldl</code>,
+<code>foldr</code>, <code>zip</code>, <code>unzip</code>, <code>keyfind</code>, <code>keydelete</code>, <code>keyreplace</code>,...</p>
+
+<p>Además de los métodos que hemos visto de <code>Dict</code>, podemos encontrar: <code>values</code>,
+<code>drop</code>, <code>put</code>, <code>merge</code>, <code>get</code>, <code>HashDict.new</code>,...</p>
+
+<p>El módulo <code>Keyword</code> tiene métodos para manipular listas de tuplas, o keyword
+lists: <code>delete</code>, <code>drop</code>, <code>equal?</code>, <code>get_and_update</code>, <code>merge</code>, <code>pop</code>, <code>put</code>,...</p>
+
+<p>Existen unas macros, que sirven para manipular los valores almacenados en
+diccionarios: <code>get_in</code>, <code>update_in</code>, <code>get_and_update_in</code>,... Si a estas macros
+se les pasa una función en lugar de unas claves, se usará esa función para
+obtener los valores del diccionario. Debería ser sencillo saber usarlas, pero
+todavía no llego a entender exactamente cómo funciona y para qué se podría
+utilizar.</p>
+
+<h2>Aprender lo suficiente para hacer algo de utilidad</h2>
+
+<ul>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-02/exercise-01-round-02.exs">exercise-01-round-02.exs</a>: antes se ha implementado (en el libro) la
+funcción <code>sum</code>, que suma los elementos de una lista. Se ha utilizado un
+acumulador. Implementar lo mismo sin el acumulador</li>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-02/exercise-02-round-02.exs">exercise-02-round-02.exs</a>: escribir una función <code>mapsum</code> que acepte una
+lista y una función, de forma que aplique la función a cada elemento y sume
+los resultados</li>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-02/exercise-03-round-02.exs">exercise-03-round-02.exs</a>: escribir una función <code>max(list)</code> que devuelva el
+máximo valor de la lista</li>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-02/exercise-04-round-02.exs">exercise-04-round-02.exs</a>: implementar el cifrado César, <code>caesar(list, n)</code>,
+donde <code>list</code> es una lista de carácteres (es decir, una cadena con comillas
+simples <code>'cadena'</code>) y que sea circular, cuando sobrepase <code>z</code>, que vuelva a la
+<code>a</code>.</li>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-02/exercise-05-round-02.exs">exercise-05-round-02.exs</a>: escribir una función <code>span(from, to)</code> que
+devuelva una lista de números desde <code>from</code> hasta <code>to</code>.</li>
+</ul>
+
+
+<h2>Enseñar lo aprendido</h2>
+
+<p>Aquí está, este post, mis notas, mis pensamientos, mis dudas y mi código. Hasta el siguiente asalto.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Elixir: primer asalto]]></title>
@@ -517,7 +811,8 @@ suficiente para ir cogiendo ritmo.</p>
 <h2>Asaltos</h2>
 
 <ol>
-<li><a href="http://localhost:4000/blog/2016/02/09/elixir-primer-asalto/">Primer asalto</a>: tipos, funciones, pattern matching y módulos</li>
+<li><a href="/blog/2016/02/09/elixir-primer-asalto/">Primer asalto</a>: tipos, funciones, pattern matching y módulos</li>
+<li><a href="/blog/2016/03/28/elixir-segundo-asalto/">Segundo asalto</a>: listas, diccionarios, structs y sets</li>
 </ol>
 
 ]]></content>
@@ -1024,87 +1319,6 @@ un mínimo de calidad en cualquier proyecto software.</p>
 <li><a href="https://angular.io/docs/ts/latest/testing/">Tests en Angular 2</a></li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Charla técnica: Follow my leader]]></title>
-    <link href="http://rchavarria.github.io/blog/2015/10/04/charla-tecnica-follow-my-leader/"/>
-    <updated>2015-10-04T15:21:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2015/10/04/charla-tecnica-follow-my-leader</id>
-    <content type="html"><![CDATA[<p>Estas notas podrían encajar perfectamente en el post que voy actualizando
-regularmente <a href="/blog/2014/10/11/aprendiendo-vim/">Aprendiendo Vim</a>, pero creo que esta la charla de Drew Neail se
-desmarca ya un poco del proceso de aprendizaje. En esta charla no se busca
-enseñar nuevos comandos de Vim, si no que se trata más de un tema cultural
-acerca del editor. Drew trata de animar a la gente a que busque nuevas
-combinaciones de teclas que se conviertan en nuevos comandos y de esta forma
-hacer Vim más potente todavía.</p>
-
-<!-- more -->
-
-
-<h2>Notas tomadas de la charla <a href="https://vimeo.com/85343734">Follow my leader</a></h2>
-
-<iframe src="https://player.vimeo.com/video/85343734"
-        width="500"
-        height="281"
-        frameborder="0"
-        webkitallowfullscreen mozallowfullscreen allowfullscreen>
-</iframe>
-
-
-<p><em><a href="https://vimeo.com/85343734">Follow my leader</a>, por <a href="http://drewneil.com/">Drew Neil</a>, en un encuentro del grupo local
-<a href="https://vimeo.com/vimlondon">Vim London</a></em></p>
-
-<ul>
-<li><code>let mapleader = ","</code> para mapear <code>,</code> como tecla <code>&lt;leader&gt;</code> en Vim. Otra
-tecla muy común para utilizarla como <code>&lt;leader&gt;</code> es la barra espaciadora.</li>
-<li><code>nnoremap &lt;leader&gt;&lt;space&gt; :noh&lt;cr&gt;</code> : remapea la secuencia de teclas
-<code>&lt;leader&gt;&lt;space&gt;</code> para que se ejecute el comando <code>:nohlsearch</code>, que desactiva
-el resaltado de términos de búsqueda.</li>
-<li>La tecla <code>&lt;leader&gt;</code> te permite crear mapeos personalizados, es donde los
-usuarios pueden crear sus mapeos sin interferir con Vim</li>
-<li>En lugar de usar <code>leader</code>, algunos plugins, como los que escribe <a href="http://tpo.pe/">Tim Pope</a>
-siguen otro patrón. hay teclas que son <em>operadores</em>, por ejemplo la <strong>d</strong>
-para borrar, o la <strong>y</strong> para copiar. a estos operadores le puede seguir el
-mismo operador o una movimiento. Teclas que producen un movimiento son <strong>j</strong>
-para ir hacia abajo, <strong>$</strong> para ir al final de la línea, ... Pero, qué pasa si
-despues de un operador pulsamos una tecla de <em>no movimiento</em>? No pasa nada. Y
-ahí están las combinaciones de teclas dsiponibles para tus plugins.</li>
-<li>En la imagen de la <a href="http://www.viemu.com/vi-vim-cheat-sheet.gif">chuleta de Vim</a>, los naranjas son operadores, los
-verdes movimientos y los amarillos son comandos.</li>
-</ul>
-
-
-<p><img class="center" src="/images/2015/tiny-vi-vim-cheat-sheet.gif"></p>
-
-<ul>
-<li>El plugin <a href="https://github.com/tpope/vim-unimpaired">unimpaired.vim</a> añade mapeos como <code>con</code> para habilitar/deshabilitar los
-nuḿeros de línea, o <code>cos</code> para habilitar/deshabilitar el chequeo ortográfico.
-Son <code>c</code> + <code>o</code> + otras teclas</li>
-<li>También hay disponibles combinaciones como operador + operador : <code>d</code> + <code>c</code></li>
-<li>Los <em>text objects</em> (<code>i</code> y <code>a</code>) también tienen vacantes.</li>
-<li>Los <em>namespaced mappings</em> también tienen vacantes. Por ejemplo, <code>g</code> es como
-un prefijo para muchos mapeos. <code>z</code> es otro, y <code>[</code> y <code>]</code> son más.</li>
-<li><code>:help g</code> te muestra todos los mapeos que siguen a <code>g</code>. Te puede servir para
-ver huecos donde poner tus mapeos</li>
-<li>Comando inútiles, hay algunos comandos que no usa nadie. Sobreescríbelos. Por
-ejemplo, <code>g</code> + <code>s</code>.</li>
-<li>Sobreescribir, sobrecargar comandos que ya existen, vamos, ampliar los
-existentes.</li>
-</ul>
-
-
-<h2>Conclusiones</h2>
-
-<p>Como puedes ver, el editor Vim es todo un mundo de posibilidades. Hay veces que
-abruma, pero hay tanta gente apasionada por él que está claro que algo debe de
-tener. Esta charla es una muestra de las posibilidades de personalización que
-esta herramienta ofrece. Drew nos abre las puertas a un mundo nuevo de posibles
-comandos.</p>
-
-<p>Si te gusta Vim, y no conoces el plugin <a href="https://github.com/tpope/vim-unimpaired">unimpaired.vim</a>, échale un vistazo. Sin
-duda es uno de los imprescindibles, como tantos otros de Tim Pope.</p>
 ]]></content>
   </entry>
   

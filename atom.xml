@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2016-03-20T17:27:06+01:00</updated>
+  <updated>2016-03-28T19:33:03+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,374 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Elixir: segundo asalto]]></title>
+    <link href="http://rchavarria.github.io/blog/2016/03/27/elixir-segundo-asalto/"/>
+    <updated>2016-03-27T17:42:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2016/03/27/elixir-segundo-asalto</id>
+    <content type="html"><![CDATA[<p>Sigo aprendiendo <a href="http://elixir-lang.org/">Elixir</a>, despacio, pero sigo con ello. Éste es el segundo
+asalto del aprendizaje. En este asalto, lucho con estructuras de datos un poco
+más complejas, como listas, diccionarios, <em>structs</em> o <em>sets</em>. Estas estructuras
+ya existen en otros lenguajes de programación, pero en Elixir son tratadas de
+una forma un poco diferente.</p>
+
+<p>Por supuesto, en este asalto también sigo el método de aprendizaje descrito
+desde el post sobre <a href="http://rchavarria.github.io/blog/2016/01/17/aprendiendo-elixir/">aprender Elixir</a>:</p>
+
+<ul>
+<li>Aprender lo suficiente para comenzar</li>
+<li>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</li>
+<li>Aprender lo suficiente para hacer algo de utilidad</li>
+<li>Enseñar lo aprendido</li>
+</ul>
+
+
+<p><img class="center" src="http://rchavarria.github.io/images/2016/rms-won.jpg"></p>
+
+<div style="text-align: center">
+  <span style="font-size: 60%">
+Imagen basada en <a href="https://flic.kr/p/2PDNng">RMS won</a> de <a href="https://www.flickr.com/photos/kmerenkov/">Konstantin Merenkov</a>, <a href="https://creativecommons.org/licenses/by-nc/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by-nc/2.0/legalcode">CC BY-NC 2.0</a>
+  </span>
+</div>
+
+
+
+
+<!-- more -->
+
+
+<h2>Aprender lo suficiente para comenzar</h2>
+
+<p><strong>Listas</strong></p>
+
+<p>Una lista es recursiva. Está formada por una cabecera (<em>head</em>) y una cola
+(<em>tail</em>). La cabecera es unicamente el primer elemento. La cola, es una lista
+con el resto de elementos. De esta forma, la lista <code>[1, 2, 3]</code>, en realidad es
+<code>[1 | [2 | [3 | [] ] ] ]</code> (al final se concatena una lista vacía).</p>
+
+<p>Como las listas son recursivas, muchas funciones que manipulan listas lo son.
+Elixir hace super sencilla la recursividad. Mezclando recursividad y pattern
+matching, se pueden hacer virgerías. Super fácil implementar el cifrado César
+(ver <a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-02/exercise-04-round-02.exs">exercise-04-round-02.exs</a>).</p>
+
+<p><strong>Diccionarios</strong></p>
+
+<p>Existen varios tipos de diccionarios: <code>Maps</code>, <code>HashDicts</code>, <code>Keywords</code>, <code>Sets</code> y
+<code>Structs</code>.</p>
+
+<p>Para acceder a una clave del diccionario: <code>dict[:key]</code>, las claves son Atoms.</p>
+
+<p><code>Enum.into</code> convierte entre tipos enumerados, por ejemplo, entre tipos de
+diccionarios.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#Distintas operaciones que podemos hacer sobre diccionarios
+</span><span class='line'>dict = %{ key1: "Clave 1", key2: "Clave 2" }%
+</span><span class='line'>ticd = %{ key9: "Clave 9", key8: "Clave 8" }%
+</span><span class='line'>
+</span><span class='line'># eliminar claves de un diccionario
+</span><span class='line'>Dict.drop(dict, [:key2])
+</span><span class='line'>
+</span><span class='line'># añadir claves
+</span><span class='line'>Dict.put(dict, :key3, "Clave 3")
+</span><span class='line'>
+</span><span class='line'># unir diccionarios
+</span><span class='line'>Dict.merge(dict, tcid)
+</span><span class='line'>
+</span><span class='line'># obtener valores, similar a dict[:key1]
+</span><span class='line'>Dict.get(dict, :key1)
+</span><span class='line'>
+</span><span class='line'># obtener todos los valores
+</span><span class='line'>Dict.values(dict)
+</span><span class='line'>
+</span><span class='line'># el pattern matching en diccionarios es muy útil
+</span><span class='line'>person = %{ name: "Dave", height: 1.88 }
+</span><span class='line'>
+</span><span class='line'># establecer a_name = "Dave"
+</span><span class='line'>%{ name: a_name } = person
+</span><span class='line'>
+</span><span class='line'># pattern matching que no falla
+</span><span class='line'>%{ name: _, height: _ } = person
+</span><span class='line'>
+</span><span class='line'># pattern matching que no falla
+</span><span class='line'>%{ name: "Dave" } = person
+</span><span class='line'>
+</span><span class='line'># falla
+</span><span class='line'>%{ name: _, weight: _ } = person
+</span><span class='line'>** (Match error) no ...
+</span><span class='line'>
+</span><span class='line'># pattern matching no puede enlazar claves de diccionarios
+</span><span class='line'>%{ 2 =&gt; state } = %{ 1 =&gt; ok:, 2 =&gt; error: }
+</span><span class='line'>=&gt; state = :error
+</span><span class='line'>
+</span><span class='line'>%{ state =&gt; ok: } = %{...}
+</span><span class='line'>=&gt; Error ...
+</span><span class='line'>
+</span><span class='line'># para actualizar un mapa, se usa la siguiente estructura, muy parecida a `List`
+</span><span class='line'># Puede actualizar pero no añadir
+</span><span class='line'>new_map = %{ old_map | key =&gt; value, ... }</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Mapas tipados (typed maps)</strong></p>
+
+<p>Son como un mapa que tiene un conjunto de campos fijos y valores por defecto
+para ellos. Se puede utilizar <em>pattern matching</em> por tipo y por contenido.</p>
+
+<p>Estos mapas son los llamados <code>Struct</code>. Los <code>Struct</code>s son mapas limitados: las
+claves deben ser <em>Atoms</em>. Se crean con <code>defstruct</code>, y el nombre del módulo pasa
+a ser el nombre del struct:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>defmodule Subscribrer do
+</span><span class='line'>  defstruct name: "", paid: false, over_18: true
+</span><span class='line'>end
+</span><span class='line'>
+</span><span class='line'>s1 = %Subscribrer{}
+</span><span class='line'>=&gt; %Subscribrer{ name: "", paid: false, over_18: true }
+</span><span class='line'>
+</span><span class='line'>s2 = %Subscribrer{ name: "Dave" }
+</span><span class='line'>
+</span><span class='line'># a las claves se accede mediante un punto &lt;struct&gt;.&lt;key&gt;
+</span><span class='line'>s2.name
+</span><span class='line'>=&gt; "Dave"
+</span><span class='line'>
+</span><span class='line'>%Subscribrer{ name: name } = s2
+</span><span class='line'>name
+</span><span class='line'>=&gt; "Dave"
+</span><span class='line'>
+</span><span class='line'># así se actualizan los datos
+</span><span class='line'>s3 = %Subscribrer{ s2 | name: "Marie" }
+</span><span class='line'>
+</span><span class='line'># la idea de que el nombre del módulo sea el nombre del Struct
+</span><span class='line'># es que se puedan añadir métodos al módulo que modifiquen la
+</span><span class='line'># estructura del Struct (esto me suena mucho a las clases de la
+</span><span class='line'># Programación Orientada a Objetos).
+</span><span class='line'>defmodule Attendee do
+</span><span class='line'>  defstruct name: "", paid: false, over_18: true
+</span><span class='line'>
+</span><span class='line'>  def may_attend_after_party(attendee = %Attendee{}) do
+</span><span class='line'>    attendee.paid && attendee.over_18
+</span><span class='line'>  end
+</span><span class='line'>
+</span><span class='line'>  ...
+</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
+
+
+<p>El autor reconoce que los <code>Struct</code>s se parecen mucho a los objectos de la
+Programación Orientada a Objetos. Y también nos advierte que tengamos cuidado,
+que no caigamos en la tentación, que nos mantengamos puros, que no mezclemos
+paradigmas.</p>
+
+<p><strong>Estructuras de diccionario anidadas</strong></p>
+
+<p>Las <code>Structs</code> se pueden anidar. Se consigue haciendo que el valor de una de las
+claves sea otro <code>Struct</code>.</p>
+
+<p>Imagina que tenemos dos <code>Struct</code>s anidadas así:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>report = %BugReport{
+</span><span class='line'>  owner: %Customer{
+</span><span class='line'>    name: "Dave",
+</span><span class='line'>    company: "Pragmatic"
+</span><span class='line'>  },
+</span><span class='line'>  details: "broken"
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'># se puede acceder a company
+</span><span class='line'>company = report.owner.company
+</span><span class='line'>
+</span><span class='line'># podemos modificarla con la macro put_in
+</span><span class='line'>put_in(report.owner.company, "PragProg")</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Con <code>update_in</code> podemos modificar el valor actual (accesible a través de un
+parámetro de la macro). También existen las macros <code>get_in</code> y
+<code>get_and_update_in</code></p>
+
+<p>Esas macros también funcionan con mapas y keyword lists. Si en lugar de una
+clave o lista de claves, se pasa una función, las macros se convierten en
+funciones dinámicas y llamarán a esta función con tres parámetros.</p>
+
+<p><strong>Sets</strong></p>
+
+<p>Actualmente solo hay una implementación de ellos, <code>HashSet</code>.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>one_to_five = Enum.into 1..5, HashSet.new
+</span><span class='line'>
+</span><span class='line'># comprueba si un valor existe o no
+</span><span class='line'>Set.member(one_to_five, 5)
+</span><span class='line'>=&gt; true
+</span><span class='line'>
+</span><span class='line'># concatena varios Set's
+</span><span class='line'>three_to_eight = Enum.into 3..8, HashSet.new
+</span><span class='line'>Set.union(one_to_five, three_to_eight)
+</span><span class='line'>=&gt; #Hashset[ 1, 2, 3, 4, 5, 6, 7, 8]
+</span><span class='line'>
+</span><span class='line'># qué elementos estań en el primero que no están en el segundo
+</span><span class='line'>Set.difference(one_to_five, three_to_eight)
+</span><span class='line'>=&gt; #Hashset[ 1, 2 ]
+</span><span class='line'>Set.difference(three_to_eight, one_to_five)
+</span><span class='line'>=&gt; #Hashset[ 6, 7, 8 ]
+</span><span class='line'>
+</span><span class='line'># qué valores están en ambos
+</span><span class='line'>Set.intersection(one_to_five, three_to_eight)
+</span><span class='line'>=&gt; #Hashset[ 3, 4, 5 ]</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</h2>
+
+<p>Algunos métodos intersantes del módulo <code>List</code>: operadores para concatenar <code>++</code>,
+diferencia <code>--</code>, pertenencia <code>in</code> y métodos tales como <code>flatten</code>, <code>foldl</code>,
+<code>foldr</code>, <code>zip</code>, <code>unzip</code>, <code>keyfind</code>, <code>keydelete</code>, <code>keyreplace</code>,&#8230;</p>
+
+<p>Además de los métodos que hemos visto de <code>Dict</code>, podemos encontrar: <code>values</code>,
+<code>drop</code>, <code>put</code>, <code>merge</code>, <code>get</code>, <code>HashDict.new</code>,&#8230;</p>
+
+<p>El módulo <code>Keyword</code> tiene métodos para manipular listas de tuplas, o keyword
+lists: <code>delete</code>, <code>drop</code>, <code>equal?</code>, <code>get_and_update</code>, <code>merge</code>, <code>pop</code>, <code>put</code>,&#8230;</p>
+
+<p>Existen unas macros, que sirven para manipular los valores almacenados en
+diccionarios: <code>get_in</code>, <code>update_in</code>, <code>get_and_update_in</code>,&#8230; Si a estas macros
+se les pasa una función en lugar de unas claves, se usará esa función para
+obtener los valores del diccionario. Debería ser sencillo saber usarlas, pero
+todavía no llego a entender exactamente cómo funciona y para qué se podría
+utilizar.</p>
+
+<h2>Aprender lo suficiente para hacer algo de utilidad</h2>
+
+<ul>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-02/exercise-01-round-02.exs">exercise-01-round-02.exs</a>: antes se ha implementado (en el libro) la
+funcción <code>sum</code>, que suma los elementos de una lista. Se ha utilizado un
+acumulador. Implementar lo mismo sin el acumulador</li>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-02/exercise-02-round-02.exs">exercise-02-round-02.exs</a>: escribir una función <code>mapsum</code> que acepte una
+lista y una función, de forma que aplique la función a cada elemento y sume
+los resultados</li>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-02/exercise-03-round-02.exs">exercise-03-round-02.exs</a>: escribir una función <code>max(list)</code> que devuelva el
+máximo valor de la lista</li>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-02/exercise-04-round-02.exs">exercise-04-round-02.exs</a>: implementar el cifrado César, <code>caesar(list, n)</code>,
+donde <code>list</code> es una lista de carácteres (es decir, una cadena con comillas
+simples <code>'cadena'</code>) y que sea circular, cuando sobrepase <code>z</code>, que vuelva a la
+<code>a</code>.</li>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-02/exercise-05-round-02.exs">exercise-05-round-02.exs</a>: escribir una función <code>span(from, to)</code> que
+devuelva una lista de números desde <code>from</code> hasta <code>to</code>.</li>
+</ul>
+
+
+<h2>Enseñar lo aprendido</h2>
+
+<p>Aquí está, este post, mis notas, mis pensamientos, mis dudas y mi código. Hasta el siguiente asalto.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The Software Craftsman]]></title>
@@ -843,7 +1211,8 @@ suficiente para ir cogiendo ritmo.</p>
 <h2>Asaltos</h2>
 
 <ol>
-<li><a href="http://localhost:4000/blog/2016/02/09/elixir-primer-asalto/">Primer asalto</a>: tipos, funciones, pattern matching y módulos</li>
+<li><a href="http://rchavarria.github.io/blog/2016/02/09/elixir-primer-asalto/">Primer asalto</a>: tipos, funciones, pattern matching y módulos</li>
+<li><a href="http://rchavarria.github.io/blog/2016/03/28/elixir-segundo-asalto/">Segundo asalto</a>: listas, diccionarios, structs y sets</li>
 </ol>
 
 ]]></content>
@@ -3322,83 +3691,6 @@ Martin da a los distintos tipos de refactorizaciones los vamos a ir viendo y
 desarrollando en años venideros.</p>
 
 <p>Así que ya sabes, haz un hueco en la agenda, y ¡a visualizar la charla!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[The Martian]]></title>
-    <link href="http://rchavarria.github.io/blog/2015/09/06/the-martian/"/>
-    <updated>2015-09-06T16:05:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2015/09/06/the-martian</id>
-    <content type="html"><![CDATA[<h5>de Andy Weir</h5>
-
-<p><img class="right" src="http://www.ew.com/sites/default/files/i/2014/02/04/The-Martian.jpg" width="201" height="306"></p>
-
-<h2>Por qué lo he leído</h2>
-
-<p>Hace un tiempo que escucho semanalmente los podcasts de Scott Hanselman:
-<a href="http://www.hanselminutes.com/">Hanselminutes</a>. Son unos podcasts muy variados que tratan temas relacionados
-con el mundo del software y la tecnología en general: lenguajes de programación,
-iniciativas,&#8230;</p>
-
-<p>En varios de sus podcasts, y probablemente en varios de sus posts, Scott dice
-que uno de los libros que más recomienda es <a href="http://www.amazon.es/gp/product/B00OXYQR38/">El marciano</a>, que es un libro
-que le encanta. No creo que se lleve ninguna comisión por hacer publicidad,
-pero si alguien como Scott recomienda una y otra vez un libro, será por algo.
-Además, es un libro no técnico, por lo que me serviría para desconectar un poco
-en vacaciones.</p>
-
-<!-- more -->
-
-
-<h2>Qué esperaba</h2>
-
-<p>Al estar tan recomendado, esperaba una novela muy bien escrita. Según Scott, es
-una novela de ciencia ficción, pero que es mucho más de ciencia que de ficción,
-de hecho, con el estado actual de la tecnología, se podría dar la situación
-perfectamente. Lo único que quizá no se ha invertido el tiempo y el dinero en
-hacerlo realidad, pero podría serlo.</p>
-
-<h2>Qué encontre</h2>
-
-<p>Evidentemente, encontré todo lo que esperaba. Una novela de ciencia ficción, con
-más ciencia que ficción, describiendo una situación que podría ser totalmente
-cierta actualmente. Una novela magníficamente escrita, con muchos tecnicismos,
-llena de vocabulario aeroespacial, describiendo personalidades muy distintas,
-pero que el autor usa inteligentemente.</p>
-
-<h2>Conclusiones</h2>
-
-<p>Sin duda, una novela a recomendar. Si te gusta el espacio, si te gusta la ciencia,
-y si te gusta la ficción; ésta es una novela para tí. O película, porque mientras
-estaba a mitad del libro, me entero de que van a <em>sacar</em> la película y que ya hay
-disponible algún <a href="https://www.youtube.com/watch?v=ej3ioOneTy8">trailer</a>. Así que eso me animó a terminarme antes aún el
-libro, a devorarlo en vacaciones.</p>
-
-<p>Aunque la situación podría darse hoy en día, también hay que hacer un acto de fe
-para creerse todo lo que cuenta. En muchas ocasiones, el protagonista describe
-procesos químicos, o físicos, que pueden funcionar por casualidad, pero que al
-final, por <em>necesidades del guión</em>, terminan funcionando. No son situaciones
-increíbles, pero sí que uno tiene que relajarse un poco y creer en la fortuna
-del protagonista.</p>
-
-<h2>Qué he aprendido</h2>
-
-<p>No es que pueda sacar lecciones aprendidas, como si fuera un libro técnico
-describiendo un proceso o una tecnología, pero sí que he aprendido un montón
-de cosas sobre Marte: lugares, condiciones en la superficie, cómo viajar al
-planeta, cómo funcionan las comunicaciones, un poco sobre viajes
-interplanetarios, cómo funciona la NASA por dentro. Aunque sé que es una novela,
-no me lo tengo que tomar todo al pie de la letra.</p>
-
-<h2>Recursos relacionados</h2>
-
-<ul>
-<li><a href="http://www.hanselminutes.com/">Hanselminutes podcast</a></li>
-<li><a href="http://www.amazon.es/gp/product/B00OXYQR38/">El marciano</a>, de Andy Weir, o en versión original: <a href="http://www.amazon.com/The-Martian-Novel-Andy-Weir-ebook/dp/B00EMXBDMA">The Martian</a></li>
-<li><a href="https://www.youtube.com/watch?v=ej3ioOneTy8">Trailer de The Martian</a></li>
-</ul>
-
 ]]></content>
   </entry>
   
