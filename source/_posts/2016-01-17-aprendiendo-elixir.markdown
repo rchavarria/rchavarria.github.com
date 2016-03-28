@@ -142,5 +142,5 @@ suficiente para ir cogiendo ritmo.
 [The climb experiencing the rise of Elixir from the inside]: https://www.youtube.com/watch?v=fklep3sUSWo
 
 [Primer asalto]: /blog/2016/02/09/elixir-primer-asalto/
-[Segundo asalto]: /blog/2016/03/27/elixir-segundo-asalto/
+[Segundo asalto]: /blog/2016/03/28/elixir-segundo-asalto/
 
