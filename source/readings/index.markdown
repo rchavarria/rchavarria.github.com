@@ -21,7 +21,6 @@ Así que aquí está mi Lista de Lectura:
 ## Estoy leyendo
 
 - [Ten-day MBA](http://www.amazon.es/MBA-10-d%C3%ADas-ense%C3%B1anzas-escuelas-ebook/dp/B00D59QW6O/), de Steven Silbiger, recomendado por Chad Fowler en su libro. Se puede econtrar también en [inglés](http://www.amazon.com/The-Ten-Day-MBA-Step-Step/dp/0062199579)
-- [Code: the hidden language of computer hardware and software](http://www.amazon.com/Code-Language-Computer-Hardware-Software/dp/0735611319/), de Charles Petzold, recomendado por Scott Hanselman y Dave Rael en el [episodio 83 de Developer on Fire podcast](http://developeronfire.com/Podcast/Episodes/scott-hanselman-learn-balance)
 - [Practical Vim](https://pragprog.com/book/dnvim/practical-vim), de Drew Neil, recomendado por el podcast Giant Robots
 - [The four hour body](https://www.amazon.es/cuerpo-perfecto-cuatro-horas-FICCION/dp/8466650210/), de Tim Ferris
 - [Expertología](http://www.amazon.es/dp/8492414502), de Andrés Pérez Ortega
@@ -102,6 +101,7 @@ Así que aquí está mi Lista de Lectura:
 
 ## He leído
 
+- [Code: the hidden language of computer hardware and software](/blog/2016/04/10/code/), de Charles Petzold, recomendado por Scott Hanselman y Dave Rael en el [episodio 83 de Developer on Fire podcast](http://developeronfire.com/episode-083-scott-hanselman-learn-balance) ~ *Abril 2016*
 - [Software craftsmanship](/blog/2016/03/15/the-software-craftsman/), de Sandro Mancuso ~ *Marzo 2016*
 - [Soft Skills: The software developer's life manual](/blog/2015/11/08/soft-skills/), de John Sonmez ~ *Noviembre 2015*
 - [How not to be wrong: the power of mathematical thinking](http://www.amazon.es/gp/product/0143127535), de Jordan Ellenberg, visto en [Microsiervos](http://www.microsiervos.com/archivo/libros/how-not-to-be-wrong.html). No lo terminé. No me interesó lo suficiente. Tenía buena pinta, pero cuenta demasiadas historias, el idioma,...
@@ -125,19 +125,19 @@ de Robert Kiyosaki ~ *Septiembre 2013*
 de Dale Carnegie ~ *Julio 2013*
 - [La meta: un proceso de mejora contínua](/blog/2013/04/10/la-meta), de Eliyahu M. Goldratt ~ *Abril 2013*
 - [Agile estimating and planning](/blog/2013/02/13/agile-estimating-and-planning/), de Mike Cohn ~ *Febrero 2013*
-- [Agile principles, patterns and practices in C#](http://rchavarria.wordpress.com/2012/11/22/agile-principles-patterns-and-practices-in-c), de Robert C. Martin ~ *Noviembre 2012*
-- [En el principio... fue la linea de comandos](http://rchavarria.wordpress.com/2012/10/25/en-el-principio-fue-la-linea-de-comandos), de Neal Stephenson ~ *Octubre 2012*
-- [Lean software development: an agile toolkit](http://rchavarria.wordpress.com/2012/10/10/lean-software-development), de Mary y Tom Poppendieck ~ *Septiembre 2012*
-- [Scrum y XP desde las trincheras](http://rchavarria.wordpress.com/2012/07/06/scrum-y-xp-desde-las-trincheras), de Henrik Kniberg ~ *Junio 2012*
+- [Agile principles, patterns and practices in C#](/blog/2012/11/22/agile-principles-patterns-and-practices-in-c), de Robert C. Martin ~ *Noviembre 2012*
+- [En el principio... fue la linea de comandos](/blog/2012/10/25/en-el-principio-fue-la-linea-de-comandos), de Neal Stephenson ~ *Octubre 2012*
+- [Lean software development: an agile toolkit](/blog/2012/10/10/lean-software-development), de Mary y Tom Poppendieck ~ *Septiembre 2012*
+- [Scrum y XP desde las trincheras](/blog/2012/07/06/scrum-y-xp-desde-las-trincheras), de Henrik Kniberg ~ *Junio 2012*
 - [Filthy rich clients](http://filthyrichclients.org), de Chet Haase y Romain Guy ~ *Mayo 2012*
-- [Programming Pearls](http://rchavarria.wordpress.com/2012/05/25/programming-pearls), de Jon Bentley ~ *Marzo 2012*
-- [Refactoring: improving the design of existing code](http://www.amazon.com/gp/product/0201485672/ref=as_li_tf_il?ie=UTF8&amp;tag=good-read-books-20&amp;linkCode=as2&amp;camp=217145&amp;creative=399369&amp;creativeASIN=0201485672), de Martin Fowler ~ *Enero 2012*
-- [The Clean Coder: A Code of Conduct for Professional Programmers](http://www.amazon.com/Clean-Coder-Conduct-Professional-Programmers/dp/0137081073/ref=sr_1_5?ie=UTF8&amp;qid=1314772593&amp;sr=8-5), de Robert C. Martin ~ *Octubre 2011*
+- [Programming Pearls](/blog/2012/05/25/programming-pearls), de Jon Bentley ~ *Marzo 2012*
+- [Refactoring: improving the design of existing code](/blog/2012/01/25/refactoring-improving-the-design-of-existing-code/), de Martin Fowler ~ *Enero 2012*
+- [The Clean Coder: A Code of Conduct for Professional Programmers](/blog/2011/10/14/the-clean-coder/), de Robert C. Martin ~ *Octubre 2011*
 - [Bésame mucho](http://www.casadellibro.com/libro-besame-mucho-como-criar-a-tus-hijos-con-amor-lujo/1159119/2900001206153), de Carlos gonzalez ~ *Agosto 2011*
-- [Linchpin](http://www.amazon.com/Linchpin-Are-Indispensable-Seth-Godin/dp/1591844096/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1302263434&amp;sr=1-1), de Seth Godin ~ *Agosto 2011*
-- [Nikola Tesla (biografía)](http://www.casadellibro.com/libro-nikola-tesla-el-genio-al-que-le-robaron-la-luz/1652872/2900001360156), de Margaret Cheney ~ *Mayo 2011*
-- [God and the new physics](http://rchavarria.wordpress.com/2011/04/08/god-and-the-new-physics), de Paul Davies ~ *Abril 2011*
-- [Dormir sin lágrimas](http://rchavarria.wordpress.com/2011/03/29/dormir-sin-lagrimas), de Rosa Jové ~ *Marzo 2011*
+- [Linchpin](/blog/2011/09/01/linchpin/), de Seth Godin ~ *Agosto 2011*
+- [Nikola Tesla (biografía)](/blog/2011/08/03/nikola-tesla-el-genio-al-que-le-robaron-la-luz/), de Margaret Cheney ~ *Mayo 2011*
+- [God and the new physics](/blog/2011/04/08/god-and-the-new-physics), de Paul Davies ~ *Abril 2011*
+- [Dormir sin lágrimas](/blog/2011/03/29/dormir-sin-lagrimas), de Rosa Jové ~ *Marzo 2011*
 - [Apprenticeship patterns](/blog/2011/03/24/apprenticeship-patterns) ~ *Marzo 2011*
 - Peopleware, de Tom DeMarco y Timoth Lister ~ *Febrero 2011*
 - Clean code, de Robert C. Martin ~ *Enero 2011*
@@ -147,3 +147,4 @@ de Dale Carnegie ~ *Julio 2013*
 - The pragmatic programmer, de Adrew Hunt y David Thomas ~ *Verano 2010*
 - Head first: design patterns, de Kathy Sierra ~ *Verano 2010*
 - Design patterns, de Gang of Four ~ *Verano 2010*
+
