@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2016-03-28T19:33:03+02:00</updated>
+  <updated>2016-04-10T10:44:46+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,113 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Code: the hidden language of computer hardware and software]]></title>
+    <link href="http://rchavarria.github.io/blog/2016/04/10/code/"/>
+    <updated>2016-04-10T10:24:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2016/04/10/code</id>
+    <content type="html"><![CDATA[<h5>de Charles Petzold</h5>
+
+<h3>Por qué lo he leído</h3>
+
+<p>Porque era una <em>recomendación</em>. <a href="http://www.hanselman.com/">Scott Hanselman</a> era el invitado en el podcast
+<a href="http://developeronfire.com/episode-083-scott-hanselman-learn-balance">Developer on fire #83</a>, y lo recomendó como un libro que cualquiera relacionado
+con el software debería leer. El año pasado ya leí <a href="http://rchavarria.github.io/blog/2015/09/06/the-martian/">The martian</a>, recomendado
+públicamente también por Scott. ¿Iba a dejar de pasar la oportunidad? Ni
+hablar.</p>
+
+<p><img class="center" src="http://rchavarria.github.io/images/2016/code-charles-petzold.png"></p>
+
+<!-- more -->
+
+
+<h3>Qué esperaba</h3>
+
+<p>Espera encontrar una novela, de ciencia ficción. Scott contaba que el libro
+narraba la historia de dos amigos y vecinos que empiezan comunicándose por la
+noche a través de la ventana de su habitación con una linterna. Luego la cosa
+se complica porque uno de ellos se muda de ciudad. Y así comienza la historia
+en el libro.</p>
+
+<h3>Qué encontré</h3>
+
+<p>Pero nada de eso. No es una novela en sí. Se parece más a un libro de historia.
+Sí, la historia comienza con los dos amigos, pero eso es sólo una excusa para
+comenzar a guiarnos por un viaje que comienza por el código morse, código
+Braille, y muchos más hasta llegar a explicar cómo funciona todas y cada una de
+las computadoras de hoy en día.</p>
+
+<h3>Conclusiones</h3>
+
+<p>Estoy absolutamente de acuerdo con Scott, es un libro que debería leer todo
+aquel que se dedique al software. Es un repaso increíble de la historia de la
+informática. Comienza describiendo el código morse, otra serie de códigos que
+terminaron en el código (o alfabeto) Braille, para enlazarlo con el código
+binario. Para terminar explicando nuestro sistema decimal.</p>
+
+<p>Después sigue con métodos de transmisión, telégrafo y relés. Y cómo ellos se
+relacionan con los códigos binarios. De esta relación aparece los <em>switches</em> y
+las puertas lógicas. Termina construyendo una máquina capaz de sumar hecha de
+relés.</p>
+
+<p>Sigue hacia adelante, agrupando bits en bytes, y construyendo otros circuitos
+digitales, como los <em>latches</em>, contadores y hasta llega a construir una memoria
+RAM.</p>
+
+<p>Sigue relacionando los códigos y el hardware para acabar describiendo el código
+máquina de un microprocesador comercial. A partir de ahí, la tecnología avanza
+muy deprisa y no se puede explicar en un solo libro (al menos si quieres ser
+capaz de levantarlo con la mano), pero explica el código ASCII y otras
+codificaciones para representar texto.</p>
+
+<p>Y finalmente, los lenguajes de programación.</p>
+
+<p>Por último sólo puedo decir que me hubiera gustado que nos hubieran enseñado la
+historia del software y el hardware de esta forma en la universidad. Todas las
+piezas encajan. De hecho, estuvieron ahí mucho tiempo (los relés y los códigos
+binarios), pero se tardó 20 o 30 años en unirlos para crear máquinas capaces de
+realizar cálculos automáticamente.</p>
+
+<h3>Qué he aprendido</h3>
+
+<p>A parte de conocer el origen de toda una industria y que, por cierto, parece
+que todos los avances se hicieron entre los años 1950 y 1970, después de esos
+años parece que sólo se haya aumentado el número y reducido el tamaño de los
+componentes que utilizamos, hay unas cuantas curiosidades que me gustaría
+recordar:</p>
+
+<ul>
+<li>Para algunos parece bastante claro que nuestro sistema numérico se basa en 10
+porque es el número de dedos que tenemos en las manos, y es el número más
+grande que podemos contar con ellos. Me parece discutible, pero no se puede
+negar que lógica tiene, y mucha.</li>
+<li>¿Por qué un byte tiene 8 bits y no otro número, diez por ejemplo? Parece ser
+que fue el número de bits que usaba IBM porque era muy fácil almacenar
+números en la <a href="https://es.wikipedia.org/wiki/Decimal_codificado_en_binario">codificación BCD</a>. Después, simplemmente por coincidencia, un
+byte es ideal para almacenar texto, ya que una gran mayoría de lenguajes
+escritos alrededor del mundo necesitan 256 símbolos o menos. También, por
+conicidencia, un byte es ideal para almacenar escalas de grises en imágenes, ya
+que el ojo humano es capaz de diferenciar unas 256.</li>
+<li>Un <em>nibble</em> son 4 bits, o medio byte.</li>
+</ul>
+
+
+<p>Finalmente, el autor aporta un par de ideas sobre un tema que me intersa mucho:
+¿la programación es un arte o una ciencia?</p>
+
+<p>Al principio, quienes programaban eran científicos e ingenieros, que eran
+capaces de expresar ideas en forma de algoritmos matemáticos.</p>
+
+<p>Pero a lo largo de la historia, mucha gente ha tratado de crear abstracciones,
+lenguajes de programación de más alto nivel, para acercar la programación al
+mayor número de personas. Es gracias a ello donde tienen cabida personas más
+artistas, más creativas.</p>
+
+<p>Me parece una metáfora (o razonamiento incluso) muy bueno y que permite ver dos
+caras del desarrollo software que no tienen por qué estar enfrentadas.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Elixir: segundo asalto]]></title>
@@ -3575,122 +3682,6 @@ art-form, but (unlike art) it provides concrete, measurable value.</p></blockquo
 <li><a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/passionate-programmer-by-chad-fowler.markdown">Notas tomadas sobre el libro</a></li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Charla técnica: Workflows of refactoring]]></title>
-    <link href="http://rchavarria.github.io/blog/2015/09/13/charla-tecnica-workflows-refactoring/"/>
-    <updated>2015-09-13T10:08:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2015/09/13/charla-tecnica-workflows-refactoring</id>
-    <content type="html"><![CDATA[<p>Esta semana el post trata sobre las notas que he tomado de una charla técnica
-titulada <a href="https://www.youtube.com/watch?v=vqEg37e4Mkw">Workflows of refactoring</a>. El autor de la charla, hablando de
-<em>refactoring</em>, no podría ser otro que <a href="http://www.martinfowler.com/">Martin Fowler</a>. En la charla, Martin
-comienza hablando de distintos modos de trabajar, dependiendo de la situación,
-por ejemplo, nos encontraremos añadiendo funcionalidad o limpiando el código.
-Después, Martin describe distintos tipos de refactorizaciones, más allá del
-típico paso en TDD o de la refactorización cambiando unos cuantos nombres a las
-variables.</p>
-
-<!-- more -->
-
-
-
-
-<iframe width="560"
-        height="315"
-        src="https://www.youtube.com/embed/vqEg37e4Mkw"
-        frameborder="0"
-        allowfullscreen></iframe>
-
-
-<h2>Notas tomadas</h2>
-
-<blockquote><p>La primera vez que la gente escucha hablar de <em>refactoring</em> es cuando oye hablar
-del ciclo de TDD: red > green > refactor.</p></blockquote>
-
-<!-- comment to separate ideas -->
-
-
-<blockquote><p>¿Por qué separar los dos pasos que incluyen el código en TDD? ¿Uno para
-escribir el código y otro para refactorizar? Puede que esté hecho para los
-programadores menos experimentados y para los impacientes, para aquellos que
-antes de nada quieren tener algo funcionando. Kent Beck hablaba de dos modos
-de trabajar, dos sombreros: añadiendo funcionalidad y modo mantenimiento
-(refactorizando). Se puede cambiar entre ellos, pero no se puede andar
-mezclándolos.</p></blockquote>
-
-<!-- comment to separate ideas -->
-
-
-<blockquote><p>Otros modos, otros sombreros: mejoras de rendimiento, donde el rendimiento
-prima sobre la legibilidad; experimentos (donde el resultado va a ser descartado).</p></blockquote>
-
-<!-- comment to separate ideas -->
-
-
-<blockquote><p><strong>TDD refactoring</strong>: el refactoring que pasa cuando estás haciendo TDD, o tienes
-una batería de tests en la que apoyarte</p></blockquote>
-
-<!-- comment to separate ideas -->
-
-
-<blockquote><p><strong>Litter-pickup refactoring</strong>: similar a la regla del Boy Scout. Se trata de que
-tienes que trabajar con una base de código que no está escrita como a tí te gustaría
-(aunque lo más probable es que hayas sido tú quien la haya escrito). Vas navegando
-por el código, y de repente ves algún detalle que no te encaja. Paras todo, y lo
-arreglas. En definitiva, como el Boy Scout, dejas el campo un poquito mejor de lo
-que te lo encontraste. No quieres pasar mucho tiempo limpiándolo, pero sí dejarlo
-un poquito mejor.</p></blockquote>
-
-<!-- comment to separate ideas -->
-
-
-<blockquote><p>Cuando encuentras alguna pieza de código en la que tienes que invertir cierto
-tiempo entendiendo qué es lo que hace. Cuando terminas entendiéndolo, ¿qué
-haces? ¿Lo dejas como está? ¿Y si la próxima vez vuelves a perder tanto tiempo?
-Tendrás que refactorizarlo. <strong>Comprehension refactoring</strong>.</p></blockquote>
-
-<!-- comment to separate ideas -->
-
-
-<blockquote><p>Hay situaciones en las que después de un tiempo, vuelves a ver código y piensas:
-&#8220;hey! Ahora conozco una nueva y mejor forma de hacer esto&#8221;. Esto tiene mucho que
-ver con el <em>diseño evolutivo</em>. Por ejemplo, refactorizar un poquito antes de
-añadir una nueva funcionalidad. Normalmente, el refactoring es beneficioso en el
-largo y medio plazo. Este en concreto, es beneficioso para la tarea en la que
-estás trabajando en este mismo momento.</p></blockquote>
-
-<!-- comment to separate ideas -->
-
-
-<blockquote><p><strong>Planned refactoring</strong>. Un buen equipo necesitaría poco de este tipo de
-refactoring. Para el resto de mortales, un poco de refactorizaciones planificadas
-no hace daño.</p></blockquote>
-
-<!-- comment to separate ideas -->
-
-
-<blockquote><p><strong>Long-term refactoring</strong>. Por ejemplo, cuando tienes un montón de módulos que
-tienen dependencias caóticas. En lugar de parar el desarrollo y dedicar 2 o 3
-semanas refactorizando todo esto, ¿qué tal si vas refactorizando poco a poco,
-sin romper nada, gradualmente,&#8230; hasta que lo consigas? Quizá no tengas del
-todo claro cómo llegar al final, pero si vas poco a poco, lo más seguro es que
-tarde o temprano encuentres el camino.</p></blockquote>
-
-<h2>Conclusión</h2>
-
-<p>Me parece una charla interesantísima, recomendada 100%. Y no sólo echarle un
-vistazo por encima, sino profundizar en los conceptos que Martin Fowler expone.
-La charla es la keynote de una conferencia sobre Programación Orientada a
-Objectos bastante conocida, así que tiene todas las papeletas de ser un
-recurso muy útil.</p>
-
-<p>No estoy seguro, pero tiene pinta de que todos estos conceptos y nombres que
-Martin da a los distintos tipos de refactorizaciones los vamos a ir viendo y
-desarrollando en años venideros.</p>
-
-<p>Así que ya sabes, haz un hueco en la agenda, y ¡a visualizar la charla!</p>
 ]]></content>
   </entry>
   
