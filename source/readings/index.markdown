@@ -98,6 +98,7 @@ Así que aquí está mi Lista de Lectura:
 - [Una breve historia de casi todo](http://www.microsiervos.com/archivo/libros/una-breve-historia-de-casi-todo.html), de Bill Bryson, recomendado por Microsiervos
 - [Hipérbole y media](http://www.amazon.es/gp/product/8416223076), de Allie Brosh, recomendado por Bill Gates
 - [Unstoppable: harnessing science to change the world](http://www.amazon.es/gp/product/B00XU114R4/ref=as_li_tf_tl), de Bill Nye, the Science Guy, creo que recomendado por Microsiervos
+- [Nix the tricks](http://www.nixthetricks.com/), de Tina Cardone, libro sobre problemas de matemáticas y por qué evitar los trucos al resolver problemas
 
 ## He leído
 
