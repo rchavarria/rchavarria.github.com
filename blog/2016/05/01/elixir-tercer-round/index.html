@@ -1,0 +1,588 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Elixir: tercer asalto - R. Chavarria's Blog</title>
+  <meta name="author" content="Rub&eacute;n Chavarr&iacute;a">
+
+  
+  <meta name="description" content="Éste es el tercer asalto para aprender Elixir, y las cosas se van poniendo
+interesantes, aunque todavía siento que estoy muy verde y me falta todavía &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://rchavarria.github.io/blog/2016/05/01/elixir-tercer-round/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="R. Chavarria's Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36829645-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">R. Chavarria's Blog</a></h1>
+  
+    <h2>Proud of developing software, proud of being an Engineer</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:rchavarria.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archivos</a></li>
+  <li><a href="/readings">Lista de lectura</a></li>
+  <li><a href="/pet-projects">Proyectos</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Elixir: tercer asalto</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-05-01T17:46:00+02:00" pubdate data-updated="true">May 1<span>st</span>, 2016</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Éste es el tercer asalto para aprender <a href="http://elixir-lang.org/">Elixir</a>, y las cosas se van poniendo
+interesantes, aunque todavía siento que estoy muy verde y me falta todavía
+mucho para ser capaz de hacer las cosas más sencillas.</p>
+
+<p>En este asalto, aprendo nuevas cosas proporcionadas por los módulos <code>Enum</code>,
+<code>Stream</code> y otras coleciones, así como las <em>comprehensions</em>, que me recuerdan
+mucho a los clásicos bucles <code>for</code>.</p>
+
+<p>Sigo aprendiendo siguiendo el método descrito en el post sobre <a href="/blog/2016/01/17/aprendiendo-elixir/">aprender Elixir</a>:</p>
+
+<ul>
+<li>Aprender lo suficiente para comenzar</li>
+<li>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</li>
+<li>Aprender lo suficiente para hacer algo de utilidad</li>
+<li>Enseñar lo aprendido</li>
+</ul>
+
+
+<p><img class="left" src="/images/2016/rms-won.jpg">
+<img class="right" src="/images/2016/rms-won.jpg"></p>
+
+<div style="text-align: center">
+  <span style="font-size: 60%">
+Imagen basada en <a href="https://flic.kr/p/2PDNng">RMS won</a> de <a href="https://www.flickr.com/photos/kmerenkov/">Konstantin Merenkov</a>, <a href="https://creativecommons.org/licenses/by-nc/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by-nc/2.0/legalcode">CC BY-NC 2.0</a>
+  </span>
+</div>
+
+
+
+
+<!-- more -->
+
+
+<h2>Aprender lo suficiente para comenzar</h2>
+
+<p><strong>Procesando colleciones con <code>Enum</code></strong></p>
+
+<p>Elixir tiene muchos tipos de datos que actúan como colleciones: listas, mapas,
+diccionarios, rangos, ficheros e incluso funciones. Las colecciones se pueden
+iterar (sobretodo con funciones del módulo <code>Enum</code>), y algunas permiten añadir
+elementos.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># convierte cualquier colección a List
+</span><span class='line'>list = Enum.to_list 1..5
+</span><span class='line'>  #=&gt; [1, 2, 3, 4, 5]
+</span><span class='line'>
+</span><span class='line'># concatena
+</span><span class='line'>Enum.concat([1, 2, 3], [4, 5, 6])
+</span><span class='line'>  #=&gt; [1, 2, 3, 4, 5]
+</span><span class='line'>
+</span><span class='line'># crea nuevas colleciones
+</span><span class='line'>Enum.map(list, &(&1 * 10))
+</span><span class='line'>  #=&gt; [10, 20, 30, 40, 50]
+</span><span class='line'>
+</span><span class='line'># selecciona elementos por posición
+</span><span class='line'>Enum.at(10..20, 3) #=&gt; 13
+</span><span class='line'>Enum.at(10..20, 20) #=&gt; nil
+</span><span class='line'>Enum.filter(list, &(&1 &gt; 2)) #=&gt; [3, 4, 5]
+</span><span class='line'>Enum.reject(list, &Integer.is_even/1) #=&gt; [1, 3, 5]
+</span><span class='line'>
+</span><span class='line'># ordena y compara elementos
+</span><span class='line'>Enum.sort([ "there", "was", "a", "crooked", "man" ], 
+</span><span class='line'>  &(String.length(&1) &lt;= String.length(&2))
+</span><span class='line'>Enum.max([ "there", "was", "a", "crooked", "man" ]) #=&gt; "was"
+</span><span class='line'>
+</span><span class='line'># divide una colleción
+</span><span class='line'>Enum.take(list, 3)    #=&gt; [1, 2, 3]
+</span><span class='line'>Enum.take_every(list, 2)  #=&gt; [1, 3, 5]
+</span><span class='line'>Enum.take_while(list, &(&1 &lt; 4))
+</span><span class='line'>Enum.split(list, 3)
+</span><span class='line'>  #=&gt; { [1, 2, 3], [4, 5] }
+</span><span class='line'>Enum.split_while(list, &(&1 &lt; 4))
+</span><span class='line'>  #=&gt; { [1, 2, 3], [4, 5] }
+</span><span class='line'>
+</span><span class='line'># une los elementos de una colección
+</span><span class='line'>Enum.join(list)
+</span><span class='line'>Enum.join(list, ", ")   #=&gt; "1, 2, 3, 4, 5"
+</span><span class='line'>
+</span><span class='line'># hace preguntas sobre operaciones
+</span><span class='line'>Enum.all?(list, &(&1 &lt; 4))
+</span><span class='line'>Enum.any?(list, &(&1 &lt; 4))
+</span><span class='line'>Enum.member?(list, 4)
+</span><span class='line'>Enum.empty?(list)
+</span><span class='line'>
+</span><span class='line'># mezcla colecciones
+</span><span class='line'>Enum.zip(list, [:a, :b, :c])
+</span><span class='line'>  #=&gt; [ {1, :a}, {2, :b}, {3, :c} ]
+</span><span class='line'>
+</span><span class='line'># otros
+</span><span class='line'>Enum.reduce(&lt;collection&gt;, &lt;function&gt;)</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong><code>Stream</code>s, enumerables diferidos o perezosos</strong></p>
+
+<p>El módulo <code>Stream</code> permite enumerar collecciones de forma diferida (<em>lazy</em> es
+la palabra utilizada, que traduzco libremente como <em>diferida</em>).</p>
+
+<p>Las funciones del módulo <code>Enum</code> procesan todos los elementos de la colección de
+una vez, consumiendo memoria. Las del módulo <code>Stream</code> consumen los elementos de
+uno en uno, según se van necesitando. Los <em>streams</em> se pueden componer, es
+decir, los streams son collecciones, por lo que se pueden usar las funciones de
+<code>Stream</code> con los propios streams (sería como crear streams de streams).</p>
+
+<p>Finalmente, para obtener los resultados, se puede convertir un <code>Stream</code> a una
+lista:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[1, 2, 3, 4, 5]
+</span><span class='line'>  |&gt; Stream.map(&(&1 * &1)
+</span><span class='line'>  |&gt; Stream.map(&(&1 + 1)
+</span><span class='line'>  |&gt; Stream.filter(fn x -&gt; rem(x, 2) == 1 end)
+</span><span class='line'>  |&gt; Enum.to_list</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Con <code>Enum</code> debemos esperar a tener todos los elementos de la colección para
+empezar a procesarlos. Con <code>Stream</code> podemos comenzar a procesarlos
+inmediatamente. Imagina que leemos de un servidor remoto, o de un sensor, ambos
+mandan datos infinitamente, por lo que <code>Enum</code> no sería una opción válida en
+este caso.</p>
+
+<p>Normalmente, serán las librerías y los frameworks quienes nos proporcionen los
+streams con los que vamos a trabajar, pero también podemos crearlos nosotros
+con métodos proporcionados por Elixir: <code>cycle</code>, <code>repeatedly</code>, <code>iterate</code>,
+<code>unfold</code> y <code>resource</code>.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># cycle toma una coleción y va devolviendo de uno en uno indefinidamente
+</span><span class='line'>#cuando la colección se acaba, vuelve a empezar desde el principio
+</span><span class='line'>Stream.cycle([1, 2, 3])
+</span><span class='line'>  |&gt; Enum.take(10)
+</span><span class='line'>#=&gt; [1, 2, 3, 1, 2, 3, 1, 2, 3, 1]
+</span><span class='line'>
+</span><span class='line'># repeatedly toma una función y la ejecuta cada vez que se le pide un elemento
+</span><span class='line'>Stream.repeatedly(fn -&gt; true end) |&gt; Enum.take(3)
+</span><span class='line'>  #=&gt; [ true, true, true ]
+</span><span class='line'>Stream.repeatedly(&:random.uniform/0) |&gt; Enum.take(3)
+</span><span class='line'>  #=&gt; [ 0.723, 0.941, 0.1234 ]
+</span><span class='line'>
+</span><span class='line'># iterate toma un valor inicial y una función. el primer elemento es el valor inicial,
+</span><span class='line'>#el siguiente es el valor devuelto por la función pasándole el valor inicial, el siguiente
+</span><span class='line'>#es el valor devuelto por la función pasándole el valor anterior, así indefinidamente
+</span><span class='line'>Stream.iterate(0, &(&1 + 1)) |&gt; Enum.take(5)
+</span><span class='line'>  #=&gt; [0, 1, 2, 3, 4]
+</span><span class='line'>
+</span><span class='line'># unfold es similar a iterate, pero con tuplas. el primer valor de la tupla
+</span><span class='line'>#significa el valor de la iteración actual, el segundo valor significa el valor
+</span><span class='line'>#a procesar en la siguiente iteración
+</span><span class='line'>Stream.unfold( {0, 1}, fn {f1, f2} -&gt; {f1, {f2, f1+f2}} end ) |&gt; Enum.take(15)
+</span><span class='line'>  #=&gt; [0, 1, 1, 2, 3, 5, 8, 13, ... fibonacci]
+</span><span class='line'>
+</span><span class='line'># resource es similar a unfold. toma tres funciones como argumentos. la primera
+</span><span class='line'>#crea el recurso, la segunda va dando valores de las iteraciones (como unfold)
+</span><span class='line'>#y la tercera cierra el recurso (fichero, bbdd, ...)</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>El protocolo <code>Collectable</code></strong></p>
+
+<p>No son lo mismo, y todavía no soy capaz de describir exactamente lo que es un
+<em>protocolo</em>, pero el concepto que tengo de ellos hoy mismo es que son
+<em>equivalentes</em> a las interfaces en los lenguajes orientados a objetos.</p>
+
+<p><code>Enumerable</code> es un protocolo que permite iterar una colección. <code>Collectable</code>
+permite añadir elementos a una colección. Se puede utilizar <code>Enum.into</code> para
+hacerlo y convertir un tipo de colección en otro.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Enum.into 1..5, [1000, 10001]
+</span><span class='line'>  #=&gt; [1000, 1001, 1, 2, 3, 4, 5]</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Comprehensions</strong></p>
+
+<p>Se le pueden pasar una o más colecciones, entonces extrae todas las
+combinaciones posibles de los elementos de dichas colecciones, opcionalmente
+puede filtrar valores, y genera una nueva colección con los valores que pasan
+el filtro. La sintaxis es <code>result = for &lt;generator&gt; or &lt;filter&gt;, do:
+&lt;expression&gt;</code>. Donde <code>&lt;generator&gt;</code> tiene la forma <code>pattern &lt;- collection</code> y el
+filtro es simplemente una condición, por ejemplo <code>x &lt; 4</code>.</p>
+
+<p>Las variables declaradas en una comprehension tienen la misma como ámbito, no
+escapan de él.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>for x &lt;- [1, 2, 3, 4, 5], x &lt; 4, do: x * x
+</span><span class='line'>  # =&gt; [1, 4, 9]
+</span><span class='line'>
+</span><span class='line'>for x &lt;- [1, 2], y &lt;- [5, 6], do: x * y
+</span><span class='line'>  # =&gt; las posibles combinaciones serían [1, 5], [1, 6], [2, 5], [2, 6]
+</span><span class='line'>  # =&gt; y esas combinaciones serían las iteraciones de la comprehension
+</span><span class='line'>
+</span><span class='line'># se pueden usar variables de generadores en siguientes generadores
+</span><span class='line'>min_maxes = [ {1, 4}, {2, 3}, {10, 15} ]
+</span><span class='line'>for { min, max } &lt;- min_maxes, n &lt;- min..max, do: n
+</span><span class='line'>  # =&gt; [ 1, 2, 3, 4, 2, 3, 10, 11, 12, 13, 14, 15 ]
+</span><span class='line'>
+</span><span class='line'># por defecto, las comprehensions devuelven una lista. Se puede cambiar
+</span><span class='line'># con el parámetro `into:`
+</span><span class='line'>for x &lt;- ~w{ cat dog }, into: Map.new, do: { x, String.upcase(x) }
+</span><span class='line'>  # =&gt; %{ "cat" =&gt; "CAT", "dog" =&gt; "DOG" }</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</h2>
+
+<p>Podría investigar sobre qué son los protocolos, pero creo que están descritos
+en el libro del cual está surgiendo esta serie de posts, por lo que esperaré a
+llegar ahí.</p>
+
+<p>Tener siempre muy presente las funciones del módulo <code>Enum</code>, ya que casi seguro
+que se van a utilizar siempre que haya colecciones de por medio.</p>
+
+<h2>Aprender lo suficiente para hacer algo de utilidad</h2>
+
+<ul>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-03/exercise-01-round-03.exs">exercise-01-round-03.exs</a>: con ayuda de la función <code>span</code> escrita anteriormente, escribir una función que devuelva la lista de números primos de <code>2</code> hasta <code>n</code></li>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-03/exercise-02-round-03.exs">exercise-02-round-03.exs</a>: a partir de dos listas, una de tasas de impuestos, y otra de compras, calcular el importe total de cada una de las compras</li>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-03/lists-and-recursion-5.exs">lists-and-recursion-5.exs</a>: implementar funciones presentes en <code>Enum</code>: <code>all?</code>, <code>each</code>, <code>filter</code>, <code>take</code> y <code>split</code>.</li>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-03/lists-and-recursion-6.exs">lists-and-recursion-6.exs</a>: implementar <code>flatten</code></li>
+</ul>
+
+
+<h2>Enseñar lo aprendido, y repetir desde el paso 7</h2>
+
+<p>Aquí está, este post, mis notas, mis pensamientos, mis dudas y mi código. Hasta el siguiente asalto.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Ruben Chavarria</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2016-05-01T17:46:00+02:00" pubdate data-updated="true">May 1<span>st</span>, 2016</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rchavarria.github.io/blog/2016/05/01/elixir-tercer-round/" data-via="rchavarriat" data-counturl="http://rchavarria.github.io/blog/2016/05/01/elixir-tercer-round/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2016/04/10/code/" title="Previous Post: Code: the hidden language of computer hardware and software">&laquo; Code: the hidden language of computer hardware and software</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2016/05/01/elixir-tercer-round/">Elixir: tercer asalto</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/04/10/code/">Code: the hidden language of computer hardware and software</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/03/27/elixir-segundo-asalto/">Elixir: segundo asalto</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/03/15/the-software-craftsman/">The Software Craftsman</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/02/09/elixir-primer-asalto/">Elixir: primer asalto</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("rchavarriat", 4, true);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/rchavarriat">@rchavarriat</a></p>
+  
+</section>
+
+
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/rchavarriat?count=5&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/rchavarriat">My Delicious Bookmarks &raquo;</a></p>
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2016 - Rub&eacute;n Chavarr&iacute;a -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'rchavarria-github-com';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://rchavarria.github.io/blog/2016/05/01/elixir-tercer-round/';
+        var disqus_url = 'http://rchavarria.github.io/blog/2016/05/01/elixir-tercer-round/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

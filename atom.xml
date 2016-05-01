@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2016-04-10T10:44:46+02:00</updated>
+  <updated>2016-05-01T18:28:33+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,331 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Elixir: tercer asalto]]></title>
+    <link href="http://rchavarria.github.io/blog/2016/05/01/elixir-tercer-round/"/>
+    <updated>2016-05-01T17:46:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2016/05/01/elixir-tercer-round</id>
+    <content type="html"><![CDATA[<p>Éste es el tercer asalto para aprender <a href="http://elixir-lang.org/">Elixir</a>, y las cosas se van poniendo
+interesantes, aunque todavía siento que estoy muy verde y me falta todavía
+mucho para ser capaz de hacer las cosas más sencillas.</p>
+
+<p>En este asalto, aprendo nuevas cosas proporcionadas por los módulos <code>Enum</code>,
+<code>Stream</code> y otras coleciones, así como las <em>comprehensions</em>, que me recuerdan
+mucho a los clásicos bucles <code>for</code>.</p>
+
+<p>Sigo aprendiendo siguiendo el método descrito en el post sobre <a href="http://rchavarria.github.io/blog/2016/01/17/aprendiendo-elixir/">aprender Elixir</a>:</p>
+
+<ul>
+<li>Aprender lo suficiente para comenzar</li>
+<li>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</li>
+<li>Aprender lo suficiente para hacer algo de utilidad</li>
+<li>Enseñar lo aprendido</li>
+</ul>
+
+
+<p><img class="left" src="http://rchavarria.github.io/images/2016/rms-won.jpg">
+<img class="right" src="http://rchavarria.github.io/images/2016/rms-won.jpg"></p>
+
+<div style="text-align: center">
+  <span style="font-size: 60%">
+Imagen basada en <a href="https://flic.kr/p/2PDNng">RMS won</a> de <a href="https://www.flickr.com/photos/kmerenkov/">Konstantin Merenkov</a>, <a href="https://creativecommons.org/licenses/by-nc/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by-nc/2.0/legalcode">CC BY-NC 2.0</a>
+  </span>
+</div>
+
+
+
+
+<!-- more -->
+
+
+<h2>Aprender lo suficiente para comenzar</h2>
+
+<p><strong>Procesando colleciones con <code>Enum</code></strong></p>
+
+<p>Elixir tiene muchos tipos de datos que actúan como colleciones: listas, mapas,
+diccionarios, rangos, ficheros e incluso funciones. Las colecciones se pueden
+iterar (sobretodo con funciones del módulo <code>Enum</code>), y algunas permiten añadir
+elementos.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># convierte cualquier colección a List
+</span><span class='line'>list = Enum.to_list 1..5
+</span><span class='line'>  #=&gt; [1, 2, 3, 4, 5]
+</span><span class='line'>
+</span><span class='line'># concatena
+</span><span class='line'>Enum.concat([1, 2, 3], [4, 5, 6])
+</span><span class='line'>  #=&gt; [1, 2, 3, 4, 5]
+</span><span class='line'>
+</span><span class='line'># crea nuevas colleciones
+</span><span class='line'>Enum.map(list, &(&1 * 10))
+</span><span class='line'>  #=&gt; [10, 20, 30, 40, 50]
+</span><span class='line'>
+</span><span class='line'># selecciona elementos por posición
+</span><span class='line'>Enum.at(10..20, 3) #=&gt; 13
+</span><span class='line'>Enum.at(10..20, 20) #=&gt; nil
+</span><span class='line'>Enum.filter(list, &(&1 &gt; 2)) #=&gt; [3, 4, 5]
+</span><span class='line'>Enum.reject(list, &Integer.is_even/1) #=&gt; [1, 3, 5]
+</span><span class='line'>
+</span><span class='line'># ordena y compara elementos
+</span><span class='line'>Enum.sort([ "there", "was", "a", "crooked", "man" ], 
+</span><span class='line'>  &(String.length(&1) &lt;= String.length(&2))
+</span><span class='line'>Enum.max([ "there", "was", "a", "crooked", "man" ]) #=&gt; "was"
+</span><span class='line'>
+</span><span class='line'># divide una colleción
+</span><span class='line'>Enum.take(list, 3)    #=&gt; [1, 2, 3]
+</span><span class='line'>Enum.take_every(list, 2)  #=&gt; [1, 3, 5]
+</span><span class='line'>Enum.take_while(list, &(&1 &lt; 4))
+</span><span class='line'>Enum.split(list, 3)
+</span><span class='line'>  #=&gt; { [1, 2, 3], [4, 5] }
+</span><span class='line'>Enum.split_while(list, &(&1 &lt; 4))
+</span><span class='line'>  #=&gt; { [1, 2, 3], [4, 5] }
+</span><span class='line'>
+</span><span class='line'># une los elementos de una colección
+</span><span class='line'>Enum.join(list)
+</span><span class='line'>Enum.join(list, ", ")   #=&gt; "1, 2, 3, 4, 5"
+</span><span class='line'>
+</span><span class='line'># hace preguntas sobre operaciones
+</span><span class='line'>Enum.all?(list, &(&1 &lt; 4))
+</span><span class='line'>Enum.any?(list, &(&1 &lt; 4))
+</span><span class='line'>Enum.member?(list, 4)
+</span><span class='line'>Enum.empty?(list)
+</span><span class='line'>
+</span><span class='line'># mezcla colecciones
+</span><span class='line'>Enum.zip(list, [:a, :b, :c])
+</span><span class='line'>  #=&gt; [ {1, :a}, {2, :b}, {3, :c} ]
+</span><span class='line'>
+</span><span class='line'># otros
+</span><span class='line'>Enum.reduce(&lt;collection&gt;, &lt;function&gt;)</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong><code>Stream</code>s, enumerables diferidos o perezosos</strong></p>
+
+<p>El módulo <code>Stream</code> permite enumerar collecciones de forma diferida (<em>lazy</em> es
+la palabra utilizada, que traduzco libremente como <em>diferida</em>).</p>
+
+<p>Las funciones del módulo <code>Enum</code> procesan todos los elementos de la colección de
+una vez, consumiendo memoria. Las del módulo <code>Stream</code> consumen los elementos de
+uno en uno, según se van necesitando. Los <em>streams</em> se pueden componer, es
+decir, los streams son collecciones, por lo que se pueden usar las funciones de
+<code>Stream</code> con los propios streams (sería como crear streams de streams).</p>
+
+<p>Finalmente, para obtener los resultados, se puede convertir un <code>Stream</code> a una
+lista:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>[1, 2, 3, 4, 5]
+</span><span class='line'>  |&gt; Stream.map(&(&1 * &1)
+</span><span class='line'>  |&gt; Stream.map(&(&1 + 1)
+</span><span class='line'>  |&gt; Stream.filter(fn x -&gt; rem(x, 2) == 1 end)
+</span><span class='line'>  |&gt; Enum.to_list</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Con <code>Enum</code> debemos esperar a tener todos los elementos de la colección para
+empezar a procesarlos. Con <code>Stream</code> podemos comenzar a procesarlos
+inmediatamente. Imagina que leemos de un servidor remoto, o de un sensor, ambos
+mandan datos infinitamente, por lo que <code>Enum</code> no sería una opción válida en
+este caso.</p>
+
+<p>Normalmente, serán las librerías y los frameworks quienes nos proporcionen los
+streams con los que vamos a trabajar, pero también podemos crearlos nosotros
+con métodos proporcionados por Elixir: <code>cycle</code>, <code>repeatedly</code>, <code>iterate</code>,
+<code>unfold</code> y <code>resource</code>.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># cycle toma una coleción y va devolviendo de uno en uno indefinidamente
+</span><span class='line'>#cuando la colección se acaba, vuelve a empezar desde el principio
+</span><span class='line'>Stream.cycle([1, 2, 3])
+</span><span class='line'>  |&gt; Enum.take(10)
+</span><span class='line'>#=&gt; [1, 2, 3, 1, 2, 3, 1, 2, 3, 1]
+</span><span class='line'>
+</span><span class='line'># repeatedly toma una función y la ejecuta cada vez que se le pide un elemento
+</span><span class='line'>Stream.repeatedly(fn -&gt; true end) |&gt; Enum.take(3)
+</span><span class='line'>  #=&gt; [ true, true, true ]
+</span><span class='line'>Stream.repeatedly(&:random.uniform/0) |&gt; Enum.take(3)
+</span><span class='line'>  #=&gt; [ 0.723, 0.941, 0.1234 ]
+</span><span class='line'>
+</span><span class='line'># iterate toma un valor inicial y una función. el primer elemento es el valor inicial,
+</span><span class='line'>#el siguiente es el valor devuelto por la función pasándole el valor inicial, el siguiente
+</span><span class='line'>#es el valor devuelto por la función pasándole el valor anterior, así indefinidamente
+</span><span class='line'>Stream.iterate(0, &(&1 + 1)) |&gt; Enum.take(5)
+</span><span class='line'>  #=&gt; [0, 1, 2, 3, 4]
+</span><span class='line'>
+</span><span class='line'># unfold es similar a iterate, pero con tuplas. el primer valor de la tupla
+</span><span class='line'>#significa el valor de la iteración actual, el segundo valor significa el valor
+</span><span class='line'>#a procesar en la siguiente iteración
+</span><span class='line'>Stream.unfold( {0, 1}, fn {f1, f2} -&gt; {f1, {f2, f1+f2}} end ) |&gt; Enum.take(15)
+</span><span class='line'>  #=&gt; [0, 1, 1, 2, 3, 5, 8, 13, ... fibonacci]
+</span><span class='line'>
+</span><span class='line'># resource es similar a unfold. toma tres funciones como argumentos. la primera
+</span><span class='line'>#crea el recurso, la segunda va dando valores de las iteraciones (como unfold)
+</span><span class='line'>#y la tercera cierra el recurso (fichero, bbdd, ...)</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>El protocolo <code>Collectable</code></strong></p>
+
+<p>No son lo mismo, y todavía no soy capaz de describir exactamente lo que es un
+<em>protocolo</em>, pero el concepto que tengo de ellos hoy mismo es que son
+<em>equivalentes</em> a las interfaces en los lenguajes orientados a objetos.</p>
+
+<p><code>Enumerable</code> es un protocolo que permite iterar una colección. <code>Collectable</code>
+permite añadir elementos a una colección. Se puede utilizar <code>Enum.into</code> para
+hacerlo y convertir un tipo de colección en otro.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Enum.into 1..5, [1000, 10001]
+</span><span class='line'>  #=&gt; [1000, 1001, 1, 2, 3, 4, 5]</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Comprehensions</strong></p>
+
+<p>Se le pueden pasar una o más colecciones, entonces extrae todas las
+combinaciones posibles de los elementos de dichas colecciones, opcionalmente
+puede filtrar valores, y genera una nueva colección con los valores que pasan
+el filtro. La sintaxis es <code>result = for &lt;generator&gt; or &lt;filter&gt;, do:
+&lt;expression&gt;</code>. Donde <code>&lt;generator&gt;</code> tiene la forma <code>pattern &lt;- collection</code> y el
+filtro es simplemente una condición, por ejemplo <code>x &lt; 4</code>.</p>
+
+<p>Las variables declaradas en una comprehension tienen la misma como ámbito, no
+escapan de él.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>for x &lt;- [1, 2, 3, 4, 5], x &lt; 4, do: x * x
+</span><span class='line'>  # =&gt; [1, 4, 9]
+</span><span class='line'>
+</span><span class='line'>for x &lt;- [1, 2], y &lt;- [5, 6], do: x * y
+</span><span class='line'>  # =&gt; las posibles combinaciones serían [1, 5], [1, 6], [2, 5], [2, 6]
+</span><span class='line'>  # =&gt; y esas combinaciones serían las iteraciones de la comprehension
+</span><span class='line'>
+</span><span class='line'># se pueden usar variables de generadores en siguientes generadores
+</span><span class='line'>min_maxes = [ {1, 4}, {2, 3}, {10, 15} ]
+</span><span class='line'>for { min, max } &lt;- min_maxes, n &lt;- min..max, do: n
+</span><span class='line'>  # =&gt; [ 1, 2, 3, 4, 2, 3, 10, 11, 12, 13, 14, 15 ]
+</span><span class='line'>
+</span><span class='line'># por defecto, las comprehensions devuelven una lista. Se puede cambiar
+</span><span class='line'># con el parámetro `into:`
+</span><span class='line'>for x &lt;- ~w{ cat dog }, into: Map.new, do: { x, String.upcase(x) }
+</span><span class='line'>  # =&gt; %{ "cat" =&gt; "CAT", "dog" =&gt; "DOG" }</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</h2>
+
+<p>Podría investigar sobre qué son los protocolos, pero creo que están descritos
+en el libro del cual está surgiendo esta serie de posts, por lo que esperaré a
+llegar ahí.</p>
+
+<p>Tener siempre muy presente las funciones del módulo <code>Enum</code>, ya que casi seguro
+que se van a utilizar siempre que haya colecciones de por medio.</p>
+
+<h2>Aprender lo suficiente para hacer algo de utilidad</h2>
+
+<ul>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-03/exercise-01-round-03.exs">exercise-01-round-03.exs</a>: con ayuda de la función <code>span</code> escrita anteriormente, escribir una función que devuelva la lista de números primos de <code>2</code> hasta <code>n</code></li>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-03/exercise-02-round-03.exs">exercise-02-round-03.exs</a>: a partir de dos listas, una de tasas de impuestos, y otra de compras, calcular el importe total de cada una de las compras</li>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-03/lists-and-recursion-5.exs">lists-and-recursion-5.exs</a>: implementar funciones presentes en <code>Enum</code>: <code>all?</code>, <code>each</code>, <code>filter</code>, <code>take</code> y <code>split</code>.</li>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-03/lists-and-recursion-6.exs">lists-and-recursion-6.exs</a>: implementar <code>flatten</code></li>
+</ul>
+
+
+<h2>Enseñar lo aprendido, y repetir desde el paso 7</h2>
+
+<p>Aquí está, este post, mis notas, mis pensamientos, mis dudas y mi código. Hasta el siguiente asalto.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Code: the hidden language of computer hardware and software]]></title>
@@ -1319,7 +1644,8 @@ suficiente para ir cogiendo ritmo.</p>
 
 <ol>
 <li><a href="http://rchavarria.github.io/blog/2016/02/09/elixir-primer-asalto/">Primer asalto</a>: tipos, funciones, pattern matching y módulos</li>
-<li><a href="http://rchavarria.github.io/blog/2016/03/28/elixir-segundo-asalto/">Segundo asalto</a>: listas, diccionarios, structs y sets</li>
+<li><a href="http://rchavarria.github.io/blog/2016/03/27/elixir-segundo-asalto/">Segundo asalto</a>: listas, diccionarios, structs y sets</li>
+<li><a href="http://rchavarria.github.io/blog/2016/05/01/elixir-tercer-round/">Tercer asalto</a>: más colecciones, módulos <code>Enum</code>, <code>Stream</code> y <em>comprehensions</em></li>
 </ol>
 
 ]]></content>
@@ -3446,242 +3772,6 @@ un vistazo, seguro que te convence y te apetecerá asistir. Si no, no sé qué m
 te puedo contar para que te pases por allí: se celebra en un lugar emblemático,
 con ponentes astronómicos, con charlas de temáticas muy variadas y con unos
 asistentes inmejorables. ¿A qué esperas?</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[The passionate programmer]]></title>
-    <link href="http://rchavarria.github.io/blog/2015/09/20/passionate-programmer/"/>
-    <updated>2015-09-20T19:07:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2015/09/20/passionate-programmer</id>
-    <content type="html"><![CDATA[<h5>de Chad Fowler</h5>
-
-<p><img class="left" src="http://chadfowler.com/images/books/passionate-programmer.jpg" width="200" height="300" title="The passionate programmer" ></p>
-
-<h2>Por qué lo he leído</h2>
-
-<p>Suelo elegir los libros por el título, por lo que me sugiera. Y el título de
-este libro me sugiere todo: pasión y programación. ¿Qué más se puede pedir?.
-Uno de mis libros favoritos es <a href="https://pragprog.com/book/tpp/the-pragmatic-programmer">The pragmatic programmer</a>, que más adelante
-dió lugar a una editorial de libros técnicos. <em>The passionate programmer</em> tenía
-la misma pinta, así que seguro que lo tenía que leer, tarde o temprano.</p>
-
-<!-- more -->
-
-
-<h2>Qué esperaba</h2>
-
-<p>Me esperaba un libro con una estructura parecida a <em>The pragmatic programmer</em>,
-con capítulos cortos, y cada capítulo finalizando con una serie de posibles
-acciones para mejorar en tu carrera profesional. Bueno, esta vez, en lugar de
-mejorar, esperaba que estuviera relacionado con sentir la pasión por la
-programación.</p>
-
-<h2>Qué encontre</h2>
-
-<p>El libro está organizado en 5 grandes secciones:</p>
-
-<ol>
-<li>Elige tu mercado</li>
-<li>Invierte en tu producto</li>
-<li>Ejecución</li>
-<li>El marketing&#8230; no es sólo para los trajeados</li>
-<li>Manteniéndote al día</li>
-</ol>
-
-
-<p>Cada uno de ellos está dividido en capítulos más pequeños (lo que me
-imaginaba), y cada uno de ellos termina en uno o varios consejos para que
-aprendas el concepto que desarrolla el capítulo. Idéntica estructura a <em>The
-pragmatic programmer</em> que tanto me gustó y tanto me ayudó.</p>
-
-<p>Cada una de las secciones anteriores explorar un aspecto de la carrera de un
-profesional del desarrollo software, aunque no cubre todos. Guía al lector
-sobre cómo y por qué debe elegir un mercado, una industria, ya que el software
-se encuentra en todas partes hoy en día. Hay consejos sobre cómo deberías
-trabajar, qué actitud deberías tener, tanto si trabajas por cuenta ajena como
-por tu propia cuenta y también cómo poder <em>venderte</em> dentro y fuera de tu
-empresa.</p>
-
-<h2>Conclusiones</h2>
-
-<p>Me parece un libro muy recomendable. Está enfocado al desarrollo del software,
-pero podría ser aplicable (más o menos) a otras profesiones. De lo que trata es
-de buscar la pasión por lo que haces.</p>
-
-<p>Cada capítulo termina con una o varias acciones a tomar, algunas son sencillas,
-otras te llevarán cierto tiempo, otras son arriesgadas y no todo el mundo se
-sentiría cómodo llevándolas a cabo. No creo que tenga tiempo ni energía para
-llevarlas todas a cabo, pero sí que me gustaría poner en práctica algunas de
-ellas: comunicarme más con gente de negocio, ponerme en situaciones donde yo
-sea el <em>peor</em>, invertir en mi conocimiento, encontrar un mentor, seguir alguno
-de los consejos para contribuir a algún proyecto de software libre,&#8230;</p>
-
-<p>Creo que este es un libro para tener al lado de <em>The pragmatic programmer</em> y
-releerlos de vez en cuando.</p>
-
-<h2>Qué he aprendido</h2>
-
-<blockquote><p>No puedes competir en precio, pero puedes competir en habilidad.</p></blockquote>
-
-<!-- para separar quotes -->
-
-
-<blockquote><p>Tienes que ser apasionado sobre tu trabajo si quieres ser excelente
-en tu trabajo.</p></blockquote>
-
-<!-- para separar quotes -->
-
-
-<blockquote><p>Un aprendiz no se encuentra saliendo por ahí y declarándote un <em>gurú</em>, si no
-acumulando conocimiento y teniendo la voluntad y paciencia para compartirlo.</p></blockquote>
-
-<!-- para separar quotes -->
-
-
-<blockquote><p>Es mucho más fácil encontrar alguien que haga que el software funciona que
-encontrar a alguien que haga que funcione el <em>hacer software</em> (It’s much
-easier to find someone who can make software work than it is to find someone
-who can make the making of software work).</p></blockquote>
-
-<!-- para separar quotes -->
-
-
-<blockquote><p>Crea movimiento. Se de los que empujan hacia adelante. No te acomodes.</p></blockquote>
-
-<!-- para separar quotes -->
-
-
-<blockquote><p>La mayor barrera entre nosotros, los mortales, y aquellos a los que admiramos
-son nuestros propios miedos.</p></blockquote>
-
-<!-- para separar quotes -->
-
-
-<blockquote><p>El proceso aquí descrito es un bucle que se repite hasta que te jubilas:
-investiga, invierte, ejecuta, anúncialo, repite.</p></blockquote>
-
-<h2>Frases que me gustaría recordar</h2>
-
-<blockquote><p>At least when starting out, greatness is binary in the music world. A
-musician wants to either be great (and famous for it!) or not do it at all.
-I’m often asked why it is that there are so many good musicians who are also
-good software developers. That’s the reason.</p></blockquote>
-
-<!-- para separar quotes -->
-
-
-<blockquote><p>Think of your career as if it is the life cycle of a product that you are
-creating. That product is made up of you and your skills.</p></blockquote>
-
-<!-- para separar quotes -->
-
-
-<blockquote><p>If you want to stay relevant, you’re going to have to dive into the domain of
-the business you’re in.</p></blockquote>
-
-<!-- para separar quotes -->
-
-
-<blockquote><p>Legendary jazz guitarist Pat Metheny: “Always be the worst guy in every band
-you’re in.”</p></blockquote>
-
-<!-- para separar quotes -->
-
-
-<blockquote><p>Fear-driven advice is geared toward not losing. Thinking about not losing is
-not the way to win!</p></blockquote>
-
-<!-- para separar quotes -->
-
-
-<blockquote><p>Teaching is one of the best ways to learn.</p></blockquote>
-
-<!-- para separar quotes -->
-
-
-<blockquote><p>Cuando estudias soluciones de código abierto, en lugar de propietarias, en
-profundidad empiezas a reconocer patrones que te sirven más allá de la
-tecnología.</p></blockquote>
-
-<!-- para separar quotes -->
-
-
-<blockquote><p>The most obvious place to start your lifelong learning is in learning the
-tools of your trade.</p></blockquote>
-
-<!-- para separar quotes -->
-
-
-<blockquote><p>Without a role model, there’s no incentive to get better.</p></blockquote>
-
-<!-- para separar quotes -->
-
-
-<blockquote><p>You have to make time for practice. It’s your responsibility.</p></blockquote>
-
-<!-- para separar quotes -->
-
-
-<blockquote><p>Studying the work of masters is an essential part of becoming a master.</p></blockquote>
-
-<!-- para separar quotes -->
-
-
-<blockquote><p>I learned that no matter how cool the technology seemed to be, it was
-valuable only if it solved a real problem that was urgent and provided
-quantifiable benefits. Over time, this helped me change my way of thinking
-from being technology-centric to being solution-centric.</p></blockquote>
-
-<!-- para separar quotes -->
-
-
-<blockquote><p>Attempting to be irreplaceable is a defensive maneuver that creates a hostile
-relationship with your employer.</p></blockquote>
-
-<!-- para separar quotes -->
-
-
-<blockquote><p>We judge each other on how we deal with those inevitable mistakes.</p></blockquote>
-
-<!-- para separar quotes -->
-
-
-<blockquote><p>If you don’t have a deadline, you don’t have any pressure or much incentive
-to finish something.</p></blockquote>
-
-<!-- para separar quotes -->
-
-
-<blockquote><p>There is no way to objectively measure the quality of a knowledge worker, and
-there is no way to objectively measure the quality of their work. That means
-you are always going to be measured based on someone else’s perception of
-you.</p></blockquote>
-
-<!-- para separar quotes -->
-
-
-<blockquote><p>You need to make it personal. Try to actually learn about the people you work
-with.</p></blockquote>
-
-<!-- para separar quotes -->
-
-
-<blockquote><p>Set big goals, but make constant corrections along the way. Learn from the
-experience, and change the goals as you go.</p></blockquote>
-
-<!-- para separar quotes -->
-
-
-<blockquote><p>Software development is both challenging and rewarding. It’s creative like an
-art-form, but (unlike art) it provides concrete, measurable value.</p></blockquote>
-
-<h2>Recursos relacionados</h2>
-
-<ul>
-<li><a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/passionate-programmer-by-chad-fowler.markdown">Notas tomadas sobre el libro</a></li>
-</ul>
-
 ]]></content>
   </entry>
   
