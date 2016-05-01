@@ -26,12 +26,11 @@ Sigo aprendiendo siguiendo el método descrito en el post sobre [aprender Elixir
 - Aprender lo suficiente para hacer algo de utilidad
 - Enseñar lo aprendido
 
-{% img left /images/2016/rms-won.jpg %}
-{% img right /images/2016/rms-won.jpg %}
+{% img right /images/2016/third-fight.png %}
 
 <div style="text-align: center">
   <span style="font-size: 60%">
-Imagen basada en <a href="https://flic.kr/p/2PDNng">RMS won</a> de <a href="https://www.flickr.com/photos/kmerenkov/">Konstantin Merenkov</a>, <a href="https://creativecommons.org/licenses/by-nc/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by-nc/2.0/legalcode">CC BY-NC 2.0</a>
+Imagen basada en <a href="https://flic.kr/p/c9bWJA">3rd fight</a> de <a href="https://www.flickr.com/photos/takfoto/">Tomasz Krawczak</a>, <a href="https://creativecommons.org/licenses/by-nc/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by-nc/2.0/legalcode">CC BY-NC 2.0</a>
   </span>
 </div>
 
