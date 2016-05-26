@@ -29,9 +29,12 @@ Así que aquí está mi Lista de Lectura:
 
 - [Zen y el arte del mantenimiento de motocicletas](http://www.amazon.es/Arte-Mantenimiento-Motocicleta-Narrativa-Sexto/dp/8415601956/), de Robert M. Pirsig, recomendado por @mpjme en FunFunFunction #18](https://www.youtube.com/watch?v=lrf6xuFq1Ms&t=90)
 - [The nature of software development](https://www.amazon.es/Nature-Software-Development-Simple-Valuable/dp/1941222374/), de Ron Jeffries, recomendado por [Carlos Buenosvinos](https://twitter.com/buenosvinos/status/721623461702078464/photo/1) (antes en Atrápalo Eng, ahora en Xing,...)
+- [Seveneves (7 Evas)](https://www.amazon.es/gp/product/8466658955), de Neal Stephenson
+- [xUnit test patterns](http://xunitpatterns.com/index.html), de Gerard Meszaros
 - [Ready player one](http://www.amazon.es/gp/product/B00UVAREXK/), de Ernest Cline, recomendado por Microsiervos varias veces
 - [The grumpy programmer's PHPUnit cookbook](https://leanpub.com/grumpy-phpunit), de Chris Hartjes, amigo de J.B.Rainsberger
 - [Mientras escribo](http://www.amazon.es/Mientras-escribo-BEST-SELLER-Stephen/dp/849759732X/), de Stephen King (traducción de *On writing*), recomendado por [Kathleen Dollard](https://twitter.com/KathleenDollard/) en el podcast [Developer on Fire #65](http://developeronfire.com/Podcast/Episodes/kathleen-dollard-relentless-dedication)
+- [Team geek: a developer's guide to work well with others](http://www.amazon.com/dp/1449302440/), de Brian W. Fitzpatrick y Ben Collins-Sussman
 - [La trilogía de la biblioteca de los muertos](www.amazon.com/Biblioteca-los-muertos-Spanish-Edition/dp/0307882268), de Glenn Cooper, recomendado por Ismael, compañero de curro.
 - [Growing object oriented design guided by tests](), de Nat Pryce y Steve Freeman. Ideal para conocer la escuela de Londres (mockist) sobre TDD
 - [The war of art](http://www.amazon.com/dp/1936891026/?tag=devonfir-20), de Steven Pressfield, recomendado por Quincy Larson (Free Code Camp) en el [episodio #120 de Developer on Fire podcast](http://developeronfire.com/episode-120-quincy-larson-teacher-with-enough)
