@@ -22,20 +22,21 @@ Así que aquí está mi Lista de Lectura:
 
 - [Ten-day MBA](http://www.amazon.es/MBA-10-d%C3%ADas-ense%C3%B1anzas-escuelas-ebook/dp/B00D59QW6O/), de Steven Silbiger, recomendado por Chad Fowler en su libro. Se puede econtrar también en [inglés](http://www.amazon.com/The-Ten-Day-MBA-Step-Step/dp/0062199579)
 - [Practical Vim](https://pragprog.com/book/dnvim/practical-vim), de Drew Neil, recomendado por el podcast Giant Robots
+- [The nature of software development](https://www.amazon.es/Nature-Software-Development-Simple-Valuable/dp/1941222374/), de Ron Jeffries, recomendado por [Carlos Buenosvinos](https://twitter.com/buenosvinos/status/721623461702078464/photo/1) (antes en Atrápalo Eng, ahora en Xing,...)
 - [The four hour body](https://www.amazon.es/cuerpo-perfecto-cuatro-horas-FICCION/dp/8466650210/), de Tim Ferris
+- [Zen y el arte del mantenimiento de motocicletas](http://www.amazon.es/Arte-Mantenimiento-Motocicleta-Narrativa-Sexto/dp/8415601956/), de Robert M. Pirsig, recomendado por @mpjme en FunFunFunction #18](https://www.youtube.com/watch?v=lrf6xuFq1Ms&t=90)
 - [Expertología](http://www.amazon.es/dp/8492414502), de Andrés Pérez Ortega
 
 ## Tengo pensado leer
 
-- [Zen y el arte del mantenimiento de motocicletas](http://www.amazon.es/Arte-Mantenimiento-Motocicleta-Narrativa-Sexto/dp/8415601956/), de Robert M. Pirsig, recomendado por @mpjme en FunFunFunction #18](https://www.youtube.com/watch?v=lrf6xuFq1Ms&t=90)
-- [The nature of software development](https://www.amazon.es/Nature-Software-Development-Simple-Valuable/dp/1941222374/), de Ron Jeffries, recomendado por [Carlos Buenosvinos](https://twitter.com/buenosvinos/status/721623461702078464/photo/1) (antes en Atrápalo Eng, ahora en Xing,...)
+- [Ready player one](http://www.amazon.es/gp/product/B00UVAREXK/), de Ernest Cline, recomendado por Microsiervos varias veces, y por Kevin Kelly en el [podcast de Tim Ferriss](http://fourhourworkweek.com/2016/06/05/kevin-kelly-ai-virtual-reality-and-the-inevitable)
 - [Seveneves (7 Evas)](https://www.amazon.es/gp/product/8466658955), de Neal Stephenson
 - [xUnit test patterns](http://xunitpatterns.com/index.html), de Gerard Meszaros
-- [Ready player one](http://www.amazon.es/gp/product/B00UVAREXK/), de Ernest Cline, recomendado por Microsiervos varias veces
 - [The grumpy programmer's PHPUnit cookbook](https://leanpub.com/grumpy-phpunit), de Chris Hartjes, amigo de J.B.Rainsberger
 - [Mientras escribo](http://www.amazon.es/Mientras-escribo-BEST-SELLER-Stephen/dp/849759732X/), de Stephen King (traducción de *On writing*), recomendado por [Kathleen Dollard](https://twitter.com/KathleenDollard/) en el podcast [Developer on Fire #65](http://developeronfire.com/Podcast/Episodes/kathleen-dollard-relentless-dedication)
 - [Team geek: a developer's guide to work well with others](http://www.amazon.com/dp/1449302440/), de Brian W. Fitzpatrick y Ben Collins-Sussman
-- [La trilogía de la biblioteca de los muertos](www.amazon.com/Biblioteca-los-muertos-Spanish-Edition/dp/0307882268), de Glenn Cooper, recomendado por Ismael, compañero de curro.
+- [The psychology of computer programming](https://www.amazon.com/Psychology-Computer-Programming-Silver-Anniversary/dp/0932633420), de Gerald M. Weinberg, recomendado por J.B.Rainsberger en el [episodio #137 de Deveoper On Fire](http://developeronfire.com/episode-137-j-b-rainsberger-feedback-and-personal-wins)
+- [La trilogía de la biblioteca de los muertos](www.amazon.com/Biblioteca-los-muertos-Spanish-Edition/dp/0307882268), de Glenn Cooper, recomendado por Ismael, compañero de curro
 - [Growing object oriented design guided by tests](), de Nat Pryce y Steve Freeman. Ideal para conocer la escuela de Londres (mockist) sobre TDD
 - [The war of art](http://www.amazon.com/dp/1936891026/?tag=devonfir-20), de Steven Pressfield, recomendado por Quincy Larson (Free Code Camp) en el [episodio #120 de Developer on Fire podcast](http://developeronfire.com/episode-120-quincy-larson-teacher-with-enough)
 - [Slow burn](http://www.amazon.com/Slow-Burn-Faster-Exercising-Slower/dp/0062736744), de Stu Mittleman, recomendado por [Rick Rubin en una entrevisa de Tim Ferris](http://fourhourworkweek.com/2015/05/15/rick-rubin)
@@ -73,6 +74,7 @@ Así que aquí está mi Lista de Lectura:
 - [Manual del ciberactivista](http://www.amazon.es/gp/product/8494408607), de Javier de la Cueva, visto en [Microsiervos](http://www.microsiervos.com/archivo/libros/manual-del-ciberactivista-o-como-la-politica-puede-ser-cosa-de-todos-gracias-a-internet.html)
 - [Eloquent JavaScript](http://www.amazon.com/Eloquent-JavaScript-Modern-Introduction-Programming/dp/1593272820), de Marijn Haverbeke, recomendado por Kyle Simpson (You don't know JavaScript) en el podcast Developer on fire
 - [The two awesome hours](http://www.amazon.es/Two-Awesome-Hours-Science-Based-Strategies-ebook/dp/B00LSRU7CK/), de Josh Davis, recomendado por Chad Fowler en Developer on Fire #95
+- [Why programmers work at night](https://leanpub.com/nightowls), de Swizec Teller, visto en el [blog de Álvaro García](http://alvarogarcia7.github.io)
 - [Introduction to the command line](http://shop.fsf.org/product/Introduction_to_Command_Line/), de la Free Software Foundation
 - [The art of Unix programming](http://www.catb.org/esr/writings/taoup), de Eric S. Raymond
 - [Beautiul Code](http://www.amazon.es/gp/product/0596510047/ref=as_li_tf_tl?ie=UTF8&camp=3626&creative=24790&creativeASIN=0596510047&linkCode=as2&tag=koalite-21), de Greg Wilson y Andy Oram, recomendado por Juanma (Gulnor), de Koalite, descrito como *porno (para desarrolladores) puro*
@@ -80,7 +82,6 @@ Así que aquí está mi Lista de Lectura:
 - [The coding dojo handbook](https://leanpub.com/codingdojohandbook), de Emiliy Bache
 - [¿Qué pasaría si...? (What if...?)](http://www.amazon.es/gp/product/B00TV7HI4E), de Randall Munrow (xkcd.com), recomendado por Bill Gates
 - [Your code as a crime scene](https://pragprog.com/book/atcrime/your-code-as-a-crime-scene), de Adam Tornhill, The pragmatic bookshelf
-- [The Psycology of Computer Programming](http://www.amazon.com/exec/obidos/ASIN/0932633420/codihorr-20), de Gerald M. Weingerg
 - [The effective engineer](https://www.theeffectiveengineer.com/book), de Edmond Lau (para aprender técnicas de ingenieros software espectaculares)
 - Patterns of Enterprise Application Architecture, de Martin Fowler
 - [More Programming Pearls](http://search.barnesandnoble.com/More-Programming-Pearls/John-Bentley/e/9780201118896), de Jon Bentley
@@ -104,6 +105,7 @@ Así que aquí está mi Lista de Lectura:
 - [Hipérbole y media](http://www.amazon.es/gp/product/8416223076), de Allie Brosh, recomendado por Bill Gates
 - [Unstoppable: harnessing science to change the world](http://www.amazon.es/gp/product/B00XU114R4/ref=as_li_tf_tl), de Bill Nye, the Science Guy, creo que recomendado por Microsiervos
 - [Nix the tricks](http://www.nixthetricks.com/), de Tina Cardone, libro sobre problemas de matemáticas y por qué evitar los trucos al resolver problemas
+- [The logic of failure](https://www.amazon.com/Logic-Failure-Recognizing-Avoiding-Situations/dp/0201479486), de Dietrich Dorner, analizando el por qué de algunos de los fallos más grandes de la humanidad
 
 ## He leído
 
