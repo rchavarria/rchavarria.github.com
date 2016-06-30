@@ -24,7 +24,7 @@ Así que aquí está mi Lista de Lectura:
 - [Practical Vim](https://pragprog.com/book/dnvim/practical-vim), de Drew Neil, recomendado por el podcast Giant Robots
 - [The nature of software development](https://www.amazon.es/Nature-Software-Development-Simple-Valuable/dp/1941222374/), de Ron Jeffries, recomendado por [Carlos Buenosvinos](https://twitter.com/buenosvinos/status/721623461702078464/photo/1) (antes en Atrápalo Eng, ahora en Xing,...)
 - [The four hour body](https://www.amazon.es/cuerpo-perfecto-cuatro-horas-FICCION/dp/8466650210/), de Tim Ferris
-- [Zen y el arte del mantenimiento de motocicletas](http://www.amazon.es/Arte-Mantenimiento-Motocicleta-Narrativa-Sexto/dp/8415601956/), de Robert M. Pirsig, recomendado por @mpjme en FunFunFunction #18](https://www.youtube.com/watch?v=lrf6xuFq1Ms&t=90)
+- [Zen y el arte del mantenimiento de motocicletas](http://www.amazon.es/Arte-Mantenimiento-Motocicleta-Narrativa-Sexto/dp/8415601956/), de Robert M. Pirsig, recomendado por [@mpjme en FunFunFunction #18](https://www.youtube.com/watch?v=lrf6xuFq1Ms&t=90)
 - [Expertología](http://www.amazon.es/dp/8492414502), de Andrés Pérez Ortega
 
 ## Tengo pensado leer
