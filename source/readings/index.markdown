@@ -20,7 +20,6 @@ Así que aquí está mi Lista de Lectura:
 
 ## Estoy leyendo
 
-- [Ten-day MBA](http://www.amazon.es/MBA-10-d%C3%ADas-ense%C3%B1anzas-escuelas-ebook/dp/B00D59QW6O/), de Steven Silbiger, recomendado por Chad Fowler en su libro. Se puede econtrar también en [inglés](http://www.amazon.com/The-Ten-Day-MBA-Step-Step/dp/0062199579)
 - [Practical Vim](https://pragprog.com/book/dnvim/practical-vim), de Drew Neil, recomendado por el podcast Giant Robots
 - [The nature of software development](https://www.amazon.es/Nature-Software-Development-Simple-Valuable/dp/1941222374/), de Ron Jeffries, recomendado por [Carlos Buenosvinos](https://twitter.com/buenosvinos/status/721623461702078464/photo/1) (antes en Atrápalo Eng, ahora en Xing,...)
 - [The four hour body](https://www.amazon.es/cuerpo-perfecto-cuatro-horas-FICCION/dp/8466650210/), de Tim Ferris
@@ -111,6 +110,7 @@ Así que aquí está mi Lista de Lectura:
 
 - [Code: the hidden language of computer hardware and software](/blog/2016/04/10/code/), de Charles Petzold, recomendado por Scott Hanselman y Dave Rael en el [episodio 83 de Developer on Fire podcast](http://developeronfire.com/episode-083-scott-hanselman-learn-balance) ~ *Abril 2016*
 - [Software craftsmanship](/blog/2016/03/15/the-software-craftsman/), de Sandro Mancuso ~ *Marzo 2016*
+- [Ten-day MBA](https://github.com/rchavarria/blog-post-incubator/tree/master/published-book-notes), de Steven Silbiger ~ *Enero 2016*
 - [Soft Skills: The software developer's life manual](/blog/2015/11/08/soft-skills/), de John Sonmez ~ *Noviembre 2015*
 - [How not to be wrong: the power of mathematical thinking](http://www.amazon.es/gp/product/0143127535), de Jordan Ellenberg, visto en [Microsiervos](http://www.microsiervos.com/archivo/libros/how-not-to-be-wrong.html). No lo terminé. No me interesó lo suficiente. Tenía buena pinta, pero cuenta demasiadas historias, el idioma,...
 - [The Passionate Programmer](/blog/2015/09/20/passionate-programmer/), de Chad Fowler ~ *Septiembre 2015*
