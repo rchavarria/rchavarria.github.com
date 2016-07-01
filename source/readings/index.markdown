@@ -110,9 +110,9 @@ Así que aquí está mi Lista de Lectura:
 
 - [Code: the hidden language of computer hardware and software](/blog/2016/04/10/code/), de Charles Petzold, recomendado por Scott Hanselman y Dave Rael en el [episodio 83 de Developer on Fire podcast](http://developeronfire.com/episode-083-scott-hanselman-learn-balance) ~ *Abril 2016*
 - [Software craftsmanship](/blog/2016/03/15/the-software-craftsman/), de Sandro Mancuso ~ *Marzo 2016*
+- [How not to be wrong: the power of mathematical thinking](https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/how-not-to-be-wrong-by-jordan-ellenberg.markdown), de Jordan Ellenberg ~ *Febrero 2016*
 - [Ten-day MBA](https://github.com/rchavarria/blog-post-incubator/tree/master/published-book-notes), de Steven Silbiger ~ *Enero 2016*
 - [Soft Skills: The software developer's life manual](/blog/2015/11/08/soft-skills/), de John Sonmez ~ *Noviembre 2015*
-- [How not to be wrong: the power of mathematical thinking](http://www.amazon.es/gp/product/0143127535), de Jordan Ellenberg, visto en [Microsiervos](http://www.microsiervos.com/archivo/libros/how-not-to-be-wrong.html). No lo terminé. No me interesó lo suficiente. Tenía buena pinta, pero cuenta demasiadas historias, el idioma,...
 - [The Passionate Programmer](/blog/2015/09/20/passionate-programmer/), de Chad Fowler ~ *Septiembre 2015*
 - [The martian](/blog/2015/09/06/the-martian/), de Andy Weir, *Septiembre 2015*
 - [Notes to a software team leader](/blog/2015/08/23/notes-software-team-leader/), de Roy Osherove ~ *Agosto 2015*
