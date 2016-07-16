@@ -20,16 +20,17 @@ Así que aquí está mi Lista de Lectura:
 
 ## Estoy leyendo
 
-- [Practical Vim](https://pragprog.com/book/dnvim/practical-vim), de Drew Neil, recomendado por el podcast Giant Robots
+- [Ready player one](http://www.amazon.es/gp/product/B00UVAREXK/), de Ernest Cline, recomendado por Microsiervos varias veces, y por Kevin Kelly en el [podcast de Tim Ferriss](http://fourhourworkweek.com/2016/06/05/kevin-kelly-ai-virtual-reality-and-the-inevitable)
 - [The nature of software development](https://www.amazon.es/Nature-Software-Development-Simple-Valuable/dp/1941222374/), de Ron Jeffries, recomendado por [Carlos Buenosvinos](https://twitter.com/buenosvinos/status/721623461702078464/photo/1) (antes en Atrápalo Eng, ahora en Xing,...)
+- [The Phoenix project](http://www.amazon.com/The-Phoenix-Project-Helping-Business/dp/0988262592), de Gene Kim, libro similar a [The goal] pero orientado a IT, encontrado en el [blog de Eduardo Ferro](http://www.eferro.net/2016/03/some-books-i-recently-read.html)
 - [The four hour body](https://www.amazon.es/cuerpo-perfecto-cuatro-horas-FICCION/dp/8466650210/), de Tim Ferris
 - [Zen y el arte del mantenimiento de motocicletas](http://www.amazon.es/Arte-Mantenimiento-Motocicleta-Narrativa-Sexto/dp/8415601956/), de Robert M. Pirsig, recomendado por [@mpjme en FunFunFunction #18](https://www.youtube.com/watch?v=lrf6xuFq1Ms&t=90)
 - [Expertología](http://www.amazon.es/dp/8492414502), de Andrés Pérez Ortega
 
 ## Tengo pensado leer
 
-- [Ready player one](http://www.amazon.es/gp/product/B00UVAREXK/), de Ernest Cline, recomendado por Microsiervos varias veces, y por Kevin Kelly en el [podcast de Tim Ferriss](http://fourhourworkweek.com/2016/06/05/kevin-kelly-ai-virtual-reality-and-the-inevitable)
 - [Seveneves (7 Evas)](https://www.amazon.es/gp/product/8466658955), de Neal Stephenson
+- [The new one minute manager](https://www.amazon.com/New-One-Minute-Manager/dp/0062367544), de Ken Blanchard, recomendado por [Jorge (@flipper83)](https://twitter.com/flipper83) y [Carlos Blé](https://twitter.com/carlosble)
 - [xUnit test patterns](http://xunitpatterns.com/index.html), de Gerard Meszaros
 - [The grumpy programmer's PHPUnit cookbook](https://leanpub.com/grumpy-phpunit), de Chris Hartjes, amigo de J.B.Rainsberger
 - [Mientras escribo](http://www.amazon.es/Mientras-escribo-BEST-SELLER-Stephen/dp/849759732X/), de Stephen King (traducción de *On writing*), recomendado por [Kathleen Dollard](https://twitter.com/KathleenDollard/) en el podcast [Developer on Fire #65](http://developeronfire.com/Podcast/Episodes/kathleen-dollard-relentless-dedication)
@@ -51,7 +52,6 @@ Así que aquí está mi Lista de Lectura:
 - [So good, they can't ignore you](http://www.amazon.com/dp/1455509124?tag=sivers-20), de Cal Newport, visto en [http://sivers.org/book/SoGood]
 - [Responsive design by example](http://www.amazon.com/Responsive-Design-Example-Thoriq-Firdaus/dp/1849695423/ref=sr_1_1?ie=UTF8&qid=1443036924&sr=8-1&keywords=Thoriq+Firdaus), de Thoriq Firdaus (almacenado en Drive)
 - [El arte de la guerra](http://www.amazon.es/El-Arte-Guerra-Sun-Tzu/dp/148407291X), de Sun Tzu
-- [The Phoenix project](http://www.amazon.com/The-Phoenix-Project-Helping-Business/dp/0988262592), de Gene Kim, libro similar a [The goal] pero orientado a IT, encontrado en el [blog de Eduardo Ferro](http://www.eferro.net/2016/03/some-books-i-recently-read.html)
 - [Tao Te Ching](http://www.amazon.com/Tao-Te-Ching-Laozi/dp/0060812451), de Stephen Mitchell, recomendado por [Rick Rubin en una entrevisa de Tim Ferris](http://fourhourworkweek.com/2015/05/15/rick-rubin) 
 - [The five dysfunctions of a team](http://www.amazon.com/The-Five-Dysfunctions-Team-Leadership/dp/0787960756), de Patrick Lencioni, recomendado por @joserra_diaz y @rubenbpv (https://en.wikipedia.org/wiki/The_Five_Dysfunctions_of_a_Team)
 - [Slack](http://www.amazon.es/s/ref=nb_sb_noss?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&url=search-alias%3Daps&field-keywords=slack+tom+demarco&rh=i%3Aaps%2Ck%3Aslack+tom+demarco), de Tom DeMarco, recomendado por un retweet de J.B.Rainsberger
@@ -108,6 +108,7 @@ Así que aquí está mi Lista de Lectura:
 
 ## He leído
 
+- [Practical Vim](/blog/2016/07/17/practical-vim/), de Drew Neil ~ *Julio 2016*
 - [Code: the hidden language of computer hardware and software](/blog/2016/04/10/code/), de Charles Petzold, recomendado por Scott Hanselman y Dave Rael en el [episodio 83 de Developer on Fire podcast](http://developeronfire.com/episode-083-scott-hanselman-learn-balance) ~ *Abril 2016*
 - [Software craftsmanship](/blog/2016/03/15/the-software-craftsman/), de Sandro Mancuso ~ *Marzo 2016*
 - [How not to be wrong: the power of mathematical thinking](https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/how-not-to-be-wrong-by-jordan-ellenberg.markdown), de Jordan Ellenberg ~ *Febrero 2016*
@@ -122,12 +123,9 @@ Así que aquí está mi Lista de Lectura:
 - [Stop stealing dreams](/blog/2015/03/13/stop-stealing-dreams), de Seth Godin ~ *Octubre 2014*
 - [How to start a conversation and make friends](/blog/2014/12/05/how-to-start-conversations-and-make-friends), de Don Gabor ~ *Julio 2014*
 - [Snow crash](http://www.amazon.com/Snow-Crash-Bantam-Spectra-Book/dp/0553380958), de Neal Stephenson ~ *Mayo 2014*
-- [El cuadrante del flujo del dinero](https://github.com/rchavarria/book-notes/blob/master/published/cuadrante-flujo-dinero-by-robert-kiyosaki.md),
-de Robert Kiyosaki ~ *Marzo 2014*
-- [Planifica tu éxito, de aprendiz a empresario](/blog/2014/02/18/planifica-tu-exito),
-de Roberto Canales (Autentia) ~ *Enero 2014*
-- [Padre rico, padre pobre](http://www.amazon.com/Padre-Rico-Pobre-Spanish-Edition/dp/160396181X),
-de Robert Kiyosaki ~ *Septiembre 2013*
+- [El cuadrante del flujo del dinero](https://github.com/rchavarria/book-notes/blob/master/published/cuadrante-flujo-dinero-by-robert-kiyosaki.md), de Robert Kiyosaki ~ *Marzo 2014*
+- [Planifica tu éxito, de aprendiz a empresario](/blog/2014/02/18/planifica-tu-exito), de Roberto Canales (Autentia) ~ *Enero 2014*
+- [Padre rico, padre pobre](http://www.amazon.com/Padre-Rico-Pobre-Spanish-Edition/dp/160396181X), de Robert Kiyosaki ~ *Septiembre 2013*
 - [Instant Markdown](/blog/2013/10/07/instant-markdown), de Arturo Herrero ~ *Septiembre 2013*
 - [Como ganar amigos e influir sobre las personas](https://github.com/rchavarria/book-notes/blob/master/published/ganar-amigos-influir-personas-by-dale-carnegie.md),
 de Dale Carnegie ~ *Julio 2013*
