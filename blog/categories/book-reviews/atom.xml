@@ -4,7 +4,7 @@
   <title><![CDATA[Category: book reviews | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/book-reviews/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2016-06-30T23:00:55+02:00</updated>
+  <updated>2016-07-17T23:17:12+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,149 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Practical Vim]]></title>
+    <link href="http://rchavarria.github.io/blog/2016/07/17/practical-vim/"/>
+    <updated>2016-07-17T23:15:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2016/07/17/practical-vim</id>
+    <content type="html"><![CDATA[<h6>de Drew Neil</h6>
+
+<h3>Por qué lo he leído</h3>
+
+<p><img class="left" src="https://raw.githubusercontent.com/rchavarria/blog-post-incubator/master/published-book-notes/img/practical-vim.jpg"></p>
+
+<p>Hace un tiempo decidí que quería <a href="http://rchavarria.github.io/blog/2014/10/11/aprendiendo-vim/">aprender a utilizar Vim</a>. Entre los muchos
+recursos para aprender se encontraba este libro, pero encontré más prácticos
+una serie de videos. Pero más adelante, escuchando el podcast <a href="http://giantrobots.fm/">Giant Robots</a>,
+hablaron de este libro, y cuando recibes varias señales, quiere decir algo.</p>
+
+<!-- more -->
+
+
+<h3>De qué trata el libro</h3>
+
+<p>El libro no es un manual desde cero. Tampoco es un manual avanzado. Es un
+conjunto de trucos, de sugerencias, que trata de explicar y convencer al lector
+de la filosofía y bondades del editor. Entre estos trucos encontrarás muchos
+que te sean de utilidad, y otros tantos tan extraños que ni te molestarás en
+entenderlos. Pero lo más importante es que describe una <em>forma de pensar en
+Vim</em>. A la hora de editar ficheros de texto no hay una única forma de hacer las
+cosas, ni tampoco una forma superior a otras alternativas, pero en Vim sí que
+hay una filosofía, una idea de atacar cada edición. Este libro te sumerge en
+ella.</p>
+
+<h3>Conclusiones y valoración</h3>
+
+<p>El libro es una maravilla. Está lleno de trucos. Muchos de ellos los conocía, y
+otros ni siquiera sabía que existían. En cambio, otros, después de llevar un
+tiempo usando Vim, tenía una ligera sospecha de que se podrían hacer, pero no
+había invertido el tiempo en averiguar cómo.</p>
+
+<p>Si tienes ganas de incarle el diente a un editor que sobrevive al paso del
+tiempo, échale un vistazo al libro.</p>
+
+<p>Debería echar un vistazo al proyecto de Mozilla <a href="https://github.com/mozilla/doctorjs">Doctor JS</a>, que contiene la
+herramienta <code>jsctags</code>, para generar ficheros ctags de proyectos JavaScript.</p>
+
+<h3>Frases que me gustaría recordar</h3>
+
+<blockquote><p>La fórmula del punto: una pulsación de tecla para mover, una pulsación de
+tecla para ejecutar la edición</p>
+
+<p>La estrategia óptima de edición es hacer que tanto el cambio como el
+movimiento sean repetibles</p>
+
+<p>Podemos hacer que el comando deshacer opere en palabras, frases o párrafos
+enteros solamente haciendo un uso corrrecto de la tecla <code>Esc</code></p>
+
+<p>La combinación de operadores con movimientos forman una especie de gramática.
+Aprender nuevos movimientos y operadores is como aprender el vocabulario de
+Vim. Si seguimos las reglas sencillas de la gramática, podremos expresar más
+y mejores ideas según vaya creciendo nuestro vocabulario</p>
+
+<p>Una buena forma de trabajar con macros sería: normalizar la posición del
+cursor, llegar hasta el objetivo con un movimiento repetible, hacer que la
+macro aborte cuando el movimiento falle y no encuentre el objetivo</p>
+
+<p>La sintaxis para definir un rango en los Ex commands es muy flexible. Se
+pueden mezclar números de línea, marcas y patrones de búsqueda. Y se puede
+aplicar un offset a cada uno de ellos</p>
+
+<p>Intenta crear el hábito de crear una marca global (<code>m{capital letter}</code>) antes
+de usar cualquier comando que interacciones con la lista de arreglos rápidos,
+lista de buffers o lista de argumentos</p>
+
+<p>Para editar una macro grabada en el registro <code>q</code>, simplemente podemos pegar
+el contenido de dicho registro con <code>"qy</code>, editar la línea y modificar el
+registro <code>q</code> con <code>"qy$</code></p></blockquote>
+
+<h3>Qué he aprendido</h3>
+
+<p>Hay toda una serie de nuevos comandos, combinaciones de ellos y herramientas
+que todavía no conocía o que he encontrado muy útiles:</p>
+
+<ul>
+<li><code>~</code>: intercambia el carácter actual de mayúsculas a minúsculas y viceversa</li>
+<li><code>g~</code>, <code>gu</code>, <code>gU</code>: intercambia mayúsculas/minúsculas en la selección, pasa a minúsculas, pasa a mayúsculas, respectivamente.</li>
+<li><code>&lt;C-h&gt;</code>, <code>&lt;C-w&gt;</code>, <code>&lt;C-u&gt;</code>: en modo inserción o modo comando, borra hacia atrás un carácter, una palabra o la línea completa, respectivamente.</li>
+<li><code>&lt;C-r&gt;{register}</code>: en modo inserción, inserta el texto desde el registro <code>register</code></li>
+<li><code>&lt;C-r&gt;&lt;C-p&gt;{register}</code>: idem, pero más inteligentemente, ya que arregla cualquier error de indentación por descuido</li>
+<li><code>&lt;C-v&gt;{code}</code>: en modo inserción, inserta un carácter especial por su código <code>code</code></li>
+<li><code>R</code>: nos lleva del modo normal al <em>modo de reemplazo</em>, donde cada carácter insertado reemplaza a un carácter existente</li>
+<li><code>v</code>, <code>V</code>, <code>&lt;C-v&gt;</code>: entra en los distintos modos visuales: de carácter, de línea o de bloque.</li>
+<li><code>o</code>: dentro del modo visual, la selección tiene dos extremos, con este comando intercambiamos entre ellos, de forma que podemos expandir la selección hacia adelante o hacia atrás</li>
+<li><code>.</code>, <code>%</code>: en el modo comando tienen significado especial cuando se especifica un rango. Significan la línea actual y todas las líneas, respectivamente.</li>
+<li><code>:t</code>: comando para duplicar líneas. <code>:3t 5</code> copia la línea 3 y la pega en la 5. <code>:.+2t .</code> copia dos líneas más abajo y la pega en la línea actual</li>
+<li><code>:m</code>: comando para mover líneas</li>
+<li><code>@:</code>: repite el último Ex Command, lo cual es muy útil cuando estamos haciendo cambios en múltiples ficheros, o vamos recorriendo la lista de búferes</li>
+<li>en modo comando, se pueden ejecutar comandos del modo normal, con el Ex Command <code>normal</code>. Por ejemplo, <code>:%normal A;</code> hace lo siguiente: <code>:</code> entramos en modo comando, <code>%</code> indica que afectará a todas las líneas del fichero, <code>normal</code> indica que introduciremos un comando del modo normal, <code>A;</code> es un comando del modo normal, y lo que hace es añadir al final de la línea el carácter <code>;</code>.</li>
+<li><code>&lt;C-o&gt;</code>: vuelve atrás en la lista de saltos (cambios de buffer, grandes saltos de líneas, búsquedas,...)</li>
+<li><code>&lt;Tab&gt;</code>, <code>&lt;C-n&gt;</code>, <code>&lt;Left&gt;</code> y <code>&lt;S-Tab&gt;</code>, <code>&lt;C-p&gt;</code>, <code>&lt;Right&gt;</code>: para movernos adelante y atrás durante el autocompletado</li>
+<li><code>&lt;C-r&gt;&lt;C-w&gt;</code>: en modo comando, copia la palabra debajo del cursor y la pega en la línea de comandos</li>
+<li><code>&lt;C-p&gt;</code>, <code>&lt;C-n&gt;</code>: después de entrar en el modo comando con <code>:</code> o <code>/</code>, podemos pulsarlos para ir hacia adelante o atrás en el historial de comandos o búsquedas</li>
+<li><code>q/</code>: abre la ventana <em>línea de comandos</em> con el historial de búsquedas</li>
+<li><code>q:</code>: abre la ventana <em>línea de comandos</em> con el historial de comandos</li>
+<li><code>&lt;C-f&gt;</code>: en modo comando, cambia a la ventana de línea de comandos</li>
+<li><code>:read !{shell command}</code>: pone el resultado del comando shell en el buffer actual</li>
+<li><code>:write !{shell command}</code>: usa el contenido del buffer actual como entrada para el comando shell</li>
+<li><code>:bnext</code>, <code>:bprevious</code>, <code>:bfirst</code>, <code>:blast</code>: para moverse por los buffers</li>
+<li><code>:edit {path to a dir}</code>: abre el contenido del directorio en un buffer, de forma que podemos navegar el sistema de ficheros sin necesidad de ningún plugin. <code>.</code> significa el actual directorio de trabajo. <code>:explore</code> o <code>:E</code> hace lo mismo. <code>:Sexplore</code> divide los buffers horizontalmente, <code>:Vexplore</code> divide los buffers verticalmente</li>
+<li>igual que existen <code>w</code>, <code>b</code>, <code>e</code> y <code>ge</code> (mueve al final de la palabra anterior), existen <code>W</code>, <code>B</code>, <code>E</code> y <code>gE</code> para hacerlo con PALABRAS, no con palabras</li>
+<li><code>is</code>, <code>as</code>, <code>ip</code>, <code>ap</code>: son movimientos (que se pueden usar con los comandos <code>d</code>, <code>c</code>, <code>y</code>,...) que engloban la actual frase (sentencia) o párrafo</li>
+<li><code>&lt;C-o&gt;</code>, <code>&lt;C-i&gt;</code>: para movernos adelante y atrás en los saltos que vamos dando</li>
+<li><code>:changes</code>: muestra el historial de cambios</li>
+<li><code>g;</code>, <code>g,</code>: para movernos adelante y atrás por el historial de cambios</li>
+<li><code>gi</code>: vuelve al último punto donde abandonamos el modo de inserción, entrando en dicho modo</li>
+<li><code>"_d{motion}</code>: borra lo indicado pero no copia el contenido en ningún sitio (bueno, sí, en el registro <code>_</code>, pero éste no guarda el contenido). Si no se indica nada, los comandos <code>x</code>, <code>s</code>, <code>d</code> y <code>c</code> modifican el registro sin nombre, con lo que pueden eliminar el contenido que hayamos copiado con <code>y</code>.</li>
+<li>el registro de copiado es el <code>0</code>, y éste no es modificado nunca por los comandos <code>x</code>, <code>s</code>, <code>d</code> y <code>c</code>.</li>
+<li>si al copiar o borrar nombramos un registro con mayúsculas, el contenido se añadirá a lo que contenga el registro</li>
+<li><code>\v</code>: activa la magia en los patrones de búsqueda. Hace que todos los carácteres excepto los alfanuméricos y <code>_</code> tengan un significado especial</li>
+<li><code>:%s///gn</code>: cuenta las ocurrencias del patrón actual de búsqueda</li>
+<li>flags del comando de sustitución: <code>g</code> reemplaza todas las ocurrencias en una línea, no solo la primera; <code>c</code> pide confirmación, <code>n</code> cuenta las ocurrencias, <code>&amp;</code> reusa los últimos flags</li>
+<li><code>:%s//\=@0/g</code>: sustituye todas las ocurrencias (flag <code>g</code>) de todas las filas (rango <code>%</code>) del último patrón buscado (<code>//</code>) con el contenido del registro <code>0</code> (<code>\=</code> evalúa una expresión, <code>@0</code> accede al registro <code>0</code>)</li>
+<li><code>&amp;</code>: repite los cambios hechos por el último comando de sustitución <code>:s/pattern/.../</code></li>
+<li><code>g&amp;</code>: repite el último comando de sustitución en todo el fichero</li>
+<li><code>:vimgrep {pattern} {file pattern}</code>: busca el patrón en la lista de ficheros y rellena la lista <em>quickfix</em>. Luego podemos pasar el resultado a la lista de argumentos con el plugin <em>qargs</em></li>
+<li><code>:global/{pattern}/{command}</code> o <code>:g</code>: permite ejecutar un comando en cada línea que cumpla con el patrón</li>
+<li><code>&lt;C-]&gt;</code>: mover hasta la definición de la palabra clave (tag) donde se encuentra el cursor</li>
+<li><code>&lt;C-t&gt;</code>: vuelve atrás en la última tag visitada</li>
+<li><code>:copen</code>, <code>:cclose</code>: abre/cierra la ventana de lista <em>quickfix</em></li>
+<li><code>:cnext</code>, <code>:cprevious</code>, <code>:cfirst</code>, <code>:clast</code>: para moverse por los marcadores de la lista quickfix</li>
+<li><code>:colder</code>, <code>:cnewer</code>: para pasar de listas quickfix más nuevas a las más viejas y viceversa</li>
+</ul>
+
+
+<h3>Recursos relacionados</h3>
+
+<ul>
+<li><a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/practical-vim-by-drew-neil.markdown">Notas tomadas sobre Practical Vim</a>, y en <a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/practical-vim-by-drew-neil.en.markdown">inglés</a> también</li>
+<li>Debería echar un vistazo al proyecto de Mozilla <a href="https://github.com/mozilla/doctorjs">Doctor JS</a>, que contiene la
+herramienta <code>jsctags</code>, para generar ficheros ctags de proyectos JavaScript.</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The Software Craftsman]]></title>
@@ -719,129 +862,6 @@ no me lo tengo que tomar todo al pie de la letra.</p>
 <li><a href="http://www.hanselminutes.com/">Hanselminutes podcast</a></li>
 <li><a href="http://www.amazon.es/gp/product/B00OXYQR38/">El marciano</a>, de Andy Weir, o en versión original: <a href="http://www.amazon.com/The-Martian-Novel-Andy-Weir-ebook/dp/B00EMXBDMA">The Martian</a></li>
 <li><a href="https://www.youtube.com/watch?v=ej3ioOneTy8">Trailer de The Martian</a></li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Notes to a software team leader]]></title>
-    <link href="http://rchavarria.github.io/blog/2015/08/23/notes-software-team-leader/"/>
-    <updated>2015-08-23T18:16:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2015/08/23/notes-software-team-leader</id>
-    <content type="html"><![CDATA[<h5>de Roy Osherove</h5>
-
-<p><img class="left" src="https://s3.amazonaws.com/titlepages.leanpub.com/teamleader/large?1438389048" width="200" height="260" title="Notes to a software team leader" ></p>
-
-<h2>Por qué lo he leído</h2>
-
-<p>Ya tengo unos años de experiencia en esto de desarrollar software. No me veo
-capaz todavía de liderar un gran equipo de desarrollo, pero me siento más
-inclinado hacia un liderazgo técnico que un liderazgo <em>de gestión</em>. Así que,
-¿por qué no aprender un poco sobre un rol que tengo ganas de hacer?</p>
-
-<!-- more -->
-
-
-<h2>Qué esperaba</h2>
-
-<p>El nombre del autor me sonaba de algo, no sé exactamente de qué, pero no recuerdo
-haber leído algún otro libro suyo. Pero me sonaba que era un autor muy práctico,
-con muchísima experiencia en la industria del software, por lo que esperaba un
-libro de lleno de vivencias y experiencias. Quizá una historia que guiara al lector
-por el camino de crear un equipo autoorganizado (que está tan de moda ahora con
-las metodologías ágiles).</p>
-
-<h2>Qué encontré</h2>
-
-<p>Encontré una descripción de las fases en las que se puede encontrar un equipo de
-desarrollo, bueno, la visión del autor, pero algo es algo. El libro también está
-lleno de ejemplos y consejos sobre cómo mejorar el equipo, cómo hacer que
-miembros de un equipo mejoren en su carrera profesional.</p>
-
-<p>También, una sección del libro está dedicada a <em>testimonios</em> de absolutos expertos
-en la materia. Estos últimos capítulos están llenos de experiencias reales y de
-consejos de gente brillante y con una ingente cantidad de experiencia en el
-desarrollo de software.</p>
-
-<h2>Conclusiones</h2>
-
-<p>El libro consta de varias partes. Comienza describiendo las fases en las que se
-puede encontrar un equipo de desarrollo, y cómo avanzar de una a otra, hasta
-conseguir el equipo perfecto.</p>
-
-<p>Es un libro muy <em>buen-rollista</em>, tanto que a veces da la impresión de ser un
-libro de autoayuda. Pero el libro está lleno de consejos super útiles. Quizá
-se echa de menos la parte contraria, por ningún lado se encuentra cómo arreglar
-problemas dentro del equipo. Supongo que no era el objetivo del libro.</p>
-
-<p>La última sección del libro, la dedicada a los testimonios, tiene muchísimo
-valor. Los mejores de los mejores ponen su granito de arena en el libro y
-dedican unos consejos al lector que de otra forma sería imposible recopilar.</p>
-
-<p>Si lo que te interesa es el aspecto técnico del desarrollo, éste puede ser un
-libro para ti. Puedes leer mis notas en
-<a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/notes-software-team-leader-by-roy-osherove.markdown">Notas sobre Notes to a software team leader</a>.</p>
-
-<h2>Qué he aprendido</h2>
-
-<ul>
-<li>Usar la autoridad debe ser el último recurso. Ayudar a cada uno a encontrar
-su camino ayuda a que ambas partes ganen.</li>
-<li>Comunicación y traducción de información son habilidades críticas de un líder.</li>
-<li>Necesitas discutir, influenciar, negociar y no decirle a la gente lo que debe
-hacer.</li>
-<li>Dar feedback es una técnica muy efectiva, pero debe ser de confianza, concreto,
-constructivo, e incluir contexto.</li>
-<li>Un líder técnico debería programar, aunque no mucho, pero sobre todo debería
-practicar pair programming, design y code reviews y también debería buscar que
-no se genere demasiada deuda técnica.</li>
-</ul>
-
-
-<h2>Frases que me gustaría recordar</h2>
-
-<ul>
-<li>El autor identifica tres formas de liderar un equipo: comando y control, coach
-y facilitador. Simétricamente, identifica tres fases en las que se puede
-encontrar un equipo: supervivencia, aprendizaje, auto-organización.</li>
-<li>Para salir de la fase de supervivencia, hay que preocuparse de una cosa: crear
-tiempo libre (<em>slack time</em>) como un estándar en tu flujo de trabajo.</li>
-<li>Esto es por lo que te pagan: para hacer las cosas mejor y de la forma más
-profesional, clara y transparente posible. Te pagan por llevar al equipo a un
-nivel donde hacen las cosas profesionalmente, para llevar al equipo al próximo
-nivel de rendimiento y profesionalismo. Para ello, quizá tengas que tomar
-algunos riesgos.</li>
-<li>Para salir del modo de supervivencia, debes pasar al menos el 50% del tiempo
-con ellos. Lo primero que hay que hacer es una inversión de tiempo, y el que
-debe comenzar eres tú (no reuniones, quizá horas extra,...)</li>
-<li>El aprendizaje más rico y verdadero es cuando damos un salto en el conocimiento,
-no estando seguros en la parte plana del gráfico (hace referencia a un gráfico
-de aprendizaje de planicies seguidos de saltos, como escalones).</li>
-<li>Sumergirse en una nueva cultura de formas de trabajar es dar un salto
-cualitativo de conocimiento. Jugar a lo seguro no lo es.</li>
-<li>Crear un <em>lenguaje de compromiso</em> es un paso esencial para que los miembros
-del equipo mantengan sus promesas con los demás.</li>
-<li>Cuando la gente se te acerque con un problema, rétale a que lo resulva por
-sí mismo, pero que sepa que te tiene a tí como mentor, pero déjale claro que
-tú no vas a solucionar el problema.</li>
-<li>Miembros del equipo se pueden llevar deberes a casa, pero tiene que ser
-voluntario, no lo deben tomar como trabajo.</li>
-<li>Los problemas más difíciles de resolver nunca son técnicos, suelen involucrar
-a las personas.</li>
-<li>Un buen líder técnico mantiene siempre un ojo puesto en la calidad. Cuando el
-equipo crece, las personas de más confianza cumplen parte de esta misión.</li>
-<li>Una buena táctica para tener un equipo feliz es animar al equipo a usar un
-período de tiempo semanal para aprender nuevas habilidades o tecnologías.</li>
-<li>Las ideas de cambio deberían venir tanto de tí como de miembros del equipo.</li>
-</ul>
-
-
-<h2>Referencias y enlaces relacionados</h2>
-
-<ul>
-<li><a href="https://leanpub.com/teamleader">Notes to a software team leader</a> en Lean Pub</li>
-<li><a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/notes-software-team-leader-by-roy-osherove.markdown">Notas que he tomado sobre el libro</a></li>
 </ul>
 
 ]]></content>

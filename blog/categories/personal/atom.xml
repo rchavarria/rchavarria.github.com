@@ -4,7 +4,7 @@
   <title><![CDATA[Category: personal | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/personal/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2016-06-30T23:00:55+02:00</updated>
+  <updated>2016-07-17T23:17:12+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,149 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Practical Vim]]></title>
+    <link href="http://rchavarria.github.io/blog/2016/07/17/practical-vim/"/>
+    <updated>2016-07-17T23:15:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2016/07/17/practical-vim</id>
+    <content type="html"><![CDATA[<h6>de Drew Neil</h6>
+
+<h3>Por qué lo he leído</h3>
+
+<p><img class="left" src="https://raw.githubusercontent.com/rchavarria/blog-post-incubator/master/published-book-notes/img/practical-vim.jpg"></p>
+
+<p>Hace un tiempo decidí que quería <a href="http://rchavarria.github.io/blog/2014/10/11/aprendiendo-vim/">aprender a utilizar Vim</a>. Entre los muchos
+recursos para aprender se encontraba este libro, pero encontré más prácticos
+una serie de videos. Pero más adelante, escuchando el podcast <a href="http://giantrobots.fm/">Giant Robots</a>,
+hablaron de este libro, y cuando recibes varias señales, quiere decir algo.</p>
+
+<!-- more -->
+
+
+<h3>De qué trata el libro</h3>
+
+<p>El libro no es un manual desde cero. Tampoco es un manual avanzado. Es un
+conjunto de trucos, de sugerencias, que trata de explicar y convencer al lector
+de la filosofía y bondades del editor. Entre estos trucos encontrarás muchos
+que te sean de utilidad, y otros tantos tan extraños que ni te molestarás en
+entenderlos. Pero lo más importante es que describe una <em>forma de pensar en
+Vim</em>. A la hora de editar ficheros de texto no hay una única forma de hacer las
+cosas, ni tampoco una forma superior a otras alternativas, pero en Vim sí que
+hay una filosofía, una idea de atacar cada edición. Este libro te sumerge en
+ella.</p>
+
+<h3>Conclusiones y valoración</h3>
+
+<p>El libro es una maravilla. Está lleno de trucos. Muchos de ellos los conocía, y
+otros ni siquiera sabía que existían. En cambio, otros, después de llevar un
+tiempo usando Vim, tenía una ligera sospecha de que se podrían hacer, pero no
+había invertido el tiempo en averiguar cómo.</p>
+
+<p>Si tienes ganas de incarle el diente a un editor que sobrevive al paso del
+tiempo, échale un vistazo al libro.</p>
+
+<p>Debería echar un vistazo al proyecto de Mozilla <a href="https://github.com/mozilla/doctorjs">Doctor JS</a>, que contiene la
+herramienta <code>jsctags</code>, para generar ficheros ctags de proyectos JavaScript.</p>
+
+<h3>Frases que me gustaría recordar</h3>
+
+<blockquote><p>La fórmula del punto: una pulsación de tecla para mover, una pulsación de
+tecla para ejecutar la edición</p>
+
+<p>La estrategia óptima de edición es hacer que tanto el cambio como el
+movimiento sean repetibles</p>
+
+<p>Podemos hacer que el comando deshacer opere en palabras, frases o párrafos
+enteros solamente haciendo un uso corrrecto de la tecla <code>Esc</code></p>
+
+<p>La combinación de operadores con movimientos forman una especie de gramática.
+Aprender nuevos movimientos y operadores is como aprender el vocabulario de
+Vim. Si seguimos las reglas sencillas de la gramática, podremos expresar más
+y mejores ideas según vaya creciendo nuestro vocabulario</p>
+
+<p>Una buena forma de trabajar con macros sería: normalizar la posición del
+cursor, llegar hasta el objetivo con un movimiento repetible, hacer que la
+macro aborte cuando el movimiento falle y no encuentre el objetivo</p>
+
+<p>La sintaxis para definir un rango en los Ex commands es muy flexible. Se
+pueden mezclar números de línea, marcas y patrones de búsqueda. Y se puede
+aplicar un offset a cada uno de ellos</p>
+
+<p>Intenta crear el hábito de crear una marca global (<code>m{capital letter}</code>) antes
+de usar cualquier comando que interacciones con la lista de arreglos rápidos,
+lista de buffers o lista de argumentos</p>
+
+<p>Para editar una macro grabada en el registro <code>q</code>, simplemente podemos pegar
+el contenido de dicho registro con <code>"qy</code>, editar la línea y modificar el
+registro <code>q</code> con <code>"qy$</code></p></blockquote>
+
+<h3>Qué he aprendido</h3>
+
+<p>Hay toda una serie de nuevos comandos, combinaciones de ellos y herramientas
+que todavía no conocía o que he encontrado muy útiles:</p>
+
+<ul>
+<li><code>~</code>: intercambia el carácter actual de mayúsculas a minúsculas y viceversa</li>
+<li><code>g~</code>, <code>gu</code>, <code>gU</code>: intercambia mayúsculas/minúsculas en la selección, pasa a minúsculas, pasa a mayúsculas, respectivamente.</li>
+<li><code>&lt;C-h&gt;</code>, <code>&lt;C-w&gt;</code>, <code>&lt;C-u&gt;</code>: en modo inserción o modo comando, borra hacia atrás un carácter, una palabra o la línea completa, respectivamente.</li>
+<li><code>&lt;C-r&gt;{register}</code>: en modo inserción, inserta el texto desde el registro <code>register</code></li>
+<li><code>&lt;C-r&gt;&lt;C-p&gt;{register}</code>: idem, pero más inteligentemente, ya que arregla cualquier error de indentación por descuido</li>
+<li><code>&lt;C-v&gt;{code}</code>: en modo inserción, inserta un carácter especial por su código <code>code</code></li>
+<li><code>R</code>: nos lleva del modo normal al <em>modo de reemplazo</em>, donde cada carácter insertado reemplaza a un carácter existente</li>
+<li><code>v</code>, <code>V</code>, <code>&lt;C-v&gt;</code>: entra en los distintos modos visuales: de carácter, de línea o de bloque.</li>
+<li><code>o</code>: dentro del modo visual, la selección tiene dos extremos, con este comando intercambiamos entre ellos, de forma que podemos expandir la selección hacia adelante o hacia atrás</li>
+<li><code>.</code>, <code>%</code>: en el modo comando tienen significado especial cuando se especifica un rango. Significan la línea actual y todas las líneas, respectivamente.</li>
+<li><code>:t</code>: comando para duplicar líneas. <code>:3t 5</code> copia la línea 3 y la pega en la 5. <code>:.+2t .</code> copia dos líneas más abajo y la pega en la línea actual</li>
+<li><code>:m</code>: comando para mover líneas</li>
+<li><code>@:</code>: repite el último Ex Command, lo cual es muy útil cuando estamos haciendo cambios en múltiples ficheros, o vamos recorriendo la lista de búferes</li>
+<li>en modo comando, se pueden ejecutar comandos del modo normal, con el Ex Command <code>normal</code>. Por ejemplo, <code>:%normal A;</code> hace lo siguiente: <code>:</code> entramos en modo comando, <code>%</code> indica que afectará a todas las líneas del fichero, <code>normal</code> indica que introduciremos un comando del modo normal, <code>A;</code> es un comando del modo normal, y lo que hace es añadir al final de la línea el carácter <code>;</code>.</li>
+<li><code>&lt;C-o&gt;</code>: vuelve atrás en la lista de saltos (cambios de buffer, grandes saltos de líneas, búsquedas,...)</li>
+<li><code>&lt;Tab&gt;</code>, <code>&lt;C-n&gt;</code>, <code>&lt;Left&gt;</code> y <code>&lt;S-Tab&gt;</code>, <code>&lt;C-p&gt;</code>, <code>&lt;Right&gt;</code>: para movernos adelante y atrás durante el autocompletado</li>
+<li><code>&lt;C-r&gt;&lt;C-w&gt;</code>: en modo comando, copia la palabra debajo del cursor y la pega en la línea de comandos</li>
+<li><code>&lt;C-p&gt;</code>, <code>&lt;C-n&gt;</code>: después de entrar en el modo comando con <code>:</code> o <code>/</code>, podemos pulsarlos para ir hacia adelante o atrás en el historial de comandos o búsquedas</li>
+<li><code>q/</code>: abre la ventana <em>línea de comandos</em> con el historial de búsquedas</li>
+<li><code>q:</code>: abre la ventana <em>línea de comandos</em> con el historial de comandos</li>
+<li><code>&lt;C-f&gt;</code>: en modo comando, cambia a la ventana de línea de comandos</li>
+<li><code>:read !{shell command}</code>: pone el resultado del comando shell en el buffer actual</li>
+<li><code>:write !{shell command}</code>: usa el contenido del buffer actual como entrada para el comando shell</li>
+<li><code>:bnext</code>, <code>:bprevious</code>, <code>:bfirst</code>, <code>:blast</code>: para moverse por los buffers</li>
+<li><code>:edit {path to a dir}</code>: abre el contenido del directorio en un buffer, de forma que podemos navegar el sistema de ficheros sin necesidad de ningún plugin. <code>.</code> significa el actual directorio de trabajo. <code>:explore</code> o <code>:E</code> hace lo mismo. <code>:Sexplore</code> divide los buffers horizontalmente, <code>:Vexplore</code> divide los buffers verticalmente</li>
+<li>igual que existen <code>w</code>, <code>b</code>, <code>e</code> y <code>ge</code> (mueve al final de la palabra anterior), existen <code>W</code>, <code>B</code>, <code>E</code> y <code>gE</code> para hacerlo con PALABRAS, no con palabras</li>
+<li><code>is</code>, <code>as</code>, <code>ip</code>, <code>ap</code>: son movimientos (que se pueden usar con los comandos <code>d</code>, <code>c</code>, <code>y</code>,...) que engloban la actual frase (sentencia) o párrafo</li>
+<li><code>&lt;C-o&gt;</code>, <code>&lt;C-i&gt;</code>: para movernos adelante y atrás en los saltos que vamos dando</li>
+<li><code>:changes</code>: muestra el historial de cambios</li>
+<li><code>g;</code>, <code>g,</code>: para movernos adelante y atrás por el historial de cambios</li>
+<li><code>gi</code>: vuelve al último punto donde abandonamos el modo de inserción, entrando en dicho modo</li>
+<li><code>"_d{motion}</code>: borra lo indicado pero no copia el contenido en ningún sitio (bueno, sí, en el registro <code>_</code>, pero éste no guarda el contenido). Si no se indica nada, los comandos <code>x</code>, <code>s</code>, <code>d</code> y <code>c</code> modifican el registro sin nombre, con lo que pueden eliminar el contenido que hayamos copiado con <code>y</code>.</li>
+<li>el registro de copiado es el <code>0</code>, y éste no es modificado nunca por los comandos <code>x</code>, <code>s</code>, <code>d</code> y <code>c</code>.</li>
+<li>si al copiar o borrar nombramos un registro con mayúsculas, el contenido se añadirá a lo que contenga el registro</li>
+<li><code>\v</code>: activa la magia en los patrones de búsqueda. Hace que todos los carácteres excepto los alfanuméricos y <code>_</code> tengan un significado especial</li>
+<li><code>:%s///gn</code>: cuenta las ocurrencias del patrón actual de búsqueda</li>
+<li>flags del comando de sustitución: <code>g</code> reemplaza todas las ocurrencias en una línea, no solo la primera; <code>c</code> pide confirmación, <code>n</code> cuenta las ocurrencias, <code>&amp;</code> reusa los últimos flags</li>
+<li><code>:%s//\=@0/g</code>: sustituye todas las ocurrencias (flag <code>g</code>) de todas las filas (rango <code>%</code>) del último patrón buscado (<code>//</code>) con el contenido del registro <code>0</code> (<code>\=</code> evalúa una expresión, <code>@0</code> accede al registro <code>0</code>)</li>
+<li><code>&amp;</code>: repite los cambios hechos por el último comando de sustitución <code>:s/pattern/.../</code></li>
+<li><code>g&amp;</code>: repite el último comando de sustitución en todo el fichero</li>
+<li><code>:vimgrep {pattern} {file pattern}</code>: busca el patrón en la lista de ficheros y rellena la lista <em>quickfix</em>. Luego podemos pasar el resultado a la lista de argumentos con el plugin <em>qargs</em></li>
+<li><code>:global/{pattern}/{command}</code> o <code>:g</code>: permite ejecutar un comando en cada línea que cumpla con el patrón</li>
+<li><code>&lt;C-]&gt;</code>: mover hasta la definición de la palabra clave (tag) donde se encuentra el cursor</li>
+<li><code>&lt;C-t&gt;</code>: vuelve atrás en la última tag visitada</li>
+<li><code>:copen</code>, <code>:cclose</code>: abre/cierra la ventana de lista <em>quickfix</em></li>
+<li><code>:cnext</code>, <code>:cprevious</code>, <code>:cfirst</code>, <code>:clast</code>: para moverse por los marcadores de la lista quickfix</li>
+<li><code>:colder</code>, <code>:cnewer</code>: para pasar de listas quickfix más nuevas a las más viejas y viceversa</li>
+</ul>
+
+
+<h3>Recursos relacionados</h3>
+
+<ul>
+<li><a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/practical-vim-by-drew-neil.markdown">Notas tomadas sobre Practical Vim</a>, y en <a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/practical-vim-by-drew-neil.en.markdown">inglés</a> también</li>
+<li>Debería echar un vistazo al proyecto de Mozilla <a href="https://github.com/mozilla/doctorjs">Doctor JS</a>, que contiene la
+herramienta <code>jsctags</code>, para generar ficheros ctags de proyectos JavaScript.</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The Software Craftsman]]></title>
@@ -785,121 +928,6 @@ incurrir en una deuda</p></blockquote>
 <li>Blog <a href="http://ocana.github.io/">Dev's kitchen</a></li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[You've got commit!]]></title>
-    <link href="http://rchavarria.github.io/blog/2015/10/25/youve-got-commit/"/>
-    <updated>2015-10-25T15:18:00+01:00</updated>
-    <id>http://rchavarria.github.io/blog/2015/10/25/youve-got-commit</id>
-    <content type="html"><![CDATA[<p>Una de las mejores formas de aprender es haciendo cosas (<em>learning by doing</em>,
-que está muy de moda ahora). Y otra forma muy buena es manteniendo
-conversaciones con profesionales de tu sector. Por todo lo aprendido hay que
-estar agradecido, y qué mejor forma de agradecer que contribuir a la comunidad,
-a tu profesión, realizando algún trabajo del que se puedan beneficiar otros. La
-siguiente historia cuenta un camino que estoy recorriendo, de cómo empezé algo
-por el simple hecho de aprender y terminé participando en un proyecto open
-source como es <a href="http://exercism.io/">exercism.io</a>.</p>
-
-<p><img class="center" style="width: 225px" src="http://rchavarria.github.io/images/2015/exercism-logo.svg"/></p>
-
-<!-- more -->
-
-
-<h2>El origen</h2>
-
-<p>Llevaba un tiempo utilizando <a href="http://www.solveet.com/">solveet.com</a> para practicar con pequeños
-ejercicios de programación. De hecho, utilicé la plataforma con distintos
-lenguajes que estaba interesado en aprender. Pero poco a poco fui perdiendo la
-motivación para usarla. No recibía feedback de mis soluciones, de lo cual se
-pueden deducir dos cosas: que mis soluciones eran penosas o que la mayoría de
-los usuarios no estaban por la labor de compartir.</p>
-
-<p>En realidad, creo que la causa principal era que yo aportaba mi solución tiempo
-después de la última aportada, así que los usuarios probablemente ya habrían
-perdido interés en ese problema en concreto. No le puedo echar la culpa a
-Solveet, es una plataforma estupenda. Si estás buscando algo para practicar, y
-en español, te lo recomiendo. Disfrutarás de lo lindo.</p>
-
-<h2>Expandiendo horizontes</h2>
-
-<p>Con esa falta de motivación, llevaba rondando por la cabeza probar otras
-plataformas similares, y me decidí por <a href="https://projecteuler.net/">Project Euler</a>. Hablaban muy bien de
-ella, lleva mucho tiempo en funcionamiento y goza de fama, así que tenía que
-ser buena. Pero no duré mucho. Una de las <em>normas</em> de la casa pide que no hagas
-público tu código con el que resuelves los problemas. Pero ese es uno de los
-objetivos que busco, que la gente critique mi código y poco a poco vaya
-aprendiendo.</p>
-
-<p>Por casualidad, vi esta <a href="http://passionatevoices.org/2015/06/27/episode-3-katrina-owen/">entrevista a Katrina Owen</a>, creadora de exercism.io y
-me pareció que sería buena idea probar la plataforma. Uno de los requisitos es
-instalar un programa, para poder bajarte problemas a tu ordenador, resolverlos
-y poder subirlos a la plataforma, lo cual no me llamaba mucho la atención. Pero
-<a href="http://garajeando.blogspot.com.es/">Manuel Rivero, en Garajeando</a>, un blog que sigo, tiene varios post de sus
-soluciones en exercism.io, así que malo no podía ser.</p>
-
-<h2>Los baches del camino</h2>
-
-<p>Yo quería practicar resolviendo problemas con ECMAScript 2015. Ahí me llevé el
-primer chasco. Existía un track para JavaScript, pero no para ES2015. No se por
-qué, pero miré el código fuente en GitHub de exercism.io. Vi que había un
-repositorio para ECMAScript, pero en la página no existían esos ejercicios.
-Descubrí que era porque todavía no tenía el número de problemas necesarios para
-ser público. Hice un fork del proyecto, y me puse a juguetear.</p>
-
-<p>Me encontré con unos cuantos problemas para ser capaz de montar el entorno de
-desarrollo y ejecutar los tests: dependencias desactualizadas, comandos que no
-se ejecutaban bien en Windows (parecía que solo funcionaba en Mac). Después de
-pelearme un poco con el código y la configuración, con unas pequeñas
-modificaciones solucioné los problemas que tenía. Subí el código a
-<a href="https://github.com/rchavarria">mi cuenta de GitHub</a> e hize un <em>Pull Request</em> al proyecto.</p>
-
-<h2>Sorpresa</h2>
-
-<p>¡Y contestaron!  Después de pulir un par de detalles (es bastante común para
-primerizos y también la razón por la que muchos se echan para atrás a la hora
-de contribuir al open source) aceptaron mi solución. ¡Había contribuido a un
-proyecto open source!</p>
-
-<p>Pero todavía había cosas que me molestaban. Detalles. <em>El diablo está en los
-detalles</em>, dicen. La verdad es que no recuerdo exactamente qué era, pero tenía
-<em>trabajo</em> por hacer. Pregunté un par de cosas a Katrina, arreglé un par de
-detalles más, algún Pull Request más, y sin esperarlo:</p>
-
-<blockquote><p>You've got commit!</p></blockquote>
-
-<p>¿Qué es eso? ¿Qué significa? Tuve que leer el correo varias veces. No entendía.
-bla bla bla, <em>te han añadido a un par de grupos en GitHub</em>, bla bla bla,
-<em>permisos de escritura</em>, bla bla bla, ... ¡Me estaban dando permisos de
-escritura en el proyecto! Sienta bastante bien saber que estás contribuyendo a
-un proyecto open source, y que lo están utilizando muchos usuarios.</p>
-
-<h2>¿El final?</h2>
-
-<p>¿Y ahora qué? Tenía que seguir. No podía dejarlo ahí. Asi que me puse como
-objetivo que exercism.io tendría su <a href="http://exercism.io/languages/ecmascript">track de ECMAScript 2015</a>.</p>
-
-<p>Un punto para lograrlo era incorporar al menos 10 ejercicios al track. Fácil.
-Un poco de trabajo... y conseguido. Pero otro punto requería de varias
-personas. La idea es que haya varias personas encargadas de gestionar el track,
-dando feedback a los primeros usuarios, para que no se sientan desamparados, e
-ir manteniendo el código con nuevos cambios provenientes del proyecto global.
-Pequeñas tareas comunes a todos los lenguages.</p>
-
-<p>¡Me quedé flipado! Cuando contacté por email con varios usuarios de
-exercism.io, sin conocerlos de nada,... ¡Me respondieron todos! ¡Todos! Algunos
-de ellos no podían embarcarse en el proyecto, pero respondieron. Flipando. Con
-su ayuda, el track se hizo público y el trabajo duro acaba de comenzar. Ahora
-toca dar feedback a los usuarios y seguir incorporando ejercicios, para que los
-usuarios vean que el track está vivo y se animen a seguir practicando sus
-habilidades como programadores.</p>
-
-<h2>¿Te animas?</h2>
-
-<p>Así que, ya hay <a href="http://exercism.io/languages/ecmascript">track de ECMAScript 2015</a> en exercism.io. Os animo a probar la
-plataforma, a practicar, a mejorar y a comentar las soluciones de los demás.
-Espero veros por allí. Si decidis probarlo, veréis mi careto.</p>
 ]]></content>
   </entry>
   
