@@ -78,6 +78,7 @@ Videos de Derek Wyatt : http://derekwyatt.org/vim/tutorials/
 - [Vim golf](http://vimgolf.com/)
 - [Vim Kata meetup](https://github.com/christoomey/vim-kata-meetup), de Chris Toomey
 - [Vim galore](https://github.com/mhinz/vim-galore)
+- [Vim GIFs](https://vimgifs.com/): un recurso muy visual, con *videos* diarios sobre comandos muy específicos del editor. Ideal para consumir pequeñas píldoras cada día. También en Twitter [@vimgifs](https://twitter.com/vimgifs)
 
 ## El mítico editor Vim, #linuxIO
 

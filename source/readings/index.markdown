@@ -30,6 +30,7 @@ Así que aquí está mi Lista de Lectura:
 ## Tengo pensado leer
 
 - [Seveneves (7 Evas)](https://www.amazon.es/gp/product/8466658955), de Neal Stephenson
+- [Code Complete](http://www.stevemcconnell.com/cc.htm), de Steve McConnell, recomendado por John Sonmez en uno de sus [vídeos](https://www.youtube.com/watch?v=aG5ks3de_wQ)
 - [The new one minute manager](https://www.amazon.com/New-One-Minute-Manager/dp/0062367544), de Ken Blanchard, recomendado por [Jorge (@flipper83)](https://twitter.com/flipper83) y [Carlos Blé](https://twitter.com/carlosble)
 - [xUnit test patterns](http://xunitpatterns.com/index.html), de Gerard Meszaros
 - [The grumpy programmer's PHPUnit cookbook](https://leanpub.com/grumpy-phpunit), de Chris Hartjes, amigo de J.B.Rainsberger
@@ -43,6 +44,7 @@ Así que aquí está mi Lista de Lectura:
 - [The Leprechauns of software development](https://leanpub.com/leprechauns), de Laurent Bossavit, recomendado por [Alvaro García](http://twitter.com/alvaroviz) a [Leo Antolí](http://twitter.com/lantoli)
 - [Test driven development: by example](http://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530), de Kent Beck
 - [Las reglas no escritas para triunfar en la empresa](http://www.amazon.es/escritas-triunfar-empresa-Inform%C3%A1tica-Profesional/dp/8492650435), de Roberto Canales (disponible en tu drive, conseguido gratuitamente gracias a Autentia)
+- [Galileo's middle finger](https://www.amazon.es/Galileos-Middle-Finger-Alice-Dreger/dp/1594206082?SubscriptionId=AKIAILSHYYTFIVPWUY6Q&tag=duc0d-21&linkCode=xm2&camp=2025&creative=165953&creativeASIN=1594206082), de Alice Dreger, libro que recomendaron a Robert C. Martin y le gustó (https://twitter.com/unclebobmartin/status/759165130349305857)
 - [Guía de supervivencia: puntos historia](http://www.javiergarzas.com/2015/10/nueva-guia-de-supervivencia-agil-estimacion-con-puntos-historia-si-gratis.html), de Javier Garzás
 - [Pragmatic thinking and learning](https://pragprog.com/book/ahptl/pragmatic-thinking-and-learning), de Andy Hunt, recomendado por [Alvaro García](http://alvarogarcia7.github.io/blog/2015/12/31/books-read-in-2015q4/) en su blog
 - [Object thinking](http://www.amazon.com/dp/0735619654), de David West, recomendado por [Avdi Grimm](http://devblog.avdi.org/), en [Developer on Fire #108](http://developeronfire.com/episode-108-avdi-grimm-your-passion-is-yours-and-yours-alone)
