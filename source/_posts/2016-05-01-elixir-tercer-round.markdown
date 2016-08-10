@@ -5,7 +5,8 @@ date: 2016-05-01 17:46
 author: Ruben Chavarria
 comments: true
 categories: 
-- 
+- elixir
+- learning
 published: true
 footer: false
 sidebar: true
