@@ -4,7 +4,7 @@
   <title><![CDATA[Category: learning | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/learning/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2016-07-17T23:17:12+02:00</updated>
+  <updated>2016-08-10T18:44:41+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,449 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Elixir: cuarto asalto]]></title>
+    <link href="http://rchavarria.github.io/blog/2016/08/10/elixir-cuarto-asalto/"/>
+    <updated>2016-08-10T17:20:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2016/08/10/elixir-cuarto-asalto</id>
+    <content type="html"><![CDATA[<p>Éste es el cuarto asalto en mi aventura aprendiendo <a href="http://elixir-lang.org/">Elixir</a>. En esta ocasión
+trato con tipos de datos binarios, cadenas y <strong>sigils</strong>. No es mucho, pero las cadenas son
+una parte esencial de cualquier lenguaje de programación. Y dominarlas
+significa dominar una gran parte del lenguaje.</p>
+
+<p>Por supuesto, sigo aprendiendo con el método descrito en el post sobre <a href="/blog/2016/01/17/aprendiendo-elixir/">aprender Elixir</a>:</p>
+
+<ul>
+<li>Aprender lo suficiente para comenzar</li>
+<li>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</li>
+<li>Aprender lo suficiente para hacer algo de utilidad</li>
+<li>Enseñar lo aprendido</li>
+</ul>
+
+
+<p><img class="right" src="/images/2016/fourth-fight.jpg"></p>
+
+<div style="text-align: center">
+  <span style="font-size: 60%">
+Imagen basada en <a href="https://flic.kr/p/5yHK4Y">Muñeco de Gohan y Bu peleando</a> de <a href="https://www.flickr.com/photos/alotor/">Alonso Javier Torres</a>, <a href="https://creativecommons.org/licenses/by-nc/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>
+  </span>
+</div>
+
+
+
+
+<!-- more -->
+
+
+<h2>Aprender lo suficiente para comenzar</h2>
+
+<p>Para definir una cadena se pueden usar comillas simples o comillas dobles.
+También se puede usar comillas triples, para escribir lo que llaman <code>heredocs</code>,
+y se suelen usar para escribir comentarios para documentar métodos y módulos.</p>
+
+<p>En Elixir, existe lo que llaman <em>sigils</em> (que se podría traducir como código,
+señal o símbolo mágico). Comienzan con <code>~</code>, seguido de una letra que determina
+el tipo de símbolo:</p>
+
+<ul>
+<li><code>c</code> para una lista de carácteres</li>
+<li><code>r</code> para expresión regular</li>
+<li><code>w</code> para una lista de palabras separado por espacios</li>
+<li>y hay más</li>
+</ul>
+
+
+<p>y cuyo valor se puede enmarcar en distintos delimitadores: <code>&lt;..&gt;</code>, <code>{...}</code>,
+<code>[...]</code>,...</p>
+
+<p>Un uso muy típico es para escribir expresiones regulares:</p>
+
+<p><code>
+~r{[0-9]+[A-Z]*}
+</code></p>
+
+<p>Los <em>sigils</em> pueden incluso personalizarse, y crear los tuyos propios.</p>
+
+<p>Las cadenas definidas mediante comillas dobles, son lo que se conoce en otros
+lenguajes como <em>strings</em>. Las cadenas con comillas simples, se llaman
+<em>character lists</em> (o <em>char list</em>), listas de carácteres, y son listas, arrays.</p>
+
+<p><strong>Cadenas con comillas simples</strong></p>
+
+<p>Son una lista de códigos que representan los carácteres. Y como son una lista,
+podemos usar métodos de <code>List</code>: <code>++</code>, <code>--</code>, <code>List.zip</code>, <code>[ head | tail ]</code>,...</p>
+
+<p>Para saber el número entero que representa un carácter, se puede usar la
+notación <code>?&lt;chr&gt;</code>, por ejemplo, <code>?a</code> o <code>?4</code>, para saber los valores numéricos
+de los carácteres <code>a</code> y <code>4</code> respectivamente.</p>
+
+<p><strong>Binarios</strong></p>
+
+<p>Qué mejor que un poco de código para ver cómo se usa este tipo de datos</p>
+
+<p>```</p>
+
+<h1>el tipo <em>binario</em> representa una secuencia de bits</h1>
+
+<p>iex> b = &lt;&lt; 1, 2, 3 >>
+&lt;&lt;1, 2, 3>>
+iex> byte_size b
+3
+iex> bit_size b
+24</p>
+
+<h1>se puede especificar también la cantidad de bits que queremos que ocupen</h1>
+
+<p>iex> b = &lt;&lt; 1::size(2), 1::size(3) >>
+&lt;&lt;9::size(5)>>
+iex> byte_size b
+1
+iex> bit_size b
+5</p>
+
+<h1>también se pueden almacenar enteros, floats y otros binarios</h1>
+
+<p>iex> an_int = &lt;&lt; 1 >>
+&lt;<1>>
+iex> a_float = &lt;&lt; 2.5 :: float >>
+&lt;&lt;64, 4, 0, 0, 0, 0, 0, 0>>
+iex> mix = &lt;&lt; an_int :: binary, a_float :: binary >>
+&lt;&lt;1, 64, 4, 0,......>></p>
+
+<h1>extraer valores (echa un vistazo a cómo se codifican los floats según</h1>
+
+<h1>el estándar IEEE 754)</h1>
+
+<p>iex> &lt;&lt; sign::size(1), exp::size(11), mantissa::size(52) >> = &lt;&lt; 3.14159::float >>
+iex> (1 + mantissa / :math.pow(2, 52)) * :math.pow(2, exp-1023)
+3.14159</p>
+
+<h1>las cadenas con comillas dobles "" (dqs: double quoted string) son de</h1>
+
+<h1>tipo binario, y están codificadas en UTF-8 lo que significa que la</h1>
+
+<h1>longitud de la cadena no tiene por qué coincidir con el tamaño en bytes</h1>
+
+<p>iex> dqs = "∂x/∂y"
+"∂x/∂y"
+iex> String.length dqs
+5
+iex> byte_size dqs
+9
+```</p>
+
+<p><strong>Procesando cadenas</strong></p>
+
+<p>Igual que podemos dividir una lista en <code>head</code> y <code>tail</code>, podemos extraer el
+primer carácter (se refiere a él como <em>grapheme</em>, grafema/grafo/...) de una
+cadena binaria o <em>dqs</em> especificando que <code>head</code> es de tipo <code>utf8</code> y que <code>tail</code>
+sigue siendo de tipo binario:</p>
+
+<p><code>
+defp each(&lt;&lt; head::utf8, tail::binary &gt;&gt;), do [ head | each(tail) ]
+defp each(&lt;&lt;&gt;&gt;), do []
+</code></p>
+
+<h2>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</h2>
+
+<p>Está claro que hay que ver la documentación del módulo <a href="http://elixir-lang.org/docs/stable/elixir/String.html"><code>String</code></a>, que contiene
+métodos para manipular cadenas encerradas en comillas dobles (recuerda, son de
+tipo binario).</p>
+
+<p>Las expresiones regulares son bastante comunes, y en Elixir se suelen usar
+mediante <a href="http://elixir-lang.org/getting-started/sigils.html"><em>sigils</em></a>. Son un aspecto bastante curioso del lenguaje y pueden ser
+personalizados.</p>
+
+<h2>Aprender lo suficiente para hacer algo de utilidad</h2>
+
+<ul>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-04/exercise-01-round-04.exs">exercise-01-round-04.exs</a>: escribe una función que devuelva <code>true</code> si el
+parámetro (una lista de carácteres) contiene sólo carácteres imprimibles (del
+espacio a la tilde)</li>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-04/exercise-02-round-04.exs">exercise-02-round-04.exs</a>: escribe una función que devuelva <code>true</code> en el
+caso de que dos palabras sean anagramas. <code>anagram?(word1, word2)</code></li>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-04/exercise-03-round-04.exs">exercise-03-round-04.exs</a>: escribe una funcion que calcule suma, resta,...
+de una cadena pasada como parámetro: <code>calculate('123 + 27') # =&gt; 150</code>. Este
+es especialmente difícil (al menos para mi nivel): devolver tuplas, parsear
+números (utilizando recursión de una forma muy imaginativa), utilizando pattern
+matching para construir funciones dependiendo del operador,...</li>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-04/exercise-04-round-04.exs">exercise-04-round-04.exs</a>: escribe una función que pasándole una lista de
+dqs (double quoted strings) las imprima centradas en un ancho de la palabra
+más larga, cada una en una línea distinta.</li>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-04/exercise-05-round-04.exs">exercise-05-round-04.exs</a>: escribe una función que pase a mayúsculas la
+primera letra de cada frase en una cadena</li>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-04/exercise-06-round-04.exs">exercise-06-round-04.exs</a>: escribe una función que parsee un fichero CSV
+(que tendrá los campos id, estado y cantidad neta), y que se lo pase a la
+función desarrollada en el tercer asalto, al ejercicio
+<code>exercise-02-round-03.exs</code>.</li>
+</ul>
+
+
+<h2>Enseñar lo aprendido, y repetir desde el paso 7</h2>
+
+<p>Aquí está, este post, mis notas, mis pensamientos, mis dudas y mi código. Hasta el siguiente asalto.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Elixir: tercer asalto]]></title>
+    <link href="http://rchavarria.github.io/blog/2016/05/01/elixir-tercer-round/"/>
+    <updated>2016-05-01T17:46:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2016/05/01/elixir-tercer-round</id>
+    <content type="html"><![CDATA[<p>Éste es el tercer asalto para aprender <a href="http://elixir-lang.org/">Elixir</a>, y las cosas se van poniendo
+interesantes, aunque todavía siento que estoy muy verde y me falta todavía
+mucho para ser capaz de hacer las cosas más sencillas.</p>
+
+<p>En este asalto, aprendo nuevas cosas proporcionadas por los módulos <code>Enum</code>,
+<code>Stream</code> y otras coleciones, así como las <em>comprehensions</em>, que me recuerdan
+mucho a los clásicos bucles <code>for</code>.</p>
+
+<p>Sigo aprendiendo siguiendo el método descrito en el post sobre <a href="/blog/2016/01/17/aprendiendo-elixir/">aprender Elixir</a>:</p>
+
+<ul>
+<li>Aprender lo suficiente para comenzar</li>
+<li>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</li>
+<li>Aprender lo suficiente para hacer algo de utilidad</li>
+<li>Enseñar lo aprendido</li>
+</ul>
+
+
+<p><img class="right" src="/images/2016/third-fight.png"></p>
+
+<div style="text-align: center">
+  <span style="font-size: 60%">
+Imagen basada en <a href="https://flic.kr/p/c9bWJA">3rd fight</a> de <a href="https://www.flickr.com/photos/takfoto/">Tomasz Krawczak</a>, <a href="https://creativecommons.org/licenses/by-nc/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by-nc/2.0/legalcode">CC BY-NC 2.0</a>
+  </span>
+</div>
+
+
+
+
+<!-- more -->
+
+
+<h2>Aprender lo suficiente para comenzar</h2>
+
+<p><strong>Procesando colleciones con <code>Enum</code></strong></p>
+
+<p>Elixir tiene muchos tipos de datos que actúan como colleciones: listas, mapas,
+diccionarios, rangos, ficheros e incluso funciones. Las colecciones se pueden
+iterar (sobretodo con funciones del módulo <code>Enum</code>), y algunas permiten añadir
+elementos.</p>
+
+<p>```</p>
+
+<h1>convierte cualquier colección a List</h1>
+
+<p>list = Enum.to_list 1..5
+  #=> [1, 2, 3, 4, 5]</p>
+
+<h1>concatena</h1>
+
+<p>Enum.concat([1, 2, 3], [4, 5, 6])
+  #=> [1, 2, 3, 4, 5]</p>
+
+<h1>crea nuevas colleciones</h1>
+
+<p>Enum.map(list, &amp;(&amp;1 * 10))
+  #=> [10, 20, 30, 40, 50]</p>
+
+<h1>selecciona elementos por posición</h1>
+
+<p>Enum.at(10..20, 3) #=> 13
+Enum.at(10..20, 20) #=> nil
+Enum.filter(list, &amp;(&amp;1 > 2)) #=> [3, 4, 5]
+Enum.reject(list, &amp;Integer.is_even/1) #=> [1, 3, 5]</p>
+
+<h1>ordena y compara elementos</h1>
+
+<p>Enum.sort([ "there", "was", "a", "crooked", "man" ],
+  &amp;(String.length(&amp;1) &lt;= String.length(&amp;2))
+Enum.max([ "there", "was", "a", "crooked", "man" ]) #=> "was"</p>
+
+<h1>divide una colleción</h1>
+
+<p>Enum.take(list, 3)    #=> [1, 2, 3]
+Enum.take_every(list, 2)  #=> [1, 3, 5]
+Enum.take_while(list, &amp;(&amp;1 &lt; 4))
+Enum.split(list, 3)
+  #=> { [1, 2, 3], [4, 5] }
+Enum.split_while(list, &amp;(&amp;1 &lt; 4))
+  #=> { [1, 2, 3], [4, 5] }</p>
+
+<h1>une los elementos de una colección</h1>
+
+<p>Enum.join(list)
+Enum.join(list, ", ")   #=> "1, 2, 3, 4, 5"</p>
+
+<h1>hace preguntas sobre operaciones</h1>
+
+<p>Enum.all?(list, &amp;(&amp;1 &lt; 4))
+Enum.any?(list, &amp;(&amp;1 &lt; 4))
+Enum.member?(list, 4)
+Enum.empty?(list)</p>
+
+<h1>mezcla colecciones</h1>
+
+<p>Enum.zip(list, [:a, :b, :c])
+  #=> [ {1, :a}, {2, :b}, {3, :c} ]</p>
+
+<h1>otros</h1>
+
+<p>Enum.reduce(<collection>, <function>)
+```</p>
+
+<p><strong><code>Stream</code>s, enumerables diferidos o perezosos</strong></p>
+
+<p>El módulo <code>Stream</code> permite enumerar collecciones de forma diferida (<em>lazy</em> es
+la palabra utilizada, que traduzco libremente como <em>diferida</em>).</p>
+
+<p>Las funciones del módulo <code>Enum</code> procesan todos los elementos de la colección de
+una vez, consumiendo memoria. Las del módulo <code>Stream</code> consumen los elementos de
+uno en uno, según se van necesitando. Los <em>streams</em> se pueden componer, es
+decir, los streams son collecciones, por lo que se pueden usar las funciones de
+<code>Stream</code> con los propios streams (sería como crear streams de streams).</p>
+
+<p>Finalmente, para obtener los resultados, se puede convertir un <code>Stream</code> a una
+lista:</p>
+
+<p><code>
+[1, 2, 3, 4, 5]
+  |&gt; Stream.map(&amp;(&amp;1 * &amp;1)
+  |&gt; Stream.map(&amp;(&amp;1 + 1)
+  |&gt; Stream.filter(fn x -&gt; rem(x, 2) == 1 end)
+  |&gt; Enum.to_list
+</code></p>
+
+<p>Con <code>Enum</code> debemos esperar a tener todos los elementos de la colección para
+empezar a procesarlos. Con <code>Stream</code> podemos comenzar a procesarlos
+inmediatamente. Imagina que leemos de un servidor remoto, o de un sensor, ambos
+mandan datos infinitamente, por lo que <code>Enum</code> no sería una opción válida en
+este caso.</p>
+
+<p>Normalmente, serán las librerías y los frameworks quienes nos proporcionen los
+streams con los que vamos a trabajar, pero también podemos crearlos nosotros
+con métodos proporcionados por Elixir: <code>cycle</code>, <code>repeatedly</code>, <code>iterate</code>,
+<code>unfold</code> y <code>resource</code>.</p>
+
+<p>```</p>
+
+<h1>cycle toma una coleción y va devolviendo de uno en uno indefinidamente</h1>
+
+<h1>cuando la colección se acaba, vuelve a empezar desde el principio</h1>
+
+<p>Stream.cycle([1, 2, 3])
+  |> Enum.take(10)</p>
+
+<h1>=> [1, 2, 3, 1, 2, 3, 1, 2, 3, 1]</h1>
+
+<h1>repeatedly toma una función y la ejecuta cada vez que se le pide un elemento</h1>
+
+<p>Stream.repeatedly(fn -> true end) |> Enum.take(3)
+  #=> [ true, true, true ]
+Stream.repeatedly(&amp;:random.uniform/0) |> Enum.take(3)
+  #=> [ 0.723, 0.941, 0.1234 ]</p>
+
+<h1>iterate toma un valor inicial y una función. el primer elemento es el valor inicial,</h1>
+
+<h1>el siguiente es el valor devuelto por la función pasándole el valor inicial, el siguiente</h1>
+
+<h1>es el valor devuelto por la función pasándole el valor anterior, así indefinidamente</h1>
+
+<p>Stream.iterate(0, &amp;(&amp;1 + 1)) |> Enum.take(5)
+  #=> [0, 1, 2, 3, 4]</p>
+
+<h1>unfold es similar a iterate, pero con tuplas. el primer valor de la tupla</h1>
+
+<h1>significa el valor de la iteración actual, el segundo valor significa el valor</h1>
+
+<h1>a procesar en la siguiente iteración</h1>
+
+<p>Stream.unfold( {0, 1}, fn {f1, f2} -> {f1, {f2, f1+f2}} end ) |> Enum.take(15)
+  #=> [0, 1, 1, 2, 3, 5, 8, 13, ... fibonacci]</p>
+
+<h1>resource es similar a unfold. toma tres funciones como argumentos. la primera</h1>
+
+<h1>crea el recurso, la segunda va dando valores de las iteraciones (como unfold)</h1>
+
+<h1>y la tercera cierra el recurso (fichero, bbdd, ...)</h1>
+
+<p>```</p>
+
+<p><strong>El protocolo <code>Collectable</code></strong></p>
+
+<p>No son lo mismo, y todavía no soy capaz de describir exactamente lo que es un
+<em>protocolo</em>, pero el concepto que tengo de ellos hoy mismo es que son
+<em>equivalentes</em> a las interfaces en los lenguajes orientados a objetos.</p>
+
+<p><code>Enumerable</code> es un protocolo que permite iterar una colección. <code>Collectable</code>
+permite añadir elementos a una colección. Se puede utilizar <code>Enum.into</code> para
+hacerlo y convertir un tipo de colección en otro.</p>
+
+<p><code>
+Enum.into 1..5, [1000, 10001]
+  #=&gt; [1000, 1001, 1, 2, 3, 4, 5]
+</code></p>
+
+<p><strong>Comprehensions</strong></p>
+
+<p>Se le pueden pasar una o más colecciones, entonces extrae todas las
+combinaciones posibles de los elementos de dichas colecciones, opcionalmente
+puede filtrar valores, y genera una nueva colección con los valores que pasan
+el filtro. La sintaxis es <code>result = for &lt;generator&gt; or &lt;filter&gt;, do:
+&lt;expression&gt;</code>. Donde <code>&lt;generator&gt;</code> tiene la forma <code>pattern &lt;- collection</code> y el
+filtro es simplemente una condición, por ejemplo <code>x &lt; 4</code>.</p>
+
+<p>Las variables declaradas en una comprehension tienen la misma como ámbito, no
+escapan de él.</p>
+
+<p>```
+for x <- [1, 2, 3, 4, 5], x < 4, do: x * x
+  # => [1, 4, 9]</p>
+
+<p>for x <- [1, 2], y <- [5, 6], do: x * y
+  # => las posibles combinaciones serían [1, 5], [1, 6], [2, 5], [2, 6]
+  # => y esas combinaciones serían las iteraciones de la comprehension</p>
+
+<h1>se pueden usar variables de generadores en siguientes generadores</h1>
+
+<p>min_maxes = [ {1, 4}, {2, 3}, {10, 15} ]
+for { min, max } <- min_maxes, n <- min..max, do: n
+  # => [ 1, 2, 3, 4, 2, 3, 10, 11, 12, 13, 14, 15 ]</p>
+
+<h1>por defecto, las comprehensions devuelven una lista. Se puede cambiar</h1>
+
+<h1>con el parámetro <code>into:</code></h1>
+
+<p>for x <- ~w{ cat dog }, into: Map.new, do: { x, String.upcase(x) }
+  # => %{ "cat" => "CAT", "dog" => "DOG" }
+```</p>
+
+<h2>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</h2>
+
+<p>Podría investigar sobre qué son los protocolos, pero creo que están descritos
+en el libro del cual está surgiendo esta serie de posts, por lo que esperaré a
+llegar ahí.</p>
+
+<p>Tener siempre muy presente las funciones del módulo <code>Enum</code>, ya que casi seguro
+que se van a utilizar siempre que haya colecciones de por medio.</p>
+
+<h2>Aprender lo suficiente para hacer algo de utilidad</h2>
+
+<ul>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-03/exercise-01-round-03.exs">exercise-01-round-03.exs</a>: con ayuda de la función <code>span</code> escrita anteriormente, escribir una función que devuelva la lista de números primos de <code>2</code> hasta <code>n</code></li>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-03/exercise-02-round-03.exs">exercise-02-round-03.exs</a>: a partir de dos listas, una de tasas de impuestos, y otra de compras, calcular el importe total de cada una de las compras</li>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-03/lists-and-recursion-5.exs">lists-and-recursion-5.exs</a>: implementar funciones presentes en <code>Enum</code>: <code>all?</code>, <code>each</code>, <code>filter</code>, <code>take</code> y <code>split</code>.</li>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-03/lists-and-recursion-6.exs">lists-and-recursion-6.exs</a>: implementar <code>flatten</code></li>
+</ul>
+
+
+<h2>Enseñar lo aprendido, y repetir desde el paso 7</h2>
+
+<p>Aquí está, este post, mis notas, mis pensamientos, mis dudas y mi código. Hasta el siguiente asalto.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Elixir: segundo asalto]]></title>
@@ -814,511 +1257,8 @@ suficiente para ir cogiendo ritmo.</p>
 <li><a href="/blog/2016/02/09/elixir-primer-asalto/">Primer asalto</a>: tipos, funciones, pattern matching y módulos</li>
 <li><a href="/blog/2016/03/27/elixir-segundo-asalto/">Segundo asalto</a>: listas, diccionarios, structs y sets</li>
 <li><a href="/blog/2016/05/01/elixir-tercer-round/">Tercer asalto</a>: más colecciones, módulos <code>Enum</code>, <code>Stream</code> y <em>comprehensions</em></li>
+<li><a href="/blog/2016/08/10/elixir-cuarto-asalto/">Cuarto asalto</a>: tipos de datos binarios, cadenas, <code>String</code>s y <em>sigils</em></li>
 </ol>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Se aceptan mejoras]]></title>
-    <link href="http://rchavarria.github.io/blog/2015/11/22/se-aceptan-mejoras/"/>
-    <updated>2015-11-22T22:27:00+01:00</updated>
-    <id>http://rchavarria.github.io/blog/2015/11/22/se-aceptan-mejoras</id>
-    <content type="html"><![CDATA[<p>Existe una cosa maravillosa en el mundo de open source, y es que personas que
-ni siquiera sabes que existen, usan tu trabajo, lo mejoran con el suyo, y te lo
-donan a tí para que otra gente se beneficie del trabajo de ambos.</p>
-
-<p><img class="left" src="/images/2015/contribution.png"></p>
-
-<p>Imagina que tienes una librería y tienes una base de usuarios. Ningún software
-se adapta a todos sus usuarios, así que lo más seguro es que los usuarios de tu
-librería encuentren algún detalle que no encaja a la perfección con sus
-necesidades. ¿No sería incríble que tus propios usuarios mejoraran la librería y
-te dieran su trabajo así como les das tú el tuyo? Pues eso es lo que pasa
-precisamente con el open source.</p>
-
-<p>Y algo parecido pasa cuando contribuyes a algún proyecto open source. Tus
-contribuciones son usadas por los usuarios del proyecto. Y algunos de ellos
-proponen nuevas mejoras al proyecto. Quizá algunas de estas mejoras sean sobre
-el trabajo que tú has realizado. Gente que ni conoces está aportando su
-experiencia para mejorar tu trabajo. Hay que ser muy tonto para no aprovechar
-esta oportunidad para aprender.</p>
-
-<!-- more -->
-
-
-<p>Este artículo describe el proceso a seguir para aceptar mejoras en un proyecto
-publicado en <a href="https://github.com/">Github</a>, donde [<code>git</code>] es usada como herramienta de control de
-versiones. Estas mejoras son propuestas por usuarios externos al proyecto a
-través de <a href="https://help.github.com/articles/using-pull-requests/">Pull Requests</a> (o también PR). Github te ayuda a la hora de
-incorporar esas mejoras a tu proyecto, pero hacerlo así deja la historia de tu
-control de versiones hecha unos zorros (en <a href="http://blog.differential.com/best-way-to-merge-a-github-pull-request/">Best way to merge a pull request</a>
-lo cuentan más detalladamente).</p>
-
-<p>Ésta es la secuencia de comandos mediante los cuales se incoroporarían los
-cambios propuestos en un Pull Request con número <code>pr-number</code> desde una rama
-creada por el autor llamada <code>user-working-branch</code>:</p>
-
-<p>```
-rchavarria@proyect$ git checkout master
-rchavarria@proyect$ git fetch origin
-rchavarria@proyect$ git reset --hard origin/master</p>
-
-<p>rchavarria@proyect$ git fetch origin refs/pull/<pr-number>/head
-rchavarria@proyect$ git checkout -b <user-working-branch> FETCH_HEAD
-rchavarria@proyect$ git rebase master</p>
-
-<p>rchavarria@proyect$ git checkout master
-rchavarria@proyect$ git merge --no-ff <user-working-branch>
-rchavarria@proyect$ git push origin master
-```</p>
-
-<h2>Limpiar el espacio de trabajo</h2>
-
-<p><code>
-rchavarria@proyect$ git checkout master
-Already on 'master'
-Your branch is up-to-date with 'origin/master'.
-rchavarria@proyect$ git fetch origin
-remote: Counting objects: 66, done.
-remote: Compressing objects: 100% (43/43), done.
-remote: Total 66 (delta 14), reused 6 (delta 6), pack-reused 17
-Unpacking objects: 100% (66/66), done.
-From https://github.com/exercism/xecmascript
-   9b32d79..de450d0  master     -&gt; origin/master
- * [new branch]      new-exercise-raindrops -&gt; origin/new-exercise-raindrops
-</code></p>
-
-<p>Con estos comandos simplemente se cambia a la rama <code>master</code> y se descargan los
-cambios que existan en el repositorio remoto (sin aplicar los cambios a ningún
-archivo todavía). En este caso, el repositorio es uno de Github. En el código
-anterior se puede ver cómo existe una nueva rama en remoto,
-<code>new-exercise-raindrops</code>, que se corresponde con el Pull Request que vamos a
-incorporar al repositorio.</p>
-
-<p><code>
-rchavarria@proyect$ git reset --hard origin/master
-HEAD is now at de450d0 Merge pull request #78 from rchavarria/new-exercise-roman-numerals
-</code></p>
-
-<p>Este comando elimina cualquier cambio en local y lo sobreescribe exactamente
-con los cambios que ha tomado del repositorio remoto. De esta forma <strong>se tiene
-en local exactamente lo mismo que en remoto</strong>, y es un punto de partida seguro.</p>
-
-<h2>Descargar las mejoras</h2>
-
-<p>Anteriormente git ha avisado de que hay una nueva rama, un nuevo Pull Request.</p>
-
-<p><code>
-rchavarria@proyect$ git fetch origin refs/pull/80/head
-From https://github.com/exercism/xecmascript
- * branch            refs/pull/80/head -&gt; FETCH_HEAD
-</code></p>
-
-<p>El anterior comando descarga los cambios contenido en el Pull Request con
-número <code>&lt;pr-number&gt;</code>, que podría ser por ejemplo el <code>80</code>.</p>
-
-<p><code>
-rchavarria@proyect$ git checkout -b new-exercise-raindrops FETCH_HEAD
-Switched to a new branch 'new-exercise-raindrops'
-</code></p>
-
-<p>Así, se crea una nueva rama, llamada <code>new-exercise-raindrops</code> que contiene los
-cambios del Pull Request.</p>
-
-<p>Y ahora llega un momento delicado. Se debe hacer que el commit por el que
-comienza la rama recién creada sea el último commit que existía en <code>master</code>. De
-esta forma se consigue que la historia del control de versiones sea la más
-legible. En este punto es posible que se produzcan conflictos. Ese es otro tema
-que daría para muchas explicaciones. Si se quiere profundizar, se puede echar
-un vistazo a la propia [documentación de <code>git</code> sobre el comando <code>rebase</code>].</p>
-
-<p><code>
-rchavarria@proyect$ git rebase master
-Current branch new-exercise-raindrops is up to date.
-</code></p>
-
-<p>Si no hay conflictos, perfecto, ya está.</p>
-
-<h2>Comprobar las mejoras</h2>
-
-<p>Ahora es el momento de hacer comprobaciones:</p>
-
-<ul>
-<li>Se deberían ejecutar los tests del proyecto</li>
-<li>Chequear los cambios, comparándolos con versiones anteriores</li>
-<li>Comprobar que se siguen las reglas de estilo en el código</li>
-<li>En general, asegurarse de que el código a incorporar es un código con el que
-estamos contentos</li>
-</ul>
-
-
-<p>En esta fase se pueden hacer nuevos cambios o pedir al programador que
-contribuye que realice algunos cambios por sí mismo y que actualize el Pull
-Request.</p>
-
-<p><img class="center" src="/images/2015/github-diff.png"></p>
-
-<h2>Incorporar los cambios</h2>
-
-<p>Una vez está todo comprobado y se está de acuerdo con los cambios, ha llegado
-la hora de incorporar los cambios a la rama <code>master</code> para que finalmente formen
-parte del código del proyecto.</p>
-
-<p><code>
-rchavarria@proyect$ git checkout master
-Switched to branch 'master'
-Your branch is up-to-date with 'origin/master'.
-rchavarria@proyect$ git merge --no-ff new-exercise-raindrops
-Merge made by the 'recursive' strategy.
- config.json                 |  3 ++-
- raindrops/example.js        | 17 +++++++++++++++++
- raindrops/gulpfile.js       | 42 ++++++++++++++++++++++++++++++++++++++++++
- raindrops/package.json      | 24 ++++++++++++++++++++++++
- raindrops/raindrops.spec.js | 38 ++++++++++++++++++++++++++++++++++++++
- 5 files changed, 123 insertions(+), 1 deletion(-)
- create mode 100644 raindrops/example.js
- create mode 100644 raindrops/gulpfile.js
- create mode 100644 raindrops/package.json
- create mode 100644 raindrops/raindrops.spec.js
-</code></p>
-
-<p>Los comandos cambian el espacio de trabajo a la rama <code>master</code> e incorporan los
-cambios a la misma. Se deberá proporcionar un mensaje para el commit que va a
-generar <code>git merge</code>. Un ejemplo sería:</p>
-
-<p>```
-Merge pull request #80 from matthewmorgan/new-exercise-raindrops</p>
-
-<p>Closes #80
-```</p>
-
-<p>Donde <code>80</code> es el número del Pull Request, <code>matthewmorgan</code> es el nombre del
-programador que contribuye y <code>new-exercise-raindrops</code> es el nombre de la rama
-que le dió el programador y el que se ha utilizado para la incorporación de los
-cambios.</p>
-
-<p>Finalmente, se suben los cambios al repositorio remoto y ...</p>
-
-<p><code>
-rchavarria@proyect$ git push origin master
-Username for 'https://github.com': rchavarria
-Password for 'https://rchavarria@github.com':
-Counting objects: 1, done.
-Writing objects: 100% (1/1), 273 bytes | 0 bytes/s, done.
-Total 1 (delta 0), reused 0 (delta 0)
-To https://github.com/exercism/xecmascript.git
-   de450d0..eae366a  master -&gt; master
-</code></p>
-
-<p>... ¡magia!</p>
-
-<p><img class="center" src="/images/2015/pull-request-merged.png"></p>
-
-<h2>Referencias</h2>
-
-<ul>
-<li><a href="http://blog.differential.com/best-way-to-merge-a-github-pull-request/">Best way to merge a pull request</a></li>
-<li><a href="https://www.youtube.com/watch?v=1ffBJ4sVUb4">Git for 4 and up</a></li>
-<li><a href="http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">Better commit messages</a></li>
-<li><a href="https://www.youtube.com/watch?v=8YjSty6bfog">Do your commits suck?</a></li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Aprendiendo Ionic 2]]></title>
-    <link href="http://rchavarria.github.io/blog/2015/11/15/aprendiendo-ionic-2/"/>
-    <updated>2015-11-15T22:49:00+01:00</updated>
-    <id>http://rchavarria.github.io/blog/2015/11/15/aprendiendo-ionic-2</id>
-    <content type="html"><![CDATA[<p>Recientemente se ha celebrado la conferencia <a href="http://angularconnect.com/">Angular Connect</a> en Londres,
-donde se ha hablado mucho de <a href="https://angular.io/">Angular 2</a>, framework de desarrollo de
-aplicaciones web en el que estoy muy interesado (de hecho estoy desarrollando
-una pequeña aplicación para diversión de mi hijo, <a href="https://play.google.com/store/apps/details?id=es.rchavarria.englishbyeinar">English by Einar</a>). También
-estoy enteresado en el framework <a href="http://ionicframework.com/">Ionic</a>, que aúna los proyectos de Angular y
-<a href="http://cordova.apache.org/">Cordova</a> y que permite desarrollar aplicaciones para móviles con herramientas
-de desarrollo web: HTML5, CSS3 y JavaScript.</p>
-
-<p>En dicha conferencia se hizo público la versión alpha de <a href="http://ionicframework.com/docs/v2/">Ionic 2</a>, la versión
-de Ionic que incluye la nueva versión de Angular. Ionic es un framework para
-desarrollo de aplicaciones cliente móviles híbridas con tecnologías web y en su
-versión 2 siguen con la filosofía de estar muy preocupados por el rendimiento.
-En este post veremos lo realmente fácil que es comenzar a desarrollar con estas
-herrmientas.</p>
-
-<p><img class="center" src="/images/2015/ionic-framework.jpg" width="350" height="185" title="Ionic Framework" ></p>
-
-<!-- more -->
-
-
-<h2>Requisitos</h2>
-
-<p>Ionic se apoya en Cordova y en las plataformas de desarrollo nativas
-dependiendo de la plataforma móvil en la que estemos enfocados, normalmente
-Android o iOS. Antes de comenzar a desarrollar con él deberemos actualizar a
-las versiones más modernas posibles, ya que la versión alpha de Ionic 2
-requiere de los últimos avances.</p>
-
-<p>En mi caso particular, he necesitado actualizar mi SDK de Android para Linux:</p>
-
-<p><code>
-rchavarria@home$ ./AndroidSDK/tools/android sdk
-</code></p>
-
-<p>para abrir la interfaz gráfica y poder actualizar algunos paquetes del SDK.</p>
-
-<p>Y también he necesitado actualizar las versiones de NodeJS (a través de <code>nvm</code>,
-Node Version Manager), la herramienta <code>npm</code> y Cordova:</p>
-
-<p><code>
-rchavarria@home$ nvm install v5.0.0
-rchavarria@home$ npm install -g npm
-rchavarria@home$ npm install -g cordova@5.3.3
-</code></p>
-
-<p>Por último, instalar la versión alpha de Ionic 2. No temas, no hay peligro de
-romper proyectos desarrollados con la versión 1 de Ionic.</p>
-
-<p><code>
-rchavarria@home$ npm install -g ionic@alpha
-</code></p>
-
-<h2>Creación del primer proyecto</h2>
-
-<p>Para mi primer proyecto he usado una plantilla desarrollada por la gente de
-Ionic, <a href="https://github.com/driftyco/ionic2-starter-tutorial">tutorial</a>. Estas plantillas permiten tener una aplicación muy básica
-funcionando en unos minutos. Esta plantilla contiene un menú deslizante
-lateral, pero hay otras muchas plantillas. Crear el proyecto es un simple
-comando:</p>
-
-<p><code>
-rchavarria@home$ ionic start MyFirstIonic2Project tutorial --v2
-</code></p>
-
-<p>Este comando descarga la plantilla indicada, <code>tutorial</code>, instala dependencias
-de NodeJS y nos deja el proyecto listo para ser ejecutado. De hecho, para poder
-probarlo en un navegador, basta con escribir los comandos:</p>
-
-<p><code>
-rchavarria@home$ cd MyFirstIonic2Project
-rchavarria@home$ ionic serve
-</code></p>
-
-<h2>Estructura del proyecto</h2>
-
-<p>Prácticamente todos los ficheros de la aplicación están localizados en el
-directorio <code>www</code>, como en todo proyecto de Cordova.</p>
-
-<p>El punto de entrada principal es <code>www/index.html</code>. Como página principal, carga
-los ficheros CSS, incluye los JavaScript y arranca la aplicación. Ionic busca
-una etiqueta <code>ion-app</code> dentro de esta primera página HTML.</p>
-
-<p>Todo el código JavaScript que se encuentra en el directorio <code>www/app</code> se
-transpila a la versión correcta de JavaScript que soporte el navegador para el
-que está dirigida la aplicación. En este directorio podremos encontrar código
-tanto TypeScript como ECMAScript 2015.</p>
-
-<p>En el archivo <code>www/app/app.js</code> podemos encontrar la entrada a nuestra
-aplicación. Crea un component con el decorador <code>@App</code>, componente necesario
-para toda aplicación Ionic.</p>
-
-<p><code>
-@App({
-  templateUrl: 'app/app.html'
-})
-class MyApp {
-//...
-}
-</code></p>
-
-<p>El código de <code>@App</code> configura el archivo <code>www/app/app.html</code> como plantilla para
-la aplicacion. Veámoslo:</p>
-
-<p>```
-<ion-menu [content]="content"></p>
-
-<p>  <ion-content></p>
-
-<pre><code>&lt;ion-list&gt;
-  &lt;button ion-item *ng-for="#p of pages" (click)="openPage(p)"&gt;
-  &lt;/button&gt;
-&lt;/ion-list&gt;
-</code></pre>
-
-<p>  </ion-content></p>
-
-<p></ion-menu></p>
-
-<p><ion-nav id="nav" [root]="rootPage" #content swipe-back-enabled="false"></ion-nav>
-```</p>
-
-<p>Esta plantilla define un menu bajo la etiqueta <code>ion-menu</code>, y un componente de
-navegación, <code>ion-nav</code>, ambos proporcionados por Ionic. <code>ion-menu</code> toma una
-propiedad para mostrar un contenido, <code>content</code>, la cual se la podemos
-proporcionar a través de la variable <code>#content</code> desde nuestro <code>ion-nav</code>.</p>
-
-<p><code>ion-nav</code> define un <em>data binding</em> a la propiedad <code>root</code> del componente, igual
-que <code>ion-menu</code> define un <em>data binding</em> a la propiedad <code>content</code> (en Angular 2,
-los <em>data binding</em> son unidireccionales por defecto y se declaran mediante
-corchetes en atributos de las etiquetas HTML). Cuando se cargue el controlador
-de la navegación, el componente referenciado por la variable <code>rootPage</code> será
-mostrada como la página principal de nuestra aplicación.</p>
-
-<p>En <code>www/app/app.js</code>, el componente raiz de la aplicación, <code>MyApp</code>, especifica
-dos propiedades: <code>pages</code> y <code>rootPage</code></p>
-
-<p>```
-import {App, IonicApp, IonicPlatform} from 'ionic/ionic';
-import {HelloIonicPage} from './hello-ionic/hello-ionic';
-import {ListPage} from './list/list';
-// ...
-class MyApp {
-  constructor(app: IonicApp, platform: IonicPlatform) {</p>
-
-<pre><code>// set up our app
-// ...
-
-// set our app's pages
-this.pages = [
-  { title: 'Hello Ionic', component: HelloIonicPage },
-  { title: 'My First List', component: ListPage }
-];
-
-// make HelloIonicPage the root page
-this.rootPage = HelloIonicPage;
-</code></pre>
-
-<p>  }
-  // ...
-}
-```</p>
-
-<h2>Cómo se crea un página</h2>
-
-<p>El componente <code>HelloIonicPage</code> se define en el fichero
-<code>www/hello-ionic/hello-ionic.js</code>. Contiene un decorador <code>@Page</code>, proporcionado
-por Ionic, y su nombre lo dice todo. Este componente crea una página Ionic, que
-consta de un componente y una vista de Angular 2.</p>
-
-<p>```
-import {Page, NavController} from 'ionic/ionic';</p>
-
-<p>@Page({
-  templateUrl: 'app/hello-ionic/hello-ionic.html'
-})
-export class HelloIonicPage {
-  constructor(nav: NavController) {</p>
-
-<pre><code>this.nav = nav;
-</code></pre>
-
-<p>  }
-}
-```</p>
-
-<p>Cada página se compone de un componente JavaScript y de una plantilla HTML.
-Veamos ésta última:</p>
-
-<p>```
-<ion-navbar *navbar>
-  <a menu-toggle><icon menu /></a>
-  <ion-title>Hello Ionic</ion-title>
-</ion-navbar></p>
-
-<p><ion-content>
-  <h3>Welcome to your first Ionic app!</h3>
-  <p></p>
-
-<pre><code>...
-</code></pre>
-
-<p>  </p>
-</ion-content>
-```</p>
-
-<p>La etiqueta <code>&lt;ion-navbar *navbar&gt;</code> funciona como configuración para la barra de navegación. Es quien incluye los botones a mostrar en dicha barra, así como el título.</p>
-
-<h2>Navegando entre páginas</h2>
-
-<p>La otra página, <code>ListPage</code>, contiene una lista de elementos que el usuario
-puede tocar (o hacer click) para acceder a ellas. Dicha página está definida en
-el archivo <code>www/app/list/list.js</code>.</p>
-
-<p>```
-import {IonicApp, Page, NavController, NavParams} from 'ionic/ionic';</p>
-
-<p>@Page({
-  templateUrl: 'app/list/list.html'
-})
-export class ListPage {
-  constructor(app: IonicApp, nav: NavController, navParams: NavParams) {</p>
-
-<pre><code>this.nav = nav;
-// ...
-</code></pre>
-
-<p>   }</p>
-
-<p>   itemTapped(event, item) {</p>
-
-<pre><code> // ...
-</code></pre>
-
-<p>   }
-}
-```</p>
-
-<p>La plantilla de esta página, definida en <code>www/app/list/list.html</code>, es quien
-mostrará una lista de elementos. <code>*ng-for</code> es la sintaxis de Angular 2 para
-reproducir la misma funcionalidad que <code>ng-repeat</code> en AngularJS. El manejador
-del evento click se establece con <code>(click)=itemTapped(...)</code> (en Angular 2, se
-utilizan los paréntesis en atributos de las etiquetas HTML para establecer los
-manejadores de eventos). De esta forma, cada vez que el usuario toque/haga
-click en un elemento, el método <code>itemTapped</code> será llamado.</p>
-
-<p><code>
-&lt;ion-item *ng-for="#item of items" (click)="itemTapped($event, item)"&gt;
-</code></p>
-
-<p>Para navegar a una nueva página, se puede usar el componente <code>NavController</code>,
-también proporcionado por Ionic. Anteriormente, se ha almacenado una referencia
-a dicho componente en el atributo <code>nav</code> de <code>ListPage</code>.</p>
-
-<p>```
-import {ItemDetailsPage} from '../item-details/item-details';
-// ...
-itemTapped(event, item) {
-  this.nav.push(ItemDetailsPage, {</p>
-
-<pre><code>item: item
-</code></pre>
-
-<p>  });
-}
-```</p>
-
-<p>La navegación en Ionic funciona como una <em>pila</em> (o <em>stack</em>), donde podemos poner (<code>push</code>)
-o quitar (<code>pop</code>) páginas de la pila.</p>
-
-<h2>¿Y ahora qué?</h2>
-
-<p>Ya tenemos una estructura muy básica para el proyecto, y ya sabemos cómo crear
-páginas y cómo funciona la navegación en Ionic 2. El siguiente paso se me
-ocurre que podría ser incluir las herramientas y la estrutura necesaria para
-poder incluir tests en nuestro proyecto. Lo siento si te parece una lata, pero
-creo que los tests son una herramienta imprescindible en cualquier proyecto,
-sea de la embergadura que sea. Considero que los tests son básicos para tener
-un mínimo de calidad en cualquier proyecto software.</p>
-
-<h2>Referencias</h2>
-
-<ul>
-<li>Documentación sobre <a href="http://ionicframework.com/docs/v2/components">componentes de Ionic 2</a></li>
-<li>Documentación sobre <a href="http://ionicframework.com/docs/v2/platform">el API de dispositivos de Ionic 2</a></li>
-<li><a href="http://ionicframework.com/docs/v2/resources/">Recursos</a>, en general, de Ionic 2</li>
-<li><a href="https://angular.io/docs/ts/latest/testing/">Tests en Angular 2</a></li>
-</ul>
 
 ]]></content>
   </entry>

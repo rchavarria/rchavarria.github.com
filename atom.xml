@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2016-07-17T23:17:12+02:00</updated>
+  <updated>2016-08-10T18:44:41+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,220 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Elixir: cuarto asalto]]></title>
+    <link href="http://rchavarria.github.io/blog/2016/08/10/elixir-cuarto-asalto/"/>
+    <updated>2016-08-10T17:20:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2016/08/10/elixir-cuarto-asalto</id>
+    <content type="html"><![CDATA[<p>Éste es el cuarto asalto en mi aventura aprendiendo <a href="http://elixir-lang.org/">Elixir</a>. En esta ocasión
+trato con tipos de datos binarios, cadenas y <strong>sigils</strong>. No es mucho, pero las cadenas son
+una parte esencial de cualquier lenguaje de programación. Y dominarlas
+significa dominar una gran parte del lenguaje.</p>
+
+<p>Por supuesto, sigo aprendiendo con el método descrito en el post sobre <a href="http://rchavarria.github.io/blog/2016/01/17/aprendiendo-elixir/">aprender Elixir</a>:</p>
+
+<ul>
+<li>Aprender lo suficiente para comenzar</li>
+<li>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</li>
+<li>Aprender lo suficiente para hacer algo de utilidad</li>
+<li>Enseñar lo aprendido</li>
+</ul>
+
+
+<p><img class="right" src="http://rchavarria.github.io/images/2016/fourth-fight.jpg"></p>
+
+<div style="text-align: center">
+  <span style="font-size: 60%">
+Imagen basada en <a href="https://flic.kr/p/5yHK4Y">Muñeco de Gohan y Bu peleando</a> de <a href="https://www.flickr.com/photos/alotor/">Alonso Javier Torres</a>, <a href="https://creativecommons.org/licenses/by-nc/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>
+  </span>
+</div>
+
+
+
+
+<!-- more -->
+
+
+<h2>Aprender lo suficiente para comenzar</h2>
+
+<p>Para definir una cadena se pueden usar comillas simples o comillas dobles.
+También se puede usar comillas triples, para escribir lo que llaman <code>heredocs</code>,
+y se suelen usar para escribir comentarios para documentar métodos y módulos.</p>
+
+<p>En Elixir, existe lo que llaman <em>sigils</em> (que se podría traducir como código,
+señal o símbolo mágico). Comienzan con <code>~</code>, seguido de una letra que determina
+el tipo de símbolo:</p>
+
+<ul>
+<li><code>c</code> para una lista de carácteres</li>
+<li><code>r</code> para expresión regular</li>
+<li><code>w</code> para una lista de palabras separado por espacios</li>
+<li>y hay más</li>
+</ul>
+
+
+<p>y cuyo valor se puede enmarcar en distintos delimitadores: <code>&lt;..&gt;</code>, <code>{...}</code>,
+<code>[...]</code>,&#8230;</p>
+
+<p>Un uso muy típico es para escribir expresiones regulares:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>~r{[0-9]+[A-Z]*}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Los <em>sigils</em> pueden incluso personalizarse, y crear los tuyos propios.</p>
+
+<p>Las cadenas definidas mediante comillas dobles, son lo que se conoce en otros
+lenguajes como <em>strings</em>. Las cadenas con comillas simples, se llaman
+<em>character lists</em> (o <em>char list</em>), listas de carácteres, y son listas, arrays.</p>
+
+<p><strong>Cadenas con comillas simples</strong></p>
+
+<p>Son una lista de códigos que representan los carácteres. Y como son una lista,
+podemos usar métodos de <code>List</code>: <code>++</code>, <code>--</code>, <code>List.zip</code>, <code>[ head | tail ]</code>,&#8230;</p>
+
+<p>Para saber el número entero que representa un carácter, se puede usar la
+notación <code>?&lt;chr&gt;</code>, por ejemplo, <code>?a</code> o <code>?4</code>, para saber los valores numéricos
+de los carácteres <code>a</code> y <code>4</code> respectivamente.</p>
+
+<p><strong>Binarios</strong></p>
+
+<p>Qué mejor que un poco de código para ver cómo se usa este tipo de datos</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># el tipo *binario* representa una secuencia de bits
+</span><span class='line'>iex&gt; b = &lt;&lt; 1, 2, 3 &gt;&gt;
+</span><span class='line'>&lt;&lt;1, 2, 3&gt;&gt;
+</span><span class='line'>iex&gt; byte_size b
+</span><span class='line'>3
+</span><span class='line'>iex&gt; bit_size b
+</span><span class='line'>24
+</span><span class='line'>
+</span><span class='line'># se puede especificar también la cantidad de bits que queremos que ocupen
+</span><span class='line'>iex&gt; b = &lt;&lt; 1::size(2), 1::size(3) &gt;&gt;
+</span><span class='line'>&lt;&lt;9::size(5)&gt;&gt;
+</span><span class='line'>iex&gt; byte_size b
+</span><span class='line'>1
+</span><span class='line'>iex&gt; bit_size b
+</span><span class='line'>5
+</span><span class='line'>
+</span><span class='line'># también se pueden almacenar enteros, floats y otros binarios
+</span><span class='line'>iex&gt; an_int = &lt;&lt; 1 &gt;&gt;
+</span><span class='line'>&lt;&lt;1&gt;&gt;
+</span><span class='line'>iex&gt; a_float = &lt;&lt; 2.5 :: float &gt;&gt;
+</span><span class='line'>&lt;&lt;64, 4, 0, 0, 0, 0, 0, 0&gt;&gt;
+</span><span class='line'>iex&gt; mix = &lt;&lt; an_int :: binary, a_float :: binary &gt;&gt;
+</span><span class='line'>&lt;&lt;1, 64, 4, 0,......&gt;&gt;
+</span><span class='line'>
+</span><span class='line'># extraer valores (echa un vistazo a cómo se codifican los floats según
+</span><span class='line'># el estándar IEEE 754)
+</span><span class='line'>iex&gt; &lt;&lt; sign::size(1), exp::size(11), mantissa::size(52) &gt;&gt; = &lt;&lt; 3.14159::float &gt;&gt;
+</span><span class='line'>iex&gt; (1 + mantissa / :math.pow(2, 52)) * :math.pow(2, exp-1023)
+</span><span class='line'>3.14159
+</span><span class='line'>
+</span><span class='line'># las cadenas con comillas dobles "" (dqs: double quoted string) son de
+</span><span class='line'># tipo binario, y están codificadas en UTF-8 lo que significa que la
+</span><span class='line'># longitud de la cadena no tiene por qué coincidir con el tamaño en bytes
+</span><span class='line'>iex&gt; dqs = "∂x/∂y"
+</span><span class='line'>"∂x/∂y"
+</span><span class='line'>iex&gt; String.length dqs
+</span><span class='line'>5
+</span><span class='line'>iex&gt; byte_size dqs
+</span><span class='line'>9</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Procesando cadenas</strong></p>
+
+<p>Igual que podemos dividir una lista en <code>head</code> y <code>tail</code>, podemos extraer el
+primer carácter (se refiere a él como <em>grapheme</em>, grafema/grafo/&#8230;) de una
+cadena binaria o <em>dqs</em> especificando que <code>head</code> es de tipo <code>utf8</code> y que <code>tail</code>
+sigue siendo de tipo binario:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>defp each(&lt;&lt; head::utf8, tail::binary &gt;&gt;), do [ head | each(tail) ]
+</span><span class='line'>defp each(&lt;&lt;&gt;&gt;), do []</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</h2>
+
+<p>Está claro que hay que ver la documentación del módulo <a href="http://elixir-lang.org/docs/stable/elixir/String.html"><code>String</code></a>, que contiene
+métodos para manipular cadenas encerradas en comillas dobles (recuerda, son de
+tipo binario).</p>
+
+<p>Las expresiones regulares son bastante comunes, y en Elixir se suelen usar
+mediante <a href="http://elixir-lang.org/getting-started/sigils.html"><em>sigils</em></a>. Son un aspecto bastante curioso del lenguaje y pueden ser
+personalizados.</p>
+
+<h2>Aprender lo suficiente para hacer algo de utilidad</h2>
+
+<ul>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-04/exercise-01-round-04.exs">exercise-01-round-04.exs</a>: escribe una función que devuelva <code>true</code> si el
+parámetro (una lista de carácteres) contiene sólo carácteres imprimibles (del
+espacio a la tilde)</li>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-04/exercise-02-round-04.exs">exercise-02-round-04.exs</a>: escribe una función que devuelva <code>true</code> en el
+caso de que dos palabras sean anagramas. <code>anagram?(word1, word2)</code></li>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-04/exercise-03-round-04.exs">exercise-03-round-04.exs</a>: escribe una funcion que calcule suma, resta,&#8230;
+de una cadena pasada como parámetro: <code>calculate('123 + 27') # =&gt; 150</code>. Este
+es especialmente difícil (al menos para mi nivel): devolver tuplas, parsear
+números (utilizando recursión de una forma muy imaginativa), utilizando pattern
+matching para construir funciones dependiendo del operador,&#8230;</li>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-04/exercise-04-round-04.exs">exercise-04-round-04.exs</a>: escribe una función que pasándole una lista de
+dqs (double quoted strings) las imprima centradas en un ancho de la palabra
+más larga, cada una en una línea distinta.</li>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-04/exercise-05-round-04.exs">exercise-05-round-04.exs</a>: escribe una función que pase a mayúsculas la
+primera letra de cada frase en una cadena</li>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-04/exercise-06-round-04.exs">exercise-06-round-04.exs</a>: escribe una función que parsee un fichero CSV
+(que tendrá los campos id, estado y cantidad neta), y que se lo pase a la
+función desarrollada en el tercer asalto, al ejercicio
+<code>exercise-02-round-03.exs</code>.</li>
+</ul>
+
+
+<h2>Enseñar lo aprendido, y repetir desde el paso 7</h2>
+
+<p>Aquí está, este post, mis notas, mis pensamientos, mis dudas y mi código. Hasta el siguiente asalto.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Practical Vim]]></title>
@@ -1788,6 +2002,7 @@ suficiente para ir cogiendo ritmo.</p>
 <li><a href="http://rchavarria.github.io/blog/2016/02/09/elixir-primer-asalto/">Primer asalto</a>: tipos, funciones, pattern matching y módulos</li>
 <li><a href="http://rchavarria.github.io/blog/2016/03/27/elixir-segundo-asalto/">Segundo asalto</a>: listas, diccionarios, structs y sets</li>
 <li><a href="http://rchavarria.github.io/blog/2016/05/01/elixir-tercer-round/">Tercer asalto</a>: más colecciones, módulos <code>Enum</code>, <code>Stream</code> y <em>comprehensions</em></li>
+<li><a href="http://rchavarria.github.io/blog/2016/08/10/elixir-cuarto-asalto/">Cuarto asalto</a>: tipos de datos binarios, cadenas, <code>String</code>s y <em>sigils</em></li>
 </ol>
 
 ]]></content>
@@ -3748,87 +3963,6 @@ todas las funcionalidades que ellos quieren.</p>
 <blockquote><p>Para la mayoría de aplicaciones, el camino rápido siempre lleva a la muerte y
 destrucción del proyecto; para aplicaciones pequeñas, el buen camino siempre
 parece una exageración</p></blockquote>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Charla técnica: Follow my leader]]></title>
-    <link href="http://rchavarria.github.io/blog/2015/10/04/charla-tecnica-follow-my-leader/"/>
-    <updated>2015-10-04T15:21:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2015/10/04/charla-tecnica-follow-my-leader</id>
-    <content type="html"><![CDATA[<p>Estas notas podrían encajar perfectamente en el post que voy actualizando
-regularmente <a href="http://rchavarria.github.io/blog/2014/10/11/aprendiendo-vim/">Aprendiendo Vim</a>, pero creo que esta la charla de Drew Neail se
-desmarca ya un poco del proceso de aprendizaje. En esta charla no se busca
-enseñar nuevos comandos de Vim, si no que se trata más de un tema cultural
-acerca del editor. Drew trata de animar a la gente a que busque nuevas
-combinaciones de teclas que se conviertan en nuevos comandos y de esta forma
-hacer Vim más potente todavía.</p>
-
-<!-- more -->
-
-
-<h2>Notas tomadas de la charla <a href="https://vimeo.com/85343734">Follow my leader</a></h2>
-
-<iframe src="https://player.vimeo.com/video/85343734"
-        width="500"
-        height="281"
-        frameborder="0"
-        webkitallowfullscreen mozallowfullscreen allowfullscreen>
-</iframe>
-
-
-<p><em><a href="https://vimeo.com/85343734">Follow my leader</a>, por <a href="http://drewneil.com/">Drew Neil</a>, en un encuentro del grupo local
-<a href="https://vimeo.com/vimlondon">Vim London</a></em></p>
-
-<ul>
-<li><code>let mapleader = ","</code> para mapear <code>,</code> como tecla <code>&lt;leader&gt;</code> en Vim. Otra
-tecla muy común para utilizarla como <code>&lt;leader&gt;</code> es la barra espaciadora.</li>
-<li><code>nnoremap &lt;leader&gt;&lt;space&gt; :noh&lt;cr&gt;</code> : remapea la secuencia de teclas
-<code>&lt;leader&gt;&lt;space&gt;</code> para que se ejecute el comando <code>:nohlsearch</code>, que desactiva
-el resaltado de términos de búsqueda.</li>
-<li>La tecla <code>&lt;leader&gt;</code> te permite crear mapeos personalizados, es donde los
-usuarios pueden crear sus mapeos sin interferir con Vim</li>
-<li>En lugar de usar <code>leader</code>, algunos plugins, como los que escribe <a href="http://tpo.pe/">Tim Pope</a>
-siguen otro patrón. hay teclas que son <em>operadores</em>, por ejemplo la <strong>d</strong>
-para borrar, o la <strong>y</strong> para copiar. a estos operadores le puede seguir el
-mismo operador o una movimiento. Teclas que producen un movimiento son <strong>j</strong>
-para ir hacia abajo, <strong>$</strong> para ir al final de la línea, &#8230; Pero, qué pasa si
-despues de un operador pulsamos una tecla de <em>no movimiento</em>? No pasa nada. Y
-ahí están las combinaciones de teclas dsiponibles para tus plugins.</li>
-<li>En la imagen de la <a href="http://www.viemu.com/vi-vim-cheat-sheet.gif">chuleta de Vim</a>, los naranjas son operadores, los
-verdes movimientos y los amarillos son comandos.</li>
-</ul>
-
-
-<p><img class="center" src="http://rchavarria.github.io/images/2015/tiny-vi-vim-cheat-sheet.gif"></p>
-
-<ul>
-<li>El plugin <a href="https://github.com/tpope/vim-unimpaired">unimpaired.vim</a> añade mapeos como <code>con</code> para habilitar/deshabilitar los
-nuḿeros de línea, o <code>cos</code> para habilitar/deshabilitar el chequeo ortográfico.
-Son <code>c</code> + <code>o</code> + otras teclas</li>
-<li>También hay disponibles combinaciones como operador + operador : <code>d</code> + <code>c</code></li>
-<li>Los <em>text objects</em> (<code>i</code> y <code>a</code>) también tienen vacantes.</li>
-<li>Los <em>namespaced mappings</em> también tienen vacantes. Por ejemplo, <code>g</code> es como
-un prefijo para muchos mapeos. <code>z</code> es otro, y <code>[</code> y <code>]</code> son más.</li>
-<li><code>:help g</code> te muestra todos los mapeos que siguen a <code>g</code>. Te puede servir para
-ver huecos donde poner tus mapeos</li>
-<li>Comando inútiles, hay algunos comandos que no usa nadie. Sobreescríbelos. Por
-ejemplo, <code>g</code> + <code>s</code>.</li>
-<li>Sobreescribir, sobrecargar comandos que ya existen, vamos, ampliar los
-existentes.</li>
-</ul>
-
-
-<h2>Conclusiones</h2>
-
-<p>Como puedes ver, el editor Vim es todo un mundo de posibilidades. Hay veces que
-abruma, pero hay tanta gente apasionada por él que está claro que algo debe de
-tener. Esta charla es una muestra de las posibilidades de personalización que
-esta herramienta ofrece. Drew nos abre las puertas a un mundo nuevo de posibles
-comandos.</p>
-
-<p>Si te gusta Vim, y no conoces el plugin <a href="https://github.com/tpope/vim-unimpaired">unimpaired.vim</a>, échale un vistazo. Sin
-duda es uno de los imprescindibles, como tantos otros de Tim Pope.</p>
 ]]></content>
   </entry>
   
