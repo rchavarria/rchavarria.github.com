@@ -79,6 +79,7 @@ Videos de Derek Wyatt : http://derekwyatt.org/vim/tutorials/
 - [Vim Kata meetup](https://github.com/christoomey/vim-kata-meetup), de Chris Toomey
 - [Vim galore](https://github.com/mhinz/vim-galore)
 - [Vim GIFs](https://vimgifs.com/): un recurso muy visual, con *videos* diarios sobre comandos muy específicos del editor. Ideal para consumir pequeñas píldoras cada día. También en Twitter [@vimgifs](https://twitter.com/vimgifs)
+- [Vim configuration from scratch](http://marcgg.com/blog/2016/03/01/vimrc-example/): una completa y básica guía de cómo deberías tener configurada tu configuración de Vim, teniéndola bajo un control de versiones, cada plugin en un submódulo git,...
 
 ## El mítico editor Vim, #linuxIO
 
