@@ -11,9 +11,15 @@ footer: false
 sidebar: true
 ---
 
-Y ya vamos por el quinto asalto, el quinto de la serie sobre el aprendizaje del lenguaje [Elixir]. En este asalto aprenderemos estructuras de control de flujo, esenciales en cualquier lenguaje de programación. No sé en otros lenguajes funcionales, pero en Elixir, estas estructuras no son muy bien acogidas. De todas formas, son parte del lenguaje, son sencillas y nos servirán para establecer conexiones con lenguajes que ya conozcamos.
+Y ya vamos por el quinto asalto, el quinto de la serie sobre el aprendizaje del
+lenguaje [Elixir]. En este asalto aprenderemos estructuras de control de flujo,
+esenciales en cualquier lenguaje de programación. No sé en otros lenguajes
+funcionales, pero en Elixir, estas estructuras no son muy bien acogidas. De
+todas formas, son parte del lenguaje, son sencillas y nos servirán para
+establecer conexiones con lenguajes que ya conozcamos.
 
-Para seguir con el aprendizaje, sigo con el método seguido en otros asaltos partiendo del post [aprendiendo Elixir]:
+Para seguir con el aprendizaje, sigo con el método seguido en otros asaltos
+partiendo del post [aprendiendo Elixir]:
 
 - Aprender lo suficiente para comenzar
 - Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas
