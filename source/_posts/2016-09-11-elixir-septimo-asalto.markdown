@@ -110,7 +110,7 @@ Child's PID #PID<0.53.0>
 ** (RuntimeError) Child finished
     exercise-04-round-07.exs:19: Exercise4.child/1
 Received: "Hello!"
-Received: {:EXIT, #PID<0.53.0>, {%RuntimeError{message: "Child finished"}, [{Exercise4, :child, 1, [file: 'exercise-04-round-07.exs', line: 19]}]}}
+Received: {:EXIT, #PID<0.53.0>, %{RuntimeError{message: "Child finished"}, [{Exercise4, :child, 1, [file: 'exercise-04-round-07.exs', line: 19]}]}}
 ```
 
 Las diferencias están en lo recibido en el mensaje de terminación del hijo. En caso de `exit` se recibe `:EXIT`, un PID, y la causa de la salida. En el caso de la excepción: `:EXIT`, un PID y la excepción, parece, porque tiene pinta de pila de llamadas, con su módulo, función, parámetros,...
