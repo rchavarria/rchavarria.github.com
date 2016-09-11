@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Elixir: quinto asalto"
-date: 2016-09-10 11:43
+date: 2016-09-11 11:43
 author: Ruben Chavarria
 comments: true
 categories: 
@@ -27,11 +27,11 @@ partiendo del post [aprendiendo Elixir]:
 - Aprender lo suficiente para hacer algo de utilidad
 - Enseñar lo aprendido
 
-{% img right /images/2016/fourth-fight.jpg %}
+{% img right /images/2016/fight-II-harc-II.jpg %}
 
 <div style="text-align: center">
   <span style="font-size: 60%">
-Imagen basada en <a href="https://flic.kr/p/5yHK4Y">Muñeco de Gohan y Bu peleando</a> de <a href="https://www.flickr.com/photos/alotor/">Alonso Javier Torres</a>, <a href="https://creativecommons.org/licenses/by-nc/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>
+Imagen basada en <a href="https://flic.kr/p/6bQhPq">Fight II / Harc II</a> de <a href="https://www.flickr.com/photos/silangel/">silangel</a>, <a href="https://creativecommons.org/licenses/by-nc/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>
   </span>
 </div>
 
