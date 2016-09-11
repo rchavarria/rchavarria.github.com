@@ -4,7 +4,7 @@
   <title><![CDATA[Category: learning | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/learning/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2016-08-10T18:44:41+02:00</updated>
+  <updated>2016-09-11T22:56:03+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,157 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Elixir: quinto asalto]]></title>
+    <link href="http://rchavarria.github.io/blog/2016/09/11/elixir-quinto-asalto/"/>
+    <updated>2016-09-11T11:43:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2016/09/11/elixir-quinto-asalto</id>
+    <content type="html"><![CDATA[<p>Y ya vamos por el quinto asalto, el quinto de la serie sobre el aprendizaje del
+lenguaje <a href="http://elixir-lang.org/">Elixir</a>. En este asalto aprenderemos estructuras de control de flujo,
+esenciales en cualquier lenguaje de programación. No sé en otros lenguajes
+funcionales, pero en Elixir, estas estructuras no son muy bien acogidas. De
+todas formas, son parte del lenguaje, son sencillas y nos servirán para
+establecer conexiones con lenguajes que ya conozcamos.</p>
+
+<p>Para seguir con el aprendizaje, sigo con el método seguido en otros asaltos
+partiendo del post <a href="/blog/2016/01/17/aprendiendo-elixir/">aprendiendo Elixir</a>:</p>
+
+<ul>
+<li>Aprender lo suficiente para comenzar</li>
+<li>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</li>
+<li>Aprender lo suficiente para hacer algo de utilidad</li>
+<li>Enseñar lo aprendido</li>
+</ul>
+
+
+<p><img class="right" src="/images/2016/fight-II-harc-II.jpg"></p>
+
+<div style="text-align: center">
+  <span style="font-size: 60%">
+Imagen basada en <a href="https://flic.kr/p/6bQhPq">Fight II / Harc II</a> de <a href="https://www.flickr.com/photos/silangel/">silangel</a>, <a href="https://creativecommons.org/licenses/by-nc/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>
+  </span>
+</div>
+
+
+
+
+<!-- more -->
+
+
+<h2>Aprender lo suficiente para comenzar</h2>
+
+<p>En Elixir no se usan mucho, se suelen escribir métodos pequeños, que junto con
+claúsulas de guarda y <em>pattern matching</em> nos alejan bastante de lo que aquí
+estudiaremos. Normalmente, se suelen favorecer esos mecanismos frente a
+estructuras de control. Al principio cuesta acostumbrarse, pero luego uno se va
+dando cuenta de que los cuerpos de los métodos quedan más pequeños y más
+enfocados a hacer una sola cosa, aunque despista un poco que una misma función
+tenga varios cuerpos.</p>
+
+<p><strong><code>if</code> y <code>unless</code></strong></p>
+
+<p>```</p>
+
+<h1>Ambos toman dos parámetros, una condición y una <em>keyword list</em>, cuyas claves posibles son <code>do:</code> y <code>else:</code>.</h1>
+
+<p>if 1 == 2, do: "truthy", else: "falsy"
+unless 2 == 1, do: "do not execute", else: "execute this"</p>
+
+<h1>igual que las funciones, se puede acortar un poco</h1>
+
+<p>if 1 == 2 do
+  "truthy"
+else
+  "falsy"
+end
+```</p>
+
+<p><strong><code>cond</code></strong></p>
+
+<p>En realidad es una macro, como muchas otras construciones del lenguaje, y
+acepta una serie de condiciones. Se ejecutará el código de la primera condición
+que se evalúe a <code>true</code>.</p>
+
+<p>```</p>
+
+<h1>Resolver la kata FizzBuzz</h1>
+
+<p>cond do
+  rem(current, 3) == 0 and rem(current, 5) == 0 -> "FizzBuzz"
+  rem(current, 5) == 0 -> "Buzz"
+  rem(current, 3) == 0 -> "Fizz"
+  true -> current
+end
+```</p>
+
+<p>En muchos casos, una mejor alternativa puede ser utilizar múltiples funciones,
+pattern matching y claúsulas de guarda en lugar del bloque <code>cond</code>.</p>
+
+<p><strong><code>case</code></strong></p>
+
+<p><code>case</code> permite evaluar una serie de patrones, y ejecuta el código asociado a
+dicho patrón. También se pueden usar claúsulas de guarda.</p>
+
+<p>```</p>
+
+<h1>para controlar errores al abrir un fichero</h1>
+
+<p>case File.open("some file.txt") do
+  { :ok, file } -> IO.puts "First line: #{IO.read(file, :line)}"
+  { :error, reason } -> IO.puts "Failed to open file: #{reason}"
+end</p>
+
+<h1>con claúsulas de guarda</h1>
+
+<p>dave = %{name: "Dave", age: 27}
+case dave do
+  person = %{age: age} when is_number(age) and age >= 21 -> IO.puts "You are allowed #{person.name}"
+  _ -> IO.puts "You are not allowed"
+end
+```</p>
+
+<p><strong>Excepciones</strong></p>
+
+<p>Las excepciones en Elixir se usan para casos excepcionales. Por ejemplo, si hay
+un fallo al leer un fichero de configuración, con un nombre fijo. Pero no si
+hay un error al leer un fichero que el usuario ha introducido el nombre,
+podemos controlar eso, y no sería un error excepcional.</p>
+
+<p>```</p>
+
+<h1>lanzando una RuntimeError</h1>
+
+<p>raise "Giving up"</p>
+
+<h1>o con algunos argumentos</h1>
+
+<p>raise RuntimeError, message: "Stack overflow"</p>
+
+<h1>por convención, se suele escribir <code>!</code> al final de una llamada que puede</h1>
+
+<h1>devolver una excepción bien conocida, por ejemplo</h1>
+
+<p>{ ok: file } = File.open!("foo.bar")
+```</p>
+
+<h2>Aprender lo suficiente para hacer algo de utilidad</h2>
+
+<ul>
+<li>[exercise-01-round-05.exs]: reescribe la kata FizzBuzz con <code>case</code></li>
+<li>[exercise-02-round-05.exs]: muchas funciones tienen una segunda
+implementación, que termina con <code>!</code>, la cual, si el resultado no coincide con
+<code>{ :ok, data }</code> lanza una excepción. Implementa una función <code>ok!</code> que haga
+exactamente esto</li>
+</ul>
+
+
+<h2>Enseñar lo aprendido, y repetir desde el paso 7</h2>
+
+<p>Aquí está, este post, mis notas, mis pensamientos, mis dudas y mi código. Hasta
+el siguiente asalto.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Elixir: cuarto asalto]]></title>
@@ -1128,138 +1279,6 @@ rangos: <code>a..b = 4..8</code>, funciones privadas</li>
 <h2>Enseñar lo aprendido</h2>
 
 <p>Aquí está, este post, mis notas, mis pensamientos, mis dudas y mi código. Hasta el siguiente asalto.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Aprendiendo Elixir]]></title>
-    <link href="http://rchavarria.github.io/blog/2016/01/17/aprendiendo-elixir/"/>
-    <updated>2016-01-17T16:39:00+01:00</updated>
-    <id>http://rchavarria.github.io/blog/2016/01/17/aprendiendo-elixir</id>
-    <content type="html"><![CDATA[<p><img class="left" src="/images/2016/elixir.png" width="200" height="266"></p>
-
-<p>No es una propósito de año nuevo ni nada, pero me apetece aprender un lenguaje
-puramente funcional por el simple hecho de aprender. He estado dudando entre
-Clojure y Elixir. Al final me he decidido por Elixir porque lo <em>venden</em> como
-divertido y porque sigo a varias personas en Twitter que están haciendo lo
-mismo (durante la redacción de este post me he enterado que hay un meetup nuevo
-del lenguaje en Madrid, <a href="http://www.meetup.com/Madrid-Elixir/">Madrid |> Elixir</a>), por lo que podré compartir lo
-aprendido. Dicen de Elixir que se parece mucho a Ruby, y que es un lenguaje
-moderno que se ejecuta la máquina virtual de Erlang. Con esos <em>hermanos
-mayores</em> promete mucho, la verdad.</p>
-
-<!-- more -->
-
-
-<p>Para ir aprendiendo el lenguaje, voy a poner en práctica el proceso de
-aprendizaje que descubrí leyendo el libro <a href="http://rchavarria.github.io/blog/2015/11/08/soft-skills/">Soft Skills</a>, de John Sonmetz:</p>
-
-<ol>
-<li>Entender la habilidad que se quiere aprender</li>
-<li>Delimitar el ámbito</li>
-<li>Definir qué se va a considerar como éxito</li>
-<li>Encontrar recursos</li>
-<li>Crear un plan de aprendizaje</li>
-<li>Filtrar los recursos</li>
-<li>Aprender lo suficiente para comenzar</li>
-<li>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</li>
-<li>Aprender lo suficiente para hacer algo de utilidad</li>
-<li>Enseñar lo aprendido, y repetir desde el paso 7</li>
-</ol>
-
-
-<p>Antes de llegar a los puntos 7-10, que son como un bucle, ahí van los primeros.</p>
-
-<h2>¿Qué habilidad quiero aprender?</h2>
-
-<p><strong>Quiero aprender a programar en Elixir</strong>. La frase es sencilla, pero ¿qué
-significa? ¿Significa que solamente quiero aprender la sintaxis? No, eso no es
-aprender un lenguaje de programación. ¿Significa que debo aprender todas las
-herramientas, frameworks, librerías, sistemas,...? Tampoco. Eso es imposible.
-He programado durante años en Java o JavaScript y lo que desconozco de ellos es
-mucho más de lo que conozco.</p>
-
-<p>Así pues, delimitaré el aprendizaje a conocer lo suficientemente el lenguaje y
-su ecosistema para ser capaz de escribir la parte servidora de una aplicación
-web.</p>
-
-<h2>¿Qué voy a considerar como éxito?</h2>
-
-<p>Tengo que poner algún límite. Creo que algo realmente interesante sería
-considerar un éxito poder <strong>desarrollar la parte servidora de una aplicación web</strong>,
-una API REST o algo así, que gestionara algún tipo de recurso (usuarios,
-tareas,... todavía no lo se). Si además soy capaz de desplegar la aplicación en
-alguna plataforma como Heroku o similar, el éxito sería rotundo.</p>
-
-<p>No me planteo nada de conectarlo a una base de datos, porque por ahora no he
-leído nada acerca de ello. Supongo que habrá alguna posibilidad, pero por ahora
-lo voy a dejar fuera.</p>
-
-<h2>Recursos</h2>
-
-<p>Esta es una lista inicial de recursos que voy a ir consumiendo:</p>
-
-<ul>
-<li>Web <a href="http://elixir-lang.org/">elixir-lang.org</a>. Web oficial. Creo que me puede servir para tener
-documentación rápida de forma online.</li>
-<li>Libro <a href="https://pragprog.com/book/elixir/programming-elixir">Programming Elixir, de Dave Thomas</a>. Parece ser el libro de
-referencia, así que es un recurso indispensable.
-<a href="https://forums.pragprog.com/forums/322">Foros de discusión del libro</a>.</li>
-<li>Libro <a href="https://pragprog.com/book/phoenix/programming-phoenix">Programming Phoenix</a>, también de la editorial The Pragmatic
-Programmer. Phoenix es un framework para desarrollar aplicaciones web con
-Elixir (<a href="https://twitter.com/_rubenfa/status/689356164082049024">recomendado por Rubén Fernández</a>, gracias).</li>
-<li><a href="https://github.com/elixir-lang/elixir">Código elixir en GitHub</a>. Código, código, código.</li>
-<li>Screencasts <a href="http://elixirsips.com/">elixir sips</a>. Videos sobre Elixir, muchos de ellos bajo
-suscripción.</li>
-<li><a href="https://www.learnelixir.tv/episodes">LearnElixitTV</a>. Más videos sobre Elixir, en este caso son de pago pero no de
-suscripción.</li>
-<li><a href="http://elixirdose.com/">Elixir Dose</a>. Un blog sobre este lenguaje de programación.</li>
-<li>Blog de <a href="http://benjamintan.io/blog/">Benjamin Tan</a>. Un blog sobre Ruby y Elixir del autor de un libro
-sobre Elixir. Parece venir del mundo Ruby. Tiene una charla en una
-conferencia de Ruby que hay que ver.</li>
-<li>Track de Elixir de <a href="http://exercism.io/languages/elixir">exercism.io</a>, una plataforma social donde resolver
-problemas y comentar las soluciones del resto de usuarios.</li>
-<li><a href="https://github.com/niftyn8/elixir_style_guide">Guía de estilo</a> para programar en Elixir. De obligado conocimiento para que
-tu código sea más legible por la comunidad.</li>
-<li><a href="https://www.youtube.com/watch?v=fklep3sUSWo">The climb experiencing the rise of Elixir from the inside</a>: una charla
-impresionante de Dave Thomas y Bruce Tate sobre Elixir, comparando el
-desarrollo de un lenguaje con subir al Everest. Todos somos Sherpas y debemos
-compartir la carga (de José Valim y su equipo) para hacer de Elixr, Phoenix y
-Elm un gran lenguaje y una gran plataforma. También hablan de QWAN (quality
-without a name) en Elixir. <em>QWAN is two way</em>, nos sentimos inspirados por la
-calidad</li>
-</ul>
-
-
-<p>Comparativa entre subir al Everest y desarrollar un lenguaje, Sherpas, todos somos Sherpas, y debemos compartir la carga (de José Valim y su equipo) para hacer de Elixir, Phoenix y Elm un gran lenguaje.</p>
-
-<p>También espero que poco a poco, según vaya necesitando saber más sobre cómo
-hacer cosas con el lenguaje, vaya descubriendo blogs y autores acerca del
-lenguaje.</p>
-
-<h2>Plan de aprendizaje</h2>
-
-<p>Por ahora no tengo ningún plan. El más básico que tengo es empezar a leer el
-libro Programming Elixir y cuando sea capaz de escribir algún programa más
-complejo que un <em>Hola mundo</em> empezar a resolver problemas en exercism.io.</p>
-
-<p>A partir de ahí, el tiempo dirá.</p>
-
-<h2>Recursos filtrados</h2>
-
-<p>Creo que no tengo tantos recursos como para filtrarlos. Empezando con el libro,
-con exercism.io y de vez en cuando la web oficial del lenguaje puede ser
-suficiente para ir cogiendo ritmo.</p>
-
-<h2>Asaltos</h2>
-
-<ol>
-<li><a href="/blog/2016/02/09/elixir-primer-asalto/">Primer asalto</a>: tipos, funciones, pattern matching y módulos</li>
-<li><a href="/blog/2016/03/27/elixir-segundo-asalto/">Segundo asalto</a>: listas, diccionarios, structs y sets</li>
-<li><a href="/blog/2016/05/01/elixir-tercer-round/">Tercer asalto</a>: más colecciones, módulos <code>Enum</code>, <code>Stream</code> y <em>comprehensions</em></li>
-<li><a href="/blog/2016/08/10/elixir-cuarto-asalto/">Cuarto asalto</a>: tipos de datos binarios, cadenas, <code>String</code>s y <em>sigils</em></li>
-</ol>
-
 ]]></content>
   </entry>
   
