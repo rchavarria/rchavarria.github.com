@@ -128,6 +128,7 @@ suficiente para ir cogiendo ritmo.
 4. [Cuarto asalto]: tipos de datos binarios, cadenas, `String`s y *sigils*
 5. [Quinto asalto]: estructuras de control: `if`, `unless`, `cond` y `case`
 6. [Sexto asalto]: herramientas auxiliares como `mix`, `ExUnit`, `ExDoc`,...
+6. [Séptimo asalto]: procesos, concurrencia, monitorización de procesos
 
 [Madrid |> Elixir]: http://www.meetup.com/Madrid-Elixir/
 [Soft Skills]: http://rchavarria.github.io/blog/2015/11/08/soft-skills/
@@ -151,4 +152,5 @@ suficiente para ir cogiendo ritmo.
 [Cuarto asalto]: /blog/2016/08/10/elixir-cuarto-asalto/
 [Quinto asalto]: /blog/2016/09/11/elixir-quinto-asalto/
 [Sexto asalto]: /blog/2016/09/11/elixir-sexto-asalto/
+[Séptimo asalto]: /blog/2016/09/11/elixir-septimo-asalto/
 
