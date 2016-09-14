@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2016-09-11T22:56:03+02:00</updated>
+  <updated>2016-09-14T21:59:27+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,326 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Elixir: sexto asalto]]></title>
+    <link href="http://rchavarria.github.io/blog/2016/09/14/elixir-sexto-asalto/"/>
+    <updated>2016-09-14T21:32:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2016/09/14/elixir-sexto-asalto</id>
+    <content type="html"><![CDATA[<p>Sexto asalto. En esta ocasión no veremos nada del lenguaje, si no del
+ecosistema de <a href="http://elixir-lang.org/">Elixir</a>. Elixir viene acompañado de unas magníficas herramientas
+que complementan en lenguaje de programación en sí: <code>mix</code>, la herramienta de
+construcción de aplicaciones y herramientas de testing como <code>ExUnit</code> y
+<code>DocTests</code>. Además de estas herramientas, exploraremos también los sitios web
+donde los desarrolladores alojan la mayoría de las librerías y proyectos Elixir
+disponibles.</p>
+
+<p>Sigo con la metodología de aprendizaje explicada en el <a href="http://rchavarria.github.io/blog/2016/01/17/aprendiendo-elixir/">primer post sobre Elixir</a>:</p>
+
+<ul>
+<li>Aprender lo suficiente para comenzar</li>
+<li>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</li>
+<li>Aprender lo suficiente para hacer algo de utilidad</li>
+<li>Enseñar lo aprendido</li>
+</ul>
+
+
+<p><img class="right" src="http://rchavarria.github.io/images/2016/more-gladiators.png"></p>
+
+<div style="text-align: center">
+  <span style="font-size: 60%">
+Imagen basada en <a href="https://flic.kr/p/6xvcMz">More gladiators</a> de <a href="https://www.flickr.com/photos/archeon/">Hans Splinter</a>, <a href="https://creativecommons.org/licenses/by-nd/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>
+  </span>
+</div>
+
+
+
+
+<!-- more -->
+
+
+<h2>Aprender lo suficiente para comenzar</h2>
+
+<p>Elixir viene con la herramienta <code>mix</code>, la herramienta oficial de construcción
+de proyectos (creación, testeo, construcción, gestión de dependencias,&#8230;). En
+este asalto crearemos una aplicación que nos permitirá listar los últimos <code>n</code>
+<em>issues</em> de cualquier proyecto de <a href="https://github.com">GitHub</a>.</p>
+
+<p><code>mix help</code> lista los comandos disponibles. Los más interesantes podrían ser:
+<code>mix run</code> para ejecutar el proyecto, <code>mix test</code> para ejecutar los tests o <code>mix
+new</code> para crear uno nuevo.</p>
+
+<p>Crearemos un nuevo proyecto, llamado <code>rct_issues</code>:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ mix new rct_issues</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Listando los ficheros y directorios que ha creado el comando, encontramos los
+siguientes:</p>
+
+<ul>
+<li><code>/README.md</code>: aquí podemos poner la descripción del proyecto.</li>
+<li><code>/config/</code>: donde vivirá la configuración del proyecto</li>
+<li><code>/lib/</code>: aquí irá el código fuente de nuestro proyecto</li>
+<li><code>/test/</code>: aquí irá el código de tests</li>
+<li><code>mix.exs</code>: opciones de configuración del proyecto en sí</li>
+</ul>
+
+
+<p><strong>Transformación: parsear la línea de comandos</strong></p>
+
+<p>La aplicación de ejemplo tomará los parámetros de la línea de comandos. Las
+aplicaciones Elixir consisten en una serie de transformaciones, y la primera de
+ellas será la de parsear la línea de comandos.</p>
+
+<p>En Elixir existen una serie de convenciones:</p>
+
+<ul>
+<li>El código que gestiona la línea de comandos va en un módulo llamado
+<code>&lt;proyecto&gt;.CLI</code>, así que nuestro código iría en un módulo llamado
+<code>RctIssues.CLI</code></li>
+<li>Cada módulo va en un fichero distinto</li>
+<li>Cada módulo va dentro del espacio de nombres del proyecto, por lo que todos
+los módulos colgarán de <code>RctIssues</code></li>
+<li>Los <em>espacios de nombres</em> corresponden con directorios en el árbol del
+proyecto. Así, el módulo <code>RctIssues.CLI</code> se escribiría en el directorio
+<code>/lib/rct_issues/cli.ex</code>. Ver fichero de código fuente <a href="https://github.com/rchavarria/learning-elixir/blob/master/projects/rct_issues/lib/rct_issues/cli.ex">cli.ex</a></li>
+</ul>
+
+
+<p><strong>Los primeros tests</strong></p>
+
+<p>Elixir viene con un pequeño framework de testing llamado <code>ExUnit</code>.</p>
+
+<p>En el fichero <code>/test/cli_test.exs</code> escribiremos los tests para el módulo que
+acabamos de escribir (echar un vistazo al fichero <a href="https://github.com/rchavarria/learning-elixir/blob/master/projects/rct_issues/test/cli_test.exs">cli_test.exs</a>)</p>
+
+<p><strong>Transformación: obtener datos de GitHub</strong></p>
+
+<p>La siguiente transformación sería obtener datos de GitHub. Para ello
+necesitaremos alguna librería externa. Hay varios lugares donde buscar:</p>
+
+<ol>
+<li>Librerías propias de Eixir, en <a href="http://elixir-lang.org/docs">http://elixir-lang.org/docs</a></li>
+<li>Librerías propias de Erlang (también distribuidas con Elixir), en
+<a href="http://erlang.org/docs">http://erlang.org/docs</a></li>
+<li>Si todo esto falla, podemos buscar en el repositorio de <a href="http://hex.pm">Hex</a>,
+el gestor de dependencias de Elixir</li>
+<li>Si aún así, todo falla, siempre nos quedará Google y GitHub</li>
+</ol>
+
+
+<p>El autor recomienda usar <code>HTTPoison</code> como librería. Esta librería se encuentra
+en <code>Hex</code>, con lo que es muy fácil incluirla en nuestro proyecto. Simplemente
+hay que modificar el método <code>deps</code> dentro del fichero <code>/mix.exs</code>, indicando el
+nombre y la versión de la librería que queremos usar:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>defp deps do
+</span><span class='line'>  [
+</span><span class='line'>    { :httpoison, "~&gt; 0.4" }
+</span><span class='line'>  }
+</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Con el comando <code>mix deps</code> podremos saber el estado de las dependencias del
+proyecto. Con <code>mix deps.get</code> podremos descargar las dependencias que no estén
+instaladas localmente. En caso de estar instaladas, lo estarán en el directorio
+<code>/deps</code>, como proyectos Elixir, con lo que podremos navegar a través de ellas.</p>
+
+<p>Ahora ya podemos usarla. Lo haremos en un nuevo módulo, escrito en
+<a href="https://github.com/rchavarria/learning-elixir/blob/master/projects/rct_issues/lib/rct_issues/github_issues.ex"><code>/lib/rct_issues/github_issues.ex</code></a>. También modificaremos el método
+<code>applications</code> de <code>mix.exs</code> para indicar que la dependencia <code>HTTPoison</code> va a
+ser ejecutada como una <em>subaplicación</em> dentro de nuestro proyecto (hablará más
+adelante sobre ello en el libro).</p>
+
+<p><strong>Transformación: parsear la respuesta JSON</strong></p>
+
+<p>Para la siguiente transformación incluiremos una dependencia que proviene del
+mundo Erlang. <code>mix</code> es capaz de incluir dependencias de muy diversas fuentes,
+Erlan entre ellas. Se añade la librería <code>jsx</code>, como dependencia del proyecto.
+Añadir la línea <code>{ :jsx, "~&gt; 2.0" }</code> al fichero <code>mix.exs</code> y ejecutar el comando
+<code>mix deps.get</code> para instalarla localmente.</p>
+
+<p>Modificaremos nuestro módulo que debe parsear la respuesta,
+<code>lib/rct_issues/github_issues.ex</code>:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>def handle_response(%{status_code: 200, body: body}) do
+</span><span class='line'>  { :ok, :jsx.decode(body) }
+</span><span class='line'>end          
+</span><span class='line'>
+</span><span class='line'>def handle_response(%{status_code:   _, body: body}) do
+</span><span class='line'>  { :error, :jsx.decode(body) }
+</span><span class='line'>end          </span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Configuración de la aplicación</strong></p>
+
+<p>Cuando creamos el proyecto con <code>mix</code>, éste crea un directorio de configuración,
+<code>config/</code>, con el fichero <code>config.exs</code>, donde podremos escribir ciertas
+configuraciones de nuestro proyecto.
+Cada línea de configuración suele ser un registro de clave valor, por ejemplo, para nuestro proyecto añadiríamos:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>use Mix.Config
+</span><span class='line'>config :rct_issues, github_url: "https://api.github.com"</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Más adelante, podremos usar este valor configurado gracias al módulo
+<code>Application</code>, así</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># crea una variable de clase llamada github_url
+</span><span class='line'>@github_url Application.get_env(:rct_issues, :github_url)</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Construir un ejecutable</strong></p>
+
+<p>Para ello es necesario modificar el fichero <code>mix.exs</code>, para configurar la
+herramienta <code>escript</code> y poder indicarle el módulo principal de la aplicación
+que se va a construir, el cual debe de tener un método llamado <code>main</code>.</p>
+
+<p>Para construir, simplemente ejecutar el comando:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mix escript.build</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Y tendremos un ejecutable que podremos ejecutar como cualquier otra aplicación
+de consola de Unix/Linux</p>
+
+<p><strong>Ejecutando los comentarios</strong></p>
+
+<p>¿Cómo? ¿Ejecutar los comentarios? No te preocupes, Elixir puede ejecutar
+ciertos comentarios como si fueran tests. En realidad, ejecuta comentarios
+escritos en cierta forma como si fueran sesiones de la herramienta <code>iex</code>. Esto
+sí que es documentación ejecutable. Simplemente, espectacular.</p>
+
+<p>Un comentario del tipo:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>@doc """   
+</span><span class='line'>Given a list of rows, where each row contains a keyed list
+</span><span class='line'>of columns, return a list containing lists of the data in
+</span><span class='line'>each column. The `headers` parameter contains the
+</span><span class='line'>list of columns to extract
+</span><span class='line'>
+</span><span class='line'>## Example 
+</span><span class='line'>
+</span><span class='line'>    iex&gt; list = [Enum.into([{"a", "1"},{"b", "2"},{"c", "3"}], HashDict.new),
+</span><span class='line'>    ...&gt;         Enum.into([{"a", "4"},{"b", "5"},{"c", "6"}], HashDict.new)]
+</span><span class='line'>
+</span><span class='line'>    iex&gt; Issues.TableFormatter.split_into_columns(list, [ "a", "b", "c" ])
+</span><span class='line'>    [ ["1", "4"], ["2", "5"], ["3", "6"] ]
+</span><span class='line'>"""        
+</span><span class='line'>def split_into_columns(rows, headers) do
+</span><span class='line'># ...</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Creamos un nuevo fichero de tests en <code>test/doc_test.exs</code>:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>defmodule DocTest do
+</span><span class='line'>  use ExUnit.Case
+</span><span class='line'>  doctest Issues.TableFormatter
+</span><span class='line'>end  </span></code></pre></td></tr></table></div></figure>
+
+
+<p>Donde <code>Issues.TableFormatter</code> es el módulo donde hemos incluido el comentario
+<em>ejecutable</em>. Podemos lanzar los comentarios testeables con los comandos <code>mix
+test test/doc_test.exs</code> o simplemente <code>mix test</code>.</p>
+
+<p>Para crear la documentación del proyecto, está la herramienta ExDoc, similar a
+JavaDoc. Para ello hay que añadirlo como dependencia del proyecto en el fichero
+<code>mix.exs</code>:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>defp deps do
+</span><span class='line'>[
+</span><span class='line'># ...
+</span><span class='line'>  { :ex_doc, github: "elixir-lang/ex_doc" },
+</span><span class='line'># ...
+</span><span class='line'>]
+</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Para generarlos, instalar la dependencia con <code>mix deps.get</code>, y generar la
+documentación con <code>mix docs</code>.</p>
+
+<h2>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</h2>
+
+<ul>
+<li>Necesitarás consular documentación sobre <code>OptionParser</code> para ser capaz de
+hacer el primer ejercicio&#8230; No solamente eso, si no que he escrito unos
+tests para aprender cómo funciona <a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-05/exercise-01-round-06.exs">tests de exercise-01-round-06</a></li>
+<li>¿Como se hace para formatear una cadena siempre con la misma anchura?
+(¿<code>String.pad</code> o algo así?). Parece que <a href="http://elixir-lang.org/docs/stable/elixir/String.html#ljust/3"><code>String.ljust/3</code></a> hace el trabajo.</li>
+</ul>
+
+
+<h2>Aprender lo suficiente para hacer algo de utilidad</h2>
+
+<ul>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-06/exercise-01-round-06.exs">exercise-01-round-06</a>: repetir (honestamente) el proceso de crear un nuevo
+proyecto y crear un módulo que parsee opciones de la línea de comandos y un
+test para ello</li>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-06/exercise-02-round-06.exs">exercise-02-round-06</a>: seguir implementando el ejemplo del libro lo más
+honestamente que se pueda. Se implementarán las siguientes transformaciones:
+obtener los datos de GitHub con HTTPoison, parsear el JSON resultante con JSX,
+extraer sólo la información que nos interesa, ordenarla y recuperar sólo la
+cantidad que quiere el usuario.</li>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-06/exercise-03-round-06.exs">exercise-03-round-06</a>: implementar el resto de la funcionalidad de la
+aplicación</li>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-06/exercise-04-round-06.exs">exercise-04-round-06</a>: escribir una aplicación que pida datos a un organismo
+de EEUU sobre el tiempo, parsee los datos XML y los muestre de forma
+agradable</li>
+</ul>
+
+
+<h2>Enseñar lo aprendido, y repetir desde el paso 7</h2>
+
+<p>Aquí está, este post, mis notas, mis pensamientos, mis dudas y mi código. Hasta
+el siguiente asalto.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Elixir: quinto asalto]]></title>
@@ -3919,90 +4239,6 @@ código, post-mortems,&#8230;</li>
 <li>Generar un entorno donde los pequeños errores no tienen consecuencias, o que
 cuando tú sepas algo que tus compañeros no saben, no te burles de ellos</li>
 </ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Charla técnica: All the little things]]></title>
-    <link href="http://rchavarria.github.io/blog/2015/10/18/charla-tecnica-all-the-little-things/"/>
-    <updated>2015-10-18T18:40:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2015/10/18/charla-tecnica-all-the-little-things</id>
-    <content type="html"><![CDATA[<p>A través del blog <a href="http://garajeando.blogspot.com.es/2015/08/interesting-talk-all-little-things.html">Garajeando</a> llegué a esta charla de <a href="http://www.sandimetz.com">Sandi Metz</a> que se
-titula <a href="https://www.youtube.com/watch?v=8bZh5LMaSmE">All the little things</a>. Sandi Metz es autora del libro
-<a href="http://www.sandimetz.com/products">Practical Object Oriented Design in Ruby</a> y ya he visto algunas de sus charlas, por lo
-que la calidad estaba asegurada. Sandi es muy defensora de la OOP y es una
-profesional excelente.</p>
-
-<p>La charla trata de una refactorización siguiendo la kata <a href="https://github.com/emilybache/GildedRose-Refactoring-Kata">The Gilded Rose</a>. La
-refactorización parte de un método gigante lleno de <code>if</code>s y lleva el código
-hacia clases pequeñas, métodos pequeños.</p>
-
-<!-- more -->
-
-
-
-
-<iframe width="560"
-        height="315"
-        src="https://www.youtube.com/embed/8bZh5LMaSmE"
-        frameborder="0"
-        allowfullscreen></iframe>
-
-
-<h2>Notas tomadas de la charla</h2>
-
-<blockquote><p>Es preferible algo de duplicación a una mala abstracción</p></blockquote>
-
-<p>La duplicación es fácil de detectar y de eliminar llegado el caso. Una mala
-abstracción al arrastraremos toda la vida del proyecto.</p>
-
-<p>Unos días después, Sandi publicó un <a href="http://us3.campaign-archive2.com/?u=1090565ccff48ac602d0a84b4&amp;id=92902a19e4&amp;e=072f6853e8">artículo en forma de newsletter</a>
-explicando algo más esta frase, porque parece que creó confusión o al menos,
-causó reacciones que hicieron pensar a Sandi que la gente no entendió realmente
-lo que ella quería transmitir.</p>
-
-<p>La idea principal de ese artículo es que una vez identificada una mala
-abstracción en el código (le pasan parámetros y hay <code>if</code>s y más <code>if</code>s), es
-recomendable recrear la duplicación en el código y dejar que él mismo nos
-indique nuevas abstracciones.</p>
-
-<blockquote><p>Que tu objetivo sea llegar a Open/Closed</p></blockquote>
-
-<p>Uno de los principios de la Programación Orientada a Objectos, es el
-Open/Closed Principle. Que para añadir nueva funcionalidad, no tengas que
-modificar código existente (abierto a extensión, cerrado a modificación). Lo
-ideal es que toda la aplicación siguiera este principio, no vas a llegar nunca,
-pero cuanto más lo sigas, más fácil será añadir nueva funcionalidad sin romper
-la existente.</p>
-
-<blockquote><p>Crea cosas pequeñas</p></blockquote>
-
-<p>Clases pequeñas, métodos pequeños,&#8230;</p>
-
-<blockquote><p>Refactoriza basándote en la complejidad, mediante la complejidad</p></blockquote>
-
-<p>Uno de los objetivos de las refactorizaciones es hacer el código más sencillo.
-Puedes utilizar métricas de complejidad para hacer un seguimiento de la
-refactorización. En pasos intermedios, ésta puede crecer, pero debes tener
-confianza en que la refactorización dará sus frutos y conseguirás un código más
-sencillo y limpio.</p>
-
-<blockquote><p>Refactoriza hacia la simplicidad</p>
-
-<p>La herencia no siempre es mala</p></blockquote>
-
-<p>Se habla mucho de composición en lugar de herencia, pero para Sandi hay una
-ocasión, donde si se dan las siguientes circunstancias, la herencia es la mejor
-solución:</p>
-
-<ol>
-<li>La jerarquía no es profunda ni ancha, es poco profunda y estrecha (no
-involucra muchas clases hijas)</li>
-<li>Las subclases son hojas dentro de tu árbol de clases, las subclases están en
-los extremos de tu árbol de clases, no entre medias</li>
-<li>Las subclases usan todo el código de la clase padre</li>
-</ol>
 
 ]]></content>
   </entry>

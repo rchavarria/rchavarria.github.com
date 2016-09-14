@@ -4,7 +4,7 @@
   <title><![CDATA[Category: learning | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/learning/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2016-09-11T22:56:03+02:00</updated>
+  <updated>2016-09-14T21:59:27+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,303 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Elixir: sexto asalto]]></title>
+    <link href="http://rchavarria.github.io/blog/2016/09/14/elixir-sexto-asalto/"/>
+    <updated>2016-09-14T21:32:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2016/09/14/elixir-sexto-asalto</id>
+    <content type="html"><![CDATA[<p>Sexto asalto. En esta ocasión no veremos nada del lenguaje, si no del
+ecosistema de <a href="http://elixir-lang.org/">Elixir</a>. Elixir viene acompañado de unas magníficas herramientas
+que complementan en lenguaje de programación en sí: <code>mix</code>, la herramienta de
+construcción de aplicaciones y herramientas de testing como <code>ExUnit</code> y
+<code>DocTests</code>. Además de estas herramientas, exploraremos también los sitios web
+donde los desarrolladores alojan la mayoría de las librerías y proyectos Elixir
+disponibles.</p>
+
+<p>Sigo con la metodología de aprendizaje explicada en el <a href="/blog/2016/01/17/aprendiendo-elixir/">primer post sobre Elixir</a>:</p>
+
+<ul>
+<li>Aprender lo suficiente para comenzar</li>
+<li>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</li>
+<li>Aprender lo suficiente para hacer algo de utilidad</li>
+<li>Enseñar lo aprendido</li>
+</ul>
+
+
+<p><img class="right" src="/images/2016/more-gladiators.png"></p>
+
+<div style="text-align: center">
+  <span style="font-size: 60%">
+Imagen basada en <a href="https://flic.kr/p/6xvcMz">More gladiators</a> de <a href="https://www.flickr.com/photos/archeon/">Hans Splinter</a>, <a href="https://creativecommons.org/licenses/by-nd/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>
+  </span>
+</div>
+
+
+
+
+<!-- more -->
+
+
+<h2>Aprender lo suficiente para comenzar</h2>
+
+<p>Elixir viene con la herramienta <code>mix</code>, la herramienta oficial de construcción
+de proyectos (creación, testeo, construcción, gestión de dependencias,...). En
+este asalto crearemos una aplicación que nos permitirá listar los últimos <code>n</code>
+<em>issues</em> de cualquier proyecto de <a href="https://github.com">GitHub</a>.</p>
+
+<p><code>mix help</code> lista los comandos disponibles. Los más interesantes podrían ser:
+<code>mix run</code> para ejecutar el proyecto, <code>mix test</code> para ejecutar los tests o <code>mix
+new</code> para crear uno nuevo.</p>
+
+<p>Crearemos un nuevo proyecto, llamado <code>rct_issues</code>:</p>
+
+<p><code>
+$ mix new rct_issues
+</code></p>
+
+<p>Listando los ficheros y directorios que ha creado el comando, encontramos los
+siguientes:</p>
+
+<ul>
+<li><code>/README.md</code>: aquí podemos poner la descripción del proyecto.</li>
+<li><code>/config/</code>: donde vivirá la configuración del proyecto</li>
+<li><code>/lib/</code>: aquí irá el código fuente de nuestro proyecto</li>
+<li><code>/test/</code>: aquí irá el código de tests</li>
+<li><code>mix.exs</code>: opciones de configuración del proyecto en sí</li>
+</ul>
+
+
+<p><strong>Transformación: parsear la línea de comandos</strong></p>
+
+<p>La aplicación de ejemplo tomará los parámetros de la línea de comandos. Las
+aplicaciones Elixir consisten en una serie de transformaciones, y la primera de
+ellas será la de parsear la línea de comandos.</p>
+
+<p>En Elixir existen una serie de convenciones:</p>
+
+<ul>
+<li>El código que gestiona la línea de comandos va en un módulo llamado
+<code>&lt;proyecto&gt;.CLI</code>, así que nuestro código iría en un módulo llamado
+<code>RctIssues.CLI</code></li>
+<li>Cada módulo va en un fichero distinto</li>
+<li>Cada módulo va dentro del espacio de nombres del proyecto, por lo que todos
+los módulos colgarán de <code>RctIssues</code></li>
+<li>Los <em>espacios de nombres</em> corresponden con directorios en el árbol del
+proyecto. Así, el módulo <code>RctIssues.CLI</code> se escribiría en el directorio
+<code>/lib/rct_issues/cli.ex</code>. Ver fichero de código fuente <a href="https://github.com/rchavarria/learning-elixir/blob/master/projects/rct_issues/lib/rct_issues/cli.ex">cli.ex</a></li>
+</ul>
+
+
+<p><strong>Los primeros tests</strong></p>
+
+<p>Elixir viene con un pequeño framework de testing llamado <code>ExUnit</code>.</p>
+
+<p>En el fichero <code>/test/cli_test.exs</code> escribiremos los tests para el módulo que
+acabamos de escribir (echar un vistazo al fichero <a href="https://github.com/rchavarria/learning-elixir/blob/master/projects/rct_issues/test/cli_test.exs">cli_test.exs</a>)</p>
+
+<p><strong>Transformación: obtener datos de GitHub</strong></p>
+
+<p>La siguiente transformación sería obtener datos de GitHub. Para ello
+necesitaremos alguna librería externa. Hay varios lugares donde buscar:</p>
+
+<ol>
+<li>Librerías propias de Eixir, en <a href="http://elixir-lang.org/docs">http://elixir-lang.org/docs</a></li>
+<li>Librerías propias de Erlang (también distribuidas con Elixir), en
+<a href="http://erlang.org/docs">http://erlang.org/docs</a></li>
+<li>Si todo esto falla, podemos buscar en el repositorio de <a href="http://hex.pm">Hex</a>,
+el gestor de dependencias de Elixir</li>
+<li>Si aún así, todo falla, siempre nos quedará Google y GitHub</li>
+</ol>
+
+
+<p>El autor recomienda usar <code>HTTPoison</code> como librería. Esta librería se encuentra
+en <code>Hex</code>, con lo que es muy fácil incluirla en nuestro proyecto. Simplemente
+hay que modificar el método <code>deps</code> dentro del fichero <code>/mix.exs</code>, indicando el
+nombre y la versión de la librería que queremos usar:</p>
+
+<p>```
+defp deps do
+  [</p>
+
+<pre><code>{ :httpoison, "~&gt; 0.4" }
+</code></pre>
+
+<p>  }
+end
+```</p>
+
+<p>Con el comando <code>mix deps</code> podremos saber el estado de las dependencias del
+proyecto. Con <code>mix deps.get</code> podremos descargar las dependencias que no estén
+instaladas localmente. En caso de estar instaladas, lo estarán en el directorio
+<code>/deps</code>, como proyectos Elixir, con lo que podremos navegar a través de ellas.</p>
+
+<p>Ahora ya podemos usarla. Lo haremos en un nuevo módulo, escrito en
+<a href="https://github.com/rchavarria/learning-elixir/blob/master/projects/rct_issues/lib/rct_issues/github_issues.ex"><code>/lib/rct_issues/github_issues.ex</code></a>. También modificaremos el método
+<code>applications</code> de <code>mix.exs</code> para indicar que la dependencia <code>HTTPoison</code> va a
+ser ejecutada como una <em>subaplicación</em> dentro de nuestro proyecto (hablará más
+adelante sobre ello en el libro).</p>
+
+<p><strong>Transformación: parsear la respuesta JSON</strong></p>
+
+<p>Para la siguiente transformación incluiremos una dependencia que proviene del
+mundo Erlang. <code>mix</code> es capaz de incluir dependencias de muy diversas fuentes,
+Erlan entre ellas. Se añade la librería <code>jsx</code>, como dependencia del proyecto.
+Añadir la línea <code>{ :jsx, "~&gt; 2.0" }</code> al fichero <code>mix.exs</code> y ejecutar el comando
+<code>mix deps.get</code> para instalarla localmente.</p>
+
+<p>Modificaremos nuestro módulo que debe parsear la respuesta,
+<code>lib/rct_issues/github_issues.ex</code>:</p>
+
+<p>```
+def handle_response(%{status_code: 200, body: body}) do
+  { :ok, :jsx.decode(body) }
+end</p>
+
+<p>def handle_response(%{status_code:   _, body: body}) do
+  { :error, :jsx.decode(body) }
+end        <br/>
+```</p>
+
+<p><strong>Configuración de la aplicación</strong></p>
+
+<p>Cuando creamos el proyecto con <code>mix</code>, éste crea un directorio de configuración,
+<code>config/</code>, con el fichero <code>config.exs</code>, donde podremos escribir ciertas
+configuraciones de nuestro proyecto.
+Cada línea de configuración suele ser un registro de clave valor, por ejemplo, para nuestro proyecto añadiríamos:</p>
+
+<p><code>
+use Mix.Config
+config :rct_issues, github_url: "https://api.github.com"
+</code></p>
+
+<p>Más adelante, podremos usar este valor configurado gracias al módulo
+<code>Application</code>, así</p>
+
+<p>```</p>
+
+<h1>crea una variable de clase llamada github_url</h1>
+
+<p>@github_url Application.get_env(:rct_issues, :github_url)
+```</p>
+
+<p><strong>Construir un ejecutable</strong></p>
+
+<p>Para ello es necesario modificar el fichero <code>mix.exs</code>, para configurar la
+herramienta <code>escript</code> y poder indicarle el módulo principal de la aplicación
+que se va a construir, el cual debe de tener un método llamado <code>main</code>.</p>
+
+<p>Para construir, simplemente ejecutar el comando:</p>
+
+<p><code>
+mix escript.build
+</code></p>
+
+<p>Y tendremos un ejecutable que podremos ejecutar como cualquier otra aplicación
+de consola de Unix/Linux</p>
+
+<p><strong>Ejecutando los comentarios</strong></p>
+
+<p>¿Cómo? ¿Ejecutar los comentarios? No te preocupes, Elixir puede ejecutar
+ciertos comentarios como si fueran tests. En realidad, ejecuta comentarios
+escritos en cierta forma como si fueran sesiones de la herramienta <code>iex</code>. Esto
+sí que es documentación ejecutable. Simplemente, espectacular.</p>
+
+<p>Un comentario del tipo:</p>
+
+<p><code>``
+@doc """   
+Given a list of rows, where each row contains a keyed list
+of columns, return a list containing lists of the data in
+each column. The</code>headers` parameter contains the
+list of columns to extract</p>
+
+<h2>Example</h2>
+
+<pre><code>iex&gt; list = [Enum.into([{"a", "1"},{"b", "2"},{"c", "3"}], HashDict.new),
+...&gt;         Enum.into([{"a", "4"},{"b", "5"},{"c", "6"}], HashDict.new)]
+
+iex&gt; Issues.TableFormatter.split_into_columns(list, [ "a", "b", "c" ])
+[ ["1", "4"], ["2", "5"], ["3", "6"] ]
+</code></pre>
+
+<p>"""      <br/>
+def split_into_columns(rows, headers) do</p>
+
+<h1>...</h1>
+
+<p>```</p>
+
+<p>Creamos un nuevo fichero de tests en <code>test/doc_test.exs</code>:</p>
+
+<p><code>
+defmodule DocTest do
+  use ExUnit.Case
+  doctest Issues.TableFormatter
+end  
+</code></p>
+
+<p>Donde <code>Issues.TableFormatter</code> es el módulo donde hemos incluido el comentario
+<em>ejecutable</em>. Podemos lanzar los comentarios testeables con los comandos <code>mix
+test test/doc_test.exs</code> o simplemente <code>mix test</code>.</p>
+
+<p>Para crear la documentación del proyecto, está la herramienta ExDoc, similar a
+JavaDoc. Para ello hay que añadirlo como dependencia del proyecto en el fichero
+<code>mix.exs</code>:</p>
+
+<p>```
+defp deps do
+[</p>
+
+<h1>...</h1>
+
+<p>  { :ex_doc, github: "elixir-lang/ex_doc" },</p>
+
+<h1>...</h1>
+
+<p>]
+end
+```</p>
+
+<p>Para generarlos, instalar la dependencia con <code>mix deps.get</code>, y generar la
+documentación con <code>mix docs</code>.</p>
+
+<h2>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</h2>
+
+<ul>
+<li>Necesitarás consular documentación sobre <code>OptionParser</code> para ser capaz de
+hacer el primer ejercicio... No solamente eso, si no que he escrito unos
+tests para aprender cómo funciona <a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-05/exercise-01-round-06.exs">tests de exercise-01-round-06</a></li>
+<li>¿Como se hace para formatear una cadena siempre con la misma anchura?
+(¿<code>String.pad</code> o algo así?). Parece que <a href="http://elixir-lang.org/docs/stable/elixir/String.html#ljust/3"><code>String.ljust/3</code></a> hace el trabajo.</li>
+</ul>
+
+
+<h2>Aprender lo suficiente para hacer algo de utilidad</h2>
+
+<ul>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-06/exercise-01-round-06.exs">exercise-01-round-06</a>: repetir (honestamente) el proceso de crear un nuevo
+proyecto y crear un módulo que parsee opciones de la línea de comandos y un
+test para ello</li>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-06/exercise-02-round-06.exs">exercise-02-round-06</a>: seguir implementando el ejemplo del libro lo más
+honestamente que se pueda. Se implementarán las siguientes transformaciones:
+obtener los datos de GitHub con HTTPoison, parsear el JSON resultante con JSX,
+extraer sólo la información que nos interesa, ordenarla y recuperar sólo la
+cantidad que quiere el usuario.</li>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-06/exercise-03-round-06.exs">exercise-03-round-06</a>: implementar el resto de la funcionalidad de la
+aplicación</li>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-06/exercise-04-round-06.exs">exercise-04-round-06</a>: escribir una aplicación que pida datos a un organismo
+de EEUU sobre el tiempo, parsee los datos XML y los muestre de forma
+agradable</li>
+</ul>
+
+
+<h2>Enseñar lo aprendido, y repetir desde el paso 7</h2>
+
+<p>Aquí está, este post, mis notas, mis pensamientos, mis dudas y mi código. Hasta
+el siguiente asalto.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Elixir: quinto asalto]]></title>
@@ -892,387 +1189,6 @@ simples <code>'cadena'</code>) y que sea circular, cuando sobrepase <code>z</cod
 <code>a</code>.</li>
 <li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-02/exercise-05-round-02.exs">exercise-05-round-02.exs</a>: escribir una función <code>span(from, to)</code> que
 devuelva una lista de números desde <code>from</code> hasta <code>to</code>.</li>
-</ul>
-
-
-<h2>Enseñar lo aprendido</h2>
-
-<p>Aquí está, este post, mis notas, mis pensamientos, mis dudas y mi código. Hasta el siguiente asalto.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Elixir: primer asalto]]></title>
-    <link href="http://rchavarria.github.io/blog/2016/02/09/elixir-primer-asalto/"/>
-    <updated>2016-02-09T21:57:00+01:00</updated>
-    <id>http://rchavarria.github.io/blog/2016/02/09/elixir-primer-asalto</id>
-    <content type="html"><![CDATA[<p>Éste es el primer asalto de mi aprendizaje de <a href="http://elixir-lang.org/">Elixir</a>. En él, no espero
-resolver problemas súper complicados, es un primer contacto con el lenguaje. Me
-conformaré con ser capaz de escribir un programa algo más complicado que un
-simple hola mundo. En este primer asalto, lucho con tipos de datos, funciones
-(anónimas y con nombre), pattern matching, claúsulas de guarda y módulos.</p>
-
-<p>En estos asaltos, intentaré seguir los siguientes pasos:</p>
-
-<ul>
-<li>Aprender lo suficiente para comenzar</li>
-<li>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</li>
-<li>Aprender lo suficiente para hacer algo de utilidad</li>
-<li>Enseñar lo aprendido</li>
-</ul>
-
-
-<p><img class="center" src="/images/2016/touch-gloves-derived-small.png"></p>
-
-<div style="text-align: center">
-  <span style="font-size: 60%">
-Imagen basada en <a href="https://flic.kr/p/awy1vc">Touch Gloves</a> de <a href="https://www.flickr.com/photos/kaiban/">Jack Zallum</a>, <a href="https://creativecommons.org/licenses/by-nc/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by-nc/2.0/legalcode">CC BY-NC 2.0</a>
-  </span>
-</div>
-
-
-
-
-<!-- more -->
-
-
-<h2>Aprender lo suficiente para comenzar</h2>
-
-<p><strong>Instalación</strong></p>
-
-<p>Instalar la máquina virtual de Erlang y el entorno de Elixir es extremadamente
-sencillo. Aquí están los comandos para hacerlo en una máquina con Ubuntu como
-sistema operativo. En la <a href="http://elixir-lang.org/install.html">documentación de Elixir</a> hay instrucciones para otros
-sistemas operativos.</p>
-
-<p><code>
-$ wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb
-$ sudo dpkg -i erlang-solutions_1.0_all.deb
-$ sudo apt-get update
-$ sudo apt-get install esl-erlang
-$ sudo apt-get install elixir
-</code></p>
-
-<p><strong>Editores</strong></p>
-
-<p>La comunidad de Elixir ha creado plugins para los editores de código más
-famosos, entre ellos <a href="http://www.vim.org/">Vim</a>, que utilizo para mis <a href="http://rchavarria.github.io/pet-projects/">proyectos personales</a>.</p>
-
-<p>Instalar el plugin <a href="https://github.com/elixir-lang/vim-elixir">vim-elixir</a> en Vim es facilísimo si instalas plugins con
-pathogen:</p>
-
-<p><code>
-$ git clone https://github.com/elixir-lang/vim-elixir.git ~/.vim/bundle/vim-elixir
-</code></p>
-
-<p><strong>Herramientas</strong></p>
-
-<p><code>iex</code> es una herramienta de tipo REPL (read, evaluate, print, loop), que nos
-permite ejecutar código Elixir de forma rápida. El comando <code>iex &lt;fichero.exs&gt;</code>
-compila un script de Elixir y lo carga en la herramienta. Si ya estamos dentro
-de ella, el comando para compilar el código Elixir de un fichero sería <code>c
-"&lt;fichero exs&gt;"</code>.</p>
-
-<p><strong>Pattern matching</strong></p>
-
-<p>El operador <code>=</code> es muy diferente a lo que esperamos de él los que estamos
-acostumbrados a la programación orientada a objetos. Tiene una apariencia
-similar, pero no se comporta de la misma forma. Con este operador, Elixir trata
-de hacer coincidir los valores de la izquierda con los valores de la derecha.</p>
-
-<p><code>
-a = 2
-[a, b, a] = [1, 2, 1]
-[^a, b] = [2, 3]
-[a, b, c] = [1, 2, [3, 4, 5]]   # c vale [3, 4, 5]
-</code></p>
-
-<p><strong>Inmutabilidad</strong></p>
-
-<p>¿Es eficiente devolver una copia de los datos? En los lenguajes funcionales, no
-se modifican los datos, se devuelve una copia de ellos transformados. Parece
-ineficiente, pero es todo lo contrario. Al no modificarse los originales, éstos
-pueden compartirse por muchas variables, y pueden estar tranquilos, ya que no
-se va a modificar. En los lenguajes no funcionales, se devuelve una copia (no
-eficiente), en los funcionales, en realidad no se devuelve una copia, se
-comparte todo lo que se puede. Por lo que es más eficiente.</p>
-
-<p>¿Qué pasa con el recolector de basura? ¿Consume muchos recursos para deshacerse
-de todos esos datos transformados que ya no se utilizan? No consume mucho, en
-Elixir (en Erlang en realidad), hay muchos procesos, cada uno con un <em>heap</em>
-distinto, por lo que el heap es más pequeño que en otros lenguajes, y el
-recolector de basura se ejecuta bastante más rápido.</p>
-
-<p><strong>Tipos de datos</strong></p>
-
-<p>Y por fin algo de código:</p>
-
-<p>```</p>
-
-<h1>enteros</h1>
-
-<p>this_is_an_int = 1234
-this_is_an_int = 0xcafe    # admite hexadecimal
-this_is_an_int = 0o765     # octal
-this_is_an_int = 0b01010   # binario
-this_is_an_int = 1_000_000</p>
-
-<h1>en coma flotante</h1>
-
-<p>this_is_a_float = 1.0
-this_is_a_float = 0.245
-this_is_a_float = .342        # error
-this_is_a_float = 314159.0e-5</p>
-
-<h1>rangos</h1>
-
-<p>this_is_a_range = 1..100</p>
-
-<h1>expresiones regulares</h1>
-
-<p>this_is_a_regexp = ~r{regexp}options</p>
-
-<h1>tuplas</h1>
-
-<p>this_is_a_tuple = { :ok, 42, "next" }</p>
-
-<h1>listas: se parecen a los arrays de otros lenguajes, pero no</h1>
-
-<h1>lo son. Son estructuras enlazadas. Una lista o está vacía, o</h1>
-
-<h1>contiene un head y un tail, donde tail es otra lista</h1>
-
-<p>this_is_a_list = [ 1, 2, 3 ]</p>
-
-<h1>mapas: lista de parejas clave/valor</h1>
-
-<p>this_is_a_map = %{ key => value, key => value }</p>
-
-<h1>si las claves son Atoms, se puede escribir</h1>
-
-<p>this_is_a_map = %{ red: 0xFF0000, green: 0x00FF00, blue: 0x0000FF }</p>
-
-<h1>binarios: para acceder a datos como una secuencia de bits y bytes (para muy bajo nivel)</h1>
-
-<p>```</p>
-
-<p>Hay otros tipos de datos, como los PIDs (referencias a procesos locales o
-remotos) o los puertos (referencias a recursos sobre los cuales leeremos o
-escribiremos).</p>
-
-<p>Un tipo de datos muy interesante (y que yo personalmente no conocía) son los
-<em>Atoms</em>: constantes representando el nombre de algo. Su nombre es su valor. Dos
-Atoms son igules si tienen el mismo nombre, vengan de donde vengan (incluso de
-máquinas diferentes)</p>
-
-<p>```</p>
-
-<h1>atoms</h1>
-
-<p>this_is_an_atom = :fred
-this_is_an_atom = :is_binary?
-this_is_an_atom = :var@32
-this_is_an_atom = :&lt;>
-this_is_an_atom = :"lo john silver"
-```</p>
-
-<p>Hay dos estructuras muy similares, la lista de palabras clave: <code>[red: 0xFF000,
-green: 0x00FF00]</code>, que se transforma en <code>[{:red, 0xFF0000}, {:green,
-0x00FF00}]</code> y un mapa <code>%{red: 0xFF000, green: 0x00FF00}</code>. Se recomienda usar la
-lista de palabras clave para pasar parámetros y usar los mapas cuando se
-necesite un array asociativo.</p>
-
-<p>No hemos dicho nada de las cadenas. Pertenecen al tipo <em>Binario</em>. Existe
-interpolación de cadenas, con <code>#{...}</code> se evalúa el código de dentro y se
-formatea la cadena con el valor obtenido.</p>
-
-<p><strong>Funciones anónimas</strong></p>
-
-<p><code>
-sum = fn (a, b) -&gt; a + b end
-sum.(2, 3)   # devuelve 5
-</code></p>
-
-<p>Las funciones pueden devolver otras funciones. Las funciones recuerdan su
-entorno original. Forman lo que se conoce como <em>closures</em>. Me recuerda mucho a
-las funciones de JavaScript en este aspecto.</p>
-
-<p>Existe una forma de crear funciones anónimas de una forma muy concisa, con el
-operador <code>&amp;...</code></p>
-
-<p>```
-sum = fn (a, b) -> a + b end
-sum2 = &amp;(&amp;1 + &amp;2)   # idéntica a la función anterior</p>
-
-<h1>devuelve lista con dos elementos: doble del primer parámetro, y cuadrado del mismo</h1>
-
-<p>returns_a_list = &amp;[2 * &amp;1, &amp;1 * &amp;1]</p>
-
-<h1>esta notación viene muy bien para pasar funciones por parámetro</h1>
-
-<p>Enum.map [1, 2, 3] &amp;(&amp;1 * &amp;1)   # devuelve [1, 4, 9]
-```</p>
-
-<p>Es normal ver la definición de una función como <code>&amp;map/2</code>, donde <code>map</code> es el
-nombre de la función y <code>2</code> es el <em>arity</em>, el número de parámetros de la misma.</p>
-
-<p><strong>Módulos, funciones con nombre y funciones privadas</strong></p>
-
-<p>```
-defmodule Times do
-  ## define una función en una única línea
-  def double(n), do: n * 2</p>
-
-<p>  ## define una función en varias líneas
-  def triple(n) do</p>
-
-<pre><code>n * 3
-</code></pre>
-
-<p>  end</p>
-
-<p>  ## define una función privada
-  defp quadruple(n) do: n * 4
-end
-```</p>
-
-<p>Las funciones con nombre pueden tener varios cuerpos. Eso ayuda a utilizar
-<em>pattern matching</em> a la hora de implementar una solución.</p>
-
-<p>```
-defmodule Factorial do
-  # el factorial de 0, siempre es 1, esta definición es quien para la recursividad
-  def of(0), do: 1</p>
-
-<p>  # el factorial de cualquier otro número, es recursivo
-  def of(n), do: n * factorial(n - 1)
-end</p>
-
-<p>Factor.of(5)
-  # => 120
-```</p>
-
-<p>También, las definiciones pueden tener claúsulas de guarda, mediante <code>when
-&lt;condition&gt;</code>, lo que ayuda a tener un pattern matching más específico.</p>
-
-<p>```
-defmodule Guard do
-  def what_is(x) when is_number(x) do</p>
-
-<pre><code>IO.puts "#{x} is a number"
-</code></pre>
-
-<p>  end
-  def what_is(x) when is_list(x) do</p>
-
-<pre><code>IO.puts "#{x} is a list"
-</code></pre>
-
-<p>  end
-  def what_is(x) when is_atom(x) do</p>
-
-<pre><code>IO.puts "#{x} is an atom"
-</code></pre>
-
-<p>  end
-end
-```</p>
-
-<p><strong>El operador tubería (pipe)</strong></p>
-
-<p>El operador <code>|&gt;</code> toma el resultado de una función y lo pasa como primer
-parámetro de la segunda función. <code>String.reverse "foobar" |&gt; String.capitalize</code></p>
-
-<p>```
-filing = DB.find_customers</p>
-
-<pre><code>       |&gt; Orders.for_customers
-       |&gt; sales_tax(2016)
-       |&gt; prepare_filing
-</code></pre>
-
-<p>list
-  |> sales_taxes(2016)
-  |> prepare_filing</p>
-
-<h1>es lo mismo que llamar</h1>
-
-<p>prepare_filing( sales_taxes(list, 2016) )
-```</p>
-
-<p><strong>Parámetros por defecto</strong></p>
-
-<p>```
-defmodule DefaultParams do
-  def func(p1, p2 \ 2) do</p>
-
-<pre><code>IO.inspect [p1, p2]
-</code></pre>
-
-<p>  end
-end</p>
-
-<p>Example.func("a", "b")
-  # => ["a", "b"]</p>
-
-<p>Example.func("a")
-  # => ["a", 2]
-```</p>
-
-<p><strong>Librerías</strong></p>
-
-<p>Se pueden buscar módulos y librerías ya implementados para realizar ciertas
-tareas que necesitemos, para ello, está la documentación de <a href="http://elixir-lang.org/docs.html">librerías de Elixir</a>.
-Si no encontramos ahí lo que buscamos, lo podemos buscar en <a href="http://erlang.org/doc/">librerías de Erlang</a>.</p>
-
-<h2>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</h2>
-
-<p><strong>¿Qué hace <code>^</code> en el pattern matching?</strong></p>
-
-<p>El operador <code>^</code> obliga a que el valor actual de una variable coincida con el
-valor en la expresión de <em>pattern matching</em>. En caso de no coincidir, se
-producirá un error.</p>
-
-<p><code>
-a = 2
-[^a, b] = [2, 3]  ## no hay error, `a` valía `2` y aquí coinciden
-[^a, b] = [1, 3]  ## error
-</code></p>
-
-<p><strong>Tuplas, <em>keyword list</em> y mapas</strong></p>
-
-<p>Las <em>keyword list</em> son una lista usadas muy a menudo, tienen la forma:</p>
-
-<p><code>
-keyword_list = [ red: 0xFF0000, green: 0x00FF00, blue: 0x0000FF ]
-</code></p>
-
-<p>Pero no es más que una forma simplificada de escribir una lista de tuplas,
-donde el primer valor de cada una de ellas es un Atom:</p>
-
-<p><code>
-tuple_list = [ {:red, 0xFF000}, {:green, 0x00FF00}, {:blue, 0x0000FF} ]
-</code></p>
-
-<p>Una estructura muy parecida a estas son los mapas, que no son más que un
-conjunto de parejas clave-valor:</p>
-
-<p><code>
-a_map = %{ :red =&gt; 0xFF000, :green =&gt; 0x00FF00, :blue =&gt; 0x0000FF }
-</code></p>
-
-<h2>Aprender lo suficiente para hacer algo de utilidad</h2>
-
-<ul>
-<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-01/round-01-exercise-01.exs">round-01-exercise-01.exs</a>: utilizar varios cuerpos de una función y
-recursividad para implementar una función que calcule la suma de <code>1</code> hasta
-<code>n</code></li>
-<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-01/round-01-exercise-02.exs">round-01-exercise-02.exs</a>: implementar la función <code>gcd(x, y)</code> que calcule el
-máximo común divisor. Matemáticamente: <code>gcd(x, y)</code> es <code>x</code> si <code>y</code> es cero y es
-<code>gcd(y, rem(x, y))</code> en caso contrario</li>
-<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-01/round-01-exercise-03.exs">round-01-exercise-03.exs</a>: crear el juego <em>Estoy pensando en un número entre
-el 1 y el 100</em>: rangos, div(a, b), claúsulas de guarda, pattern matching en
-rangos: <code>a..b = 4..8</code>, funciones privadas</li>
 </ul>
 
 

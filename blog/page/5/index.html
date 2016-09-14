@@ -9,8 +9,8 @@
   <meta name="author" content="Rub&eacute;n Chavarr&iacute;a">
 
   
-  <meta name="description" content="Cuando estoy aprendiendo un lenguaje de programación, me gusta practicar
-con él, me gusta escribir código con él. Puedes leer los libros o los blogs &hellip;">
+  <meta name="description" content="Dart es un lenguaje de programación que se ejecuta en un único hilo. Si un
+bloque de código bloquea dicho hilo (por ejemplo haciendo una operación de &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -80,6 +80,55 @@ con él, me gusta escribir código con él. Puedes leer los libros o los blogs &
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/01/29/operaciones-asincronas-en-dart-con-futures/">Operaciones asíncronas en Dart con Futures</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-01-29T22:06:00+01:00" pubdate data-updated="true">Jan 29<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://dartlang.org">Dart</a> es un lenguaje de programación que se ejecuta en un único hilo. Si un
+bloque de código bloquea dicho hilo (por ejemplo haciendo una operación de
+entrada-salida de larga duración), la aplicación quedará <em>congelada</em>. Las
+operaciones asíncronas permiten al programador crear operaciones sin bloquear
+la aplicación entera. Dart usa la clase <code>Future</code> para realizar estas
+operaciones asíncronas.</p>
+
+<p>En el <a href="https://www.dartlang.org/docs/tutorials/futures/">tutorial sobre Futures</a> podrás encontrar información acerca de cómo
+usar esta API de Dart.</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2015/01/29/operaciones-asincronas-en-dart-con-futures/">Continuar leyendo &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -542,58 +591,6 @@ trabajar.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/10/17/jenkins-ci-inyectar-variable-de-entorno/">Jenkins CI: inyectar variable de entorno</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-10-17T08:44:00+02:00" pubdate data-updated="true">Oct 17<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Recientemente, me ha surgido la necesidad de inyectar, o modificar más bien, una
-variable de entorno en el servidor de integración contínua que usamos en el
-trabajo, <a href="http://www.jenkins-ci.org">Jenkins</a>.</p>
-
-<p>Uno de los <em>jobs</em> de Jenkins necesita una aplicación recientemente instalada, y
-dicha aplicación no está alojada en ningún directorio definido dentro de la
-variable de entorno <code>PATH</code>. Por lo cual, el <em>job</em> fallaba.</p>
-
-<p>Una posible solución a este problema era el de modificar la variable de entorno
-a nivel global, pero eso podría entrar en conflicto con otros <em>jobs</em>. Por lo cual
-decidí cambiarla sólo a nivel de <em>job</em>. Por lo que llegamos a la pregunta:
-¿Cómo se inyecta una variable de entorno en un <em>job</em> de Jenkins?</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/10/17/jenkins-ci-inyectar-variable-de-entorno/">Continuar leyendo &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/6/">&larr; Older</a>
@@ -611,6 +608,10 @@ decidí cambiarla sólo a nivel de <em>job</em>. Por lo que llegamos a la pregun
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2016/09/14/elixir-sexto-asalto/">Elixir: sexto asalto</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2016/09/11/elixir-quinto-asalto/">Elixir: quinto asalto</a>
       </li>
     
@@ -624,10 +625,6 @@ decidí cambiarla sólo a nivel de <em>job</em>. Por lo que llegamos a la pregun
     
       <li class="post">
         <a href="/blog/2016/05/01/elixir-tercer-round/">Elixir: tercer asalto</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2016/04/10/code/">Code: the hidden language of computer hardware and software</a>
       </li>
     
   </ul>
