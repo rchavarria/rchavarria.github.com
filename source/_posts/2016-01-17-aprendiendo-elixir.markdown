@@ -127,11 +127,8 @@ suficiente para ir cogiendo ritmo.
 3. [Tercer asalto]: más colecciones, módulos `Enum`, `Stream` y *comprehensions*
 4. [Cuarto asalto]: tipos de datos binarios, cadenas, `String`s y *sigils*
 5. [Quinto asalto]: estructuras de control: `if`, `unless`, `cond` y `case`
-
-<!--
 6. [Sexto asalto]: herramientas auxiliares como `mix`, `ExUnit`, `ExDoc`,...
 7. [Séptimo asalto]: procesos, concurrencia, monitorización de procesos
--->
 
 [Madrid |> Elixir]: http://www.meetup.com/Madrid-Elixir/
 [Soft Skills]: http://rchavarria.github.io/blog/2015/11/08/soft-skills/
