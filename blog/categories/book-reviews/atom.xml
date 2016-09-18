@@ -4,7 +4,7 @@
   <title><![CDATA[Category: book reviews | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/book-reviews/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2016-09-18T16:45:57+02:00</updated>
+  <updated>2016-09-18T17:16:55+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,97 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Zen y el arte en el mantenimiento de motocicletas]]></title>
+    <link href="http://rchavarria.github.io/blog/2016/09/18/zen-arte-mantenimiento-motocicletas/"/>
+    <updated>2016-09-18T16:56:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2016/09/18/zen-arte-mantenimiento-motocicletas</id>
+    <content type="html"><![CDATA[<h6>de Robert M. Pirsig</h6>
+
+<p><img class="left" src="https://raw.githubusercontent.com/rchavarria/blog-post-incubator/master/published-book-notes/img/zen.jpg"></p>
+
+<h3>Por qué lo he leído</h3>
+
+<p>El título no es que sea muy llamativo, parece más un libro sobre filosofía (con
+un subtítulo un poco extraño eso sí). Pero estaba recomendado por Mattias
+(<a href="https://twitter.com/mpjme">@mpjme</a>) en el capítulo 18 de
+<a href="https://www.youtube.com/watch?v=lrf6xuFq1Ms&amp;t=90">FunFunFunction</a>, su <em>canal</em>
+de YouTube, y no era la primera vez que oía hablar de
+<a href="https://www.amazon.es/Arte-Mantenimiento-Motocicleta-Narrativa-Sexto/dp/8415601956/">Zen y el arte en el mantenimiento de motocicletas</a>.</p>
+
+<p>Así que... si recibes varias referencias de un libro por distintas personas y
+en distintas ocasiones, es que puede ser un libro interesante.</p>
+
+<!-- more -->
+
+
+<h3>De qué trata el libro</h3>
+
+<p>Me esperaba una historia, una novela, que sirviera de hilo conductor para que
+el autor fuera exponiendo una serie de consejos sobre la vida en general y
+sobre cómo mantener las cosas materiales en esta vida, ya fueran motocicletas,
+ordenadores,... cualquier cosa. De echo, las personas que hablaban del libro
+decían que varias ideas eran bastante trasladables al área del desarrollo del
+software.</p>
+
+<p>Y sí, en parte el libro va de eso. Cuenta una historia, un viaje de un padre y
+su hijo, en busca de algo, o alguien. Y durante el viaje, el autor cuenta
+multitud de historias de <em>abuelo cebolleta</em>.</p>
+
+<h3>Conclusiones y valoración</h3>
+
+<p>El libro está lleno de historias interesantes, e incluso divertidas. Hay
+multitud de consejos sobre la vida, y en general estoy muy de acuerdo con
+ellos. Me gusta cuidar las cosas, me gusta disfrutar de ellas. Cojo cariño a
+mis máquinas, me acostumbro a ellas, tiendo a aceptarlas como son, con sus
+deficiencias. Me siento muy identificado con muchos aspectos de los que habla
+el protagonista.</p>
+
+<p>Pero el libro no ha calado en mi. ¿El inglés? ¿Muchas historias? ¿La filosofía
+detrás de ellas? No sé, pero no he podido terminarlo.</p>
+
+<p>Podría recomendar el libro a gente joven, que tiene toda una vida por delante,
+para que aprendiera a disfrutar de las cosas sencillas de la vida. Podría
+recomendárselo a gente no tan joven, para que aprendiera lo mismo (nunca es
+tarde). Pero tendría que advertirles que tiene un componente muy filosófico, y
+que al menos a mí, creo que es lo que me ha hechado hacia atrás a la hora de
+terminarlo. No diría que el libro es malo, simplemente que no ha suscitado el
+interés suficiente en mí.</p>
+
+<h3>Frases que me gustaría recordar</h3>
+
+<blockquote><p>Diferencias entre <em>pensamiento clásico</em> (o científico, basado en hechos, con el
+  que me siento más identificado) y el <em>pensamiento romático</em> (más idílico, más
+  centrado en la belleza, más artístico)</p>
+
+<p>Cada motocicleta (o máquina) tiene su personalidad propia y única. Según vas
+  manteniendo las cosas, vas cogiéndoles cariño, las vas haciendo tuyas según va
+  pasando el tiempo, las vas conociendo.</p></blockquote>
+
+<p>Varios pasos a la hora de hacer un análisis lógico:</p>
+
+<ol>
+<li>Describir el problema</li>
+<li>Describir diferentes hipótesis que describan el problema</li>
+<li>Crear experimentos para testear cada una de las hipótesis</li>
+<li>Predecir los resultados de los experimentos</li>
+<li>Anotar los resultados obtenidos de los experimentos</li>
+<li>Realizar conclusiones a partir de los resultados de los experimentos</li>
+</ol>
+
+
+<h3>Recursos relacionados</h3>
+
+<ul>
+<li>Mis <a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/zen-and-the-art-of-motorcycle-maintenance-by-robert-m-pirsig.markdown">notas sobre Zen y el arte en el mantenimiento de motocicletas</a></li>
+<li>El libro <a href="https://www.amazon.es/Arte-Mantenimiento-Motocicleta-Narrativa-Sexto/dp/8415601956/">Zen y el arte en el mantenimiento de motocicletas</a> en Amazon</li>
+<li><a href="https://twitter.com/mpjme">Mattias P. Johansson</a> en twitter</li>
+<li><a href="https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q">Canal de YouTube FunFunFunction</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Practical Vim]]></title>
@@ -785,83 +876,6 @@ art-form, but (unlike art) it provides concrete, measurable value.</p></blockquo
 
 <ul>
 <li><a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/passionate-programmer-by-chad-fowler.markdown">Notas tomadas sobre el libro</a></li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[The Martian]]></title>
-    <link href="http://rchavarria.github.io/blog/2015/09/06/the-martian/"/>
-    <updated>2015-09-06T16:05:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2015/09/06/the-martian</id>
-    <content type="html"><![CDATA[<h5>de Andy Weir</h5>
-
-<p><img class="right" src="http://www.ew.com/sites/default/files/i/2014/02/04/The-Martian.jpg" width="201" height="306"></p>
-
-<h2>Por qué lo he leído</h2>
-
-<p>Hace un tiempo que escucho semanalmente los podcasts de Scott Hanselman:
-<a href="http://www.hanselminutes.com/">Hanselminutes</a>. Son unos podcasts muy variados que tratan temas relacionados
-con el mundo del software y la tecnología en general: lenguajes de programación,
-iniciativas,...</p>
-
-<p>En varios de sus podcasts, y probablemente en varios de sus posts, Scott dice
-que uno de los libros que más recomienda es <a href="http://www.amazon.es/gp/product/B00OXYQR38/">El marciano</a>, que es un libro
-que le encanta. No creo que se lleve ninguna comisión por hacer publicidad,
-pero si alguien como Scott recomienda una y otra vez un libro, será por algo.
-Además, es un libro no técnico, por lo que me serviría para desconectar un poco
-en vacaciones.</p>
-
-<!-- more -->
-
-
-<h2>Qué esperaba</h2>
-
-<p>Al estar tan recomendado, esperaba una novela muy bien escrita. Según Scott, es
-una novela de ciencia ficción, pero que es mucho más de ciencia que de ficción,
-de hecho, con el estado actual de la tecnología, se podría dar la situación
-perfectamente. Lo único que quizá no se ha invertido el tiempo y el dinero en
-hacerlo realidad, pero podría serlo.</p>
-
-<h2>Qué encontre</h2>
-
-<p>Evidentemente, encontré todo lo que esperaba. Una novela de ciencia ficción, con
-más ciencia que ficción, describiendo una situación que podría ser totalmente
-cierta actualmente. Una novela magníficamente escrita, con muchos tecnicismos,
-llena de vocabulario aeroespacial, describiendo personalidades muy distintas,
-pero que el autor usa inteligentemente.</p>
-
-<h2>Conclusiones</h2>
-
-<p>Sin duda, una novela a recomendar. Si te gusta el espacio, si te gusta la ciencia,
-y si te gusta la ficción; ésta es una novela para tí. O película, porque mientras
-estaba a mitad del libro, me entero de que van a <em>sacar</em> la película y que ya hay
-disponible algún <a href="https://www.youtube.com/watch?v=ej3ioOneTy8">trailer</a>. Así que eso me animó a terminarme antes aún el
-libro, a devorarlo en vacaciones.</p>
-
-<p>Aunque la situación podría darse hoy en día, también hay que hacer un acto de fe
-para creerse todo lo que cuenta. En muchas ocasiones, el protagonista describe
-procesos químicos, o físicos, que pueden funcionar por casualidad, pero que al
-final, por <em>necesidades del guión</em>, terminan funcionando. No son situaciones
-increíbles, pero sí que uno tiene que relajarse un poco y creer en la fortuna
-del protagonista.</p>
-
-<h2>Qué he aprendido</h2>
-
-<p>No es que pueda sacar lecciones aprendidas, como si fuera un libro técnico
-describiendo un proceso o una tecnología, pero sí que he aprendido un montón
-de cosas sobre Marte: lugares, condiciones en la superficie, cómo viajar al
-planeta, cómo funcionan las comunicaciones, un poco sobre viajes
-interplanetarios, cómo funciona la NASA por dentro. Aunque sé que es una novela,
-no me lo tengo que tomar todo al pie de la letra.</p>
-
-<h2>Recursos relacionados</h2>
-
-<ul>
-<li><a href="http://www.hanselminutes.com/">Hanselminutes podcast</a></li>
-<li><a href="http://www.amazon.es/gp/product/B00OXYQR38/">El marciano</a>, de Andy Weir, o en versión original: <a href="http://www.amazon.com/The-Martian-Novel-Andy-Weir-ebook/dp/B00EMXBDMA">The Martian</a></li>
-<li><a href="https://www.youtube.com/watch?v=ej3ioOneTy8">Trailer de The Martian</a></li>
 </ul>
 
 ]]></content>

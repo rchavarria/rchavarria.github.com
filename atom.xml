@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2016-09-18T16:45:57+02:00</updated>
+  <updated>2016-09-18T17:16:55+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,97 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Zen y el arte en el mantenimiento de motocicletas]]></title>
+    <link href="http://rchavarria.github.io/blog/2016/09/18/zen-arte-mantenimiento-motocicletas/"/>
+    <updated>2016-09-18T16:56:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2016/09/18/zen-arte-mantenimiento-motocicletas</id>
+    <content type="html"><![CDATA[<h6>de Robert M. Pirsig</h6>
+
+<p><img class="left" src="https://raw.githubusercontent.com/rchavarria/blog-post-incubator/master/published-book-notes/img/zen.jpg"></p>
+
+<h3>Por qué lo he leído</h3>
+
+<p>El título no es que sea muy llamativo, parece más un libro sobre filosofía (con
+un subtítulo un poco extraño eso sí). Pero estaba recomendado por Mattias
+(<a href="https://twitter.com/mpjme">@mpjme</a>) en el capítulo 18 de
+<a href="https://www.youtube.com/watch?v=lrf6xuFq1Ms&amp;t=90">FunFunFunction</a>, su <em>canal</em>
+de YouTube, y no era la primera vez que oía hablar de
+<a href="https://www.amazon.es/Arte-Mantenimiento-Motocicleta-Narrativa-Sexto/dp/8415601956/">Zen y el arte en el mantenimiento de motocicletas</a>.</p>
+
+<p>Así que&#8230; si recibes varias referencias de un libro por distintas personas y
+en distintas ocasiones, es que puede ser un libro interesante.</p>
+
+<!-- more -->
+
+
+<h3>De qué trata el libro</h3>
+
+<p>Me esperaba una historia, una novela, que sirviera de hilo conductor para que
+el autor fuera exponiendo una serie de consejos sobre la vida en general y
+sobre cómo mantener las cosas materiales en esta vida, ya fueran motocicletas,
+ordenadores,&#8230; cualquier cosa. De echo, las personas que hablaban del libro
+decían que varias ideas eran bastante trasladables al área del desarrollo del
+software.</p>
+
+<p>Y sí, en parte el libro va de eso. Cuenta una historia, un viaje de un padre y
+su hijo, en busca de algo, o alguien. Y durante el viaje, el autor cuenta
+multitud de historias de <em>abuelo cebolleta</em>.</p>
+
+<h3>Conclusiones y valoración</h3>
+
+<p>El libro está lleno de historias interesantes, e incluso divertidas. Hay
+multitud de consejos sobre la vida, y en general estoy muy de acuerdo con
+ellos. Me gusta cuidar las cosas, me gusta disfrutar de ellas. Cojo cariño a
+mis máquinas, me acostumbro a ellas, tiendo a aceptarlas como son, con sus
+deficiencias. Me siento muy identificado con muchos aspectos de los que habla
+el protagonista.</p>
+
+<p>Pero el libro no ha calado en mi. ¿El inglés? ¿Muchas historias? ¿La filosofía
+detrás de ellas? No sé, pero no he podido terminarlo.</p>
+
+<p>Podría recomendar el libro a gente joven, que tiene toda una vida por delante,
+para que aprendiera a disfrutar de las cosas sencillas de la vida. Podría
+recomendárselo a gente no tan joven, para que aprendiera lo mismo (nunca es
+tarde). Pero tendría que advertirles que tiene un componente muy filosófico, y
+que al menos a mí, creo que es lo que me ha hechado hacia atrás a la hora de
+terminarlo. No diría que el libro es malo, simplemente que no ha suscitado el
+interés suficiente en mí.</p>
+
+<h3>Frases que me gustaría recordar</h3>
+
+<blockquote><p>Diferencias entre <em>pensamiento clásico</em> (o científico, basado en hechos, con el
+  que me siento más identificado) y el <em>pensamiento romático</em> (más idílico, más
+  centrado en la belleza, más artístico)</p>
+
+<p>Cada motocicleta (o máquina) tiene su personalidad propia y única. Según vas
+  manteniendo las cosas, vas cogiéndoles cariño, las vas haciendo tuyas según va
+  pasando el tiempo, las vas conociendo.</p></blockquote>
+
+<p>Varios pasos a la hora de hacer un análisis lógico:</p>
+
+<ol>
+<li>Describir el problema</li>
+<li>Describir diferentes hipótesis que describan el problema</li>
+<li>Crear experimentos para testear cada una de las hipótesis</li>
+<li>Predecir los resultados de los experimentos</li>
+<li>Anotar los resultados obtenidos de los experimentos</li>
+<li>Realizar conclusiones a partir de los resultados de los experimentos</li>
+</ol>
+
+
+<h3>Recursos relacionados</h3>
+
+<ul>
+<li>Mis <a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/zen-and-the-art-of-motorcycle-maintenance-by-robert-m-pirsig.markdown">notas sobre Zen y el arte en el mantenimiento de motocicletas</a></li>
+<li>El libro <a href="https://www.amazon.es/Arte-Mantenimiento-Motocicleta-Narrativa-Sexto/dp/8415601956/">Zen y el arte en el mantenimiento de motocicletas</a> en Amazon</li>
+<li><a href="https://twitter.com/mpjme">Mattias P. Johansson</a> en twitter</li>
+<li><a href="https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q">Canal de YouTube FunFunFunction</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Elixir: séptimo asalto]]></title>
@@ -4250,121 +4341,6 @@ mismo problema, a modo de kata.</p>
 <li><a href="http://rchavarria.github.io/blog/2014/10/23/screencast-programacion-juego-disparejo/">El juego del disparejo</a></li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[You've got commit!]]></title>
-    <link href="http://rchavarria.github.io/blog/2015/10/25/youve-got-commit/"/>
-    <updated>2015-10-25T15:18:00+01:00</updated>
-    <id>http://rchavarria.github.io/blog/2015/10/25/youve-got-commit</id>
-    <content type="html"><![CDATA[<p>Una de las mejores formas de aprender es haciendo cosas (<em>learning by doing</em>,
-que está muy de moda ahora). Y otra forma muy buena es manteniendo
-conversaciones con profesionales de tu sector. Por todo lo aprendido hay que
-estar agradecido, y qué mejor forma de agradecer que contribuir a la comunidad,
-a tu profesión, realizando algún trabajo del que se puedan beneficiar otros. La
-siguiente historia cuenta un camino que estoy recorriendo, de cómo empezé algo
-por el simple hecho de aprender y terminé participando en un proyecto open
-source como es <a href="http://exercism.io/">exercism.io</a>.</p>
-
-<p><img class="center" style="width: 225px" src="http://rchavarria.github.io/images/2015/exercism-logo.svg"/></p>
-
-<!-- more -->
-
-
-<h2>El origen</h2>
-
-<p>Llevaba un tiempo utilizando <a href="http://www.solveet.com/">solveet.com</a> para practicar con pequeños
-ejercicios de programación. De hecho, utilicé la plataforma con distintos
-lenguajes que estaba interesado en aprender. Pero poco a poco fui perdiendo la
-motivación para usarla. No recibía feedback de mis soluciones, de lo cual se
-pueden deducir dos cosas: que mis soluciones eran penosas o que la mayoría de
-los usuarios no estaban por la labor de compartir.</p>
-
-<p>En realidad, creo que la causa principal era que yo aportaba mi solución tiempo
-después de la última aportada, así que los usuarios probablemente ya habrían
-perdido interés en ese problema en concreto. No le puedo echar la culpa a
-Solveet, es una plataforma estupenda. Si estás buscando algo para practicar, y
-en español, te lo recomiendo. Disfrutarás de lo lindo.</p>
-
-<h2>Expandiendo horizontes</h2>
-
-<p>Con esa falta de motivación, llevaba rondando por la cabeza probar otras
-plataformas similares, y me decidí por <a href="https://projecteuler.net/">Project Euler</a>. Hablaban muy bien de
-ella, lleva mucho tiempo en funcionamiento y goza de fama, así que tenía que
-ser buena. Pero no duré mucho. Una de las <em>normas</em> de la casa pide que no hagas
-público tu código con el que resuelves los problemas. Pero ese es uno de los
-objetivos que busco, que la gente critique mi código y poco a poco vaya
-aprendiendo.</p>
-
-<p>Por casualidad, vi esta <a href="http://passionatevoices.org/2015/06/27/episode-3-katrina-owen/">entrevista a Katrina Owen</a>, creadora de exercism.io y
-me pareció que sería buena idea probar la plataforma. Uno de los requisitos es
-instalar un programa, para poder bajarte problemas a tu ordenador, resolverlos
-y poder subirlos a la plataforma, lo cual no me llamaba mucho la atención. Pero
-<a href="http://garajeando.blogspot.com.es/">Manuel Rivero, en Garajeando</a>, un blog que sigo, tiene varios post de sus
-soluciones en exercism.io, así que malo no podía ser.</p>
-
-<h2>Los baches del camino</h2>
-
-<p>Yo quería practicar resolviendo problemas con ECMAScript 2015. Ahí me llevé el
-primer chasco. Existía un track para JavaScript, pero no para ES2015. No se por
-qué, pero miré el código fuente en GitHub de exercism.io. Vi que había un
-repositorio para ECMAScript, pero en la página no existían esos ejercicios.
-Descubrí que era porque todavía no tenía el número de problemas necesarios para
-ser público. Hice un fork del proyecto, y me puse a juguetear.</p>
-
-<p>Me encontré con unos cuantos problemas para ser capaz de montar el entorno de
-desarrollo y ejecutar los tests: dependencias desactualizadas, comandos que no
-se ejecutaban bien en Windows (parecía que solo funcionaba en Mac). Después de
-pelearme un poco con el código y la configuración, con unas pequeñas
-modificaciones solucioné los problemas que tenía. Subí el código a
-<a href="https://github.com/rchavarria">mi cuenta de GitHub</a> e hize un <em>Pull Request</em> al proyecto.</p>
-
-<h2>Sorpresa</h2>
-
-<p>¡Y contestaron!  Después de pulir un par de detalles (es bastante común para
-primerizos y también la razón por la que muchos se echan para atrás a la hora
-de contribuir al open source) aceptaron mi solución. ¡Había contribuido a un
-proyecto open source!</p>
-
-<p>Pero todavía había cosas que me molestaban. Detalles. <em>El diablo está en los
-detalles</em>, dicen. La verdad es que no recuerdo exactamente qué era, pero tenía
-<em>trabajo</em> por hacer. Pregunté un par de cosas a Katrina, arreglé un par de
-detalles más, algún Pull Request más, y sin esperarlo:</p>
-
-<blockquote><p>You&#8217;ve got commit!</p></blockquote>
-
-<p>¿Qué es eso? ¿Qué significa? Tuve que leer el correo varias veces. No entendía.
-bla bla bla, <em>te han añadido a un par de grupos en GitHub</em>, bla bla bla,
-<em>permisos de escritura</em>, bla bla bla, &#8230; ¡Me estaban dando permisos de
-escritura en el proyecto! Sienta bastante bien saber que estás contribuyendo a
-un proyecto open source, y que lo están utilizando muchos usuarios.</p>
-
-<h2>¿El final?</h2>
-
-<p>¿Y ahora qué? Tenía que seguir. No podía dejarlo ahí. Asi que me puse como
-objetivo que exercism.io tendría su <a href="http://exercism.io/languages/ecmascript">track de ECMAScript 2015</a>.</p>
-
-<p>Un punto para lograrlo era incorporar al menos 10 ejercicios al track. Fácil.
-Un poco de trabajo&#8230; y conseguido. Pero otro punto requería de varias
-personas. La idea es que haya varias personas encargadas de gestionar el track,
-dando feedback a los primeros usuarios, para que no se sientan desamparados, e
-ir manteniendo el código con nuevos cambios provenientes del proyecto global.
-Pequeñas tareas comunes a todos los lenguages.</p>
-
-<p>¡Me quedé flipado! Cuando contacté por email con varios usuarios de
-exercism.io, sin conocerlos de nada,&#8230; ¡Me respondieron todos! ¡Todos! Algunos
-de ellos no podían embarcarse en el proyecto, pero respondieron. Flipando. Con
-su ayuda, el track se hizo público y el trabajo duro acaba de comenzar. Ahora
-toca dar feedback a los usuarios y seguir incorporando ejercicios, para que los
-usuarios vean que el track está vivo y se animen a seguir practicando sus
-habilidades como programadores.</p>
-
-<h2>¿Te animas?</h2>
-
-<p>Así que, ya hay <a href="http://exercism.io/languages/ecmascript">track de ECMAScript 2015</a> en exercism.io. Os animo a probar la
-plataforma, a practicar, a mejorar y a comentar las soluciones de los demás.
-Espero veros por allí. Si decidis probarlo, veréis mi careto.</p>
 ]]></content>
   </entry>
   
