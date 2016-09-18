@@ -151,6 +151,6 @@ suficiente para ir cogiendo ritmo.
 [Tercer asalto]: /blog/2016/05/01/elixir-tercer-round/
 [Cuarto asalto]: /blog/2016/08/10/elixir-cuarto-asalto/
 [Quinto asalto]: /blog/2016/09/11/elixir-quinto-asalto/
-[Sexto asalto]: /blog/2016/09/11/elixir-sexto-asalto/
-[Séptimo asalto]: /blog/2016/09/11/elixir-septimo-asalto/
+[Sexto asalto]: /blog/2016/09/14/elixir-sexto-asalto/
+[Séptimo asalto]: /blog/2016/09/18/elixir-septimo-asalto/
 
