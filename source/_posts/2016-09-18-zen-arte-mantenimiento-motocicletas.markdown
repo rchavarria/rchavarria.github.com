@@ -66,12 +66,14 @@ interés suficiente en mí.
 ### Frases que me gustaría recordar
 
 > Diferencias entre *pensamiento clásico* (o científico, basado en hechos, con el
-  que me siento más identificado) y el *pensamiento romático* (más idílico, más
-  centrado en la belleza, más artístico)
+> que me siento más identificado) y el *pensamiento romático* (más idílico, más
+> centrado en la belleza, más artístico)
+
+<!-- -->
 
 > Cada motocicleta (o máquina) tiene su personalidad propia y única. Según vas
-  manteniendo las cosas, vas cogiéndoles cariño, las vas haciendo tuyas según va
-  pasando el tiempo, las vas conociendo.
+> manteniendo las cosas, vas cogiéndoles cariño, las vas haciendo tuyas según va
+> pasando el tiempo, las vas conociendo.
 
 Varios pasos a la hora de hacer un análisis lógico:
 

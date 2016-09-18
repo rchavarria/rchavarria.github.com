@@ -56,28 +56,42 @@ herramienta `jsctags`, para generar ficheros ctags de proyectos JavaScript.
 > La fórmula del punto: una pulsación de tecla para mover, una pulsación de
 > tecla para ejecutar la edición
 
+<!-- -->
+
 > La estrategia óptima de edición es hacer que tanto el cambio como el
 > movimiento sean repetibles
 
+<!-- -->
+
 > Podemos hacer que el comando deshacer opere en palabras, frases o párrafos
 > enteros solamente haciendo un uso corrrecto de la tecla `Esc`
+
+<!-- -->
 
 > La combinación de operadores con movimientos forman una especie de gramática.
 > Aprender nuevos movimientos y operadores is como aprender el vocabulario de
 > Vim. Si seguimos las reglas sencillas de la gramática, podremos expresar más
 > y mejores ideas según vaya creciendo nuestro vocabulario
 
+<!-- -->
+
 > Una buena forma de trabajar con macros sería: normalizar la posición del
 > cursor, llegar hasta el objetivo con un movimiento repetible, hacer que la
 > macro aborte cuando el movimiento falle y no encuentre el objetivo
+
+<!-- -->
 
 > La sintaxis para definir un rango en los Ex commands es muy flexible. Se
 > pueden mezclar números de línea, marcas y patrones de búsqueda. Y se puede
 > aplicar un offset a cada uno de ellos
 
+<!-- -->
+
 > Intenta crear el hábito de crear una marca global (`m{capital letter}`) antes
 > de usar cualquier comando que interacciones con la lista de arreglos rápidos,
 > lista de buffers o lista de argumentos
+
+<!-- -->
 
 > Para editar una macro grabada en el registro `q`, simplemente podemos pegar
 > el contenido de dicho registro con `"qy`, editar la línea y modificar el
