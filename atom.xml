@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2016-09-14T21:59:27+02:00</updated>
+  <updated>2016-09-18T16:44:00+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,261 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Elixir: séptimo asalto]]></title>
+    <link href="http://rchavarria.github.io/blog/2016/09/18/elixir-septimo-asalto/"/>
+    <updated>2016-09-18T16:20:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2016/09/18/elixir-septimo-asalto</id>
+    <content type="html"><![CDATA[<p>El aprendizaje va avanzando, ya vamos por el séptimo asalto. Éste trata sobre
+cómo <a href="http://elixir-lang.org/">Elixir</a> maneja múltiples procesos, por lo que trataremos algún tema de
+concurrencia. También veremos algunas cosas básicas sobre cómo monitorizar los
+procesos de los que consta nuestra aplicación.</p>
+
+<p>Sin olvidar del método de aprendizaje con el que <a href="http://rchavarria.github.io/blog/2016/01/17/aprendiendo-elixir/">comenzé</a>:</p>
+
+<ul>
+<li>Aprender lo suficiente para comenzar</li>
+<li>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</li>
+<li>Aprender lo suficiente para hacer algo de utilidad</li>
+<li>Enseñar lo aprendido</li>
+</ul>
+
+
+<p><img class="right" src="http://rchavarria.github.io/images/2016/you-gotta-fight-for-your-right-to-eat.jpg"></p>
+
+<div style="text-align: center">
+  <span style="font-size: 60%">
+Imagen basada en <a href="https://flic.kr/p/4rvPED">You gotta fight for your right to&#8230; eat</a> de <a href="https://www.flickr.com/photos/r2wk/">ldjpg</a>, <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/">CC BY NC ND 2.0</a>
+  </span>
+</div>
+
+
+
+
+<!-- more -->
+
+
+<h2>Aprender lo suficiente para comenzar</h2>
+
+<p><strong>Trabajando con múltiples procesos</strong></p>
+
+<p>Elixir usa el <a href="https://en.wikipedia.org/wiki/Actor_model">modelo de actores</a> para gestionar la concurrencia.</p>
+
+<p>Elixir se apoya en Erlang para gestionar los procesos, que no son los procesos
+del sistema operativo.</p>
+
+<p>Para crear un proceso, se hace con la llamada <code>spawn</code>. <code>spawn</code> puede crear un
+proceso y ejecutar en él código que tengas en un módulo cualquiera. El proceso
+puede empezar en cualquier momento (asíncrono total) y se utilizan mensajes
+entre procesos para sincronizarlos.</p>
+
+<p>Los mensajes no tienen por qué ser <code>Strings</code>, pueden ser de cualquier tipo
+(generalmente tuplas o atoms). Los mensajes se mandan con <code>send</code>, y debes usar
+un <code>PID</code> (devuelto por <code>spawn</code>).</p>
+
+<p>El receptor, espera mensajes con <code>receive</code>. <code>receive</code> funciona como <code>case</code>: se
+pueden poner varios casos, y el primero que coincida, se ejecuta.</p>
+
+<p><code>receive</code> maneja sólo un mensaje. Si queremos recibir varios, debemos volver a
+llamar al método que contiene el <code>receive</code>, de forma recursiva (y Elixir es muy
+bueno con la recursividad). <code>receive</code> también acepta un parámetro, <code>after</code>,
+para definir un timeout.</p>
+
+<p>El autor dice que los procesos en Elixir son como los objetos en lenguajes
+orientados a objectos, pero con mejor sentido del humor. El hecho es que son
+muy livianos, y pueden mantener estado, así que podemos pensar en ellos como en
+objetos de la programación orientada a objetos.</p>
+
+<p><strong>Enlazar procesos</strong></p>
+
+<p>Normalmente, un proceso no sabe cuando muere un proceso hijo. Debemos hacer
+algo manualmente para que se notifique. Podemos crear procesos <em>enlazados</em>
+(linked) con <code>spawn_link</code>. Por defecto, si un proceso hijo muere, mata al
+proceso padre. Para controlar esto y poder escuchar el mensaje que lanza el
+proceso hijo al morir, debemos <em>atrapar la salida</em> mediante
+<code>Process.flag(:trap_exit, true)</code> justo antes de hacer <code>spawn_link</code>.</p>
+
+<p>Dos procesos enlazados pueden comunicarse bidireccionalmente.</p>
+
+<p>Elixir usa el framework OTP para construir árboles de procesos. OTP lleva mucho
+tiempo en funcionamiento, y debemos confiar en que lo hace mucho mejor que
+nosotros, por lo que lo usaremos prácticamente siempre. OTP incluye el concepto
+de <em>Supervisor de procesos</em>. Más adelante estudiaremos temas relacionados con
+OTP.</p>
+
+<p><strong>Monitorizando procesos</strong></p>
+
+<p>Si <code>spawn_link</code> permite comunicación bidireccional, <code>spawn_monitor</code> solo la
+permite unidireccional. El proceso hijo puede notificar al padre, pero no al
+revés.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># monitor devuelve el pid del proceso hijo y una referencia de la monitorización
+</span><span class='line'>res = spawn_monitor(&lt;module&gt;, &lt;function&gt;, &lt;params&gt;)
+</span><span class='line'>IO.inspect res
+</span><span class='line'># =&gt; { #PID{3.3.3.3}, #Reference{1.2.3.4} }</span></code></pre></td></tr></table></div></figure>
+
+
+<p>También se puede monitorizar un proceso existente con <code>Process.monitor</code>.</p>
+
+<p>¿Cuándo utilizar cada uno? Depende de la utilidad. Si la muerte de un hijo
+debería matar al padre, usa procesos enlazados. Si la muerte/fallo de un hijo
+solamente debería notificar al padre, usa monitorización.</p>
+
+<h2>Aprender lo suficiente para hacer algo de utilidad</h2>
+
+<ul>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-07/exercise-01-round-07.exs">exercise-01-round-07.exs</a>: ejecutar el programa que pasa mensajes en cadena
+de un proceso a otro hasta llegar al millón de procesos.</li>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-07/exercise-02-round-07.exs">exercise-02-round-07.exs</a>: escribir un código que cree dos procesos, y que a
+cada uno le mande un token (p.e.: &#8220;pepito&#8221; y &#8220;fulanito&#8221;), y que los procesos
+lo devuelvan. En teoría, ¿es determinista el orden en el que se reciben las
+respuestas? ¿Y en la práctica? En caso de que no, ¿cómo podría hacerse que
+fuera determinista?.</li>
+</ul>
+
+
+<p><strong>Resultados</strong></p>
+
+<p>Parece que sí es determinista (al menos con dos procesos). Depende del orden en
+el que se creen los procesos, incluso si invertimos el orden en el que se
+envían los tokens, el primer proceso creado es el primero en responder.</p>
+
+<ul>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-07/exercise-03-round-07.exs">exercise-03-round-07.exs</a>: usa <code>spawn_link</code> para crear un proceso, el cual
+envía un mensaje al padre y finaliza inmediatamente. Mientras, en el padre,
+después de crear el proceso, espera 500ms y luego comienza a recibir todos los
+mensajes que están esperando. Tracea todo lo que recibas. ¿Importa que no
+estuvieras recibiendo notificaciones cuando el hijo terminó?</li>
+</ul>
+
+
+<p><strong>Resultados</strong></p>
+
+<p>No recibe ningún mensaje, el hijo termina, terminando al padre durante la
+espera.</p>
+
+<ul>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-07/exercise-04-round-07.exs">exercise-04-round-07.exs</a>: repite el ejercicio anterior, pero en lugar de
+terminar con <code>exit</code>, que el hijo lance una excepción. ¿qué diferencia notas?</li>
+</ul>
+
+
+<p><strong>Resultados</strong></p>
+
+<p>No hay mucha difrencia. El padre sigue terminando, sin escuchar ningún mensaje.
+Al menos, la excepción aparece por consola, mostrándose un error diciendo que
+el proceso hijo (con su PID) ha lanzado una excepción. En el ejercicio
+anterior, solamente aparecía que el proceso padre terminaba, nada más.</p>
+
+<p>Usando <code>Process.flag(:trap_exit, true)</code>, el proceso padre recibe mensajes:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ elixir -r exercise-03-round-07.exs -e "Exercise3.run"
+</span><span class='line'>Parent's PID #PID&lt;0.48.0&gt;
+</span><span class='line'>PID's child #PID&lt;0.53.0&gt;
+</span><span class='line'>Received: "Hello!"
+</span><span class='line'>Received: {:EXIT, #PID&lt;0.53.0&gt;, :boom}
+</span><span class='line'>
+</span><span class='line'>$ elixir -r exercise-04-round-07.exs -e "Exercise4.run"
+</span><span class='line'>Parent's PID #PID&lt;0.48.0&gt;
+</span><span class='line'>Child's PID #PID&lt;0.53.0&gt;
+</span><span class='line'>
+</span><span class='line'>22:46:14.313 [error] Process #PID&lt;0.53.0&gt; raised an exception
+</span><span class='line'>** (RuntimeError) Child finished
+</span><span class='line'>    exercise-04-round-07.exs:19: Exercise4.child/1
+</span><span class='line'>Received: "Hello!"
+</span><span class='line'>Received: {:EXIT, #PID&lt;0.53.0&gt;, %{RuntimeError{message: "Child finished"},
+</span><span class='line'>[{Exercise4, :child, 1, [file: 'exercise-04-round-07.exs', line: 19]}]}}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Las diferencias están en lo recibido en el mensaje de terminación del hijo. En
+caso de <code>exit</code> se recibe <code>:EXIT</code>, un PID, y la causa de la salida. En el caso
+de la excepción: <code>:EXIT</code>, un PID y la excepción, parece, porque tiene pinta de
+pila de llamadas, con su módulo, función, parámetros,&#8230;</p>
+
+<ul>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-07/exercise-05-round-07.exs">exercise-05-round-07.exs</a>: repetir el ejercicio pero con <code>spawn_monitor</code>.</li>
+</ul>
+
+
+<p><strong>Resultados</strong></p>
+
+<p>No creo que lo esté haciendo bien. Se supone que monitorizando la comunicación
+no es bidireccional, pero el padre recibe el mensaje que envía el hijo, así
+como el mensaje que se envía al terminar o lanzar la excepción. La única
+diferencia visible es que en lugar de recibir solamente un PID, se recibe un
+PID y la referencia de monitorización.</p>
+
+<ul>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-07/exercise-06-round-07.exs">exercise-06-round-07.exs</a>: escribir una función implementando <em>pararell
+map</em>, que es como una función <code>map</code> pero cada elemento es procesado por un
+proceso distinto. Preguntas: ¿por qué es necesario guardar en la variable <code>me</code>
+el PID del proceso padre? Se debe utilizar <code>^pid</code> para recibir los resultados
+en orden, pero&#8230; ¿qué pasa si se utiliza <code>_pid</code>? ¿cómo hacer para que falle:
+esperas, aumentar número elementos, que la función que procesa cada elemento
+sea más complicada,&#8230;?</li>
+</ul>
+
+
+<p><strong>Resultados</strong></p>
+
+<p>Aumentando el número de elementos afecta al orden en el que se reciben los
+mensajes. También he conseguido recibir mensajes en orden distinto con el
+siguiente código:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Parallel.pmap 1..10, fn (i) -&gt;
+</span><span class='line'>  # la espera es más corta según el elemento `i` se va a haciendo mayor
+</span><span class='line'>  wait_up_to = round(10 / i)
+</span><span class='line'>  :timer.sleep(wait_up_to)
+</span><span class='line'>  i
+</span><span class='line'>end
+</span><span class='line'>  #=&gt; [ 7, 8, 9, 10, 5, 6, 3, 4, 2, 1 ]</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Volviendo a poner <code>^pid</code> el orden vuelve a ser correcto.</p>
+
+<ul>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-07/exercise-07-round-07.exs">exercise-07-round-07.exs</a>: toma como referencia un planificador (servidor de
+Fibonacci) de un ejercicio del libro y crea otro similar. Esta vez, se deben
+contar las apariciones de la palabra <code>cat</code> en cada fichero que se encuentre en
+un directorio dado. Cada fichero será procesado por un proceso distinto.
+¿Podrías escribir el planificador de una forma más genérica?</li>
+</ul>
+
+
+<h2>Enseñar lo aprendido, y repetir desde el paso 7</h2>
+
+<p>Aquí está, este post, mis notas, mis pensamientos, mis dudas y mi código. Hasta
+el siguiente asalto.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Elixir: sexto asalto]]></title>
@@ -2496,15 +2751,9 @@ suficiente para ir cogiendo ritmo.</p>
 <li><a href="http://rchavarria.github.io/blog/2016/05/01/elixir-tercer-round/">Tercer asalto</a>: más colecciones, módulos <code>Enum</code>, <code>Stream</code> y <em>comprehensions</em></li>
 <li><a href="http://rchavarria.github.io/blog/2016/08/10/elixir-cuarto-asalto/">Cuarto asalto</a>: tipos de datos binarios, cadenas, <code>String</code>s y <em>sigils</em></li>
 <li><a href="http://rchavarria.github.io/blog/2016/09/11/elixir-quinto-asalto/">Quinto asalto</a>: estructuras de control: <code>if</code>, <code>unless</code>, <code>cond</code> y <code>case</code></li>
+<li><a href="http://rchavarria.github.io/blog/2016/09/11/elixir-sexto-asalto/">Sexto asalto</a>: herramientas auxiliares como <code>mix</code>, <code>ExUnit</code>, <code>ExDoc</code>,&#8230;</li>
+<li><a href="http://rchavarria.github.io/blog/2016/09/11/elixir-septimo-asalto/">Séptimo asalto</a>: procesos, concurrencia, monitorización de procesos</li>
 </ol>
-
-
-<!--
-6. [Sexto asalto]: herramientas auxiliares como `mix`, `ExUnit`, `ExDoc`,...
-7. [Séptimo asalto]: procesos, concurrencia, monitorización de procesos
--->
-
-
 
 ]]></content>
   </entry>
@@ -4116,130 +4365,6 @@ habilidades como programadores.</p>
 <p>Así que, ya hay <a href="http://exercism.io/languages/ecmascript">track de ECMAScript 2015</a> en exercism.io. Os animo a probar la
 plataforma, a practicar, a mejorar y a comentar las soluciones de los demás.
 Espero veros por allí. Si decidis probarlo, veréis mi careto.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Charla técnica: Effective learning for programmers]]></title>
-    <link href="http://rchavarria.github.io/blog/2015/10/18/charla-tecnica-effective-learning-for-programmers/"/>
-    <updated>2015-10-18T18:46:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2015/10/18/charla-tecnica-effective-learning-for-programmers</id>
-    <content type="html"><![CDATA[<p>Me gustaría compartir una charla de <a href="http://akaptur.com/">Allison Kaptur</a>, en un grupo de usuarios
-de Python de Nueva Zelanda, titulada <a href="https://www.youtube.com/embed/Mcc6JEhDSpo">Effective learning for programmers</a>,
-donde habla acerca de encontrar ciertas estrategias para el aprendizaje.</p>
-
-<iframe width="420"
-        height="315"
-        src="https://www.youtube.com/embed/Mcc6JEhDSpo"
-        frameborder="0"
-        allowfullscreen></iframe>
-
-
-
-
-<!-- more -->
-
-
-<h2>Notas tomadas</h2>
-
-<p>La charla consta de dos partes: mentalidad (<em>mindset</em>) y estrategias</p>
-
-<h3>Mentalidad</h3>
-
-<p>Allison habla de dos tipos:</p>
-
-<ol>
-<li><strong>Mentalidad de crecimiento</strong>: la inteligencia es algo que se puede trabajar y
-desarrollar con <strong>esfuerzo</strong></li>
-<li><strong>Mentalidad fija</strong>: la inteligencia es la que es y no puede ir a más, la
-inteligencia es fija, y cada uno tiene una cierta cantidad de ella</li>
-</ol>
-
-
-<p>La diferencia fundamental radica en que quien posee una mentalidad de
-crecimiento, piensa que si algo no es fácil, puede trabajar duro para
-aprenderlo. Mientras que quien posee una mentalidad fija, piensa que si algo es
-fácil, se trata de una cualidad con la que ha nacido, que es de lo suyo.</p>
-
-<p>Alabanzas contraproducentes: ante alabanzas de un trabajo realizado, los de
-mentalidad fija se contentan, mientras que los de mentalidad de crecimiento se
-sienten animados para superarse a sí mismos.</p>
-
-<p>Respuesta a la confusión: los de mentalidad fija se quedan bloqueados, y los de
-mentalidad de crecimiento se esfuerzan en entender la parte complicada, hasta
-que superan el obstáculo.</p>
-
-<p><strong>Está claro que los desarrolladores necesitamos una mentalidad de
-crecimiento</strong>. Pero, ¿se puede cambiar una mentalidad fija?</p>
-
-<ol>
-<li>Reformula las alabanzas: cuando alaben tu trabajo: &#8220;eres un máquina&#8221;,&#8230; te
-dices a tí internamente: &#8220;no soy un máquina, he trabajado duro para llegar
-hasta aquí&#8221;</li>
-<li>Reformula los fallos</li>
-<li>Celebra los desafíos: cuando te toca arreglar un bug, decirte a tí mismo:
-&#8220;genial! que se prepare ese bug, porque le voy a patear el culo&#8221;</li>
-<li>Pregunta sobre el proceso seguido: pregunta siempre, &#8220;¿cómo has hecho eso?&#8221;,
-&#8220;¿cómo funciona eso?&#8221;, muestra curiosidad por cómo se hacen las cosas,
-aprende de los que más saben</li>
-</ol>
-
-
-<h3>Estrategias</h3>
-
-<p>El aprendizaje es una habilidad adquirida, por lo que se puede mejorar
-practicando:</p>
-
-<ol>
-<li>Recuperación con esfuerzo (<em>effortful retrieval</em>): aprender mediante
-preguntas que te obligan a encontrar una respuesta. Es maś efectivo que una
-relectura, incluso mejor que una relectura de las notas que has tomado en una
-clase. La relectura te da la ilusión de que ya te sabes la lección.</li>
-<li>Práctica espaciada (<em>spaced practice</em>): es mejor que una práctica masiva. La
-práctica debe ser espaciada en el tiempo, variada y que mezcle conceptos de
-todo el proceso de aprendizaje. Es mejor un curso de 1h durante 5 días que uno
-de 5 horas en un día.</li>
-<li>Dificultad y errores: cierta dificultad suele ser lo deseable. Cometer
-errores suele ser también recomendable durante el aprendizaje.</li>
-</ol>
-
-
-<h4>Implementando <em>recuperación con esfuerzo</em></h4>
-
-<ul>
-<li>Las tarjetas de conceptos (<em>flashcards</em>) es un ejemplo de esto, pero quizá no
-es la mejor forma de implementarlo</li>
-<li>Cuando no sabes a ciencia cierta algo, intenta adivinarlo. Por ejemplo, los
-argumentos de un comando, o intentar deducir algún aspecto de la lección que
-estas estudiando</li>
-<li>Intentar adivinar cual es la causa de un bug antes siquiera de empezar a
-solucionarlo</li>
-<li>Cuando te preguntan por algún concepto que te suena, pero no lo conoces en
-profundidad, puedes intentar deducir de qué trata y así confirmar tus
-suposiciones</li>
-</ul>
-
-
-<h4>Implementando <em>práctica espaciada</em></h4>
-
-<ul>
-<li>Trabajar en tus proyectos personales los fines de semana. Así cuando vayas a
-comenzar el sábado, debes recordar lo que trabajaste hace un tiempo. Eso
-ayuda al aprendizaje.</li>
-</ul>
-
-
-<h4>Implementando <em>dificultad y errores</em></h4>
-
-<ul>
-<li>La dificultad vienen implícita en muchos de nuestros aprendizajes, así que no
-hace falta que hagamos algo extra para ello</li>
-<li>Para descubrir errores: intentar buscar un feedback rápido, revisiones de
-código, post-mortems,&#8230;</li>
-<li>Generar un entorno donde los pequeños errores no tienen consecuencias, o que
-cuando tú sepas algo que tus compañeros no saben, no te burles de ellos</li>
-</ul>
-
 ]]></content>
   </entry>
   

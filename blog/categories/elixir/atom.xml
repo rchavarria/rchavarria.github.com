@@ -4,7 +4,7 @@
   <title><![CDATA[Category: elixir | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/elixir/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2016-09-14T21:59:27+02:00</updated>
+  <updated>2016-09-18T16:44:00+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,244 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Elixir: séptimo asalto]]></title>
+    <link href="http://rchavarria.github.io/blog/2016/09/18/elixir-septimo-asalto/"/>
+    <updated>2016-09-18T16:20:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2016/09/18/elixir-septimo-asalto</id>
+    <content type="html"><![CDATA[<p>El aprendizaje va avanzando, ya vamos por el séptimo asalto. Éste trata sobre
+cómo <a href="http://elixir-lang.org/">Elixir</a> maneja múltiples procesos, por lo que trataremos algún tema de
+concurrencia. También veremos algunas cosas básicas sobre cómo monitorizar los
+procesos de los que consta nuestra aplicación.</p>
+
+<p>Sin olvidar del método de aprendizaje con el que <a href="/blog/2016/01/17/aprendiendo-elixir/">comenzé</a>:</p>
+
+<ul>
+<li>Aprender lo suficiente para comenzar</li>
+<li>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</li>
+<li>Aprender lo suficiente para hacer algo de utilidad</li>
+<li>Enseñar lo aprendido</li>
+</ul>
+
+
+<p><img class="right" src="/images/2016/you-gotta-fight-for-your-right-to-eat.jpg"></p>
+
+<div style="text-align: center">
+  <span style="font-size: 60%">
+Imagen basada en <a href="https://flic.kr/p/4rvPED">You gotta fight for your right to... eat</a> de <a href="https://www.flickr.com/photos/r2wk/">ldjpg</a>, <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/">CC BY NC ND 2.0</a>
+  </span>
+</div>
+
+
+
+
+<!-- more -->
+
+
+<h2>Aprender lo suficiente para comenzar</h2>
+
+<p><strong>Trabajando con múltiples procesos</strong></p>
+
+<p>Elixir usa el <a href="https://en.wikipedia.org/wiki/Actor_model">modelo de actores</a> para gestionar la concurrencia.</p>
+
+<p>Elixir se apoya en Erlang para gestionar los procesos, que no son los procesos
+del sistema operativo.</p>
+
+<p>Para crear un proceso, se hace con la llamada <code>spawn</code>. <code>spawn</code> puede crear un
+proceso y ejecutar en él código que tengas en un módulo cualquiera. El proceso
+puede empezar en cualquier momento (asíncrono total) y se utilizan mensajes
+entre procesos para sincronizarlos.</p>
+
+<p>Los mensajes no tienen por qué ser <code>Strings</code>, pueden ser de cualquier tipo
+(generalmente tuplas o atoms). Los mensajes se mandan con <code>send</code>, y debes usar
+un <code>PID</code> (devuelto por <code>spawn</code>).</p>
+
+<p>El receptor, espera mensajes con <code>receive</code>. <code>receive</code> funciona como <code>case</code>: se
+pueden poner varios casos, y el primero que coincida, se ejecuta.</p>
+
+<p><code>receive</code> maneja sólo un mensaje. Si queremos recibir varios, debemos volver a
+llamar al método que contiene el <code>receive</code>, de forma recursiva (y Elixir es muy
+bueno con la recursividad). <code>receive</code> también acepta un parámetro, <code>after</code>,
+para definir un timeout.</p>
+
+<p>El autor dice que los procesos en Elixir son como los objetos en lenguajes
+orientados a objectos, pero con mejor sentido del humor. El hecho es que son
+muy livianos, y pueden mantener estado, así que podemos pensar en ellos como en
+objetos de la programación orientada a objetos.</p>
+
+<p><strong>Enlazar procesos</strong></p>
+
+<p>Normalmente, un proceso no sabe cuando muere un proceso hijo. Debemos hacer
+algo manualmente para que se notifique. Podemos crear procesos <em>enlazados</em>
+(linked) con <code>spawn_link</code>. Por defecto, si un proceso hijo muere, mata al
+proceso padre. Para controlar esto y poder escuchar el mensaje que lanza el
+proceso hijo al morir, debemos <em>atrapar la salida</em> mediante
+<code>Process.flag(:trap_exit, true)</code> justo antes de hacer <code>spawn_link</code>.</p>
+
+<p>Dos procesos enlazados pueden comunicarse bidireccionalmente.</p>
+
+<p>Elixir usa el framework OTP para construir árboles de procesos. OTP lleva mucho
+tiempo en funcionamiento, y debemos confiar en que lo hace mucho mejor que
+nosotros, por lo que lo usaremos prácticamente siempre. OTP incluye el concepto
+de <em>Supervisor de procesos</em>. Más adelante estudiaremos temas relacionados con
+OTP.</p>
+
+<p><strong>Monitorizando procesos</strong></p>
+
+<p>Si <code>spawn_link</code> permite comunicación bidireccional, <code>spawn_monitor</code> solo la
+permite unidireccional. El proceso hijo puede notificar al padre, pero no al
+revés.</p>
+
+<p>```</p>
+
+<h1>monitor devuelve el pid del proceso hijo y una referencia de la monitorización</h1>
+
+<p>res = spawn_monitor(<module>, <function>, <params>)
+IO.inspect res</p>
+
+<h1>=> { #PID{3.3.3.3}, #Reference{1.2.3.4} }</h1>
+
+<p>```</p>
+
+<p>También se puede monitorizar un proceso existente con <code>Process.monitor</code>.</p>
+
+<p>¿Cuándo utilizar cada uno? Depende de la utilidad. Si la muerte de un hijo
+debería matar al padre, usa procesos enlazados. Si la muerte/fallo de un hijo
+solamente debería notificar al padre, usa monitorización.</p>
+
+<h2>Aprender lo suficiente para hacer algo de utilidad</h2>
+
+<ul>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-07/exercise-01-round-07.exs">exercise-01-round-07.exs</a>: ejecutar el programa que pasa mensajes en cadena
+de un proceso a otro hasta llegar al millón de procesos.</li>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-07/exercise-02-round-07.exs">exercise-02-round-07.exs</a>: escribir un código que cree dos procesos, y que a
+cada uno le mande un token (p.e.: "pepito" y "fulanito"), y que los procesos
+lo devuelvan. En teoría, ¿es determinista el orden en el que se reciben las
+respuestas? ¿Y en la práctica? En caso de que no, ¿cómo podría hacerse que
+fuera determinista?.</li>
+</ul>
+
+
+<p><strong>Resultados</strong></p>
+
+<p>Parece que sí es determinista (al menos con dos procesos). Depende del orden en
+el que se creen los procesos, incluso si invertimos el orden en el que se
+envían los tokens, el primer proceso creado es el primero en responder.</p>
+
+<ul>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-07/exercise-03-round-07.exs">exercise-03-round-07.exs</a>: usa <code>spawn_link</code> para crear un proceso, el cual
+envía un mensaje al padre y finaliza inmediatamente. Mientras, en el padre,
+después de crear el proceso, espera 500ms y luego comienza a recibir todos los
+mensajes que están esperando. Tracea todo lo que recibas. ¿Importa que no
+estuvieras recibiendo notificaciones cuando el hijo terminó?</li>
+</ul>
+
+
+<p><strong>Resultados</strong></p>
+
+<p>No recibe ningún mensaje, el hijo termina, terminando al padre durante la
+espera.</p>
+
+<ul>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-07/exercise-04-round-07.exs">exercise-04-round-07.exs</a>: repite el ejercicio anterior, pero en lugar de
+terminar con <code>exit</code>, que el hijo lance una excepción. ¿qué diferencia notas?</li>
+</ul>
+
+
+<p><strong>Resultados</strong></p>
+
+<p>No hay mucha difrencia. El padre sigue terminando, sin escuchar ningún mensaje.
+Al menos, la excepción aparece por consola, mostrándose un error diciendo que
+el proceso hijo (con su PID) ha lanzado una excepción. En el ejercicio
+anterior, solamente aparecía que el proceso padre terminaba, nada más.</p>
+
+<p>Usando <code>Process.flag(:trap_exit, true)</code>, el proceso padre recibe mensajes:</p>
+
+<p>```
+$ elixir -r exercise-03-round-07.exs -e "Exercise3.run"
+Parent's PID #PID&lt;0.48.0>
+PID's child #PID&lt;0.53.0>
+Received: "Hello!"
+Received: {:EXIT, #PID&lt;0.53.0>, :boom}</p>
+
+<p>$ elixir -r exercise-04-round-07.exs -e "Exercise4.run"
+Parent's PID #PID&lt;0.48.0>
+Child's PID #PID&lt;0.53.0></p>
+
+<p>22:46:14.313 [error] Process #PID&lt;0.53.0> raised an exception
+** (RuntimeError) Child finished</p>
+
+<pre><code>exercise-04-round-07.exs:19: Exercise4.child/1
+</code></pre>
+
+<p>Received: "Hello!"
+Received: {:EXIT, #PID&lt;0.53.0>, %{RuntimeError{message: "Child finished"},
+[{Exercise4, :child, 1, [file: 'exercise-04-round-07.exs', line: 19]}]}}
+```</p>
+
+<p>Las diferencias están en lo recibido en el mensaje de terminación del hijo. En
+caso de <code>exit</code> se recibe <code>:EXIT</code>, un PID, y la causa de la salida. En el caso
+de la excepción: <code>:EXIT</code>, un PID y la excepción, parece, porque tiene pinta de
+pila de llamadas, con su módulo, función, parámetros,...</p>
+
+<ul>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-07/exercise-05-round-07.exs">exercise-05-round-07.exs</a>: repetir el ejercicio pero con <code>spawn_monitor</code>.</li>
+</ul>
+
+
+<p><strong>Resultados</strong></p>
+
+<p>No creo que lo esté haciendo bien. Se supone que monitorizando la comunicación
+no es bidireccional, pero el padre recibe el mensaje que envía el hijo, así
+como el mensaje que se envía al terminar o lanzar la excepción. La única
+diferencia visible es que en lugar de recibir solamente un PID, se recibe un
+PID y la referencia de monitorización.</p>
+
+<ul>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-07/exercise-06-round-07.exs">exercise-06-round-07.exs</a>: escribir una función implementando <em>pararell
+map</em>, que es como una función <code>map</code> pero cada elemento es procesado por un
+proceso distinto. Preguntas: ¿por qué es necesario guardar en la variable <code>me</code>
+el PID del proceso padre? Se debe utilizar <code>^pid</code> para recibir los resultados
+en orden, pero... ¿qué pasa si se utiliza <code>_pid</code>? ¿cómo hacer para que falle:
+esperas, aumentar número elementos, que la función que procesa cada elemento
+sea más complicada,...?</li>
+</ul>
+
+
+<p><strong>Resultados</strong></p>
+
+<p>Aumentando el número de elementos afecta al orden en el que se reciben los
+mensajes. También he conseguido recibir mensajes en orden distinto con el
+siguiente código:</p>
+
+<p><code>
+Parallel.pmap 1..10, fn (i) -&gt;
+  # la espera es más corta según el elemento `i` se va a haciendo mayor
+  wait_up_to = round(10 / i)
+  :timer.sleep(wait_up_to)
+  i
+end
+  #=&gt; [ 7, 8, 9, 10, 5, 6, 3, 4, 2, 1 ]
+</code></p>
+
+<p>Volviendo a poner <code>^pid</code> el orden vuelve a ser correcto.</p>
+
+<ul>
+<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-07/exercise-07-round-07.exs">exercise-07-round-07.exs</a>: toma como referencia un planificador (servidor de
+Fibonacci) de un ejercicio del libro y crea otro similar. Esta vez, se deben
+contar las apariciones de la palabra <code>cat</code> en cada fichero que se encuentre en
+un directorio dado. Cada fichero será procesado por un proceso distinto.
+¿Podrías escribir el planificador de una forma más genérica?</li>
+</ul>
+
+
+<h2>Enseñar lo aprendido, y repetir desde el paso 7</h2>
+
+<p>Aquí está, este post, mis notas, mis pensamientos, mis dudas y mi código. Hasta
+el siguiente asalto.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Elixir: sexto asalto]]></title>
@@ -899,300 +1137,6 @@ que se van a utilizar siempre que haya colecciones de por medio.</p>
 
 
 <h2>Enseñar lo aprendido, y repetir desde el paso 7</h2>
-
-<p>Aquí está, este post, mis notas, mis pensamientos, mis dudas y mi código. Hasta el siguiente asalto.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Elixir: segundo asalto]]></title>
-    <link href="http://rchavarria.github.io/blog/2016/03/27/elixir-segundo-asalto/"/>
-    <updated>2016-03-27T17:42:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2016/03/27/elixir-segundo-asalto</id>
-    <content type="html"><![CDATA[<p>Sigo aprendiendo <a href="http://elixir-lang.org/">Elixir</a>, despacio, pero sigo con ello. Éste es el segundo
-asalto del aprendizaje. En este asalto, lucho con estructuras de datos un poco
-más complejas, como listas, diccionarios, <em>structs</em> o <em>sets</em>. Estas estructuras
-ya existen en otros lenguajes de programación, pero en Elixir son tratadas de
-una forma un poco diferente.</p>
-
-<p>Por supuesto, en este asalto también sigo el método de aprendizaje descrito
-desde el post sobre <a href="/blog/2016/01/17/aprendiendo-elixir/">aprender Elixir</a>:</p>
-
-<ul>
-<li>Aprender lo suficiente para comenzar</li>
-<li>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</li>
-<li>Aprender lo suficiente para hacer algo de utilidad</li>
-<li>Enseñar lo aprendido</li>
-</ul>
-
-
-<p><img class="center" src="/images/2016/rms-won.jpg"></p>
-
-<div style="text-align: center">
-  <span style="font-size: 60%">
-Imagen basada en <a href="https://flic.kr/p/2PDNng">RMS won</a> de <a href="https://www.flickr.com/photos/kmerenkov/">Konstantin Merenkov</a>, <a href="https://creativecommons.org/licenses/by-nc/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by-nc/2.0/legalcode">CC BY-NC 2.0</a>
-  </span>
-</div>
-
-
-
-
-<!-- more -->
-
-
-<h2>Aprender lo suficiente para comenzar</h2>
-
-<p><strong>Listas</strong></p>
-
-<p>Una lista es recursiva. Está formada por una cabecera (<em>head</em>) y una cola
-(<em>tail</em>). La cabecera es unicamente el primer elemento. La cola, es una lista
-con el resto de elementos. De esta forma, la lista <code>[1, 2, 3]</code>, en realidad es
-<code>[1 | [2 | [3 | [] ] ] ]</code> (al final se concatena una lista vacía).</p>
-
-<p>Como las listas son recursivas, muchas funciones que manipulan listas lo son.
-Elixir hace super sencilla la recursividad. Mezclando recursividad y pattern
-matching, se pueden hacer virgerías. Super fácil implementar el cifrado César
-(ver <a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-02/exercise-04-round-02.exs">exercise-04-round-02.exs</a>).</p>
-
-<p><strong>Diccionarios</strong></p>
-
-<p>Existen varios tipos de diccionarios: <code>Maps</code>, <code>HashDicts</code>, <code>Keywords</code>, <code>Sets</code> y
-<code>Structs</code>.</p>
-
-<p>Para acceder a una clave del diccionario: <code>dict[:key]</code>, las claves son Atoms.</p>
-
-<p><code>Enum.into</code> convierte entre tipos enumerados, por ejemplo, entre tipos de
-diccionarios.</p>
-
-<p>```</p>
-
-<h1>Distintas operaciones que podemos hacer sobre diccionarios</h1>
-
-<p>dict = %{ key1: "Clave 1", key2: "Clave 2" }%
-ticd = %{ key9: "Clave 9", key8: "Clave 8" }%</p>
-
-<h1>eliminar claves de un diccionario</h1>
-
-<p>Dict.drop(dict, [:key2])</p>
-
-<h1>añadir claves</h1>
-
-<p>Dict.put(dict, :key3, "Clave 3")</p>
-
-<h1>unir diccionarios</h1>
-
-<p>Dict.merge(dict, tcid)</p>
-
-<h1>obtener valores, similar a dict[:key1]</h1>
-
-<p>Dict.get(dict, :key1)</p>
-
-<h1>obtener todos los valores</h1>
-
-<p>Dict.values(dict)</p>
-
-<h1>el pattern matching en diccionarios es muy útil</h1>
-
-<p>person = %{ name: "Dave", height: 1.88 }</p>
-
-<h1>establecer a_name = "Dave"</h1>
-
-<p>%{ name: a_name } = person</p>
-
-<h1>pattern matching que no falla</h1>
-
-<p>%{ name: _, height: _ } = person</p>
-
-<h1>pattern matching que no falla</h1>
-
-<p>%{ name: "Dave" } = person</p>
-
-<h1>falla</h1>
-
-<p>%{ name: _, weight: _ } = person
-** (Match error) no ...</p>
-
-<h1>pattern matching no puede enlazar claves de diccionarios</h1>
-
-<p>%{ 2 => state } = %{ 1 => ok:, 2 => error: }
-=> state = :error</p>
-
-<p>%{ state => ok: } = %{...}
-=> Error ...</p>
-
-<h1>para actualizar un mapa, se usa la siguiente estructura, muy parecida a <code>List</code></h1>
-
-<h1>Puede actualizar pero no añadir</h1>
-
-<p>new_map = %{ old_map | key => value, ... }
-```</p>
-
-<p><strong>Mapas tipados (typed maps)</strong></p>
-
-<p>Son como un mapa que tiene un conjunto de campos fijos y valores por defecto
-para ellos. Se puede utilizar <em>pattern matching</em> por tipo y por contenido.</p>
-
-<p>Estos mapas son los llamados <code>Struct</code>. Los <code>Struct</code>s son mapas limitados: las
-claves deben ser <em>Atoms</em>. Se crean con <code>defstruct</code>, y el nombre del módulo pasa
-a ser el nombre del struct:</p>
-
-<p>```
-defmodule Subscribrer do
-  defstruct name: "", paid: false, over_18: true
-end</p>
-
-<p>s1 = %Subscribrer{}
-=> %Subscribrer{ name: "", paid: false, over_18: true }</p>
-
-<p>s2 = %Subscribrer{ name: "Dave" }</p>
-
-<h1>a las claves se accede mediante un punto <struct>.<key></h1>
-
-<p>s2.name
-=> "Dave"</p>
-
-<p>%Subscribrer{ name: name } = s2
-name
-=> "Dave"</p>
-
-<h1>así se actualizan los datos</h1>
-
-<p>s3 = %Subscribrer{ s2 | name: "Marie" }</p>
-
-<h1>la idea de que el nombre del módulo sea el nombre del Struct</h1>
-
-<h1>es que se puedan añadir métodos al módulo que modifiquen la</h1>
-
-<h1>estructura del Struct (esto me suena mucho a las clases de la</h1>
-
-<h1>Programación Orientada a Objetos).</h1>
-
-<p>defmodule Attendee do
-  defstruct name: "", paid: false, over_18: true</p>
-
-<p>  def may_attend_after_party(attendee = %Attendee{}) do</p>
-
-<pre><code>attendee.paid &amp;&amp; attendee.over_18
-</code></pre>
-
-<p>  end</p>
-
-<p>  ...
-end
-```</p>
-
-<p>El autor reconoce que los <code>Struct</code>s se parecen mucho a los objectos de la
-Programación Orientada a Objetos. Y también nos advierte que tengamos cuidado,
-que no caigamos en la tentación, que nos mantengamos puros, que no mezclemos
-paradigmas.</p>
-
-<p><strong>Estructuras de diccionario anidadas</strong></p>
-
-<p>Las <code>Structs</code> se pueden anidar. Se consigue haciendo que el valor de una de las
-claves sea otro <code>Struct</code>.</p>
-
-<p>Imagina que tenemos dos <code>Struct</code>s anidadas así:</p>
-
-<p>```
-report = %BugReport{
-  owner: %Customer{</p>
-
-<pre><code>name: "Dave",
-company: "Pragmatic"
-</code></pre>
-
-<p>  },
-  details: "broken"
-}</p>
-
-<h1>se puede acceder a company</h1>
-
-<p>company = report.owner.company</p>
-
-<h1>podemos modificarla con la macro put_in</h1>
-
-<p>put_in(report.owner.company, "PragProg")
-```</p>
-
-<p>Con <code>update_in</code> podemos modificar el valor actual (accesible a través de un
-parámetro de la macro). También existen las macros <code>get_in</code> y
-<code>get_and_update_in</code></p>
-
-<p>Esas macros también funcionan con mapas y keyword lists. Si en lugar de una
-clave o lista de claves, se pasa una función, las macros se convierten en
-funciones dinámicas y llamarán a esta función con tres parámetros.</p>
-
-<p><strong>Sets</strong></p>
-
-<p>Actualmente solo hay una implementación de ellos, <code>HashSet</code>.</p>
-
-<p>```
-one_to_five = Enum.into 1..5, HashSet.new</p>
-
-<h1>comprueba si un valor existe o no</h1>
-
-<p>Set.member(one_to_five, 5)
-=> true</p>
-
-<h1>concatena varios Set's</h1>
-
-<p>three_to_eight = Enum.into 3..8, HashSet.new
-Set.union(one_to_five, three_to_eight)
-=> #Hashset[ 1, 2, 3, 4, 5, 6, 7, 8]</p>
-
-<h1>qué elementos estań en el primero que no están en el segundo</h1>
-
-<p>Set.difference(one_to_five, three_to_eight)
-=> #Hashset[ 1, 2 ]
-Set.difference(three_to_eight, one_to_five)
-=> #Hashset[ 6, 7, 8 ]</p>
-
-<h1>qué valores están en ambos</h1>
-
-<p>Set.intersection(one_to_five, three_to_eight)
-=> #Hashset[ 3, 4, 5 ]
-```</p>
-
-<h2>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</h2>
-
-<p>Algunos métodos intersantes del módulo <code>List</code>: operadores para concatenar <code>++</code>,
-diferencia <code>--</code>, pertenencia <code>in</code> y métodos tales como <code>flatten</code>, <code>foldl</code>,
-<code>foldr</code>, <code>zip</code>, <code>unzip</code>, <code>keyfind</code>, <code>keydelete</code>, <code>keyreplace</code>,...</p>
-
-<p>Además de los métodos que hemos visto de <code>Dict</code>, podemos encontrar: <code>values</code>,
-<code>drop</code>, <code>put</code>, <code>merge</code>, <code>get</code>, <code>HashDict.new</code>,...</p>
-
-<p>El módulo <code>Keyword</code> tiene métodos para manipular listas de tuplas, o keyword
-lists: <code>delete</code>, <code>drop</code>, <code>equal?</code>, <code>get_and_update</code>, <code>merge</code>, <code>pop</code>, <code>put</code>,...</p>
-
-<p>Existen unas macros, que sirven para manipular los valores almacenados en
-diccionarios: <code>get_in</code>, <code>update_in</code>, <code>get_and_update_in</code>,... Si a estas macros
-se les pasa una función en lugar de unas claves, se usará esa función para
-obtener los valores del diccionario. Debería ser sencillo saber usarlas, pero
-todavía no llego a entender exactamente cómo funciona y para qué se podría
-utilizar.</p>
-
-<h2>Aprender lo suficiente para hacer algo de utilidad</h2>
-
-<ul>
-<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-02/exercise-01-round-02.exs">exercise-01-round-02.exs</a>: antes se ha implementado (en el libro) la
-funcción <code>sum</code>, que suma los elementos de una lista. Se ha utilizado un
-acumulador. Implementar lo mismo sin el acumulador</li>
-<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-02/exercise-02-round-02.exs">exercise-02-round-02.exs</a>: escribir una función <code>mapsum</code> que acepte una
-lista y una función, de forma que aplique la función a cada elemento y sume
-los resultados</li>
-<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-02/exercise-03-round-02.exs">exercise-03-round-02.exs</a>: escribir una función <code>max(list)</code> que devuelva el
-máximo valor de la lista</li>
-<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-02/exercise-04-round-02.exs">exercise-04-round-02.exs</a>: implementar el cifrado César, <code>caesar(list, n)</code>,
-donde <code>list</code> es una lista de carácteres (es decir, una cadena con comillas
-simples <code>'cadena'</code>) y que sea circular, cuando sobrepase <code>z</code>, que vuelva a la
-<code>a</code>.</li>
-<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-02/exercise-05-round-02.exs">exercise-05-round-02.exs</a>: escribir una función <code>span(from, to)</code> que
-devuelva una lista de números desde <code>from</code> hasta <code>to</code>.</li>
-</ul>
-
-
-<h2>Enseñar lo aprendido</h2>
 
 <p>Aquí está, este post, mis notas, mis pensamientos, mis dudas y mi código. Hasta el siguiente asalto.</p>
 ]]></content>
