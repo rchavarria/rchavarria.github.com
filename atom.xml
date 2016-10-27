@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2016-09-18T17:27:24+02:00</updated>
+  <updated>2016-10-27T21:58:34+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,143 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Global Day of Code Retreat 2016]]></title>
+    <link href="http://rchavarria.github.io/blog/2016/10/27/global-day-of-code-retreat-2016/"/>
+    <updated>2016-10-27T21:46:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2016/10/27/global-day-of-code-retreat-2016</id>
+    <content type="html"><![CDATA[<p>Siento que el título esté inglés, no he encontrado una traducción que suene bien
+en español: ¿<em>Día global del retiro del código</em>? Uff, no lo veo.</p>
+
+<p>A lo que vamos, el pasado día (<em>day</em>) sábado 22 se celebró a nivel mundial (<em>global</em>)
+un evento en el que programadores se reúnen (<em>retreat</em>) para&#8230; programar (<em>code</em>).</p>
+
+<p>Sí, como lo oyes. Hay gente a la que le chirría que unas personas que se dedican
+profesionalmente a programar se reúnan con compañeros de profesión para seguir
+programando un día no laborable. Pero es que este evento no tiene nada que ver con
+lo laboral, aunque sí con la profesión. Una definición tirando a formal sería:</p>
+
+<blockquote><p>Un «code retreat» es un evento de un día, de intensa práctica, enfocado en los
+fundamentos del diseño y desarrollo de software. El formato ha demostrado ser
+un medio efectivo de mejora de habilidades dado que proporciona a los
+desarrolladores la oportunidad de tomar parte en prácticas focalizadas,
+dejando de lado las presiones de tener un que terminar un trabajo.</p></blockquote>
+
+<p><em>(traducción libre de la definición sacada de <a href="http://coderetreat.org/about">Code retreat</a>)</em></p>
+
+<p><img class="center" src="http://rchavarria.github.io/images/2016/gdcr16.jpg"></p>
+
+<div style="text-align: center; margin: -20px 0 0 0">
+  <span style="font-size: 60%">
+  Foto: «Global Day of Code Retreat 2016», por <a href="https://twitter.com/eferro">Eduardo Ferro</a>
+  </span>
+</div>
+
+
+
+
+<!-- more -->
+
+
+<p>Más concretamente, en el Global Day of Code Retreat, se trata de resolver el
+problema del [Juego de la vida de Conway]. La definición habla de práctica
+intensa y focalizada, de fundamentos de diseño y desarrollo. Para potenciar
+esta práctica, el día está dividido en <em>iteraciones</em> de duración relativamente
+corta. Y en cada iteración, el facilitador propone una serie de restricciones.
+Así fué nuestro <a href="https://github.com/SoftwareCraftsmanshipMadrid/global-day-of-coderetreat-2016/blob/master/presentation/theday.md">día</a>.</p>
+
+<h1>Restricciones</h1>
+
+<p>Nuestro día consistió de seis iteraciones, y cada una de ellas contó con las
+siguientes restricciones:</p>
+
+<ol>
+<li><p><strong>Ping-pong</strong>: en estos eventos siempre se programa en parejas y haciendo TDD.
+Programar en modo ping-pong significa que una persona escribe el primer test
+y la otra escribe la mínima implementación para pasar el test y vuelve a
+escribir el siguiente test. La primera persona hace pasar el test y vuelve a
+escribir uno nuevo. Ping. Pong.</p></li>
+<li><p><strong>Nada de primitivas</strong>: esta comienza a ser divertida, está prohibido el uso de
+primitivas. ¿Que necesitas pasar un entero para indicar una posición en un
+array? No, no. ¿Que quieres usar <code>true</code> como flag para controlar el flujo?
+Nanai. Esta restricción te obliga a crear abstracciones, a nombrar todas esas
+primitivas que pueden significar cualquier cosa. Esta restricción es una de mis
+favoritas.</p></li>
+<li><p><strong>No se puede usar el ratón</strong>, y se limitan las <em>discusiones</em> a 3 minutos: menos
+mal que esta la realizé con herramientas que uso en mi día a día (porque
+esto no te lo explica nadie, quizá te toque de pareja a alguien que no programa
+en tu amado lenguaje, o ni siquiera en tu mismo entorno, divertido ¿verdad?) y
+me gusta usar atajos de teclado. Si no, lo hubiera pasado mal. Como curiosidad,
+existe el plugin <a href="https://github.com/athiele/key-promoter-fork">Key promoter</a> para los IDEs de JetBrains que te interrumpe
+cada vez que usas el ratón.</p></li>
+<li><p><strong>Prohibidos las sentencias condicionales</strong>: esta restricción siempre me marca
+mucho. Está prohibido utilizar <code>if</code>s, <code>switch</code>es, operadores ternarios,&#8230;
+«Muy fácil, utiliza polimorfismo» diría uno. «Eso lo solucionas con un mapa»,
+pero no es tan fácil, lo siento. La primera vez me parecía imposible de
+conseguir. Desde entonces, continuamente veo oportunidades para aplicar lo que
+aprendo cada vez que juego con esta restricción.</p></li>
+<li><p><strong>No se puede hablar</strong>: una de las más complicadas, sobre todo si tienes de
+pareja a alguien a quien has conocido este día, lo cual suele ser bastante
+habitual. El objetivo de esta restricción es hacer nuestro código lo más
+expresivo posible, de forma que no tengamos que explicar nuestras intenciones.
+También consigue que te pongas a escribir código desde el minuto cero y te
+dejes de discusiones.</p></li>
+<li><p><strong>Intercambio de código</strong>: se trata de intercambiar, no sólo el código, si no el
+ordenador al completo con otra pareja. Por lo cual puedes encontrarte
+cualquier cosa: un fichero en blanco, ningún test, la solución muy bien
+encaminada, un código sobredimensionado,&#8230; Me pareció muy divertida, y una
+forma muy dinámica de hacer la última iteración, donde las fuerzas ya flaquean.
+Me pareció muy interesante, porque nada más cambiar de código (entorno,
+ordenador, lenguaje,&#8230;) te encuentras como perdido. Pero luego empiezas a
+darte cuenta de que los tests son muy parecidos a los que llevas en la cabeza.
+Empiezas a hacer conexiones, a reconocer objetos, relaciones. Y ¡BUM! En cinco
+minutos ya estás en marcha otra vez. Cuando cambié de código me encontré con
+que debía programar en C++, que no veía desde la universidad (qué miedo,
+incluir ficheros <code>.h</code> y manejar punteros), con un IDE que no conocía para nada,
+y encima ¿escribir test automáticos?. Pues sí, lo conseguimos mis compañeros de
+iteración y yo. Muy, muy revelador.</p></li>
+</ol>
+
+
+<h1>Personas y agradecimientos</h1>
+
+<p>Y porque el software no es sólo unos y ceros, si no también personas&#8230; No sólo
+es el qué, si no a quién me he <em>llevado</em> de allí:</p>
+
+<ul>
+<li><a href="https://twitter.com/juandvegarguez">Juan D. Vega</a>, facilitador del evento. Muchas gracias por guiarnos, por las
+restricciones y por conectarnos con otros grupos que también celebraban el
+code retreat.</li>
+<li><a href="https://twitter.com/luisrovirosa">Luis Rovirosa</a>, co-facilitador, co-organizador. Generando intensas y sanas
+discusiones con sus incisivas preguntas.</li>
+<li><a href="https://twitter.com/eferro">Eduardo Ferro</a>, me alegró poder conocerle en persona, soy seguidor de su
+[blog] desde hace un tiempecillo.</li>
+<li><a href="https://twitter.com/dmj200">Álvaro Fidalgo</a>, no sabía nada de él, pero me pareció un gran profesional.</li>
+<li><a href="https://twitter.com/helderdoliveira">Helder de Oliveira</a>, otra persona a la que quería conocer en persona, y no
+me equivocaba.</li>
+<li><a href="https://twitter.com/ludobermejo">Ludo Bermejo</a>, estuvo muy interesante la discusión que partío de él sobre
+optimizaciones en el código, y nos recordó que no en todos los contextos la
+memoria y la CPU son <em>gratis</em>.</li>
+<li><a href="https://twitter.com/gelsanz">Ángel Sanz</a>, no pude programar con él, pero hablamos un rato en las
+cervezas, y me cayó muy muy bien.</li>
+<li><a href="https://es.linkedin.com/in/garciajavier">Javier García</a>, con quien tampoco pude programar, pero charlamos durante las
+cervezas.</li>
+</ul>
+
+
+<p>Y por supuesto, agradecer a <a href="http://idealista.com">idealista.com</a> por el espacio y la comida.</p>
+
+<h1>Recursos</h1>
+
+<ul>
+<li><a href="https://github.com/athiele/key-promoter-fork">Key promoter</a>. El enlace es un fork de un plugin que parece descontinuado:
+<a href="https://plugins.jetbrains.com/plugin/4455">Key promoter plugin</a>.</li>
+<li>Github de <a href="https://github.com/SoftwareCraftsmanshipMadrid/global-day-of-coderetreat-2016">Software Craftmanship Madrid</a>.</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Zen y el arte en el mantenimiento de motocicletas]]></title>
@@ -4289,80 +4426,6 @@ incurrir en una deuda</p></blockquote>
 <ul>
 <li><a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/soft-skills-by-john-sonmez.markdown">Notas tomadas sobre Soft skills</a></li>
 <li>Blog <a href="http://ocana.github.io/">Dev&#8217;s kitchen</a></li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Screencast de programación: Robot name (exercism.io)]]></title>
-    <link href="http://rchavarria.github.io/blog/2015/11/01/screencast-robot-name-exercism/"/>
-    <updated>2015-11-01T09:16:00+01:00</updated>
-    <id>http://rchavarria.github.io/blog/2015/11/01/screencast-robot-name-exercism</id>
-    <content type="html"><![CDATA[<p>En el <a href="http://rchavarria.github.io/blog/2015/10/25/youve-got-commit/">post anterior</a> contaba que me gusta aprender, y que una de las mejoras
-formas era practicando. Y que actualmente estaba usando la plataforma
-<a href="http://exercism.io/">exercism.io</a> para ello, concretamente el <a href="http://exercism.io/languages/ecmascript">track de ECMAScript</a> para practicar
-escribiendo código en ES2015. Es muy fácil decir que te gusta aprender, y que
-te gusta practicar. En esta ocasión lo demuestro.</p>
-
-<p>He grabado un breve screencast, de menos de 10 minutos, donde muestro cómo de
-fácil es usar exercism.io. En el screencast resuelvo un ejercicio llamado
-<em>Robot name</em>, donde se trata de generar nombres aleatorios para cada uno de los
-robots que crea el cliente de la clase <code>Robot</code>.</p>
-
-<!-- more -->
-
-
-<h2>Screencast</h2>
-
-<iframe src="https://player.vimeo.com/video/144259723"
-        width="500"
-        height="281"
-        frameborder="0"
-        webkitallowfullscreen
-        mozallowfullscreen
-        allowfullscreen></iframe>
-
-
-<p>El proceso a seguir es muy sencillo. El primer paso es descargar el problema
-mediante el comando:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>exercism fetch ecmascript robot-name
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>el cual indica a exercism.io obtener un ejercicio del track de ECMAScript
-llamado robot-name.</p>
-
-<p>Una vez descargado, podemos leer el fichero <code>README</code> para saber de qué trata el
-problema. Lo siguiente que deberíamos leer son los tests, obtenidos
-directamente de la plataforma. Los tests nos indicaran qué fichero debemos
-crear, y nos darán pistas sobre el código que deberemos escribir. Al final, de
-lo que se trata, es de resolver los problemas uno a uno, hasta completarlos
-todos.</p>
-
-<p>En ese punto el problema estaría resuelto. Podemos subir nuestra solución a la
-plataforma con el comando:</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>exercism submit robot-name.js
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>donde <code>robot-name.js</code> es el nombre del fichero donde está implementada nuestra
-solución.</p>
-
-<p>Por fin, el último paso, es usar exercism.io para comentar soluciones de otros
-usuarios, aprender de las soluciones de otros, e ir iterando sobre nuestra
-propia solución para ir perfeccionándola. O al menos para aprender nuevas
-técnicas de nuestro lenguaje de programación resolviendo de distintas formas el
-mismo problema, a modo de kata.</p>
-
-<h2>Otros screencasts</h2>
-
-<ul>
-<li><a href="http://rchavarria.github.io/blog/2014/10/23/screencast-programacion-juego-disparejo/">El juego del disparejo</a></li>
 </ul>
 
 ]]></content>
