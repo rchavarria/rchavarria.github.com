@@ -135,6 +135,7 @@ Y por supuesto, agradecer a [idealista.com] por el espacio y la comida.
 - Github de [Software Craftmanship Madrid].
 
 [Code retreat]: http://coderetreat.org/about
+[Juego de la vida de Conway]: https://es.wikipedia.org/wiki/Juego_de_la_vida
 [día]: https://github.com/SoftwareCraftsmanshipMadrid/global-day-of-coderetreat-2016/blob/master/presentation/theday.md
 [Key promoter]: https://github.com/athiele/key-promoter-fork
 [Key promoter plugin]: https://plugins.jetbrains.com/plugin/4455
@@ -142,6 +143,7 @@ Y por supuesto, agradecer a [idealista.com] por el espacio y la comida.
 [Juan D. Vega]: https://twitter.com/juandvegarguez
 [Luis Rovirosa]: https://twitter.com/luisrovirosa
 [Eduardo Ferro]: https://twitter.com/eferro
+[blog]: http://www.eferro.net/
 [Álvaro Fidalgo]: https://twitter.com/dmj200
 [Helder de Oliveira]: https://twitter.com/helderdoliveira
 [Ludo Bermejo]: https://twitter.com/ludobermejo
