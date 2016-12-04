@@ -22,8 +22,7 @@ Así que aquí está mi Lista de Lectura:
 
 - [Ready player one](http://www.amazon.es/gp/product/B00UVAREXK/), de Ernest Cline, recomendado por Microsiervos varias veces, y por Kevin Kelly en el [podcast de Tim Ferriss](http://fourhourworkweek.com/2016/06/05/kevin-kelly-ai-virtual-reality-and-the-inevitable)
 - [The nature of software development](https://www.amazon.es/Nature-Software-Development-Simple-Valuable/dp/1941222374/), de Ron Jeffries, recomendado por [Carlos Buenosvinos](https://twitter.com/buenosvinos/status/721623461702078464/photo/1) (antes en Atrápalo Eng, ahora en Xing,...)
-- [The Phoenix project](http://www.amazon.com/The-Phoenix-Project-Helping-Business/dp/0988262592), de Gene Kim, libro similar a [The goal] pero orientado a IT, encontrado en el [blog de Eduardo Ferro](http://www.eferro.net/2016/03/some-books-i-recently-read.html)
-- [The four hour body](https://www.amazon.es/cuerpo-perfecto-cuatro-horas-FICCION/dp/8466650210/), de Tim Ferris
+- [The Phoenix project](http://www.amazon.com/The-Phoenix-Project-Helping-Business/dp/0988262592), de Gene Kim, libro similar a [The goal](/blog/2013/04/10/la-meta) pero orientado a IT, encontrado en el [blog de Eduardo Ferro](http://www.eferro.net/2016/03/some-books-i-recently-read.html)
 - [Expertología](http://www.amazon.es/dp/8492414502), de Andrés Pérez Ortega
 
 ## Tengo pensado leer
@@ -109,6 +108,7 @@ Así que aquí está mi Lista de Lectura:
 
 ## He leído
 
+- [The four hour body](https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/4-hour-body-by-tim-ferriss.markdown), de Tim Ferris
 - [Zen y el arte del mantenimiento de motocicletas](/blog/2016/09/18/zen-arte-mantenimiento-motocicletas/), de Robert M. Pirsig, recomendado por [@mpjme en FunFunFunction #18](https://www.youtube.com/watch?v=lrf6xuFq1Ms&t=90)
 - [Practical Vim](/blog/2016/07/17/practical-vim/), de Drew Neil ~ *Julio 2016*
 - [Code: the hidden language of computer hardware and software](/blog/2016/04/10/code/), de Charles Petzold, recomendado por Scott Hanselman y Dave Rael en el [episodio 83 de Developer on Fire podcast](http://developeronfire.com/episode-083-scott-hanselman-learn-balance) ~ *Abril 2016*
