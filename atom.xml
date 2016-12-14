@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2016-12-04T18:28:20+01:00</updated>
+  <updated>2016-12-14T22:18:50+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -252,12 +252,19 @@ Probablemente más sencillas, más baratas, más apropiadas. O peores, porqué n
 
 <p>Antes de ponernos a implementar la solución, hay que comprender las necesidades
 del cliente, hay que identificar correctamente el problema. Los clientes
-normalmente vienen con soluciones, pero no <em>saben</em> lo que quieren. Entendiendo
-bien su problema, podemos mostrarles varias soluciones donde ellos podrán
-elegir la que mejor les convenga. Para conocer el problema, podemos ayudarnos
-de todas estas técnicas de análisis:</p>
+normalmente vienen con soluciones, con <em>cómo</em> quieren que se les soluciones el
+problema que tienen. Es ahí donde debemos pararnos y analizar el problema,
+analizar el <em>qué</em>. Entendiendo bien su problema, podemos mostrarles varias
+soluciones donde ellos podrán elegir la que mejor les convenga. Para conocer el
+problema, podemos ayudarnos de todas estas técnicas de análisis:</p>
 
-<!-- traspa sobre las diferentes técnicas de análisis -->
+<p><img class="center" src="http://rchavarria.github.io/images/2016/carlosble-analisis.png"></p>
+
+<div style="text-align: center">
+  <span style="font-size: 60%">
+Slide #15 de <a href="http://www.slideshare.net/carlosble/distinguir-entre-problema-y-solucin">Distinguir entre problema y solución</a> de <a href="http://www.slideshare.net/carlosble">Carlos Blé</a>, reproducida con permiso del autor
+  </span>
+</div>
 
 
 <blockquote><p>Para saber el valor de un producto, compáralo con una hoja de cálculo ~
