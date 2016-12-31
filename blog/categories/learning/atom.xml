@@ -4,7 +4,7 @@
   <title><![CDATA[Category: learning | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/learning/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2016-12-14T22:18:50+01:00</updated>
+  <updated>2016-12-31T19:39:59+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,168 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Elixir: octavo asalto]]></title>
+    <link href="http://rchavarria.github.io/blog/2016/12/31/elixir-octavo-asalto/"/>
+    <updated>2016-12-31T19:13:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2016/12/31/elixir-octavo-asalto</id>
+    <content type="html"><![CDATA[<p>Último post del año, que no de la serie sobre aprender <a href="http://elixir-lang.org/">Elixir</a>. Este asalto va de nodos, PIDs y un poquito (muy poco) de entrada/salida.</p>
+
+<p>Aprenderemos qué es un nodo, cómo crear nuevos nodos y cómo comunicarlos a un nivel muy básico. Y algo muy interesante, cómo hacer que un nodo ejecute una función a nuestro antojo.</p>
+
+<p>Todo esto, siguiendo el <a href="/blog/2016/01/17/aprendiendo-elixir/">método de aprendizaje</a> con el que comenzé la serie:</p>
+
+<ul>
+<li>Aprender lo suficiente para comenzar</li>
+<li>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</li>
+<li>Aprender lo suficiente para hacer algo de utilidad</li>
+<li>Enseñar lo aprendido</li>
+</ul>
+
+
+<p><img class="center" src="/images/2016/risk.jpg"></p>
+
+<div style="text-align: center">
+  <span style="font-size: 60%">
+Imagen basada en <a href="https://flic.kr/p/3pUVs">Risk</a> de <a href="https://www.flickr.com/photos/benstephenson/">Ben Stephenson</a>, <a href="https://creativecommons.org/licenses/by/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>
+  </span>
+</div>
+
+
+
+
+<!-- more -->
+
+
+<h2>Aprender lo suficiente para comenzar</h2>
+
+<h4>Nodos - La clave para los servicios distribuidos</h4>
+
+<p>Un <strong>nodo</strong> no es más que una instancia de la máquina virtual de Erlang
+ejecutándose. Es como un sistema operativo completo, y ofrece servicios como
+tal a procesos locales o remotos.</p>
+
+<h5>Nombres de nodos</h5>
+
+<p>En <code>iex</code>, podemos saber el nombre del nodo actual con <code>Node.self</code>:</p>
+
+<p><code>
+iex&gt; Node.self
+:"rchavarria@localhost"
+</code></p>
+
+<p>Podemos dar un nombre al nodo al iniciar <code>iex</code>:</p>
+
+<p><code>
+$ iex -name foobar@localhost
+iex(foobar@localhost)&gt; Node.self
+:"foobar@localhost"
+</code></p>
+
+<p>Si te fijas, el valor devuelto por <code>Node.self</code> tiene los dos puntos delante,
+como si fuera un <code>Atom</code>. Y es que en Elixir, los nombres de los nodos son
+tratados como <code>Atom</code>s, lo que hace super sencillo referenciar nodos en el
+código.</p>
+
+<p>También, podemos saber qué nodos conoce un nodo al que estemos conectados:</p>
+
+<p>```
+iex(node_two)> Node.list
+[]</p>
+
+<h1>y al conectarnos a un nodo, aparecerá como conectado</h1>
+
+<p>iex(node_two)> Node.connect :"node_one@localhost"
+true
+iex(node_two)> Node.list
+[ :"node_one@localhost" ]
+```</p>
+
+<p>Podemos ejecutar una función en un nodo remoto:</p>
+
+<p><code>
+iex(node_one)&gt; func = fn -&gt; IO.puts "Hello, I'm in #{inspect Node.self}"
+iex(node_one)&gt; Node.spawn( :"node_two@localhost", func )
+Hello, I'm in :"node_two@localhost"
+</code></p>
+
+<p><code>Node.spawn</code> es impresionante. Podemos ejecutar una función en otro nodo
+fácilmente. Pero aunque se ejecute en <code>node_two</code>, hereda lo que se llama <em>group
+leader</em>, con lo que es capaz de mostrar mensajes por consola en <code>node_one</code> (en
+lugar del dos, que es donde se ejecuta).</p>
+
+<p>Además de poder dar un nombre a un nodo, podemos establecer su <em>cookie</em>. La
+cookie de un node no es más que un token, y se utiliza para permitir que los
+nodos se conecten entre sí. Nodos con la misma cookie se pueden conectar. Si es
+distinta, los nodos rechazarán la conexión. Las cookies se mandan en texto
+plano, así que cuidado con las conexiones a través de internet.</p>
+
+<h5>Nombrando tus procesos</h5>
+
+<p>Cada proceso se identifica con un PID. Un PID está compuesto por tres números,
+aunque sólo contiene dos campos: el número de nodo (<code>0</code> si el nodo es el local)
+y el número de proceso en sí. Este número de proceso está compuesto por sus
+bits más y menos representativos (de ahí que veamos tres números en un PID como
+éste <code>#PID&lt;0.71.0&gt;</code>). El id de node es el id del nodo donde <em>vive</em> el proceso.</p>
+
+<h4>Entrada/salida, PIDs y Nodos</h4>
+
+<p>La entrada/salida en la máquina virtual de Erlang se hace a través de
+servidores de entrada/salida. Elixir y Erlang proporcionan librerías para no
+tener que lidiar con ellos, ya que son a muy bajo nivel.</p>
+
+<p>En Elixir, se identifica un fichero por el PID del proceso del servidor de
+entrada/salida que lo está manejando.</p>
+
+<p>Por ejemplo, la función <code>IO.puts</code> utiliza el PID devuelto por
+<code>:erlang.group_leader()</code> como valor por defecto para enviar una cadena al
+proceso que la muestra por consola: <code>send :erlang.group_leader(), str</code> podría
+ser el código equivalente.</p>
+
+<h2>Aprender lo suficiente para hacer algo de utilidad</h2>
+
+<ul>
+<li>Ejercicio 1: en el código del servidor de ticks (<a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-08/ticker.ex">ticker.ex</a>), el autor habla
+de que el tick se envía cada 2 segundos más o menos.  Pero el timeout está
+puesto a 2 segundos exactos. ¿Por qué habla de <em>más o menos</em>?</li>
+</ul>
+
+
+<p><strong>Respuesta</strong></p>
+
+<p>El timeout es de justo 2 segundos, pero el timeout solo saltará si no se
+registra ningún cliente en esos 2 segundos. Si un cliente se registra (digamos
+en el momento 1.55 segundos) no saltará el timeout hasta los 3.55 segundos
+siguientes (1.55 segundos que pasaron desde el anterior tick hasta el registro
+del último cliente más 2 segundos del timeout normal).</p>
+
+<ul>
+<li><p>Ejercicio 2: modificar el servidor de ticks para que mande solo un
+tick cada vez, de forma circular, a cada uno de los clientes registrados (el
+primer tick al primer cliente, el segundo tick al segundo cliente
+registrado,...). El programa deberá lidiar con nuevos clientes registrados.</p></li>
+<li><p>Ejercicio 3: reimplementar el servidor de ticks, pero esta vez
+debe ser circular, de forma que el cliente 1 mande un tick al cliente 2.
+Pasados 2 segundos, el cliente 2 mandará un tick al 3. Y así hasta el último, el cual
+enviará un tick al 1. Y vuelta a empezar. El problema está en cómo añadir
+clientes al círculo (o <em>ring</em>) y quién tiene la responsabilidad de actualizar
+ese círculo de clientes.</p></li>
+</ul>
+
+
+<p><strong>Respuesta</strong></p>
+
+<p>Me costó un tiempo dar con la solución al ejercicio (<a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-08/ring_ticker.ex">ring_ticker.ex</a>). Puede
+que el <em>ring</em> lo tenga que gestionar el servidor central. De otra forma, los
+clientes perderán el timeout del <code>receive</code> y se volverán un poco locos.</p>
+
+<h2>Enseñar lo aprendido, y repetir desde el paso 7</h2>
+
+<p>Aquí está, este post, mis notas, mis pensamientos, mis dudas y mi código. Hasta
+el siguiente asalto.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Elixir: séptimo asalto]]></title>
@@ -874,265 +1036,6 @@ primera letra de cada frase en una cadena</li>
 (que tendrá los campos id, estado y cantidad neta), y que se lo pase a la
 función desarrollada en el tercer asalto, al ejercicio
 <code>exercise-02-round-03.exs</code>.</li>
-</ul>
-
-
-<h2>Enseñar lo aprendido, y repetir desde el paso 7</h2>
-
-<p>Aquí está, este post, mis notas, mis pensamientos, mis dudas y mi código. Hasta el siguiente asalto.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Elixir: tercer asalto]]></title>
-    <link href="http://rchavarria.github.io/blog/2016/05/01/elixir-tercer-round/"/>
-    <updated>2016-05-01T17:46:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2016/05/01/elixir-tercer-round</id>
-    <content type="html"><![CDATA[<p>Éste es el tercer asalto para aprender <a href="http://elixir-lang.org/">Elixir</a>, y las cosas se van poniendo
-interesantes, aunque todavía siento que estoy muy verde y me falta todavía
-mucho para ser capaz de hacer las cosas más sencillas.</p>
-
-<p>En este asalto, aprendo nuevas cosas proporcionadas por los módulos <code>Enum</code>,
-<code>Stream</code> y otras coleciones, así como las <em>comprehensions</em>, que me recuerdan
-mucho a los clásicos bucles <code>for</code>.</p>
-
-<p>Sigo aprendiendo siguiendo el método descrito en el post sobre <a href="/blog/2016/01/17/aprendiendo-elixir/">aprender Elixir</a>:</p>
-
-<ul>
-<li>Aprender lo suficiente para comenzar</li>
-<li>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</li>
-<li>Aprender lo suficiente para hacer algo de utilidad</li>
-<li>Enseñar lo aprendido</li>
-</ul>
-
-
-<p><img class="right" src="/images/2016/third-fight.png"></p>
-
-<div style="text-align: center">
-  <span style="font-size: 60%">
-Imagen basada en <a href="https://flic.kr/p/c9bWJA">3rd fight</a> de <a href="https://www.flickr.com/photos/takfoto/">Tomasz Krawczak</a>, <a href="https://creativecommons.org/licenses/by-nc/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by-nc/2.0/legalcode">CC BY-NC 2.0</a>
-  </span>
-</div>
-
-
-
-
-<!-- more -->
-
-
-<h2>Aprender lo suficiente para comenzar</h2>
-
-<p><strong>Procesando colleciones con <code>Enum</code></strong></p>
-
-<p>Elixir tiene muchos tipos de datos que actúan como colleciones: listas, mapas,
-diccionarios, rangos, ficheros e incluso funciones. Las colecciones se pueden
-iterar (sobretodo con funciones del módulo <code>Enum</code>), y algunas permiten añadir
-elementos.</p>
-
-<p>```</p>
-
-<h1>convierte cualquier colección a List</h1>
-
-<p>list = Enum.to_list 1..5
-  #=> [1, 2, 3, 4, 5]</p>
-
-<h1>concatena</h1>
-
-<p>Enum.concat([1, 2, 3], [4, 5, 6])
-  #=> [1, 2, 3, 4, 5]</p>
-
-<h1>crea nuevas colleciones</h1>
-
-<p>Enum.map(list, &amp;(&amp;1 * 10))
-  #=> [10, 20, 30, 40, 50]</p>
-
-<h1>selecciona elementos por posición</h1>
-
-<p>Enum.at(10..20, 3) #=> 13
-Enum.at(10..20, 20) #=> nil
-Enum.filter(list, &amp;(&amp;1 > 2)) #=> [3, 4, 5]
-Enum.reject(list, &amp;Integer.is_even/1) #=> [1, 3, 5]</p>
-
-<h1>ordena y compara elementos</h1>
-
-<p>Enum.sort([ "there", "was", "a", "crooked", "man" ],
-  &amp;(String.length(&amp;1) &lt;= String.length(&amp;2))
-Enum.max([ "there", "was", "a", "crooked", "man" ]) #=> "was"</p>
-
-<h1>divide una colleción</h1>
-
-<p>Enum.take(list, 3)    #=> [1, 2, 3]
-Enum.take_every(list, 2)  #=> [1, 3, 5]
-Enum.take_while(list, &amp;(&amp;1 &lt; 4))
-Enum.split(list, 3)
-  #=> { [1, 2, 3], [4, 5] }
-Enum.split_while(list, &amp;(&amp;1 &lt; 4))
-  #=> { [1, 2, 3], [4, 5] }</p>
-
-<h1>une los elementos de una colección</h1>
-
-<p>Enum.join(list)
-Enum.join(list, ", ")   #=> "1, 2, 3, 4, 5"</p>
-
-<h1>hace preguntas sobre operaciones</h1>
-
-<p>Enum.all?(list, &amp;(&amp;1 &lt; 4))
-Enum.any?(list, &amp;(&amp;1 &lt; 4))
-Enum.member?(list, 4)
-Enum.empty?(list)</p>
-
-<h1>mezcla colecciones</h1>
-
-<p>Enum.zip(list, [:a, :b, :c])
-  #=> [ {1, :a}, {2, :b}, {3, :c} ]</p>
-
-<h1>otros</h1>
-
-<p>Enum.reduce(<collection>, <function>)
-```</p>
-
-<p><strong><code>Stream</code>s, enumerables diferidos o perezosos</strong></p>
-
-<p>El módulo <code>Stream</code> permite enumerar collecciones de forma diferida (<em>lazy</em> es
-la palabra utilizada, que traduzco libremente como <em>diferida</em>).</p>
-
-<p>Las funciones del módulo <code>Enum</code> procesan todos los elementos de la colección de
-una vez, consumiendo memoria. Las del módulo <code>Stream</code> consumen los elementos de
-uno en uno, según se van necesitando. Los <em>streams</em> se pueden componer, es
-decir, los streams son collecciones, por lo que se pueden usar las funciones de
-<code>Stream</code> con los propios streams (sería como crear streams de streams).</p>
-
-<p>Finalmente, para obtener los resultados, se puede convertir un <code>Stream</code> a una
-lista:</p>
-
-<p><code>
-[1, 2, 3, 4, 5]
-  |&gt; Stream.map(&amp;(&amp;1 * &amp;1)
-  |&gt; Stream.map(&amp;(&amp;1 + 1)
-  |&gt; Stream.filter(fn x -&gt; rem(x, 2) == 1 end)
-  |&gt; Enum.to_list
-</code></p>
-
-<p>Con <code>Enum</code> debemos esperar a tener todos los elementos de la colección para
-empezar a procesarlos. Con <code>Stream</code> podemos comenzar a procesarlos
-inmediatamente. Imagina que leemos de un servidor remoto, o de un sensor, ambos
-mandan datos infinitamente, por lo que <code>Enum</code> no sería una opción válida en
-este caso.</p>
-
-<p>Normalmente, serán las librerías y los frameworks quienes nos proporcionen los
-streams con los que vamos a trabajar, pero también podemos crearlos nosotros
-con métodos proporcionados por Elixir: <code>cycle</code>, <code>repeatedly</code>, <code>iterate</code>,
-<code>unfold</code> y <code>resource</code>.</p>
-
-<p>```</p>
-
-<h1>cycle toma una coleción y va devolviendo de uno en uno indefinidamente</h1>
-
-<h1>cuando la colección se acaba, vuelve a empezar desde el principio</h1>
-
-<p>Stream.cycle([1, 2, 3])
-  |> Enum.take(10)</p>
-
-<h1>=> [1, 2, 3, 1, 2, 3, 1, 2, 3, 1]</h1>
-
-<h1>repeatedly toma una función y la ejecuta cada vez que se le pide un elemento</h1>
-
-<p>Stream.repeatedly(fn -> true end) |> Enum.take(3)
-  #=> [ true, true, true ]
-Stream.repeatedly(&amp;:random.uniform/0) |> Enum.take(3)
-  #=> [ 0.723, 0.941, 0.1234 ]</p>
-
-<h1>iterate toma un valor inicial y una función. el primer elemento es el valor inicial,</h1>
-
-<h1>el siguiente es el valor devuelto por la función pasándole el valor inicial, el siguiente</h1>
-
-<h1>es el valor devuelto por la función pasándole el valor anterior, así indefinidamente</h1>
-
-<p>Stream.iterate(0, &amp;(&amp;1 + 1)) |> Enum.take(5)
-  #=> [0, 1, 2, 3, 4]</p>
-
-<h1>unfold es similar a iterate, pero con tuplas. el primer valor de la tupla</h1>
-
-<h1>significa el valor de la iteración actual, el segundo valor significa el valor</h1>
-
-<h1>a procesar en la siguiente iteración</h1>
-
-<p>Stream.unfold( {0, 1}, fn {f1, f2} -> {f1, {f2, f1+f2}} end ) |> Enum.take(15)
-  #=> [0, 1, 1, 2, 3, 5, 8, 13, ... fibonacci]</p>
-
-<h1>resource es similar a unfold. toma tres funciones como argumentos. la primera</h1>
-
-<h1>crea el recurso, la segunda va dando valores de las iteraciones (como unfold)</h1>
-
-<h1>y la tercera cierra el recurso (fichero, bbdd, ...)</h1>
-
-<p>```</p>
-
-<p><strong>El protocolo <code>Collectable</code></strong></p>
-
-<p>No son lo mismo, y todavía no soy capaz de describir exactamente lo que es un
-<em>protocolo</em>, pero el concepto que tengo de ellos hoy mismo es que son
-<em>equivalentes</em> a las interfaces en los lenguajes orientados a objetos.</p>
-
-<p><code>Enumerable</code> es un protocolo que permite iterar una colección. <code>Collectable</code>
-permite añadir elementos a una colección. Se puede utilizar <code>Enum.into</code> para
-hacerlo y convertir un tipo de colección en otro.</p>
-
-<p><code>
-Enum.into 1..5, [1000, 10001]
-  #=&gt; [1000, 1001, 1, 2, 3, 4, 5]
-</code></p>
-
-<p><strong>Comprehensions</strong></p>
-
-<p>Se le pueden pasar una o más colecciones, entonces extrae todas las
-combinaciones posibles de los elementos de dichas colecciones, opcionalmente
-puede filtrar valores, y genera una nueva colección con los valores que pasan
-el filtro. La sintaxis es <code>result = for &lt;generator&gt; or &lt;filter&gt;, do:
-&lt;expression&gt;</code>. Donde <code>&lt;generator&gt;</code> tiene la forma <code>pattern &lt;- collection</code> y el
-filtro es simplemente una condición, por ejemplo <code>x &lt; 4</code>.</p>
-
-<p>Las variables declaradas en una comprehension tienen la misma como ámbito, no
-escapan de él.</p>
-
-<p>```
-for x <- [1, 2, 3, 4, 5], x < 4, do: x * x
-  # => [1, 4, 9]</p>
-
-<p>for x <- [1, 2], y <- [5, 6], do: x * y
-  # => las posibles combinaciones serían [1, 5], [1, 6], [2, 5], [2, 6]
-  # => y esas combinaciones serían las iteraciones de la comprehension</p>
-
-<h1>se pueden usar variables de generadores en siguientes generadores</h1>
-
-<p>min_maxes = [ {1, 4}, {2, 3}, {10, 15} ]
-for { min, max } <- min_maxes, n <- min..max, do: n
-  # => [ 1, 2, 3, 4, 2, 3, 10, 11, 12, 13, 14, 15 ]</p>
-
-<h1>por defecto, las comprehensions devuelven una lista. Se puede cambiar</h1>
-
-<h1>con el parámetro <code>into:</code></h1>
-
-<p>for x <- ~w{ cat dog }, into: Map.new, do: { x, String.upcase(x) }
-  # => %{ "cat" => "CAT", "dog" => "DOG" }
-```</p>
-
-<h2>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</h2>
-
-<p>Podría investigar sobre qué son los protocolos, pero creo que están descritos
-en el libro del cual está surgiendo esta serie de posts, por lo que esperaré a
-llegar ahí.</p>
-
-<p>Tener siempre muy presente las funciones del módulo <code>Enum</code>, ya que casi seguro
-que se van a utilizar siempre que haya colecciones de por medio.</p>
-
-<h2>Aprender lo suficiente para hacer algo de utilidad</h2>
-
-<ul>
-<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-03/exercise-01-round-03.exs">exercise-01-round-03.exs</a>: con ayuda de la función <code>span</code> escrita anteriormente, escribir una función que devuelva la lista de números primos de <code>2</code> hasta <code>n</code></li>
-<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-03/exercise-02-round-03.exs">exercise-02-round-03.exs</a>: a partir de dos listas, una de tasas de impuestos, y otra de compras, calcular el importe total de cada una de las compras</li>
-<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-03/lists-and-recursion-5.exs">lists-and-recursion-5.exs</a>: implementar funciones presentes en <code>Enum</code>: <code>all?</code>, <code>each</code>, <code>filter</code>, <code>take</code> y <code>split</code>.</li>
-<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-03/lists-and-recursion-6.exs">lists-and-recursion-6.exs</a>: implementar <code>flatten</code></li>
 </ul>
 
 

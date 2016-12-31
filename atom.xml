@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2016-12-14T22:18:50+01:00</updated>
+  <updated>2016-12-31T19:39:59+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,179 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Elixir: octavo asalto]]></title>
+    <link href="http://rchavarria.github.io/blog/2016/12/31/elixir-octavo-asalto/"/>
+    <updated>2016-12-31T19:13:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2016/12/31/elixir-octavo-asalto</id>
+    <content type="html"><![CDATA[<p>Último post del año, que no de la serie sobre aprender <a href="http://elixir-lang.org/">Elixir</a>. Este asalto va de nodos, PIDs y un poquito (muy poco) de entrada/salida.</p>
+
+<p>Aprenderemos qué es un nodo, cómo crear nuevos nodos y cómo comunicarlos a un nivel muy básico. Y algo muy interesante, cómo hacer que un nodo ejecute una función a nuestro antojo.</p>
+
+<p>Todo esto, siguiendo el <a href="http://rchavarria.github.io/blog/2016/01/17/aprendiendo-elixir/">método de aprendizaje</a> con el que comenzé la serie:</p>
+
+<ul>
+<li>Aprender lo suficiente para comenzar</li>
+<li>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</li>
+<li>Aprender lo suficiente para hacer algo de utilidad</li>
+<li>Enseñar lo aprendido</li>
+</ul>
+
+
+<p><img class="center" src="http://rchavarria.github.io/images/2016/risk.jpg"></p>
+
+<div style="text-align: center">
+  <span style="font-size: 60%">
+Imagen basada en <a href="https://flic.kr/p/3pUVs">Risk</a> de <a href="https://www.flickr.com/photos/benstephenson/">Ben Stephenson</a>, <a href="https://creativecommons.org/licenses/by/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>
+  </span>
+</div>
+
+
+
+
+<!-- more -->
+
+
+<h2>Aprender lo suficiente para comenzar</h2>
+
+<h4>Nodos - La clave para los servicios distribuidos</h4>
+
+<p>Un <strong>nodo</strong> no es más que una instancia de la máquina virtual de Erlang
+ejecutándose. Es como un sistema operativo completo, y ofrece servicios como
+tal a procesos locales o remotos.</p>
+
+<h5>Nombres de nodos</h5>
+
+<p>En <code>iex</code>, podemos saber el nombre del nodo actual con <code>Node.self</code>:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>iex&gt; Node.self
+</span><span class='line'>:"rchavarria@localhost"</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Podemos dar un nombre al nodo al iniciar <code>iex</code>:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ iex -name foobar@localhost
+</span><span class='line'>iex(foobar@localhost)&gt; Node.self
+</span><span class='line'>:"foobar@localhost"</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Si te fijas, el valor devuelto por <code>Node.self</code> tiene los dos puntos delante,
+como si fuera un <code>Atom</code>. Y es que en Elixir, los nombres de los nodos son
+tratados como <code>Atom</code>s, lo que hace super sencillo referenciar nodos en el
+código.</p>
+
+<p>También, podemos saber qué nodos conoce un nodo al que estemos conectados:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>iex(node_two)&gt; Node.list
+</span><span class='line'>[]
+</span><span class='line'>
+</span><span class='line'># y al conectarnos a un nodo, aparecerá como conectado
+</span><span class='line'>iex(node_two)&gt; Node.connect :"node_one@localhost"
+</span><span class='line'>true
+</span><span class='line'>iex(node_two)&gt; Node.list
+</span><span class='line'>[ :"node_one@localhost" ]</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Podemos ejecutar una función en un nodo remoto:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>iex(node_one)&gt; func = fn -&gt; IO.puts "Hello, I'm in #{inspect Node.self}"
+</span><span class='line'>iex(node_one)&gt; Node.spawn( :"node_two@localhost", func )
+</span><span class='line'>Hello, I'm in :"node_two@localhost"</span></code></pre></td></tr></table></div></figure>
+
+
+<p><code>Node.spawn</code> es impresionante. Podemos ejecutar una función en otro nodo
+fácilmente. Pero aunque se ejecute en <code>node_two</code>, hereda lo que se llama <em>group
+leader</em>, con lo que es capaz de mostrar mensajes por consola en <code>node_one</code> (en
+lugar del dos, que es donde se ejecuta).</p>
+
+<p>Además de poder dar un nombre a un nodo, podemos establecer su <em>cookie</em>. La
+cookie de un node no es más que un token, y se utiliza para permitir que los
+nodos se conecten entre sí. Nodos con la misma cookie se pueden conectar. Si es
+distinta, los nodos rechazarán la conexión. Las cookies se mandan en texto
+plano, así que cuidado con las conexiones a través de internet.</p>
+
+<h5>Nombrando tus procesos</h5>
+
+<p>Cada proceso se identifica con un PID. Un PID está compuesto por tres números,
+aunque sólo contiene dos campos: el número de nodo (<code>0</code> si el nodo es el local)
+y el número de proceso en sí. Este número de proceso está compuesto por sus
+bits más y menos representativos (de ahí que veamos tres números en un PID como
+éste <code>#PID&lt;0.71.0&gt;</code>). El id de node es el id del nodo donde <em>vive</em> el proceso.</p>
+
+<h4>Entrada/salida, PIDs y Nodos</h4>
+
+<p>La entrada/salida en la máquina virtual de Erlang se hace a través de
+servidores de entrada/salida. Elixir y Erlang proporcionan librerías para no
+tener que lidiar con ellos, ya que son a muy bajo nivel.</p>
+
+<p>En Elixir, se identifica un fichero por el PID del proceso del servidor de
+entrada/salida que lo está manejando.</p>
+
+<p>Por ejemplo, la función <code>IO.puts</code> utiliza el PID devuelto por
+<code>:erlang.group_leader()</code> como valor por defecto para enviar una cadena al
+proceso que la muestra por consola: <code>send :erlang.group_leader(), str</code> podría
+ser el código equivalente.</p>
+
+<h2>Aprender lo suficiente para hacer algo de utilidad</h2>
+
+<ul>
+<li>Ejercicio 1: en el código del servidor de ticks (<a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-08/ticker.ex">ticker.ex</a>), el autor habla
+de que el tick se envía cada 2 segundos más o menos.  Pero el timeout está
+puesto a 2 segundos exactos. ¿Por qué habla de <em>más o menos</em>?</li>
+</ul>
+
+
+<p><strong>Respuesta</strong></p>
+
+<p>El timeout es de justo 2 segundos, pero el timeout solo saltará si no se
+registra ningún cliente en esos 2 segundos. Si un cliente se registra (digamos
+en el momento 1.55 segundos) no saltará el timeout hasta los 3.55 segundos
+siguientes (1.55 segundos que pasaron desde el anterior tick hasta el registro
+del último cliente más 2 segundos del timeout normal).</p>
+
+<ul>
+<li><p>Ejercicio 2: modificar el servidor de ticks para que mande solo un
+tick cada vez, de forma circular, a cada uno de los clientes registrados (el
+primer tick al primer cliente, el segundo tick al segundo cliente
+registrado,&#8230;). El programa deberá lidiar con nuevos clientes registrados.</p></li>
+<li><p>Ejercicio 3: reimplementar el servidor de ticks, pero esta vez
+debe ser circular, de forma que el cliente 1 mande un tick al cliente 2.
+Pasados 2 segundos, el cliente 2 mandará un tick al 3. Y así hasta el último, el cual
+enviará un tick al 1. Y vuelta a empezar. El problema está en cómo añadir
+clientes al círculo (o <em>ring</em>) y quién tiene la responsabilidad de actualizar
+ese círculo de clientes.</p></li>
+</ul>
+
+
+<p><strong>Respuesta</strong></p>
+
+<p>Me costó un tiempo dar con la solución al ejercicio (<a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-08/ring_ticker.ex">ring_ticker.ex</a>). Puede
+que el <em>ring</em> lo tenga que gestionar el servidor central. De otra forma, los
+clientes perderán el timeout del <code>receive</code> y se volverán un poco locos.</p>
+
+<h2>Enseñar lo aprendido, y repetir desde el paso 7</h2>
+
+<p>Aquí está, este post, mis notas, mis pensamientos, mis dudas y mi código. Hasta
+el siguiente asalto.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The 4 hour body]]></title>
@@ -4032,262 +4205,6 @@ radar últimamente, pero no le he hecho mucho caso. Ha llegado el momento</li>
 <li>Serie <em>Halt &amp; Catch Fire</em></li>
 <li>Proponer PI Week en el trabajo</li>
 </ol>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Se aceptan mejoras]]></title>
-    <link href="http://rchavarria.github.io/blog/2015/11/22/se-aceptan-mejoras/"/>
-    <updated>2015-11-22T22:27:00+01:00</updated>
-    <id>http://rchavarria.github.io/blog/2015/11/22/se-aceptan-mejoras</id>
-    <content type="html"><![CDATA[<p>Existe una cosa maravillosa en el mundo de open source, y es que personas que
-ni siquiera sabes que existen, usan tu trabajo, lo mejoran con el suyo, y te lo
-donan a tí para que otra gente se beneficie del trabajo de ambos.</p>
-
-<p><img class="left" src="http://rchavarria.github.io/images/2015/contribution.png"></p>
-
-<p>Imagina que tienes una librería y tienes una base de usuarios. Ningún software
-se adapta a todos sus usuarios, así que lo más seguro es que los usuarios de tu
-librería encuentren algún detalle que no encaja a la perfección con sus
-necesidades. ¿No sería incríble que tus propios usuarios mejoraran la librería y
-te dieran su trabajo así como les das tú el tuyo? Pues eso es lo que pasa
-precisamente con el open source.</p>
-
-<p>Y algo parecido pasa cuando contribuyes a algún proyecto open source. Tus
-contribuciones son usadas por los usuarios del proyecto. Y algunos de ellos
-proponen nuevas mejoras al proyecto. Quizá algunas de estas mejoras sean sobre
-el trabajo que tú has realizado. Gente que ni conoces está aportando su
-experiencia para mejorar tu trabajo. Hay que ser muy tonto para no aprovechar
-esta oportunidad para aprender.</p>
-
-<!-- more -->
-
-
-<p>Este artículo describe el proceso a seguir para aceptar mejoras en un proyecto
-publicado en <a href="https://github.com/">Github</a>, donde [<code>git</code>] es usada como herramienta de control de
-versiones. Estas mejoras son propuestas por usuarios externos al proyecto a
-través de <a href="https://help.github.com/articles/using-pull-requests/">Pull Requests</a> (o también PR). Github te ayuda a la hora de
-incorporar esas mejoras a tu proyecto, pero hacerlo así deja la historia de tu
-control de versiones hecha unos zorros (en <a href="http://blog.differential.com/best-way-to-merge-a-github-pull-request/">Best way to merge a pull request</a>
-lo cuentan más detalladamente).</p>
-
-<p>Ésta es la secuencia de comandos mediante los cuales se incoroporarían los
-cambios propuestos en un Pull Request con número <code>pr-number</code> desde una rama
-creada por el autor llamada <code>user-working-branch</code>:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rchavarria@proyect$ git checkout master
-</span><span class='line'>rchavarria@proyect$ git fetch origin
-</span><span class='line'>rchavarria@proyect$ git reset --hard origin/master
-</span><span class='line'>
-</span><span class='line'>rchavarria@proyect$ git fetch origin refs/pull/&lt;pr-number&gt;/head
-</span><span class='line'>rchavarria@proyect$ git checkout -b &lt;user-working-branch&gt; FETCH_HEAD
-</span><span class='line'>rchavarria@proyect$ git rebase master
-</span><span class='line'>
-</span><span class='line'>rchavarria@proyect$ git checkout master
-</span><span class='line'>rchavarria@proyect$ git merge --no-ff &lt;user-working-branch&gt;
-</span><span class='line'>rchavarria@proyect$ git push origin master</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>Limpiar el espacio de trabajo</h2>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rchavarria@proyect$ git checkout master
-</span><span class='line'>Already on 'master'
-</span><span class='line'>Your branch is up-to-date with 'origin/master'.
-</span><span class='line'>rchavarria@proyect$ git fetch origin
-</span><span class='line'>remote: Counting objects: 66, done.
-</span><span class='line'>remote: Compressing objects: 100% (43/43), done.
-</span><span class='line'>remote: Total 66 (delta 14), reused 6 (delta 6), pack-reused 17
-</span><span class='line'>Unpacking objects: 100% (66/66), done.
-</span><span class='line'>From https://github.com/exercism/xecmascript
-</span><span class='line'>   9b32d79..de450d0  master     -&gt; origin/master
-</span><span class='line'> * [new branch]      new-exercise-raindrops -&gt; origin/new-exercise-raindrops</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Con estos comandos simplemente se cambia a la rama <code>master</code> y se descargan los
-cambios que existan en el repositorio remoto (sin aplicar los cambios a ningún
-archivo todavía). En este caso, el repositorio es uno de Github. En el código
-anterior se puede ver cómo existe una nueva rama en remoto,
-<code>new-exercise-raindrops</code>, que se corresponde con el Pull Request que vamos a
-incorporar al repositorio.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rchavarria@proyect$ git reset --hard origin/master
-</span><span class='line'>HEAD is now at de450d0 Merge pull request #78 from rchavarria/new-exercise-roman-numerals</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Este comando elimina cualquier cambio en local y lo sobreescribe exactamente
-con los cambios que ha tomado del repositorio remoto. De esta forma <strong>se tiene
-en local exactamente lo mismo que en remoto</strong>, y es un punto de partida seguro.</p>
-
-<h2>Descargar las mejoras</h2>
-
-<p>Anteriormente git ha avisado de que hay una nueva rama, un nuevo Pull Request.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rchavarria@proyect$ git fetch origin refs/pull/80/head
-</span><span class='line'>From https://github.com/exercism/xecmascript
-</span><span class='line'> * branch            refs/pull/80/head -&gt; FETCH_HEAD</span></code></pre></td></tr></table></div></figure>
-
-
-<p>El anterior comando descarga los cambios contenido en el Pull Request con
-número <code>&lt;pr-number&gt;</code>, que podría ser por ejemplo el <code>80</code>.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rchavarria@proyect$ git checkout -b new-exercise-raindrops FETCH_HEAD
-</span><span class='line'>Switched to a new branch 'new-exercise-raindrops'</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Así, se crea una nueva rama, llamada <code>new-exercise-raindrops</code> que contiene los
-cambios del Pull Request.</p>
-
-<p>Y ahora llega un momento delicado. Se debe hacer que el commit por el que
-comienza la rama recién creada sea el último commit que existía en <code>master</code>. De
-esta forma se consigue que la historia del control de versiones sea la más
-legible. En este punto es posible que se produzcan conflictos. Ese es otro tema
-que daría para muchas explicaciones. Si se quiere profundizar, se puede echar
-un vistazo a la propia [documentación de <code>git</code> sobre el comando <code>rebase</code>].</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rchavarria@proyect$ git rebase master
-</span><span class='line'>Current branch new-exercise-raindrops is up to date.</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Si no hay conflictos, perfecto, ya está.</p>
-
-<h2>Comprobar las mejoras</h2>
-
-<p>Ahora es el momento de hacer comprobaciones:</p>
-
-<ul>
-<li>Se deberían ejecutar los tests del proyecto</li>
-<li>Chequear los cambios, comparándolos con versiones anteriores</li>
-<li>Comprobar que se siguen las reglas de estilo en el código</li>
-<li>En general, asegurarse de que el código a incorporar es un código con el que
-estamos contentos</li>
-</ul>
-
-
-<p>En esta fase se pueden hacer nuevos cambios o pedir al programador que
-contribuye que realice algunos cambios por sí mismo y que actualize el Pull
-Request.</p>
-
-<p><img class="center" src="http://rchavarria.github.io/images/2015/github-diff.png"></p>
-
-<h2>Incorporar los cambios</h2>
-
-<p>Una vez está todo comprobado y se está de acuerdo con los cambios, ha llegado
-la hora de incorporar los cambios a la rama <code>master</code> para que finalmente formen
-parte del código del proyecto.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rchavarria@proyect$ git checkout master
-</span><span class='line'>Switched to branch 'master'
-</span><span class='line'>Your branch is up-to-date with 'origin/master'.
-</span><span class='line'>rchavarria@proyect$ git merge --no-ff new-exercise-raindrops
-</span><span class='line'>Merge made by the 'recursive' strategy.
-</span><span class='line'> config.json                 |  3 ++-
-</span><span class='line'> raindrops/example.js        | 17 +++++++++++++++++
-</span><span class='line'> raindrops/gulpfile.js       | 42 ++++++++++++++++++++++++++++++++++++++++++
-</span><span class='line'> raindrops/package.json      | 24 ++++++++++++++++++++++++
-</span><span class='line'> raindrops/raindrops.spec.js | 38 ++++++++++++++++++++++++++++++++++++++
-</span><span class='line'> 5 files changed, 123 insertions(+), 1 deletion(-)
-</span><span class='line'> create mode 100644 raindrops/example.js
-</span><span class='line'> create mode 100644 raindrops/gulpfile.js
-</span><span class='line'> create mode 100644 raindrops/package.json
-</span><span class='line'> create mode 100644 raindrops/raindrops.spec.js</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Los comandos cambian el espacio de trabajo a la rama <code>master</code> e incorporan los
-cambios a la misma. Se deberá proporcionar un mensaje para el commit que va a
-generar <code>git merge</code>. Un ejemplo sería:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Merge pull request #80 from matthewmorgan/new-exercise-raindrops
-</span><span class='line'>
-</span><span class='line'>Closes #80</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Donde <code>80</code> es el número del Pull Request, <code>matthewmorgan</code> es el nombre del
-programador que contribuye y <code>new-exercise-raindrops</code> es el nombre de la rama
-que le dió el programador y el que se ha utilizado para la incorporación de los
-cambios.</p>
-
-<p>Finalmente, se suben los cambios al repositorio remoto y &#8230;</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rchavarria@proyect$ git push origin master
-</span><span class='line'>Username for 'https://github.com': rchavarria
-</span><span class='line'>Password for 'https://rchavarria@github.com': 
-</span><span class='line'>Counting objects: 1, done.
-</span><span class='line'>Writing objects: 100% (1/1), 273 bytes | 0 bytes/s, done.
-</span><span class='line'>Total 1 (delta 0), reused 0 (delta 0)
-</span><span class='line'>To https://github.com/exercism/xecmascript.git
-</span><span class='line'>   de450d0..eae366a  master -&gt; master</span></code></pre></td></tr></table></div></figure>
-
-
-<p>&#8230; ¡magia!</p>
-
-<p><img class="center" src="http://rchavarria.github.io/images/2015/pull-request-merged.png"></p>
-
-<h2>Referencias</h2>
-
-<ul>
-<li><a href="http://blog.differential.com/best-way-to-merge-a-github-pull-request/">Best way to merge a pull request</a></li>
-<li><a href="https://www.youtube.com/watch?v=1ffBJ4sVUb4">Git for 4 and up</a></li>
-<li><a href="http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">Better commit messages</a></li>
-<li><a href="https://www.youtube.com/watch?v=8YjSty6bfog">Do your commits suck?</a></li>
-</ul>
 
 ]]></content>
   </entry>
