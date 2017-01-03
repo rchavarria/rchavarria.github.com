@@ -20,6 +20,7 @@ Así que aquí está mi Lista de Lectura:
 
 ## Estoy leyendo
 
+- [Practical object-oriented design with Ruby (POODR)](http://www.poodr.com), de Sandi Metz, visto en el blog de [Carlos Blé](https://twitter.com/carlosble)
 - [Ready player one](http://www.amazon.es/gp/product/B00UVAREXK/), de Ernest Cline, recomendado por Microsiervos varias veces, y por Kevin Kelly en el [podcast de Tim Ferriss](http://fourhourworkweek.com/2016/06/05/kevin-kelly-ai-virtual-reality-and-the-inevitable)
 - [The nature of software development](https://www.amazon.es/Nature-Software-Development-Simple-Valuable/dp/1941222374/), de Ron Jeffries, recomendado por [Carlos Buenosvinos](https://twitter.com/buenosvinos/status/721623461702078464/photo/1) (antes en Atrápalo Eng, ahora en Xing,...)
 - [The Phoenix project](http://www.amazon.com/The-Phoenix-Project-Helping-Business/dp/0988262592), de Gene Kim, libro similar a [The goal](/blog/2013/04/10/la-meta) pero orientado a IT, encontrado en el [blog de Eduardo Ferro](http://www.eferro.net/2016/03/some-books-i-recently-read.html)
@@ -60,7 +61,6 @@ Así que aquí está mi Lista de Lectura:
 - [Encambio: aprende a modificar tu cerebro para cambiar tu vida y sentirte mejor](http://m.casadellibro.com/libro-encambio-aprende-a-modificar-tu-cerebro-para-cambiar-tu-vida-y-sentirte-mejor/9788416029396/2548418), de Estanislao Bachrach, recomendado por Roberto Canales Mora
 - [The craftsman](http://www.amazon.com/dp/0300151195/ref=cm_sw_su_dp), de Richard Sennet, creo que visto en el twitter de [Arturo Herrero](http://twitter.com/arturoherrero)
 - [Coders at work](http://www.amazon.com/gp/product/1430219483), de Peter Seibel, visto en una lista de los 8 libros más influyentes en el desarrollo de software
-- [Practical object-oriented design with Ruby (POODR)](http://www.poodr.com), de Sandi Metz, visto en el blog de Carlos Blé
 - [Getting real: how to build a successful web app](https://gettingreal.37signals.com/), de 37signals, recomendado por los organizadores del Codemotion 2014
 - [Becoming a leader](http://www.amazon.com/On-Becoming-Leader-Warren-Bennis/dp/0465014089), de Warren Bennis, recomendado por Roy Osherove en Notes to a software team leader.
 - [Working effectively with Unit Tests](https://leanpub.com/wewut?a=240G6_z5rAtB5wcgCycYSB), de Jay Fields, recomendado en [That podcast](http://thatpodcast.io)
