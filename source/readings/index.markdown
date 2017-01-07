@@ -30,6 +30,8 @@ Así que aquí está mi Lista de Lectura:
 ## Tengo pensado leer
 
 - [Guía para invertir](https://www.amazon.com/Gu%C3%ADa-invertir-Spanish-Robert-Kiyosaki-ebook/dp/B007HPRRHK), de Robert Kiyosaki
+- [Essential Angular](https://leanpub.com/essential_angular/), de Victor Savkin
+- [Down and out in the magic kindom](http://craphound.com/down/download/), de Cory Doctorow (208 pág). Visto en algún post, y como es un libro no técnico, pues a la lista.
 - [Code Complete](http://www.stevemcconnell.com/cc.htm), de Steve McConnell, recomendado por John Sonmez en uno de sus [vídeos](https://www.youtube.com/watch?v=aG5ks3de_wQ)
 - [The new one minute manager](https://www.amazon.com/New-One-Minute-Manager/dp/0062367544), de Ken Blanchard, recomendado por [Jorge (@flipper83)](https://twitter.com/flipper83) y [Carlos Blé](https://twitter.com/carlosble)
 - [xUnit test patterns](http://xunitpatterns.com/index.html), de Gerard Meszaros
