@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Phoenix project"
-date: 2017-01-12 22:23
+date: 2017-01-19 22:23
 author: Rubén Chavarría
 comments: true
 categories: 
