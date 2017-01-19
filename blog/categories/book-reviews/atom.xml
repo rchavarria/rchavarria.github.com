@@ -4,7 +4,7 @@
   <title><![CDATA[Category: book reviews | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/book-reviews/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2016-12-31T19:39:59+01:00</updated>
+  <updated>2017-01-19T21:54:48+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,108 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[The Phoenix project]]></title>
+    <link href="http://rchavarria.github.io/blog/2017/01/19/the-phoenix-project/"/>
+    <updated>2017-01-19T22:23:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2017/01/19/the-phoenix-project</id>
+    <content type="html"><![CDATA[<h5>de Gene Kim</h5>
+
+<p><img class="left" src="/images/2017/phoenix-project.png" width="200" height="246"></p>
+
+<h2>Por qué lo he leído</h2>
+
+<p>Había visto varias referencias al libro por Twitter, blogs y distintos
+podcasts. Sabía que el libro era muy similar a <a href="/blog/2013/04/10/la-meta">La meta</a>, de Eliyahu M.
+Goldratt, un libro que me gustó bastante.</p>
+
+<p>Así que, tras ver que <a href="http://www.eferro.net/2016/03/some-books-i-recently-read.html">Eduardo Ferro</a> también lo había leído, me decidí a
+leerlo yo también.</p>
+
+<!-- more -->
+
+
+<h2>Qué esperaba</h2>
+
+<p>No creo que se pudiera esperar tanto como de <a href="/blog/2013/04/10/la-meta">La meta</a>. Ese libro es un recurso
+más que recomendable para conocer la <a href="https://es.wikipedia.org/wiki/Teor%C3%ADa_de_las_limitaciones">Teoría de las restricciones</a>. Pero
+esperaba algo similar enfocado en el mundo del software.</p>
+
+<p>Esperaba una historia de éxito de una persona o grupo de personas que van
+superando problemas, uno tras otro, donde el autor los aproveche para explicar
+su punto de vista y dar forma a las teorías que quiere explorar.</p>
+
+<h2>Qué encontre</h2>
+
+<p>Más o menos lo que esperaba. A través de una historia llena de problemas a
+solucionar, el autor expone las teorías que quiere difundir. Estas teorías
+están relacionadas con el desarrollo de software y más concretamente con el
+mundillo DevOps.</p>
+
+<p>En realidad, el autor defiende unas prácticas que son la fundación del
+movimiento DevOps, pero para llegar hasta ahí, el protagonista de la historia
+comienza con un ascenso que le lleva a ser el director del departamento de TI
+de una empresa que no destaca por su gestión de servicios tecnológicos, pero
+que solucionando problema tras problema, y con la ayuda de una figura un poco
+enigmática (muy al estilo de <em>La meta</em>), va mejorando hasta hacer del
+departamento y la empresa un lugar mucho mejor.</p>
+
+<h2>Conclusiones</h2>
+
+<p>Por un lado, el libro me ha gustado. Es un libro sobre el mundo del desarrollo
+de software, muy al estilo de <em>La meta</em>, que también me gustó. Y describe el
+proceso que sigue una empresa ficticia de ser un desastre, a ser una empresa
+envidiable en su sector.</p>
+
+<p>Pero por otro, me ha decepcionado un poco. Esperaba que estuviera más centrado
+en el desarrollo, pero está más centrado en la gestión y provisión de servicios
+de TI. No es nada malo, pero estoy más interesado en lo primero.</p>
+
+<p>De todas formas, el libro es interesante, sobre todo si quieres conocer cómo
+hacer bien las cosas en un departamento de TI. Creo que este libro es una buena
+aproximación al mundo DevOps. Pero no deja a los desarrolladores en muy buen
+lugar, así que si eres desarrollador, no te tomes todas las cosas que dicen
+sobre nosotros muy a pecho.</p>
+
+<h2>Qué he aprendido</h2>
+
+<blockquote><p>La única cosa más peligrosa que un desarrollador, es un desarrollador
+conspirando sobre temas de seguridad</p></blockquote>
+
+<!-- space -->
+
+
+<blockquote><p>Eliyahu M. Goldratt, quien creó la teoría de las restricciones, nos mostró
+que cualquier mejora echa en cualquier sitio que no sea el cuello de botella
+es una ilusión, es inútil</p></blockquote>
+
+<!-- space -->
+
+
+<blockquote><p>Los tiempos de espera dependen de la utilización del recurso</p></blockquote>
+
+<!-- space -->
+
+
+<blockquote><p>La necesidad reducir contínuamente los ciclos de tiempo es parte del <em>Primer
+Camino</em>. La necesidad de la amplificación de los bucles de <em>feedback</em> (o
+realimentación), idealmente desde el cliente, es parte del <em>Segundo Camino</em>.
+El <em>Tercer Camino</em> va de asegurarnos de estar introduciendo tensión
+continuamente en el sistema, de forma que estamos contínuamente reforzando
+hábitos y mejorando algo</p></blockquote>
+
+<h2>Recursos relacionados</h2>
+
+<ul>
+<li><a href="/blog/2013/04/10/la-meta">La meta</a>, de Eliyahu M. Goldratt</li>
+<li><a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/phoenix-project-by-gene-kim.markdown">Notas sobre el libro</a></li>
+<li>Blog de <a href="http://www.eferro.net/2016/03/some-books-i-recently-read.html">Eduardo Ferro</a></li>
+<li><a href="https://es.wikipedia.org/wiki/Teor%C3%ADa_de_las_limitaciones">Teoría de las restricciones</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The 4 hour body]]></title>
@@ -534,231 +636,6 @@ de trabajo un lugar mejor.</p></blockquote>
 
 <ul>
 <li><a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/the-software-craftsman-by-sandro-mancuso.markdown">Notas tomadas sobre The Software Craftsman</a></li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Soft skills]]></title>
-    <link href="http://rchavarria.github.io/blog/2015/11/08/soft-skills/"/>
-    <updated>2015-11-08T18:36:00+01:00</updated>
-    <id>http://rchavarria.github.io/blog/2015/11/08/soft-skills</id>
-    <content type="html"><![CDATA[<h6>de John Sonmez</h6>
-
-<p><img class="left" src="/images/2015/soft-skills.jpg" width="239" height="300" title="Soft skills" ></p>
-
-<h3>Por qué lo he leído</h3>
-
-<p>Creo recordar que vi que Miguel, autor del blog <a href="http://ocana.github.io/">Dev's kitchen</a>, lo marcaba
-como pendiente para leer y le di un vistazo. Por aquel momento seguía
-el blog del autor del libro, y tenía varios posts interesantes. Y el libro
-también me lo pareció: ¿Mejorar en tu carrera? ¿Aprender habilidades no
-técnica?</p>
-
-<p>Me gusta intercalar libros técnicos y no técnicos, y este libro parecía estar a
-medio camino entre ambos. Parecía una buena elección, así que me decidí leerlo.</p>
-
-<!-- more -->
-
-
-<h3>Qué esperaba</h3>
-
-<p>Esperaba consejos e historias relacionadas con el software, pero ninguna
-historia técnica: cómo relacionarte con tus compañeros, cómo resolver
-conflictos, cómo negociar con tu jefe. Esperaba más temas relacionados con la
-relación de las persona que otra cosa. Bueno, y también un poco de
-productividad. Quién sabe.</p>
-
-<h3>Qué encontre</h3>
-
-<p>Encontré todo eso y más, mucho más. El libro trata temas tan dispares que hay
-veces que no sabes qué tipo de libro estas leyendo. Hay tantos consejos, y de
-temáticas tan variadas, que es imposible no encontrar algún consejo o idea
-nuevos.</p>
-
-<p>El libro está dividido en secciones, englobando cada uno una temática general:
-carrera profesional, marca personal, aprendizaje, producividad, economía,
-salud y espiritualidad. Cada sección está formada por una serie de capítulos, y
-cada capítulo contiene varios <em>artículos</em>. La verdad es casi como leer su blog,
-pero un post detrás de otro y organizados por temáticas.</p>
-
-<h3>Conclusiones</h3>
-
-<p>El libro es tan variado que cualquier persona encontraría algún consejo
-valioso. John Sonmez se gana la vida de esta forma, aconsejando a programadores
-acerca de cómo mejorar en su carrera. En este libro encontrarás consejos de lo
-más variopintos: desde cómo aprender, a cómo invertir en el negocio
-inmoviliario, pasando por practicar deporte. Incluso hay consejos espirituales.
-En ese punto el libro me dejó un poco de piedra, creo que ahí se pasó, y el
-libro pierde un poco su identidad.</p>
-
-<p>Destacaría las primeras secciones: cuando habla de la carrera profesional y el
-aprendizaje. También me gustó el apartado dedicado a temas financieros, siempre
-es intersante conocer cómo funciona el dinero.</p>
-
-<p>El que menos me gustó fue el espiritual, lleno de buenrollismo y autoayuda. No
-sé, no le cogí el punto. Aún así, en general, me parece un libro bastante recomendable.</p>
-
-<h3>Qué he aprendido</h3>
-
-<p>Casi todo el libro habla de ponerse objetivos, de establecer metas intermedias
-y de hacer seguimiento, de empezar poco a poco, de ser constante, y de trabajar
-duro. Conceptos aplicables a cualquier aspecto de la vida. Cuando habla de
-objetivos, éstos pueden estar formados por tareas demasiado grandes, que
-parece imposible de realizar. El truco está en dividir esa gran tarea en tareas
-secuenciales más pequeñas. Lo más importante aquí es la palabra
-<strong>secuenciales</strong>.</p>
-
-<p>Cómo hackear una entrevista de trabajo: la idea es no tener que mandar
-currículums a las empresas, si no que ellas te contacten. Te contacten porque
-han tenido noticias tuyas de alguien <em>de dentro</em>. Para ello, deberás establecer
-relaciones personales con trabajadores de la empresa en la que deseas trabajar:
-lee sus blogs,... Piensa diferente y encuentra formas de acercarte a ellos.</p>
-
-<p>Algunas de las habilidades que necesitarás para tu próximo trabajo no las
-tienes todavía. La clave es <strong>todavía</strong>. Hay que ir con la confianza de que las
-conseguirás.</p>
-
-<p>John habla mucho de construir una marca personal, para ello necesitarías: un
-mensaje (la frase por la que te reconocerán), elementos visuales (un logo,...),
-consistencia y una exposición contínua (no necesariamente en Twitter
-solamente).</p>
-
-<p>Me ha encantado los capítulos donde describe su proceso de aprendizaje en 10
-pasos. Parece mucho de libro de autoayuda, pero la verdad es que cuenta muy
-buenas ideas. El proceso sería algo tal que así:</p>
-
-<ol>
-<li>Entender la habilidad que se quiere aprender</li>
-<li>Delimitar el ámbito</li>
-<li>Definir qué se va a considerar como éxito</li>
-<li>Encontrar recursos</li>
-<li>Crear un plan de aprendizaje</li>
-<li>Filtrar los recursos</li>
-<li>Aprender lo suficiente para comenzar</li>
-<li>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</li>
-<li>Aprender lo suficiente para hacer algo de utilidad</li>
-<li>Enseñar lo aprendido, y repetir desde el paso 7</li>
-</ol>
-
-
-<p>Me ha interesado mucho el concepto de <em>cuotas</em> para conseguir objetivos.
-Funciona para los objetivos en los que hay que ir haciendo pequeñas acciones a
-lo largo de mucho tiempo, por ejemplo, a la hora de hacer ejercicio. La idea es
-crear una cuota de cuánto hay que conseguir tener hecho para un determinado
-período de tiempo. Por ejemplo: salir a correr 3 veces por semana, o hacer
-100km en bicicleta cada semana, o leer 3 artículos técnicos al mes.</p>
-
-<h3>Frases que me gustaría recordar</h3>
-
-<blockquote><p>Un profesional comprende qué trabajo ha de hacerse, lo prioriza y se pone
-manos a la obra</p></blockquote>
-
-<!-- -->
-
-
-<blockquote><p>Divide un gran objetivo en pequeños objectivos que puedan corresponder a
-meses, semanas o días. Escribe el gran objetivo donde lo veas todos los días
-para recordarte en qué tienes que trabajar</p></blockquote>
-
-<!-- -->
-
-
-<blockquote><p>Por enésima vez: si quieres se un buen programador, debes aprender a cómo
-trabajar de forma efectiva con gente, incluso si la mayor parte de tu trabajo
-es escribir código</p></blockquote>
-
-<!-- -->
-
-
-<blockquote><p>Cuando el foco de una compañía no es el software, normalmente los
-programadores no son muy respetados. Aquellas empresas que dependen de un
-producto software tienen muchas más probabilidades de valorar mucho mejor a
-los profesionales que contratan</p></blockquote>
-
-<!-- -->
-
-
-<blockquote><p>Si debes elegir entre dinero o responsabilidad, la mejor opción (para el
-largo plazo) es siempre más responsabilidad</p></blockquote>
-
-<!-- -->
-
-
-<blockquote><p>Deberías estar siempre aprendiendo algo nuevo o mejorando de alguna forma tus
-habilidades</p></blockquote>
-
-<!-- -->
-
-
-<blockquote><p>¿Cómo crear un producto? Identifica unas cuantas audiencias objetivo para las
-que puedas crear un producto potencial. Elige una de estas audiencias e
-identifica donde puedes encontrar a miembros de ese grupo. Contacta con ellos
-y averigua si puedes resolver alguno de sus problemas</p></blockquote>
-
-<!-- -->
-
-
-<blockquote><p>La manera correcta de promocionarse a sí mismo es proporcionar valor a los
-demás</p></blockquote>
-
-<!-- -->
-
-
-<blockquote><p>Tu objectivo principal debería ser proporcionar valor a los demás. Si lo que
-dices o haces no ayuda a nadie, todo el mundo te ignorará. Cada vez que
-decidas crear algo (escribir un artículo, grabar un podcast o screencast,...)
-deberías mirarlo desde la perspectiva de cómo estás creando valor para los
-demás</p></blockquote>
-
-<!-- -->
-
-
-<blockquote><p>El enfoque es una cosa del momento: es muy difícil conseguir el foco, pero
-relativamente sencillo mantenerlo una vez que lo has adquirido</p></blockquote>
-
-<!-- -->
-
-
-<blockquote><p>La multitarea es posible. Es posible combinar una tarea que no requiere
-concentración con algunas tareas que sí lo requieran</p></blockquote>
-
-<!-- -->
-
-
-<blockquote><p><em>Burnout</em>: Tendemos a estar ilusionados y motivados sobre las cosas nuevas al
-principio, pero cuanto más avanzamos, más rápido nos acercamos a ese
-sentimiento de no poder más. En realidad, estamos topándonos con una pared.
-¿Cuál es la solución? Intentarlo más fuerte. Esforzándonos contra la
-dificultad es el secreto para superar ese sentimiento</p></blockquote>
-
-<!-- -->
-
-
-<blockquote><p>Los hábitos consisten básicamente de tres cosas: una señal (qué causa la
-acción del hábito), una rutina (el hábito en sí mismo) y una recompensa (es
-lo que hace que el hábito se mantenga interesante)</p></blockquote>
-
-<!-- -->
-
-
-<blockquote><p>Una razón para el salario que estás demandando nunca puede ser <em>porque lo
-necesito</em>. En vez de eso, debes enfocarlo desde la perspectiva de demostrar
-que vales esa cantidad de dinero o que lo vale el beneficio que estás
-poniendo encima de la mesa</p></blockquote>
-
-<!-- -->
-
-
-<blockquote><p>De todos los errores financieros que se pueden cometer, el mayor de ellos es
-incurrir en una deuda</p></blockquote>
-
-<h3>Recursos relacionados</h3>
-
-<ul>
-<li><a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/soft-skills-by-john-sonmez.markdown">Notas tomadas sobre Soft skills</a></li>
-<li>Blog <a href="http://ocana.github.io/">Dev's kitchen</a></li>
 </ul>
 
 ]]></content>
