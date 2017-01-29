@@ -129,6 +129,8 @@ suficiente para ir cogiendo ritmo.
 5. [Quinto asalto]: estructuras de control: `if`, `unless`, `cond` y `case`
 6. [Sexto asalto]: herramientas auxiliares como `mix`, `ExUnit`, `ExDoc`,...
 7. [Séptimo asalto]: procesos, concurrencia, monitorización de procesos
+8. [Octavo asalto]: nodos, PIDs y un poco de entrada/salida
+9. [Noveno asalto]: servidores OTP
 
 [Madrid |> Elixir]: http://www.meetup.com/Madrid-Elixir/
 [Soft Skills]: http://rchavarria.github.io/blog/2015/11/08/soft-skills/
@@ -153,4 +155,6 @@ suficiente para ir cogiendo ritmo.
 [Quinto asalto]: /blog/2016/09/11/elixir-quinto-asalto/
 [Sexto asalto]: /blog/2016/09/14/elixir-sexto-asalto/
 [Séptimo asalto]: /blog/2016/09/18/elixir-septimo-asalto/
+[Octavo asalto]: /blog/2016/12/31/elixir-octavo-asalto/
+[Noveno asalto]: /blog/2017/01/29/elixir-noveno-asalto/
 
