@@ -20,6 +20,7 @@ Así que aquí está mi Lista de Lectura:
 
 ## Estoy leyendo
 
+- [Guía para invertir](https://www.amazon.com/Gu%C3%ADa-invertir-Spanish-Robert-Kiyosaki-ebook/dp/B007HPRRHK), de Robert Kiyosaki
 - [Practical object-oriented design with Ruby (POODR)](http://www.poodr.com), de Sandi Metz, visto en el blog de [Carlos Blé](https://twitter.com/carlosble)
 - [Ready player one](http://www.amazon.es/gp/product/B00UVAREXK/), de Ernest Cline, recomendado por Microsiervos varias veces, y por Kevin Kelly en el [podcast de Tim Ferriss](http://fourhourworkweek.com/2016/06/05/kevin-kelly-ai-virtual-reality-and-the-inevitable)
 - [The nature of software development](https://www.amazon.es/Nature-Software-Development-Simple-Valuable/dp/1941222374/), de Ron Jeffries, recomendado por [Carlos Buenosvinos](https://twitter.com/buenosvinos/status/721623461702078464/photo/1) (antes en Atrápalo Eng, ahora en Xing,...)
@@ -28,7 +29,6 @@ Así que aquí está mi Lista de Lectura:
 
 ## Tengo pensado leer
 
-- [Guía para invertir](https://www.amazon.com/Gu%C3%ADa-invertir-Spanish-Robert-Kiyosaki-ebook/dp/B007HPRRHK), de Robert Kiyosaki
 - [Essential Angular](https://leanpub.com/essential_angular/), de Victor Savkin
 - [Down and out in the magic kindom](http://craphound.com/down/download/), de Cory Doctorow (208 pág). Visto en algún post, y como es un libro no técnico, pues a la lista.
 - [Code Complete](http://www.stevemcconnell.com/cc.htm), de Steve McConnell, recomendado por John Sonmez en uno de sus [vídeos](https://www.youtube.com/watch?v=aG5ks3de_wQ) y en varios episodios del podcast Developer On Fire
