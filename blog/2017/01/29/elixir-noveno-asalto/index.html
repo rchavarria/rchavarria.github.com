@@ -1,0 +1,458 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Elixir: noveno asalto - R. Chavarria's Blog</title>
+  <meta name="author" content="Rub&eacute;n Chavarr&iacute;a">
+
+  
+  <meta name="description" content="En el asalto anterior aprendimos un par de conceptos básicos sobre los nodos.
+En este asalto aprenderemos sobre servidores OTP: qué son, para qué &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://rchavarria.github.io/blog/2017/01/29/elixir-noveno-asalto/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="R. Chavarria's Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36829645-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">R. Chavarria's Blog</a></h1>
+  
+    <h2>Proud of developing software, proud of being an Engineer</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:rchavarria.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archivos</a></li>
+  <li><a href="/readings">Lista de lectura</a></li>
+  <li><a href="/pet-projects">Proyectos</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Elixir: noveno asalto</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-01-29T17:19:00+01:00" pubdate data-updated="true">Jan 29<span>th</span>, 2017</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>En el <a href="/blog/2016/12/31/elixir-octavo-asalto/">asalto anterior</a> aprendimos un par de conceptos básicos sobre los nodos.
+En este asalto aprenderemos sobre servidores OTP: qué son, para qué sirven, por
+qué son útiles y cómo implementarlos fácilmente.</p>
+
+<p>Todo esto, siguiendo el <a href="/blog/2016/01/17/aprendiendo-elixir/">método de aprendizaje</a> con el que comenzé la serie:</p>
+
+<ul>
+<li>Aprender lo suficiente para comenzar</li>
+<li>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</li>
+<li>Aprender lo suficiente para hacer algo de utilidad</li>
+<li>Enseñar lo aprendido</li>
+</ul>
+
+
+<p><img class="center" src="/images/2017/us-air-force.jpg"></p>
+
+<div style="text-align: center">
+  <span style="font-size: 60%">
+Imagen basada en <a href="https://flic.kr/p/R7mJ4M">160324-F-XK483-042</a> de <a href="https://www.flickr.com/photos/usairforce/">US Air Force</a>, <a href="https://creativecommons.org/licenses/by-nc/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by-nc/2.0/">CC BY NC 2.0</a>
+  </span>
+</div>
+
+
+
+
+<!-- more -->
+
+
+<h2>Aprender lo suficiente para comenzar</h2>
+
+<h4>Servidores OTP</h4>
+
+<p>OTP (<strong>O</strong>pen <strong>T</strong>elecom <strong>P</strong>latform) se presenta como la solución a todos
+tus problemas de escalabilidad y concurrencia. No es así, pero ayuda mucho.
+Ayuda en temas como descubrimiento de aplicaciones, gestión y detección de
+fallos, actualización de código en caliente y estructura del servidor.</p>
+
+<p>OTP define un sistema como una jerarquía de <strong>aplicaciones</strong>. Una aplicación
+consiste en uno o varios <strong>procesos</strong>. Cada uno de estos procesos implementa
+un <strong>comportamiento</strong>. Existen <a href="http://rubenfa.github.io/2016-11-30-behaviours-en-elixir">comportamientos</a> para servidores, gestores de
+eventos, máquinas de estado finitas, &#8230;</p>
+
+<p>Lo implementado en ejercicios anteriores sigue un patrón con el que se podría
+implementar casi todos los servidores. Por eso, OTP proporciona un mecanismo
+para liberarnos de escribir el código más tedioso. La librería ofrece unas
+funciones a modo de <em>callbacks</em> que irá llamando dependiendo de la situación.</p>
+
+<h4>Implementar un servidor OTP</h4>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>defmodule Sequence.Server do
+</span><span class='line'>  use GenServer
+</span><span class='line'>
+</span><span class='line'>  def handle_call(:next_number, _from, current_number) do
+</span><span class='line'>    { :reply, current_number, current_number + 1 }
+</span><span class='line'>  end
+</span><span class='line'>
+</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
+
+
+<p><code>use GenServer</code> indica a Elixir que vamos a usar este comportamiento. Así, este
+módulo representa un servidor OTP.</p>
+
+<p>Uno de los callbacks proporcionados por <code>GenServer</code> es <code>handle_call</code>. Tiene 3
+parametros: acción, PID del origen de la petición y el estado actual del
+servidor. Tiene que responder con una tupla con tres parámetros también: la
+respuesta, el valor retornado y el estado del servidor a usar en la siguiente
+llamada.</p>
+
+<p>Para llamar a este servidor, entramos en <code>iex</code>. Arrancamos el servidor,
+indicando el módulo y el estado inicial (similar a <code>spawn_link</code>).</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>promtp$ iex -S mix
+</span><span class='line'>iex&gt; { :ok, pid } = GenServer.start_link(Sequence.Server, 100)
+</span><span class='line'>iex&gt; GenServer.call(pid, :next_number)
+</span><span class='line'>100
+</span><span class='line'>iex&gt; GenServer.call(pid, :next_number)
+</span><span class='line'>101
+</span><span class='line'>iex&gt; GenServer.call(pid, :next_number)
+</span><span class='line'>102</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>Servidores que no tienen que devolver un resultado</h4>
+
+<p>En ocasiones no necesitamos que el servidor retorne un resultado. En estos
+casos, para llamar al servidor emplearemos <code>GenServer.cast</code>, y para manejar
+esas peticiones, nuestro servidor debe implementar el callback <code>handle_cast</code>.</p>
+
+<h4>Callbacks de GenServer</h4>
+
+<p>GenServer es un protocolo de OTP. OTP asume que este protocolo define 6
+callbacks. Elixir proporciona una implementación por defecto para cada uno de
+ellos en GenServer, por eso no tenemos que implementarlos nosotros. Los 6
+callbacks son: <code>init(start_arguments)</code>, <code>handle_call(request, from, state)</code>,
+<code>handle_cast(request, state)</code>, <code>handle_info(info, state)</code>,
+<code>terminate(reason, state)</code>, <code>code_change(from_version, state, extra)</code> y
+<code>format_status(reason, [ pdict, state ])</code>.</p>
+
+<h4>Nombrado de procesos</h4>
+
+<p>En lugar de usar el PID para referenciar a procesos de nuestro servidor,
+podemos hacerlo a través de nombres. Para ello, se debe utilizar la opción
+<code>name:</code> a la hora de crear el servidor:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>iex&gt; { :ok, pid } = GenServer.start_link(Sequence.Server, 100, name: :seq)
+</span><span class='line'>iex&gt; GenServer.call(:seq, :next_number)
+</span><span class='line'>100
+</span><span class='line'>iex&gt; GenServer.call(:seq, :next_number)
+</span><span class='line'>101
+</span><span class='line'>iex&gt; GenServer.call(:seq, :next_number)
+</span><span class='line'>102
+</span><span class='line'>iex&gt; :sys.get_status :seq</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</h2>
+
+<h2>Aprender lo suficiente para hacer algo de utilidad</h2>
+
+<ul>
+<li><p><a href="https://github.com/rchavarria/learning-elixir/tree/master/code/round-09/stack">Ejercicio 01</a>: crear un server que implemente una pila. Se
+inicializará con unos cuantos valores en la pila. Cada petición <em>pop</em>
+devolverá un elemento de la pila. Cuando la pila esté vacía, fallará.
+Implementado en el proyecto <code>mix</code>: <code>code/round-09/stack</code>.</p></li>
+<li><p><a href="https://github.com/rchavarria/learning-elixir/tree/master/code/round-09/stack2">Ejercicio 02</a>: ampliar el servidor anterior, de forma que se puedan
+añadir elementos a la pila con la operación <code>:push</code> a través de peticiones
+<em>cast</em>. Implementado en el proyecto <code>mix</code>: <code>code/round-09/stack2</code>.</p></li>
+<li><p><a href="https://github.com/rchavarria/learning-elixir/tree/master/code/round-09/stack3">Ejercicio 03</a>: dar un nombre al servidor anterior, de forma que se le
+pueda llamar sin necesidad de saber el PID. También, crear un API en la pila
+de forma que los clientes no tengan que llamar a <code>GenServer</code> para usarla.
+Simplemente serán unas funciones que envolverán las llamadas a <code>GenServer</code>.
+Implementado en otro proyecto <code>mix</code>, en <code>code/round-09/stack3</code>.</p></li>
+<li><p>Ejercicio 04: implementar el callback <code>GenServer.terminate/2</code> para
+comprobar distintas formas de terminar el servidor: un callback lanza una
+excepción, una llamada a <code>Kernel.exit/1</code>, se detecta que un proceso ha tenido
+un error,&#8230;</p></li>
+</ul>
+
+
+<p><strong>Resultado</strong></p>
+
+<p>No he obtenido nada en claro. Tendría que profundizar en la documentación de
+<a href="http://elixir-lang.org/docs/stable/elixir/GenServer.html#c:terminate/2"><code>GenServer.terminate/2</code></a>,
+que parece bastante espesa por cierto. Pero no está garantizado que se llame a
+<code>terminate</code>, con lo que no sé si estoy provocando correctamente los errores.</p>
+
+<h2>Enseñar lo aprendido, y repetir desde el paso 7</h2>
+
+<p>Aquí está, este post, mis notas, mis pensamientos, mis dudas y mi código. Hasta
+el siguiente asalto.</p>
+
+<h2>Referencias</h2>
+
+<ul>
+<li>Proceso de <a href="/blog/2016/01/17/aprendiendo-elixir/">aprendizaje de Elixir</a></li>
+<li>Artículo sobre <a href="http://rubenfa.github.io/2016-11-30-behaviours-en-elixir">comportamientos</a> (<em>behaviours</em>) en Elixir</li>
+<li>Artículo sobre <a href="http://rubenfa.github.io/2017-01-25-protocols-en-elixir">protocolos</a> en Elixir</li>
+</ul>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Ruben Chavarria</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-01-29T17:19:00+01:00" pubdate data-updated="true">Jan 29<span>th</span>, 2017</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/elixir/'>elixir</a>, <a class='category' href='/blog/categories/learning/'>learning</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rchavarria.github.io/blog/2017/01/29/elixir-noveno-asalto/" data-via="rchavarriat" data-counturl="http://rchavarria.github.io/blog/2017/01/29/elixir-noveno-asalto/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2017/01/19/the-phoenix-project/" title="Previous Post: The Phoenix project">&laquo; The Phoenix project</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2017/01/29/elixir-noveno-asalto/">Elixir: noveno asalto</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2017/01/19/the-phoenix-project/">The Phoenix project</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/12/31/elixir-octavo-asalto/">Elixir: octavo asalto</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/12/04/the-4-hour-body/">The 4 hour body</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/11/28/mi-codemotion-2016/">Mi Codemotion 2016</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("rchavarriat", 4, true);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/rchavarriat">@rchavarriat</a></p>
+  
+</section>
+
+
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/rchavarriat?count=5&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/rchavarriat">My Delicious Bookmarks &raquo;</a></p>
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2017 - Rub&eacute;n Chavarr&iacute;a -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'rchavarria-github-com';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://rchavarria.github.io/blog/2017/01/29/elixir-noveno-asalto/';
+        var disqus_url = 'http://rchavarria.github.io/blog/2017/01/29/elixir-noveno-asalto/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

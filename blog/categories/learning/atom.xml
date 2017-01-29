@@ -4,7 +4,7 @@
   <title><![CDATA[Category: learning | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/learning/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2017-01-19T21:54:48+01:00</updated>
+  <updated>2017-01-29T17:55:30+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,177 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Elixir: noveno asalto]]></title>
+    <link href="http://rchavarria.github.io/blog/2017/01/29/elixir-noveno-asalto/"/>
+    <updated>2017-01-29T17:19:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2017/01/29/elixir-noveno-asalto</id>
+    <content type="html"><![CDATA[<p>En el <a href="/blog/2016/12/31/elixir-octavo-asalto/">asalto anterior</a> aprendimos un par de conceptos básicos sobre los nodos.
+En este asalto aprenderemos sobre servidores OTP: qué son, para qué sirven, por
+qué son útiles y cómo implementarlos fácilmente.</p>
+
+<p>Todo esto, siguiendo el <a href="/blog/2016/01/17/aprendiendo-elixir/">método de aprendizaje</a> con el que comenzé la serie:</p>
+
+<ul>
+<li>Aprender lo suficiente para comenzar</li>
+<li>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</li>
+<li>Aprender lo suficiente para hacer algo de utilidad</li>
+<li>Enseñar lo aprendido</li>
+</ul>
+
+
+<p><img class="center" src="/images/2017/us-air-force.jpg"></p>
+
+<div style="text-align: center">
+  <span style="font-size: 60%">
+Imagen basada en <a href="https://flic.kr/p/R7mJ4M">160324-F-XK483-042</a> de <a href="https://www.flickr.com/photos/usairforce/">US Air Force</a>, <a href="https://creativecommons.org/licenses/by-nc/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by-nc/2.0/">CC BY NC 2.0</a>
+  </span>
+</div>
+
+
+
+
+<!-- more -->
+
+
+<h2>Aprender lo suficiente para comenzar</h2>
+
+<h4>Servidores OTP</h4>
+
+<p>OTP (<strong>O</strong>pen <strong>T</strong>elecom <strong>P</strong>latform) se presenta como la solución a todos
+tus problemas de escalabilidad y concurrencia. No es así, pero ayuda mucho.
+Ayuda en temas como descubrimiento de aplicaciones, gestión y detección de
+fallos, actualización de código en caliente y estructura del servidor.</p>
+
+<p>OTP define un sistema como una jerarquía de <strong>aplicaciones</strong>. Una aplicación
+consiste en uno o varios <strong>procesos</strong>. Cada uno de estos procesos implementa
+un <strong>comportamiento</strong>. Existen <a href="http://rubenfa.github.io/2016-11-30-behaviours-en-elixir">comportamientos</a> para servidores, gestores de
+eventos, máquinas de estado finitas, ...</p>
+
+<p>Lo implementado en ejercicios anteriores sigue un patrón con el que se podría
+implementar casi todos los servidores. Por eso, OTP proporciona un mecanismo
+para liberarnos de escribir el código más tedioso. La librería ofrece unas
+funciones a modo de <em>callbacks</em> que irá llamando dependiendo de la situación.</p>
+
+<h4>Implementar un servidor OTP</h4>
+
+<p>```
+defmodule Sequence.Server do
+  use GenServer</p>
+
+<p>  def handle_call(:next_number, _from, current_number) do</p>
+
+<pre><code>{ :reply, current_number, current_number + 1 }
+</code></pre>
+
+<p>  end</p>
+
+<p>end
+```</p>
+
+<p><code>use GenServer</code> indica a Elixir que vamos a usar este comportamiento. Así, este
+módulo representa un servidor OTP.</p>
+
+<p>Uno de los callbacks proporcionados por <code>GenServer</code> es <code>handle_call</code>. Tiene 3
+parametros: acción, PID del origen de la petición y el estado actual del
+servidor. Tiene que responder con una tupla con tres parámetros también: la
+respuesta, el valor retornado y el estado del servidor a usar en la siguiente
+llamada.</p>
+
+<p>Para llamar a este servidor, entramos en <code>iex</code>. Arrancamos el servidor,
+indicando el módulo y el estado inicial (similar a <code>spawn_link</code>).</p>
+
+<p><code>
+promtp$ iex -S mix
+iex&gt; { :ok, pid } = GenServer.start_link(Sequence.Server, 100)
+iex&gt; GenServer.call(pid, :next_number)
+100
+iex&gt; GenServer.call(pid, :next_number)
+101
+iex&gt; GenServer.call(pid, :next_number)
+102
+</code></p>
+
+<h4>Servidores que no tienen que devolver un resultado</h4>
+
+<p>En ocasiones no necesitamos que el servidor retorne un resultado. En estos
+casos, para llamar al servidor emplearemos <code>GenServer.cast</code>, y para manejar
+esas peticiones, nuestro servidor debe implementar el callback <code>handle_cast</code>.</p>
+
+<h4>Callbacks de GenServer</h4>
+
+<p>GenServer es un protocolo de OTP. OTP asume que este protocolo define 6
+callbacks. Elixir proporciona una implementación por defecto para cada uno de
+ellos en GenServer, por eso no tenemos que implementarlos nosotros. Los 6
+callbacks son: <code>init(start_arguments)</code>, <code>handle_call(request, from, state)</code>,
+<code>handle_cast(request, state)</code>, <code>handle_info(info, state)</code>,
+<code>terminate(reason, state)</code>, <code>code_change(from_version, state, extra)</code> y
+<code>format_status(reason, [ pdict, state ])</code>.</p>
+
+<h4>Nombrado de procesos</h4>
+
+<p>En lugar de usar el PID para referenciar a procesos de nuestro servidor,
+podemos hacerlo a través de nombres. Para ello, se debe utilizar la opción
+<code>name:</code> a la hora de crear el servidor:</p>
+
+<p><code>
+iex&gt; { :ok, pid } = GenServer.start_link(Sequence.Server, 100, name: :seq)
+iex&gt; GenServer.call(:seq, :next_number)
+100
+iex&gt; GenServer.call(:seq, :next_number)
+101
+iex&gt; GenServer.call(:seq, :next_number)
+102
+iex&gt; :sys.get_status :seq
+</code></p>
+
+<h2>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</h2>
+
+<h2>Aprender lo suficiente para hacer algo de utilidad</h2>
+
+<ul>
+<li><p><a href="https://github.com/rchavarria/learning-elixir/tree/master/code/round-09/stack">Ejercicio 01</a>: crear un server que implemente una pila. Se
+inicializará con unos cuantos valores en la pila. Cada petición <em>pop</em>
+devolverá un elemento de la pila. Cuando la pila esté vacía, fallará.
+Implementado en el proyecto <code>mix</code>: <code>code/round-09/stack</code>.</p></li>
+<li><p><a href="https://github.com/rchavarria/learning-elixir/tree/master/code/round-09/stack2">Ejercicio 02</a>: ampliar el servidor anterior, de forma que se puedan
+añadir elementos a la pila con la operación <code>:push</code> a través de peticiones
+<em>cast</em>. Implementado en el proyecto <code>mix</code>: <code>code/round-09/stack2</code>.</p></li>
+<li><p><a href="https://github.com/rchavarria/learning-elixir/tree/master/code/round-09/stack3">Ejercicio 03</a>: dar un nombre al servidor anterior, de forma que se le
+pueda llamar sin necesidad de saber el PID. También, crear un API en la pila
+de forma que los clientes no tengan que llamar a <code>GenServer</code> para usarla.
+Simplemente serán unas funciones que envolverán las llamadas a <code>GenServer</code>.
+Implementado en otro proyecto <code>mix</code>, en <code>code/round-09/stack3</code>.</p></li>
+<li><p>Ejercicio 04: implementar el callback <code>GenServer.terminate/2</code> para
+comprobar distintas formas de terminar el servidor: un callback lanza una
+excepción, una llamada a <code>Kernel.exit/1</code>, se detecta que un proceso ha tenido
+un error,...</p></li>
+</ul>
+
+
+<p><strong>Resultado</strong></p>
+
+<p>No he obtenido nada en claro. Tendría que profundizar en la documentación de
+<a href="http://elixir-lang.org/docs/stable/elixir/GenServer.html#c:terminate/2"><code>GenServer.terminate/2</code></a>,
+que parece bastante espesa por cierto. Pero no está garantizado que se llame a
+<code>terminate</code>, con lo que no sé si estoy provocando correctamente los errores.</p>
+
+<h2>Enseñar lo aprendido, y repetir desde el paso 7</h2>
+
+<p>Aquí está, este post, mis notas, mis pensamientos, mis dudas y mi código. Hasta
+el siguiente asalto.</p>
+
+<h2>Referencias</h2>
+
+<ul>
+<li>Proceso de <a href="/blog/2016/01/17/aprendiendo-elixir/">aprendizaje de Elixir</a></li>
+<li>Artículo sobre <a href="http://rubenfa.github.io/2016-11-30-behaviours-en-elixir">comportamientos</a> (<em>behaviours</em>) en Elixir</li>
+<li>Artículo sobre <a href="http://rubenfa.github.io/2017-01-25-protocols-en-elixir">protocolos</a> en Elixir</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Elixir: octavo asalto]]></title>
@@ -858,190 +1029,6 @@ exactamente esto</li>
 
 <p>Aquí está, este post, mis notas, mis pensamientos, mis dudas y mi código. Hasta
 el siguiente asalto.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Elixir: cuarto asalto]]></title>
-    <link href="http://rchavarria.github.io/blog/2016/08/10/elixir-cuarto-asalto/"/>
-    <updated>2016-08-10T17:20:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2016/08/10/elixir-cuarto-asalto</id>
-    <content type="html"><![CDATA[<p>Éste es el cuarto asalto en mi aventura aprendiendo <a href="http://elixir-lang.org/">Elixir</a>. En esta ocasión
-trato con tipos de datos binarios, cadenas y <strong>sigils</strong>. No es mucho, pero las cadenas son
-una parte esencial de cualquier lenguaje de programación. Y dominarlas
-significa dominar una gran parte del lenguaje.</p>
-
-<p>Por supuesto, sigo aprendiendo con el método descrito en el post sobre <a href="/blog/2016/01/17/aprendiendo-elixir/">aprender Elixir</a>:</p>
-
-<ul>
-<li>Aprender lo suficiente para comenzar</li>
-<li>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</li>
-<li>Aprender lo suficiente para hacer algo de utilidad</li>
-<li>Enseñar lo aprendido</li>
-</ul>
-
-
-<p><img class="right" src="/images/2016/fourth-fight.jpg"></p>
-
-<div style="text-align: center">
-  <span style="font-size: 60%">
-Imagen basada en <a href="https://flic.kr/p/5yHK4Y">Muñeco de Gohan y Bu peleando</a> de <a href="https://www.flickr.com/photos/alotor/">Alonso Javier Torres</a>, <a href="https://creativecommons.org/licenses/by-nc/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>
-  </span>
-</div>
-
-
-
-
-<!-- more -->
-
-
-<h2>Aprender lo suficiente para comenzar</h2>
-
-<p>Para definir una cadena se pueden usar comillas simples o comillas dobles.
-También se puede usar comillas triples, para escribir lo que llaman <code>heredocs</code>,
-y se suelen usar para escribir comentarios para documentar métodos y módulos.</p>
-
-<p>En Elixir, existe lo que llaman <em>sigils</em> (que se podría traducir como código,
-señal o símbolo mágico). Comienzan con <code>~</code>, seguido de una letra que determina
-el tipo de símbolo:</p>
-
-<ul>
-<li><code>c</code> para una lista de carácteres</li>
-<li><code>r</code> para expresión regular</li>
-<li><code>w</code> para una lista de palabras separado por espacios</li>
-<li>y hay más</li>
-</ul>
-
-
-<p>y cuyo valor se puede enmarcar en distintos delimitadores: <code>&lt;..&gt;</code>, <code>{...}</code>,
-<code>[...]</code>,...</p>
-
-<p>Un uso muy típico es para escribir expresiones regulares:</p>
-
-<p><code>
-~r{[0-9]+[A-Z]*}
-</code></p>
-
-<p>Los <em>sigils</em> pueden incluso personalizarse, y crear los tuyos propios.</p>
-
-<p>Las cadenas definidas mediante comillas dobles, son lo que se conoce en otros
-lenguajes como <em>strings</em>. Las cadenas con comillas simples, se llaman
-<em>character lists</em> (o <em>char list</em>), listas de carácteres, y son listas, arrays.</p>
-
-<p><strong>Cadenas con comillas simples</strong></p>
-
-<p>Son una lista de códigos que representan los carácteres. Y como son una lista,
-podemos usar métodos de <code>List</code>: <code>++</code>, <code>--</code>, <code>List.zip</code>, <code>[ head | tail ]</code>,...</p>
-
-<p>Para saber el número entero que representa un carácter, se puede usar la
-notación <code>?&lt;chr&gt;</code>, por ejemplo, <code>?a</code> o <code>?4</code>, para saber los valores numéricos
-de los carácteres <code>a</code> y <code>4</code> respectivamente.</p>
-
-<p><strong>Binarios</strong></p>
-
-<p>Qué mejor que un poco de código para ver cómo se usa este tipo de datos</p>
-
-<p>```</p>
-
-<h1>el tipo <em>binario</em> representa una secuencia de bits</h1>
-
-<p>iex> b = &lt;&lt; 1, 2, 3 >>
-&lt;&lt;1, 2, 3>>
-iex> byte_size b
-3
-iex> bit_size b
-24</p>
-
-<h1>se puede especificar también la cantidad de bits que queremos que ocupen</h1>
-
-<p>iex> b = &lt;&lt; 1::size(2), 1::size(3) >>
-&lt;&lt;9::size(5)>>
-iex> byte_size b
-1
-iex> bit_size b
-5</p>
-
-<h1>también se pueden almacenar enteros, floats y otros binarios</h1>
-
-<p>iex> an_int = &lt;&lt; 1 >>
-&lt;<1>>
-iex> a_float = &lt;&lt; 2.5 :: float >>
-&lt;&lt;64, 4, 0, 0, 0, 0, 0, 0>>
-iex> mix = &lt;&lt; an_int :: binary, a_float :: binary >>
-&lt;&lt;1, 64, 4, 0,......>></p>
-
-<h1>extraer valores (echa un vistazo a cómo se codifican los floats según</h1>
-
-<h1>el estándar IEEE 754)</h1>
-
-<p>iex> &lt;&lt; sign::size(1), exp::size(11), mantissa::size(52) >> = &lt;&lt; 3.14159::float >>
-iex> (1 + mantissa / :math.pow(2, 52)) * :math.pow(2, exp-1023)
-3.14159</p>
-
-<h1>las cadenas con comillas dobles "" (dqs: double quoted string) son de</h1>
-
-<h1>tipo binario, y están codificadas en UTF-8 lo que significa que la</h1>
-
-<h1>longitud de la cadena no tiene por qué coincidir con el tamaño en bytes</h1>
-
-<p>iex> dqs = "∂x/∂y"
-"∂x/∂y"
-iex> String.length dqs
-5
-iex> byte_size dqs
-9
-```</p>
-
-<p><strong>Procesando cadenas</strong></p>
-
-<p>Igual que podemos dividir una lista en <code>head</code> y <code>tail</code>, podemos extraer el
-primer carácter (se refiere a él como <em>grapheme</em>, grafema/grafo/...) de una
-cadena binaria o <em>dqs</em> especificando que <code>head</code> es de tipo <code>utf8</code> y que <code>tail</code>
-sigue siendo de tipo binario:</p>
-
-<p><code>
-defp each(&lt;&lt; head::utf8, tail::binary &gt;&gt;), do [ head | each(tail) ]
-defp each(&lt;&lt;&gt;&gt;), do []
-</code></p>
-
-<h2>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</h2>
-
-<p>Está claro que hay que ver la documentación del módulo <a href="http://elixir-lang.org/docs/stable/elixir/String.html"><code>String</code></a>, que contiene
-métodos para manipular cadenas encerradas en comillas dobles (recuerda, son de
-tipo binario).</p>
-
-<p>Las expresiones regulares son bastante comunes, y en Elixir se suelen usar
-mediante <a href="http://elixir-lang.org/getting-started/sigils.html"><em>sigils</em></a>. Son un aspecto bastante curioso del lenguaje y pueden ser
-personalizados.</p>
-
-<h2>Aprender lo suficiente para hacer algo de utilidad</h2>
-
-<ul>
-<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-04/exercise-01-round-04.exs">exercise-01-round-04.exs</a>: escribe una función que devuelva <code>true</code> si el
-parámetro (una lista de carácteres) contiene sólo carácteres imprimibles (del
-espacio a la tilde)</li>
-<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-04/exercise-02-round-04.exs">exercise-02-round-04.exs</a>: escribe una función que devuelva <code>true</code> en el
-caso de que dos palabras sean anagramas. <code>anagram?(word1, word2)</code></li>
-<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-04/exercise-03-round-04.exs">exercise-03-round-04.exs</a>: escribe una funcion que calcule suma, resta,...
-de una cadena pasada como parámetro: <code>calculate('123 + 27') # =&gt; 150</code>. Este
-es especialmente difícil (al menos para mi nivel): devolver tuplas, parsear
-números (utilizando recursión de una forma muy imaginativa), utilizando pattern
-matching para construir funciones dependiendo del operador,...</li>
-<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-04/exercise-04-round-04.exs">exercise-04-round-04.exs</a>: escribe una función que pasándole una lista de
-dqs (double quoted strings) las imprima centradas en un ancho de la palabra
-más larga, cada una en una línea distinta.</li>
-<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-04/exercise-05-round-04.exs">exercise-05-round-04.exs</a>: escribe una función que pase a mayúsculas la
-primera letra de cada frase en una cadena</li>
-<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-04/exercise-06-round-04.exs">exercise-06-round-04.exs</a>: escribe una función que parsee un fichero CSV
-(que tendrá los campos id, estado y cantidad neta), y que se lo pase a la
-función desarrollada en el tercer asalto, al ejercicio
-<code>exercise-02-round-03.exs</code>.</li>
-</ul>
-
-
-<h2>Enseñar lo aprendido, y repetir desde el paso 7</h2>
-
-<p>Aquí está, este post, mis notas, mis pensamientos, mis dudas y mi código. Hasta el siguiente asalto.</p>
 ]]></content>
   </entry>
   
