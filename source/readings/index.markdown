@@ -29,6 +29,7 @@ Así que aquí está mi Lista de Lectura:
 
 ## Tengo pensado leer
 
+- [Front-end developer handbook 2017](https://www.gitbook.com/book/frontendmasters/front-end-handbook-2017/), de [Code Lindley](http://codylindley.com/) y esponsorizado por [Frontend Masters](https://frontendmasters.com/)
 - [Essential Angular](https://leanpub.com/essential_angular/), de Victor Savkin
 - [Down and out in the magic kindom](http://craphound.com/down/download/), de Cory Doctorow (208 pág). Visto en algún post, y como es un libro no técnico, pues a la lista.
 - [Code Complete](http://www.stevemcconnell.com/cc.htm), de Steve McConnell, recomendado por John Sonmez en uno de sus [vídeos](https://www.youtube.com/watch?v=aG5ks3de_wQ) y en varios episodios del podcast Developer On Fire
@@ -37,9 +38,11 @@ Así que aquí está mi Lista de Lectura:
 - [The grumpy programmer's PHPUnit cookbook](https://leanpub.com/grumpy-phpunit), de Chris Hartjes, amigo de J.B.Rainsberger
 - [Mientras escribo](http://www.amazon.es/Mientras-escribo-BEST-SELLER-Stephen/dp/849759732X/), de Stephen King (traducción de *On writing*), recomendado por [Kathleen Dollard](https://twitter.com/KathleenDollard/) en el podcast [Developer on Fire #65](http://developeronfire.com/Podcast/Episodes/kathleen-dollard-relentless-dedication)
 - [Team geek: a developer's guide to work well with others](http://www.amazon.com/dp/1449302440/), de Brian W. Fitzpatrick y Ben Collins-Sussman
+- [Quiet: The Power of Introverts in a World That Can't Stop Talking](Quiet: The Power of Introverts in a World That Can't Stop Talking), de Susan Cain, recomendado por Sarah Dutkiewicz ([@sadukie](https://twitter.com/sadukie)) en el podcast [Developer on Fire #203](http://developeronfire.com/podcast/episode-203-sarah-dutkiewicz-master-and-apprentice)
 - [The psychology of computer programming](https://www.amazon.com/Psychology-Computer-Programming-Silver-Anniversary/dp/0932633420), de Gerald M. Weinberg, recomendado por J.B.Rainsberger en el [episodio #137 de Deveoper On Fire](http://developeronfire.com/episode-137-j-b-rainsberger-feedback-and-personal-wins), y recomendado también en el [blog de 8th Light](https://8thlight.com/blog/daniel-irvine/2016/09/30/the-egoless-programmer.html), donde habla sobre *egoless programming* y sobre *you're not your code*
 - [La trilogía de la biblioteca de los muertos](www.amazon.com/Biblioteca-los-muertos-Spanish-Edition/dp/0307882268), de Glenn Cooper, recomendado por Ismael, compañero de curro
-- [Growing object oriented design guided by tests](), de Nat Pryce y Steve Freeman. Ideal para conocer la escuela de Londres (mockist) sobre TDD
+- [Growing object oriented design guided by tests](https://www.amazon.com/Growing-Object-Oriented-Software-Guided-Tests/dp/0321503627), de Nat Pryce y Steve Freeman. Ideal para conocer la escuela de Londres (mockist) sobre TDD
+- [Effective unit testing](https://www.amazon.com/Effective-Unit-Testing-guide-developers/dp/1935182579) de Lasse Koskela, recomendado por [Carlos Blé](https://twitter.com/carlosble), en lugar de su propio libro sobre TDD, así que debe de ser bueno.
 - [The war of art](http://www.amazon.com/dp/1936891026/?tag=devonfir-20), de Steven Pressfield, recomendado por Quincy Larson (Free Code Camp) en el [episodio #120 de Developer on Fire podcast](http://developeronfire.com/episode-120-quincy-larson-teacher-with-enough)
 - [Slow burn](http://www.amazon.com/Slow-Burn-Faster-Exercising-Slower/dp/0062736744), de Stu Mittleman, recomendado por [Rick Rubin en una entrevisa de Tim Ferris](http://fourhourworkweek.com/2015/05/15/rick-rubin)
 - [The Leprechauns of software development](https://leanpub.com/leprechauns), de Laurent Bossavit, recomendado por [Alvaro García](http://twitter.com/alvaroviz) a [Leo Antolí](http://twitter.com/lantoli)
@@ -56,7 +59,7 @@ Así que aquí está mi Lista de Lectura:
 - [Responsive design by example](http://www.amazon.com/Responsive-Design-Example-Thoriq-Firdaus/dp/1849695423/ref=sr_1_1?ie=UTF8&qid=1443036924&sr=8-1&keywords=Thoriq+Firdaus), de Thoriq Firdaus (almacenado en Drive)
 - [El arte de la guerra](http://www.amazon.es/El-Arte-Guerra-Sun-Tzu/dp/148407291X), de Sun Tzu
 - [Tao Te Ching](http://www.amazon.com/Tao-Te-Ching-Laozi/dp/0060812451), de Stephen Mitchell, recomendado por [Rick Rubin en una entrevisa de Tim Ferris](http://fourhourworkweek.com/2015/05/15/rick-rubin) 
-- [The five dysfunctions of a team](http://www.amazon.com/The-Five-Dysfunctions-Team-Leadership/dp/0787960756), de Patrick Lencioni, recomendado por @joserra_diaz y @rubenbpv (https://en.wikipedia.org/wiki/The_Five_Dysfunctions_of_a_Team)
+- [The five dysfunctions of a team](http://www.amazon.com/The-Five-Dysfunctions-Team-Leadership/dp/0787960756), de Patrick Lencioni, recomendado por @joserra_diaz y @rubenbpv (https://en.wikipedia.org/wiki/The_Five_Dysfunctions_of_a_Team), también lo recomiendo Eduardo Ferro en su blog, donde ha escrito una review.
 - [Slack](http://www.amazon.es/s/ref=nb_sb_noss?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&url=search-alias%3Daps&field-keywords=slack+tom+demarco&rh=i%3Aaps%2Ck%3Aslack+tom+demarco), de Tom DeMarco, recomendado por un retweet de J.B.Rainsberger
 - [Cómo mentir con estadísticas](http://www.amazon.es/gp/product/8498922178), de Darrell Huff, recomendado por Bill Gates
 - [Encambio: aprende a modificar tu cerebro para cambiar tu vida y sentirte mejor](http://m.casadellibro.com/libro-encambio-aprende-a-modificar-tu-cerebro-para-cambiar-tu-vida-y-sentirte-mejor/9788416029396/2548418), de Estanislao Bachrach, recomendado por Roberto Canales Mora
