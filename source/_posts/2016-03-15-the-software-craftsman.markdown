@@ -161,6 +161,8 @@ como para hacerlo mejor?
 ### Recursos relacionados
 
 - [Notas tomadas sobre The Software Craftsman]
+- Charla de Sandro Mancuso, [The long road]
 
 [Notas tomadas sobre The Software Craftsman]: https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/the-software-craftsman-by-sandro-mancuso.markdown
+[The long road]: https://vimeo.com/167722761
 
