@@ -4,7 +4,7 @@
   <title><![CDATA[Category: agile | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/agile/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2017-02-23T23:12:43+01:00</updated>
+  <updated>2017-03-05T16:35:21+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,150 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[The nature of software developent]]></title>
+    <link href="http://rchavarria.github.io/blog/2017/03/05/the-nature-of-software-developent/"/>
+    <updated>2017-03-05T16:06:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2017/03/05/the-nature-of-software-developent</id>
+    <content type="html"><![CDATA[<h5>de Ron Jeffries</h5>
+
+<p><img class="left" src="https://imagery.pragprog.com/products/363/rjnsd.jpg?1409862136" width="260" height="392" title="The nature of software development" ></p>
+
+<h2>Por qué lo he leído</h2>
+
+<p>Como casi todos los libros, por recomendación. Ví que lo recomendaba
+<a href="https://carlosbuenosvinos.com/">Carlos Buenosvinos</a>, y no pude resistirme. Además, el autor es una leyenda
+viva del desarrollo del software y del manifiesto Agile, así que tenía que ser
+un libro de aúpa.</p>
+
+<p>¿Un libro que trata sobre la <strong>naturaleza</strong> de la profesión a la que te
+dedicas? A leerlo casi, casi, sin pensarlo.</p>
+
+<!-- more -->
+
+
+<h2>Qué esperaba y qué encontré</h2>
+
+<p>Esperaba un libro largo, pesado. Tipo como una biblia o enciclopedia. Un
+compendio de mejores prácticas, de leyes no escritas, los 101 mandamientos del
+desarrollo del sofware.</p>
+
+<p>De eso nada. <a href="https://pragprog.com/book/rjnsd/the-nature-of-software-development">The nature of sofware development</a> es un libro que se lee con una
+facilidad pasmosa. Es increíble como <a href="http://ronjeffries.com/">Ron Jeffries</a> simplifica hasta los
+conceptos más complejos de explicar. Hace que el proceso de desarrollo que él
+explica parezca el único que debe existir, el natural, al que se debería tender
+si dejáramos que las fuerzas actuaran solas (tipo naturaleza, no sé si se me
+entiende la metáfora).</p>
+
+<p>Es un libro relativamente corto, con muchas (y muy buenas) ilustraciones.
+Dividido en capìtulos digeribles muy fácilmente. Un lenguaje llano, sencillo,
+pero preciso.</p>
+
+<h2>Conclusiones</h2>
+
+<p>Por supuesto que es un libro donde se describe muchas mejores prácticas. A mí
+me parece que describe el ideal de cómo se debería desarrollar un proyecto
+software. Casi tan bueno, que me parece un sueño.</p>
+
+<p>Es un libro que recomendaría leer a todo aquel que su trabajo esté relacionado
+con cualquier fase en el desarrollo del software: diseño, programador, dueño de
+producto,...</p>
+
+<h2>Qué he aprendido</h2>
+
+<blockquote><p>Las cosas van mejor si cada funcionalidad, también llamada <em>historia</em>, sólo
+tardamos <strong>dos o tres</strong> días en implementarla.</p></blockquote>
+
+<p>Coincido totalmente con esa visión. La sufro cada día. Si algo dentro del
+equipo nos lleva más de 2/3 días, comenzamos a perder el foco, empiezan a
+aparecer pequeñas tareas (pues ya que...) que nos hacen desviarnos del objetivo
+inicial. Y al final, se hace muy difícil dar una historia por zanjada. Si
+dividimos el trabajo en pequeñas historias entregables y que podamos
+materializar en menos de 3 días, todo va mejor la mayor parte del tiempo.</p>
+
+<blockquote><p>Para obtener la mejor calidad, un progreso continuado y una gran
+predictabilidad, los tests y las refactorizaciones son la mejor forma
+conocida de trabajar.</p></blockquote>
+
+<!-- split -->
+
+
+<blockquote><p>Necesitamos un progreso constante, regular e ininterrumpido. Para mantener un
+progreso ininterrumpido, necesitamos un diseño claro y limpio todo el tiempo.
+Y para conseguirlo, necesitamos refactorizar nuestro código.</p></blockquote>
+
+<p>Dos grandes pilares del desarrollo: <strong>tests</strong> y <strong>refactorizaciones</strong></p>
+
+<h2>Frases que quiero recordar</h2>
+
+<blockquote><p>Valor es lo que uno quiere</p></blockquote>
+
+<!-- split -->
+
+
+<blockquote><p>Un experto excelentemente remunerado no debería ser remunerado solamente
+porque es un experto. Debería ser excelentemente remunerado por ayudar a
+otras personas a que se conviertan en expertos.</p></blockquote>
+
+<!-- split -->
+
+
+<blockquote><p>El estilo de <em>funcionalidad a funcionalidad</em> incluye un ciclo completo de
+desarrollo en cada iteración: requisitos, diseño, codificación y testeo.</p></blockquote>
+
+<!-- split -->
+
+
+<blockquote><p>Podemos construir todo el diseño primero, o podemos construir cada
+funcionalidad completamente de una en una, cada una con su base. Lo que no
+podemos hacer es construir toda la base al principio, así como tampoco
+podemos construir todas las funcionalidades al principio. Es de lejos mucho
+más seguro construir una versión simple pero funcional de cada funcionalidad
+primero.</p></blockquote>
+
+<!-- split -->
+
+
+<blockquote><p>Trabajamos incrementalmente. Necesitamos un buen diseño relativamente pronto,
+pero solo necesitamos un <strong>pequeño</strong> buen diseño.</p></blockquote>
+
+<!-- split -->
+
+
+<blockquote><p>Toma cada posible idea como una posible forma de comenzar a hacer cosas
+durante un tiempo. Luego, haz tuyo el proceso, y construye tus propias ideas.
+¡Pero mantenlo simple!</p></blockquote>
+
+<!-- split -->
+
+
+<blockquote><p>Nuestro trabajo no es ceñirnos al plan, es ir corrigiendo el curso para
+obtener el mejor resultado, no llegar a algún punto fijo.</p></blockquote>
+
+<!-- split -->
+
+
+<blockquote><p>Lo hacemos mejor no cuando predecimos cuándo habremos terminado, si no cuando
+elegimos cuándo está terminado (pero es que debemos mantenernos siempre en un
+estado de <em>terminado</em> de forma constante)</p></blockquote>
+
+<!-- split -->
+
+
+<blockquote><p>La palabra refactorizar se refiere al proceso simple y regular de mantener el
+código limpio. Cuando la carretera se convierte en un camino intrincado, lo
+enderezamos refactorizando el código.</p></blockquote>
+
+<h2>Referencias</h2>
+
+<ul>
+<li><a href="https://vimeo.com/79106557">The fundamental theorem of Agile Software Development</a>, de J.B.Rainsberger</li>
+<li><a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/the-nature-of-software-development-by-ron-jeffries.markdown">Notas sobre The nature of Software development</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The Phoenix project]]></title>
@@ -692,151 +836,6 @@ es productivo, todo aquello que no la lleve es imprductivo.</p></li>
 <li><a href="/blog/2012/10/10/lean-software-development/">Lean software development</a>, de Mary y Tom Poppendiek.</li>
 <li><a href="https://plus.google.com/105077077543737057709">Roberto Hens</a> también lo ha leído, y esto es lo que le parece:</li>
 <li><a href="http://robertohens.blogspot.com.es/2013/04/Kanban-el-Origen-The-Goal.html">Kanban, el origen</a>.</li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Agile estimating and planning]]></title>
-    <link href="http://rchavarria.github.io/blog/2013/02/13/agile-estimating-and-planning/"/>
-    <updated>2013-02-13T13:08:00+01:00</updated>
-    <id>http://rchavarria.github.io/blog/2013/02/13/agile-estimating-and-planning</id>
-    <content type="html"><![CDATA[<h4>Agile estimating and planning</h4>
-
-<h5>Mike Cohn</h5>
-
-<p><img class="right" src="http://www.mcwherter.net/Portals/McWherter/9780131479418.jpg" width="245" height="324" title="Agile estimating and planning" ></p>
-
-<h2>Por qué lo he leído</h2>
-
-<p>últimamente estoy leyendo muchos libros relacionados con las metodologías ágiles, y en muchos de ellos se hacía referencia a este libro, así que pensé que debía ser un libro imprescindible. Y así es.</p>
-
-<!-- more -->
-
-
-<h2>Qué esperaba</h2>
-
-<p>Esperaba encontrar muchas técnicas de estimación, métricas para controlar que una planificación no se desvía del plan inicial y cosas así.</p>
-
-<p>También esperaba encontrar una serie de consejos a aplicar a la hora de hacer las estimaciones, y la verdad es que el libro no me ha defraudado para nada.</p>
-
-<h2>Qué encontre</h2>
-
-<p>Encontré todo eso y mucho más. Descubrí nuevos conceptos (ver último apartado) y conocí de primera mano técnicas que hasta ahora solo había conocido por encima, como los diagramas <em>burndown</em>, para registrar los puntos de historia que se han implementado en una iteración.</p>
-
-<h2>Conclusiones</h2>
-
-<p>El libro me ha encantado. Creo que es una lectura obligatoria para cualquier persona que esté relacionada con las planificaciones de los proyectos software. Estoy seguro de que aprendería muchísimas cosas. Claro, que si eres desarrollador también te conviene conocer las técnicas explicadas en este libro.</p>
-
-<p>Una cosa que me ha gustado muchísimo es que al final de cada capítulo hay un resumen exponiendo las ideas principales del capítulo. Muy útil por si tienes que ojearlo una vez leído.</p>
-
-<h2>Pasajes que quiero recordar de este libro</h2>
-
-<blockquote><p>En 1981, Barry Boehm dibujó su primera versión del <a href="https://raw.github.com/tapichu/scrum/gh-pages/img/03%20-%20cono%20de%20incertidumbre.png"><em>cono de incertidumbre</em></a>. La imagen del enlace muestra los rangos iniciales de incertidumbre en diferentes puntos de un proceso de desarrollo secuencial ("en cascada")</p>
-
-<p>El "cono de incertidumbre" se va estrechando conforme el proyecto va avanzando.</p>
-
-<p>Un plan <em>ágil</em> is aquel que no es que no queramos cambiar, sino que estamos ansiosos de hacerlo, y queremos
-cambiarlo porque eso significa que hemos aprendido algo o que hemos sorteado una dificultad.</p>
-
-<p>Las funcionalidades son la unidad de valor para el cliente, y no las actividades, aunque nosotros
-planificamos basándonos en actividades, por eso muchos proyectos fallan.</p>
-
-<p>La multitarea se convierte en un problema para los proyectos planificados tradicionalmente porque
-incentiva enfocarse en la máxima utilzizacion de todos los individuos en lugar de mantener un margen
-suficiente para poder manejar la variabilidad típica de las tareas de los proyectos software.</p>
-
-<p>Un equipo <em>ágil</em> trabaja como una unidad, no hay espacio para la mentalidad "ahí lo dejo y ya está". Un
-buen equipo <em>ágil</em> debe tener una mentalidad de estamos todos juntos en esto.</p>
-
-<p>Las <em>historias de usuario</em> son una técnica poco pesada para expresar los requisitos del software.</p>
-
-<p>Los equipos ágiles planifican a tres niveles: release, iteración y dia. <strong>release</strong>: determina el alcance,
-las fechas y los recursos de un proyecto. <strong>iteración</strong>: identfica tareas de alta prioridad que el equipo
-debería realizar en la siguiente iteración. <strong>dia</strong>: coordina el trabajo y sincroniza los esfuerzos
-del dia a dia.</p>
-
-<p>Los proyectos se deberían ver como una forma de generar un flujo de nuevas capacidades y conocimientos,
-conocimientos sobre el producto y sobre el proyecto (equipo, tecnología, personas, ...)</p>
-
-<p>Al igual que en los restaurantes las medidas de las raciones son relativas entre sí, en el mundo software
-sólo necesito saber si una funcionalidad es mayor o menor respecto a otra.</p>
-
-<p>Además de saber que las estimaciones son más fiables si son indicadas por aquellos que realizarán la tarea,
-las estimaciones son aún mejores si se basan en la colaboración del equipo al completo.</p>
-
-<p>Las tres formas más comunes de dar una estimación son: opinión de un experto, analogía y disgregación (o
-dividir una tarea en otras más pequeñas).</p>
-
-<p>La cantidad de tiempo que llevará implementar una funcionalidad es función de su tamaño (puntos historia) y
-el ratio de progreso del equipo (velocidad)</p>
-
-<p>Se deben tener en cuenta cuatro factores a la hora de priorizar tareas: valor de las funcionalidades, coste
-del desarrollo, nuevo conocimiento que generará y riesgos que eliminará la realización de la tarea.</p>
-
-<p>Kano (link al torpedo este, con imagen y todo si es posible) nos da una forma de separar funcionalidades en tres categorías: indispensables,
-lineales y excitantes/sorprendentes.</p>
-
-<p>Entregar un subconjunto coherente de todas las capas de una funcionalidad is siempre mejor que entregar
-una capa entera pero sin conexión con el resto de ellas.</p>
-
-<p>Así como un corazón bate a un ritmo regular que mantienen el cuerpo funcionando, un duración de iteración
-fija proporciona una constante que ayuda a establecer un ritmo de desarrollo y entregas ~ Simon Baker</p>
-
-<p>Un <em>buffer</em> es un margen de error alrededor de una estimación. Hay dos tipos de buffers: de funcionalidad
-(un 25-40% de las funcionalidades son opcionales) y de planificación (se añade un 30% de tiempo a lo que
-creo que me va a costar).</p>
-
-<p>Un buffer de planificación no es un alargamiento consciente. Las personas alargan conscientemente sus
-estimaciones si creen que se les reprochará no terminar a tiempo. Un buffer es un margen de seguridad
-necesario que sumar al conjunto de estimaciones.</p>
-
-<p>Algo que el autor encuentra muy útil como trabajo a realizar antes de una iteración son las <em>condiciones de
-satisfacción</em> de las historias de usuario a desarrollar en dicha iteración por parte del cliente.</p>
-
-<p>Un <em>release burndown chart</em> muestra la cantidad de trabajo que queda por realizar al inicio de cada iteración.
-Esto se convierte en un indicador visual de cómo y a qué velocidad se está acercando el equipo al objetivo
-del proyecto.</p>
-
-<p>La variabilidad es parte da cada estimación. No importa cuánto esfuerzo se ponga en mejorarlas, un equipo nunca
-será capaz de estimar perfectamente.</p>
-
-<p>No gestionar la velocidad individualmente. Se debe incentivar siempre que sea posible que todos los miembros
-del equipo trabajen como un todo, como un único equipo.</p>
-
-<p>Las estimaciones y planificaciones ágiles funcionan porque se separan las estimaciones de tamaño y de duración:
-puntos historia * velocidad = duración</p>
-
-<p>Las planficaciones tradicionales se enfocan en las tareas para crear el producto, mientras que las planificaciones
-ágiles se centran en las funcionalidades que desea el usuario.</p>
-
-<p>Cuando creamos un plan al principio de un proyecto y no lo actualizamos con los nuevos conocimiento adquiridos,
-estamos perdiendo la oportunidad de sincronizar nuestro proyecto con la realidad.</p></blockquote>
-
-<h2>Conceptos</h2>
-
-<ul>
-<li><a href="http://gzurita.blogspot.com.es/2006/07/idea-valiosa-el-cono-de-incertidumbre.html">Cono de incertidumbre</a></li>
-<li><a href="http://ow.ly/hFQSx">Velocidad</a></li>
-<li><a href="www.youtube.com/watch?v=lGXLe9RiJyY">Commitment-driven iteration planning</a>:
-Una aproximación guiado por el compromiso is una alternativa a la
-planificación de la iteración. El equipo va añadiendo historias a la iteración de una en una mientras que ellos
-se puedan comprometer a entregarlas. Las historias son seleccionadas, descompuestas en tareas y éstas estimadas.
-De una en una. En la aproximación de planificar basándose en la velocidad, se eligen un conjunto de historias
-cuyas estimaciones sean iguales o menores que la velocidad del equipo.</li>
-<li><a href="http://stackoverflow.com/a/3700855/1111676">Condiciones de satisfacción</a></li>
-<li><a href="https://www.google.es/search?q=burndown+bar+chart&amp;tbm=isch">burndown bar chart</a></li>
-</ul>
-
-
-<h2>Otras lecturas y enlaces relacionadas</h2>
-
-<ul>
-<li><a href="http://jmbeas.es/guias/">Guía de conceptos ágiles</a></li>
-<li><a href="http://twitter.com/joserra_diaz/">Jose Ramón Díaz</a>, de <a href="http://www.agilar.org/">Agilar</a>,
-habla de <a href="http://najaraba.blogspot.com.es/2013/02/la-estimacion-agil-de-proyectos-puntos.html">estimaciones ágiles</a>
-en su blog.</li>
 </ul>
 
 ]]></content>

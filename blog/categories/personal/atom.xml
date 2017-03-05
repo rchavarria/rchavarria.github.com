@@ -4,7 +4,7 @@
   <title><![CDATA[Category: personal | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/personal/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2017-02-23T23:12:43+01:00</updated>
+  <updated>2017-03-05T16:35:21+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,150 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[The nature of software developent]]></title>
+    <link href="http://rchavarria.github.io/blog/2017/03/05/the-nature-of-software-developent/"/>
+    <updated>2017-03-05T16:06:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2017/03/05/the-nature-of-software-developent</id>
+    <content type="html"><![CDATA[<h5>de Ron Jeffries</h5>
+
+<p><img class="left" src="https://imagery.pragprog.com/products/363/rjnsd.jpg?1409862136" width="260" height="392" title="The nature of software development" ></p>
+
+<h2>Por qué lo he leído</h2>
+
+<p>Como casi todos los libros, por recomendación. Ví que lo recomendaba
+<a href="https://carlosbuenosvinos.com/">Carlos Buenosvinos</a>, y no pude resistirme. Además, el autor es una leyenda
+viva del desarrollo del software y del manifiesto Agile, así que tenía que ser
+un libro de aúpa.</p>
+
+<p>¿Un libro que trata sobre la <strong>naturaleza</strong> de la profesión a la que te
+dedicas? A leerlo casi, casi, sin pensarlo.</p>
+
+<!-- more -->
+
+
+<h2>Qué esperaba y qué encontré</h2>
+
+<p>Esperaba un libro largo, pesado. Tipo como una biblia o enciclopedia. Un
+compendio de mejores prácticas, de leyes no escritas, los 101 mandamientos del
+desarrollo del sofware.</p>
+
+<p>De eso nada. <a href="https://pragprog.com/book/rjnsd/the-nature-of-software-development">The nature of sofware development</a> es un libro que se lee con una
+facilidad pasmosa. Es increíble como <a href="http://ronjeffries.com/">Ron Jeffries</a> simplifica hasta los
+conceptos más complejos de explicar. Hace que el proceso de desarrollo que él
+explica parezca el único que debe existir, el natural, al que se debería tender
+si dejáramos que las fuerzas actuaran solas (tipo naturaleza, no sé si se me
+entiende la metáfora).</p>
+
+<p>Es un libro relativamente corto, con muchas (y muy buenas) ilustraciones.
+Dividido en capìtulos digeribles muy fácilmente. Un lenguaje llano, sencillo,
+pero preciso.</p>
+
+<h2>Conclusiones</h2>
+
+<p>Por supuesto que es un libro donde se describe muchas mejores prácticas. A mí
+me parece que describe el ideal de cómo se debería desarrollar un proyecto
+software. Casi tan bueno, que me parece un sueño.</p>
+
+<p>Es un libro que recomendaría leer a todo aquel que su trabajo esté relacionado
+con cualquier fase en el desarrollo del software: diseño, programador, dueño de
+producto,...</p>
+
+<h2>Qué he aprendido</h2>
+
+<blockquote><p>Las cosas van mejor si cada funcionalidad, también llamada <em>historia</em>, sólo
+tardamos <strong>dos o tres</strong> días en implementarla.</p></blockquote>
+
+<p>Coincido totalmente con esa visión. La sufro cada día. Si algo dentro del
+equipo nos lleva más de 2/3 días, comenzamos a perder el foco, empiezan a
+aparecer pequeñas tareas (pues ya que...) que nos hacen desviarnos del objetivo
+inicial. Y al final, se hace muy difícil dar una historia por zanjada. Si
+dividimos el trabajo en pequeñas historias entregables y que podamos
+materializar en menos de 3 días, todo va mejor la mayor parte del tiempo.</p>
+
+<blockquote><p>Para obtener la mejor calidad, un progreso continuado y una gran
+predictabilidad, los tests y las refactorizaciones son la mejor forma
+conocida de trabajar.</p></blockquote>
+
+<!-- split -->
+
+
+<blockquote><p>Necesitamos un progreso constante, regular e ininterrumpido. Para mantener un
+progreso ininterrumpido, necesitamos un diseño claro y limpio todo el tiempo.
+Y para conseguirlo, necesitamos refactorizar nuestro código.</p></blockquote>
+
+<p>Dos grandes pilares del desarrollo: <strong>tests</strong> y <strong>refactorizaciones</strong></p>
+
+<h2>Frases que quiero recordar</h2>
+
+<blockquote><p>Valor es lo que uno quiere</p></blockquote>
+
+<!-- split -->
+
+
+<blockquote><p>Un experto excelentemente remunerado no debería ser remunerado solamente
+porque es un experto. Debería ser excelentemente remunerado por ayudar a
+otras personas a que se conviertan en expertos.</p></blockquote>
+
+<!-- split -->
+
+
+<blockquote><p>El estilo de <em>funcionalidad a funcionalidad</em> incluye un ciclo completo de
+desarrollo en cada iteración: requisitos, diseño, codificación y testeo.</p></blockquote>
+
+<!-- split -->
+
+
+<blockquote><p>Podemos construir todo el diseño primero, o podemos construir cada
+funcionalidad completamente de una en una, cada una con su base. Lo que no
+podemos hacer es construir toda la base al principio, así como tampoco
+podemos construir todas las funcionalidades al principio. Es de lejos mucho
+más seguro construir una versión simple pero funcional de cada funcionalidad
+primero.</p></blockquote>
+
+<!-- split -->
+
+
+<blockquote><p>Trabajamos incrementalmente. Necesitamos un buen diseño relativamente pronto,
+pero solo necesitamos un <strong>pequeño</strong> buen diseño.</p></blockquote>
+
+<!-- split -->
+
+
+<blockquote><p>Toma cada posible idea como una posible forma de comenzar a hacer cosas
+durante un tiempo. Luego, haz tuyo el proceso, y construye tus propias ideas.
+¡Pero mantenlo simple!</p></blockquote>
+
+<!-- split -->
+
+
+<blockquote><p>Nuestro trabajo no es ceñirnos al plan, es ir corrigiendo el curso para
+obtener el mejor resultado, no llegar a algún punto fijo.</p></blockquote>
+
+<!-- split -->
+
+
+<blockquote><p>Lo hacemos mejor no cuando predecimos cuándo habremos terminado, si no cuando
+elegimos cuándo está terminado (pero es que debemos mantenernos siempre en un
+estado de <em>terminado</em> de forma constante)</p></blockquote>
+
+<!-- split -->
+
+
+<blockquote><p>La palabra refactorizar se refiere al proceso simple y regular de mantener el
+código limpio. Cuando la carretera se convierte en un camino intrincado, lo
+enderezamos refactorizando el código.</p></blockquote>
+
+<h2>Referencias</h2>
+
+<ul>
+<li><a href="https://vimeo.com/79106557">The fundamental theorem of Agile Software Development</a>, de J.B.Rainsberger</li>
+<li><a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/the-nature-of-software-development-by-ron-jeffries.markdown">Notas sobre The nature of Software development</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Mi Codemotion 2016]]></title>
@@ -879,194 +1023,6 @@ gustó aquello que hiciste/dijiste, discrepo con aquello que ...)</li>
 <li><a href="https://www.youtube.com/watch?v=_CcO9upHiDU">Streaming del día 2</a></li>
 <li><a href="http://martinfowler.com/bliki/CQRS.html">Martin Fowler acerca de CQRS</a></li>
 </ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Mi fracción del Codemotion 2015]]></title>
-    <link href="http://rchavarria.github.io/blog/2015/11/29/mi-fraccion-codemotion/"/>
-    <updated>2015-11-29T19:09:00+01:00</updated>
-    <id>http://rchavarria.github.io/blog/2015/11/29/mi-fraccion-codemotion</id>
-    <content type="html"><![CDATA[<p>Por 4º año consecutivo he tenido el placer de asistir a <a href="http://2015.codemotion.es/">Codemotion</a>, un evento
-donde todas las comunidades tecnológicas tienen cabida, un evento con más de
-2000 asistentes (este año hablan de 2500), con 8 tracks en paralelo mas 4
-talleres.</p>
-
-<p>En esta entrada trato de mostrar mi pequeña porción de lo vivido, por lo que no
-esperes que coincida con la tuya si has estado allí, y no esperes que coincida
-completamente con la realidad, porque lo que aquí leerás es solo una mínima
-parte de todo lo ocurrido.</p>
-
-<!-- more -->
-
-
-<p>En un evento de este calibre no solo hay que valorar las charlas técnicas que
-te inspiran, te enseñan y te encienden la chispa de la curiosidad. También hay
-que valorar lo que pasa fuera de las charlas. Este año me he centrado más en
-las charlas. Aún así, he conocido en persona a <a href="http://ocana.github.io/">Miguel</a>, que ya tenía ganas, y
-he vuelto a ver a antiguos amigos de profesión que estamos convirtiendo en
-costumbre lo de encontranos cada año en el Codemotion.</p>
-
-<p>Otros años me ha parecido que han asistido más estudiantes, este año, la
-impresión que he tenido es que el porcentaje de estudiantes/profesionales ha
-estado bastante igualado.</p>
-
-<p>Charlas a las que he asistido:</p>
-
-<h2><a href="http://2015.codemotion.es/agenda.html#5677904553836544/43004005">El arte de ser vago</a>, de <a href="http://cjgaliana.com/">Camilo Galiana</a></h2>
-
-<p>Esta charla fue un calentamiento perfecto. Camilo se expresa perfectamente, y
-llevó un ritmo bastante bueno en su charla. Se podría resumir la charla como:</p>
-
-<blockquote><p>Se programa para personas, no para las máquinas</p></blockquote>
-
-<p>Se hizo un repaso de multitud de principios de programación imprescindibles
-para un buen desarrollo de aplicaciones. Me quedaría con una frase graciosa.
-Imagínate en una entrevista:</p>
-
-<blockquote><p>¿Cuál es tu mayor fortaleza?
-Soy vago</p></blockquote>
-
-<h2><a href="http://2015.codemotion.es/agenda.html#5677904553836544/50404003">Technical debt for developers... and managers!</a>, de <a href="https://twitter.com/luiyo">Luis García Castro</a></h2>
-
-<p>Charla completísima acerca del concepto de <a href="/blog/2015/10/12/deuda-tecnica/">deuda técnica</a>. Luis cubrió casi
-todos los aspectos relacionados con la deuda técnica (y otras deudas):
-metáfora, síntomas, ventajas, inconvenientes, cómo evitarla, cómo pagarla,...</p>
-
-<p>La charla estuvo bastante bien, y muy bien amenizada por Luis. Hubo debate, por
-lo que estuvo bastante animada.</p>
-
-<p>Como punto gracioso, Luis expuso una serie de frases que todos hemos dicho u
-oido en el trabajo, como por ejemplo:</p>
-
-<blockquote><p>Pon un comentario y lo arreglamos luego</p></blockquote>
-
-<h2><a href="http://2015.codemotion.es/agenda.html#5677904553836544/48514002">Dando amor a los tests</a>, de <a href="https://twitter.com/kinisoftware">Joaquín Engelmo</a></h2>
-
-<p>Esta es la segunda parte de una charla de Kini (creo recordar que se titulaba
-«Adicto al verde». Como segunda parte, los conceptos tratados en esta charla
-son más avanzados y por las pequeñas preguntas para responder a mano alzada, no
-toda la audiencia estaba familiarizada con ellos, por lo que seguro que hubo
-mucha gente que aprendió mucho de la charla.</p>
-
-<p>De la charla me llevo la confirmación de una sospecha que tenía: cuantos más
-tests tienes y más grande es tu aplicación, más debes tratar a los tests como
-código de producción y seguir los mismos principios, de lo contrario, cualquier
-pequeño cambio requerirá múltiples cambios en los tests y supondrán más un
-lastre que una ayuda.</p>
-
-<h2><a href="http://2015.codemotion.es/agenda.html#5699289732874240/49544011">Del infierno al cielo</a>, de <a href="https://twitter.com/rrequero">Raúl Requero</a></h2>
-
-<p>Para ser una charla a primera hora, Raúl fue valiente y fue directo al grano,
-sin rodeos. Prometía ser una charla dura. Y lo fue, pero fue genial. Charla muy
-práctica, llena de ejemplos y de código (¡bien!).</p>
-
-<p>La charla se centró en una funcionalidad introducida en ECMAScript 2015, los
-generadores. Y Raúl los destripó de arriba a abajo: qué son, cuándo
-utilizarlos, cuándo no, librerías que hacen su uso más sencillo (si quieres que
-te duela la cabeza busca <a href="https://github.com/thunks/thunks">thunks</a> y <a href="https://github.com/tj/co">co</a>, increíbles).</p>
-
-<h2><a href="http://2015.codemotion.es/agenda.html#5699289732874240/50504009">Coding culture</a>, de <a href="https://twitter.com/svenpet">Sven Peters</a></h2>
-
-<p>Estaba deseando ver esta charla, no me la perdería por nada del mundo. Había
-visto algunas charlas grabadas de Sven, y es un ponente con muchas tablas. Unos
-gráficos espectaculares y una historia muy depurada. Con giros argumentales
-inesperados y con mucho sentido del humor.</p>
-
-<p>Sven presentó distintos conceptos relacionados con la cultura de empresa y
-distintas actividades que se realizan en Attlassian. Habló de la cultura de la
-innovación, de la felicidad, del balance de la pasión (producto o cliente), de
-equipo y cultura que escala.</p>
-
-<p>Si tienes ganas, aquí encontrarás todas las <a href="http://svenpet.com/talks/">charlas de Sven</a>.</p>
-
-<h2><a href="http://2015.codemotion.es/agenda.html#5699289732874240/49534007">Programando en diferido</a>, de <a href="https://twitter.com/flipper83">Jorge Juan Barroso</a></h2>
-
-<p>En un principio no tenía pensado entrar en esta charla, pero no me arrepiento
-de nada. Jorge es un ponente increíble, fue una sorpresa muy positiva para mí.
-Explicó conceptos muy complejos de una manera muy clara y sencilla. Esta charla
-también me sirvió para refrescar un poco mi cada vez más aturdido <em>sentido
-Javero</em>, conociendo de mano de un crack conceptos como <em>Streams</em> en Java,
-observables (cold y hot), la librería RxJava y el <em>Reactive manifesto</em></p>
-
-<p>De la charla me llevo un consejo que me pareció buenísimo</p>
-
-<blockquote><p>Primero resuelve el problema, luego escribe el código</p></blockquote>
-
-<h2><a href="http://2015.codemotion.es/agenda.html#5699289732874240/45634007">Navegando con el piloto automático con CasperJS</a>, de <a href="https://twitter.com/asanzdiego">Adolfo Sanz</a></h2>
-
-<p>En esta charla Adofo nos presentó CasperJS, que no es una herramienta que corre
-en NodeJS, si no que es una herramienta de scripting, y que entre otras cosas
-sirve para programar o automatizar tus navegaciones web. Aunque el uso que más
-interesó a la gente, a la vista de la cantidad de preguntas al ponente, fue la
-posibilidad de escribir y ejecutar tests de aceptación con la herramienta.</p>
-
-<p>Fue un charlas super práctica, toda con código en vivo y con demostraciones.</p>
-
-<h2><a href="http://2015.codemotion.es/agenda.html#5699289732874240/44774010">Help, I need more women!</a>, de <a href="https://twitter.com/Laura_Morillo">Laura Morillo</a>, <a href="https://www.koliseo.com/anafvm">Ana Fernández</a> y <a href="https://www.koliseo.com/mlorenzosanchez">Marina Lorenzo</a></h2>
-
-<p>El título de la charla lo dice todo, el discurso de la misma giró en torno al
-hecho de la poca presencia femenina en el campo tecnológico y en el análisis de
-sus posibles causas. Una de ellas se atribuye a la escasez de <em>referentes</em>, por
-lo cual las niñas (las futuras ingenieras) no tienen quien les inspire y no
-eligen carreras científicas o relacionadas con las ingenierías.</p>
-
-<p>Las ponentes hicieron un repaso de las distintas mujeres destacadas en el campo
-de la ingeniería de la historia y de cómo los medios de comunicación
-representan a las mujeres en este campo, que por cierto, no es muy buena la
-imagen que proyectan.</p>
-
-<p>Finalmente, expusieron una serie de iniciativas que se están llevando a cabo a
-nivel nacional e internacional, y creo que consiguieron que muchas mujeres
-asistentes se interesaran por ellas, así que ¡FELICIDADES!</p>
-
-<h2><a href="http://2015.codemotion.es/agenda.html#5699289732874240/48544008">Taiga, de 0 a 70.000 proyectos</a>, de <a href="https://twitter.com/diacritica">Pablo Ruiz</a></h2>
-
-<p>En esta charla Pablo presentó Taiga, un gestor de proyectos ágiles. Soporta
-Scrum y Kanban. Descrito así, parece que fue una charla absolutamente
-publicitaria, pero para nada. Por supuesto, Pablo presentó la herramienta. Pero
-después dió paso a una serie de peticiones de funcionalidad de los usuarios a
-la herramienta y le dió un enfoque muy especial. Mezcló los valores y
-principios ágiles con los valores y principios que defienden en Taiga y
-justificó el porqué hacen caso, o no, a sus usuarios. Una clase absolutamente
-magistral de lo que significa ser ágil y gestionar proyectos ágiles.</p>
-
-<p>Algunas de las funcionalidades pedidas por usuarios <em>ágiles</em> serían: llevar una
-cuenta de las horas consumidas, contabilizar historias no terminadas en un
-sprint, poder representar personas asignadas a varios proyectos,...</p>
-
-<h2><a href="http://2015.codemotion.es/agenda.html#5699289732874240/43004009">Gente que hace cosas con cacharros</a>, de <a href="https://www.koliseo.com/miguelangellv">Miguel Ángel López</a> y <a href="https://twitter.com/josejuansanchez">Jose Juan Sánchez</a></h2>
-
-<p>Y para terminar, una charla que me sorprendió. Se podría resumir con algo que
-dijo Miguel Ángel, que según él es a lo que se dedica en su tiempo libre:</p>
-
-<blockquote><p>Hago cosas que, no sirven para nada, pero molan</p></blockquote>
-
-<p>Así fue la charla. Llena de experimentos de <em>maker</em>, de pequeños inventos
-curiosos, imaginativos, que no tenían valor útil, no iban a cambiar el mundo,
-pero molaban mil. Fue la charla ideal para terminar dos días a tope. Divertida,
-desenfada y llena de imaginación. ¡Qué ganas tengo de usar algo parecido con mi
-hijo!</p>
-
-<h2>Trabajo para casa</h2>
-
-<p>Y esto fue más o menos mi Codemotion. Los organizadores del mismo no quieren
-que Codemotion termine aquí, quieren que ahora empiece el #codemotion2015. La
-idea de continuar es que lo aprendido no se quede en estos dos magníficos días,
-si no que los extendamos en el tiempo. Por eso mismo, éstos son los deberes que
-me llevo para casa:</p>
-
-<ol>
-<li>Conoce tus herramientas: ¿qué tal si empiezo a usar la consola de PhpStorm?</li>
-<li>¿Existe alguna forma de cuantificar la deuda técnica?</li>
-<li>Buscar acerca del concepto de <em>property-based testing</em>. Ha aparecido por mi
-radar últimamente, pero no le he hecho mucho caso. Ha llegado el momento</li>
-<li>Attlassian Mood App</li>
-<li>¿Podrías encontrar alguna utilidad a CasperJS?</li>
-<li>Serie <em>Halt &amp; Catch Fire</em></li>
-<li>Proponer PI Week en el trabajo</li>
-</ol>
 
 ]]></content>
   </entry>

@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2017-02-23T23:12:43+01:00</updated>
+  <updated>2017-03-05T16:35:21+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,150 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[The nature of software developent]]></title>
+    <link href="http://rchavarria.github.io/blog/2017/03/05/the-nature-of-software-developent/"/>
+    <updated>2017-03-05T16:06:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2017/03/05/the-nature-of-software-developent</id>
+    <content type="html"><![CDATA[<h5>de Ron Jeffries</h5>
+
+<p><img class="left" src="https://imagery.pragprog.com/products/363/rjnsd.jpg?1409862136" width="260" height="392" title="The nature of software development" ></p>
+
+<h2>Por qué lo he leído</h2>
+
+<p>Como casi todos los libros, por recomendación. Ví que lo recomendaba
+<a href="https://carlosbuenosvinos.com/">Carlos Buenosvinos</a>, y no pude resistirme. Además, el autor es una leyenda
+viva del desarrollo del software y del manifiesto Agile, así que tenía que ser
+un libro de aúpa.</p>
+
+<p>¿Un libro que trata sobre la <strong>naturaleza</strong> de la profesión a la que te
+dedicas? A leerlo casi, casi, sin pensarlo.</p>
+
+<!-- more -->
+
+
+<h2>Qué esperaba y qué encontré</h2>
+
+<p>Esperaba un libro largo, pesado. Tipo como una biblia o enciclopedia. Un
+compendio de mejores prácticas, de leyes no escritas, los 101 mandamientos del
+desarrollo del sofware.</p>
+
+<p>De eso nada. <a href="https://pragprog.com/book/rjnsd/the-nature-of-software-development">The nature of sofware development</a> es un libro que se lee con una
+facilidad pasmosa. Es increíble como <a href="http://ronjeffries.com/">Ron Jeffries</a> simplifica hasta los
+conceptos más complejos de explicar. Hace que el proceso de desarrollo que él
+explica parezca el único que debe existir, el natural, al que se debería tender
+si dejáramos que las fuerzas actuaran solas (tipo naturaleza, no sé si se me
+entiende la metáfora).</p>
+
+<p>Es un libro relativamente corto, con muchas (y muy buenas) ilustraciones.
+Dividido en capìtulos digeribles muy fácilmente. Un lenguaje llano, sencillo,
+pero preciso.</p>
+
+<h2>Conclusiones</h2>
+
+<p>Por supuesto que es un libro donde se describe muchas mejores prácticas. A mí
+me parece que describe el ideal de cómo se debería desarrollar un proyecto
+software. Casi tan bueno, que me parece un sueño.</p>
+
+<p>Es un libro que recomendaría leer a todo aquel que su trabajo esté relacionado
+con cualquier fase en el desarrollo del software: diseño, programador, dueño de
+producto,&#8230;</p>
+
+<h2>Qué he aprendido</h2>
+
+<blockquote><p>Las cosas van mejor si cada funcionalidad, también llamada <em>historia</em>, sólo
+tardamos <strong>dos o tres</strong> días en implementarla.</p></blockquote>
+
+<p>Coincido totalmente con esa visión. La sufro cada día. Si algo dentro del
+equipo nos lleva más de 2/3 días, comenzamos a perder el foco, empiezan a
+aparecer pequeñas tareas (pues ya que&#8230;) que nos hacen desviarnos del objetivo
+inicial. Y al final, se hace muy difícil dar una historia por zanjada. Si
+dividimos el trabajo en pequeñas historias entregables y que podamos
+materializar en menos de 3 días, todo va mejor la mayor parte del tiempo.</p>
+
+<blockquote><p>Para obtener la mejor calidad, un progreso continuado y una gran
+predictabilidad, los tests y las refactorizaciones son la mejor forma
+conocida de trabajar.</p></blockquote>
+
+<!-- split -->
+
+
+<blockquote><p>Necesitamos un progreso constante, regular e ininterrumpido. Para mantener un
+progreso ininterrumpido, necesitamos un diseño claro y limpio todo el tiempo.
+Y para conseguirlo, necesitamos refactorizar nuestro código.</p></blockquote>
+
+<p>Dos grandes pilares del desarrollo: <strong>tests</strong> y <strong>refactorizaciones</strong></p>
+
+<h2>Frases que quiero recordar</h2>
+
+<blockquote><p>Valor es lo que uno quiere</p></blockquote>
+
+<!-- split -->
+
+
+<blockquote><p>Un experto excelentemente remunerado no debería ser remunerado solamente
+porque es un experto. Debería ser excelentemente remunerado por ayudar a
+otras personas a que se conviertan en expertos.</p></blockquote>
+
+<!-- split -->
+
+
+<blockquote><p>El estilo de <em>funcionalidad a funcionalidad</em> incluye un ciclo completo de
+desarrollo en cada iteración: requisitos, diseño, codificación y testeo.</p></blockquote>
+
+<!-- split -->
+
+
+<blockquote><p>Podemos construir todo el diseño primero, o podemos construir cada
+funcionalidad completamente de una en una, cada una con su base. Lo que no
+podemos hacer es construir toda la base al principio, así como tampoco
+podemos construir todas las funcionalidades al principio. Es de lejos mucho
+más seguro construir una versión simple pero funcional de cada funcionalidad
+primero.</p></blockquote>
+
+<!-- split -->
+
+
+<blockquote><p>Trabajamos incrementalmente. Necesitamos un buen diseño relativamente pronto,
+pero solo necesitamos un <strong>pequeño</strong> buen diseño.</p></blockquote>
+
+<!-- split -->
+
+
+<blockquote><p>Toma cada posible idea como una posible forma de comenzar a hacer cosas
+durante un tiempo. Luego, haz tuyo el proceso, y construye tus propias ideas.
+¡Pero mantenlo simple!</p></blockquote>
+
+<!-- split -->
+
+
+<blockquote><p>Nuestro trabajo no es ceñirnos al plan, es ir corrigiendo el curso para
+obtener el mejor resultado, no llegar a algún punto fijo.</p></blockquote>
+
+<!-- split -->
+
+
+<blockquote><p>Lo hacemos mejor no cuando predecimos cuándo habremos terminado, si no cuando
+elegimos cuándo está terminado (pero es que debemos mantenernos siempre en un
+estado de <em>terminado</em> de forma constante)</p></blockquote>
+
+<!-- split -->
+
+
+<blockquote><p>La palabra refactorizar se refiere al proceso simple y regular de mantener el
+código limpio. Cuando la carretera se convierte en un camino intrincado, lo
+enderezamos refactorizando el código.</p></blockquote>
+
+<h2>Referencias</h2>
+
+<ul>
+<li><a href="https://vimeo.com/79106557">The fundamental theorem of Agile Software Development</a>, de J.B.Rainsberger</li>
+<li><a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/the-nature-of-software-development-by-ron-jeffries.markdown">Notas sobre The nature of Software development</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Elixir: noveno asalto]]></title>
@@ -3912,217 +4056,6 @@ suficiente para ir cogiendo ritmo.</p>
 <li><a href="http://rchavarria.github.io/blog/2017/01/29/elixir-noveno-asalto/">Noveno asalto</a>: servidores OTP</li>
 </ol>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Artículo técnico: Getting testy]]></title>
-    <link href="http://rchavarria.github.io/blog/2015/12/28/getting-testy/"/>
-    <updated>2015-12-28T21:33:00+01:00</updated>
-    <id>http://rchavarria.github.io/blog/2015/12/28/getting-testy</id>
-    <content type="html"><![CDATA[<p><img class="right" style="width: 250px" src="http://rchavarria.github.io/images/2015/getting-testy.svg"/></p>
-
-<p>Dando una vuelta por Twitter descubrí una serie de artículos sobre testing
-titulados <a href="http://randycoulman.com/blog/2015/08/04/getting-testy-redux/">Getting testy</a>, de <a href="http://randycoulman.com/">Randy Coulman</a>. Parecían artículos interesantes,
-pero era mucha lectura para ser tratada como un blog. Así que decidí leerlo
-como si fuera un libro. Aunque un libro cortito.</p>
-
-<p>Es una serie de artículos muy recomendable sobre TDD y cómo escribir buen
-software. Trata muchísimos temas relacionados con escribir tests para nuestro
-código. Conceptos sencillos y conceptos avanzados. Diferencias entre los dos
-estilos principales de hacer TDD. Qué hacer y qué no hacer a la hora de
-escribir tests. Y un sinfín de cosas más. Todas interesantísimas.</p>
-
-<!-- more -->
-
-
-<h2>Frases a destacar</h2>
-
-<blockquote><p>A la hora de tomar decisiones entre dos extremos, el autor se fija en los más
-  y en los menos de cada extremo y trata de sintetizar las mejores partes de
-  cada uno en algo sobre lo que pueda trabajar</p></blockquote>
-
-<!-- -->
-
-
-<blockquote><p>Los problemas a la hora de testear son una buena indicación de los problemas
-  que encontrará el código cliente de esos mismos APIs</p></blockquote>
-
-<!-- -->
-
-
-<blockquote><p>Los tests de aceptación nos dicen si vamos a <strong>construir el sistema
-  correcto</strong>. Los tests de más bajo nivel nos dicen si vamos a <strong>construir el
-  sistema correctamente</strong> (build the right thing, build the thing right)</p></blockquote>
-
-<!-- -->
-
-
-<blockquote><p>No se recomiendan tests que prueben métodos específicos: se deberían testear
-  las responsabilidades, no los métodos</p></blockquote>
-
-<!-- -->
-
-
-<blockquote><p>Guard the borders, not the hinterlands</p></blockquote>
-
-<!-- -->
-
-
-<blockquote><p>No escribas el test que te fuerza a escribir el código que tu quieres.
-  Escribe el test que fuerza a tu objeto a tener las responsabilidades que
-  quieres que tenga</p></blockquote>
-
-<h2>Notas tomadas</h2>
-
-<p><strong>Historia y mecanismos</strong></p>
-
-<p><em>Dobles de tests</em> es una analogía de la idea de la situación en la que en una
-película de acción, un doble suplanta al actor profesional en una escena
-peligrosa</p>
-
-<p><strong>Filosofía</strong></p>
-
-<p>A la hora de tomar decisiones entre dos extremos, el autor se fija en los más y
-en los menos de cada extremo y trata de sintetizar las mejores partes de cada
-uno en algo sobre lo que pueda trabajar.</p>
-
-<p>Dos escuelas fundamentales de hacer TDD:</p>
-
-<ol>
-<li>Statist, Detroit: se enfocan en los objetos de tu sistema, lo que lleva a
-escribir tests basados en estado.</li>
-<li>Mockist, Londres: se enfocan en los mensajes enviados en el sistema, lo que
-lleva a escribir tests basados en mocks (o dobles de tests).</li>
-</ol>
-
-
-<p><em>Nota: existe un vídeo, de <a href="https://twitter.com/searls">Justin Searls</a>, donde compara detalladamente estas
-dos escuelas: <a href="https://www.youtube.com/watch?v=aeX5OXO-w30">Comparación escuelas TDD</a></em></p>
-
-<p>Un proceso ingenioso para añadir tests a código que existe actualmente:</p>
-
-<ol>
-<li>Comenta el codigo que quieres probar</li>
-<li>Escribe un test que falle</li>
-<li>descomenta el mínimo código que haga que ese test pase</li>
-<li>Refactorizar y repetir</li>
-</ol>
-
-
-<p>No tengas miedo a borrar tests. Es más, hay ocasiones en las que querrás
-escribir tests para después borrarlos. En ocasiones, cuando estás escribiendo
-un algoritmo complejo, querrás escribir tests para las partes que más tarde
-serán privadas. Necesitas probar esos pasos intermedios que te lleven a la
-solución. Más tarde, cuando hagas esas partes privadas, podrás borrar los tests
-<em>temporales</em>.</p>
-
-<p><strong>Funciones</strong></p>
-
-<p>Deja que los tests guíen tu diseño, especialmente la API pública de tus
-objetos. Los problemas a la hora de testear son una buena indicación de los
-problemas que encontrará el código cliente de esos mismos APIs.</p>
-
-<p>Haz que cada test <em>se pague</em> a sí mismo. Los tests cuestan tiempo y dinero de
-ejecutar y mantener. No escribas tests que no añadan suficiente valor para
-sobrepasar esos costes. O escríbelos hasta que consigas tener el código que
-buscas. Luego, bórralos.</p>
-
-<p><strong>Abstracciones</strong></p>
-
-<p>Cuando crees abstracciones en tu código, es importante elegir aquellas que son
-de alguna utilidad. Muchas veces escogemos las abstracciones equivocadas y eso
-hace nuestro código más confuso para los que vendrán después de nosotros. Esto
-me recuerda a una charla de Sandi Metz, en la que recomendaba algo de
-duplicación en lugar de una mala abstracción o mala legibilidad
-(<a href="http://rchavarria.github.io/blog/2015/10/18/charla-tecnica-all-the-little-things/">All the little things</a>)</p>
-
-<p><strong>Capas</strong></p>
-
-<p>Los tests de aceptación nos dicen si vamos a <strong>construir el sistema correcto</strong>.
-Los tests de más bajo nivel nos dicen si vamos a <strong>construir el sistema
-correctamente</strong> (build the right thing, build the thing right)</p>
-
-<p><strong>Aceptación</strong></p>
-
-<p>En la mayoría de los sistemas, los tests de la capa más externa son los tests
-más lentos que tenemos. Así pues, queremos cuantos menos de ellos mejor, que no
-es lo mismo que decir que no los queremos en absoluto.</p>
-
-<p>Cuando usamos una herramienta como Cucumber of Fitnesse, deberíamos ser capaces
-de portar nuestra aplicación a un lenguaje de programación completemante
-diferente y seguir manteniendo estos tests. Es decir, los tests de aceptación
-deben tener su propio lenguaje, el del negocio, el del dominio del cliente que
-va a usar el software.</p>
-
-<p>Cuando estés escribiendo tests para la capa más externa de tu sistema,
-pregúntate continuamente si esos tests sobrevivirian si cambias
-signficativamente la implementación del sistema que están probando.</p>
-
-<p><strong>Outside-in</strong></p>
-
-<p>Si sientes la necesidad de testear detalles internos de una clase,
-probablemente es que hay un objeto que está intentando <em>salir</em>.</p>
-
-<p>Trata de no limitar tus pensamientos a los objetos que ya tienes. No tengas
-miedo de introducir nuevos objectos si eso mejora el diseño.</p>
-
-<p><strong>APIs</strong></p>
-
-<p>Para aislarnos de sistemas externos (normalmente escritos por terceros),
-debemos ocultar el servicio detrás de un interfaz que definamos y controlemos
-nosotros.</p>
-
-<p>No se recomiendan tests que prueben métodos específicos: se deberían testear
-las responsabilidades, no los métodos. Los detalles de implementación deberían
-estar fuera de los tests.</p>
-
-<p><strong>Pasos</strong></p>
-
-<p>Generalmente, es mejor hacer todo el saneamiento, validaciones y
-normalizaciones en los bordes del sistema. Protege las fronteras, no el
-interior (Guard the borders, not the hinterlands).</p>
-
-<p><strong>¿Por qué?</strong></p>
-
-<p>Por cada verificación que quieras escribir, pregúntate el por qué de dicha
-verificación. ¿La razón tiene que ver con detalles de implementación o tiene
-que ver con responsabilidades esenciales del código que estás probando? Si es
-la primera, párate un poco y recapacita. Si es la segunda, probablemente vayas
-en la buena dirección.</p>
-
-<p>Cuando realizamos verificaciones sobre el estado de la aplicaión antes de hacer
-nada en nuestros tests, estamos comunicando algo al lector del código. Es
-preferible hacer esa comunicación en un tests separado antes que hacer esas
-verificaciones una y otra vez, lo que nos llevaría a tener duplicación en
-muchos tests</p>
-
-<p>Otro caso en el que puede haber valor al realizar <em>verificaciones de setup</em>
-(verificaciones antes de hacer el propio test) es en código legacy.</p>
-
-<p>No escribas el test que te fuerza a escribir el código que tu quieres. Escribe
-el test que fuerza a tu objeto a tener las responsabilidades que quieres que
-tenga.</p>
-
-<p><strong>Dobles de tests</strong></p>
-
-<p>¿Cómo saber si un doble de test es un colaborador o un detalle interno? Podemos
-hacernos las siguientes preguntas: ¿está al mismo nivel de abstracción que el
-objeto que estoy probando? ¿tiene su propio ciclo de vida? Si es así,
-probablemente es un colaborador y estaría bien utilizar un doble de tests. En
-otro caso, podría ser un detalle interno de implementación, donde deberíamos
-plantearnos seriamente si usar el doble de test o no.</p>
-
-<p><strong>Antipatrones</strong></p>
-
-<p>Un buen test unitario debería responder a las siglas en inglés <a href="http://agileinaflash.blogspot.de/2009/02/first.html">F.I.R.S.T.</a>:
-Fast, Isolated, Repeatable, Self-verifying, Timely.</p>
-
-<p><strong>Legacy</strong></p>
-
-<p>Al escribir tests para código legacy, no nos debería importar si el código está
-dando la respuesa correcta. Solo nos interesa si el código está dando la
-<strong>misma</strong> respuesta que antes de realizar los cambios.</p>
 ]]></content>
   </entry>
   

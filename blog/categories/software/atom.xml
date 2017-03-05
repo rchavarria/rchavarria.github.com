@@ -4,7 +4,7 @@
   <title><![CDATA[Category: software | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/software/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2017-02-23T23:12:43+01:00</updated>
+  <updated>2017-03-05T16:35:21+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,150 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[The nature of software developent]]></title>
+    <link href="http://rchavarria.github.io/blog/2017/03/05/the-nature-of-software-developent/"/>
+    <updated>2017-03-05T16:06:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2017/03/05/the-nature-of-software-developent</id>
+    <content type="html"><![CDATA[<h5>de Ron Jeffries</h5>
+
+<p><img class="left" src="https://imagery.pragprog.com/products/363/rjnsd.jpg?1409862136" width="260" height="392" title="The nature of software development" ></p>
+
+<h2>Por qué lo he leído</h2>
+
+<p>Como casi todos los libros, por recomendación. Ví que lo recomendaba
+<a href="https://carlosbuenosvinos.com/">Carlos Buenosvinos</a>, y no pude resistirme. Además, el autor es una leyenda
+viva del desarrollo del software y del manifiesto Agile, así que tenía que ser
+un libro de aúpa.</p>
+
+<p>¿Un libro que trata sobre la <strong>naturaleza</strong> de la profesión a la que te
+dedicas? A leerlo casi, casi, sin pensarlo.</p>
+
+<!-- more -->
+
+
+<h2>Qué esperaba y qué encontré</h2>
+
+<p>Esperaba un libro largo, pesado. Tipo como una biblia o enciclopedia. Un
+compendio de mejores prácticas, de leyes no escritas, los 101 mandamientos del
+desarrollo del sofware.</p>
+
+<p>De eso nada. <a href="https://pragprog.com/book/rjnsd/the-nature-of-software-development">The nature of sofware development</a> es un libro que se lee con una
+facilidad pasmosa. Es increíble como <a href="http://ronjeffries.com/">Ron Jeffries</a> simplifica hasta los
+conceptos más complejos de explicar. Hace que el proceso de desarrollo que él
+explica parezca el único que debe existir, el natural, al que se debería tender
+si dejáramos que las fuerzas actuaran solas (tipo naturaleza, no sé si se me
+entiende la metáfora).</p>
+
+<p>Es un libro relativamente corto, con muchas (y muy buenas) ilustraciones.
+Dividido en capìtulos digeribles muy fácilmente. Un lenguaje llano, sencillo,
+pero preciso.</p>
+
+<h2>Conclusiones</h2>
+
+<p>Por supuesto que es un libro donde se describe muchas mejores prácticas. A mí
+me parece que describe el ideal de cómo se debería desarrollar un proyecto
+software. Casi tan bueno, que me parece un sueño.</p>
+
+<p>Es un libro que recomendaría leer a todo aquel que su trabajo esté relacionado
+con cualquier fase en el desarrollo del software: diseño, programador, dueño de
+producto,...</p>
+
+<h2>Qué he aprendido</h2>
+
+<blockquote><p>Las cosas van mejor si cada funcionalidad, también llamada <em>historia</em>, sólo
+tardamos <strong>dos o tres</strong> días en implementarla.</p></blockquote>
+
+<p>Coincido totalmente con esa visión. La sufro cada día. Si algo dentro del
+equipo nos lleva más de 2/3 días, comenzamos a perder el foco, empiezan a
+aparecer pequeñas tareas (pues ya que...) que nos hacen desviarnos del objetivo
+inicial. Y al final, se hace muy difícil dar una historia por zanjada. Si
+dividimos el trabajo en pequeñas historias entregables y que podamos
+materializar en menos de 3 días, todo va mejor la mayor parte del tiempo.</p>
+
+<blockquote><p>Para obtener la mejor calidad, un progreso continuado y una gran
+predictabilidad, los tests y las refactorizaciones son la mejor forma
+conocida de trabajar.</p></blockquote>
+
+<!-- split -->
+
+
+<blockquote><p>Necesitamos un progreso constante, regular e ininterrumpido. Para mantener un
+progreso ininterrumpido, necesitamos un diseño claro y limpio todo el tiempo.
+Y para conseguirlo, necesitamos refactorizar nuestro código.</p></blockquote>
+
+<p>Dos grandes pilares del desarrollo: <strong>tests</strong> y <strong>refactorizaciones</strong></p>
+
+<h2>Frases que quiero recordar</h2>
+
+<blockquote><p>Valor es lo que uno quiere</p></blockquote>
+
+<!-- split -->
+
+
+<blockquote><p>Un experto excelentemente remunerado no debería ser remunerado solamente
+porque es un experto. Debería ser excelentemente remunerado por ayudar a
+otras personas a que se conviertan en expertos.</p></blockquote>
+
+<!-- split -->
+
+
+<blockquote><p>El estilo de <em>funcionalidad a funcionalidad</em> incluye un ciclo completo de
+desarrollo en cada iteración: requisitos, diseño, codificación y testeo.</p></blockquote>
+
+<!-- split -->
+
+
+<blockquote><p>Podemos construir todo el diseño primero, o podemos construir cada
+funcionalidad completamente de una en una, cada una con su base. Lo que no
+podemos hacer es construir toda la base al principio, así como tampoco
+podemos construir todas las funcionalidades al principio. Es de lejos mucho
+más seguro construir una versión simple pero funcional de cada funcionalidad
+primero.</p></blockquote>
+
+<!-- split -->
+
+
+<blockquote><p>Trabajamos incrementalmente. Necesitamos un buen diseño relativamente pronto,
+pero solo necesitamos un <strong>pequeño</strong> buen diseño.</p></blockquote>
+
+<!-- split -->
+
+
+<blockquote><p>Toma cada posible idea como una posible forma de comenzar a hacer cosas
+durante un tiempo. Luego, haz tuyo el proceso, y construye tus propias ideas.
+¡Pero mantenlo simple!</p></blockquote>
+
+<!-- split -->
+
+
+<blockquote><p>Nuestro trabajo no es ceñirnos al plan, es ir corrigiendo el curso para
+obtener el mejor resultado, no llegar a algún punto fijo.</p></blockquote>
+
+<!-- split -->
+
+
+<blockquote><p>Lo hacemos mejor no cuando predecimos cuándo habremos terminado, si no cuando
+elegimos cuándo está terminado (pero es que debemos mantenernos siempre en un
+estado de <em>terminado</em> de forma constante)</p></blockquote>
+
+<!-- split -->
+
+
+<blockquote><p>La palabra refactorizar se refiere al proceso simple y regular de mantener el
+código limpio. Cuando la carretera se convierte en un camino intrincado, lo
+enderezamos refactorizando el código.</p></blockquote>
+
+<h2>Referencias</h2>
+
+<ul>
+<li><a href="https://vimeo.com/79106557">The fundamental theorem of Agile Software Development</a>, de J.B.Rainsberger</li>
+<li><a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/the-nature-of-software-development-by-ron-jeffries.markdown">Notas sobre The nature of Software development</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[[microtip] git: ramas locales y remotas]]></title>
@@ -218,74 +362,6 @@ Los problemas descritos son básicos en el desarrollo de software. No son proble
     <li><strong><a href="http://codemotion.es/talks#t229">Construyendo un ecosistema para desarrolladores</a></strong>, de <a href="http://twitter.com/@david_bonilla">David Bonilla</a>: fui a esta charla sólo por el mero hecho de ver a David en directo, y no me defraudó. Pasión, entrega, cambios de ritmo en la exposición, preparación, expectáculo, humor (y hamor). La guinda del pastel para un día espectacular.</li>
 </ol>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Refactorizacion: inserta un m&eacute;todo ajeno]]></title>
-    <link href="http://rchavarria.github.io/blog/2012/02/14/refactorizacion-inserta-un-metodo-ajeno/"/>
-    <updated>2012-02-14T02:14:00+01:00</updated>
-    <id>http://rchavarria.github.io/blog/2012/02/14/refactorizacion-inserta-un-metodo-ajeno</id>
-    <content type="html"><![CDATA[<p>En este post voy a describir una de las muchas refactorizaciones que describe Martin Fowler en su libro <a href="http://martinfowler.com/refactoring/">Refactoring: improving the design of existing code</a> (<a href="http://rchavarria.github.io/blog/2012/01/25/refactoring-improving-the-design-of-existing-code/">mis impresiones sobre el libro</a>). He escogido la refactorización de <a href="http://martinfowler.com/refactoring/catalog/introduceForeignMethod.html">insertar método ajeno</a> por ser una de las que, aun siendo sencilla, no había sido consciente de utilizarla hasta leer el libro.</p>
-
-<!-- more -->
-
-
-
-
-<h3>Descripción</h3>
-
-
-<p>La refactorización consiste en crear un método en una clase (clase cliente) cuando en realidad ese método debería pertenecer a otra clase (clase servidor). De ahí el nombre de método ajeno (traducción libre de foreign method)</p>
-
-<h3>Por qué es necesaria</h3>
-
-
-<p>Esta refactorización aparece ante la necesidad de crear un método en la clase servidor, pero es imposible cambiar el código fuente de la misma.</p>
-
-<h3>Cómo llevar a cabo la refactorización</h3>
-
-
-<p>Lo primero es crear un método en la clase cliente que haga lo que necesitamos que haga la clase servidora. El primer parámetro de este método será un objeto de la clase servidora. En caso de necesitar algún parámetro más, éstos serían los parámetros en caso de que el método existiera en la clase servidora.</p>
-
-<p>El objetivo de crear un nuevo método es el de poder reutilizar el código y evitar duplicidades. De esta forma podremos retutilizar el código del nuevo método, y en el caso de que en un futuro podamos cambiar el código fuente de la clase servidora, ese cambio será menos doloroso.</p>
-
-<p>Martin Fowler aconseja comentar el método como <code>método ajeno</code>, para poder encontrar métodos candiatos a mover a sus clases correspondientes. En mi opinión, no creo que esto ayude demasiado a la hora de mantener el código, pero tampoco lo veo perjudicial. Así que aquí, que cada cual siga sus preferencias.</p>
-
-<h3>Código de ejemplo</h3>
-
-
-<p>Partimos del siguiente código de ejemplo, es un ejemplo muy sencillo pero espero que ilustre el caso lo suficientemente bien como para comprender la refactorización:</p>
-
-<p>```
-// ...
-Date nextDay = new Date(previousDay.getYear(),</p>
-
-<pre><code>                    previousDay.getMonth(), 
-                    previousDay.getDate() + 1);
-</code></pre>
-
-<p>```</p>
-
-<p>Como vemos, nuestro código necesita varios datos de la clase servidora (Date, objeto previousDay). Si la clase Date tuviera un método nextDay, o similar, nuestro código quedaría realmente simple. Pero no lo tiene, y lo pero de todo es que tampoco tenemos la posibilidad de modificar Date para incorporarle ese método.</p>
-
-<p>Está bien, creemos pues nuestro método ajeno:</p>
-
-<p>```
-Date nextDay = nextDay(previousDay);
-// ...
-// foreign method
-private Date nextDay(Date aDay) {</p>
-
-<pre><code>return new Date(aDay.getYear(), 
-                aDay.getMonth(), 
-                aDay.getDate() + 1);
-</code></pre>
-
-<p>}
-```</p>
-
-<p>Sí, el código es prácticamente el mismo, pero ahora tenemos un método, la principal forma de reutilizar código. En el caso de poder modificar la clase Date, sería trivial mover este método a esa clase. De hecho, <a href="http://martinfowler.com/refactoring/catalog/moveMethod.html">mover método</a>, es una de las primeras refactorizaciones (y más básicas) explicadas por Martin Fowler en <a href="http://martinfowler.com/refactoring/">Refactoring</a>.</p>
 ]]></content>
   </entry>
   
