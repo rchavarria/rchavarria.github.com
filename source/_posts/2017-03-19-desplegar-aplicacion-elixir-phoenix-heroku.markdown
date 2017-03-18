@@ -12,12 +12,11 @@ footer: false
 sidebar: true
 ---
 
-[Heroku] es una plataforma donde los desarrolladores pueden desplegar sus aplicaciones (en principio de lado servidor) y hacerlas públicas de forma gratuita o por un pequeño precio. Yo he utilizado a veces este servicio para hacer pruebas con servidores en JavaScript (NodeJS) o PHP, pero también admite muchos otros lenguages de programación: Ruby, Java, Python, Go,...
+[Heroku] es una plataforma donde los desarrolladores pueden desplegar sus aplicaciones (sobretodo está pensado para aplicaciones web) y hacerlas públicas de forma gratuita o por un pequeño precio. Yo he utilizado a veces este servicio para hacer pruebas con servidores en JavaScript (NodeJS) o PHP, pero también admite muchos otros lenguages de programación: Ruby, Java, Python, Go,...
 
 {% img center /images/2017/elixir-phoenix-heroku.png %}
-<!-- imagen con los logos de Heroku, Elixir y Phoenix -->
 
-No es ningún secreto que estoy tonteando con Elixir], y [el framework Phoenix] es el framework por referencia para crear aplicaciones web en Elixir. Pero ese no es un lenguaje soportado por Heroku, así que parecía un poco complejo poder hacer unas pruebas desplegando una aplicación Elixir/Phoenix en Heroku.
+No es ningún secreto que estoy [tonteando con Elixir], y [el framework Phoenix] es el framework por referencia para crear aplicaciones web en Elixir. Pero ese no es un lenguaje soportado por Heroku, así que parecía un poco complejo poder hacer unas pruebas desplegando una aplicación Elixir/Phoenix en Heroku.
 
 Por suerte, [Wendy Smoak] escribió un artículo hace un tiempo hablando de esto mismo: [Deploying a Phoenix app to Heroku]. Dicho artículo tiene licencia [Creative Commons CC-BY-NC]. Este post no es una traducción en sí, pero como está basado en él me parece justo y obligatorio respetarla. Así que este post está basado en el artículo [Deploying a Phoenix app to Heroku], de [Wendy Smoak], y también está licenciado bajo la [Creative Commons CC-BY-NC], digan lo que digan el resto de posts de este blog.
 
@@ -179,6 +178,7 @@ Todo el mérito de esta información no es mío, es gracias a [Wendy Smoak], aut
 
 [Heroku]: http://heroku.com/
 [Wendy Smoak]: http://wsmoak.net/about.html
+[tonteando con Elixir]: /blog/2016/01/17/aprendiendo-elixir/
 [el framework Phoenix]: http://www.phoenixframework.org/
 [Deploying a Phoenix app to Heroku]: http://wsmoak.net/2015/07/05/phoenix-on-heroku.html
 [Creative Commons CC-BY-NC]: http://creativecommons.org/licenses/by-nc/3.0/
