@@ -9,8 +9,8 @@
   <meta name="author" content="Rub&eacute;n Chavarr&iacute;a">
 
   
-  <meta name="description" content="Hubo un momento en mi carrera profesional en la que un compañero me dió a conocer
-Vim, el editor de código. Me pareció una herramienta arcaica, &hellip;">
+  <meta name="description" content="Recientemente, me ha surgido la necesidad de inyectar, o modificar más bien, una
+variable de entorno en el servidor de integración contínua que &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -80,6 +80,58 @@ Vim, el editor de código. Me pareció una herramienta arcaica, &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/10/17/jenkins-ci-inyectar-variable-de-entorno/">Jenkins CI: inyectar variable de entorno</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-10-17T08:44:00+02:00" pubdate data-updated="true">Oct 17<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Recientemente, me ha surgido la necesidad de inyectar, o modificar más bien, una
+variable de entorno en el servidor de integración contínua que usamos en el
+trabajo, <a href="http://www.jenkins-ci.org">Jenkins</a>.</p>
+
+<p>Uno de los <em>jobs</em> de Jenkins necesita una aplicación recientemente instalada, y
+dicha aplicación no está alojada en ningún directorio definido dentro de la
+variable de entorno <code>PATH</code>. Por lo cual, el <em>job</em> fallaba.</p>
+
+<p>Una posible solución a este problema era el de modificar la variable de entorno
+a nivel global, pero eso podría entrar en conflicto con otros <em>jobs</em>. Por lo cual
+decidí cambiarla sólo a nivel de <em>job</em>. Por lo que llegamos a la pregunta:
+¿Cómo se inyecta una variable de entorno en un <em>job</em> de Jenkins?</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2014/10/17/jenkins-ci-inyectar-variable-de-entorno/">Continuar leyendo &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -528,63 +580,6 @@ JSON, para ser consumidas como si se trataran de servicios web.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/10/28/myfaces-implementacion-javaserver-faces/">Apache MyFaces como implementacion de JavaServer Faces</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-10-28T13:12:00+01:00" pubdate data-updated="true">Oct 28<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div style="margin:2%; padding:2%; background-color:#E0E0E0; ">
-    Find an English version of this post directly in the <a href="https://github.com/rchavarria/javaee-6-demos/tree/master/jsf-basics">source code repository</a>.
-</div>
-
-
-<p>Esta semana, en esta demo sobre Java EE escribiremos una sencilla aplicación
-para conocer JavaServer Faces 2.1, un framework MVC impulsado por los
-estándares Java EE.</p>
-
-<p>Será similar a otras demos. Tendremos una página de bienvenida, con un
-formulario donde el usuario podrá introducir su email y una contraseña. Los
-datos del formulario se enviarán a una nueva página que mostrará los
-parámetros y sus valores enviados al servidor y permitirá navegar de vuelta
-a la pantalla inicial.</p>
-
-<p>Para probarla, simplemente bájate el código, ejecuta el comando <code>mvn</code> y
-visita <a href="http://localhost:8080/login.jsf">http://localhost:8080/login.jsf</a> para disfrutar.</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2013/10/28/myfaces-implementacion-javaserver-faces/">Continuar leyendo &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/8/">&larr; Older</a>
@@ -602,6 +597,10 @@ visita <a href="http://localhost:8080/login.jsf">http://localhost:8080/login.jsf
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2017/03/19/desplegar-aplicacion-elixir-phoenix-heroku/">Cómo desplegar una aplicación Elixir/Phoenix en Heroku</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2017/03/05/the-nature-of-software-developent/">The nature of software developent</a>
       </li>
     
@@ -615,10 +614,6 @@ visita <a href="http://localhost:8080/login.jsf">http://localhost:8080/login.jsf
     
       <li class="post">
         <a href="/blog/2016/12/31/elixir-octavo-asalto/">Elixir: octavo asalto</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2016/12/04/the-4-hour-body/">The 4 hour body</a>
       </li>
     
   </ul>

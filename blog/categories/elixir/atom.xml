@@ -4,7 +4,7 @@
   <title><![CDATA[Category: elixir | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/elixir/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2017-03-05T16:35:21+01:00</updated>
+  <updated>2017-03-19T15:48:46+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,197 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Cómo desplegar una aplicación Elixir/Phoenix en Heroku]]></title>
+    <link href="http://rchavarria.github.io/blog/2017/03/19/desplegar-aplicacion-elixir-phoenix-heroku/"/>
+    <updated>2017-03-19T13:44:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2017/03/19/desplegar-aplicacion-elixir-phoenix-heroku</id>
+    <content type="html"><![CDATA[<p><a href="http://heroku.com/">Heroku</a> es una plataforma donde los desarrolladores pueden desplegar sus aplicaciones (sobretodo está pensado para aplicaciones web) y hacerlas públicas de forma gratuita o por un pequeño precio. Yo he utilizado a veces este servicio para hacer pruebas con servidores en JavaScript (NodeJS) o PHP, pero también admite muchos otros lenguages de programación: Ruby, Java, Python, Go,...</p>
+
+<p><img class="center" src="/images/2017/elixir-phoenix-heroku.png"></p>
+
+<p>No es ningún secreto que estoy <a href="/blog/2016/01/17/aprendiendo-elixir/">tonteando con Elixir</a>, y <a href="http://www.phoenixframework.org/">el framework Phoenix</a> es el framework por referencia para crear aplicaciones web en Elixir. Pero ese no es un lenguaje soportado por Heroku, así que parecía un poco complejo poder hacer unas pruebas desplegando una aplicación Elixir/Phoenix en Heroku.</p>
+
+<p>Por suerte, <a href="http://wsmoak.net/about.html">Wendy Smoak</a> escribió un artículo hace un tiempo hablando de esto mismo: <a href="http://wsmoak.net/2015/07/05/phoenix-on-heroku.html">Deploying a Phoenix app to Heroku</a>. Dicho artículo tiene licencia <a href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons CC-BY-NC</a>. Este post no es una traducción en sí, pero como está basado en él me parece justo y obligatorio respetarla. Así que este post está basado en el artículo <a href="http://wsmoak.net/2015/07/05/phoenix-on-heroku.html">Deploying a Phoenix app to Heroku</a>, de <a href="http://wsmoak.net/about.html">Wendy Smoak</a>, y también está licenciado bajo la <a href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons CC-BY-NC</a>, digan lo que digan el resto de posts de este blog.</p>
+
+<!-- more -->
+
+
+<h2>Requisitos</h2>
+
+<p>Para poder llevar a cabo el despliegue, necesitamos todas estas herramientas. Yo lo he probado con estas versiones:</p>
+
+<ul>
+<li>Elixir, versión 1.3.1. El cuál, necesita Erlang/OTP, por ejemplo la versión 19</li>
+<li>Phoenix, versión 1.2.1</li>
+<li>Phoenix necesita de NodeJS, yo tengo instalada la versión 5.12.0; y también necesita (normalmente) de una base de datos, comúnmente, PostgreSQL, yo he utilizado la versión 9.5, que viene mi distribución Ubuntu</li>
+<li>Git, versión 2.7.4</li>
+<li>Heroku toolbelt, versión 3.43.14; Heroku CLI, versión 5.6.31; este post también asume que nos hemos dado de alta en Heroku y hemos configurado estas herramientas.</li>
+</ul>
+
+
+<h2>Creando una aplicación Phoenix</h2>
+
+<p>Crear el esqueleto de una aplicación Phoenix es ridículamente sencillo, simplemente un comando:</p>
+
+<pre><code>$ mix phoenix.new rchavarria_deploys_phoenix_heroku
+[ ... ]
+Fetch and install dependencies? [Yn] Y
+[ ... ]
+</code></pre>
+
+<p>Para poder llevar un control de lo que hacemos o dejamos de hacer, pondremos la aplicación bajo un control de versiones. Además, Heroku está pensado para funcionar con aplicaciones donde el control de versiones es Git, así que...</p>
+
+<pre><code>$ cd rchavarria_deploys_phoenix_heroku
+$ git init
+$ git add .
+$ git commit -m "Primera piedra de la aplicación Phoenix desplegada en Heroku"
+</code></pre>
+
+<p>Si queremos, podemos subir esta aplicación a GitHub u otro servicio que nos permita tener nuestras aplicación bajo Git.</p>
+
+<h2>Creando una aplicación Heroku</h2>
+
+<p>También es muy sencillo:</p>
+
+<pre><code>$ heroku create
+Creating app... done, ⬢ dry-anchorage-96713
+https://dry-anchorage-96713.herokuapp.com/ | https://git.heroku.com/dry-anchorage-96713.git
+Git remote heroku added
+</code></pre>
+
+<p>También se puede indicar el nombre de nuestra app en el comando <code>heroku create</code>. Heroku nos ha dado un nombre aleatorio, y podremos acceder a ella a través de la URL <a href="https://dry-anchorage-96713.herokuapp.com/">https://dry-anchorage-96713.herokuapp.com/</a>.</p>
+
+<p>Heroku habrá añadido un nuevo <em>remote</em> a nuestro repositorio de <code>git</code>:</p>
+
+<pre><code>$ git remote -v
+heroku  https://git.heroku.com/dry-anchorage-96713.git (fetch)
+heroku  https://git.heroku.com/dry-anchorage-96713.git (push)
+</code></pre>
+
+<h2>Añadiendo <em>buildpacks</em> a la applicación Heroku</h2>
+
+<blockquote><p>Los <a href="https://devcenter.heroku.com/articles/buildpacks">buildpacks</a> son los encargados de transformar el código desplegado en un <em>slug</em>, el cual puede ser ejecutado en un <em>dyno</em>.</p></blockquote>
+
+<p>Y después de toda esa jerga de Heroku, en cristiano quiere decir algo así: los <em>buildpacks</em> son un conjunto de herramientas que convierten y empaquetan tu código de forma que puedan ser ejecutados por la infraestructura de Heroku.</p>
+
+<p>Heroku proporciona buildpacks por defecto: Java, Python, PHP, JavaScript,... Pero afortunadamente, también existen para Elixir y Phoenix, aunque no están mantenidos por Heroku.</p>
+
+<p>Primero, debemos añadir el buildpack para Phoenix, conocido como <a href="https://github.com/gjaldon/heroku-buildpack-phoenix-static">Phoenix static buildpack</a>:</p>
+
+<pre><code>$ heroku buildpacks:set https://github.com/gjaldon/phoenix-static-buildpack
+Buildpack set. Next release on dry-anchorage-96713 will use https://github.com/gjaldon/phoenix-static-buildpack.
+Run git push heroku master to create a new release using this buildpack.
+</code></pre>
+
+<p>Después, añadimos el <a href="https://github.com/HashNuke/heroku-buildpack-elixir">buildpack de Elixir</a>, configurándolo en primera posición:</p>
+
+<pre><code>$ heroku buildpacks:add --index 1 https://github.com/HashNuke/heroku-buildpack-elixir
+Buildpack added. Next release on dry-anchorage-96713 will use:
+  1. https://github.com/HashNuke/heroku-buildpack-elixir
+  2. https://github.com/gjaldon/phoenix-static-buildpack
+Run git push heroku master to create a new release using these buildpacks.
+</code></pre>
+
+<h2>Ultimando los detalles del despliegue</h2>
+
+<p>Si intentamos realizar ahora el despliegue, obtendremos un error:</p>
+
+<pre><code>$ git push heroku master
+[ ... ]
+remote: -----&gt; Fetching app dependencies with mix
+remote:     ** (Code.LoadError) could not load [...]/config/prod.secret.exs
+[ ... ]
+remote: ! Push rejected to dry-anchorage-96713.
+[ ... ]
+</code></pre>
+
+<p>Para poder desplegar, necesitamos subir el fichero <code>prod.secret.exs</code>. Pero ese fichero está ignorado en <code>.gitignore</code>, por lo que no será subido mediante el comando <code>git push heroku master</code>. Y está ignorado por una buena razón. Ese fichero suele contener información sensible.</p>
+
+<p>Pero tiene solución. Debemos sustituir la información sensible por valores tomados de variables de entorno. Editamos <code>prod.secret.exs</code>, de forma que quede parecido a:</p>
+
+<pre><code>use Mix.Config
+
+# In this file, we keep production configuration that
+# you likely want to automate and keep it away from
+# your version control system.
+#
+# You should document the content of this
+# file or create a script for recreating it, since it's
+# kept out of version control and might be hard to recover
+# or recreate for your teammates (or you later on).
+config :rchavarria_deploys_phoenix_heroku, RchavarriaDeploysPhoenixHeroku.Endpoint,
+  secret_key_base: System.get_env("SECRET_KEY_BASE")
+
+# Configure your database
+config :rchavarria_deploys_phoenix_heroku, RchavarriaDeploysPhoenixHeroku.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  username: System.get_env("DATABASE_USERNAME"),
+  password: System.get_env("DATABASE_PASSWORD"),
+  database: "rchavarria_deploys_phoenix_heroku_prod",
+  pool_size: 20
+</code></pre>
+
+<p>También debemos editar <code>.gitignore</code>, para dejar de ignorar <code>prod.secret.exs</code>.</p>
+
+<p>No olvides hacer commit de estos cambios:</p>
+
+<pre><code>$ git add .
+$ git commit -m "Incluir prod.secret.exs, sustituyendo secretos por variables de entorno"
+</code></pre>
+
+<h2>Desplegando</h2>
+
+<p>Ahora sí, ya podemos desplegar.</p>
+
+<p>El despliegue no debería dar ningún problema, porque aunque no hemos creado ninguna variable de entorno, la aplicación básica de Phoenix no accede a la base de datos, por lo que la configuración de <code>prod.secret.exs</code> no debería tener ningún efecto todavía.</p>
+
+<pre><code>$ git push heroku master
+remote: -----&gt; Elixir app detected
+remote: -----&gt; Installing Erlang 18.3 (changed)
+remote: -----&gt; Installing Elixir v1.3.4 (changed)
+remote: -----&gt; Compiling
+remote: Generated rchavarria_deploys_phoenix_heroku app
+remote:        Installing Node 6.9.2...
+remote: -----&gt; Building dependencies
+remote: -----&gt; Finalizing build
+remote: -----&gt; Launching...
+remote:        https://dry-anchorage-96713.herokuapp.com/ deployed to Heroku
+remote: Verifying deploy... done.
+To https://git.heroku.com/dry-anchorage-96713.git
+</code></pre>
+
+<p>Y se puede ver la aplicación accediendo a <a href="https://dry-anchorage-96713.herokuapp.com/">https://dry-anchorage-96713.herokuapp.com/</a> (si es que todavía existe como aplicación Heroku).</p>
+
+<h2>Completando la configuración</h2>
+
+<p>Tarde o temprano, vamos a necesitar que nuestra aplicación acceda a la base de datos. Por lo que tendremos que configurar nuestras variables de entorno. Para ello, son necesarios dos pasos:</p>
+
+<ol>
+<li>Configurarlas y exportarlas en Heroku (documentación sobre <a href="https://devcenter.heroku.com/articles/config-vars">variables de configuración de Heroku</a>)</li>
+</ol>
+
+
+<p><code>
+$ heroku config:set SECRET_KEY_BASE=&lt;y aquí mi secreto&gt;
+$ heroku config:set SOME_VAR=&lt;el valor para esta variable&gt;
+</code></p>
+
+<ol>
+<li>Editar (o crear) <code>elixir_buildpack.config</code> en la raíz del proyecto. Aquí deberemos configurar qué variables queremos exportar. Cuidado, porque estos valores sobreescriben los exportados por los buildpacks, por lo que deberemos incluir aquellas que incluyan los buildpacks de Elixir y Phoenix. Un ejemplo de <code>elixir_buildpack.config</code> podría ser tan sencillo como:</li>
+</ol>
+
+
+<p><code>
+configu_vars_to_export=(DATABASE_URL SECRET_KEY_BASE)
+</code></p>
+
+<h2>Agradecimientos</h2>
+
+<p>Todo el mérito de esta información no es mío, es gracias a <a href="http://wsmoak.net/about.html">Wendy Smoak</a>, autora del post sobre el que se basa este; <a href="http://hashnuke.com/">HashNuke</a>, autor del buildpack para Elixir; <a href="http://gabrieljaldon.com/">gjaldon</a>, autor del buildpack para Phoenix; y otros que ayudaron a Wendy con sus dudas.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Elixir: noveno asalto]]></title>
@@ -871,157 +1062,6 @@ aplicación</li>
 <li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-06/exercise-04-round-06.exs">exercise-04-round-06</a>: escribir una aplicación que pida datos a un organismo
 de EEUU sobre el tiempo, parsee los datos XML y los muestre de forma
 agradable</li>
-</ul>
-
-
-<h2>Enseñar lo aprendido, y repetir desde el paso 7</h2>
-
-<p>Aquí está, este post, mis notas, mis pensamientos, mis dudas y mi código. Hasta
-el siguiente asalto.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Elixir: quinto asalto]]></title>
-    <link href="http://rchavarria.github.io/blog/2016/09/11/elixir-quinto-asalto/"/>
-    <updated>2016-09-11T11:43:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2016/09/11/elixir-quinto-asalto</id>
-    <content type="html"><![CDATA[<p>Y ya vamos por el quinto asalto, el quinto de la serie sobre el aprendizaje del
-lenguaje <a href="http://elixir-lang.org/">Elixir</a>. En este asalto aprenderemos estructuras de control de flujo,
-esenciales en cualquier lenguaje de programación. No sé en otros lenguajes
-funcionales, pero en Elixir, estas estructuras no son muy bien acogidas. De
-todas formas, son parte del lenguaje, son sencillas y nos servirán para
-establecer conexiones con lenguajes que ya conozcamos.</p>
-
-<p>Para seguir con el aprendizaje, sigo con el método seguido en otros asaltos
-partiendo del post <a href="/blog/2016/01/17/aprendiendo-elixir/">aprendiendo Elixir</a>:</p>
-
-<ul>
-<li>Aprender lo suficiente para comenzar</li>
-<li>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</li>
-<li>Aprender lo suficiente para hacer algo de utilidad</li>
-<li>Enseñar lo aprendido</li>
-</ul>
-
-
-<p><img class="right" src="/images/2016/fight-II-harc-II.jpg"></p>
-
-<div style="text-align: center">
-  <span style="font-size: 60%">
-Imagen basada en <a href="https://flic.kr/p/6bQhPq">Fight II / Harc II</a> de <a href="https://www.flickr.com/photos/silangel/">silangel</a>, <a href="https://creativecommons.org/licenses/by-nc/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>
-  </span>
-</div>
-
-
-
-
-<!-- more -->
-
-
-<h2>Aprender lo suficiente para comenzar</h2>
-
-<p>En Elixir no se usan mucho, se suelen escribir métodos pequeños, que junto con
-claúsulas de guarda y <em>pattern matching</em> nos alejan bastante de lo que aquí
-estudiaremos. Normalmente, se suelen favorecer esos mecanismos frente a
-estructuras de control. Al principio cuesta acostumbrarse, pero luego uno se va
-dando cuenta de que los cuerpos de los métodos quedan más pequeños y más
-enfocados a hacer una sola cosa, aunque despista un poco que una misma función
-tenga varios cuerpos.</p>
-
-<p><strong><code>if</code> y <code>unless</code></strong></p>
-
-<p>```</p>
-
-<h1>Ambos toman dos parámetros, una condición y una <em>keyword list</em>, cuyas claves posibles son <code>do:</code> y <code>else:</code>.</h1>
-
-<p>if 1 == 2, do: "truthy", else: "falsy"
-unless 2 == 1, do: "do not execute", else: "execute this"</p>
-
-<h1>igual que las funciones, se puede acortar un poco</h1>
-
-<p>if 1 == 2 do
-  "truthy"
-else
-  "falsy"
-end
-```</p>
-
-<p><strong><code>cond</code></strong></p>
-
-<p>En realidad es una macro, como muchas otras construciones del lenguaje, y
-acepta una serie de condiciones. Se ejecutará el código de la primera condición
-que se evalúe a <code>true</code>.</p>
-
-<p>```</p>
-
-<h1>Resolver la kata FizzBuzz</h1>
-
-<p>cond do
-  rem(current, 3) == 0 and rem(current, 5) == 0 -> "FizzBuzz"
-  rem(current, 5) == 0 -> "Buzz"
-  rem(current, 3) == 0 -> "Fizz"
-  true -> current
-end
-```</p>
-
-<p>En muchos casos, una mejor alternativa puede ser utilizar múltiples funciones,
-pattern matching y claúsulas de guarda en lugar del bloque <code>cond</code>.</p>
-
-<p><strong><code>case</code></strong></p>
-
-<p><code>case</code> permite evaluar una serie de patrones, y ejecuta el código asociado a
-dicho patrón. También se pueden usar claúsulas de guarda.</p>
-
-<p>```</p>
-
-<h1>para controlar errores al abrir un fichero</h1>
-
-<p>case File.open("some file.txt") do
-  { :ok, file } -> IO.puts "First line: #{IO.read(file, :line)}"
-  { :error, reason } -> IO.puts "Failed to open file: #{reason}"
-end</p>
-
-<h1>con claúsulas de guarda</h1>
-
-<p>dave = %{name: "Dave", age: 27}
-case dave do
-  person = %{age: age} when is_number(age) and age >= 21 -> IO.puts "You are allowed #{person.name}"
-  _ -> IO.puts "You are not allowed"
-end
-```</p>
-
-<p><strong>Excepciones</strong></p>
-
-<p>Las excepciones en Elixir se usan para casos excepcionales. Por ejemplo, si hay
-un fallo al leer un fichero de configuración, con un nombre fijo. Pero no si
-hay un error al leer un fichero que el usuario ha introducido el nombre,
-podemos controlar eso, y no sería un error excepcional.</p>
-
-<p>```</p>
-
-<h1>lanzando una RuntimeError</h1>
-
-<p>raise "Giving up"</p>
-
-<h1>o con algunos argumentos</h1>
-
-<p>raise RuntimeError, message: "Stack overflow"</p>
-
-<h1>por convención, se suele escribir <code>!</code> al final de una llamada que puede</h1>
-
-<h1>devolver una excepción bien conocida, por ejemplo</h1>
-
-<p>{ ok: file } = File.open!("foo.bar")
-```</p>
-
-<h2>Aprender lo suficiente para hacer algo de utilidad</h2>
-
-<ul>
-<li>[exercise-01-round-05.exs]: reescribe la kata FizzBuzz con <code>case</code></li>
-<li>[exercise-02-round-05.exs]: muchas funciones tienen una segunda
-implementación, que termina con <code>!</code>, la cual, si el resultado no coincide con
-<code>{ :ok, data }</code> lanza una excepción. Implementa una función <code>ok!</code> que haga
-exactamente esto</li>
 </ul>
 
 
