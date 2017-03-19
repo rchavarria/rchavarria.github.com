@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Cómo desplegar una aplicación Elixir/Phoenix en Heroku"
-date: 2017-03-17 13:44
+date: 2017-03-19 13:44
 author: Ruben Chavarria
 comments: true
 categories: 
