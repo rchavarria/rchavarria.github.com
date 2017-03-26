@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2017-03-19T15:48:46+01:00</updated>
+  <updated>2017-03-26T20:11:43+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,98 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Ready player one]]></title>
+    <link href="http://rchavarria.github.io/blog/2017/03/26/ready-player-one/"/>
+    <updated>2017-03-26T20:52:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2017/03/26/ready-player-one</id>
+    <content type="html"><![CDATA[<h5>de Ernest Cline</h5>
+
+<h2>Por qué lo he leído</h2>
+
+<p><img class="left" src="http://rchavarria.github.io/images/2017/ready-player-one.jpg"></p>
+
+<p>La primera vez que leí una recomendación sobre el libro fue en <a href="http://www.microsiervos.com/archivo/libros/ready-player-one.html">Microsiervos</a>.
+Comentaban que era un libro de ciencia ficción relacionado con los videojuegos
+con muchísimas referencias a videojuegos de los años 80.</p>
+
+<p>Al principio no estaba seguro si me gustaría o no. Puede que conozca unos
+cuantos juegos de los 80, pero por aquellos años yo era aún un niño, así que no
+estaba seguro de que fuera a entender todas esas referencias.</p>
+
+<p>Pero más adelante, los de Microsiervos lo volvieron a recomendar, y un poco
+después escuché otra recomendación por parte de Kevin Kelly en el
+<a href="http://fourhourworkweek.com/2016/06/05/kevin-kelly-ai-virtual-reality-and-the-inevitable">podcast de Tim Ferris</a>. Uno no se puede resistir a tantas recomendaciones.</p>
+
+<h2>De qué trata el libro</h2>
+
+<p>La historia que cuenta el libro está ubicada en un tiempo futuro. Un tiempo
+donde todo gira alrededor de internet. La vida digital tiene más peso que la
+vida <em>analógica</em>. Pero no todo el mundo se puede permitir las mejores
+conexiones a internet.</p>
+
+<p>El protagonista es un estudiante que no tiene una vida fácil. Pero le apasionan
+los videojuegos.</p>
+
+<p>Un creador de videojuegos ha creado el mejor videojuego de todos los tiempos.
+Es un juego de realidad virtual donde cada jugador está representado por un
+avatar y la acción se desarrolla en un mundo virtual. Ese mundo tiene multitud
+de escenarios, planetas, ciudades y edificios, los avatares se reúnen, chatean
+o hacen videoconferencias. Vamos, todo lo que se puede hacer online, se hace a
+través del videojuego. El hecho es que el creador del juego muere, pero antes
+de morir organiza un concurso dentro del videojuego, y aquel que gane el
+concurso obtendrá un premio que le cambiará la vida.</p>
+
+<p>El concurso trata de encontrar tesoros, de buscar pistas, de superar
+pruebas,&#8230; Todos ellos referenciando a juegos de la juventud del creador de
+juegos, que resulta que son juegos reales de los años 80 y 90. Un jugador
+importante de este concurso, es nuestro protagonista, que por más suerte que
+otra cosa, es quien supera la primera prueba, lo que desencadena una carrera
+frenética por conseguir el premio.</p>
+
+<h2>Conclusiones y valoración</h2>
+
+<p>El libro es una pasada. La historia es sencilla, a veces predecible, pero tiene
+unos cuantos giros inesperados que te hacen disfrutar. La trama no es
+complicada para nada de seguir. Aún así, hace infinitos guiños a la historia de
+los videojuegos. Personalmente, no he entendido todos de ellos, pero si has
+jugado a algún videojuego en tu vida, seguro que sentirás muchas conexiones.</p>
+
+<p>También resulta muy interesante para alguien muy relacionado con la tecnología,
+como yo, pues el autor describe hardware y software que podrían ser realidad
+hoy en día, pero quizá no están muy extendidos entre la gente o es una
+tecnología un poco verde todavía, pero puede que sean realidad dentro de pocos
+años.</p>
+
+<p>Si eres un apasionado de los videojuegos (aunque no hayas conocido los inicios
+de ellos) o si eres un apasionado de la tecnología, estoy seguro de que este
+libro te encantará y disfrutarás leyéndolo. Y si no te apetece leer, puedes
+esperar a la película (prevista para marzo de 2018, según <a href="http://www.imdb.com/title/tt1677720/?ref_=nv_sr_1">IMDB</a>).</p>
+
+<h2>Notas tomadas</h2>
+
+<p>Simplemente, tomé esta nota:</p>
+
+<blockquote><p>(Hablando sobre comecocos) Permitía vencer a un rival controlado por
+ordenador. En un juego como ese, un jugador humano con talento siempre podía
+ganar a la máquina, porque el software no era capaz de improvisar. O bien
+reaccionaba aleatoriamente, o en un número limitado de formas
+predeterminadas, basadas en una cifra finita de condiciones programadas con
+antelación. Ese era un axioma de los videojuegos, y seguiría siéndolo hasta
+que los seres humanos inventen la verdadera inteligencia artificial.</p></blockquote>
+
+<p>¿Estaremos ya cerca de ese <em>final</em>? Espero que no. Los videojuegos perderán su
+gracia.</p>
+
+<h2>Referencias</h2>
+
+<ul>
+<li><a href="http://www.amazon.es/gp/product/B00UVAREXK/">Ready player one</a> en Amazon</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Cómo desplegar una aplicación Elixir/Phoenix en Heroku]]></title>
@@ -4027,90 +4119,6 @@ rangos: <code>a..b = 4..8</code>, funciones privadas</li>
 <h2>Enseñar lo aprendido</h2>
 
 <p>Aquí está, este post, mis notas, mis pensamientos, mis dudas y mi código. Hasta el siguiente asalto.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[El código fuente no es suficientemente grande para los dos]]></title>
-    <link href="http://rchavarria.github.io/blog/2016/01/31/codigo-no-suficientemente-grande-para-dos/"/>
-    <updated>2016-01-31T20:29:00+01:00</updated>
-    <id>http://rchavarria.github.io/blog/2016/01/31/codigo-no-suficientemente-grande-para-dos</id>
-    <content type="html"><![CDATA[<p>En biología, el concepto de repetirse a uno mismo es fundamental. Ninguno de
-nosotros existiríamos si los primeros organismos unicelulares no hubieran sido
-capaces de desarrollar el mecanismo de mitosis, la capacidad de multiplicarse,
-de crear réplicas de sí mismos. Para los niños, la repetición también es
-importante. Aprenden por imitación, repitiendo lo que observan en el
-comportamiento de los demás.</p>
-
-<p><img class="right" src="http://rchavarria.github.io/images/2016/mitosis.png"></p>
-
-<p>A la hora de desarrollar software, la repetición no está vista con tan buenos
-ojos. Por ejemplo, se ha dado un nombre despectivo a los programas que crean
-copias de sí mismos, como los <em>virus</em>. Por otro lado, la duplicidad de código
-de una aplicación produce muchos quebraderos de cabeza a aquellos de nosotros
-que nos dedicamos al software. Para recordárnoslo, contamos con el <strong>principio
-<em>D.R.Y., don&#8217;t repeat yourself</em>, o dicho de otro modo, no te repitas a tí mismo</strong>.</p>
-
-<!-- more -->
-
-
-<blockquote><p>Cada pieza de conocimiento debe tener una representación dentro de un sistema
-  única, inequívoca y acreditada ~ <em>C2 Wiki</em> (traducción libre)</p></blockquote>
-
-<p>Normalmente este concepto se cumple cuando hay dos segmentos de código con el
-mismo texto, pero no se limita a ello. Puede que existan dos clases que hace
-exactamente lo mismo, pero los métodos o las variables tienen distinto nombre.
-También puede haber duplicidades en ficheros de configuración, o en la
-documentación. Por lo tanto, hay que tener en cuenta que <strong>D.R.Y. no es
-duplicidad de texto, si no de conceptos</strong>.</p>
-
-<p>Debemos prestar atención a duplicidades en los tests, por ejemplo a la hora de
-realizar las verificaciones. En muchas herramientas de testing existen los
-<em>custom matchers</em>, que nos ayudan precisamente a reducir estas duplicidades.</p>
-
-<p>J.B.Rainsberger ha escrito mucho sobre el tema, muy relacionado con el libro
-<em><a href="https://leanpub.com/4rulesofsimpledesign">4 rules of simple design</a></em>, de Corey Haines, quien al final las reduce a dos
-reglas básicas: dar nombre a las abstracciones y eliminar duplicidades creando
-nuevas abstracciones. Pero también existen otras técnicas para reducir
-conceptos duplicados, como las refactorizaciones <strong>extraer método</strong> y <strong>extraer
-clase</strong>, sin olvidar la más usada, la <strong>herencia</strong>, aunque no está muy bien
-considerada.</p>
-
-<p>Menos duplicaciones puede significar <strong>mayores niveles de indirección</strong>, lo que
-puede hacer que el código sea algo más difícil de leer y seguir la pista,
-porque para no duplicar, los detalles están dispersos en distintos lugares. La
-<strong>metaprogramación</strong> puede ser también una técnica para eliminar duplicados,
-pero hace el código mucho más difícil de leer. Más incluso que la indirección.</p>
-
-<p>En contraposición al principio D.R.Y., está el principio W.E.T. Pensaba que
-significaba <strong>W</strong>rite <strong>E</strong>verything <strong>T</strong>wice (escríbelo todo dos veces), pero
-también he leído que las siglas pueden significar: <strong>W</strong>e <strong>E</strong>dit
-<strong>T</strong>erribly, o <strong>W</strong>e <strong>E</strong>njoy <strong>T</strong>yping (mucho más divertidos, ¿verdad?).</p>
-
-<p>Por último, algo que me ha parecido fabuloso, una frase que describe la
-programación orientada a objetos, donde recuerda los conceptos de encapsulación
-(<em>shy</em>), eliminar duplicados (<em>dry</em>) y paso de mensajes entre objetos (<em>tell, don&#8217;t
-ask</em>):</p>
-
-<blockquote><p>Keep it shy, dry, and tell the other guy</p></blockquote>
-
-<h2>Recursos</h2>
-
-<ul>
-<li>Charla <a href="https://www.youtube.com/watch?v=Is8ThG6Fetg">Mantaining balance while reducing duplication</a>, de David Chelimsky</li>
-<li>Dave Thomas en CodeNewbie podcast: en la <a href="http://www.codenewbie.org/podcast/the-pragmatic-programmer-i">parte 1</a> cuenta la historia de cómo
-nació el libro <em>The pragmatic programmer</em>, sobre cómo decidieron hacer todo
-ellos mismos y cómo de ahí nació su editorial. En la <a href="http://www.codenewbie.org/podcast/the-pragmatic-programmer-part-ii">parte 2</a> me ha llamado la
-atención su opinión sobre las Katas. Comenta que lo importante de la kata no es
-el ejercicio en sí, sino la repetición, hacer el ejercicio sin pensar en la
-solución. De esta forma hacemos que nuestro cerebro reconozca patrones y
-aprendamos sin darnos cuenta.</li>
-<li><a href="http://www.c2.com/cgi/wiki?DontRepeatYourself">DontRepeatYourself</a> en la C2 Wiki</li>
-<li>Artículo sobre <a href="http://blog.thecodewhisperer.com/2013/12/07/putting-an-age-old-battle-to-rest/">los 4 elementos del diseño simple</a>, de J.B.Rainsberger</li>
-<li>Charla de la CAS2015: <a href="http://www.slideshare.net/programania/software-economics-tradeoffs-of-decoupled-softwre">Economía del software y dependencias</a>, de Luis Artola
-y Guillermo Gutiérrez</li>
-</ul>
-
 ]]></content>
   </entry>
   
