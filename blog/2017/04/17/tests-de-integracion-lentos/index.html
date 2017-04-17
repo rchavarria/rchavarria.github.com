@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Tests de integración lentos - R. Chavarria's Blog</title>
+  <meta name="author" content="Rub&eacute;n Chavarr&iacute;a">
+
+  
+  <meta name="description" content="Es una sensación extraña, pero me pasa a veces. Se supone que las máquinas, los ordenadores, son más rápidos que nosotros haciendo según qué cosas. &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://rchavarria.github.io/blog/2017/04/17/tests-de-integracion-lentos/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="R. Chavarria's Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36829645-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">R. Chavarria's Blog</a></h1>
+  
+    <h2>Proud of developing software, proud of being an Engineer</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:rchavarria.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archivos</a></li>
+  <li><a href="/readings">Lista de lectura</a></li>
+  <li><a href="/pet-projects">Proyectos</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Tests de integración lentos</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-04-17T21:56:00+02:00" pubdate data-updated="true">Apr 17<span>th</span>, 2017</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Es una sensación extraña, pero me pasa a veces. Se supone que las máquinas, los ordenadores, son más rápidos que nosotros haciendo según qué cosas. Aún así, hay muchas veces que me desespero. Seguro que más de una vez te has puesto de los nervios porque tu ordenador tardaba mucho en finalizar una tarea: copiar un fichero, abrir un documento, cargar una página web,&#8230; Pues una cosa que me exaspera mientras estoy trabajando es esperar a que los tests terminen de ejecutarse.</p>
+
+<p>El post de hoy va de una historia de abuelo cebolleta: hace un tiempo, tuvimos una <em>discusión</em> en la oficia, dentro del equipo con el que trabajo. Estuvimos discutiendo sobre cómo hacer nuestros tests de integración más rápidos.</p>
+
+<p>Por aquel momento teníamos un gran número de tests de integración, más o menos emparejado con el número de tests unitarios. Bueno, sí, ya empezamos mal. Estoy de acuerdo con la teoría de que es mucho mejor tener una <a href="https://martinfowler.com/bliki/TestPyramid.html"><em>pirámide</em> de tests</a>, no un <a href="https://watirmelon.blog/2012/01/31/introducing-the-software-testing-ice-cream-cone/">cucurucho de tests</a>. Pero esa era nuestra realidad. La verdad es que a día de hoy, hemos conseguido tener muchos más tests unitarios que de integración, pero esa es otra historia.</p>
+
+<!-- more -->
+
+
+<p>Evidentemente, cuantos más tests de integración tenemos, más tiempo tardan éstos en ejecutarse. Pero eso no es excusa para quedarnos de brazos cruzados y esperar un cuarto de hora a que terminen de pasar los tests. La verdad es que sí, que tardan un rato en completarse. Son de integración, y el que no accede a la base de datos, accede a disco, y el que no hace una petición HTTP, el que no&#8230; Coges la idea ¿verdad? Integración. Acceso a sistemas externos. Len ti tud. ¡Ay!</p>
+
+<p>J.B. Rainsberger ya lo lleva diciendo mucho tiempo: los <a href="http://blog.thecodewhisperer.com/permalink/integrated-tests-are-a-scam">tests de integración son un dolor</a>, y además, hacen que cada vez vayas más lento. Pero eso no quita que no sea necesario un cierto número de tests de integración.</p>
+
+<!-- imagen gif animado de alguna chorrada de test unitario pero no de integración -->
+
+
+<div style="width: 640px; margin: 0 auto">
+  <iframe src='https://gfycat.com/ifr/HotOrangeCoypu' frameborder='0' scrolling='no' width='640' height='640' allowfullscreen></iframe>
+</div>
+
+
+<p>Y entonces&#8230; ¿qué puntos se discutían?</p>
+
+<p>Por una lado cada tests individual se encarga de dejar la base de datos tal y como estaba antes de ejecutarse (propiedad de <em>aislamiento</em> de los tests). Pero, ¿por qué? ¿Qué tal si al lanzar los tests se crea una nueva base de datos? Limpia, desde cero, y los tests la dejan en un estado cualquiera, no necesariamente limpia. De esta forma, los tests serán más rápidos, ya que se ahorran unas cuantas llamadas para limpiar datos. Por supuesto, utilizaríamos una base de datos distinta a la de cualquier entorno existente, no queremos que los tests interfieran con ellos.</p>
+
+<p>Pero había algunos problemas. Los datos <em>basura</em> de unos tests podrían interferir en otros tests. O los últimos en ejecutarse podrían depender de tests anteriores y no darnos cuenta.</p>
+
+<p>Por otro lado, si descuidamos los tests y no hacemos que limpien todo, terminaremos por ser vagos y hacer malos tests. Podemos incluso tener errores al borrar algunos registros. Total, nos da igual, en la siguiente ejecución, los tests van a empezar con una base de datos limpia.</p>
+
+<p>También, utilizando la misma base de datos que en desarrollo, nos aseguramos que testeamos algo real, algo que usamos en nuestro día a día (aunque tenga sus diferencias con la de producción, por supuesto). Si lo hacemos contra otra base de datos, podemos estar desactualizados en algunas configuraciones, podemos estar falseando algunas características.</p>
+
+<p>Además de todo eso, también surgieron ideas curiosas, por ejemplo, paralelizar la ejecución de los tests. Quizá así podríamos acelerar su ejecución. Por lo pronto, lo que sí hicimos para mejorar el tiempo de ejecución fue minimizar al máximo en número de conexiones a la base de datos desde los tests. No recuerdo la cifra, pero redujimos por lo menos un tercio el tiempo de ejecución de los tests de integración.</p>
+
+<p>Y tú, ¿qué crees? ¿qué sería mejor? ¿utilizar una base de datos nuevecita para cada ejecución de los tests?</p>
+
+<h2>Referencias</h2>
+
+<ul>
+<li><a href="https://martinfowler.com/bliki/TestPyramid.html">Pirámide de tests</a>, en contraposición al <a href="https://watirmelon.blog/2012/01/31/introducing-the-software-testing-ice-cream-cone/">cucurucho de tests</a></li>
+<li>Los <a href="http://blog.thecodewhisperer.com/permalink/integrated-tests-are-a-scam">tests de integración son un dolor</a></li>
+<li><a href="http://agileinaflash.blogspot.com.es/2009/02/first.html">Propiedades FIRST</a> de los tests</li>
+</ul>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Ruben Chavarria</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-04-17T21:56:00+02:00" pubdate data-updated="true">Apr 17<span>th</span>, 2017</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/team-discussion/'>team discussion</a>, <a class='category' href='/blog/categories/tests/'>tests</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rchavarria.github.io/blog/2017/04/17/tests-de-integracion-lentos/" data-via="rchavarriat" data-counturl="http://rchavarria.github.io/blog/2017/04/17/tests-de-integracion-lentos/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2017/03/26/ready-player-one/" title="Previous Post: Ready player one">&laquo; Ready player one</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2017/04/17/tests-de-integracion-lentos/">Tests de integración lentos</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2017/03/26/ready-player-one/">Ready player one</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2017/03/19/desplegar-aplicacion-elixir-phoenix-heroku/">Cómo desplegar una aplicación Elixir/Phoenix en Heroku</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2017/03/05/the-nature-of-software-developent/">The nature of software developent</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2017/01/29/elixir-noveno-asalto/">Elixir: noveno asalto</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("rchavarriat", 4, true);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/rchavarriat">@rchavarriat</a></p>
+  
+</section>
+
+
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/rchavarriat?count=5&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/rchavarriat">My Delicious Bookmarks &raquo;</a></p>
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2017 - Rub&eacute;n Chavarr&iacute;a -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'rchavarria-github-com';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://rchavarria.github.io/blog/2017/04/17/tests-de-integracion-lentos/';
+        var disqus_url = 'http://rchavarria.github.io/blog/2017/04/17/tests-de-integracion-lentos/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

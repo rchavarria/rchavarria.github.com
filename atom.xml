@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2017-03-26T20:11:43+02:00</updated>
+  <updated>2017-04-17T22:09:36+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,57 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Tests de integración lentos]]></title>
+    <link href="http://rchavarria.github.io/blog/2017/04/17/tests-de-integracion-lentos/"/>
+    <updated>2017-04-17T21:56:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2017/04/17/tests-de-integracion-lentos</id>
+    <content type="html"><![CDATA[<p>Es una sensación extraña, pero me pasa a veces. Se supone que las máquinas, los ordenadores, son más rápidos que nosotros haciendo según qué cosas. Aún así, hay muchas veces que me desespero. Seguro que más de una vez te has puesto de los nervios porque tu ordenador tardaba mucho en finalizar una tarea: copiar un fichero, abrir un documento, cargar una página web,&#8230; Pues una cosa que me exaspera mientras estoy trabajando es esperar a que los tests terminen de ejecutarse.</p>
+
+<p>El post de hoy va de una historia de abuelo cebolleta: hace un tiempo, tuvimos una <em>discusión</em> en la oficia, dentro del equipo con el que trabajo. Estuvimos discutiendo sobre cómo hacer nuestros tests de integración más rápidos.</p>
+
+<p>Por aquel momento teníamos un gran número de tests de integración, más o menos emparejado con el número de tests unitarios. Bueno, sí, ya empezamos mal. Estoy de acuerdo con la teoría de que es mucho mejor tener una <a href="https://martinfowler.com/bliki/TestPyramid.html"><em>pirámide</em> de tests</a>, no un <a href="https://watirmelon.blog/2012/01/31/introducing-the-software-testing-ice-cream-cone/">cucurucho de tests</a>. Pero esa era nuestra realidad. La verdad es que a día de hoy, hemos conseguido tener muchos más tests unitarios que de integración, pero esa es otra historia.</p>
+
+<!-- more -->
+
+
+<p>Evidentemente, cuantos más tests de integración tenemos, más tiempo tardan éstos en ejecutarse. Pero eso no es excusa para quedarnos de brazos cruzados y esperar un cuarto de hora a que terminen de pasar los tests. La verdad es que sí, que tardan un rato en completarse. Son de integración, y el que no accede a la base de datos, accede a disco, y el que no hace una petición HTTP, el que no&#8230; Coges la idea ¿verdad? Integración. Acceso a sistemas externos. Len ti tud. ¡Ay!</p>
+
+<p>J.B. Rainsberger ya lo lleva diciendo mucho tiempo: los <a href="http://blog.thecodewhisperer.com/permalink/integrated-tests-are-a-scam">tests de integración son un dolor</a>, y además, hacen que cada vez vayas más lento. Pero eso no quita que no sea necesario un cierto número de tests de integración.</p>
+
+<!-- imagen gif animado de alguna chorrada de test unitario pero no de integración -->
+
+
+<div style="width: 640px; margin: 0 auto">
+  <iframe src='https://gfycat.com/ifr/HotOrangeCoypu' frameborder='0' scrolling='no' width='640' height='640' allowfullscreen></iframe>
+</div>
+
+
+<p>Y entonces&#8230; ¿qué puntos se discutían?</p>
+
+<p>Por una lado cada tests individual se encarga de dejar la base de datos tal y como estaba antes de ejecutarse (propiedad de <em>aislamiento</em> de los tests). Pero, ¿por qué? ¿Qué tal si al lanzar los tests se crea una nueva base de datos? Limpia, desde cero, y los tests la dejan en un estado cualquiera, no necesariamente limpia. De esta forma, los tests serán más rápidos, ya que se ahorran unas cuantas llamadas para limpiar datos. Por supuesto, utilizaríamos una base de datos distinta a la de cualquier entorno existente, no queremos que los tests interfieran con ellos.</p>
+
+<p>Pero había algunos problemas. Los datos <em>basura</em> de unos tests podrían interferir en otros tests. O los últimos en ejecutarse podrían depender de tests anteriores y no darnos cuenta.</p>
+
+<p>Por otro lado, si descuidamos los tests y no hacemos que limpien todo, terminaremos por ser vagos y hacer malos tests. Podemos incluso tener errores al borrar algunos registros. Total, nos da igual, en la siguiente ejecución, los tests van a empezar con una base de datos limpia.</p>
+
+<p>También, utilizando la misma base de datos que en desarrollo, nos aseguramos que testeamos algo real, algo que usamos en nuestro día a día (aunque tenga sus diferencias con la de producción, por supuesto). Si lo hacemos contra otra base de datos, podemos estar desactualizados en algunas configuraciones, podemos estar falseando algunas características.</p>
+
+<p>Además de todo eso, también surgieron ideas curiosas, por ejemplo, paralelizar la ejecución de los tests. Quizá así podríamos acelerar su ejecución. Por lo pronto, lo que sí hicimos para mejorar el tiempo de ejecución fue minimizar al máximo en número de conexiones a la base de datos desde los tests. No recuerdo la cifra, pero redujimos por lo menos un tercio el tiempo de ejecución de los tests de integración.</p>
+
+<p>Y tú, ¿qué crees? ¿qué sería mejor? ¿utilizar una base de datos nuevecita para cada ejecución de los tests?</p>
+
+<h2>Referencias</h2>
+
+<ul>
+<li><a href="https://martinfowler.com/bliki/TestPyramid.html">Pirámide de tests</a>, en contraposición al <a href="https://watirmelon.blog/2012/01/31/introducing-the-software-testing-ice-cream-cone/">cucurucho de tests</a></li>
+<li>Los <a href="http://blog.thecodewhisperer.com/permalink/integrated-tests-are-a-scam">tests de integración son un dolor</a></li>
+<li><a href="http://agileinaflash.blogspot.com.es/2009/02/first.html">Propiedades FIRST</a> de los tests</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Ready player one]]></title>
@@ -3669,456 +3720,6 @@ de trabajo un lugar mejor.</p></blockquote>
 <li>Charla de Sandro Mancuso, <a href="https://vimeo.com/167722761">The long road</a></li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Elixir: primer asalto]]></title>
-    <link href="http://rchavarria.github.io/blog/2016/02/09/elixir-primer-asalto/"/>
-    <updated>2016-02-09T21:57:00+01:00</updated>
-    <id>http://rchavarria.github.io/blog/2016/02/09/elixir-primer-asalto</id>
-    <content type="html"><![CDATA[<p>Éste es el primer asalto de mi aprendizaje de <a href="http://elixir-lang.org/">Elixir</a>. En él, no espero
-resolver problemas súper complicados, es un primer contacto con el lenguaje. Me
-conformaré con ser capaz de escribir un programa algo más complicado que un
-simple hola mundo. En este primer asalto, lucho con tipos de datos, funciones
-(anónimas y con nombre), pattern matching, claúsulas de guarda y módulos.</p>
-
-<p>En estos asaltos, intentaré seguir los siguientes pasos:</p>
-
-<ul>
-<li>Aprender lo suficiente para comenzar</li>
-<li>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</li>
-<li>Aprender lo suficiente para hacer algo de utilidad</li>
-<li>Enseñar lo aprendido</li>
-</ul>
-
-
-<p><img class="center" src="http://rchavarria.github.io/images/2016/touch-gloves-derived-small.png"></p>
-
-<div style="text-align: center">
-  <span style="font-size: 60%">
-Imagen basada en <a href="https://flic.kr/p/awy1vc">Touch Gloves</a> de <a href="https://www.flickr.com/photos/kaiban/">Jack Zallum</a>, <a href="https://creativecommons.org/licenses/by-nc/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by-nc/2.0/legalcode">CC BY-NC 2.0</a>
-  </span>
-</div>
-
-
-
-
-<!-- more -->
-
-
-<h2>Aprender lo suficiente para comenzar</h2>
-
-<p><strong>Instalación</strong></p>
-
-<p>Instalar la máquina virtual de Erlang y el entorno de Elixir es extremadamente
-sencillo. Aquí están los comandos para hacerlo en una máquina con Ubuntu como
-sistema operativo. En la <a href="http://elixir-lang.org/install.html">documentación de Elixir</a> hay instrucciones para otros
-sistemas operativos.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb
-</span><span class='line'>$ sudo dpkg -i erlang-solutions_1.0_all.deb
-</span><span class='line'>$ sudo apt-get update
-</span><span class='line'>$ sudo apt-get install esl-erlang
-</span><span class='line'>$ sudo apt-get install elixir</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Editores</strong></p>
-
-<p>La comunidad de Elixir ha creado plugins para los editores de código más
-famosos, entre ellos <a href="http://www.vim.org/">Vim</a>, que utilizo para mis <a href="http://rchavarria.github.io/pet-projects/">proyectos personales</a>.</p>
-
-<p>Instalar el plugin <a href="https://github.com/elixir-lang/vim-elixir">vim-elixir</a> en Vim es facilísimo si instalas plugins con
-pathogen:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ git clone https://github.com/elixir-lang/vim-elixir.git ~/.vim/bundle/vim-elixir</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Herramientas</strong></p>
-
-<p><code>iex</code> es una herramienta de tipo REPL (read, evaluate, print, loop), que nos
-permite ejecutar código Elixir de forma rápida. El comando <code>iex &lt;fichero.exs&gt;</code>
-compila un script de Elixir y lo carga en la herramienta. Si ya estamos dentro
-de ella, el comando para compilar el código Elixir de un fichero sería <code>c
-"&lt;fichero exs&gt;"</code>.</p>
-
-<p><strong>Pattern matching</strong></p>
-
-<p>El operador <code>=</code> es muy diferente a lo que esperamos de él los que estamos
-acostumbrados a la programación orientada a objetos. Tiene una apariencia
-similar, pero no se comporta de la misma forma. Con este operador, Elixir trata
-de hacer coincidir los valores de la izquierda con los valores de la derecha.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>a = 2
-</span><span class='line'>[a, b, a] = [1, 2, 1]
-</span><span class='line'>[^a, b] = [2, 3]
-</span><span class='line'>[a, b, c] = [1, 2, [3, 4, 5]]   # c vale [3, 4, 5]</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Inmutabilidad</strong></p>
-
-<p>¿Es eficiente devolver una copia de los datos? En los lenguajes funcionales, no
-se modifican los datos, se devuelve una copia de ellos transformados. Parece
-ineficiente, pero es todo lo contrario. Al no modificarse los originales, éstos
-pueden compartirse por muchas variables, y pueden estar tranquilos, ya que no
-se va a modificar. En los lenguajes no funcionales, se devuelve una copia (no
-eficiente), en los funcionales, en realidad no se devuelve una copia, se
-comparte todo lo que se puede. Por lo que es más eficiente.</p>
-
-<p>¿Qué pasa con el recolector de basura? ¿Consume muchos recursos para deshacerse
-de todos esos datos transformados que ya no se utilizan? No consume mucho, en
-Elixir (en Erlang en realidad), hay muchos procesos, cada uno con un <em>heap</em>
-distinto, por lo que el heap es más pequeño que en otros lenguajes, y el
-recolector de basura se ejecuta bastante más rápido.</p>
-
-<p><strong>Tipos de datos</strong></p>
-
-<p>Y por fin algo de código:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># enteros
-</span><span class='line'>this_is_an_int = 1234
-</span><span class='line'>this_is_an_int = 0xcafe    # admite hexadecimal
-</span><span class='line'>this_is_an_int = 0o765     # octal
-</span><span class='line'>this_is_an_int = 0b01010   # binario
-</span><span class='line'>this_is_an_int = 1_000_000
-</span><span class='line'>
-</span><span class='line'># en coma flotante
-</span><span class='line'>this_is_a_float = 1.0
-</span><span class='line'>this_is_a_float = 0.245
-</span><span class='line'>this_is_a_float = .342        # error
-</span><span class='line'>this_is_a_float = 314159.0e-5
-</span><span class='line'>
-</span><span class='line'># rangos
-</span><span class='line'>this_is_a_range = 1..100
-</span><span class='line'>
-</span><span class='line'># expresiones regulares
-</span><span class='line'>this_is_a_regexp = ~r{regexp}options
-</span><span class='line'>
-</span><span class='line'># tuplas
-</span><span class='line'>this_is_a_tuple = { :ok, 42, "next" }
-</span><span class='line'>
-</span><span class='line'># listas: se parecen a los arrays de otros lenguajes, pero no
-</span><span class='line'>#lo son. Son estructuras enlazadas. Una lista o está vacía, o
-</span><span class='line'>#contiene un head y un tail, donde tail es otra lista
-</span><span class='line'>this_is_a_list = [ 1, 2, 3 ]
-</span><span class='line'>
-</span><span class='line'># mapas: lista de parejas clave/valor 
-</span><span class='line'>this_is_a_map = %{ key =&gt; value, key =&gt; value }
-</span><span class='line'># si las claves son Atoms, se puede escribir
-</span><span class='line'>this_is_a_map = %{ red: 0xFF0000, green: 0x00FF00, blue: 0x0000FF }
-</span><span class='line'>
-</span><span class='line'># binarios: para acceder a datos como una secuencia de bits y bytes (para muy bajo nivel)</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Hay otros tipos de datos, como los PIDs (referencias a procesos locales o
-remotos) o los puertos (referencias a recursos sobre los cuales leeremos o
-escribiremos).</p>
-
-<p>Un tipo de datos muy interesante (y que yo personalmente no conocía) son los
-<em>Atoms</em>: constantes representando el nombre de algo. Su nombre es su valor. Dos
-Atoms son igules si tienen el mismo nombre, vengan de donde vengan (incluso de
-máquinas diferentes)</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># atoms
-</span><span class='line'>this_is_an_atom = :fred
-</span><span class='line'>this_is_an_atom = :is_binary?
-</span><span class='line'>this_is_an_atom = :var@32
-</span><span class='line'>this_is_an_atom = :&lt;&gt;
-</span><span class='line'>this_is_an_atom = :"lo john silver"</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Hay dos estructuras muy similares, la lista de palabras clave: <code>[red: 0xFF000,
-green: 0x00FF00]</code>, que se transforma en <code>[{:red, 0xFF0000}, {:green,
-0x00FF00}]</code> y un mapa <code>%{red: 0xFF000, green: 0x00FF00}</code>. Se recomienda usar la
-lista de palabras clave para pasar parámetros y usar los mapas cuando se
-necesite un array asociativo.</p>
-
-<p>No hemos dicho nada de las cadenas. Pertenecen al tipo <em>Binario</em>. Existe
-interpolación de cadenas, con <code>#{...}</code> se evalúa el código de dentro y se
-formatea la cadena con el valor obtenido.</p>
-
-<p><strong>Funciones anónimas</strong></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sum = fn (a, b) -&gt; a + b end
-</span><span class='line'>sum.(2, 3)   # devuelve 5</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Las funciones pueden devolver otras funciones. Las funciones recuerdan su
-entorno original. Forman lo que se conoce como <em>closures</em>. Me recuerda mucho a
-las funciones de JavaScript en este aspecto.</p>
-
-<p>Existe una forma de crear funciones anónimas de una forma muy concisa, con el
-operador <code>&amp;...</code></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sum = fn (a, b) -&gt; a + b end
-</span><span class='line'>sum2 = &(&1 + &2)   # idéntica a la función anterior
-</span><span class='line'>
-</span><span class='line'># devuelve lista con dos elementos: doble del primer parámetro, y cuadrado del mismo
-</span><span class='line'>returns_a_list = &[2 * &1, &1 * &1]
-</span><span class='line'>
-</span><span class='line'># esta notación viene muy bien para pasar funciones por parámetro
-</span><span class='line'>Enum.map [1, 2, 3] &(&1 * &1)   # devuelve [1, 4, 9]</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Es normal ver la definición de una función como <code>&amp;map/2</code>, donde <code>map</code> es el
-nombre de la función y <code>2</code> es el <em>arity</em>, el número de parámetros de la misma.</p>
-
-<p><strong>Módulos, funciones con nombre y funciones privadas</strong></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>defmodule Times do
-</span><span class='line'>  ## define una función en una única línea
-</span><span class='line'>  def double(n), do: n * 2
-</span><span class='line'>
-</span><span class='line'>  ## define una función en varias líneas
-</span><span class='line'>  def triple(n) do
-</span><span class='line'>    n * 3
-</span><span class='line'>  end
-</span><span class='line'>
-</span><span class='line'>  ## define una función privada
-</span><span class='line'>  defp quadruple(n) do: n * 4
-</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Las funciones con nombre pueden tener varios cuerpos. Eso ayuda a utilizar
-<em>pattern matching</em> a la hora de implementar una solución.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>defmodule Factorial do
-</span><span class='line'>  # el factorial de 0, siempre es 1, esta definición es quien para la recursividad
-</span><span class='line'>  def of(0), do: 1
-</span><span class='line'>
-</span><span class='line'>  # el factorial de cualquier otro número, es recursivo
-</span><span class='line'>  def of(n), do: n * factorial(n - 1)
-</span><span class='line'>end
-</span><span class='line'>
-</span><span class='line'>Factor.of(5)
-</span><span class='line'>  # =&gt; 120</span></code></pre></td></tr></table></div></figure>
-
-
-<p>También, las definiciones pueden tener claúsulas de guarda, mediante <code>when
-&lt;condition&gt;</code>, lo que ayuda a tener un pattern matching más específico.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>defmodule Guard do
-</span><span class='line'>  def what_is(x) when is_number(x) do
-</span><span class='line'>    IO.puts "#{x} is a number"
-</span><span class='line'>  end
-</span><span class='line'>  def what_is(x) when is_list(x) do
-</span><span class='line'>    IO.puts "#{x} is a list"
-</span><span class='line'>  end
-</span><span class='line'>  def what_is(x) when is_atom(x) do
-</span><span class='line'>    IO.puts "#{x} is an atom"
-</span><span class='line'>  end
-</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>El operador tubería (pipe)</strong></p>
-
-<p>El operador <code>|&gt;</code> toma el resultado de una función y lo pasa como primer
-parámetro de la segunda función. <code>String.reverse "foobar" |&gt; String.capitalize</code></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>filing = DB.find_customers
-</span><span class='line'>           |&gt; Orders.for_customers
-</span><span class='line'>           |&gt; sales_tax(2016)
-</span><span class='line'>           |&gt; prepare_filing
-</span><span class='line'>      
-</span><span class='line'>list
-</span><span class='line'>  |&gt; sales_taxes(2016)
-</span><span class='line'>  |&gt; prepare_filing
-</span><span class='line'>
-</span><span class='line'># es lo mismo que llamar
-</span><span class='line'>prepare_filing( sales_taxes(list, 2016) )</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Parámetros por defecto</strong></p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>defmodule DefaultParams do
-</span><span class='line'>  def func(p1, p2 \\ 2) do
-</span><span class='line'>    IO.inspect [p1, p2]
-</span><span class='line'>  end
-</span><span class='line'>end
-</span><span class='line'>
-</span><span class='line'>Example.func("a", "b")
-</span><span class='line'>  # =&gt; ["a", "b"]
-</span><span class='line'>
-</span><span class='line'>Example.func("a")
-</span><span class='line'>  # =&gt; ["a", 2]</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Librerías</strong></p>
-
-<p>Se pueden buscar módulos y librerías ya implementados para realizar ciertas
-tareas que necesitemos, para ello, está la documentación de <a href="http://elixir-lang.org/docs.html">librerías de Elixir</a>.
-Si no encontramos ahí lo que buscamos, lo podemos buscar en <a href="http://erlang.org/doc/">librerías de Erlang</a>.</p>
-
-<h2>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</h2>
-
-<p><strong>¿Qué hace <code>^</code> en el pattern matching?</strong></p>
-
-<p>El operador <code>^</code> obliga a que el valor actual de una variable coincida con el
-valor en la expresión de <em>pattern matching</em>. En caso de no coincidir, se
-producirá un error.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>a = 2
-</span><span class='line'>[^a, b] = [2, 3]  ## no hay error, `a` valía `2` y aquí coinciden
-</span><span class='line'>[^a, b] = [1, 3]  ## error</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Tuplas, <em>keyword list</em> y mapas</strong></p>
-
-<p>Las <em>keyword list</em> son una lista usadas muy a menudo, tienen la forma:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>keyword_list = [ red: 0xFF0000, green: 0x00FF00, blue: 0x0000FF ]</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Pero no es más que una forma simplificada de escribir una lista de tuplas,
-donde el primer valor de cada una de ellas es un Atom:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>tuple_list = [ {:red, 0xFF000}, {:green, 0x00FF00}, {:blue, 0x0000FF} ]</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Una estructura muy parecida a estas son los mapas, que no son más que un
-conjunto de parejas clave-valor:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>a_map = %{ :red =&gt; 0xFF000, :green =&gt; 0x00FF00, :blue =&gt; 0x0000FF }</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>Aprender lo suficiente para hacer algo de utilidad</h2>
-
-<ul>
-<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-01/round-01-exercise-01.exs">round-01-exercise-01.exs</a>: utilizar varios cuerpos de una función y
-recursividad para implementar una función que calcule la suma de <code>1</code> hasta
-<code>n</code></li>
-<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-01/round-01-exercise-02.exs">round-01-exercise-02.exs</a>: implementar la función <code>gcd(x, y)</code> que calcule el
-máximo común divisor. Matemáticamente: <code>gcd(x, y)</code> es <code>x</code> si <code>y</code> es cero y es
-<code>gcd(y, rem(x, y))</code> en caso contrario</li>
-<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-01/round-01-exercise-03.exs">round-01-exercise-03.exs</a>: crear el juego <em>Estoy pensando en un número entre
-el 1 y el 100</em>: rangos, div(a, b), claúsulas de guarda, pattern matching en
-rangos: <code>a..b = 4..8</code>, funciones privadas</li>
-</ul>
-
-
-<h2>Enseñar lo aprendido</h2>
-
-<p>Aquí está, este post, mis notas, mis pensamientos, mis dudas y mi código. Hasta el siguiente asalto.</p>
 ]]></content>
   </entry>
   
