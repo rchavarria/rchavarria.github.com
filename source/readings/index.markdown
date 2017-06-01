@@ -29,6 +29,7 @@ Así que aquí está mi Lista de Lectura:
 
 - [Front-end developer handbook 2017](https://www.gitbook.com/book/frontendmasters/front-end-handbook-2017/), de [Code Lindley](http://codylindley.com/) y esponsorizado por [Frontend Masters](https://frontendmasters.com/)
 - [Essential Angular](https://leanpub.com/essential_angular/), de Victor Savkin
+- [El asesinato de Pitágoras](https://www.amazon.es/El-Asesinato-Pit%C3%A1goras-Marcos-Chicot-ebook/dp/B00C7COZHI), de Marcos Chicot, recomendado por twitter por [Ricardo Borillo](https://twitter.com/borillo)
 - [Down and out in the magic kindom](http://craphound.com/down/download/), de Cory Doctorow (208 pág). Visto en algún post, y como es un libro no técnico, pues a la lista.
 - [Code Complete](http://www.stevemcconnell.com/cc.htm), de Steve McConnell, recomendado por John Sonmez en uno de sus [vídeos](https://www.youtube.com/watch?v=aG5ks3de_wQ) y en varios episodios del podcast Developer On Fire
 - [The new one minute manager](https://www.amazon.com/New-One-Minute-Manager/dp/0062367544), de Ken Blanchard, recomendado por [Jorge (@flipper83)](https://twitter.com/flipper83) y [Carlos Blé](https://twitter.com/carlosble)
