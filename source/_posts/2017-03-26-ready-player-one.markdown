@@ -30,6 +30,8 @@ Pero más adelante, los de Microsiervos lo volvieron a recomendar, y un poco
 después escuché otra recomendación por parte de Kevin Kelly en el
 [podcast de Tim Ferris]. Uno no se puede resistir a tantas recomendaciones.
 
+<!-- more -->
+
 ## De qué trata el libro
 
 La historia que cuenta el libro está ubicada en un tiempo futuro. Un tiempo
