@@ -1,0 +1,418 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Elixir: décimo asalto - R. Chavarria's Blog</title>
+  <meta name="author" content="Rub&eacute;n Chavarr&iacute;a">
+
+  
+  <meta name="description" content="En este asalto aprenderemos qué son los Supervisores OTP y cómo se puede
+crear una estructura jerárquica de ellos de forma que monitoricen nuestros &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://rchavarria.github.io/blog/2017/06/07/elixir-decimo-asalto/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="R. Chavarria's Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36829645-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">R. Chavarria's Blog</a></h1>
+  
+    <h2>Proud of developing software, proud of being an Engineer</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:rchavarria.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archivos</a></li>
+  <li><a href="/readings">Lista de lectura</a></li>
+  <li><a href="/pet-projects">Proyectos</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Elixir: décimo asalto</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-06-07T21:29:00+02:00" pubdate data-updated="true">Jun 7<span>th</span>, 2017</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>En este asalto aprenderemos qué son los <a href="https://elixir-lang.org/getting-started/mix-otp/supervisor-and-application.html">Supervisores OTP</a> y cómo se puede
+crear una estructura jerárquica de ellos de forma que monitoricen nuestros
+procesos y sean capaz de arrancar nuevos procesos en caso de que alguno de
+ellos falle. También veremos cómo unos procesos sirven de ayuda para guardar el
+estado de aquellos procesos que necesitan ser tolerantes a fallos.</p>
+
+<p>Todo esto, siguiendo el <a href="/blog/2016/01/17/aprendiendo-elixir/">método de aprendizaje</a> con el que comenzé la serie:</p>
+
+<ul>
+<li>Aprender lo suficiente para comenzar</li>
+<li>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</li>
+<li>Aprender lo suficiente para hacer algo de utilidad</li>
+<li>Enseñar lo aprendido</li>
+</ul>
+
+
+<p><img class="center" src="/images/2017/darth-grader.jpg"></p>
+
+<div style="text-align: center">
+  <span style="font-size: 60%">
+Imagen basada en <a href="https://flic.kr/p/pxJ3o5">Darth Grader</a> de <a href="https://www.flickr.com/photos/jdhancock/">JD Hancock</a>, <a href="https://creativecommons.org/licenses/by/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>
+  </span>
+</div>
+
+
+
+
+<!-- more -->
+
+
+<h2>Aprender lo suficiente para comenzar</h2>
+
+<h4>Supervisores OTP</h4>
+
+<p>La forma de hacer las cosas en Elixir es no preocuparse mucho por el código que
+falla, si no asegurarse de que la aplicación en general sigue corriendo. Suena
+contradictorio, pero no lo es. En Elixir los procesos son muy pequeñitos, por
+lo que si uno de ellos falla, casi todo el sistema sigue funcionando. Al
+contrario que en otros lenguajes, donde el lanzamiento de una excepción puede
+hacer que todo el servidor sufra. <strong>En el mundo OTP, los supervisores son
+quienes monitorizan y recuperan esos procesos fallidos</strong>.</p>
+
+<p>Un supervisor en Elixir tiene un único propósito: manejar uno o más <em>workers</em>
+(otro tipo de procesos). La forma de funcionar es darle una lista de procesos e
+indicarle qué hacer con cada uno de ellos en caso de que falle. La forma más
+fácil de crear un supervisor es crear un nuevo proyecto con <code>mix</code> y usar el
+flag <code>--sup</code>.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>defmodule Sequence do
+</span><span class='line'>  use Application
+</span><span class='line'>  def start(_type, _args) do
+</span><span class='line'>    import Supervisor.Spec, warn: false
+</span><span class='line'>    children = [
+</span><span class='line'>      worker(Sequence.Worker, [arg1, arg2, arg3])
+</span><span class='line'>    ]
+</span><span class='line'>    opts = [strategy: :one_for_one, name: Sequence.Supervisor]
+</span><span class='line'>
+</span><span class='line'>    # create the supervisor with a list of workers and some options
+</span><span class='line'>    Supervisor.start_link(children, opts)
+</span><span class='line'>  end
+</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
+
+
+<h4>Gestionando el estado del servidor entre reinicios</h4>
+
+<p>Como se puede comprobar al jugar con el supervisor y el servidor creados en el
+[Ejercio 01], el servidor es reiniciado, pero no mantiene el estado anterior al
+fallo, si no que siempre se reinicia con el estado inicial, indicado a la hora
+de crear el supervisor. Esto se puede mejorar.</p>
+
+<p>La forma de mantener el estado es almacenándolo fuera del proceso servidor.
+Esto se hace mediante un nuevo <em>worker</em>, un nuevo servidor, al que se le llama
+<em>stash</em>. Nuestro servidor almacenará su estado actual en ese <em>stash worker</em>. El
+<em>stash worker</em> debe ser monitorizado por un supervisor diferente, por lo que
+tenemos que crear un arbol de supervisores. En este árbol, nuestro <em>worker</em>
+principal debe conocer el PID del <em>stash</em>, con lo que la forma de crear el
+árbol cambia ligeramente de la forma que hemos visto anteriormente.</p>
+
+<p><img class="center" src="/images/2017/supervisor-tree.png"></p>
+
+<p>La aplicación funcionaría de la siguiente forma:</p>
+
+<ol>
+<li>Primero, arrancamos el supervisor raíz del árbol, pasándole el valor inicial
+que será el estado inicial del sistema</li>
+<li>Este supervisor arranca el <em>stash worker</em>, pasando el valor inicial (porque
+este worker almacenará el estado del sistema) y arranca un sub-supervisor,
+pasándole el PID del stash</li>
+<li>El sub-supervisor arranca el worker principal, el que contiene la lógica,
+quien incrementa el valor inicial con el que arrancamos el sistema</li>
+<li>El worker principal, nada más arrancar, consulta al stash worker el estado
+actual, y es con ese estado con el que va a trabajar</li>
+<li>Si el worker principal falla por cualquier causa, debe enviar su estado al
+stash worker, para que lo almacene</li>
+<li>El sub-supervisor detectará que el proceso a muerto y reiniciará de nuevo el
+worker principal, que leerá el estado del worker que murió del stash worker</li>
+</ol>
+
+
+<h2>Aprender lo suficiente para hacer algo de utilidad</h2>
+
+<ul>
+<li><a href="https://github.com/rchavarria/learning-elixir/tree/master/code/round-10/stack">Ejercicio 1</a>: añade un supervisor a la aplicación anterior que implementaba
+una pila de enteros</li>
+</ul>
+
+
+<p><strong>Resultado</strong></p>
+
+<p>Increíble, increíble que sea tan fácil. Lo primero, el supervisor arranca él
+solito y levanta el servidor él solito también. Super cómodo. Luego, captura
+los errores y levanta de nuevo el servidor sin que nosotros tengamos que hacer
+nada más. Para hacer fallar a la pila, se podía hacer con un
+<code>Stack.Server.push -1</code>. El supervisor captura el fallo, y rearranca el
+servidor.</p>
+
+<ul>
+<li><a href="https://github.com/rchavarria/learning-elixir/tree/master/code/round-10/sequence">Ejercicio 2</a>: vuelve a crear una aplicación similar a la anterior, pero
+creando un árbol de supervisores, y un stash worker, de forma que cuando el
+worker principal falle, el estado sea guardado. Comprueba que el sistema
+mantiene el estado cuando el worker principal falla</li>
+</ul>
+
+
+<h2>Enseñar lo aprendido, y repetir desde el paso 7</h2>
+
+<p>Aquí está, este post, mis notas, mis pensamientos, mis dudas y mi código. Hasta
+el siguiente asalto.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Ruben Chavarria</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-06-07T21:29:00+02:00" pubdate data-updated="true">Jun 7<span>th</span>, 2017</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/elixir/'>elixir</a>, <a class='category' href='/blog/categories/learning/'>learning</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rchavarria.github.io/blog/2017/06/07/elixir-decimo-asalto/" data-via="rchavarriat" data-counturl="http://rchavarria.github.io/blog/2017/06/07/elixir-decimo-asalto/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2017/04/17/tests-de-integracion-lentos/" title="Previous Post: Tests de integración lentos">&laquo; Tests de integración lentos</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2017/06/07/elixir-decimo-asalto/">Elixir: décimo asalto</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2017/04/17/tests-de-integracion-lentos/">Tests de integración lentos</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2017/03/26/ready-player-one/">Ready player one</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2017/03/19/desplegar-aplicacion-elixir-phoenix-heroku/">Cómo desplegar una aplicación Elixir/Phoenix en Heroku</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2017/03/05/the-nature-of-software-developent/">The nature of software developent</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("rchavarriat", 4, true);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/rchavarriat">@rchavarriat</a></p>
+  
+</section>
+
+
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/rchavarriat?count=5&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/rchavarriat">My Delicious Bookmarks &raquo;</a></p>
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2017 - Rub&eacute;n Chavarr&iacute;a -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'rchavarria-github-com';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://rchavarria.github.io/blog/2017/06/07/elixir-decimo-asalto/';
+        var disqus_url = 'http://rchavarria.github.io/blog/2017/06/07/elixir-decimo-asalto/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

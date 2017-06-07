@@ -4,7 +4,7 @@
   <title><![CDATA[Category: learning | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/learning/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2017-04-17T22:09:36+02:00</updated>
+  <updated>2017-06-07T21:34:59+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,146 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Elixir: décimo asalto]]></title>
+    <link href="http://rchavarria.github.io/blog/2017/06/07/elixir-decimo-asalto/"/>
+    <updated>2017-06-07T21:29:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2017/06/07/elixir-decimo-asalto</id>
+    <content type="html"><![CDATA[<p>En este asalto aprenderemos qué son los <a href="https://elixir-lang.org/getting-started/mix-otp/supervisor-and-application.html">Supervisores OTP</a> y cómo se puede
+crear una estructura jerárquica de ellos de forma que monitoricen nuestros
+procesos y sean capaz de arrancar nuevos procesos en caso de que alguno de
+ellos falle. También veremos cómo unos procesos sirven de ayuda para guardar el
+estado de aquellos procesos que necesitan ser tolerantes a fallos.</p>
+
+<p>Todo esto, siguiendo el <a href="/blog/2016/01/17/aprendiendo-elixir/">método de aprendizaje</a> con el que comenzé la serie:</p>
+
+<ul>
+<li>Aprender lo suficiente para comenzar</li>
+<li>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</li>
+<li>Aprender lo suficiente para hacer algo de utilidad</li>
+<li>Enseñar lo aprendido</li>
+</ul>
+
+
+<p><img class="center" src="/images/2017/darth-grader.jpg"></p>
+
+<div style="text-align: center">
+  <span style="font-size: 60%">
+Imagen basada en <a href="https://flic.kr/p/pxJ3o5">Darth Grader</a> de <a href="https://www.flickr.com/photos/jdhancock/">JD Hancock</a>, <a href="https://creativecommons.org/licenses/by/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>
+  </span>
+</div>
+
+
+
+
+<!-- more -->
+
+
+<h2>Aprender lo suficiente para comenzar</h2>
+
+<h4>Supervisores OTP</h4>
+
+<p>La forma de hacer las cosas en Elixir es no preocuparse mucho por el código que
+falla, si no asegurarse de que la aplicación en general sigue corriendo. Suena
+contradictorio, pero no lo es. En Elixir los procesos son muy pequeñitos, por
+lo que si uno de ellos falla, casi todo el sistema sigue funcionando. Al
+contrario que en otros lenguajes, donde el lanzamiento de una excepción puede
+hacer que todo el servidor sufra. <strong>En el mundo OTP, los supervisores son
+quienes monitorizan y recuperan esos procesos fallidos</strong>.</p>
+
+<p>Un supervisor en Elixir tiene un único propósito: manejar uno o más <em>workers</em>
+(otro tipo de procesos). La forma de funcionar es darle una lista de procesos e
+indicarle qué hacer con cada uno de ellos en caso de que falle. La forma más
+fácil de crear un supervisor es crear un nuevo proyecto con <code>mix</code> y usar el
+flag <code>--sup</code>.</p>
+
+<p>```
+defmodule Sequence do
+  use Application
+  def start(<em>type, </em>args) do</p>
+
+<pre><code>import Supervisor.Spec, warn: false
+children = [
+  worker(Sequence.Worker, [arg1, arg2, arg3])
+]
+opts = [strategy: :one_for_one, name: Sequence.Supervisor]
+
+# create the supervisor with a list of workers and some options
+Supervisor.start_link(children, opts)
+</code></pre>
+
+<p>  end
+end
+```</p>
+
+<h4>Gestionando el estado del servidor entre reinicios</h4>
+
+<p>Como se puede comprobar al jugar con el supervisor y el servidor creados en el
+[Ejercio 01], el servidor es reiniciado, pero no mantiene el estado anterior al
+fallo, si no que siempre se reinicia con el estado inicial, indicado a la hora
+de crear el supervisor. Esto se puede mejorar.</p>
+
+<p>La forma de mantener el estado es almacenándolo fuera del proceso servidor.
+Esto se hace mediante un nuevo <em>worker</em>, un nuevo servidor, al que se le llama
+<em>stash</em>. Nuestro servidor almacenará su estado actual en ese <em>stash worker</em>. El
+<em>stash worker</em> debe ser monitorizado por un supervisor diferente, por lo que
+tenemos que crear un arbol de supervisores. En este árbol, nuestro <em>worker</em>
+principal debe conocer el PID del <em>stash</em>, con lo que la forma de crear el
+árbol cambia ligeramente de la forma que hemos visto anteriormente.</p>
+
+<p><img class="center" src="/images/2017/supervisor-tree.png"></p>
+
+<p>La aplicación funcionaría de la siguiente forma:</p>
+
+<ol>
+<li>Primero, arrancamos el supervisor raíz del árbol, pasándole el valor inicial
+que será el estado inicial del sistema</li>
+<li>Este supervisor arranca el <em>stash worker</em>, pasando el valor inicial (porque
+este worker almacenará el estado del sistema) y arranca un sub-supervisor,
+pasándole el PID del stash</li>
+<li>El sub-supervisor arranca el worker principal, el que contiene la lógica,
+quien incrementa el valor inicial con el que arrancamos el sistema</li>
+<li>El worker principal, nada más arrancar, consulta al stash worker el estado
+actual, y es con ese estado con el que va a trabajar</li>
+<li>Si el worker principal falla por cualquier causa, debe enviar su estado al
+stash worker, para que lo almacene</li>
+<li>El sub-supervisor detectará que el proceso a muerto y reiniciará de nuevo el
+worker principal, que leerá el estado del worker que murió del stash worker</li>
+</ol>
+
+
+<h2>Aprender lo suficiente para hacer algo de utilidad</h2>
+
+<ul>
+<li><a href="https://github.com/rchavarria/learning-elixir/tree/master/code/round-10/stack">Ejercicio 1</a>: añade un supervisor a la aplicación anterior que implementaba
+una pila de enteros</li>
+</ul>
+
+
+<p><strong>Resultado</strong></p>
+
+<p>Increíble, increíble que sea tan fácil. Lo primero, el supervisor arranca él
+solito y levanta el servidor él solito también. Super cómodo. Luego, captura
+los errores y levanta de nuevo el servidor sin que nosotros tengamos que hacer
+nada más. Para hacer fallar a la pila, se podía hacer con un
+<code>Stack.Server.push -1</code>. El supervisor captura el fallo, y rearranca el
+servidor.</p>
+
+<ul>
+<li><a href="https://github.com/rchavarria/learning-elixir/tree/master/code/round-10/sequence">Ejercicio 2</a>: vuelve a crear una aplicación similar a la anterior, pero
+creando un árbol de supervisores, y un stash worker, de forma que cuando el
+worker principal falle, el estado sea guardado. Comprueba que el sistema
+mantiene el estado cuando el worker principal falla</li>
+</ul>
+
+
+<h2>Enseñar lo aprendido, y repetir desde el paso 7</h2>
+
+<p>Aquí está, este post, mis notas, mis pensamientos, mis dudas y mi código. Hasta
+el siguiente asalto.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Elixir: noveno asalto]]></title>
@@ -871,157 +1011,6 @@ aplicación</li>
 <li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-06/exercise-04-round-06.exs">exercise-04-round-06</a>: escribir una aplicación que pida datos a un organismo
 de EEUU sobre el tiempo, parsee los datos XML y los muestre de forma
 agradable</li>
-</ul>
-
-
-<h2>Enseñar lo aprendido, y repetir desde el paso 7</h2>
-
-<p>Aquí está, este post, mis notas, mis pensamientos, mis dudas y mi código. Hasta
-el siguiente asalto.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Elixir: quinto asalto]]></title>
-    <link href="http://rchavarria.github.io/blog/2016/09/11/elixir-quinto-asalto/"/>
-    <updated>2016-09-11T11:43:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2016/09/11/elixir-quinto-asalto</id>
-    <content type="html"><![CDATA[<p>Y ya vamos por el quinto asalto, el quinto de la serie sobre el aprendizaje del
-lenguaje <a href="http://elixir-lang.org/">Elixir</a>. En este asalto aprenderemos estructuras de control de flujo,
-esenciales en cualquier lenguaje de programación. No sé en otros lenguajes
-funcionales, pero en Elixir, estas estructuras no son muy bien acogidas. De
-todas formas, son parte del lenguaje, son sencillas y nos servirán para
-establecer conexiones con lenguajes que ya conozcamos.</p>
-
-<p>Para seguir con el aprendizaje, sigo con el método seguido en otros asaltos
-partiendo del post <a href="/blog/2016/01/17/aprendiendo-elixir/">aprendiendo Elixir</a>:</p>
-
-<ul>
-<li>Aprender lo suficiente para comenzar</li>
-<li>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</li>
-<li>Aprender lo suficiente para hacer algo de utilidad</li>
-<li>Enseñar lo aprendido</li>
-</ul>
-
-
-<p><img class="right" src="/images/2016/fight-II-harc-II.jpg"></p>
-
-<div style="text-align: center">
-  <span style="font-size: 60%">
-Imagen basada en <a href="https://flic.kr/p/6bQhPq">Fight II / Harc II</a> de <a href="https://www.flickr.com/photos/silangel/">silangel</a>, <a href="https://creativecommons.org/licenses/by-nc/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>
-  </span>
-</div>
-
-
-
-
-<!-- more -->
-
-
-<h2>Aprender lo suficiente para comenzar</h2>
-
-<p>En Elixir no se usan mucho, se suelen escribir métodos pequeños, que junto con
-claúsulas de guarda y <em>pattern matching</em> nos alejan bastante de lo que aquí
-estudiaremos. Normalmente, se suelen favorecer esos mecanismos frente a
-estructuras de control. Al principio cuesta acostumbrarse, pero luego uno se va
-dando cuenta de que los cuerpos de los métodos quedan más pequeños y más
-enfocados a hacer una sola cosa, aunque despista un poco que una misma función
-tenga varios cuerpos.</p>
-
-<p><strong><code>if</code> y <code>unless</code></strong></p>
-
-<p>```</p>
-
-<h1>Ambos toman dos parámetros, una condición y una <em>keyword list</em>, cuyas claves posibles son <code>do:</code> y <code>else:</code>.</h1>
-
-<p>if 1 == 2, do: "truthy", else: "falsy"
-unless 2 == 1, do: "do not execute", else: "execute this"</p>
-
-<h1>igual que las funciones, se puede acortar un poco</h1>
-
-<p>if 1 == 2 do
-  "truthy"
-else
-  "falsy"
-end
-```</p>
-
-<p><strong><code>cond</code></strong></p>
-
-<p>En realidad es una macro, como muchas otras construciones del lenguaje, y
-acepta una serie de condiciones. Se ejecutará el código de la primera condición
-que se evalúe a <code>true</code>.</p>
-
-<p>```</p>
-
-<h1>Resolver la kata FizzBuzz</h1>
-
-<p>cond do
-  rem(current, 3) == 0 and rem(current, 5) == 0 -> "FizzBuzz"
-  rem(current, 5) == 0 -> "Buzz"
-  rem(current, 3) == 0 -> "Fizz"
-  true -> current
-end
-```</p>
-
-<p>En muchos casos, una mejor alternativa puede ser utilizar múltiples funciones,
-pattern matching y claúsulas de guarda en lugar del bloque <code>cond</code>.</p>
-
-<p><strong><code>case</code></strong></p>
-
-<p><code>case</code> permite evaluar una serie de patrones, y ejecuta el código asociado a
-dicho patrón. También se pueden usar claúsulas de guarda.</p>
-
-<p>```</p>
-
-<h1>para controlar errores al abrir un fichero</h1>
-
-<p>case File.open("some file.txt") do
-  { :ok, file } -> IO.puts "First line: #{IO.read(file, :line)}"
-  { :error, reason } -> IO.puts "Failed to open file: #{reason}"
-end</p>
-
-<h1>con claúsulas de guarda</h1>
-
-<p>dave = %{name: "Dave", age: 27}
-case dave do
-  person = %{age: age} when is_number(age) and age >= 21 -> IO.puts "You are allowed #{person.name}"
-  _ -> IO.puts "You are not allowed"
-end
-```</p>
-
-<p><strong>Excepciones</strong></p>
-
-<p>Las excepciones en Elixir se usan para casos excepcionales. Por ejemplo, si hay
-un fallo al leer un fichero de configuración, con un nombre fijo. Pero no si
-hay un error al leer un fichero que el usuario ha introducido el nombre,
-podemos controlar eso, y no sería un error excepcional.</p>
-
-<p>```</p>
-
-<h1>lanzando una RuntimeError</h1>
-
-<p>raise "Giving up"</p>
-
-<h1>o con algunos argumentos</h1>
-
-<p>raise RuntimeError, message: "Stack overflow"</p>
-
-<h1>por convención, se suele escribir <code>!</code> al final de una llamada que puede</h1>
-
-<h1>devolver una excepción bien conocida, por ejemplo</h1>
-
-<p>{ ok: file } = File.open!("foo.bar")
-```</p>
-
-<h2>Aprender lo suficiente para hacer algo de utilidad</h2>
-
-<ul>
-<li>[exercise-01-round-05.exs]: reescribe la kata FizzBuzz con <code>case</code></li>
-<li>[exercise-02-round-05.exs]: muchas funciones tienen una segunda
-implementación, que termina con <code>!</code>, la cual, si el resultado no coincide con
-<code>{ :ok, data }</code> lanza una excepción. Implementa una función <code>ok!</code> que haga
-exactamente esto</li>
 </ul>
 
 
