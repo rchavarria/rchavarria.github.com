@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Elixir: décimo asalto"
-date: 2017-05-30 21:53
+date: 2017-06-07 21:29
 author: Ruben Chavarria
 comments: true
 categories: 
