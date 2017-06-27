@@ -20,7 +20,7 @@ Así que aquí está mi Lista de Lectura:
 
 ## Estoy leyendo
 
-- [Guía para invertir](https://www.amazon.com/Gu%C3%ADa-invertir-Spanish-Robert-Kiyosaki-ebook/dp/B007HPRRHK), de Robert Kiyosaki
+- [The coding dojo handbook](https://leanpub.com/codingdojohandbook), de Emiliy Bache
 - [Practical object-oriented design with Ruby (POODR)](http://www.poodr.com), de Sandi Metz, visto en el blog de [Carlos Blé](https://twitter.com/carlosble)
 - [Seveneves (7 Evas)](https://www.amazon.es/gp/product/8466658955), de Neal Stephenson
 - [Expertología](http://www.amazon.es/dp/8492414502), de Andrés Pérez Ortega
@@ -85,7 +85,6 @@ Así que aquí está mi Lista de Lectura:
 - [The art of Unix programming](http://www.catb.org/esr/writings/taoup), de Eric S. Raymond
 - [Beautiul Code](http://www.amazon.es/gp/product/0596510047/ref=as_li_tf_tl?ie=UTF8&camp=3626&creative=24790&creativeASIN=0596510047&linkCode=as2&tag=koalite-21), de Greg Wilson y Andy Oram, recomendado por Juanma (Gulnor), de Koalite, descrito como *porno (para desarrolladores) puro*
 - [Software craftsmanship: the new imperative](http://www.amazon.com/Software-Craftsmanship-Imperative-Pete-McBreen/dp/0201733862), de Pete McBreen
-- [The coding dojo handbook](https://leanpub.com/codingdojohandbook), de Emiliy Bache
 - [¿Qué pasaría si...? (What if...?)](http://www.amazon.es/gp/product/B00TV7HI4E), de Randall Munrow (xkcd.com), recomendado por Bill Gates
 - [Your code as a crime scene](https://pragprog.com/book/atcrime/your-code-as-a-crime-scene), de Adam Tornhill, The pragmatic bookshelf
 - [The effective engineer](https://www.theeffectiveengineer.com/book), de Edmond Lau (para aprender técnicas de ingenieros software espectaculares)
@@ -115,6 +114,7 @@ Así que aquí está mi Lista de Lectura:
 
 ## He leído
 
+- [Guía para invertir](https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/guia-para-invertir-de-robert-kiyosaki.markdown), de Robert Kiyosaki
 - [Ready player one](http://www.amazon.es/gp/product/B00UVAREXK/), de Ernest Cline, recomendado por Microsiervos varias veces, y por Kevin Kelly en el [podcast de Tim Ferriss](http://fourhourworkweek.com/2016/06/05/kevin-kelly-ai-virtual-reality-and-the-inevitable)
 - [The nature of software development](/blog/2017/03/05/the-nature-of-software-developent/), de Ron Jeffries, recomendado por [Carlos Buenosvinos](https://twitter.com/buenosvinos/status/721623461702078464/photo/1) (antes en Atrápalo Eng, ahora en Xing,...)
 - [The Phoenix project](/blog/2017/01/12/the-phoenix-project/), de Gene Kim, libro similar a [The goal](/blog/2013/04/10/la-meta) pero orientado a IT, encontrado en el [blog de Eduardo Ferro](http://www.eferro.net/2016/03/some-books-i-recently-read.html)
