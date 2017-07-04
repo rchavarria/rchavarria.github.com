@@ -20,13 +20,16 @@ Así que aquí está mi Lista de Lectura:
 
 ## Estoy leyendo
 
-- [The coding dojo handbook](https://leanpub.com/codingdojohandbook), de Emiliy Bache
+- [Crafting quality software](https://qafoo.com/book/download.html), de [Qafoo Team Blog](https://qafoo.com/blog%22), visto por twitter y que trata sobre cómo escribir código de calidad en PHP
 - [Practical object-oriented design with Ruby (POODR)](http://www.poodr.com), de Sandi Metz, visto en el blog de [Carlos Blé](https://twitter.com/carlosble)
 - [Seveneves (7 Evas)](https://www.amazon.es/gp/product/8466658955), de Neal Stephenson
 - [Expertología](http://www.amazon.es/dp/8492414502), de Andrés Pérez Ortega
 
 ## Tengo pensado leer
 
+- [Ego is the enemy](https://sivers.org/book/EgoEnemy), de Ryan Holiday, recomendado una y otra vez por [Derek Sivers](https://sivers.org/), por lo que algo tendrá que tener
+- [Competitive engineering](https://www.amazon.com/Competitive-Engineering-Handbook-Requirements-Planguage/dp/0750665076/), y [Principles of Software Engineering management](https://www.amazon.com/Principles-Software-Engineering-Management-Gilb/dp/0201192462/), ambos de Tom Gilb, recomendados en Developer on fire. Me pueden servir para tener un punto de vista ingenieril del desarrollo de software, que últimamente me está faltando mucho esa visión
+- [Developer hegemony](https://www.amazon.com/Developer-Hegemony-Erik-Dietrich/dp/0692866809/), de [Erik Dietrich](http://www.daedtech.com/), recomendado por Jose Gonzalez en [dev.to](https://dev.to/josegonz321/picks-of-the-month---may-2017). Erik ha sido entrevistado por Dave Rael en [Developer on fire](https://dev.to/developeronfire/episode-228--erik-dietrich--developer-hegemony)
 - [Front-end developer handbook 2017](https://www.gitbook.com/book/frontendmasters/front-end-handbook-2017/), de [Code Lindley](http://codylindley.com/) y esponsorizado por [Frontend Masters](https://frontendmasters.com/)
 - [Essential Angular](https://leanpub.com/essential_angular/), de Victor Savkin
 - [El asesinato de Pitágoras](https://www.amazon.es/El-Asesinato-Pit%C3%A1goras-Marcos-Chicot-ebook/dp/B00C7COZHI), de Marcos Chicot, recomendado por twitter por [Ricardo Borillo](https://twitter.com/borillo)
@@ -36,6 +39,7 @@ Así que aquí está mi Lista de Lectura:
 - [xUnit test patterns](http://xunitpatterns.com/index.html), de Gerard Meszaros
 - [The grumpy programmer's PHPUnit cookbook](https://leanpub.com/grumpy-phpunit), de Chris Hartjes, amigo de J.B.Rainsberger
 - [Mientras escribo](http://www.amazon.es/Mientras-escribo-BEST-SELLER-Stephen/dp/849759732X/), de Stephen King (traducción de *On writing*), recomendado por [Kathleen Dollard](https://twitter.com/KathleenDollard/) en el podcast [Developer on Fire #65](http://developeronfire.com/Podcast/Episodes/kathleen-dollard-relentless-dedication)
+- [The coding dojo handbook](https://leanpub.com/codingdojohandbook), de Emiliy Bache
 - [Team geek: a developer's guide to work well with others](http://www.amazon.com/dp/1449302440/), de Brian W. Fitzpatrick y Ben Collins-Sussman
 - [Quiet: The Power of Introverts in a World That Can't Stop Talking](Quiet: The Power of Introverts in a World That Can't Stop Talking), de Susan Cain, recomendado por Sarah Dutkiewicz ([@sadukie](https://twitter.com/sadukie)) en el podcast [Developer on Fire #203](http://developeronfire.com/podcast/episode-203-sarah-dutkiewicz-master-and-apprentice)
 - [Armada](https://www.amazon.es/Armada-Ernest-Cline-ebook/dp/B01C79FXQW/), de Ernest Cline, recomendado por [Rubén Fernández](http://charlascylon.com/) al ver que yo había leído Ready Player One, del mismo autor
