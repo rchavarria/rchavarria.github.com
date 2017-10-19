@@ -4,7 +4,7 @@
   <title><![CDATA[Category: personal | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/personal/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2017-06-07T21:34:59+02:00</updated>
+  <updated>2017-10-19T22:25:24+02:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,228 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[99 bottles of OOP]]></title>
+    <link href="http://rchavarria.github.io/blog/2017/10/19/99-bottles-oop/"/>
+    <updated>2017-10-19T22:06:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2017/10/19/99-bottles-oop</id>
+    <content type="html"><![CDATA[<h5>de Sandi Metz y Katrina Owen</h5>
+
+<p><img class="left" src="/images/2017/99-bottles-of-oop.jpg" width="250" height="323"></p>
+
+<h2>Por qué lo he leído</h2>
+
+<p>No conozco personalmete a ninguna de las 2 autoras, pero soy un fan de Sandi y
+colaboro en un proyecto open source de Katrina, ¿cómo no iba a leer
+<a href="https://www.sandimetz.com/99bottles">99 bottles of OOP</a>?</p>
+
+<p>Ya había leído con anterioridad el libro de Sandi, <a href="http://www.poodr.com/">Programming OODR</a> y me
+gustó muchísimo, así que este libro prometía. También había visto alguna charla
+de Katrina sobre refactorizaciones, y me asombraron muchísimo, por su claridad
+y por su calidad.</p>
+
+<!-- more -->
+
+
+<h2>Qué esperaba</h2>
+
+<p>Considero que ambas autoras son un referente en el mundo del desarrollo de
+software, por lo que esperaba que el libro me enseñara nuevos temas o ideas
+sobre los que aprender y profundizar.</p>
+
+<p>Según había escuchado en algunas entrevistas a las autoras, el libro basa sus
+<em>enseñanzas</em> en un caso real, solucionando un problema sencillo, ideal para
+realizar en katas, por lo que esperaba que todos los conceptos serían fáciles
+(o al menos más fáciles) de entender ya que estarían ilustrados con código real
+y ejecutable (mira, como si fueran tests).</p>
+
+<h2>Qué encontre</h2>
+
+<p>Encontré la historia de una refactorización. Sandi y Katrina exponen primero
+varias formas de resolver un problema, en principio sencillo, y después van
+desgranando una de ellas. Poco a poco, cambio a cambio, refactorización a
+refactorización, van cambiando el código hacia una solución muy pulida.</p>
+
+<p>Es impresionante ver cómo van justificando cada cambio. Es como leer tus
+propios pensamientos, pero un paso más allá. Muchos de los cambios que proponen
+parecen de perogrullo, pero muy pocas veces me he parado a pensar por qué me
+parecen así. Es como si racionalizaran el instinto del programador.</p>
+
+<h2>Conclusiones</h2>
+
+<p>Es impresionante cómo va describiendo la refactorización línea a línea. Elimina
+multitud de code smells, muchas veces de línea en línea, apoyándose en tests.
+Es una gozada ver cómo va quedando el código</p>
+
+<p>(...) es un acto de bondad hacia el lector de tu código. El código que revela
+su intención está construido en base a la acumulación de actos así de
+intencionados. Programa intencionadamente (escribe un <code>case</code> en lugar de un
+<code>if</code> para indicar que las condiciones están relacionadas). <strong>Es una pasada como
+el libro racionaliza estas decisiones y las explica</strong></p>
+
+<p>Resulta interesante cómo nombra las cosas, conceptos, clases, variables,...
+Nombrado es una de las cosas más difíciles en Computer Science.</p>
+
+<h2>Qué he aprendido</h2>
+
+<p>Una forma de ser mejor identificando olores en el código es practicar
+describiendo las características del código, tomando nota de las cosas que te
+llaman la atención: incluye cualquier patrón que veas, y cosas que te gustan,
+odias o que simplemente no entiendes.</p>
+
+<p>Si el código no está abierto a modificaciones y no sabes por dónde empezar...
+empieza eliminando olores en el código. No sabes cómo hacer que el código esté
+abierto a modificaciones, así que empiezas a eliminar olores, con la esperanz
+de encontrarlo por el camino</p>
+
+<p>Los programadores habilidosos hacen lo correcto cuando intuyen la verdad.
+Cuando no la intuyen, se embarcan en experimentos cuidadosos, precisos,
+reproducibles y reversibles.</p>
+
+<p>Los atajos demasiado inteligentes son una falsa economía. Invierte en código
+que diga la verdad. Simplemente escríbelo. Di no a los atajos, di no a las
+chapuzas y ñapas.</p>
+
+<p>Unos consejos que podrían resumir el libro completo serían: busca la
+simplicidad, no crees abstracciones demasiado pronto, enfócate en los olores
+del código, anda en pasos pequeños, sigue las <em>Flocking rules</em>, refactoriza
+siempre en verde, arregla los problemas sencillos primero, trabaja
+horizontalmente (cambios horizontales, nunca verticales), buscar puntos de
+estabilidad, sé disciplinado, no persigas las cosas brillantes/famosas/de moda</p>
+
+<h2>Frases que me gustaría recordar</h2>
+
+<blockquote><p>Escribir código es el proceso de encontrar el camino hasta el siguiente punto
+estable, no el punto final en sí mismo. No es el resultado final, si no el
+camino.</p></blockquote>
+
+<!-- more -->
+
+
+<blockquote><p>El código como el método <code>pluralize</code> (que devuelve <code>bottle</code> o <code>bottles</code>
+dependiendo de un número) se escribe cuando los programadores se llevan el
+principio DRY al extremo. Cuando te encuentres en una situación como esta,
+hazte las siguientes preguntas. Estas mismas preguntas también te ayudarán a
+saber si tu código es bueno o costoso.</p></blockquote>
+
+<ol>
+<li>El cambio que voy a hacer, ¿hace el código más difícil de entender? Cuando
+las abstraciones son las correctas, el código es fácil de entender.</li>
+<li>¿Cuál es el coste futuro de no hacer nada ahora? Si no hacer nada no
+incrementa los costes, retrasa los cambios.</li>
+<li>¿Cuando llegará ese momento?, o ¿cuánto tardaré en obtener más información?
+Tolera pacientemente la duplicación si haciéndolo te ayuda a descubrir la
+abstracción correcta.</li>
+</ol>
+
+
+<!-- more -->
+
+
+<blockquote><p>Kent Beck describe diferentes formas de hacer que tus tests pasen. 3 de sus
+<em>Green Bar Patterns</em> son:</p></blockquote>
+
+<ol>
+<li>Fake It ("Til You Make It"): este estilo de TDD puede parecer extraño y
+tedioso, pero con práctica puede llegar a ser natural y rápido</li>
+<li>Obvious Implementation: cuidado con ir directamente a la solucion obvia, te
+puede llevar por el camino equivocado. Desarrollar el hábito de escribir
+solamente el código suficiente para hacer que el test pase te fuerza a escribir
+mejores tests.</li>
+<li>Triangulate: dirigir las abstracciones conservativamente con los tests. La
+triangulación requiere escribir varios test de una sola vez, lo que
+significa que tendrás varios test fallando simultáneamente. La idea es escribir
+el código necesario para hacer que todos esos tests pasen de forma simultánea.</li>
+</ol>
+
+
+<!-- more -->
+
+
+<blockquote><p>Hacer que el código existente esté abierto a nuevos requisitos requiere
+normalmente de identificar y nombrar abstracciones. Las <em>Flocking Rules</em> se
+centran en hacer que las diferencias parezcan similitudes, y por eso son una
+herramienta muy útil para descubrir abstracciones. Las Flocking Rules
+seleccionan las cosas más parecidas, encuentran la menor diferencia entre ellas
+y hacen el cambio más simple para eliminar esa diferencia (evalúa el código,
+evalúa y ejecuta, evalúa y usa el código, evalúa, y finalmente borra el código
+no usado)</p></blockquote>
+
+<!-- more -->
+
+
+<blockquote><p>Cuando estés sufriendo por encontrar un buen nombre pero sólo tienes unas
+cuantas ocurrencias para guiarte, puede ser de ayuda imaginarte otras cosas que
+podrían encajar en la misma catergoría, y luego construir una tabla con los
+conceptos.</p></blockquote>
+
+<!-- more -->
+
+
+<blockquote><p>El Principio de Sustitución de Liskov también aplica a los tipos dinámicos (o
+<em>duck types</em>). Las violaciones de Liskov fuerzan a los que envían mensajes a
+tener conocimiento sobre varios tipos devueltos, y tratar con ellos de forma
+distinta o convertirlos en algo consistente.</p></blockquote>
+
+<!-- more -->
+
+
+<blockquote><p>No todos los condicionales son malos en la Programación Orientada a Objectos,
+hay un lugar para ellos. Algún objeto, en algún lugar, debe elegir qué objetos
+crear para las composiciones, y eso normalmente involucra condicionales.</p></blockquote>
+
+<!-- more -->
+
+
+<blockquote><p>Tener un <strong>data clump</strong> significa normalmente que estás necesitando un
+concepto. Cuando esta acumulación se envía como un conjunto de parámetros, el
+método que recibe el <em>clump</em> se puede ver inundado con facilidad con lógica
+para gestionarlo. Alguna de esta lógica inevitablemente acabará duplicándose en
+distintos lugares. Si dos cosas aparecen siempre juntas, es una señal de que
+esa pareja representa un concepto más profundo y que necesitamos darle un
+nombre.</p></blockquote>
+
+<!-- more -->
+
+
+<blockquote><p>Los programadores añaden líneas en blanco para acentuar cambios en la temática.
+La presencia de múltiples temas sugiere la existencia de múltiples
+responsabilidades, lo que hace el código más difícil de entender y leer,
+mientras que hace más fácil causar daños cuando haya que hacer algún cambio.</p></blockquote>
+
+<!-- more -->
+
+
+<blockquote><p>El truco para avanzar usando cambios de una sola línea es alterar temporalmente
+la factoría para tolerar varios tipos de entrada. A veces, a la hora de cambiar
+condicionnales con polimorfismo, hay momentos en los que algún código debe
+soportar varios tipos, hasta que todo el código está adaptado. Especialemente,
+si vamos haciendo cambios de una sóla línea</p></blockquote>
+
+<!-- more -->
+
+
+<blockquote><p>Corregir violaciones de Liskov es importante, porque en lenguajes orientados a
+objetos (sobretodo los tipados dinámicamente), se basan en la confianza
+explícita en los contratos implícitos entre los objetos. Se trabaja muy bien
+con objetos de confianza, porque siempre se comportan como se espera de ellos.
+Los objetos que a veces fallan en responder a un mensaje que les envías, o que
+ocasionalmente devuelven algo que no esperas, son un dolor, y requieren que los
+objetos que les llamen deban conocer demasiadas cosas.</p></blockquote>
+
+<h2>Recursos relacionados</h2>
+
+<ul>
+<li>El libro en sí: <a href="https://www.sandimetz.com/99bottles">99 bottles of OOP</a></li>
+<li><a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/99-bottles-by-sandi-katrina.notes.markdown">Notas sobre 99 bottles of OOP</a></li>
+<li>Nuevo libro, <a href="foo/bar/bar/foo.html">Refactoring to patterns</a>, de Joshua Kerievsky, donde habla de
+<em>Gradual Cutover Refactoring</em></li>
+<li>Las autoras: <a href="https://www.sandimetz.com/">Sandi Metz</a> y <a href="http://www.kytrinyx.com/">Katrina Owen</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[The nature of software developent]]></title>
@@ -833,195 +1055,6 @@ de trabajo un lugar mejor.</p></blockquote>
 <ul>
 <li><a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/the-software-craftsman-by-sandro-mancuso.markdown">Notas tomadas sobre The Software Craftsman</a></li>
 <li>Charla de Sandro Mancuso, <a href="https://vimeo.com/167722761">The long road</a></li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Mi CAS 2015]]></title>
-    <link href="http://rchavarria.github.io/blog/2015/12/13/mi-cas-2015/"/>
-    <updated>2015-12-13T21:48:00+01:00</updated>
-    <id>http://rchavarria.github.io/blog/2015/12/13/mi-cas-2015</id>
-    <content type="html"><![CDATA[<p>Me quedé sin chapa. Sin chapa de "Mi primera CAS". Conocí a varias personas que
-la llevaban orgullosos. Espero que para ellos significara lo mismo que
-significó para mí <a href="/blog/2012/11/08/mi-experiencia-en-la-cas2012/">mi primera CAS</a>.</p>
-
-<p>Ésta, como aquella, ha sido una gran experiencia. La de este año ha sido
-enooorme, comparada con la de Cáceres. Hemos asistido más de 700 personas. Ha
-tenido que ser un trabajo monumental organizarla, así que desde aquí mis
-agradecimientos y admiración a todos los que la han hecho posible:
-organizadores, patrocinadores y voluntarios. Olé!</p>
-
-<!-- more -->
-
-
-<p>La conferencia fueron dos intensos días llenos de charlas interesantísimas. Dos
-días que saben a poco. Sobretodo porque no he podido disfrutar de las cañas de
-después, o las quedadas fuera del evento. Y también porque, a pesar de que
-todos los asistentes estuviéramos en la misma sala para tomar café y comer, me
-ha resultado imposible entablar conversaciones con todas las personas que
-quería. ¡Agotador! Pero muy motivador a la vez.</p>
-
-<p>Sigamos con las charlas a las que asistí, y qué me llevé de ellas:</p>
-
-<h2><a href="http://www.slideshare.net/carlosble/cas2015-opening-improving-the-software">Apertura</a>, <a href="https://twitter.com/carlosble">Carlos Blé</a></h2>
-
-<p>Carlos habló de la necesidad de hablar inglés, no porque sí, si no para
-aprender de las fuentes. También habló de la importancia de hablar otro
-lenguaje, extraño para los desarrolladores, el de negocio. De esta forma nos
-entenderemos mejor ambas partes. Fue una charla muy inspiradora, fenommenal
-como apertura. Me quedaría con la frase:</p>
-
-<blockquote><p>Tú eres el único responsable de tu carrera</p></blockquote>
-
-<h2><a href="https://www.youtube.com/watch?v=C6Sy0v19RAc&amp;t=2h14m00s">Your application is not your framework</a>, de <a href="https://twitter.com/ecomba">Enrique Comba</a></h2>
-
-<p>¿Por qué cuando te preguntan por tu applicación dices qué framework estás
-usando? Habla sobre qué hace de verdad tu aplicación. Enrique habló de muchos
-conceptos alrededor de los frameworks: <em>convention over configuration</em>, mezcla
-de lógica de negocio con la lógica impuesta por el framework. ¿Qué beneficios
-trae separar la lógica de tu aplicación del framework? Separación de
-responsabilidades, velocidad en los tests automáticos y sobretodo claridad en
-el <strong>propósito</strong> y <strong>estructura</strong> de tu aplicación.</p>
-
-<h2><a href="http://www.slideshare.net/PeterMarshall10/pete-marshall-casmadrid2015-continuous-delivery-in-legacy-environments">Continuous delivery</a>, de <a href="https://twitter.com/petemar5hall">Peter Marshal</a></h2>
-
-<p>Peter compartió su experiencia en llevar a un equipo desde el desarrollo de una
-aplicación <em>a la vieja usanza</em> hasta alcanzar puestas en producción diarias. En
-las slides de la presentación encontrarás multitud de consejos para llevarlo a
-cabo, pero yo me quedaría con estos conceptos o enseñanzas:</p>
-
-<ul>
-<li>La entrega contínua es enfocarse en la excelencia técnica</li>
-<li>Conforme avanza el tiempo, el mayor problema de las aplicaciones con
-problemas es que los bugs aumentan mientras que las funcionalidades
-desplegadas disminuyen.</li>
-<li>La clave está en la simplicidad</li>
-<li>Lleva su tiempo madurar (equipo, producto, compañía,...)</li>
-</ul>
-
-
-<h2><a href="http://cas2015.agile-spain.org/charlas/">Building resilient integrations</a>, de <a href="https://twitter.com/cuvuligio">Dave Moore</a></h2>
-
-<p>Esta charla tuvo su parte teórica y su parte práctica. De la parte teórica,
-decir que debemos entender que los fallos están en todas partes, por lo que es
-nuestro trabajo hacer software que no falle, que sea tolerante a fallos de
-sistemas externos. Algunas técnicas para hacerlo podrían ser: tests automáticos
-(no mienten, la documentación sí), aislar integraciones que herramientas de
-terceros (creando interfaces que las separen de nuestra applicación), utilizar
-nuestro propio modelo de datos, política de reintentos de conexión,...</p>
-
-<p>En el taller de después tuvimos la oportunidad de poner todo esto en prática.
-Un taller super divertido.</p>
-
-<h2><a href="http://es.slideshare.net/juanignaciosl/continuous-integration-at-cartodb">Continuous integration in CartoBD</a>, de <a href="https://twitter.com/juanignaciosl">Juan Ignacio Sánchez</a></h2>
-
-<p>Juan Ignacio empezó fuerte, comentando que, aunque hay millones de
-herramientas, es el <strong>equipo</strong> quien realmente puede hacer que la integración,
-entrega y despliegue contínuo funcionen.</p>
-
-<p>¿Cómo lo hacen en CartoDB? Planeándolo desde antes que la gente entre a
-trabajar con ellos, despligando desde el primer día, planes iterativos e
-incrementales, tests, code reviews, pull requests, feature toggles, pequeñas
-releases a grupos controlados de usuarios (canary releases), posibilidad de
-hacer rollback rápidamente (pequeños despliegues llevan a que esto sea
-posible), análisis post-mortem de grandes fallos, mucha instrumentación y
-monitorización.</p>
-
-<h2><a href="http://www.slideshare.net/lantoli/believe-it-or-not-keynote-cas-2015-55802209">Keynote técnica</a>, de <a href="https://twitter.com/lantoli">Leo Antolí</a></h2>
-
-<p>Leo hizo incapié en lo más profundo de agile y lean: no te creas lo que te
-cuenten, pruébalo y si te funciona úsalo, si no te funciona, descártalo. Hay
-mucho estudios que dicen que una práctica es X veces mejor. Analiza esos
-estudios y te darás cuenta de que son humo. Pon en duda el pair programming,
-TDD, mejoras en productividad, code dojos, code retreats, craftsmanship, deuda
-técnica, tasa de proyectos software fallidos,...</p>
-
-<p>Como buena keynote, lo que me llevo de esta charla son pensamientos, dudas,
-cuestiones. Debo entender que el software no es el fin, es un medio para
-conseguir un fin. Deja de usar números no probados. Cuenta experiencias propias
-(no sirven para demostrar nada, pero son algo real). Y sobretodo, mantén un
-<strong>espiritu crítico</strong>.</p>
-
-<h2><a href="https://www.youtube.com/watch?v=_CcO9upHiDU&amp;t=9m20s">Keynote viernes</a>, de <a href="https://twitter.com/rachelcdavies">Rachel Davis</a></h2>
-
-<p>Esta keynote trató de introducir cambios, de introducir tiempo para el
-aprendizaje. Debemos crear tiempo para ello a lo largo de nuestra semana. No
-tengas prisa en introducir cambios, la gente necesita <strong>tiempo</strong>.</p>
-
-<p>De esta keynote quiero recordar dos consejos de Rachel: comparte lo aprendido
-(por ejemplo en esta CAS), invierte tiempo en profundizar en lo aprendido.</p>
-
-<h2><a href="https://medium.com/@borillo/el-modelo-de-desarrollo-mete-saca-be17304ad1df#.b0vwf7ben">Escapando del modelo mete-saca</a>, de <a href="https://twitter.com/borillo">Ricardo Borillo</a></h2>
-
-<p>¿Estamos seguros de que lo que quiere el usuario es un simple sistema CRUD? ¿No
-hay una forma de aportar más valor? Un CRUD es muy genérico, seguro que no
-resuelve las necesidades del usuario con la mejor eficiencia.</p>
-
-<p>Ricardo analizó qué nos lleva a este modelo: pobres historias de usuario, mal
-definidas, que nos llevan a hacer cosas generales; los frameworks (como ORMs);
-y arquitecturas de usuario pobres, con componentes maestro-detalle, consumo de
-apis REST,... todo esto nos conduce al modelo mete-saca.</p>
-
-<p>La solución propuesta por Ricardo, un único punto de entrada (en contraposición
-a los múltiples endpoints REST) con una arquitectura <a href="https://en.wikipedia.org/wiki/Command%E2%80%93query_separation#Command_Query_Responsibility_Segregation">CQRS</a>. Cada <em>comando</em>
-correspondería con una acción del usuario, una historia de usuario, un caso de
-uso muy específico, que nos conduciría a tener las mínimas funcionalidades
-desarrolladas con la máxima eficiencia y la mejor usabilidad para el usuario.</p>
-
-<h2><a href="http://www.slideshare.net/programania/software-economics-tradeoffs-of-decoupled-softwre">Economía del software</a>, de <a href="https://twitter.com/artolamola">Luis Artola</a> y <a href="https://twitter.com/ggalmazor">Guillermo Gutierrez</a></h2>
-
-<p>Luis y Guillermo nos condujeron en un viaje apasionante desde las necesidades
-de negocio hasta detalles del código, tales como las dependencias. En el
-camino, comentaron multitud de conceptos, de buenas prácticas, hicieron
-referencia a charlas de todo el evento (lo que pone de manifiesto lo amplio de
-su charla).</p>
-
-<p>Concepto clave: negocio quiere entrega de <strong>valor</strong>, minimizando <strong>costes</strong> y
-<strong>riesgos</strong> pero manteniendo <strong>opciones</strong> abiertas. El mayor en el software es
-el coste de evolución. Cuanto más difícil sea cambiar algo, más costoso será a
-lo largo del tiempo. El desarrollo iterativo e incremental reduce los riestos.
-El despliegue de pequeñas funcionalidades, interfaces, inversión de control son
-formas de crear opciones.</p>
-
-<h2><a href="http://eamodeorubio.github.io/effective-ui-bdd-with-js/short.html#/">Effective UI testing</a>, de <a href="https://twitter.com/eamodeorubio">Enrique Amodeo</a></h2>
-
-<p>Todo comenzó con el dilema: ¿debo testear cada clase individual o todo el
-sistema? Pues ni lo uno, ni lo otro. En cuanto a la interfaz gráfica, la
-podríamos dividir en dos dominios: la presentación y la lógica de usabilidad.</p>
-
-<p>¿Como testear cada parte? Para testear la presentación debemos mockear el DOM
-del navegador. Para testear la lógica de usabilida, debemos mockear el acceso
-al servidor. Basándose en eso, Enrique recomienda seguir dos prácticas:
-encapsular los accesos al servidor y los accesos al DOM.</p>
-
-<h2>Trabajo para casa</h2>
-
-<ul>
-<li>Parece que integración, entrega y despliegue contínuos son prácticas básicas para empresas exitosas.</li>
-<li>Prepara las conferencias a las que asistas: busca el lugar donde se va a
-celebrar e imprime un plano de las salas que se van a utilizar, crea una
-checklist con las cosas que hacer antes de asistir a un evento. Como por
-ejemplo prepar preguntas a hacer a gente interesante que quiero conocer (me
-gustó aquello que hiciste/dijiste, discrepo con aquello que ...)</li>
-<li>Echar un vistazo a la herramienta Screen Hero</li>
-<li>Libro recomendado por Leo Antolí: Pensar rápido, pensar despacio</li>
-<li>Libro recomendado por Rachel Davis: Drive (cómo introducir cambios)</li>
-<li>Busca slide de Rachel Davis sobre <em>Sources of learning</em></li>
-<li>Busca referencia a lo que falta de SOLID: RCCASS</li>
-<li>¿Qué es el patrón Page Object?</li>
-<li>Slide con las <em>mejores prácticas</em> recomendadas por Enrique Amodeo</li>
-</ul>
-
-
-<h2>Recursos</h2>
-
-<ul>
-<li><a href="https://gist.github.com/nhpatt/89f90a27042e4fd1db7b">Charlas, artículos y más sobre la CAS 2015</a></li>
-<li><a href="https://www.youtube.com/watch?v=C6Sy0v19RAc">Streaming del día 1</a></li>
-<li><a href="https://www.youtube.com/watch?v=_CcO9upHiDU">Streaming del día 2</a></li>
-<li><a href="http://martinfowler.com/bliki/CQRS.html">Martin Fowler acerca de CQRS</a></li>
 </ul>
 
 ]]></content>
