@@ -20,6 +20,7 @@ Así que aquí está mi Lista de Lectura:
 
 ## Estoy leyendo
 
+- [Down and out in the magic kindom](http://craphound.com/down/download/), de Cory Doctorow. Visto en algún post, y como es un libro no técnico, pues a la lista.
 - [Crafting quality software](https://qafoo.com/book/download.html), de [Qafoo Team Blog](https://qafoo.com/blog%22), visto por twitter y que trata sobre cómo escribir código de calidad en PHP
 - [Practical object-oriented design with Ruby (POODR)](http://www.poodr.com), de Sandi Metz, visto en el blog de [Carlos Blé](https://twitter.com/carlosble)
 - [Seveneves (7 Evas)](https://www.amazon.es/gp/product/8466658955), de Neal Stephenson
@@ -27,13 +28,14 @@ Así que aquí está mi Lista de Lectura:
 
 ## Tengo pensado leer
 
+- [Refactoring for Software Design Smells](https://www.amazon.co.uk/Refactoring-Software-Design-Smells-Technical/dp/0128013974/), de Girish Suryanarayana, Ganesh Samarthyam y Tushar Sharma, me recuerda mucho a los libros de Sandi Metz (refactorizaiones y demás)
 - [Ego is the enemy](https://sivers.org/book/EgoEnemy), de Ryan Holiday, recomendado una y otra vez por [Derek Sivers](https://sivers.org/), por lo que algo tendrá que tener
+- [Release it](https://pragprog.com/book/mnee2/release-it-second-edition), de Michael Nygard
+- [Barking Up the Wrong Tree](https://www.amazon.es/Barking-Wrong-Tree-Surprising-Everything-ebook/dp/B01KT104RI/), de Erik Barker, recomendado por [Zetatesters](http://zetatesters.com/) y creo recordar que también por Tim Ferris
 - [Competitive engineering](https://www.amazon.com/Competitive-Engineering-Handbook-Requirements-Planguage/dp/0750665076/), y [Principles of Software Engineering management](https://www.amazon.com/Principles-Software-Engineering-Management-Gilb/dp/0201192462/), ambos de Tom Gilb, recomendados en Developer on fire. Me pueden servir para tener un punto de vista ingenieril del desarrollo de software, que últimamente me está faltando mucho esa visión
 - [Developer hegemony](https://www.amazon.com/Developer-Hegemony-Erik-Dietrich/dp/0692866809/), de [Erik Dietrich](http://www.daedtech.com/), recomendado por Jose Gonzalez en [dev.to](https://dev.to/josegonz321/picks-of-the-month---may-2017). Erik ha sido entrevistado por Dave Rael en [Developer on fire](https://dev.to/developeronfire/episode-228--erik-dietrich--developer-hegemony)
-- [Front-end developer handbook 2017](https://www.gitbook.com/book/frontendmasters/front-end-handbook-2017/), de [Code Lindley](http://codylindley.com/) y esponsorizado por [Frontend Masters](https://frontendmasters.com/)
 - [Essential Angular](https://leanpub.com/essential_angular/), de Victor Savkin
 - [El asesinato de Pitágoras](https://www.amazon.es/El-Asesinato-Pit%C3%A1goras-Marcos-Chicot-ebook/dp/B00C7COZHI), de Marcos Chicot, recomendado por twitter por [Ricardo Borillo](https://twitter.com/borillo)
-- [Down and out in the magic kindom](http://craphound.com/down/download/), de Cory Doctorow (208 pág). Visto en algún post, y como es un libro no técnico, pues a la lista.
 - [Code Complete](http://www.stevemcconnell.com/cc.htm), de Steve McConnell, recomendado por John Sonmez en uno de sus [vídeos](https://www.youtube.com/watch?v=aG5ks3de_wQ) y en varios episodios del podcast Developer On Fire
 - [The new one minute manager](https://www.amazon.com/New-One-Minute-Manager/dp/0062367544), de Ken Blanchard, recomendado por [Jorge (@flipper83)](https://twitter.com/flipper83) y [Carlos Blé](https://twitter.com/carlosble)
 - [xUnit test patterns](http://xunitpatterns.com/index.html), de Gerard Meszaros
@@ -118,10 +120,12 @@ Así que aquí está mi Lista de Lectura:
 
 ## He leído
 
-- [Guía para invertir](https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/guia-para-invertir-de-robert-kiyosaki.markdown), de Robert Kiyosaki
-- [Ready player one](http://www.amazon.es/gp/product/B00UVAREXK/), de Ernest Cline, recomendado por Microsiervos varias veces, y por Kevin Kelly en el [podcast de Tim Ferriss](http://fourhourworkweek.com/2016/06/05/kevin-kelly-ai-virtual-reality-and-the-inevitable)
-- [The nature of software development](/blog/2017/03/05/the-nature-of-software-developent/), de Ron Jeffries, recomendado por [Carlos Buenosvinos](https://twitter.com/buenosvinos/status/721623461702078464/photo/1) (antes en Atrápalo Eng, ahora en Xing,...)
-- [The Phoenix project](/blog/2017/01/12/the-phoenix-project/), de Gene Kim, libro similar a [The goal](/blog/2013/04/10/la-meta) pero orientado a IT, encontrado en el [blog de Eduardo Ferro](http://www.eferro.net/2016/03/some-books-i-recently-read.html)
+- [99 bottles of OOP](/blog/2017/10/19/99-bottles-oop/), de Sandi Metz y Katrina Owen ~ *Octubre 2017*
+- [Front-end developer handbook 2017](https://www.gitbook.com/book/frontendmasters/front-end-handbook-2017/), de [Code Lindley](http://codylindley.com/) y esponsorizado por [Frontend Masters](https://frontendmasters.com/) ~ *Verano 2017*
+- [Guía para invertir](https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/guia-para-invertir-de-robert-kiyosaki.markdown), de Robert Kiyosaki ~ *Junio 2017*
+- [Ready player one](http://www.amazon.es/gp/product/B00UVAREXK/), de Ernest Cline, recomendado por Microsiervos varias veces, y por Kevin Kelly en el [podcast de Tim Ferriss](http://fourhourworkweek.com/2016/06/05/kevin-kelly-ai-virtual-reality-and-the-inevitable) ~ *Abril 2017*
+- [The nature of software development](/blog/2017/03/05/the-nature-of-software-developent/), de Ron Jeffries, recomendado por [Carlos Buenosvinos](https://twitter.com/buenosvinos/status/721623461702078464/photo/1) (antes en Atrápalo Eng, ahora en Xing,...) ~ *Marzo 2017*
+- [The Phoenix project](/blog/2017/01/12/the-phoenix-project/), de Gene Kim, libro similar a [The goal](/blog/2013/04/10/la-meta) pero orientado a IT, encontrado en el [blog de Eduardo Ferro](http://www.eferro.net/2016/03/some-books-i-recently-read.html) ~ *Enero 2017*
 - [The four hour body](https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/4-hour-body-by-tim-ferriss.markdown), de Tim Ferris ~ *Septiembre 2016*
 - [Zen y el arte del mantenimiento de motocicletas](/blog/2016/09/18/zen-arte-mantenimiento-motocicletas/), de Robert M. Pirsig, recomendado por [@mpjme en FunFunFunction #18](https://www.youtube.com/watch?v=lrf6xuFq1Ms&t=90) ~ *Agosto 2016*
 - [Practical Vim](/blog/2016/07/17/practical-vim/), de Drew Neil ~ *Julio 2016*
