@@ -131,6 +131,7 @@ suficiente para ir cogiendo ritmo.
 7. [Séptimo asalto]: procesos, concurrencia, monitorización de procesos
 8. [Octavo asalto]: nodos, PIDs y un poco de entrada/salida
 9. [Noveno asalto]: servidores OTP
+10. [Décimo asalto]: aplicaciones OTP
 
 [Madrid |> Elixir]: http://www.meetup.com/Madrid-Elixir/
 [Soft Skills]: http://rchavarria.github.io/blog/2015/11/08/soft-skills/
@@ -157,4 +158,5 @@ suficiente para ir cogiendo ritmo.
 [Séptimo asalto]: /blog/2016/09/18/elixir-septimo-asalto/
 [Octavo asalto]: /blog/2016/12/31/elixir-octavo-asalto/
 [Noveno asalto]: /blog/2017/01/29/elixir-noveno-asalto/
+[Décimo asalto]: /blog/2017/06/07/elixir-decimo-asalto/
 
