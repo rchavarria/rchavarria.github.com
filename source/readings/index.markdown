@@ -20,6 +20,7 @@ Así que aquí está mi Lista de Lectura:
 
 ## Estoy leyendo
 
+- [Ego is the enemy](https://sivers.org/book/EgoEnemy), de Ryan Holiday, recomendado una y otra vez por [Derek Sivers](https://sivers.org/), por lo que algo tendrá que tener
 - [Down and out in the magic kindom](http://craphound.com/down/download/), de Cory Doctorow. Visto en algún post, y como es un libro no técnico, pues a la lista.
 - [Crafting quality software](https://qafoo.com/book/download.html), de [Qafoo Team Blog](https://qafoo.com/blog%22), visto por twitter y que trata sobre cómo escribir código de calidad en PHP
 - [Practical object-oriented design with Ruby (POODR)](http://www.poodr.com), de Sandi Metz, visto en el blog de [Carlos Blé](https://twitter.com/carlosble)
@@ -29,7 +30,6 @@ Así que aquí está mi Lista de Lectura:
 ## Tengo pensado leer
 
 - [Refactoring for Software Design Smells](https://www.amazon.co.uk/Refactoring-Software-Design-Smells-Technical/dp/0128013974/), de Girish Suryanarayana, Ganesh Samarthyam y Tushar Sharma, me recuerda mucho a los libros de Sandi Metz (refactorizaiones y demás)
-- [Ego is the enemy](https://sivers.org/book/EgoEnemy), de Ryan Holiday, recomendado una y otra vez por [Derek Sivers](https://sivers.org/), por lo que algo tendrá que tener
 - [Educación financiera avanzada partiendo de cero](https://www.amazon.es/Educaci%C3%B3n-Financiera-partiendo-gestionar-transformar-ebook/dp/B00COMQOM0/), de Gregorio Hernández, recomendado por un usuario en el Telegram de ZetaMoney
 - [Release it](https://pragprog.com/book/mnee2/release-it-second-edition), de Michael Nygard
 - [Barking Up the Wrong Tree](https://www.amazon.es/Barking-Wrong-Tree-Surprising-Everything-ebook/dp/B01KT104RI/), de Erik Barker, recomendado por [Zetatesters](http://zetatesters.com/) y creo recordar que también por Tim Ferris
