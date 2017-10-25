@@ -30,6 +30,7 @@ Así que aquí está mi Lista de Lectura:
 
 - [Refactoring for Software Design Smells](https://www.amazon.co.uk/Refactoring-Software-Design-Smells-Technical/dp/0128013974/), de Girish Suryanarayana, Ganesh Samarthyam y Tushar Sharma, me recuerda mucho a los libros de Sandi Metz (refactorizaiones y demás)
 - [Ego is the enemy](https://sivers.org/book/EgoEnemy), de Ryan Holiday, recomendado una y otra vez por [Derek Sivers](https://sivers.org/), por lo que algo tendrá que tener
+- [Educación financiera avanzada partiendo de cero](https://www.amazon.es/Educaci%C3%B3n-Financiera-partiendo-gestionar-transformar-ebook/dp/B00COMQOM0/), de Gregorio Hernández, recomendado por un usuario en el Telegram de ZetaMoney
 - [Release it](https://pragprog.com/book/mnee2/release-it-second-edition), de Michael Nygard
 - [Barking Up the Wrong Tree](https://www.amazon.es/Barking-Wrong-Tree-Surprising-Everything-ebook/dp/B01KT104RI/), de Erik Barker, recomendado por [Zetatesters](http://zetatesters.com/) y creo recordar que también por Tim Ferris
 - [Competitive engineering](https://www.amazon.com/Competitive-Engineering-Handbook-Requirements-Planguage/dp/0750665076/), y [Principles of Software Engineering management](https://www.amazon.com/Principles-Software-Engineering-Management-Gilb/dp/0201192462/), ambos de Tom Gilb, recomendados en Developer on fire. Me pueden servir para tener un punto de vista ingenieril del desarrollo de software, que últimamente me está faltando mucho esa visión
