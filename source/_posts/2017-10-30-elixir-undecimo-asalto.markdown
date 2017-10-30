@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Elixir: onceavo asalto"
-date: 2017-10-25 22:00
+title: "Elixir: undécimo asalto"
+date: 2017-10-30 21:06
 author: Ruben Chavarria
 comments: true
 categories: 
