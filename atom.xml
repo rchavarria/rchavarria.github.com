@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2017-10-19T22:25:24+02:00</updated>
+  <updated>2017-10-30T21:17:20+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,187 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Elixir: undécimo asalto]]></title>
+    <link href="http://rchavarria.github.io/blog/2017/10/30/elixir-undecimo-asalto/"/>
+    <updated>2017-10-30T21:06:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2017/10/30/elixir-undecimo-asalto</id>
+    <content type="html"><![CDATA[<p>Nos acercamos al final y en este asalto aprenderemos qué son las <a href="https://elixir-lang.org/getting-started/mix-otp/supervisor-and-application.html">Aplicaciones
+OTP</a>, aunque en realidad ya hemos estado usando algunas. Aprenderemos cómo
+<code>mix</code> facilita mucho la tarea y cómo esta herramienta nos permite empaquetar
+nuestra aplicación para ser distribuida. Aprenderemos a definir el punto de
+entrada de ejecución y cómo pasar parámetros iniciales. Las aplicaciones, junto
+con los servidores y supervisores OTP hacen de este framework una herramienta
+potentísima para desarrollar aplicaciones.</p>
+
+<p>Todo esto, siguiendo el <a href="http://rchavarria.github.io/blog/2016/01/17/aprendiendo-elixir/">método de aprendizaje</a> con el que comenzé la serie:</p>
+
+<ul>
+<li>Aprender lo suficiente para comenzar</li>
+<li>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</li>
+<li>Aprender lo suficiente para hacer algo de utilidad</li>
+<li>Enseñar lo aprendido</li>
+</ul>
+
+
+<p><img class="center" src="http://rchavarria.github.io/images/2017/fingers.jpg"></p>
+
+<div style="text-align: center">
+  <span style="font-size: 60%">
+Imagen basada en <a href="https://flic.kr/p/9cXZUG">Asaltos</a> de <a href="https://www.flickr.com/photos/antoniobugarin/">Antonio Bugarin</a>, <a href="https://creativecommons.org/licenses/by/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>
+  </span>
+</div>
+
+
+
+
+<!-- more -->
+
+
+<h2>Aprender lo suficiente para comenzar</h2>
+
+<h4>Aplicaciones OTP</h4>
+
+<p>Una <em>aplicación</em> en el mundo Elixir no es lo que normalmente conocemos como
+tal. El término viene del mundo Erlang, y con <em>aplicación</em> se refieren más a lo
+que comúnmente conocemos como componente, o servicio (¿microservicio podría
+valer aquí?, probablemente). Una aplicación OTP en Elixir es como un servicio
+del que puede depender de otros servicios, y que puede arrancar servidores y
+supervisores.</p>
+
+<p>Por lo general, las aplicaciones son dependencias de los programas que estamos
+desarrollando. Pero otras aplicaciones residen en la parte más alta del árbol
+de procesos, y éstas están diseñadas para ejecutarse directamente.</p>
+
+<p><strong>El fichero de configuración de la aplicación</strong></p>
+
+<p>La herramienta <code>mix</code> crea un fichero llamado <code>&lt;tu-aplicacion&gt;.app</code>. Este
+fichero es la especificación de la aplicación, y contiene información que se
+suele escribir en <code>mix.exs</code> e información de la compilación de nuestro código.
+Cuando se lanza la aplicación, este fichero es consultado para saber cómo
+cargarla y arrancarla.</p>
+
+<p><strong>Creando una aplicación OTP</strong></p>
+
+<p>En realidad ya hemos creado varias. Por ejemplo, el programa <em>Sequence</em>, de la
+ronda anterior, lo ejecutábamos como si fuera una aplicación OTP. Cuando
+creamos un nuevo proyecto con <code>mix</code>, éste añade un supervisor por defecto e
+información en <code>mix.exs</code> para poder ejecutar el proyecto como una aplicación.
+Más concretamente, <code>mix</code> crea la función <code>application</code>:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>def application do
+</span><span class='line'>  [
+</span><span class='line'>    mod: { Sequence, [] }
+</span><span class='line'>  ]
+</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
+
+
+<p>El código anterior indica que el módulo principal se llama <code>Sequence</code>. OTP
+asume que dicho módulo implementa una función llamada <code>start</code> (porque Elixir
+define un <em>behaviour</em> <code>Application</code> que deben implementar las aplicaciones OTP
+para ser consideradas como tal), a la cual le va a pasar el parámetro indicado
+en la tupla (en este caso un array vacío). Si la tupla hubiera sido <code>{
+Sequence, 1234 }</code> el parámetro pasado a la función <code>start</code> hubiera sido <code>1234</code>.</p>
+
+<p>Esto es lo relativo a la opción <code>mod:</code>. Pero a la hora de configurar una
+aplicación existe otra opción: <code>registered:</code>. Esta opción lista los nombres que
+nuestra aplicación va a registrar. Podemos usar esto si queremos que dichos
+nombres sean únicos entre todas las aplicaciones cargadas en el nodo o cluster:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>def application do
+</span><span class='line'>  [
+</span><span class='line'>    mod: { Sequence, [] },
+</span><span class='line'>    registered: [
+</span><span class='line'>      Sequence.Server,
+</span><span class='line'>      "Any other name"
+</span><span class='line'>    ]
+</span><span class='line'>  ]
+</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Ahora podemos ejecutar el comando <code>mix compile</code> para generar el fichero <code>.app</code>.
+Este fichero se almacena en la ruta nada intuitiva de
+<code>_build/dev/lib/sequence/ebin</code>. Este fichero define una tupla Erlang que define
+la aplicación. <code>mix</code> ha añadido automáticamente los módulos de los que consta
+la aplicación y las aplicaciones de las que depende, por ejemplo <code>kernel</code>,
+<code>stdlib</code> o <code>elixir</code>.</p>
+
+<p>A la hora de pasar parámetros de inicialización a las aplicaciones existe otra
+posibilidad. La opción <code>env</code>, que acepta una lista de palabras clave (<em>keyword
+list</em>)</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>def application do
+</span><span class='line'>  [
+</span><span class='line'>    mod: { Sequence, [] },
+</span><span class='line'>    env: [ initial_number: 12334 ],
+</span><span class='line'>    registered: [...]
+</span><span class='line'>  ]
+</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Para después recuperar ese valor con <code>Application.get_env</code>:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>defmodule Sequence do
+</span><span class='line'>  use Application
+</span><span class='line'>  def start(_type, _args) do
+</span><span class='line'>    initial_number = Application.get_env(:sequence, :initial_number)
+</span><span class='line'>    #...</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Aprender lo suficiente para hacer algo de utilidad</h2>
+
+<ul>
+<li><p><a href="https://github.com/rchavarria/learning-elixir/tree/master/code/round-11/stack">Ejercicio 1</a>: convierte tu servidor <code>Stack</code> en una aplicación OTP</p></li>
+<li><p><a href="https://github.com/rchavarria/learning-elixir/tree/master/code/round-10/sequence">Ejercicio 2</a>: hasta ahora no hemos testeado para nada ninguna aplicación.
+Mira a ver qué puedes hacer. Testear un server no parece algo muy sencillo,
+no parece que se pueda ejecutar a la primera, porque el server debería estar
+ejecutándose para poder <em>funcionar</em>. Pero Elixir está muy enfocado a los tests
+automáticos, así que algo debe de existir.</p></li>
+</ul>
+
+
+<p><strong>Resultados</strong></p>
+
+<p>Y tanto que existe. Encontré el artículo <a href="http://elixir-lang.org/getting-started/mix-otp/genserver.html#testing-a-genserver">cómo se testea un <code>GenServer</code></a>, en la
+documentación oficial: básicamente, en el <em>set up</em> de los tests, se levanta el
+server. Luego, se puede llamar a la API del servidor tranquilamente. Al
+parecer, si el proyecto está configurado como una aplicación, <code>mix</code> arranca la
+aplicación, por lo que no hace falta levantar el server en el <em>set up</em>. Lo
+malo, que no se puede inicializar con ningún valor de test.</p>
+
+<h2>Enseñar lo aprendido, y repetir desde el paso 7</h2>
+
+<p>Aquí está, este post, mis notas, mis pensamientos, mis dudas y mi código. Hasta
+el siguiente asalto.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[99 bottles of OOP]]></title>
@@ -3445,113 +3626,6 @@ que se van a utilizar siempre que haya colecciones de por medio.</p>
 <h2>Enseñar lo aprendido, y repetir desde el paso 7</h2>
 
 <p>Aquí está, este post, mis notas, mis pensamientos, mis dudas y mi código. Hasta el siguiente asalto.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Code: the hidden language of computer hardware and software]]></title>
-    <link href="http://rchavarria.github.io/blog/2016/04/10/code/"/>
-    <updated>2016-04-10T10:24:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2016/04/10/code</id>
-    <content type="html"><![CDATA[<h5>de Charles Petzold</h5>
-
-<h3>Por qué lo he leído</h3>
-
-<p>Porque era una <em>recomendación</em>. <a href="http://www.hanselman.com/">Scott Hanselman</a> era el invitado en el podcast
-<a href="http://developeronfire.com/episode-083-scott-hanselman-learn-balance">Developer on fire #83</a>, y lo recomendó como un libro que cualquiera relacionado
-con el software debería leer. El año pasado ya leí <a href="http://rchavarria.github.io/blog/2015/09/06/the-martian/">The martian</a>, recomendado
-públicamente también por Scott. ¿Iba a dejar de pasar la oportunidad? Ni
-hablar.</p>
-
-<p><img class="center" src="http://rchavarria.github.io/images/2016/code-charles-petzold.png"></p>
-
-<!-- more -->
-
-
-<h3>Qué esperaba</h3>
-
-<p>Espera encontrar una novela, de ciencia ficción. Scott contaba que el libro
-narraba la historia de dos amigos y vecinos que empiezan comunicándose por la
-noche a través de la ventana de su habitación con una linterna. Luego la cosa
-se complica porque uno de ellos se muda de ciudad. Y así comienza la historia
-en el libro.</p>
-
-<h3>Qué encontré</h3>
-
-<p>Pero nada de eso. No es una novela en sí. Se parece más a un libro de historia.
-Sí, la historia comienza con los dos amigos, pero eso es sólo una excusa para
-comenzar a guiarnos por un viaje que comienza por el código morse, código
-Braille, y muchos más hasta llegar a explicar cómo funciona todas y cada una de
-las computadoras de hoy en día.</p>
-
-<h3>Conclusiones</h3>
-
-<p>Estoy absolutamente de acuerdo con Scott, es un libro que debería leer todo
-aquel que se dedique al software. Es un repaso increíble de la historia de la
-informática. Comienza describiendo el código morse, otra serie de códigos que
-terminaron en el código (o alfabeto) Braille, para enlazarlo con el código
-binario. Para terminar explicando nuestro sistema decimal.</p>
-
-<p>Después sigue con métodos de transmisión, telégrafo y relés. Y cómo ellos se
-relacionan con los códigos binarios. De esta relación aparece los <em>switches</em> y
-las puertas lógicas. Termina construyendo una máquina capaz de sumar hecha de
-relés.</p>
-
-<p>Sigue hacia adelante, agrupando bits en bytes, y construyendo otros circuitos
-digitales, como los <em>latches</em>, contadores y hasta llega a construir una memoria
-RAM.</p>
-
-<p>Sigue relacionando los códigos y el hardware para acabar describiendo el código
-máquina de un microprocesador comercial. A partir de ahí, la tecnología avanza
-muy deprisa y no se puede explicar en un solo libro (al menos si quieres ser
-capaz de levantarlo con la mano), pero explica el código ASCII y otras
-codificaciones para representar texto.</p>
-
-<p>Y finalmente, los lenguajes de programación.</p>
-
-<p>Por último sólo puedo decir que me hubiera gustado que nos hubieran enseñado la
-historia del software y el hardware de esta forma en la universidad. Todas las
-piezas encajan. De hecho, estuvieron ahí mucho tiempo (los relés y los códigos
-binarios), pero se tardó 20 o 30 años en unirlos para crear máquinas capaces de
-realizar cálculos automáticamente.</p>
-
-<h3>Qué he aprendido</h3>
-
-<p>A parte de conocer el origen de toda una industria y que, por cierto, parece
-que todos los avances se hicieron entre los años 1950 y 1970, después de esos
-años parece que sólo se haya aumentado el número y reducido el tamaño de los
-componentes que utilizamos, hay unas cuantas curiosidades que me gustaría
-recordar:</p>
-
-<ul>
-<li>Para algunos parece bastante claro que nuestro sistema numérico se basa en 10
-porque es el número de dedos que tenemos en las manos, y es el número más
-grande que podemos contar con ellos. Me parece discutible, pero no se puede
-negar que lógica tiene, y mucha.</li>
-<li>¿Por qué un byte tiene 8 bits y no otro número, diez por ejemplo? Parece ser
-que fue el número de bits que usaba IBM porque era muy fácil almacenar
-números en la <a href="https://es.wikipedia.org/wiki/Decimal_codificado_en_binario">codificación BCD</a>. Después, simplemmente por coincidencia, un
-byte es ideal para almacenar texto, ya que una gran mayoría de lenguajes
-escritos alrededor del mundo necesitan 256 símbolos o menos. También, por
-conicidencia, un byte es ideal para almacenar escalas de grises en imágenes, ya
-que el ojo humano es capaz de diferenciar unas 256.</li>
-<li>Un <em>nibble</em> son 4 bits, o medio byte.</li>
-</ul>
-
-
-<p>Finalmente, el autor aporta un par de ideas sobre un tema que me intersa mucho:
-¿la programación es un arte o una ciencia?</p>
-
-<p>Al principio, quienes programaban eran científicos e ingenieros, que eran
-capaces de expresar ideas en forma de algoritmos matemáticos.</p>
-
-<p>Pero a lo largo de la historia, mucha gente ha tratado de crear abstracciones,
-lenguajes de programación de más alto nivel, para acercar la programación al
-mayor número de personas. Es gracias a ello donde tienen cabida personas más
-artistas, más creativas.</p>
-
-<p>Me parece una metáfora (o razonamiento incluso) muy bueno y que permite ver dos
-caras del desarrollo software que no tienen por qué estar enfrentadas.</p>
 ]]></content>
   </entry>
   

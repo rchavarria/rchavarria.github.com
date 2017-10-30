@@ -4,7 +4,7 @@
   <title><![CDATA[Category: elixir | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/elixir/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2017-10-19T22:25:24+02:00</updated>
+  <updated>2017-10-30T21:17:20+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,177 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Elixir: undécimo asalto]]></title>
+    <link href="http://rchavarria.github.io/blog/2017/10/30/elixir-undecimo-asalto/"/>
+    <updated>2017-10-30T21:06:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2017/10/30/elixir-undecimo-asalto</id>
+    <content type="html"><![CDATA[<p>Nos acercamos al final y en este asalto aprenderemos qué son las <a href="https://elixir-lang.org/getting-started/mix-otp/supervisor-and-application.html">Aplicaciones
+OTP</a>, aunque en realidad ya hemos estado usando algunas. Aprenderemos cómo
+<code>mix</code> facilita mucho la tarea y cómo esta herramienta nos permite empaquetar
+nuestra aplicación para ser distribuida. Aprenderemos a definir el punto de
+entrada de ejecución y cómo pasar parámetros iniciales. Las aplicaciones, junto
+con los servidores y supervisores OTP hacen de este framework una herramienta
+potentísima para desarrollar aplicaciones.</p>
+
+<p>Todo esto, siguiendo el <a href="/blog/2016/01/17/aprendiendo-elixir/">método de aprendizaje</a> con el que comenzé la serie:</p>
+
+<ul>
+<li>Aprender lo suficiente para comenzar</li>
+<li>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</li>
+<li>Aprender lo suficiente para hacer algo de utilidad</li>
+<li>Enseñar lo aprendido</li>
+</ul>
+
+
+<p><img class="center" src="/images/2017/fingers.jpg"></p>
+
+<div style="text-align: center">
+  <span style="font-size: 60%">
+Imagen basada en <a href="https://flic.kr/p/9cXZUG">Asaltos</a> de <a href="https://www.flickr.com/photos/antoniobugarin/">Antonio Bugarin</a>, <a href="https://creativecommons.org/licenses/by/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>
+  </span>
+</div>
+
+
+
+
+<!-- more -->
+
+
+<h2>Aprender lo suficiente para comenzar</h2>
+
+<h4>Aplicaciones OTP</h4>
+
+<p>Una <em>aplicación</em> en el mundo Elixir no es lo que normalmente conocemos como
+tal. El término viene del mundo Erlang, y con <em>aplicación</em> se refieren más a lo
+que comúnmente conocemos como componente, o servicio (¿microservicio podría
+valer aquí?, probablemente). Una aplicación OTP en Elixir es como un servicio
+del que puede depender de otros servicios, y que puede arrancar servidores y
+supervisores.</p>
+
+<p>Por lo general, las aplicaciones son dependencias de los programas que estamos
+desarrollando. Pero otras aplicaciones residen en la parte más alta del árbol
+de procesos, y éstas están diseñadas para ejecutarse directamente.</p>
+
+<p><strong>El fichero de configuración de la aplicación</strong></p>
+
+<p>La herramienta <code>mix</code> crea un fichero llamado <code>&lt;tu-aplicacion&gt;.app</code>. Este
+fichero es la especificación de la aplicación, y contiene información que se
+suele escribir en <code>mix.exs</code> e información de la compilación de nuestro código.
+Cuando se lanza la aplicación, este fichero es consultado para saber cómo
+cargarla y arrancarla.</p>
+
+<p><strong>Creando una aplicación OTP</strong></p>
+
+<p>En realidad ya hemos creado varias. Por ejemplo, el programa <em>Sequence</em>, de la
+ronda anterior, lo ejecutábamos como si fuera una aplicación OTP. Cuando
+creamos un nuevo proyecto con <code>mix</code>, éste añade un supervisor por defecto e
+información en <code>mix.exs</code> para poder ejecutar el proyecto como una aplicación.
+Más concretamente, <code>mix</code> crea la función <code>application</code>:</p>
+
+<p>```
+def application do
+  [</p>
+
+<pre><code>mod: { Sequence, [] }
+</code></pre>
+
+<p>  ]
+end
+```</p>
+
+<p>El código anterior indica que el módulo principal se llama <code>Sequence</code>. OTP
+asume que dicho módulo implementa una función llamada <code>start</code> (porque Elixir
+define un <em>behaviour</em> <code>Application</code> que deben implementar las aplicaciones OTP
+para ser consideradas como tal), a la cual le va a pasar el parámetro indicado
+en la tupla (en este caso un array vacío). Si la tupla hubiera sido <code>{
+Sequence, 1234 }</code> el parámetro pasado a la función <code>start</code> hubiera sido <code>1234</code>.</p>
+
+<p>Esto es lo relativo a la opción <code>mod:</code>. Pero a la hora de configurar una
+aplicación existe otra opción: <code>registered:</code>. Esta opción lista los nombres que
+nuestra aplicación va a registrar. Podemos usar esto si queremos que dichos
+nombres sean únicos entre todas las aplicaciones cargadas en el nodo o cluster:</p>
+
+<p>```
+def application do
+  [</p>
+
+<pre><code>mod: { Sequence, [] },
+registered: [
+  Sequence.Server,
+  "Any other name"
+]
+</code></pre>
+
+<p>  ]
+end
+```</p>
+
+<p>Ahora podemos ejecutar el comando <code>mix compile</code> para generar el fichero <code>.app</code>.
+Este fichero se almacena en la ruta nada intuitiva de
+<code>_build/dev/lib/sequence/ebin</code>. Este fichero define una tupla Erlang que define
+la aplicación. <code>mix</code> ha añadido automáticamente los módulos de los que consta
+la aplicación y las aplicaciones de las que depende, por ejemplo <code>kernel</code>,
+<code>stdlib</code> o <code>elixir</code>.</p>
+
+<p>A la hora de pasar parámetros de inicialización a las aplicaciones existe otra
+posibilidad. La opción <code>env</code>, que acepta una lista de palabras clave (<em>keyword
+list</em>)</p>
+
+<p>```
+def application do
+  [</p>
+
+<pre><code>mod: { Sequence, [] },
+env: [ initial_number: 12334 ],
+registered: [...]
+</code></pre>
+
+<p>  ]
+end
+```</p>
+
+<p>Para después recuperar ese valor con <code>Application.get_env</code>:</p>
+
+<p>```
+defmodule Sequence do
+  use Application
+  def start(<em>type, </em>args) do</p>
+
+<pre><code>initial_number = Application.get_env(:sequence, :initial_number)
+#...
+</code></pre>
+
+<p>```</p>
+
+<h2>Aprender lo suficiente para hacer algo de utilidad</h2>
+
+<ul>
+<li><p><a href="https://github.com/rchavarria/learning-elixir/tree/master/code/round-11/stack">Ejercicio 1</a>: convierte tu servidor <code>Stack</code> en una aplicación OTP</p></li>
+<li><p><a href="https://github.com/rchavarria/learning-elixir/tree/master/code/round-10/sequence">Ejercicio 2</a>: hasta ahora no hemos testeado para nada ninguna aplicación.
+Mira a ver qué puedes hacer. Testear un server no parece algo muy sencillo,
+no parece que se pueda ejecutar a la primera, porque el server debería estar
+ejecutándose para poder <em>funcionar</em>. Pero Elixir está muy enfocado a los tests
+automáticos, así que algo debe de existir.</p></li>
+</ul>
+
+
+<p><strong>Resultados</strong></p>
+
+<p>Y tanto que existe. Encontré el artículo <a href="http://elixir-lang.org/getting-started/mix-otp/genserver.html#testing-a-genserver">cómo se testea un <code>GenServer</code></a>, en la
+documentación oficial: básicamente, en el <em>set up</em> de los tests, se levanta el
+server. Luego, se puede llamar a la API del servidor tranquilamente. Al
+parecer, si el proyecto está configurado como una aplicación, <code>mix</code> arranca la
+aplicación, por lo que no hace falta levantar el server en el <em>set up</em>. Lo
+malo, que no se puede inicializar con ningún valor de test.</p>
+
+<h2>Enseñar lo aprendido, y repetir desde el paso 7</h2>
+
+<p>Aquí está, este post, mis notas, mis pensamientos, mis dudas y mi código. Hasta
+el siguiente asalto.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Elixir: décimo asalto]]></title>
@@ -669,244 +840,6 @@ ese círculo de clientes.</p></li>
 <p>Me costó un tiempo dar con la solución al ejercicio (<a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-08/ring_ticker.ex">ring_ticker.ex</a>). Puede
 que el <em>ring</em> lo tenga que gestionar el servidor central. De otra forma, los
 clientes perderán el timeout del <code>receive</code> y se volverán un poco locos.</p>
-
-<h2>Enseñar lo aprendido, y repetir desde el paso 7</h2>
-
-<p>Aquí está, este post, mis notas, mis pensamientos, mis dudas y mi código. Hasta
-el siguiente asalto.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Elixir: séptimo asalto]]></title>
-    <link href="http://rchavarria.github.io/blog/2016/09/18/elixir-septimo-asalto/"/>
-    <updated>2016-09-18T16:20:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2016/09/18/elixir-septimo-asalto</id>
-    <content type="html"><![CDATA[<p>El aprendizaje va avanzando, ya vamos por el séptimo asalto. Éste trata sobre
-cómo <a href="http://elixir-lang.org/">Elixir</a> maneja múltiples procesos, por lo que trataremos algún tema de
-concurrencia. También veremos algunas cosas básicas sobre cómo monitorizar los
-procesos de los que consta nuestra aplicación.</p>
-
-<p>Sin olvidar del método de aprendizaje con el que <a href="/blog/2016/01/17/aprendiendo-elixir/">comenzé</a>:</p>
-
-<ul>
-<li>Aprender lo suficiente para comenzar</li>
-<li>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</li>
-<li>Aprender lo suficiente para hacer algo de utilidad</li>
-<li>Enseñar lo aprendido</li>
-</ul>
-
-
-<p><img class="right" src="/images/2016/you-gotta-fight-for-your-right-to-eat.jpg"></p>
-
-<div style="text-align: center">
-  <span style="font-size: 60%">
-Imagen basada en <a href="https://flic.kr/p/4rvPED">You gotta fight for your right to... eat</a> de <a href="https://www.flickr.com/photos/r2wk/">ldjpg</a>, <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/">CC BY NC ND 2.0</a>
-  </span>
-</div>
-
-
-
-
-<!-- more -->
-
-
-<h2>Aprender lo suficiente para comenzar</h2>
-
-<p><strong>Trabajando con múltiples procesos</strong></p>
-
-<p>Elixir usa el <a href="https://en.wikipedia.org/wiki/Actor_model">modelo de actores</a> para gestionar la concurrencia.</p>
-
-<p>Elixir se apoya en Erlang para gestionar los procesos, que no son los procesos
-del sistema operativo.</p>
-
-<p>Para crear un proceso, se hace con la llamada <code>spawn</code>. <code>spawn</code> puede crear un
-proceso y ejecutar en él código que tengas en un módulo cualquiera. El proceso
-puede empezar en cualquier momento (asíncrono total) y se utilizan mensajes
-entre procesos para sincronizarlos.</p>
-
-<p>Los mensajes no tienen por qué ser <code>Strings</code>, pueden ser de cualquier tipo
-(generalmente tuplas o atoms). Los mensajes se mandan con <code>send</code>, y debes usar
-un <code>PID</code> (devuelto por <code>spawn</code>).</p>
-
-<p>El receptor, espera mensajes con <code>receive</code>. <code>receive</code> funciona como <code>case</code>: se
-pueden poner varios casos, y el primero que coincida, se ejecuta.</p>
-
-<p><code>receive</code> maneja sólo un mensaje. Si queremos recibir varios, debemos volver a
-llamar al método que contiene el <code>receive</code>, de forma recursiva (y Elixir es muy
-bueno con la recursividad). <code>receive</code> también acepta un parámetro, <code>after</code>,
-para definir un timeout.</p>
-
-<p>El autor dice que los procesos en Elixir son como los objetos en lenguajes
-orientados a objectos, pero con mejor sentido del humor. El hecho es que son
-muy livianos, y pueden mantener estado, así que podemos pensar en ellos como en
-objetos de la programación orientada a objetos.</p>
-
-<p><strong>Enlazar procesos</strong></p>
-
-<p>Normalmente, un proceso no sabe cuando muere un proceso hijo. Debemos hacer
-algo manualmente para que se notifique. Podemos crear procesos <em>enlazados</em>
-(linked) con <code>spawn_link</code>. Por defecto, si un proceso hijo muere, mata al
-proceso padre. Para controlar esto y poder escuchar el mensaje que lanza el
-proceso hijo al morir, debemos <em>atrapar la salida</em> mediante
-<code>Process.flag(:trap_exit, true)</code> justo antes de hacer <code>spawn_link</code>.</p>
-
-<p>Dos procesos enlazados pueden comunicarse bidireccionalmente.</p>
-
-<p>Elixir usa el framework OTP para construir árboles de procesos. OTP lleva mucho
-tiempo en funcionamiento, y debemos confiar en que lo hace mucho mejor que
-nosotros, por lo que lo usaremos prácticamente siempre. OTP incluye el concepto
-de <em>Supervisor de procesos</em>. Más adelante estudiaremos temas relacionados con
-OTP.</p>
-
-<p><strong>Monitorizando procesos</strong></p>
-
-<p>Si <code>spawn_link</code> permite comunicación bidireccional, <code>spawn_monitor</code> solo la
-permite unidireccional. El proceso hijo puede notificar al padre, pero no al
-revés.</p>
-
-<p>```</p>
-
-<h1>monitor devuelve el pid del proceso hijo y una referencia de la monitorización</h1>
-
-<p>res = spawn_monitor(<module>, <function>, <params>)
-IO.inspect res</p>
-
-<h1>=> { #PID{3.3.3.3}, #Reference{1.2.3.4} }</h1>
-
-<p>```</p>
-
-<p>También se puede monitorizar un proceso existente con <code>Process.monitor</code>.</p>
-
-<p>¿Cuándo utilizar cada uno? Depende de la utilidad. Si la muerte de un hijo
-debería matar al padre, usa procesos enlazados. Si la muerte/fallo de un hijo
-solamente debería notificar al padre, usa monitorización.</p>
-
-<h2>Aprender lo suficiente para hacer algo de utilidad</h2>
-
-<ul>
-<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-07/exercise-01-round-07.exs">exercise-01-round-07.exs</a>: ejecutar el programa que pasa mensajes en cadena
-de un proceso a otro hasta llegar al millón de procesos.</li>
-<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-07/exercise-02-round-07.exs">exercise-02-round-07.exs</a>: escribir un código que cree dos procesos, y que a
-cada uno le mande un token (p.e.: "pepito" y "fulanito"), y que los procesos
-lo devuelvan. En teoría, ¿es determinista el orden en el que se reciben las
-respuestas? ¿Y en la práctica? En caso de que no, ¿cómo podría hacerse que
-fuera determinista?.</li>
-</ul>
-
-
-<p><strong>Resultados</strong></p>
-
-<p>Parece que sí es determinista (al menos con dos procesos). Depende del orden en
-el que se creen los procesos, incluso si invertimos el orden en el que se
-envían los tokens, el primer proceso creado es el primero en responder.</p>
-
-<ul>
-<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-07/exercise-03-round-07.exs">exercise-03-round-07.exs</a>: usa <code>spawn_link</code> para crear un proceso, el cual
-envía un mensaje al padre y finaliza inmediatamente. Mientras, en el padre,
-después de crear el proceso, espera 500ms y luego comienza a recibir todos los
-mensajes que están esperando. Tracea todo lo que recibas. ¿Importa que no
-estuvieras recibiendo notificaciones cuando el hijo terminó?</li>
-</ul>
-
-
-<p><strong>Resultados</strong></p>
-
-<p>No recibe ningún mensaje, el hijo termina, terminando al padre durante la
-espera.</p>
-
-<ul>
-<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-07/exercise-04-round-07.exs">exercise-04-round-07.exs</a>: repite el ejercicio anterior, pero en lugar de
-terminar con <code>exit</code>, que el hijo lance una excepción. ¿qué diferencia notas?</li>
-</ul>
-
-
-<p><strong>Resultados</strong></p>
-
-<p>No hay mucha difrencia. El padre sigue terminando, sin escuchar ningún mensaje.
-Al menos, la excepción aparece por consola, mostrándose un error diciendo que
-el proceso hijo (con su PID) ha lanzado una excepción. En el ejercicio
-anterior, solamente aparecía que el proceso padre terminaba, nada más.</p>
-
-<p>Usando <code>Process.flag(:trap_exit, true)</code>, el proceso padre recibe mensajes:</p>
-
-<p>```
-$ elixir -r exercise-03-round-07.exs -e "Exercise3.run"
-Parent's PID #PID&lt;0.48.0>
-PID's child #PID&lt;0.53.0>
-Received: "Hello!"
-Received: {:EXIT, #PID&lt;0.53.0>, :boom}</p>
-
-<p>$ elixir -r exercise-04-round-07.exs -e "Exercise4.run"
-Parent's PID #PID&lt;0.48.0>
-Child's PID #PID&lt;0.53.0></p>
-
-<p>22:46:14.313 [error] Process #PID&lt;0.53.0> raised an exception
-** (RuntimeError) Child finished</p>
-
-<pre><code>exercise-04-round-07.exs:19: Exercise4.child/1
-</code></pre>
-
-<p>Received: "Hello!"
-Received: {:EXIT, #PID&lt;0.53.0>, %{RuntimeError{message: "Child finished"},
-[{Exercise4, :child, 1, [file: 'exercise-04-round-07.exs', line: 19]}]}}
-```</p>
-
-<p>Las diferencias están en lo recibido en el mensaje de terminación del hijo. En
-caso de <code>exit</code> se recibe <code>:EXIT</code>, un PID, y la causa de la salida. En el caso
-de la excepción: <code>:EXIT</code>, un PID y la excepción, parece, porque tiene pinta de
-pila de llamadas, con su módulo, función, parámetros,...</p>
-
-<ul>
-<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-07/exercise-05-round-07.exs">exercise-05-round-07.exs</a>: repetir el ejercicio pero con <code>spawn_monitor</code>.</li>
-</ul>
-
-
-<p><strong>Resultados</strong></p>
-
-<p>No creo que lo esté haciendo bien. Se supone que monitorizando la comunicación
-no es bidireccional, pero el padre recibe el mensaje que envía el hijo, así
-como el mensaje que se envía al terminar o lanzar la excepción. La única
-diferencia visible es que en lugar de recibir solamente un PID, se recibe un
-PID y la referencia de monitorización.</p>
-
-<ul>
-<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-07/exercise-06-round-07.exs">exercise-06-round-07.exs</a>: escribir una función implementando <em>pararell
-map</em>, que es como una función <code>map</code> pero cada elemento es procesado por un
-proceso distinto. Preguntas: ¿por qué es necesario guardar en la variable <code>me</code>
-el PID del proceso padre? Se debe utilizar <code>^pid</code> para recibir los resultados
-en orden, pero... ¿qué pasa si se utiliza <code>_pid</code>? ¿cómo hacer para que falle:
-esperas, aumentar número elementos, que la función que procesa cada elemento
-sea más complicada,...?</li>
-</ul>
-
-
-<p><strong>Resultados</strong></p>
-
-<p>Aumentando el número de elementos afecta al orden en el que se reciben los
-mensajes. También he conseguido recibir mensajes en orden distinto con el
-siguiente código:</p>
-
-<p><code>
-Parallel.pmap 1..10, fn (i) -&gt;
-  # la espera es más corta según el elemento `i` se va a haciendo mayor
-  wait_up_to = round(10 / i)
-  :timer.sleep(wait_up_to)
-  i
-end
-  #=&gt; [ 7, 8, 9, 10, 5, 6, 3, 4, 2, 1 ]
-</code></p>
-
-<p>Volviendo a poner <code>^pid</code> el orden vuelve a ser correcto.</p>
-
-<ul>
-<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-07/exercise-07-round-07.exs">exercise-07-round-07.exs</a>: toma como referencia un planificador (servidor de
-Fibonacci) de un ejercicio del libro y crea otro similar. Esta vez, se deben
-contar las apariciones de la palabra <code>cat</code> en cada fichero que se encuentre en
-un directorio dado. Cada fichero será procesado por un proceso distinto.
-¿Podrías escribir el planificador de una forma más genérica?</li>
-</ul>
-
 
 <h2>Enseñar lo aprendido, y repetir desde el paso 7</h2>
 
