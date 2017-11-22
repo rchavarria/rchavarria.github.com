@@ -5,8 +5,8 @@ date: 2017-11-22 21:52
 author: Ruben Chavarria
 comments: true
 categories: 
+- software craftsmanship
 - events
-- professional
 published: true
 footer: false
 sidebar: true
