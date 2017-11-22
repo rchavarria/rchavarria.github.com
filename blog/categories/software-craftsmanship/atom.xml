@@ -4,7 +4,7 @@
   <title><![CDATA[Category: software craftsmanship | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/software-craftsmanship/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2017-11-22T22:18:52+01:00</updated>
+  <updated>2017-11-22T22:20:50+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,135 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Global day of code retreat 2017]]></title>
+    <link href="http://rchavarria.github.io/blog/2017/11/22/global-day-of-code-retreat-2017/"/>
+    <updated>2017-11-22T21:52:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2017/11/22/global-day-of-code-retreat-2017</id>
+    <content type="html"><![CDATA[<p>Al igual que el <a href="http://rchavarria.github.io/blog/2016/10/27/global-day-of-code-retreat-2016/">año pasado</a>, he tenido el placer de participar en el Global
+Day of Code Retreat 2017, un evento sobre programación <em>de intensa práctica,
+enfocado en los fundamentos del diseño y desarrollo de software</em>. Este año ha
+habido 136 eventos repartidos por todo el mundo. No he encontrado estadísticas
+sobre cuantas personas participamos, pero estoy seguro de que con tantos
+eventos tuvimos que ser miles.</p>
+
+<p>¿Impresiona eh? ¿Te animarás el año que viene? El funcionamiento es sencillo:
+se trata de resolver el problema del <a href="https://es.wikipedia.org/wiki/Juego_de_la_vida">juego de la vida de Conway</a>, donde unas
+<em>células</em> viven o mueren de acuerdo a una serie de reglas preestablecidas.
+Siempre se programa por parejas (o tríos), nunca solo. El día está dividido en
+iteraciones de una duración determinada, y al final de cada iteración hacemos
+una pequeña retrospectiva. Y así es como fue nuestro <a href="https://github.com/SoftwareCraftersMadrid/global-day-of-coderetreat-2017/blob/master/theday.md">día</a>.</p>
+
+<p><img class="center" src="/images/2017/gdcr2017.jpg"></p>
+
+<div style="text-align: center">
+  <span style="font-size: 60%">
+Imagen propiedad de <a href="https://twitter.com/HelderDOliveira">Helder</a>, reproducida con su permiso
+  </span>
+</div>
+
+
+
+
+<!-- more -->
+
+
+<h2>El día</h2>
+
+<p>Cada iteración duró unos 45 minutos. Según va avanzando el día, va aumentando
+la intensidad de las conversaciones. Y también el cansancio. Para poner un poco
+de emoción al asunto, en cada nueva iteración se pueden proponer una serie de
+restricciones. Además, las restricciones de una iteración se acumulaban para la
+siguiente. Por ejemplo, en la segunda iteración, debíamos programar haciendo
+<a href="http://wiki.c2.com/?PairProgrammingPingPongPattern">ping-pong</a> <em>(uno escribe el test, otro lo hace pasar y escribe un nuevo test,
+otro lo hac...)</em>. Más adelante se propuso eliminar los <code>else</code> y más adelante
+todos los condicionales.</p>
+
+<p>Después de cada iteración, se hace una pequeña retrospectiva, donde todos
+ponemos en común cómo hemos afrontado el problema, qué impedimentos hemos
+encontrado, cómo lo hemos solucionado, hasta dónde hemos llegado. En seguida
+aparecieron 2 enfoques principales para atacar al problema:</p>
+
+<ol>
+<li>De dentro hacia afuera: se comienza a resolver el problema por la parte más
+interna, más pequeña, más acotada. Se empiezan a describir las reglas del
+juego en los tests y se van haciendo pasar, implementando las reglas en una
+función o en pequeños objectos con muy poco código.</li>
+<li>De fuera hacia adentro: el problema se ataca desde el nivel más alto. Se
+suele hablar de <em>mundo</em>, <em>universo</em>, <em>juego</em>, <em>matriz de células</em>. Las
+reglas del juego se implementan mucho más adelante. Pero al principio te
+encuentras con problemas como recorrer una matriz, bucles anidados,
+inicialización del juego, comprobación de límites,...</li>
+</ol>
+
+
+<p>Durante las retros suele haber alguna discusión/conversación. En esta ocasión,
+especialmente en la última, hubo una interesante discusión que surgió a raiz de
+restricciones relacionadas con no usar ni condicionales ni bucles. Sobre los
+condicionales no hubo mucha dicrepancia, parece que tenemos claro que una forma
+de reemplazar condicionales es el polimorfismo (aplicarlo ya es otra historia),
+aunque no es la única.</p>
+
+<p>Pero sobre los bucles no hubo mucho consenso. ¿Realmente eliminarlos ayuda a
+hacer el código más legible? ¿Ayuda a tener menos código (y por tanto menos
+probabilidad de errores)? Si el código no queda muy legible, ¿estoy tratando a
+mis compañeros como inferiores? ¿o les estoy ayudando a aprender
+características del lenguaje? Una pregunta que surgió varias veces: ¿Un
+<code>map</code>/<code>filter</code> es un bucle?</p>
+
+<p>El formato ofrece cierta libertad. Por ejemplo, las iteraciones no tienen
+porqué durar 30 minutos exactos. Nosotros, como novedad, y como ahorro de
+energía (parece mentira, pero es bastante agotador), en la última iteración
+hicimos <a href="https://en.wikipedia.org/wiki/Mob_programming">mob programming</a>. Y, todo sea dicho, es la iteración que menos
+avanzamos. El cansancio y las restricciones acumuladas hacían mella en
+nosotros. Había que tener en cuenta más de dos puntos de vista, ya no era
+programar en parejas.</p>
+
+<p>Es curioso, este año he sentido que he avanzado más en la solución al problema
+que en otras ocasiones. No estoy seguro, mirándolo con perspectiva, es como si
+este año hubiera estado más centrado en el software y no tanto en las personas.
+Puede que haya sido porque he afrontado el evento con más tranquilidad, al
+pensar/saber que allí encontraría a algún conocido.</p>
+
+<h2>La gente</h2>
+
+<p>Aunque sienta que he estado más centrado en el software que en la gente, este
+tipo de eventos tratan sobre la profesión y los profesionales. Por eso me
+gustaría recordar que allí me volví a encontrar con gente como <a href="http://juandavidvega.es/">Juan David</a>,
+<a href="https://twitter.com/HelderDOliveira">Helder</a> y <a href="http://twitter.com/luisrovirosa">Luis</a>, organizadores y facilitadores del evento.</p>
+
+<p>Me reencontré con <a href="https://twitter.com/APA42">Alberto</a>, o bueno, más bien él me reencontró a mí, al
+principio no le reconocí, y juraría que ya nos habíamos visto anteriormente.</p>
+
+<p>Casualidades de la vida, conocí a un alcalaíno, <a href="https://twitter.com/amisai">Abel</a>. Y como buen habitante
+de la vega del Henares, espero verle mucho por <a href="https://twitter.com/codenares">Codenares</a>, la comunidad de
+desarrollo del... Henares, sí.</p>
+
+<p>También tuve reencuentros de hace muchísimo tiempo, de <a href="http://rchavarria.github.io/blog/2014/11/18/mi-primer-code-retreat/">mi primer GDCR</a>, del
+cual guardo un grato recuerdo, donde conocí a <a href="https://twitter.com/rafael_luque">Rafa</a>.</p>
+
+<p>Y algún otro que no pude quedarme con una forma de contactar con ellos, como
+Enrique, pero que seguro que nos volveremos a ver en un <em>fregao</em> de estos.</p>
+
+<h2>Agradecimientos</h2>
+
+<p>Por supuesto a <a href="http://idealista.com">idealista</a>, por facilitar las instalaciones y la comida... y
+gente, que estuvieron allí para que los demás pudieramos disfrutar. Y también,
+cómo no, a los facilitadores/organizadores Juan David, Helder y Luis.</p>
+
+<p>¡Gracias!</p>
+
+<h2>Referencias</h2>
+
+<ul>
+<li>Libro sobre el <a href="https://leanpub.com/4rulesofsimpledesign">Juego de la vida</a></li>
+<li>Repositorio de <a href="https://github.com/SoftwareCraftersMadrid/global-day-of-coderetreat-2017">Software Crafter Madrid</a> sobre el evento y <a href="https://www.meetup.com/es-ES/madswcraft/photos/28339208/">algunas fotos</a>
+nada comprometedoras</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Global Day of Code Retreat 2016]]></title>
