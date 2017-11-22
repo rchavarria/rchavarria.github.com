@@ -58,7 +58,7 @@ aparecieron 2 enfoques principales para atacar al problema:
 
 Durante las retros suele haber alguna discusión/conversación. En esta ocasión,
 especialmente en la última, hubo una interesante discusión que surgió a raiz de
-restricciones relacionadas con no usar condicionales y bucles. Sobre los
+restricciones relacionadas con no usar ni condicionales ni bucles. Sobre los
 condicionales no hubo mucha dicrepancia, parece que tenemos claro que una forma
 de reemplazar condicionales es el polimorfismo (aplicarlo ya es otra historia),
 aunque no es la única.
@@ -91,7 +91,7 @@ tipo de eventos tratan sobre la profesión y los profesionales. Por eso me
 gustaría recordar que allí me volví a encontrar con gente como [Juan David],
 [Helder] y [Luis], organizadores y facilitadores del evento. 
 
-Me reencontré con [Alberto], o bueno, más bien me reencontró él a mí, al
+Me reencontré con [Alberto], o bueno, más bien él me reencontró a mí, al
 principio no le reconocí, y juraría que ya nos habíamos visto anteriormente.
 
 Casualidades de la vida, conocí a un alcalaíno, [Abel]. Y como buen habitante
@@ -115,7 +115,8 @@ cómo no, a los facilitadores/organizadores Juan David, Helder y Luis.
 ## Referencias
 
 - Libro sobre el [Juego de la vida]
-- Repositorio de [Software Crafter Madrid] sobre el evento:
+- Repositorio de [Software Crafter Madrid] sobre el evento y [algunas fotos]
+nada comprometedoras
 
 [año pasado]: http://rchavarria.github.io/blog/2016/10/27/global-day-of-code-retreat-2016/
 [juego de la vida de Conway]: https://es.wikipedia.org/wiki/Juego_de_la_vida
@@ -133,4 +134,5 @@ cómo no, a los facilitadores/organizadores Juan David, Helder y Luis.
 [idealista]: http://idealista.com
 [Juego de la vida]: https://leanpub.com/4rulesofsimpledesign
 [Software Crafter Madrid]: https://github.com/SoftwareCraftersMadrid/global-day-of-coderetreat-2017
+[algunas fotos]: https://www.meetup.com/es-ES/madswcraft/photos/28339208/
 
