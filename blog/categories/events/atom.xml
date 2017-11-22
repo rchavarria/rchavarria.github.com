@@ -4,7 +4,7 @@
   <title><![CDATA[Category: events | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/events/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2017-10-30T21:17:20+01:00</updated>
+  <updated>2017-11-22T22:18:52+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,135 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Global day of code retreat 2017]]></title>
+    <link href="http://rchavarria.github.io/blog/2017/11/22/global-day-of-code-retreat-2017/"/>
+    <updated>2017-11-22T21:52:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2017/11/22/global-day-of-code-retreat-2017</id>
+    <content type="html"><![CDATA[<p>Al igual que el <a href="http://rchavarria.github.io/blog/2016/10/27/global-day-of-code-retreat-2016/">año pasado</a>, he tenido el placer de participar en el Global
+Day of Code Retreat 2017, un evento sobre programación <em>de intensa práctica,
+enfocado en los fundamentos del diseño y desarrollo de software</em>. Este año ha
+habido 136 eventos repartidos por todo el mundo. No he encontrado estadísticas
+sobre cuantas personas participamos, pero estoy seguro de que con tantos
+eventos tuvimos que ser miles.</p>
+
+<p>¿Impresiona eh? ¿Te animarás el año que viene? El funcionamiento es sencillo:
+se trata de resolver el problema del <a href="https://es.wikipedia.org/wiki/Juego_de_la_vida">juego de la vida de Conway</a>, donde unas
+<em>células</em> viven o mueren de acuerdo a una serie de reglas preestablecidas.
+Siempre se programa por parejas (o tríos), nunca solo. El día está dividido en
+iteraciones de una duración determinada, y al final de cada iteración hacemos
+una pequeña retrospectiva. Y así es como fue nuestro <a href="https://github.com/SoftwareCraftersMadrid/global-day-of-coderetreat-2017/blob/master/theday.md">día</a>.</p>
+
+<p><img class="center" src="/images/2017/gdcr2017.jpg"></p>
+
+<div style="text-align: center">
+  <span style="font-size: 60%">
+Imagen propiedad de <a href="https://twitter.com/HelderDOliveira">Helder</a>, reproducida con su permiso
+  </span>
+</div>
+
+
+
+
+<!-- more -->
+
+
+<h2>El día</h2>
+
+<p>Cada iteración duró unos 45 minutos. Según va avanzando el día, va aumentando
+la intensidad de las conversaciones. Y también el cansancio. Para poner un poco
+de emoción al asunto, en cada nueva iteración se pueden proponer una serie de
+restricciones. Además, las restricciones de una iteración se acumulaban para la
+siguiente. Por ejemplo, en la segunda iteración, debíamos programar haciendo
+<a href="http://wiki.c2.com/?PairProgrammingPingPongPattern">ping-pong</a> <em>(uno escribe el test, otro lo hace pasar y escribe un nuevo test,
+otro lo hac...)</em>. Más adelante se propuso eliminar los <code>else</code> y más adelante
+todos los condicionales.</p>
+
+<p>Después de cada iteración, se hace una pequeña retrospectiva, donde todos
+ponemos en común cómo hemos afrontado el problema, qué impedimentos hemos
+encontrado, cómo lo hemos solucionado, hasta dónde hemos llegado. En seguida
+aparecieron 2 enfoques principales para atacar al problema:</p>
+
+<ol>
+<li>De dentro hacia afuera: se comienza a resolver el problema por la parte más
+interna, más pequeña, más acotada. Se empiezan a describir las reglas del
+juego en los tests y se van haciendo pasar, implementando las reglas en una
+función o en pequeños objectos con muy poco código.</li>
+<li>De fuera hacia adentro: el problema se ataca desde el nivel más alto. Se
+suele hablar de <em>mundo</em>, <em>universo</em>, <em>juego</em>, <em>matriz de células</em>. Las
+reglas del juego se implementan mucho más adelante. Pero al principio te
+encuentras con problemas como recorrer una matriz, bucles anidados,
+inicialización del juego, comprobación de límites,...</li>
+</ol>
+
+
+<p>Durante las retros suele haber alguna discusión/conversación. En esta ocasión,
+especialmente en la última, hubo una interesante discusión que surgió a raiz de
+restricciones relacionadas con no usar ni condicionales ni bucles. Sobre los
+condicionales no hubo mucha dicrepancia, parece que tenemos claro que una forma
+de reemplazar condicionales es el polimorfismo (aplicarlo ya es otra historia),
+aunque no es la única.</p>
+
+<p>Pero sobre los bucles no hubo mucho consenso. ¿Realmente eliminarlos ayuda a
+hacer el código más legible? ¿Ayuda a tener menos código (y por tanto menos
+probabilidad de errores)? Si el código no queda muy legible, ¿estoy tratando a
+mis compañeros como inferiores? ¿o les estoy ayudando a aprender
+características del lenguaje? Una pregunta que surgió varias veces: ¿Un
+<code>map</code>/<code>filter</code> es un bucle?</p>
+
+<p>El formato ofrece cierta libertad. Por ejemplo, las iteraciones no tienen
+porqué durar 30 minutos exactos. Nosotros, como novedad, y como ahorro de
+energía (parece mentira, pero es bastante agotador), en la última iteración
+hicimos <a href="https://en.wikipedia.org/wiki/Mob_programming">mob programming</a>. Y, todo sea dicho, es la iteración que menos
+avanzamos. El cansancio y las restricciones acumuladas hacían mella en
+nosotros. Había que tener en cuenta más de dos puntos de vista, ya no era
+programar en parejas.</p>
+
+<p>Es curioso, este año he sentido que he avanzado más en la solución al problema
+que en otras ocasiones. No estoy seguro, mirándolo con perspectiva, es como si
+este año hubiera estado más centrado en el software y no tanto en las personas.
+Puede que haya sido porque he afrontado el evento con más tranquilidad, al
+pensar/saber que allí encontraría a algún conocido.</p>
+
+<h2>La gente</h2>
+
+<p>Aunque sienta que he estado más centrado en el software que en la gente, este
+tipo de eventos tratan sobre la profesión y los profesionales. Por eso me
+gustaría recordar que allí me volví a encontrar con gente como <a href="http://juandavidvega.es/">Juan David</a>,
+<a href="https://twitter.com/HelderDOliveira">Helder</a> y <a href="http://twitter.com/luisrovirosa">Luis</a>, organizadores y facilitadores del evento.</p>
+
+<p>Me reencontré con <a href="https://twitter.com/APA42">Alberto</a>, o bueno, más bien él me reencontró a mí, al
+principio no le reconocí, y juraría que ya nos habíamos visto anteriormente.</p>
+
+<p>Casualidades de la vida, conocí a un alcalaíno, <a href="https://twitter.com/amisai">Abel</a>. Y como buen habitante
+de la vega del Henares, espero verle mucho por <a href="https://twitter.com/codenares">Codenares</a>, la comunidad de
+desarrollo del... Henares, sí.</p>
+
+<p>También tuve reencuentros de hace muchísimo tiempo, de <a href="http://rchavarria.github.io/blog/2014/11/18/mi-primer-code-retreat/">mi primer GDCR</a>, del
+cual guardo un grato recuerdo, donde conocí a <a href="https://twitter.com/rafael_luque">Rafa</a>.</p>
+
+<p>Y algún otro que no pude quedarme con una forma de contactar con ellos, como
+Enrique, pero que seguro que nos volveremos a ver en un <em>fregao</em> de estos.</p>
+
+<h2>Agradecimientos</h2>
+
+<p>Por supuesto a <a href="http://idealista.com">idealista</a>, por facilitar las instalaciones y la comida... y
+gente, que estuvieron allí para que los demás pudieramos disfrutar. Y también,
+cómo no, a los facilitadores/organizadores Juan David, Helder y Luis.</p>
+
+<p>¡Gracias!</p>
+
+<h2>Referencias</h2>
+
+<ul>
+<li>Libro sobre el <a href="https://leanpub.com/4rulesofsimpledesign">Juego de la vida</a></li>
+<li>Repositorio de <a href="https://github.com/SoftwareCraftersMadrid/global-day-of-coderetreat-2017">Software Crafter Madrid</a> sobre el evento y <a href="https://www.meetup.com/es-ES/madswcraft/photos/28339208/">algunas fotos</a>
+nada comprometedoras</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Mi Codemotion 2016]]></title>
@@ -867,91 +996,6 @@ radar últimamente, pero no le he hecho mucho caso. Ha llegado el momento</li>
 <li>Proponer PI Week en el trabajo</li>
 </ol>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Los eventos que vienen]]></title>
-    <link href="http://rchavarria.github.io/blog/2015/09/27/eventos-que-vienen/"/>
-    <updated>2015-09-27T23:11:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2015/09/27/eventos-que-vienen</id>
-    <content type="html"><![CDATA[<p>Cuando leí el post de <a href="https://twitter.com/voylinux">Pablo Bernardo</a>, <a href="http://voylinux.com/yo-voy-al-gnu-social-camp-2015/">Yo voy al GNU Social Camp 2015</a>, me
-sentí inspirado para escribir algo parecido. La recta final del año viene
-cargadito de eventos, y les tengo ganas, muchas ganas. Y que mejor manera de ir
-calentando motores que hacer como Pablo y escribir sobre dichos eventos.</p>
-
-<p>¿De qué eventos estoy hablando?</p>
-
-<ol>
-<li><a href="http://globalday.coderetreat.org/">Global Day of Coderetreat</a>, que se celebrará el 14 de noviembre de 2015, a
-nivel mundial.</li>
-<li><a href="http://2015.codemotion.es/">Codemotion 2015</a>, allá por el 27 y 28 de noviembre de 2015.</li>
-<li><a href="http://cas2015.agile-spain.org/">Conferencia Agile Spain 2015</a>, los días 3 y 4 de diciembre de 2015.</li>
-</ol>
-
-
-<p>La agenda está apretada, ¿eh?</p>
-
-<!-- more -->
-
-
-<h2>Global Day of Coderetreat</h2>
-
-<blockquote><p>A day to celebrate passion and software craftsmanship</p></blockquote>
-
-<p>El año pasado fue <a href="/blog/2014/11/18/mi-primer-code-retreat/">mi primer Code Retreat</a>, y me encantó la experiencia. Este
-año está más difícil, y a estas alturas todavía no tengo claro si podré ir. Si
-tú puedes, te lo recomiendo. Lo pasarás bien.</p>
-
-<p>Es un evento a nivel global, estiman que este año lo celebren de 100 a 150
-ciudades. ¡Increíble!</p>
-
-<h2>Codemotion</h2>
-
-<blockquote><p>Codemotion gets all the IT communities in Spain together for two days. We
-take an entire university building to present the best of each technology and
-get you far away from your comfort zone.</p></blockquote>
-
-<p>Este año el Codemotion vuelve a repetirse en la Universidad San Pablo CEU, en
-el campus de Boadilla del Monte (Madrid). Ésta es la madre de las conferencias.
-El año pasado hubo casi 2000 asistentes. <strong>¡2000!</strong>. Una locura, es
-prácticamente imposible no encontrarse con alguien conocido en ella.
-<a href="/blog/2014/11/29/notas-codemotion-2014/">El año pasado pude asistir</a>, y este año también espero poder hacerlo.</p>
-
-<p>Es una conferencia donde se involucran muchísimas comunidades locales, donde
-acuden ponentes internacionales de muy alto nivel. No solo hay charlas, también
-hay talleres, los patrocinadores montan pequeñas fiestas y muchos de ellos
-organizan concursos para disfrute de los asistentes.</p>
-
-<p>Si crees que por dos días de conocer a gente interesantísima te va a salir por
-un ojo de la cara te equivocas. El Codemotion debe ser uno de los eventos más
-accesibles (en cuanto a coste de entrada) de toda España. Por menos de 50€
-tienes derecho a poder absorber cuanta información y contactos puedas durante
-dos días. A tí no se, pero a mí me parece alucinante.</p>
-
-<h2>Conferencia Agile Spain</h2>
-
-<blockquote><p>Es un evento anual que generan las personas que viven el desarrollo de
-productos de software de una manera diferente</p></blockquote>
-
-<p>En el 2012 acudí a esta misma conferencia, cuando se celebró en Cáceres
-(<a href="/blog/2012/11/08/mi-experiencia-en-la-cas2012/">la CAS2012 fue toda un experiencia para mí</a>). Quedé tan prendado del ambiente, de
-las charlas, de todo en general, que desde entonces he querido asistir a todas
-las que se ha celebrado. Otros años me he quedado con las ganas de ir porque se
-celebraba lejos de casa y la pereza de organizarme el viaje pudo con las ganas
-de asistir. Este año se celebra en Madrid, en el <a href="http://www.circulobellasartes.com/">Círculo de Bellas Artes</a>, así
-que este año no hay excusa.</p>
-
-<p>Como muestra de lo genial de la conferencia, existe un
-<a href="https://trello.com/chairscas2015">proceso de votación de charlas</a>. Asi que tú mismo participas en el proceso de
-creación del evento. Existen distintos tracks, distintas temáticas de las
-charlas, para que ningún tema <em>Agile</em> se quede sin representación.</p>
-
-<p>Si participas en el proceso te darás cuenta del nivel de los ponentes. Si echas
-un vistazo, seguro que te convence y te apetecerá asistir. Si no, no sé qué más
-te puedo contar para que te pases por allí: se celebra en un lugar emblemático,
-con ponentes astronómicos, con charlas de temáticas muy variadas y con unos
-asistentes inmejorables. ¿A qué esperas?</p>
 ]]></content>
   </entry>
   

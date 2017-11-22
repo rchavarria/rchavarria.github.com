@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2017-10-30T21:17:20+01:00</updated>
+  <updated>2017-11-22T22:18:52+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,135 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Global day of code retreat 2017]]></title>
+    <link href="http://rchavarria.github.io/blog/2017/11/22/global-day-of-code-retreat-2017/"/>
+    <updated>2017-11-22T21:52:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2017/11/22/global-day-of-code-retreat-2017</id>
+    <content type="html"><![CDATA[<p>Al igual que el <a href="http://rchavarria.github.io/blog/2016/10/27/global-day-of-code-retreat-2016/">año pasado</a>, he tenido el placer de participar en el Global
+Day of Code Retreat 2017, un evento sobre programación <em>de intensa práctica,
+enfocado en los fundamentos del diseño y desarrollo de software</em>. Este año ha
+habido 136 eventos repartidos por todo el mundo. No he encontrado estadísticas
+sobre cuantas personas participamos, pero estoy seguro de que con tantos
+eventos tuvimos que ser miles.</p>
+
+<p>¿Impresiona eh? ¿Te animarás el año que viene? El funcionamiento es sencillo:
+se trata de resolver el problema del <a href="https://es.wikipedia.org/wiki/Juego_de_la_vida">juego de la vida de Conway</a>, donde unas
+<em>células</em> viven o mueren de acuerdo a una serie de reglas preestablecidas.
+Siempre se programa por parejas (o tríos), nunca solo. El día está dividido en
+iteraciones de una duración determinada, y al final de cada iteración hacemos
+una pequeña retrospectiva. Y así es como fue nuestro <a href="https://github.com/SoftwareCraftersMadrid/global-day-of-coderetreat-2017/blob/master/theday.md">día</a>.</p>
+
+<p><img class="center" src="http://rchavarria.github.io/images/2017/gdcr2017.jpg"></p>
+
+<div style="text-align: center">
+  <span style="font-size: 60%">
+Imagen propiedad de <a href="https://twitter.com/HelderDOliveira">Helder</a>, reproducida con su permiso
+  </span>
+</div>
+
+
+
+
+<!-- more -->
+
+
+<h2>El día</h2>
+
+<p>Cada iteración duró unos 45 minutos. Según va avanzando el día, va aumentando
+la intensidad de las conversaciones. Y también el cansancio. Para poner un poco
+de emoción al asunto, en cada nueva iteración se pueden proponer una serie de
+restricciones. Además, las restricciones de una iteración se acumulaban para la
+siguiente. Por ejemplo, en la segunda iteración, debíamos programar haciendo
+<a href="http://wiki.c2.com/?PairProgrammingPingPongPattern">ping-pong</a> <em>(uno escribe el test, otro lo hace pasar y escribe un nuevo test,
+otro lo hac&#8230;)</em>. Más adelante se propuso eliminar los <code>else</code> y más adelante
+todos los condicionales.</p>
+
+<p>Después de cada iteración, se hace una pequeña retrospectiva, donde todos
+ponemos en común cómo hemos afrontado el problema, qué impedimentos hemos
+encontrado, cómo lo hemos solucionado, hasta dónde hemos llegado. En seguida
+aparecieron 2 enfoques principales para atacar al problema:</p>
+
+<ol>
+<li>De dentro hacia afuera: se comienza a resolver el problema por la parte más
+interna, más pequeña, más acotada. Se empiezan a describir las reglas del
+juego en los tests y se van haciendo pasar, implementando las reglas en una
+función o en pequeños objectos con muy poco código.</li>
+<li>De fuera hacia adentro: el problema se ataca desde el nivel más alto. Se
+suele hablar de <em>mundo</em>, <em>universo</em>, <em>juego</em>, <em>matriz de células</em>. Las
+reglas del juego se implementan mucho más adelante. Pero al principio te
+encuentras con problemas como recorrer una matriz, bucles anidados,
+inicialización del juego, comprobación de límites,&#8230;</li>
+</ol>
+
+
+<p>Durante las retros suele haber alguna discusión/conversación. En esta ocasión,
+especialmente en la última, hubo una interesante discusión que surgió a raiz de
+restricciones relacionadas con no usar ni condicionales ni bucles. Sobre los
+condicionales no hubo mucha dicrepancia, parece que tenemos claro que una forma
+de reemplazar condicionales es el polimorfismo (aplicarlo ya es otra historia),
+aunque no es la única.</p>
+
+<p>Pero sobre los bucles no hubo mucho consenso. ¿Realmente eliminarlos ayuda a
+hacer el código más legible? ¿Ayuda a tener menos código (y por tanto menos
+probabilidad de errores)? Si el código no queda muy legible, ¿estoy tratando a
+mis compañeros como inferiores? ¿o les estoy ayudando a aprender
+características del lenguaje? Una pregunta que surgió varias veces: ¿Un
+<code>map</code>/<code>filter</code> es un bucle?</p>
+
+<p>El formato ofrece cierta libertad. Por ejemplo, las iteraciones no tienen
+porqué durar 30 minutos exactos. Nosotros, como novedad, y como ahorro de
+energía (parece mentira, pero es bastante agotador), en la última iteración
+hicimos <a href="https://en.wikipedia.org/wiki/Mob_programming">mob programming</a>. Y, todo sea dicho, es la iteración que menos
+avanzamos. El cansancio y las restricciones acumuladas hacían mella en
+nosotros. Había que tener en cuenta más de dos puntos de vista, ya no era
+programar en parejas.</p>
+
+<p>Es curioso, este año he sentido que he avanzado más en la solución al problema
+que en otras ocasiones. No estoy seguro, mirándolo con perspectiva, es como si
+este año hubiera estado más centrado en el software y no tanto en las personas.
+Puede que haya sido porque he afrontado el evento con más tranquilidad, al
+pensar/saber que allí encontraría a algún conocido.</p>
+
+<h2>La gente</h2>
+
+<p>Aunque sienta que he estado más centrado en el software que en la gente, este
+tipo de eventos tratan sobre la profesión y los profesionales. Por eso me
+gustaría recordar que allí me volví a encontrar con gente como <a href="http://juandavidvega.es/">Juan David</a>,
+<a href="https://twitter.com/HelderDOliveira">Helder</a> y <a href="http://twitter.com/luisrovirosa">Luis</a>, organizadores y facilitadores del evento.</p>
+
+<p>Me reencontré con <a href="https://twitter.com/APA42">Alberto</a>, o bueno, más bien él me reencontró a mí, al
+principio no le reconocí, y juraría que ya nos habíamos visto anteriormente.</p>
+
+<p>Casualidades de la vida, conocí a un alcalaíno, <a href="https://twitter.com/amisai">Abel</a>. Y como buen habitante
+de la vega del Henares, espero verle mucho por <a href="https://twitter.com/codenares">Codenares</a>, la comunidad de
+desarrollo del&#8230; Henares, sí.</p>
+
+<p>También tuve reencuentros de hace muchísimo tiempo, de <a href="http://rchavarria.github.io/blog/2014/11/18/mi-primer-code-retreat/">mi primer GDCR</a>, del
+cual guardo un grato recuerdo, donde conocí a <a href="https://twitter.com/rafael_luque">Rafa</a>.</p>
+
+<p>Y algún otro que no pude quedarme con una forma de contactar con ellos, como
+Enrique, pero que seguro que nos volveremos a ver en un <em>fregao</em> de estos.</p>
+
+<h2>Agradecimientos</h2>
+
+<p>Por supuesto a <a href="http://idealista.com">idealista</a>, por facilitar las instalaciones y la comida&#8230; y
+gente, que estuvieron allí para que los demás pudieramos disfrutar. Y también,
+cómo no, a los facilitadores/organizadores Juan David, Helder y Luis.</p>
+
+<p>¡Gracias!</p>
+
+<h2>Referencias</h2>
+
+<ul>
+<li>Libro sobre el <a href="https://leanpub.com/4rulesofsimpledesign">Juego de la vida</a></li>
+<li>Repositorio de <a href="https://github.com/SoftwareCraftersMadrid/global-day-of-coderetreat-2017">Software Crafter Madrid</a> sobre el evento y <a href="https://www.meetup.com/es-ES/madswcraft/photos/28339208/">algunas fotos</a>
+nada comprometedoras</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Elixir: undécimo asalto]]></title>
@@ -3302,330 +3431,6 @@ que todavía no conocía o que he encontrado muy útiles:</p>
 herramienta <code>jsctags</code>, para generar ficheros ctags de proyectos JavaScript.</li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Elixir: tercer asalto]]></title>
-    <link href="http://rchavarria.github.io/blog/2016/05/01/elixir-tercer-round/"/>
-    <updated>2016-05-01T17:46:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2016/05/01/elixir-tercer-round</id>
-    <content type="html"><![CDATA[<p>Éste es el tercer asalto para aprender <a href="http://elixir-lang.org/">Elixir</a>, y las cosas se van poniendo
-interesantes, aunque todavía siento que estoy muy verde y me falta todavía
-mucho para ser capaz de hacer las cosas más sencillas.</p>
-
-<p>En este asalto, aprendo nuevas cosas proporcionadas por los módulos <code>Enum</code>,
-<code>Stream</code> y otras coleciones, así como las <em>comprehensions</em>, que me recuerdan
-mucho a los clásicos bucles <code>for</code>.</p>
-
-<p>Sigo aprendiendo siguiendo el método descrito en el post sobre <a href="http://rchavarria.github.io/blog/2016/01/17/aprendiendo-elixir/">aprender Elixir</a>:</p>
-
-<ul>
-<li>Aprender lo suficiente para comenzar</li>
-<li>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</li>
-<li>Aprender lo suficiente para hacer algo de utilidad</li>
-<li>Enseñar lo aprendido</li>
-</ul>
-
-
-<p><img class="right" src="http://rchavarria.github.io/images/2016/third-fight.png"></p>
-
-<div style="text-align: center">
-  <span style="font-size: 60%">
-Imagen basada en <a href="https://flic.kr/p/c9bWJA">3rd fight</a> de <a href="https://www.flickr.com/photos/takfoto/">Tomasz Krawczak</a>, <a href="https://creativecommons.org/licenses/by-nc/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by-nc/2.0/legalcode">CC BY-NC 2.0</a>
-  </span>
-</div>
-
-
-
-
-<!-- more -->
-
-
-<h2>Aprender lo suficiente para comenzar</h2>
-
-<p><strong>Procesando colleciones con <code>Enum</code></strong></p>
-
-<p>Elixir tiene muchos tipos de datos que actúan como colleciones: listas, mapas,
-diccionarios, rangos, ficheros e incluso funciones. Las colecciones se pueden
-iterar (sobretodo con funciones del módulo <code>Enum</code>), y algunas permiten añadir
-elementos.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-<span class='line-number'>28</span>
-<span class='line-number'>29</span>
-<span class='line-number'>30</span>
-<span class='line-number'>31</span>
-<span class='line-number'>32</span>
-<span class='line-number'>33</span>
-<span class='line-number'>34</span>
-<span class='line-number'>35</span>
-<span class='line-number'>36</span>
-<span class='line-number'>37</span>
-<span class='line-number'>38</span>
-<span class='line-number'>39</span>
-<span class='line-number'>40</span>
-<span class='line-number'>41</span>
-<span class='line-number'>42</span>
-<span class='line-number'>43</span>
-<span class='line-number'>44</span>
-<span class='line-number'>45</span>
-<span class='line-number'>46</span>
-<span class='line-number'>47</span>
-<span class='line-number'>48</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># convierte cualquier colección a List
-</span><span class='line'>list = Enum.to_list 1..5
-</span><span class='line'>  #=&gt; [1, 2, 3, 4, 5]
-</span><span class='line'>
-</span><span class='line'># concatena
-</span><span class='line'>Enum.concat([1, 2, 3], [4, 5, 6])
-</span><span class='line'>  #=&gt; [1, 2, 3, 4, 5]
-</span><span class='line'>
-</span><span class='line'># crea nuevas colleciones
-</span><span class='line'>Enum.map(list, &(&1 * 10))
-</span><span class='line'>  #=&gt; [10, 20, 30, 40, 50]
-</span><span class='line'>
-</span><span class='line'># selecciona elementos por posición
-</span><span class='line'>Enum.at(10..20, 3) #=&gt; 13
-</span><span class='line'>Enum.at(10..20, 20) #=&gt; nil
-</span><span class='line'>Enum.filter(list, &(&1 &gt; 2)) #=&gt; [3, 4, 5]
-</span><span class='line'>Enum.reject(list, &Integer.is_even/1) #=&gt; [1, 3, 5]
-</span><span class='line'>
-</span><span class='line'># ordena y compara elementos
-</span><span class='line'>Enum.sort([ "there", "was", "a", "crooked", "man" ], 
-</span><span class='line'>  &(String.length(&1) &lt;= String.length(&2))
-</span><span class='line'>Enum.max([ "there", "was", "a", "crooked", "man" ]) #=&gt; "was"
-</span><span class='line'>
-</span><span class='line'># divide una colleción
-</span><span class='line'>Enum.take(list, 3)    #=&gt; [1, 2, 3]
-</span><span class='line'>Enum.take_every(list, 2)  #=&gt; [1, 3, 5]
-</span><span class='line'>Enum.take_while(list, &(&1 &lt; 4))
-</span><span class='line'>Enum.split(list, 3)
-</span><span class='line'>  #=&gt; { [1, 2, 3], [4, 5] }
-</span><span class='line'>Enum.split_while(list, &(&1 &lt; 4))
-</span><span class='line'>  #=&gt; { [1, 2, 3], [4, 5] }
-</span><span class='line'>
-</span><span class='line'># une los elementos de una colección
-</span><span class='line'>Enum.join(list)
-</span><span class='line'>Enum.join(list, ", ")   #=&gt; "1, 2, 3, 4, 5"
-</span><span class='line'>
-</span><span class='line'># hace preguntas sobre operaciones
-</span><span class='line'>Enum.all?(list, &(&1 &lt; 4))
-</span><span class='line'>Enum.any?(list, &(&1 &lt; 4))
-</span><span class='line'>Enum.member?(list, 4)
-</span><span class='line'>Enum.empty?(list)
-</span><span class='line'>
-</span><span class='line'># mezcla colecciones
-</span><span class='line'>Enum.zip(list, [:a, :b, :c])
-</span><span class='line'>  #=&gt; [ {1, :a}, {2, :b}, {3, :c} ]
-</span><span class='line'>
-</span><span class='line'># otros
-</span><span class='line'>Enum.reduce(&lt;collection&gt;, &lt;function&gt;)</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong><code>Stream</code>s, enumerables diferidos o perezosos</strong></p>
-
-<p>El módulo <code>Stream</code> permite enumerar collecciones de forma diferida (<em>lazy</em> es
-la palabra utilizada, que traduzco libremente como <em>diferida</em>).</p>
-
-<p>Las funciones del módulo <code>Enum</code> procesan todos los elementos de la colección de
-una vez, consumiendo memoria. Las del módulo <code>Stream</code> consumen los elementos de
-uno en uno, según se van necesitando. Los <em>streams</em> se pueden componer, es
-decir, los streams son collecciones, por lo que se pueden usar las funciones de
-<code>Stream</code> con los propios streams (sería como crear streams de streams).</p>
-
-<p>Finalmente, para obtener los resultados, se puede convertir un <code>Stream</code> a una
-lista:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>[1, 2, 3, 4, 5]
-</span><span class='line'>  |&gt; Stream.map(&(&1 * &1)
-</span><span class='line'>  |&gt; Stream.map(&(&1 + 1)
-</span><span class='line'>  |&gt; Stream.filter(fn x -&gt; rem(x, 2) == 1 end)
-</span><span class='line'>  |&gt; Enum.to_list</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Con <code>Enum</code> debemos esperar a tener todos los elementos de la colección para
-empezar a procesarlos. Con <code>Stream</code> podemos comenzar a procesarlos
-inmediatamente. Imagina que leemos de un servidor remoto, o de un sensor, ambos
-mandan datos infinitamente, por lo que <code>Enum</code> no sería una opción válida en
-este caso.</p>
-
-<p>Normalmente, serán las librerías y los frameworks quienes nos proporcionen los
-streams con los que vamos a trabajar, pero también podemos crearlos nosotros
-con métodos proporcionados por Elixir: <code>cycle</code>, <code>repeatedly</code>, <code>iterate</code>,
-<code>unfold</code> y <code>resource</code>.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-<span class='line-number'>23</span>
-<span class='line-number'>24</span>
-<span class='line-number'>25</span>
-<span class='line-number'>26</span>
-<span class='line-number'>27</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># cycle toma una coleción y va devolviendo de uno en uno indefinidamente
-</span><span class='line'>#cuando la colección se acaba, vuelve a empezar desde el principio
-</span><span class='line'>Stream.cycle([1, 2, 3])
-</span><span class='line'>  |&gt; Enum.take(10)
-</span><span class='line'>#=&gt; [1, 2, 3, 1, 2, 3, 1, 2, 3, 1]
-</span><span class='line'>
-</span><span class='line'># repeatedly toma una función y la ejecuta cada vez que se le pide un elemento
-</span><span class='line'>Stream.repeatedly(fn -&gt; true end) |&gt; Enum.take(3)
-</span><span class='line'>  #=&gt; [ true, true, true ]
-</span><span class='line'>Stream.repeatedly(&:random.uniform/0) |&gt; Enum.take(3)
-</span><span class='line'>  #=&gt; [ 0.723, 0.941, 0.1234 ]
-</span><span class='line'>
-</span><span class='line'># iterate toma un valor inicial y una función. el primer elemento es el valor inicial,
-</span><span class='line'>#el siguiente es el valor devuelto por la función pasándole el valor inicial, el siguiente
-</span><span class='line'>#es el valor devuelto por la función pasándole el valor anterior, así indefinidamente
-</span><span class='line'>Stream.iterate(0, &(&1 + 1)) |&gt; Enum.take(5)
-</span><span class='line'>  #=&gt; [0, 1, 2, 3, 4]
-</span><span class='line'>
-</span><span class='line'># unfold es similar a iterate, pero con tuplas. el primer valor de la tupla
-</span><span class='line'>#significa el valor de la iteración actual, el segundo valor significa el valor
-</span><span class='line'>#a procesar en la siguiente iteración
-</span><span class='line'>Stream.unfold( {0, 1}, fn {f1, f2} -&gt; {f1, {f2, f1+f2}} end ) |&gt; Enum.take(15)
-</span><span class='line'>  #=&gt; [0, 1, 1, 2, 3, 5, 8, 13, ... fibonacci]
-</span><span class='line'>
-</span><span class='line'># resource es similar a unfold. toma tres funciones como argumentos. la primera
-</span><span class='line'>#crea el recurso, la segunda va dando valores de las iteraciones (como unfold)
-</span><span class='line'>#y la tercera cierra el recurso (fichero, bbdd, ...)</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>El protocolo <code>Collectable</code></strong></p>
-
-<p>No son lo mismo, y todavía no soy capaz de describir exactamente lo que es un
-<em>protocolo</em>, pero el concepto que tengo de ellos hoy mismo es que son
-<em>equivalentes</em> a las interfaces en los lenguajes orientados a objetos.</p>
-
-<p><code>Enumerable</code> es un protocolo que permite iterar una colección. <code>Collectable</code>
-permite añadir elementos a una colección. Se puede utilizar <code>Enum.into</code> para
-hacerlo y convertir un tipo de colección en otro.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Enum.into 1..5, [1000, 10001]
-</span><span class='line'>  #=&gt; [1000, 1001, 1, 2, 3, 4, 5]</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Comprehensions</strong></p>
-
-<p>Se le pueden pasar una o más colecciones, entonces extrae todas las
-combinaciones posibles de los elementos de dichas colecciones, opcionalmente
-puede filtrar valores, y genera una nueva colección con los valores que pasan
-el filtro. La sintaxis es <code>result = for &lt;generator&gt; or &lt;filter&gt;, do:
-&lt;expression&gt;</code>. Donde <code>&lt;generator&gt;</code> tiene la forma <code>pattern &lt;- collection</code> y el
-filtro es simplemente una condición, por ejemplo <code>x &lt; 4</code>.</p>
-
-<p>Las variables declaradas en una comprehension tienen la misma como ámbito, no
-escapan de él.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>for x &lt;- [1, 2, 3, 4, 5], x &lt; 4, do: x * x
-</span><span class='line'>  # =&gt; [1, 4, 9]
-</span><span class='line'>
-</span><span class='line'>for x &lt;- [1, 2], y &lt;- [5, 6], do: x * y
-</span><span class='line'>  # =&gt; las posibles combinaciones serían [1, 5], [1, 6], [2, 5], [2, 6]
-</span><span class='line'>  # =&gt; y esas combinaciones serían las iteraciones de la comprehension
-</span><span class='line'>
-</span><span class='line'># se pueden usar variables de generadores en siguientes generadores
-</span><span class='line'>min_maxes = [ {1, 4}, {2, 3}, {10, 15} ]
-</span><span class='line'>for { min, max } &lt;- min_maxes, n &lt;- min..max, do: n
-</span><span class='line'>  # =&gt; [ 1, 2, 3, 4, 2, 3, 10, 11, 12, 13, 14, 15 ]
-</span><span class='line'>
-</span><span class='line'># por defecto, las comprehensions devuelven una lista. Se puede cambiar
-</span><span class='line'># con el parámetro `into:`
-</span><span class='line'>for x &lt;- ~w{ cat dog }, into: Map.new, do: { x, String.upcase(x) }
-</span><span class='line'>  # =&gt; %{ "cat" =&gt; "CAT", "dog" =&gt; "DOG" }</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</h2>
-
-<p>Podría investigar sobre qué son los protocolos, pero creo que están descritos
-en el libro del cual está surgiendo esta serie de posts, por lo que esperaré a
-llegar ahí.</p>
-
-<p>Tener siempre muy presente las funciones del módulo <code>Enum</code>, ya que casi seguro
-que se van a utilizar siempre que haya colecciones de por medio.</p>
-
-<h2>Aprender lo suficiente para hacer algo de utilidad</h2>
-
-<ul>
-<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-03/exercise-01-round-03.exs">exercise-01-round-03.exs</a>: con ayuda de la función <code>span</code> escrita anteriormente, escribir una función que devuelva la lista de números primos de <code>2</code> hasta <code>n</code></li>
-<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-03/exercise-02-round-03.exs">exercise-02-round-03.exs</a>: a partir de dos listas, una de tasas de impuestos, y otra de compras, calcular el importe total de cada una de las compras</li>
-<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-03/lists-and-recursion-5.exs">lists-and-recursion-5.exs</a>: implementar funciones presentes en <code>Enum</code>: <code>all?</code>, <code>each</code>, <code>filter</code>, <code>take</code> y <code>split</code>.</li>
-<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-03/lists-and-recursion-6.exs">lists-and-recursion-6.exs</a>: implementar <code>flatten</code></li>
-</ul>
-
-
-<h2>Enseñar lo aprendido, y repetir desde el paso 7</h2>
-
-<p>Aquí está, este post, mis notas, mis pensamientos, mis dudas y mi código. Hasta el siguiente asalto.</p>
 ]]></content>
   </entry>
   
