@@ -82,7 +82,7 @@ dar y tomar, que pueden servir perfectamente como material de referencia. Me
 llevo unas cuantas ideas sobre cómo afrontar nuestro entorno Jenkins en el
 trabajo (¡a dockerizar todo!)
 
-{% img center /images/2017/codemotion-taller.png %}
+{% img center /images/2017/codemotion-taller.jpg %}
 
 - [Las reglas que hay que romper para que tu equipo de desarrollo sea el más rápido],
 de [Javier Abadía]: Presentación muy trabajada, divertida y con muy
@@ -130,6 +130,7 @@ como keynote para cerrar el evento.
 [Micael Gallego]: https://twitter.com/micael_gallego
 [Javier Abadía]: https://twitter.com/javierabadia
 [Luis G. Valle]: https://twitter.com/lgvalle
+[David Bonilla]: https://twitter.com/david_bonilla
 
 [Codemotion]: http://2017.codemotion.es/
 [colección]: 
