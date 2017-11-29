@@ -4,9 +4,8 @@ title: "Mis impresiones sobre Codemotion 2012"
 date: 2012-03-29 03:29
 author: Rubén Chavarría
 categories: 
-- conferencias
-- personal
-- software
+- events
+- codemotion
 comments: true
 published: true
 footer: false

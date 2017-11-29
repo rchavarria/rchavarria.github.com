@@ -12,11 +12,15 @@ footer: false
 sidebar: true
 ---
 
-¡Vaya! Otro [Codemotion] más a la [colección], el 5º del que tengo nota, aunque
-juraría que éste era el 6º, supongo que perdí la cuenta hace tiempo. Sigue
-siendo el evento técnico más grande de España, creo: dos días a tope, más de
-2000 asistentes, cientos de charlas y unos cuantos talleres bastante intensos.
-Este año ha habido *eventos* dentro del evento.
+¡Vaya! Otro [Codemotion] más a la [colección], y ya van 6, ¡cómo pasa el
+tiempo! A pesar de ello, sigue siendo el evento técnico más grande de España,
+creo: dos días a tope, más de 2000 asistentes, cientos de charlas y unos
+cuantos talleres bastante intensos. Este año incluso, ha habido *eventos*
+dentro del evento.  
+
+Muchísimas gracias a los organizadores: Nacho, Abraham y Laura. Y gracias
+también a los patrocinadores y voluntarios, que con todo su curro hacen que
+este pedazo de evento sea posible. 
 
 {% img center /images/2017/codemotion-voluntarios.png %}
 
