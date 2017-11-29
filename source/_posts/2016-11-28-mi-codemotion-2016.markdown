@@ -6,7 +6,7 @@ author: Ruben Chavarria
 comments: true
 categories: 
 - events
-- personal
+- codemotion
 published: true
 footer: false
 sidebar: true
