@@ -4,7 +4,7 @@
   <title><![CDATA[Category: codemotion | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/codemotion/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2017-11-22T22:20:50+01:00</updated>
+  <updated>2017-11-29T22:11:45+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,478 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Así fue mi Codemotion 2017]]></title>
+    <link href="http://rchavarria.github.io/blog/2017/11/29/mi-codemotion-2017/"/>
+    <updated>2017-11-29T21:32:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2017/11/29/mi-codemotion-2017</id>
+    <content type="html"><![CDATA[<p>¡Vaya! Otro <a href="http://2017.codemotion.es/">Codemotion</a> más a la <a href="/blog/categories/codemotion/">colección</a>, y ya van 6, ¡cómo pasa el
+tiempo! A pesar de ello, sigue siendo el evento técnico más grande de España,
+creo: dos días a tope, más de 2000 asistentes, cientos de charlas y unos
+cuantos talleres bastante intensos. Este año incluso, ha habido <em>eventos</em>
+dentro del evento.</p>
+
+<p>Muchísimas gracias a los organizadores: Nacho, Abraham y Laura. Y gracias
+también a los patrocinadores y voluntarios, que con todo su curro hacen que
+este pedazo de evento sea posible.</p>
+
+<p><img class="center" src="/images/2017/codemotion-voluntarios.png"></p>
+
+<!-- more -->
+
+
+<h2>El evento</h2>
+
+<p>Los organizadores se superan cada año. Con el feedback recibido, deciden qué
+cosas hay que cambiar de años anteriores, qué hay que conservar y qué hay que
+eliminar.</p>
+
+<p>Como todos los años, la afluencia de gente ha sido brutal. Fueras donde fueras,
+había gente, mucha gente. Colas por todos los sitios. Salas hasta la bandera.
+Eso sí, solo me quedé fuera de una de las charlas, por lo que las votaciones de
+la gente en cuanto a intención de asistir a las charlas funcionó bastante bien.</p>
+
+<p>El café de media mañana, muy bien acompañado. Eso sí, se montaron unas colas
+enooormes para poder tomar un café. Creo que es difícil organizar algo para
+servir 2000 cafés en poco tiempo. Pero la comida estuvo muy bien (escasa para
+un glotón como yo, pero bien), había variedad, opción vegetariana y celíaca.</p>
+
+<p>Como no todo son charlas y talleres, la zona chillout estaba siempre repletita
+de gente y actividad. Interesante como siempre. Y este año añadieron una
+novedad, una zona donde <a href="https://indiemad.org/">IndieMAD</a> organizó un concurso de videojuegos.
+Cualquiera podía pasarse por allí, echarse unos vicios y votar al estudio que
+hubiera desarrollado el mejor juego. Por lo que escuché en el cierre de
+Codemotion, el año que viene repetirán. ¡Muy bien!</p>
+
+<h2>Las charlas</h2>
+
+<ul>
+<li><p><a href="https://2017.codemotion.es/agenda.html#5649626120060928/5768955947909120">Seamos hipsters, pensemos en Serverless</a>, de <a href="https://twitter.com/mdelgadodiaz83">Manu Delgado</a>: Charla muy
+divertida y práctica, muy centrada en Azure, pero práctica. Quería conocer de
+qué va el concepto de <em>serverless</em>, y resulta que significa <em>despreocuparse de
+la infraestructura</em>. ¿Pero eso no era IaaS o PaaS?. Al menos me quedó claro
+cómo funcionan las <em>funciones en la nube</em> (como las Azure Functions).</p></li>
+<li><p><a href="https://2017.codemotion.es/agenda.html#5649626120060928/5098174129635328">Clean architecture</a>, de <a href="https://twitter.com/aloaisa">Álvaro García Loaisa</a>: Repaso de la evolución de
+las arquitecturas de lado servidor (monolito, n capas, MVC, hexagonal,...),
+con ejemplos prácticos de algunas de ellas. La conclusión que saqué, es que al
+final, Clean Architecture es my parecida (por no decir igual) a Hexagonal
+Architecture.</p></li>
+<li><p><a href="https://2017.codemotion.es/agenda.html#5649626120060928/5699320770723840">Progressive wep apps orientadas a componentes con Vue.js</a>, de <a href="https://twitter.com/Rafael_Casuso">Rafael Casuso</a>:
+Charla con un ritmo frenético donde se repasó qué son las PWAs y
+cómo podemos desarrollarlas, nos presentó un proyecto a partir del cual podemos
+crear nuestras propias PWAs fácil y rápido con VueJS. Muchos, muchos conceptos
+donde rascar: app shell, web push notifications, service workers, cache api,
+...</p></li>
+<li><p><a href="https://2017.codemotion.es/agenda.html#5649626120060928/6007471319547904">El despertar de la zona de confort</a>, de <a href="https://twitter.com/lauralacarra">Laura Lacarra</a>: Comenzó un poco
+nerviosa, pero pronto se rehizo. Nos contó unas cuantas fases que podríamos
+encontrarnos al salir de la zona de confort (curiosidad, consumir conocimiento,
+difundir conocimiento, motivar la curiosidad, ...). Me surgió una duda, ¿por
+qué siempre que se habla de salir de la zona de confort se termina centrando el
+debate en dar charlas en público?</p></li>
+</ul>
+
+
+<p><img class="center" src="/images/2017/codemotion-troll.png"></p>
+
+<ul>
+<li><a href="https://2017.codemotion.es/agenda.html#5693168230072320/6560049195384832">Taller: testing fácil con docker: gestiona dependencias y unifica entornos</a>,
+de <a href="https://twitter.com/micael_gallego">Micael Gallego</a>: Una pena no poder seguir el taller al completo en vivo
+por falta de conectividad. El taller fue super completo, con trasparencias para
+dar y tomar, que pueden servir perfectamente como material de referencia. Me
+llevo unas cuantas ideas sobre cómo afrontar nuestro entorno Jenkins en el
+trabajo (¡a dockerizar todo!)</li>
+</ul>
+
+
+<p><img class="center" src="/images/2017/codemotion-taller.jpg"></p>
+
+<ul>
+<li>[Las reglas que hay que romper para que tu equipo de desarrollo sea el más rápido],
+de <a href="https://twitter.com/javierabadia">Javier Abadía</a>: Presentación muy trabajada, divertida y con muy
+buen ritmo. Charla llena de tips para trabajar mejor. Si me tuviera que quedar
+con uno sería: conoce el objetivo (road-map) y no te distraigas, haz lo mínimo
+con la calidad deseada para llegar al objetivo.</li>
+</ul>
+
+
+<p><img class="center" src="/images/2017/codemotion-superhacker.png"></p>
+
+<ul>
+<li><a href="https://2017.codemotion.es/agenda.html#5693168230072320/4878640902832128">¿Qué es un senior developer?</a>, de <a href="https://twitter.com/lgvalle">Luis G. Valle</a>: Presentación muy visual
+donde nos habló sobre qué es y qué no es un senior. En resumen, un senior es
+un profesional maduro. También nos habló de seguir unos principios (fiabilidad,
+responsabilidad, flexibilidad y pragmatismo) y unas reglas. Aprendimos que los
+seniors planifican su carrera, deciden cuál será su próximo paso.</li>
+</ul>
+
+
+<p><img class="center" src="/images/2017/codemotion-senior.png"></p>
+
+<ul>
+<li><a href="https://2017.codemotion.es/agenda.html#5693168230072320/5145563993473024">El informático</a>, de <a href="https://twitter.com/david_bonilla">David Bonilla</a>: Nada que aprender en sí, pero mucho
+para reflexionar. ¿qué es un informático? ¿somos conscientes del poder que
+tenemos? ¿qué pensamos de la manipulación de la información? ¿estás realmente
+en el trabajo que deseas? ¿tu trabajo está alineado con tus valores? ¿estamos
+haciendo lo posible para dejar un mundo mejor? Tenemos el deber de educar a los
+no-informaticos de los peligros de ciertos algoritmos. Podría haber servido
+como keynote para cerrar el evento.</li>
+</ul>
+
+
+<p><img class="center" src="/images/2017/codemotion-bonilla.png"></p>
+
+<h2>Referencias</h2>
+
+<ul>
+<li><a href="https://github.com/rchavarria/blog-post-incubator/blob/master/conferences/2017/codemotion/2017-11-25%20-%20codemotion.markdown">Notas extendidas del evento</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mi Codemotion 2016]]></title>
+    <link href="http://rchavarria.github.io/blog/2016/11/28/mi-codemotion-2016/"/>
+    <updated>2016-11-28T22:00:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2016/11/28/mi-codemotion-2016</id>
+    <content type="html"><![CDATA[<p>Y otro año más, me lo he pasado genial en el <a href="https://2016.codemotion.es/">Codemotion</a>. No creo que necesite
+presentación. Es el evento técnico más grande en España: dos días completos,
+más de 2000 asistentes, 150 charlas y talleres. Una auténtica monstruosidad. Y
+llena de monstruos de la industria.</p>
+
+<div style="background-image: url('/images/2016/codemotion-2016.jpg');
+            width: 100%;
+            height: 14em;
+            background-position: center 0;
+            background-size: cover;"></div>
+
+
+
+
+<div style="text-align: center">
+  <span style="font-size: 60%">
+Foto: <a href="https://flic.kr/p/NjN8Hv">_MG_1926</a> de <a href="https://www.flickr.com/photos/78483623@N07/">Codemotion Madrid</a>, &copy; Todos los derechos reservados, reproducida con <a href="https://twitter.com/codemotion_es/status/803259905213952000">permiso explícito</a>
+  </span>
+</div>
+
+
+
+
+<!-- more -->
+
+
+<h2>Mis impresiones</h2>
+
+<p>La organización tomó nota de una de las quejas más escuchadas el año pasado: la
+masificación de alguna sala. Este año se pidió a los asistentes que votaran a
+qué charlas tenían intención de acudir, y repartieron las salas en
+consecuencia. Por supuesto, es imposible hacerlo perfecto, aún hubo algún caso
+en el que la sala se quedó pequeña. Pero nada comparable a otros años.
+Impresionante organización.</p>
+
+<p>La comida me pareció exactamente igual al año anterior. En mi opinión se queda
+corta, pero hay una ligera variedad de sabores y también vi que había
+sandwiches espciales para celíacos. Muy buen detalle. Es una lata tener que
+desplazarse a un pabellón exterior, pero es comprensible por la cantidad de
+asistentes. Es una delicia ver que hay gente repartida por todo el recinto a la
+hora de la comida y el café.</p>
+
+<p>Hay gente que se queja de la mala gestión por parte de la organización para
+favorecer que haya más presencia femenina. No estoy seguro, pero mi impresión
+es que este año ha habido más mujeres que en años anteriores. No tengo datos,
+simplemente me guio por mis sensaciones.</p>
+
+<p>Así como me pareció que había más mujeres, también tuve la impresión de que
+hubo menos ponentes extranjeros. Quizá fui yo que no encontré una charla
+interesante ofrecida por alguno de ellos. Este tema me recuerda mucho a un post
+reciente de Carlos Blé hablando sobre <a href="http://www.carlosble.com/2016/11/el-ingles-la-diversidad-y-la-comida-en-las-conferencias/?lang=es">el idioma en los eventos técnicos</a>.</p>
+
+<h2>Charlas a las que asistí</h2>
+
+<h3><a href="https://2016.codemotion.es/agenda.html#5732408326356992/90194003">Los androides no sueñan con ovejas eléctricas, sueñan con conciliar</a> de Susana Morcuende, Yamila Moreno y Jorge Arévalo</h3>
+
+<p>Charla sobre conciliación. Como bien explicó Susana, todavía seguimos asociando
+el término <em>conciliación</em> solamente con la familia (cuidar de hijos, abuelos,
+enfermos,...). Los ingleses tienen un término mejor para esto: <em>work-life
+balance</em>. Es decir, un término medio entre la vida en general (ocio, familia,
+amigos,...) y el trabajo.</p>
+
+<p>Susana habló de buscar la conciliación desde el minuto cero, desde el proceso
+de selección. Y presentó la iniciativa <a href="http://yosoytumadre.es">Yo soy tu madre</a>, donde empresas muy a
+favor de la conciliación tienen una especial cabida.</p>
+
+<p>Después, Yamila y Jorge expusieron sus casos particulares. Yamila en Kaleidos,
+y Jorge en Pronoide. Ambos contaron multitud de acciones llevadas a cabo en sus
+empresas que les permiten conciliar.</p>
+
+<blockquote><p>Si otras empresas lo están haciendo, es porque la conciliación es posible,
+plantéalo en tu empresa</p></blockquote>
+
+<h3><a href="https://2016.codemotion.es/agenda.html#5732408326356992/88334002">Teletrabajo en el mundo real</a> de Pablo Alba</h3>
+
+<p>Pablo nos habló sobre teletrabajo y sus diferencias con el trabajo en remoto.
+Contó que existen varios retos a superar: comunicación, coordinación,
+felicidad, productividad y sentimiento de equipo.</p>
+
+<p>Luego pasó a describir multitud de herramientas para hacer frente a esos retos.
+Herramientas de videoconferencia, de conferencia de audio, chats, gestión del
+código fuente, hardware,...</p>
+
+<p>Un comentario que me sorprendió mucho fue el de tener el audio conectado
+siempre, para que quien esté solo en casa pueda escuchar el ruido de la
+oficina. No es que vaya a ser partícipe de todas las conversaciones, pero un
+poco de compañía sí le hará.</p>
+
+<h3><a href="https://2016.codemotion.es/agenda.html#5732408326356992/85544001">8 formas de mejorar tu vida gracias a los logs</a> de Joaquín Diez y Fran Rodríguez</h3>
+
+<p>Joaquín nos habló de cómo deberían ser los logs mientras que Fran nos habló más
+del lado de operaciones.</p>
+
+<p>Los logs los deberíamos escribir para que los entendieran las máquinas, no los
+humanos. Deberíamos definir claramente el formato de los mismos, y las
+estructuras de datos que queremos loguear. También, que los logs deben estar
+disponibles para todo el mundo. Todos deberían ser capaces de verlos, leerlos,
+buscar en ellos,... Para ello es posible que tengamos que desarrollar
+aplicaciones o usar algunas de terceros.</p>
+
+<p>Los logs nos sirven para monitorizar, monitorizar el estado y la actividad de
+nuestros sistemas. Estos logs deben estar centralizados. Cada vez más creamos y
+destruimos máquinas con más facilidad, y los logs deben sobrevivir a las
+máquinas.</p>
+
+<h3><a href="https://2016.codemotion.es/agenda.html#5732408326356992/84654003">Intraemprendimiento para frikis</a> de Roberto Canales</h3>
+
+<p>Aquí, Roberto nos contó en qué se ha equivocado Autentia en sus múltiples
+intentos de pasar de ser una empresa de servicios a ser una empresa de
+producto. No es que les vaya mal vendiendo servicios, pero lo que realmente
+quieren hacer es hacer productos. Una empresa de servicios no escala, lo que
+vendes es <em>horas hombre</em>, y Autentia no ha querido entrar en el juego del body
+shopping.</p>
+
+<p>Así pues, buena parte de los beneficios que tenían los han ido invirtiendo en
+productos.</p>
+
+<p>Primero, dedicando tiempos muertos de los empleados a desarrollar una
+aplicación para uso interno. Pero el producto lo tocaban demasiadas manos, sin
+un objetivo global concreto, y el producto se resiente.</p>
+
+<p>En otras ocasiones, han invertido en otras empresas, para aprender de cómo lo
+hacen otros. También han <em>dado</em> dinero a otras personas para que hagan realidad
+sus ideas.</p>
+
+<p>Si algo han aprendido es que te debes centrar en que tu producto lo use la
+gente <strong>pronto</strong>.</p>
+
+<h3><a href="https://2016.codemotion.es/agenda.html#5732408326356992/86444010">Aprender a distinguir el problema de la solución</a> de Carlos Blé</h3>
+
+<p>Carlos comenzó fuerte:</p>
+
+<blockquote><p>La forma de ir más rápido no es correr más, es evitar más desperdicio</p></blockquote>
+
+<p>Cuando nos decantamos por una solución, estamos descartando otras.
+Probablemente más sencillas, más baratas, más apropiadas. O peores, porqué no.</p>
+
+<p>Antes de ponernos a implementar la solución, hay que comprender las necesidades
+del cliente, hay que identificar correctamente el problema. Los clientes
+normalmente vienen con soluciones, con <em>cómo</em> quieren que se les soluciones el
+problema que tienen. Es ahí donde debemos pararnos y analizar el problema,
+analizar el <em>qué</em>. Entendiendo bien su problema, podemos mostrarles varias
+soluciones donde ellos podrán elegir la que mejor les convenga. Para conocer el
+problema, podemos ayudarnos de todas estas técnicas de análisis:</p>
+
+<p><img class="center" src="/images/2016/carlosble-analisis.png"></p>
+
+<div style="text-align: center">
+  <span style="font-size: 60%">
+Slide #15 de <a href="http://www.slideshare.net/carlosble/distinguir-entre-problema-y-solucin">Distinguir entre problema y solución</a> de <a href="http://www.slideshare.net/carlosble">Carlos Blé</a>, reproducida con permiso del autor
+  </span>
+</div>
+
+
+<blockquote><p>Para saber el valor de un producto, compáralo con una hoja de cálculo ~
+<em>Carlos Blé</em></p></blockquote>
+
+<p>Ésta fue una charla no técnica, de las <em>filosóficas</em>. Este tipo de charlas te
+hacen pensar. Te hacen pensar en tu situación, en cómo trabajas, en si
+realmente te gusta lo que haces y si estás haciendo lo correcto. Muy, muy
+relacionada con los conceptos de Lean: posponer decisiones, evitar desperdicio,
+conocer contexto del cliente,...</p>
+
+<h3><a href="https://2016.codemotion.es/agenda.html#5732408326356992/83544002">99 líneas que lo simplifican todo</a> de Daniel Molina</h3>
+
+<p>Daniel estuvo contando las múltiples tecnologías que usan en su empresa. Un
+testimonio bastante bueno. Nos introdujo en las mismas poco a poco, comenzando
+por un modelo sencillo, y ampliándolo y complicándolo poco a poco.</p>
+
+<h3><a href="https://2016.codemotion.es/agenda.html#5716304078045184/84664007">Lo que deberías saber sobre testing para irte de cañas con @pedro_g_s y no empezar con resaca</a> de Sergio Arroyo</h3>
+
+<p>Charla muy técnica. Tocó innumerables conceptos relacionados con los tests.</p>
+
+<p>En cuanto a tests unitarios, hay dos conceptos básicos: inyección de
+dependencias y dobles de tests. También, además de las características
+<a href="https://pragprog.com/magazines/2012-01/unit-tests-are-first">F.I.R.S.T.</a> de los mismos, añadió: <strong>I</strong>mmutable (no deben de dejar rastros) y
+<strong>T</strong>rusted (los falsos positivos minan la confianza de los programadores en
+los tests).</p>
+
+<p>Me gustó mucho la parte donde comentó qué es lo que hace que un código NO sea
+testeable:</p>
+
+<p><img class="center" src="/images/2016/non-testable-design-smells.png"></p>
+
+<div style="text-align: center">
+  <span style="font-size: 60%">
+Slide #66 de <a href="http://www.slideshare.net/delr3ves/lo-que-deberas-saber-sobre-testing-para-irte-de-caas-con-pedrogs-y-no-empezar-con-resaca">#codemotion2016: Everything you should know about testing to go with @pedro_g_s, @flipper83 & @kinisoftware avoiding the hangover</a> de <a href="http://www.slideshare.net/delr3ves">Sergio Arroyo</a>, <a href="https://creativecommons.org/licenses/by/4.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+  </span>
+</div>
+
+
+<p>Y para terminar: ¿quién vigila al vigilante? ¿quién prueba que los tests son
+correctos? Nadie. Y precisamente por esa razón debemos mantener los tests lo
+más sencillos posible. Nada de <code>if</code>s, nada de bucles. Sencillos.</p>
+
+<h3><a href="https://2016.codemotion.es/agenda.html#5716304078045184/84664009">Clean code</a> de Álvaro García</h3>
+
+<p>El título de la charla no da para muchas sorpresas. Álvaro habló sobre el libro
+de Robert C. Martin, Clean Code.</p>
+
+<p>Durante toda la charla aparecieron multitud de conceptos. La charla fue un buen
+recordatorio del contenido del libro. Habló de Craftsmanship, de la Regla del
+Boy Scout, de la Teoría de las Ventans Rotas, de la importancia de nombrar
+correctamente las clases, métodos y variables, de la longitud de los métodos,
+de los comentarios (o la falta de ellos) en el código,...</p>
+
+<p>Súper, súper interesante. Bueno, hubo un tema que me escamó un poco: se
+recomienda no utilizar códigos de error para informar de que ha habido un fallo
+en nuestro código, se recomienda usar excepciones. Últimamente me he inclinado
+más hacia no usar excepciones para eso, no usarlas para controlar el flujo de
+mis programas. Un tema bastante polémico éste de tratar las excepciones.</p>
+
+<h3><a href="https://2016.codemotion.es/agenda.html#5716304078045184/84664008">Time to grow up</a> de Jorge Barroso</h3>
+
+<p>En mi opinión la mejor charla del Codemotion. Jorge habló de cómo ve él el
+mundo del desarrollo. Y tiene mucho que decir. Jorge es bastante conocido en el
+mundo del software y su opinión es bastante respetable.</p>
+
+<p>Habló de que debemos aprender oratoria, los speakers del tipo de conferencias
+como el Codemotion tienen mucho <em>poder</em>, tienen mucha responsabilidad. Pero
+también la tenemos quienes estamos escuchando. Debemos hacerlo de forma
+crítica, y no creernos todo lo que nos cuentan los que están en el <em>púlpito</em>.</p>
+
+<p>Debemos hacer las empresas más humanas, evitar que <em>hagan el mal</em>. Y no nos
+debemos vender por un futbolín, o por la posibilidad de pasar más horas en la
+oficina. Debemos conseguir que la empresa nos valore como personas.</p>
+
+<p>Construimos software como en la edad media se construían catedrales:</p>
+
+<blockquote><p>Ponían mucha gente a hacer una cúpula. Se caía. Conclusión que sacaban: "pues
+así no era"</p></blockquote>
+
+<p>No podremos resolver los retos del futuro como lo hacemos ahora, lanzando más y
+más gente a los proyectos.</p>
+
+<p>Jorge habló de que no está totalmente de acuerdo con el movimento Software
+Craftsmanship (no hay que ser dogmático, si no pragmático, hay que conocer las
+normas para saber cuándo hay que romperlas), tampoco lo está con el término
+<em>Computer Science</em> (no usamos el método científico, no somos ingenieros). Se
+identifica más con el mundo de la cocina, donde conocen la química, las
+bases, los ingredientes. Pero ser cocinero es más que eso. Es comunidad. Es
+comunicación con tus iguales.</p>
+
+<p>Comentó la necesidad de tener un lenguaje común entre los desarrolladores. Nada
+de diferenciarnos entre back y front, entre web y escritorio o móvil. ¿Qué
+hacen tus compañeros? Pregunta. Y sobre todo, no te comportes como un idiota:
+escucha, mejora a tus compañeros, aprende, enseña, no impongas tus opiniones,
+pide feedback.</p>
+
+<h3><a href="https://2016.codemotion.es/agenda.html#5716304078045184/88324007">Cómo gestionar el estado de tu UI: El camino hacia el Virtual DOM y RxJS</a> de Ricardo Borillo</h3>
+
+<p>Ricardo comentó cómo podemos mejorar la gestión del estado de la interfaz
+gráfica. En un principio, toda esa información estaba incrustada en la interfaz
+gráfica, estaba almacenada en el DOM (si hablamos de aplicaciones web). Pero el
+DOM es muy lento. Algunas librería aliviaban este acoplamiento, pero el Virtual
+DOM ha venido para desacoplar todavía más del DOM real.</p>
+
+<p>Prosiguió la charla comentando cómo tecnologías como React, Redux y RxJS
+encajan perfectamente en la nueva visión acerca de cómo hay que gestionar el
+estado de nuestra aplicación del lado cliente. Hay sólo una fuente de verdad,
+por lo que hay un estado global. Y nos explicó cómo éste estado global es
+gestionado, almacenado, modificado y notificado por contenedores, middlewares,
+dispatchers,... en la arquitectura planteada por React y compañía.</p>
+
+<p>Sinceramente, están pegando fuerte estas tecnologías y el mundo funcional
+parece que está calando en el lado cliente. El de Ricardo es, como siempre, un
+testimonio de cómo se pueden hacer las cosas mucho mejor en el mundo web.</p>
+
+<h3><a href="https://2016.codemotion.es/agenda.html#5716304078045184/85554005">¿Con 40+ y programando? Sácale provecho a tu experiencia</a> de Daniel López</h3>
+
+<p>Daniel nos cuenta su propia historia, ¿por qué sigue programando pasados los
+40? Pues porque le gusta, se le da bien, y puede seguir aportando valor. Aporta
+valor por que soluciona problemas, no los crea, y porque no se queda
+simplemente con teclear. Debes aportar algo más, si no quieres ser
+reemplazable.</p>
+
+<p>Entre los múltiples consejos: encuentra un nicho (o varios) muy específico, un
+tema donde no haya muchos expertos; no puedes escalar, así que no apuntes a
+cantidad, si no a calidad; entiende y hazte entender; adaptabilidad, búscate
+las habichelas; capacidad de análisis crítico.</p>
+
+<blockquote><p>El buen programador no nace, se va haciendo con el tiempo, con el trabajo
+duro y con el aprendizaje</p></blockquote>
+
+<p>Y como muestra de sabiduría, unos consejos o mantras:</p>
+
+<ul>
+<li>Fuerza: para cambiar lo que se pueda cambiar</li>
+<li>Paciencia: para aguantar lo que no se pueda</li>
+<li>Sabiduría: para saber distiguir entre ellas</li>
+</ul>
+
+
+<h3><a href="https://2016.codemotion.es/agenda.html#5716304078045184/83544008">Data! Data! Data!</a> de David Bonilla</h3>
+
+<p>La idea principal de la charla rondó las bases de datos. David nos hizo ver que
+las bases de datos están en todas y cada una de nuestras aplicaciones. Unas son
+más avanzadas que otras, y existen multitud de tipos de ellas. Cada una de
+ellas con sus ventajas y sus inconvenientes, así que no debemos pensar que hay
+una base de datos que nos pueda resolver todos nuestros problemas.</p>
+
+<p>Aún así, aunque todos lidiamos con ellas todos los días, son unas grandes
+desconocidas para nosotros. David nos animó a que aprendiéramos más sobre
+ellas, que nos interesáramos más en ellas. Al fin y al cabo, es una de las
+pocas tecnologías que están en prácticamente todas las aplicaciones.</p>
+
+<h2>Conclusión</h2>
+
+<p>En general, las charlas a las que asistí fueron de un gran nivel, y me
+sorprendió que en casi todas ellas comenzaran exponiendo el tema principal de
+la charla. Muy bien hecho. Es como si la organización se lo hubiera
+recomendado.</p>
+
+<p>Otro detalle, muchos de los ponentes publicaron las presentaciones antes o
+durante la charla, lo que permitía a la gente seguir las trasparencias en el
+móvil o portátil con conexión a internet, y de esta forma no dejarse los ojos
+intentando ver la imagen del proyector. Una idea brillante.</p>
+
+<p>En definitiva, es un evento que siempre me ha merecido la pena asistir. Es
+barato, hay multitud de charlas donde elegir (quizá demasiadas), acude lo mejor
+de la industria. Sólo podría pedir que se celebrara más de una vez al año y más
+cerca de mi casa. Por pedir, que no quede.</p>
+
+<p>Aún así, los dos días se me quedaron cortos para charlar con la gente. No puedo
+con todo. O atiendo a charlas interesantes, o me quedo por los pasillos. Pero
+no siempre que me quedo por los pasillos coincido con alguien conocido. Asi que
+es un tema que me lleva de cabeza.</p>
+
+<p><strong>Muchísimas gracias a los organizadores: Nacho, Abraham y Laura. Y gracias
+también a los patrocinadores y voluntarios. Todos ellos hacen que Codemotion
+sea posible.</strong></p>
+
+<h2>Recursos</h2>
+
+<p>Aparte de todas las presentaciones a las que asistí, he escaneado <a href="https://github.com/rchavarria/rchavarria.github.com/tree/master/images/2016/codemotion">las notas que tomé</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Mi fracción del Codemotion 2015]]></title>
@@ -198,6 +670,454 @@ radar últimamente, pero no le he hecho mucho caso. Ha llegado el momento</li>
 <li>Proponer PI Week en el trabajo</li>
 </ol>
 
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mis notas sobre Codemotion 2014]]></title>
+    <link href="http://rchavarria.github.io/blog/2014/11/29/notas-codemotion-2014/"/>
+    <updated>2014-11-29T00:48:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2014/11/29/notas-codemotion-2014</id>
+    <content type="html"><![CDATA[<p>Por tercer año consecutivo asistí al evento Codemotion, "un evento de
+desarrolladores para desarrolladores". Me encanta la descripcion del
+evento. La verdad es que es una pasada, un evento al que este año acudimos
+casi 2000 profesionales del desarrollo sofware, donde unos ponente (incluso
+extranjeros) cuentan sus experiencias en la vida real. Impresionante.</p>
+
+<p>Antes de nada me gustaría agradecer a los organizadores del evento, a todos
+los voluntarios que nos soportan, a los patrocinadores y no me puedo olvidar
+de la Universidad San Pablo CEU, que cedió las instalaciones.
+Hay muchas quejas por <em>el intenné</em> sobre ciertos aspectos de la organización:
+salas abarrotadas, comida insuficiente,... Creo que tienen razón, pero
+también hay que entender que un evento así no es fácil organizarlo. A mí
+me ha encantado la cantidad de tiempo disponible entre charla y charla. No
+me he perdido ninguna de las charlas a las que quería asistir.</p>
+
+<p><img class="center" src="/images/2014/codemotion.png"></p>
+
+<!-- more -->
+
+
+<p>Este año he podido disfrutar más de las charlas técnicas que el año pasado,
+por lo que he aprendido y conocido multitud de nuevas herramientas,
+técnicas e ideas.</p>
+
+<p>Aún así, me he quedado con una espinita clavada. Me hubiera gustado
+<em>pasillear</em> algo más, pero no se puede tener todo, o pasillo o charla.
+También me hubiera gustado acercarme a más ponentes para darles las gracias
+y comentar con ellos las tecnologías o herramientas que expusieron.</p>
+
+<p>Pero no todo está perdido, he conocido a unos cuantos buenos profesionales
+más y eso es una parte importante de estos eventos: ver viejos amigos y
+hacer nuevos.</p>
+
+<h2>Notas sobre las charlas</h2>
+
+<p>Y a continuación, una transcripción de algunas notas que fuí tomando en
+todas las charlas a las que asistí. En la
+<a href="2014.codemotion.es/es/agenda.html">agenda del Codemotion</a>
+podrás encontrar cada una de las charlas que se impartieron con detalles
+del ponente, presentaciones, vídeos,... Para ir aguantando hasta el año
+que viene.</p>
+
+<h3>What if everything is awesome, Christian Heilmann</h3>
+
+<p>Opinión de la charla: muy amena, se nota que Christian es un profesional dando
+charlas por todo el mundo; muy buena historia, muy bien hilada y cortita, al
+grano.</p>
+
+<p>La prensa publicita casos demasiado idílicos.</p>
+
+<p>Los programadores tenemos tendencia a recrear (reinventar la rueda) en lugar de
+mejorar (¿porqué si no hay N variantes de frameworks web, por ejemplo?). <strong>Mejora
+las cosas que ya existen</strong></p>
+
+<p>No expliques, demuéstralo con código o algo mejor, arregla el bug.</p>
+
+<p>Si tus aplicaciones están dirigidas por datos, duraran mucho tiempo.</p>
+
+<p>Agradece, da feedback, a tus usuarios y a los creadores de tus apps.</p>
+
+<p><strong>Acción</strong>: Echar un vistazo a los recursos de las diapositivas.</p>
+
+<h3>Lean Node.js, Ricardo Borillo</h3>
+
+<p>Opinión: multitud de herramientas, multitud de consejos prácticos. De la charla
+salí con alguna idea para poner en práctica inmediatamente.</p>
+
+<p>Ricardo hace incapié en cuatro puntos lean:</p>
+
+<ol>
+<li>eficiencia / automatización</li>
+<li>no cometer errores</li>
+<li>evitar desperdicios</li>
+<li>mejora contínua</li>
+</ol>
+
+
+<p>Relativo a la construcción de nuestra aplicación:</p>
+
+<ul>
+<li>grung Vs gulp para automatización de tareas</li>
+<li>browser sync: inyecta CSS en el navegador sin recargar la página, para evitar
+errores y conseguir un desarrollo más rápido.</li>
+</ul>
+
+
+<p>Relativo a testear nuestra aplicación:</p>
+
+<ul>
+<li>Solo se puede reducir el numero de errores con tests.</li>
+<li>karma, jasmine, karma + virtual box (probar IE en Linux o Mac), protractor</li>
+</ul>
+
+
+<p>Relativo al despliegue:</p>
+
+<ul>
+<li>upstart (reinicia servidor en caso de que caiga)</li>
+<li>forever (nodejitsu)</li>
+<li>fusion passenger, nginx + docker</li>
+<li>pm2 (cluster, monitorización, ...)</li>
+</ul>
+
+
+<p>Código y ejemplos en el <a href="https://github.com/borillo/codemotion-2014">repo Codemotion de R. Borillo</a></p>
+
+<h3>Workshop, designing a release pipeline, Jose Luis Soria</h3>
+
+<p>Opinión: el taller me defraudó un poco, porque al final fue más una charla larga
+que un taller propiamente dicho. Aunque me llevé algunos consejos e ideas que me
+pueden servir en mi día a día.</p>
+
+<p>9 pasos a seguir para diseñar una pipeline de entrega:</p>
+
+<ol>
+<li>Definir componentes: nombre, dependencias, deploy target, ...</li>
+<li>Identificar subpipelines: 1 solo pipeline o 1 pipeline por componente o 1 pipeline por
+equipo</li>
+<li>Definir etapas y orquestación
+a. cada etapa me tiene que dar feedback, información
+b. crecer a lo ancho, no a lo largo (en el flujo, paralelizando etapas)
+c. necesito: nombre, meta a conseguir, fuentes, flujo, ...</li>
+<li>Definir entornos (no deben estar atados a etapas)</li>
+<li>Definir los pasos (partes de cada una de las etapas)</li>
+<li>Definir automatizacion y herramientas</li>
+<li>Definir modelo ejecucion</li>
+<li>Planificar para futuras mejoras: comienza simple y evoluciona</li>
+<li>Inspecciona y adáptate (mejora contínua)</li>
+</ol>
+
+
+<p>Recursos:</p>
+
+<ul>
+<li>libro Continuous Delivery</li>
+<li>Agile testing cuadrant</li>
+<li>Herramientas de orquestación: ThoughtWorks Go, MS VS Release Management</li>
+</ul>
+
+
+<h3>Loves always takes care and humility, Chema Alonso</h3>
+
+<p>Opinión: la charla comenzó muy bien, una bonita historia (aunque me perdí la
+primera parte el año pasado), va contando conceptos de seguridad,... Hasta que
+aparece en pantalla <em>LATCH</em>. A partir de ahí, todo pareció un anuncio, y mi
+cerebro desconectó.</p>
+
+<p>La charla cuenta una historia entre una Developar y un Hacker.</p>
+
+<p>Dev: preocupada por la seguridad. Cree que algo está seguro si está bien hecho
+(best practices).</p>
+
+<p>Hacker: tiene muchas otras maneras de romper la seguirdad.</p>
+
+<p>Hacker: quiere nuevos metodos aplicando la ciencia: doble factor autenticación, usb con llave,
+matrices de numeros, ...</p>
+
+<p>Dev: ve problemas, a cada nuevo método le encuentra una debilidad.</p>
+
+<h3>20 languages in 40 minutes, Alonso Torres</h3>
+
+<p>Opinión: charla muy amena y friki, una pasada. El tono fue muy tranquilizador y
+Alonso transmitia confianza. En definitiva, me encantó.</p>
+
+<p>¿programar es un arte? no lo sé, pero sí se que es creativo</p>
+
+<p>Alonso nos quiere dar una razón para cada uno de los lenguajes, porque en charlas
+técnicas de 1h intentan venderte de usar su lenguaje. Alotor le sobra con 2 min/lenguaje</p>
+
+<p>OOP Vs Functional</p>
+
+<ul>
+<li>scala tiene ambos</li>
+<li>haskell</li>
+<li>F#</li>
+<li>clojure: lenguaje funcional con cierta flexibilidad</li>
+</ul>
+
+
+<p>Estático Vs Dinámico</p>
+
+<ul>
+<li>groovy: ambos</li>
+<li>python: para aprender dinámico</li>
+<li>ruby: favorece implícito (potencia sin control)</li>
+<li>php: desarrollo rápido</li>
+<li>js: para integración con otros sistemas</li>
+</ul>
+
+
+<p>De sistema, de bajo nivel</p>
+
+<ul>
+<li>C: potencia</li>
+<li>C++: añade cierta estructura a C</li>
+<li>Go: concurrencia</li>
+<li>Rust: gestión memoria</li>
+</ul>
+
+
+<p>Lenguajes del sigle XXI</p>
+
+<ul>
+<li>ceylon: modularidad</li>
+<li>elm: funcional en interactivo (I/O): es un haskell para el navegador</li>
+<li>julia: cálculo científico y macros</li>
+</ul>
+
+
+<p>Y para terminar, Piet: cada pixel, con su color, es una instruccion. El
+hola mundo con este lenguaje es el más bonito que he visto nunca.</p>
+
+<p>Las slides y los ejemplos de código en el <a href="https://github.com/Alotor/20-languages-demos">repo Codemotion de Alotor</a></p>
+
+<h3>Keynote del segundo día</h3>
+
+<p>Presentación del producto IBM Bluemix, una especie de heroku, Google App Engine,...</p>
+
+<ul>
+<li>learn</li>
+<li>be fast</li>
+<li>avoid the grind</li>
+</ul>
+
+
+<p><strong>Acción</strong>: buscar presentacion para dar con los 3 consejos.</p>
+
+<h3>Teaching programming online, Pamela Fox</h3>
+
+<p>Opinión: no venía muy convencido a la charla, pensaba que trataría de docencia, de
+cómo enseñar a programar online. En lugar de eso Pamela destripó el curso que da
+sobre ciencia de la programación: herramientas, problemas, diversas actividades, ...</p>
+
+<p>Si quieres que la gente vea tus vídeos, haz que duren menos de 10min</p>
+
+<p>Frameworks y herramientas: Backbone, FB React Vs Angular; js parsers, js hint, js babyhint,...</p>
+
+<p>Si alguna vez creas un sistema de programación online, chequea los bucles infinitos.
+Los tendrás que sufrir, seguro.</p>
+
+<p>También, deberás tener herramientas, que mediante diferenciación, sea capaz de
+detectar si dos alumnos han copiado. Estos cursos suelen tener miles de alumnos, y
+es imposible detectarlas manualmente.</p>
+
+<p>Actividades de las que consta el curso en Kahn Academy:</p>
+
+<ul>
+<li>Exercises</li>
+<li>Projects: permiten a los alumnos ser más creativos.</li>
+<li>Algoritmo de votado para crear una lista de los proyectos más llamativos, y cómo
+los alumnos se las ingenian para engañar al sistema.</li>
+<li>Spin­offs: o una vuelta de tuerca más a los proyectos.</li>
+</ul>
+
+
+<p>En definitiva:
+aprende > practica > crea > comparte > ayuda</p>
+
+<p><a href="https://github.com/Khan/live-editor">Live editor</a> es el proyecto en el que está
+trabajando la ponente.</p>
+
+<h3>Analizando y debuggeando tu plataforma, Luis Bosque</h3>
+
+<p>Opinión: esperaba algo diferente de la charla, no sé muy bien el qué, pero algo
+diferente. Con todo esto, estuvo muy bien. Multitud de herramientas, multitud de
+consejos y muchos ejemplos reales usados en CartoDB.</p>
+
+<p>No valen las sensaciones, debes analizar tu plataforma para saber cómo se comportan
+tus usuarios y para saber cómo afectan los cambios que haces.</p>
+
+<p>No hay un manual sobre que medir, pero no hay que medir todo.</p>
+
+<p>Analisis corto plazo: monitoring, alerting.</p>
+
+<p>Analisis medio plazo: buscar patrones de uso, optimizar para su uso. Análisis de casos
+especiales te pueden llevar a optimizaciones a incorporar</p>
+
+<p>Stadísticas al usuario:</p>
+
+<ul>
+<li>tiempo de sus queries en ejecutarse</li>
+<li>número de visualizaciones de su app</li>
+<li>widgets más usados</li>
+</ul>
+
+
+<p>Herramientas análisis logs: logstash, fluentd, splunk, syslog</p>
+
+<p>No volverte loco con las métricas, no se puede medir todo, debes decidir qué
+precisión quieres (queries de mas de 30seg), definir una politica de retención de
+datos (no todas las métricas tienen el mismo ciclo de vida)</p>
+
+<p>Ante todo, ten en cuenta el impacto técnico, es muy, muy grande.</p>
+
+<h3>Lo que la cafeína le hizo a JavaScript, Sergio Arbeo</h3>
+
+<p>Opinión: charla muy divertida y amena, Sergio comunica muy bien y se nota que sabe
+de lo que habla. La charla es muy técnica y va de cosas muy sencillas hasta
+ciertos problemas que te hacen estrujarte la mente un poco.</p>
+
+<p>CoffeeScript mejor que ES5, CoffeeScript peor que ES6</p>
+
+<p>¿Qué trae ES6?</p>
+
+<ul>
+<li>Destructuring, con su operación inversa, funciona con arrays</li>
+<li>Modules</li>
+<li>let / const</li>
+<li>classes</li>
+<li>propiedades computadas (ejemplo de código implementando <code>pluck</code></li>
+<li>function: sspread operator: convierte varios argumentos en un array</li>
+<li>function: sdefault parameters</li>
+<li>arrow functions</li>
+</ul>
+
+
+<p><strong>Acción</strong>: Librería ESNext para usar ES6 hoy</p>
+
+<h3>The Google Glass revolution, Alain Regnier, @altolabs, GDG Paris</h3>
+
+<p>Opinión: impresionante por la demo en vivo de las gafas. Me sirvió para
+conocer de primera mano las Google Glass y pasar un poco de envidia de
+poder cacharrear con un prototipo tecnológico.</p>
+
+<ul>
+<li>Multitud de sensores</li>
+<li>Organizado en Cards: como si fuera un timeline</li>
+<li>Controles: voz, táctil, mover cabeza</li>
+<li>Glass Mobile, MyGlass web</li>
+<li>Un detalle queno me gustó nada es que parece muy enlazado a tu móvil</li>
+</ul>
+
+
+<p>Programar para GGlass</p>
+
+<ol>
+<li>Mirror API: nunca te conectas a tu GGlass
+tu server ­> google server ­> tus gafas</li>
+<li>GDK: accede a hardware de tu GGlass</li>
+<li>WearScript: javascript para wearables</li>
+</ol>
+
+
+<h3>Usando behat para no abusar de F5, Alfonso Machado, GeeksHub</h3>
+
+<p>Opinión: una charla muy práctica, donde Alfonso nos cuenta su experiencia con <code>behat</code> a raiz
+de unos problemas que tuvo él. Ejemplos con código y demo en vivo. Muy interesante.</p>
+
+<p>Implementación de Gerkin inspirado en Cucumber</p>
+
+<p>Mink: drivers para emular navegadores con Selenium (java and the like) + acciones predefinidas</p>
+
+<p>Instalacion difícil, mejor con composer</p>
+
+<h3>Scrum bad smells, Juanma Gómez</h3>
+
+<p>Opinión: muy animada, Juanma conecta perfectamente con la gente. Intentó tirar de nosotros,
+pero era la última hora y nos resistíamos un poco. Eso sí, a la hora de las preguntas la
+gente se extendió bastante. Buena señal.</p>
+
+<p>Patrones en la implantación agile</p>
+
+<ul>
+<li>2 trampas: yo ya lo se todo; esto no se puede hacer</li>
+<li>Las empresas esperan que no cambien nada</li>
+<li>“nosotros hacemos nuestro scrum”</li>
+<li>equipo multidisciplinar no es que todos hacemos de todo, no es un hombre orquesta, sino que es
+un equipo con perfiles especializados que se complementan</li>
+<li>dueño de producto sin capacidad (o experiencia) en la toma de decisiones o de visión estratégica</li>
+<li>jefe de proyecto que pasa a scrum master: el rol del SM es complejo porque debe tratar
+sobretodo de personas</li>
+<li>Iteraciones variables</li>
+<li>Definir todo al principio (como en cascada)</li>
+<li>Hacer cascadas pequeñas</li>
+<li>Control y seguimiento en lugar de responsabilidad y confianza</li>
+<li>“yo ya he hecho mi trabajo”</li>
+</ul>
+
+
+<p>Mitos:</p>
+
+<ul>
+<li>ser agil es ser rápido</li>
+<li>en scrum sólo hay visión a corto plazo: debemos tener una visión a largo plazo</li>
+</ul>
+
+
+<p>Como resumen:</p>
+
+<ul>
+<li>1º aprender</li>
+<li>siempre hay alcantarillas que abrir, siempre va a salir algo que huele mal</li>
+<li>scrum conlleva un cambio cultural</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mi experiencia en el Codemotion 2013]]></title>
+    <link href="http://rchavarria.github.io/blog/2013/10/22/mi-experiencia-en-el-codemotion-2013/"/>
+    <updated>2013-10-22T12:44:00+02:00</updated>
+    <id>http://rchavarria.github.io/blog/2013/10/22/mi-experiencia-en-el-codemotion-2013</id>
+    <content type="html"><![CDATA[<p>El pasado viernes 18 de octubre asistí al <a href="http://madrid.codemotionworld.com">Codemotion 2013</a>, un evento de
+desarrolladores para desarrolladores. Es solamente la segunda edición en España,
+pero la considero una cita imprescindible, y encima se celebra cerca de casa,
+así que no puedo pedir más. ¿Quieres un aperitivo? Échale un ojo al <a href="http://www.youtube.com/watch?v=SxP67piQp2U">trailer</a>.</p>
+
+<p>Lamentablemente, por motivos personales no he podido asistir a los dos días,
+así que tengo muuuchas charlas para ver en diferido. Pero no perdí el tiempo,
+pude conocer en pesona a gente de <a href="http://www.autentia.com">Autentia</a>, <a href="http://www.deiser.com">Deiser</a>, y otros patrocinadores del
+evento sin los cuales no habría sido posible: PayPal, Atlassian, Mozilla, Telefónica I+D,
+Alfresco y más.</p>
+
+<p><img class="center" src="/images/2013/codemotion.png" title="Codemotion Spain 2013" ></p>
+
+<!-- more -->
+
+
+<p>El viernes no había muchas charlas ténicas, especialmente por la mañana,
+y eran las que más me interesaban, así que no puedo contar gran cosa de las charlas a
+las que asistí. Eso sí, me encantó el papel de las <strong>comunidades</strong> en la keynote. Es
+una gozada que haya multitud de gente apasionada por el software y que participe
+en actividades y comunidades locales. Toda mi admiración para ellos.</p>
+
+<p>En compensación a esta falta de charlas técnicas, disfruté mucho del pasillo y de la visita
+a los stands que distintas empresas tenían en los pasillos. Especialmente los
+de <a href="http://www.deiser.com">Deiser</a> y <a href="http://www.autentia.com">Autentia</a>. Estoy contento, porque me permitió conocer profesionales
+que trabajan en dos empresas que admiro, no sólo por lo que hacen, si no por cómo
+lo hacen (y además me hice con un poco de <em>merchandaising</em>).</p>
+
+<p><img class="center" src="/images/2013/codemotion-merchandaising.jpg" title="Codemotion Spain 2013" ></p>
+
+<p>Este año, mi edición del Codemotion ha sido muy ligera. Me da mucha pena, pero
+los compromisos son los compromisos, que también los disfruté, por lo que no me
+arrepiento de nada.</p>
+
+<p>Así que, mientras voy viendo alguna que otra charla del canal de youtube de
+<a href="http://www.youtube.com/channel/UCJ91eUdxXwLYyaeIN1rGg-g">Codemotion Madrid</a>, voy esperando con impaciencia la edición del año que viene, para
+reservar agenda y estar a tope.</p>
 ]]></content>
   </entry>
   

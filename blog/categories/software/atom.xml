@@ -4,7 +4,7 @@
   <title><![CDATA[Category: software | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/software/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2017-11-22T22:20:50+01:00</updated>
+  <updated>2017-11-29T22:11:45+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -334,34 +334,70 @@ Los problemas descritos son básicos en el desarrollo de software. No son proble
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Mis impresiones sobre Codemotion 2012]]></title>
-    <link href="http://rchavarria.github.io/blog/2012/03/29/mis-impresiones-sobre-codemotion-2012/"/>
-    <updated>2012-03-29T03:29:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2012/03/29/mis-impresiones-sobre-codemotion-2012</id>
-    <content type="html"><![CDATA[<p>Como más de 1000 personas, este fin de semana he estado en <a href="http://codemotion.es">Codemotion 2012</a>. Durante estos días he leído algunas impresiones y me gustaría aportar mi granito de arena.</p>
-
-<p>Lo primero que me sorprendió fue la cantidad de gente muy joven que acudió al evento (digo muy joven porque eran claramente más jóvenes que yo, pero me sigo considerando joven), creo que el 40% o más serían estudiantes de universidad. Esto, por un lado me alegra muchísimo, y por otro lado me da mucho vértigo: cuánta gente con ganas de aprender y mucho más tiempo que yo para ello, wow!</p>
+    <title type="html"><![CDATA[Refactorizacion: inserta un m&eacute;todo ajeno]]></title>
+    <link href="http://rchavarria.github.io/blog/2012/02/14/refactorizacion-inserta-un-metodo-ajeno/"/>
+    <updated>2012-02-14T02:14:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2012/02/14/refactorizacion-inserta-un-metodo-ajeno</id>
+    <content type="html"><![CDATA[<p>En este post voy a describir una de las muchas refactorizaciones que describe Martin Fowler en su libro <a href="http://martinfowler.com/refactoring/">Refactoring: improving the design of existing code</a> (<a href="http://rchavarria.github.io/blog/2012/01/25/refactoring-improving-the-design-of-existing-code/">mis impresiones sobre el libro</a>). He escogido la refactorización de <a href="http://martinfowler.com/refactoring/catalog/introduceForeignMethod.html">insertar método ajeno</a> por ser una de las que, aun siendo sencilla, no había sido consciente de utilizarla hasta leer el libro.</p>
 
 <!-- more -->
 
 
-<p>El lugar, la <a href="www.eui.upm.es">Escuela de Informática</a> de la <a href="http://www.upm.es/">Universidad Politécnica de Madrid</a>, creo que se quedó un poco pequeño para la cantidad de gente que fuimos, pero no me pareció muy grave. Es más, no esperaba tanta gente. Además, ya no recordaba lo estrechos que son los asientos para los estudiantes. Qué incómodo! Y la de horas que he pasado en aulas similares!.</p>
 
-<p>La organización me pareció bastante buena. Está claro que siempre habrá algo que mejorar (dos días de ponencias en lugar de siete tracks me parece una muy buena mejora) pero la organización de un evento de este tamaño debe ser complicadísimo. Mis felicitaciones a los organizadores, a los voluntarios por hacer posible el evento y a los patrocinadores por permitirme no pagar todo lo que obtuve: comida, camiseta, libreta, charlas, gente técnicamente excelente, ...</p>
 
-<p>Y por último, me gustaría destacar lo que me gustó de las charlas a las que asistí. En mis notas tengo apuntadas impresiones buenas y malas, pero con lo difícil que debe ser preparar unas charlas del nivel de las que asistí, no me creo con derecho a criticar a los ponentes, así que ahí va:</p>
+<h3>Descripción</h3>
 
-<ol>
-    <li><strong><a href="http://codemotion.es/talks#t991">Aplicaciones nativas con HTML5 y JavaScript en Windows 8</a></strong>, de <a href="http://twitter.com/@borisarm">Boris Armenta</a>: me pareció que Boris se preparó la charla muy bien, a conciencia, con ejemplos preparados, y en mi opinión expuso las ideas de una forma muy clara.</li>
-    <li><strong><a href="http://codemotion.es/talks#t82">Despegando con grails y desplegando en la nube</a></strong>, de <a href="http://twitter.com/@gmamenl">Mamen González</a>: a esta llegué tarde, por lo que me perdí la parte de la charla que hablaba de grails, pero me pareció una charla muy visual, muy cuidada y una exposición muy fluida.</li>
-    <li><strong><a href="http://codemotion.es/talks#t999">HTML5 o cómo será la web del futuro</a></strong>, de <a href="http://twitter.com/@VictorSanchez">Víctor Sánchez</a>: Víctor me pareció muy ilusionado y apasionado con la charla, me gustó mucho. Creo que fué una presentación muy gráfica, como no podía ser de otra forma tratándose de HTML5.</li>
-    <li><strong><a href="http://codemotion.es/talks#t188">Monetización de aplicaciones móviles</a></strong>, de <a href="http://es.linkedin.com/in/currorueda">Curro Rueda Álvarez</a>: una presentación sencilla y un ponente fantástico, como si de un Steve Jobs se tratara, Curro conquistó a la audiencia con ejemplos claros, historias para no dormir y un grandísimo humor.</li>
-    <li><strong><a href="http://codemotion.es/talks#t93">Effective Java</a></strong>, de <a href="http://twitter.com/@lantoli">Leo Antolí</a>: fue una charla muy técnica que me agradó mucho, y aunque he leido el libro me enseñó cosas nuevas.</li>
-    <li><strong><a href="http://codemotion.es/talks#t139">¡Mira mamá! ¡Sin cables!</a></strong>, de <a href="http://twitter.com/@sefford">Saúl Díaz</a>: empezó un poco nervioso pero su exposición fue mejorando con el tiempo. Hizo unas demos impresionantes, pero impresionantes.</li>
-    <li><strong><a href="http://codemotion.es/talks#t6">¿Por qué metodologías ágiles?</a></strong>, de <a href="http://twitter.com/@jjballano">Jesús J. Ballano</a> y <a href="https://twitter.com/#!/1uptalent">Germán del Zotto</a>: una charla filosófica y muy motivadora que me sirvió para recordarme que las metodologías ágiles son la mejor alternativa a las metodologías tradicionales de desarrollo de software (aunque no haya balas de plata).</li>
-    <li><strong><a href="http://codemotion.es/talks#t229">Construyendo un ecosistema para desarrolladores</a></strong>, de <a href="http://twitter.com/@david_bonilla">David Bonilla</a>: fui a esta charla sólo por el mero hecho de ver a David en directo, y no me defraudó. Pasión, entrega, cambios de ritmo en la exposición, preparación, expectáculo, humor (y hamor). La guinda del pastel para un día espectacular.</li>
-</ol>
 
+<p>La refactorización consiste en crear un método en una clase (clase cliente) cuando en realidad ese método debería pertenecer a otra clase (clase servidor). De ahí el nombre de método ajeno (traducción libre de foreign method)</p>
+
+<h3>Por qué es necesaria</h3>
+
+
+<p>Esta refactorización aparece ante la necesidad de crear un método en la clase servidor, pero es imposible cambiar el código fuente de la misma.</p>
+
+<h3>Cómo llevar a cabo la refactorización</h3>
+
+
+<p>Lo primero es crear un método en la clase cliente que haga lo que necesitamos que haga la clase servidora. El primer parámetro de este método será un objeto de la clase servidora. En caso de necesitar algún parámetro más, éstos serían los parámetros en caso de que el método existiera en la clase servidora.</p>
+
+<p>El objetivo de crear un nuevo método es el de poder reutilizar el código y evitar duplicidades. De esta forma podremos retutilizar el código del nuevo método, y en el caso de que en un futuro podamos cambiar el código fuente de la clase servidora, ese cambio será menos doloroso.</p>
+
+<p>Martin Fowler aconseja comentar el método como <code>método ajeno</code>, para poder encontrar métodos candiatos a mover a sus clases correspondientes. En mi opinión, no creo que esto ayude demasiado a la hora de mantener el código, pero tampoco lo veo perjudicial. Así que aquí, que cada cual siga sus preferencias.</p>
+
+<h3>Código de ejemplo</h3>
+
+
+<p>Partimos del siguiente código de ejemplo, es un ejemplo muy sencillo pero espero que ilustre el caso lo suficientemente bien como para comprender la refactorización:</p>
+
+<p>```
+// ...
+Date nextDay = new Date(previousDay.getYear(),</p>
+
+<pre><code>                    previousDay.getMonth(), 
+                    previousDay.getDate() + 1);
+</code></pre>
+
+<p>```</p>
+
+<p>Como vemos, nuestro código necesita varios datos de la clase servidora (Date, objeto previousDay). Si la clase Date tuviera un método nextDay, o similar, nuestro código quedaría realmente simple. Pero no lo tiene, y lo pero de todo es que tampoco tenemos la posibilidad de modificar Date para incorporarle ese método.</p>
+
+<p>Está bien, creemos pues nuestro método ajeno:</p>
+
+<p>```
+Date nextDay = nextDay(previousDay);
+// ...
+// foreign method
+private Date nextDay(Date aDay) {</p>
+
+<pre><code>return new Date(aDay.getYear(), 
+                aDay.getMonth(), 
+                aDay.getDate() + 1);
+</code></pre>
+
+<p>}
+```</p>
+
+<p>Sí, el código es prácticamente el mismo, pero ahora tenemos un método, la principal forma de reutilizar código. En el caso de poder modificar la clase Date, sería trivial mover este método a esa clase. De hecho, <a href="http://martinfowler.com/refactoring/catalog/moveMethod.html">mover método</a>, es una de las primeras refactorizaciones (y más básicas) explicadas por Martin Fowler en <a href="http://martinfowler.com/refactoring/">Refactoring</a>.</p>
 ]]></content>
   </entry>
   
