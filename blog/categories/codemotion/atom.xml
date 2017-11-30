@@ -4,7 +4,7 @@
   <title><![CDATA[Category: codemotion | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/codemotion/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2017-11-29T22:11:45+01:00</updated>
+  <updated>2017-11-30T21:35:20+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -21,8 +21,9 @@
     <content type="html"><![CDATA[<p>¡Vaya! Otro <a href="http://2017.codemotion.es/">Codemotion</a> más a la <a href="/blog/categories/codemotion/">colección</a>, y ya van 6, ¡cómo pasa el
 tiempo! A pesar de ello, sigue siendo el evento técnico más grande de España,
 creo: dos días a tope, más de 2000 asistentes, cientos de charlas y unos
-cuantos talleres bastante intensos. Este año incluso, ha habido <em>eventos</em>
-dentro del evento.</p>
+cuantos talleres bastante intensos. Y para que veas que no me invento los
+datos, echa un vistazo al <a href="http://mailchi.mp/24b44589fbec/codemotion-2017-is-over?e=eecbf73be9">newsletter</a> que han mandado. Si es que, este año
+incluso, hasta ha habido <em>eventos</em> dentro del evento.</p>
 
 <p>Muchísimas gracias a los organizadores: Nacho, Abraham y Laura. Y gracias
 también a los patrocinadores y voluntarios, que con todo su curro hacen que
@@ -67,7 +68,7 @@ cómo funcionan las <em>funciones en la nube</em> (como las Azure Functions).</p
 <li><p><a href="https://2017.codemotion.es/agenda.html#5649626120060928/5098174129635328">Clean architecture</a>, de <a href="https://twitter.com/aloaisa">Álvaro García Loaisa</a>: Repaso de la evolución de
 las arquitecturas de lado servidor (monolito, n capas, MVC, hexagonal,...),
 con ejemplos prácticos de algunas de ellas. La conclusión que saqué, es que al
-final, Clean Architecture es my parecida (por no decir igual) a Hexagonal
+final, Clean Architecture es muy parecida (por no decir igual) a Hexagonal
 Architecture.</p></li>
 <li><p><a href="https://2017.codemotion.es/agenda.html#5649626120060928/5699320770723840">Progressive wep apps orientadas a componentes con Vue.js</a>, de <a href="https://twitter.com/Rafael_Casuso">Rafael Casuso</a>:
 Charla con un ritmo frenético donde se repasó qué son las PWAs y
@@ -136,7 +137,8 @@ como keynote para cerrar el evento.</li>
 <h2>Referencias</h2>
 
 <ul>
-<li><a href="https://github.com/rchavarria/blog-post-incubator/blob/master/conferences/2017/codemotion/2017-11-25%20-%20codemotion.markdown">Notas extendidas del evento</a></li>
+<li><a href="https://github.com/rchavarria/blog-post-incubator/blob/master/conferences/2017/codemotion/2017-11-25%20-%20codemotion.markdown">Notas extendidas del evento</a>, y <a href="https://github.com/rchavarria/blog-post-incubator/blob/master/conferences/2017/codemotion/2017-11-25%20-%20codemotion.en.markdown">en inglés también</a>, a modo de resumen para
+los compañeros de trabajo.</li>
 </ul>
 
 ]]></content>
@@ -184,7 +186,7 @@ Impresionante organización.</p>
 
 <p>La comida me pareció exactamente igual al año anterior. En mi opinión se queda
 corta, pero hay una ligera variedad de sabores y también vi que había
-sandwiches espciales para celíacos. Muy buen detalle. Es una lata tener que
+sandwiches especiales para celíacos. Muy buen detalle. Es una lata tener que
 desplazarse a un pabellón exterior, pero es comprensible por la cantidad de
 asistentes. Es una delicia ver que hay gente repartida por todo el recinto a la
 hora de la comida y el café.</p>
