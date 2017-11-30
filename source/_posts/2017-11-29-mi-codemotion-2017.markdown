@@ -15,8 +15,9 @@ sidebar: true
 ¡Vaya! Otro [Codemotion] más a la [colección], y ya van 6, ¡cómo pasa el
 tiempo! A pesar de ello, sigue siendo el evento técnico más grande de España,
 creo: dos días a tope, más de 2000 asistentes, cientos de charlas y unos
-cuantos talleres bastante intensos. Este año incluso, ha habido *eventos*
-dentro del evento.  
+cuantos talleres bastante intensos. Y para que veas que no me invento los
+datos, echa un vistazo al [newsletter] que han mandado. Si es que, este año
+incluso, hasta ha habido *eventos* dentro del evento.  
 
 Muchísimas gracias a los organizadores: Nacho, Abraham y Laura. Y gracias
 también a los patrocinadores y voluntarios, que con todo su curro hacen que
@@ -116,7 +117,8 @@ como keynote para cerrar el evento.
       
 ## Referencias
 
-- [Notas extendidas del evento]
+- [Notas extendidas del evento], y [en inglés también], a modo de resumen para
+  los compañeros de trabajo.
 
 [Seamos hipsters, pensemos en Serverless]: https://2017.codemotion.es/agenda.html#5649626120060928/5768955947909120
 [Clean architecture]: https://2017.codemotion.es/agenda.html#5649626120060928/5098174129635328
@@ -138,6 +140,8 @@ como keynote para cerrar el evento.
 
 [Codemotion]: http://2017.codemotion.es/
 [colección]: /blog/categories/codemotion/
+[newsletter]: http://mailchi.mp/24b44589fbec/codemotion-2017-is-over?e=eecbf73be9
 [IndieMAD]: https://indiemad.org/
 [Notas extendidas del evento]: https://github.com/rchavarria/blog-post-incubator/blob/master/conferences/2017/codemotion/2017-11-25%20-%20codemotion.markdown
+[en inglés también]: https://github.com/rchavarria/blog-post-incubator/blob/master/conferences/2017/codemotion/2017-11-25%20-%20codemotion.en.markdown
 
