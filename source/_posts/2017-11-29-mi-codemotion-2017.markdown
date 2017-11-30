@@ -60,7 +60,7 @@ cómo funcionan las *funciones en la nube* (como las Azure Functions).
 - [Clean architecture], de [Álvaro García Loaisa]: Repaso de la evolución de
   las arquitecturas de lado servidor (monolito, n capas, MVC, hexagonal,...),
 con ejemplos prácticos de algunas de ellas. La conclusión que saqué, es que al
-final, Clean Architecture es my parecida (por no decir igual) a Hexagonal
+final, Clean Architecture es muy parecida (por no decir igual) a Hexagonal
 Architecture.
 
 - [Progressive wep apps orientadas a componentes con Vue.js], de [Rafael Casuso]:
