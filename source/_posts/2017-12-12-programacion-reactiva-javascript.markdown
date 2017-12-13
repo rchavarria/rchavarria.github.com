@@ -21,7 +21,7 @@ Para múltiples elementos de forma síncrona, tenemos los arrays. Para elementos
 <!-- more -->
 
 Existe una herramienta o paradigma (la verdad es que no sé muy bien cómo
-llamarlo) que está cobrando fuerza y popularidad últimamente, sobretodo por su
+llamarlo) que está cobrando fuerza y popularidad últimamente, sobre todo por su
 uso en frameworks muy conocidos como React o Angular. Se trata de la
 **programación reactiva**. Más concretamente, en el mundo JavaScript,
 encontramos [RxJS], una implementación de [ReactiveX].
