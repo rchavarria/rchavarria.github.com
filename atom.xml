@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2017-12-12T22:19:40+01:00</updated>
+  <updated>2017-12-13T22:06:56+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -29,7 +29,7 @@ Para múltiples elementos de forma síncrona, tenemos los arrays. Para elementos
 
 
 <p>Existe una herramienta o paradigma (la verdad es que no sé muy bien cómo
-llamarlo) que está cobrando fuerza y popularidad últimamente, sobretodo por su
+llamarlo) que está cobrando fuerza y popularidad últimamente, sobre todo por su
 uso en frameworks muy conocidos como React o Angular. Se trata de la
 <strong>programación reactiva</strong>. Más concretamente, en el mundo JavaScript,
 encontramos <a href="http://reactivex.io/rxjs/">RxJS</a>, una implementación de <a href="http://reactivex.io/">ReactiveX</a>.</p>
@@ -1058,7 +1058,7 @@ gracia.</p>
     <link href="http://rchavarria.github.io/blog/2017/03/19/desplegar-aplicacion-elixir-phoenix-heroku/"/>
     <updated>2017-03-19T13:44:00+01:00</updated>
     <id>http://rchavarria.github.io/blog/2017/03/19/desplegar-aplicacion-elixir-phoenix-heroku</id>
-    <content type="html"><![CDATA[<p><a href="http://heroku.com/">Heroku</a> es una plataforma donde los desarrolladores pueden desplegar sus aplicaciones (sobretodo está pensado para aplicaciones web) y hacerlas públicas de forma gratuita o por un pequeño precio. Yo he utilizado a veces este servicio para hacer pruebas con servidores en JavaScript (NodeJS) o PHP, pero también admite muchos otros lenguages de programación: Ruby, Java, Python, Go,&#8230;</p>
+    <content type="html"><![CDATA[<p><a href="http://heroku.com/">Heroku</a> es una plataforma donde los desarrolladores pueden desplegar sus aplicaciones (sobre todo está pensado para aplicaciones web) y hacerlas públicas de forma gratuita o por un pequeño precio. Yo he utilizado a veces este servicio para hacer pruebas con servidores en JavaScript (NodeJS) o PHP, pero también admite muchos otros lenguages de programación: Ruby, Java, Python, Go,&#8230;</p>
 
 <p><img class="center" src="http://rchavarria.github.io/images/2017/elixir-phoenix-heroku.png"></p>
 

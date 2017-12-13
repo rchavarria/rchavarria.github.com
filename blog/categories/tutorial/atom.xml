@@ -4,7 +4,7 @@
   <title><![CDATA[Category: tutorial | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/tutorial/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2017-12-12T22:19:40+01:00</updated>
+  <updated>2017-12-13T22:06:56+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -18,7 +18,7 @@
     <link href="http://rchavarria.github.io/blog/2017/03/19/desplegar-aplicacion-elixir-phoenix-heroku/"/>
     <updated>2017-03-19T13:44:00+01:00</updated>
     <id>http://rchavarria.github.io/blog/2017/03/19/desplegar-aplicacion-elixir-phoenix-heroku</id>
-    <content type="html"><![CDATA[<p><a href="http://heroku.com/">Heroku</a> es una plataforma donde los desarrolladores pueden desplegar sus aplicaciones (sobretodo está pensado para aplicaciones web) y hacerlas públicas de forma gratuita o por un pequeño precio. Yo he utilizado a veces este servicio para hacer pruebas con servidores en JavaScript (NodeJS) o PHP, pero también admite muchos otros lenguages de programación: Ruby, Java, Python, Go,...</p>
+    <content type="html"><![CDATA[<p><a href="http://heroku.com/">Heroku</a> es una plataforma donde los desarrolladores pueden desplegar sus aplicaciones (sobre todo está pensado para aplicaciones web) y hacerlas públicas de forma gratuita o por un pequeño precio. Yo he utilizado a veces este servicio para hacer pruebas con servidores en JavaScript (NodeJS) o PHP, pero también admite muchos otros lenguages de programación: Ruby, Java, Python, Go,...</p>
 
 <p><img class="center" src="/images/2017/elixir-phoenix-heroku.png"></p>
 
