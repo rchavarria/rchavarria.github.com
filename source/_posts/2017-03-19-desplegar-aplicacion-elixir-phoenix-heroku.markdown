@@ -12,7 +12,7 @@ footer: false
 sidebar: true
 ---
 
-[Heroku] es una plataforma donde los desarrolladores pueden desplegar sus aplicaciones (sobretodo está pensado para aplicaciones web) y hacerlas públicas de forma gratuita o por un pequeño precio. Yo he utilizado a veces este servicio para hacer pruebas con servidores en JavaScript (NodeJS) o PHP, pero también admite muchos otros lenguages de programación: Ruby, Java, Python, Go,...
+[Heroku] es una plataforma donde los desarrolladores pueden desplegar sus aplicaciones (sobre todo está pensado para aplicaciones web) y hacerlas públicas de forma gratuita o por un pequeño precio. Yo he utilizado a veces este servicio para hacer pruebas con servidores en JavaScript (NodeJS) o PHP, pero también admite muchos otros lenguages de programación: Ruby, Java, Python, Go,...
 
 {% img center /images/2017/elixir-phoenix-heroku.png %}
 
