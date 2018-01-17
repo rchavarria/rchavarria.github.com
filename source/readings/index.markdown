@@ -23,7 +23,6 @@ Así que aquí está mi Lista de Lectura:
 - [Ego is the enemy](https://sivers.org/book/EgoEnemy), de Ryan Holiday, recomendado una y otra vez por [Derek Sivers](https://sivers.org/), por lo que algo tendrá que tener
 - [Down and out in the magic kindom](http://craphound.com/down/download/), de Cory Doctorow. Visto en algún post, y como es un libro no técnico, pues a la lista.
 - [Crafting quality software](https://qafoo.com/book/download.html), de [Qafoo Team Blog](https://qafoo.com/blog%22), visto por twitter y que trata sobre cómo escribir código de calidad en PHP
-- [Practical object-oriented design with Ruby (POODR)](http://www.poodr.com), de Sandi Metz, visto en el blog de [Carlos Blé](https://twitter.com/carlosble)
 - [Expertología](http://www.amazon.es/dp/8492414502), de Andrés Pérez Ortega
 
 ## Tengo pensado leer
@@ -120,6 +119,7 @@ Así que aquí está mi Lista de Lectura:
 
 ## He leído
 
+- [Practical object-oriented design with Ruby (POODR)](/blog/2018/01/17/practical-object-oriented-design-in-ruby/), de Sandi Metz, visto en el blog de [Carlos Blé](https://twitter.com/carlosble) ~ *Enero 2018*
 - [Seveneves (7 Evas)](https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/seveneves-neal-stephenson.markdown), de Neal Stephenson ~ *Octubre 2017*
 - [99 bottles of OOP](/blog/2017/10/19/99-bottles-oop/), de Sandi Metz y Katrina Owen ~ *Octubre 2017*
 - [Front-end developer handbook 2017](https://www.gitbook.com/book/frontendmasters/front-end-handbook-2017/), de [Code Lindley](http://codylindley.com/) y esponsorizado por [Frontend Masters](https://frontendmasters.com/) ~ *Verano 2017*
