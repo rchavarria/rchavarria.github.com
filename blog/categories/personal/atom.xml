@@ -4,7 +4,7 @@
   <title><![CDATA[Category: personal | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/personal/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2017-12-13T22:06:56+01:00</updated>
+  <updated>2018-01-17T22:33:23+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,165 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Practical Object-Oriented Design in Ruby]]></title>
+    <link href="http://rchavarria.github.io/blog/2018/01/17/practical-object-oriented-design-in-ruby/"/>
+    <updated>2018-01-17T22:03:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2018/01/17/practical-object-oriented-design-in-ruby</id>
+    <content type="html"><![CDATA[<h5>de Sandi Metz</h5>
+
+<p><img class="left" src="/images/2018/poodr.jpg" width="250" height="323"></p>
+
+<h3>Por qué lo he leído</h3>
+
+<p>Éste es un libro que lo recomienda mucha gente cuando se habla de <em>programación
+orientada a objetos</em>, es muy mencionado en conversaciones por twitter y el
+mundo online. Pero la guinda del pastel vino cuando ví que lo recomendaba
+<a href="https://twitter.com/carlosble">Carlos Blé</a> en su blog. Entonces supe que era una lectura obligada.</p>
+
+<!-- more -->
+
+
+<h3>De qué trata el libro</h3>
+
+<p>Va sobre programación orientada a objetos. Normalmente, al hablar de POO, no se
+avanza mucho más allá de herencia y polimorfismo. Sandi va muchos pasos más
+allá. Explica la POO desde un punto de vista un poco diferente, donde los
+objetos no son el centro del paradigma, si no los mensajes que se intercambian
+entre ellos.</p>
+
+<p>Por supuesto, el libro también habla de herencia, de cuándo usarla y cuándo no.
+Habla de composición, comparándola con la herencia. Y habla de otras formas de
+reutilizar o compartir el código.</p>
+
+<p>Por último, habla sobre cómo gestionar los tests de nuestra aplicación
+manteniendo unos costes de desarrollo bajo control.</p>
+
+<h3>Conclusiones y valoración</h3>
+
+<p>Es curioso que para describir el paradigma de la programación orientada a
+objetos no se centre en objetos, si no en los mensajes que deben pasarse entre
+ellos. Es un cambio de punto de vista, y me gustaría poder interiorizarlo
+fácilmente, pero no me resulta así. Es un esfuerzo que debo hacer y que seguro
+que merecerá la pena.</p>
+
+<p>Aunque centrado en Ruby, describe otras formas de reutilizar código aparte de
+la herencia y la composición. Les llama módulos, o roles. En otros lenguajes
+existen conceptos similares, como los <em>traits</em> en PHP o los <em>mixins</em> en
+JavaScript. No creo que se puedan aplicar a todos los lenguajes de
+programación, pero si a la mayoría de los lenguajes dinámicos.</p>
+
+<p>En cuanto a la valoración, coincido con muchísima gente: este libro puede ser
+un antes y un después en la comprensión de la Programación Orientada a
+Objectos, sobre todo por el punto de vista tan diferente a la hora de
+entenderla. Envío de mensajes, envío de mensajes, envío de mensajes,...</p>
+
+<h3>Qué he aprendido</h3>
+
+<p>Impresionante ver cómo refactoriza una herencia a una composición de objetos:
+engloba una colección de objetos en una nueva clase, crea una factoría que crea
+cada una de las partes, simplifica las partes como dadas de configuación. De
+esta forma, añadir un nuevo tipo no requiere una nueva clase, solamente nueva
+configuración</p>
+
+<p>Diseñar basado en mensajes crea aplicaciones más flexibles que diseñar pensando
+en objetos. En lugar de preguntarte: tengo un objeto ¿qué debería hacer?,
+deberías preguntarte tengo un mensaje, ¿a quién se lo envío? No hay que
+centrarse en los objetos de dominio, si no en los mensajes que se pasan entre
+ellos.</p>
+
+<p>Eligiendo relaciones (herencia, roles/<em>duck typing</em>, composición)</p>
+
+<ol>
+<li>Herencia para relaciones <em>es-un</em> (is-a). Especialmente si la jerarquía es
+estrecha y tiene pocos niveles</li>
+<li>Role/duck type para relaciones <em>se-comporta-como</em> (behaves-like-a). Donde
+varios objetos no relacionados se quieren comportar del mismo modo</li>
+<li>Composición para relaciones <em>tiene-un</em> (has-a). Un objeto tiene varias
+partes pero es más que la suma de ellas, si no sería una colección y ya está</li>
+</ol>
+
+
+<p>Para obtener el máximo valor de los tests, hay que tener el mínimo de ellos.
+Para ello, hay que testear cada cosa una sola vez, y en el lugar apropiado.</p>
+
+<ol>
+<li>Mensajes entrantes tipo <em>query</em> hay que testear el <strong>estado</strong> que devuelven</li>
+<li>Mensajes salientes tipo <em>command</em>, hay que testear que son llamados, cuantas
+veces y con qué parámetros</li>
+<li>Mensajes salientes tipo <em>query</em>, no se testean (ya los testearán los tests
+de otro objeto)</li>
+</ol>
+
+
+<h3>Frases que me gustaría recordar</h3>
+
+<blockquote><p>Siempre existe una tension entre mejorarlo ahora o mejorarlo después. Un buen
+diseñador sabe minimizar los costes tomando decisiones valorando lo que sabe
+ahora y lo que sabrá en el futuro, porque nunca sabrás menos de lo que sabes
+hoy</p></blockquote>
+
+<!-- more -->
+
+
+<blockquote><p>Gestiona la dirección de las dependencias: depende de cosas que cambien menos
+frecuentemente que tú. Para conocer las dependencias más interesantes nos
+fijamos en 3 aspectos: probabilidad del cambio, nivel de abstracción y número
+de dependencias (sobretodo de la 1ª y 3ª)</p></blockquote>
+
+<!-- more -->
+
+
+<blockquote><p>Las cosas que una clase conoce conforman su <strong>contexto</strong>, lo cual tiene un
+efecto directo en lo fácil o difícil que es reusar (y por tanto testear) esa
+clase</p></blockquote>
+
+<!-- more -->
+
+
+<blockquote><p>Para que una herencia funcione, debe de haber una relación de
+generalización-especialización, donde la especialización sea todo lo general
+y algo más</p></blockquote>
+
+<!-- more -->
+
+
+<blockquote><p>La regla general de refactorizar a una herencia es colocar el código de tal
+forma que haya que promocionar abstracciones a las superclases, en lugar de
+<em>rebajar</em> concrecciones a las subclases</p></blockquote>
+
+<!-- more -->
+
+
+<blockquote><p>Si hay código que pregunta por el tipo de un objeto para enviar un mensaje u
+otro, estamos necesitando <em>duck typing</em>, una abstracción. Cuando además del
+interfaz (<em>duck type</em>) necesitamos compartir comportamiento, necesitamos un
+<em>role</em> (módulo, trait, mixing,...)</p></blockquote>
+
+<!-- more -->
+
+
+<blockquote><p>La composición es otra forma de organizar el código donde cada parte es más
+independiente, pero no tenemos delegacion automática de mensajes, si no que
+hay que hacerlo de forma explícita</p></blockquote>
+
+<!-- more -->
+
+
+<blockquote><p>Código creado con composición es <em>transparente</em> (T de <em>true</em>), suelen ser
+clases pequeñas con una única responsabilidad y suele ser fácil entenderlas.
+Son <em>usables</em> (U de <em>true</em>) porque son pequeños y enfocados. Son <em>razonables</em>
+(R de true) porque se pueden extender sin modificar</p></blockquote>
+
+<h3>Recursos relacionados</h3>
+
+<ul>
+<li>El resto de <a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/practical-object-oriented-design-ruby-by-sandi-metz.markdown">notas sobre POODR</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[99 bottles of OOP]]></title>
@@ -712,195 +871,6 @@ de trabajo un lugar mejor.</p></blockquote>
 <ul>
 <li><a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/the-software-craftsman-by-sandro-mancuso.markdown">Notas tomadas sobre The Software Craftsman</a></li>
 <li>Charla de Sandro Mancuso, <a href="https://vimeo.com/167722761">The long road</a></li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Mi CAS 2015]]></title>
-    <link href="http://rchavarria.github.io/blog/2015/12/13/mi-cas-2015/"/>
-    <updated>2015-12-13T21:48:00+01:00</updated>
-    <id>http://rchavarria.github.io/blog/2015/12/13/mi-cas-2015</id>
-    <content type="html"><![CDATA[<p>Me quedé sin chapa. Sin chapa de "Mi primera CAS". Conocí a varias personas que
-la llevaban orgullosos. Espero que para ellos significara lo mismo que
-significó para mí <a href="/blog/2012/11/08/mi-experiencia-en-la-cas2012/">mi primera CAS</a>.</p>
-
-<p>Ésta, como aquella, ha sido una gran experiencia. La de este año ha sido
-enooorme, comparada con la de Cáceres. Hemos asistido más de 700 personas. Ha
-tenido que ser un trabajo monumental organizarla, así que desde aquí mis
-agradecimientos y admiración a todos los que la han hecho posible:
-organizadores, patrocinadores y voluntarios. Olé!</p>
-
-<!-- more -->
-
-
-<p>La conferencia fueron dos intensos días llenos de charlas interesantísimas. Dos
-días que saben a poco. Sobretodo porque no he podido disfrutar de las cañas de
-después, o las quedadas fuera del evento. Y también porque, a pesar de que
-todos los asistentes estuviéramos en la misma sala para tomar café y comer, me
-ha resultado imposible entablar conversaciones con todas las personas que
-quería. ¡Agotador! Pero muy motivador a la vez.</p>
-
-<p>Sigamos con las charlas a las que asistí, y qué me llevé de ellas:</p>
-
-<h2><a href="http://www.slideshare.net/carlosble/cas2015-opening-improving-the-software">Apertura</a>, <a href="https://twitter.com/carlosble">Carlos Blé</a></h2>
-
-<p>Carlos habló de la necesidad de hablar inglés, no porque sí, si no para
-aprender de las fuentes. También habló de la importancia de hablar otro
-lenguaje, extraño para los desarrolladores, el de negocio. De esta forma nos
-entenderemos mejor ambas partes. Fue una charla muy inspiradora, fenommenal
-como apertura. Me quedaría con la frase:</p>
-
-<blockquote><p>Tú eres el único responsable de tu carrera</p></blockquote>
-
-<h2><a href="https://www.youtube.com/watch?v=C6Sy0v19RAc&amp;t=2h14m00s">Your application is not your framework</a>, de <a href="https://twitter.com/ecomba">Enrique Comba</a></h2>
-
-<p>¿Por qué cuando te preguntan por tu applicación dices qué framework estás
-usando? Habla sobre qué hace de verdad tu aplicación. Enrique habló de muchos
-conceptos alrededor de los frameworks: <em>convention over configuration</em>, mezcla
-de lógica de negocio con la lógica impuesta por el framework. ¿Qué beneficios
-trae separar la lógica de tu aplicación del framework? Separación de
-responsabilidades, velocidad en los tests automáticos y sobretodo claridad en
-el <strong>propósito</strong> y <strong>estructura</strong> de tu aplicación.</p>
-
-<h2><a href="http://www.slideshare.net/PeterMarshall10/pete-marshall-casmadrid2015-continuous-delivery-in-legacy-environments">Continuous delivery</a>, de <a href="https://twitter.com/petemar5hall">Peter Marshal</a></h2>
-
-<p>Peter compartió su experiencia en llevar a un equipo desde el desarrollo de una
-aplicación <em>a la vieja usanza</em> hasta alcanzar puestas en producción diarias. En
-las slides de la presentación encontrarás multitud de consejos para llevarlo a
-cabo, pero yo me quedaría con estos conceptos o enseñanzas:</p>
-
-<ul>
-<li>La entrega contínua es enfocarse en la excelencia técnica</li>
-<li>Conforme avanza el tiempo, el mayor problema de las aplicaciones con
-problemas es que los bugs aumentan mientras que las funcionalidades
-desplegadas disminuyen.</li>
-<li>La clave está en la simplicidad</li>
-<li>Lleva su tiempo madurar (equipo, producto, compañía,...)</li>
-</ul>
-
-
-<h2><a href="http://cas2015.agile-spain.org/charlas/">Building resilient integrations</a>, de <a href="https://twitter.com/cuvuligio">Dave Moore</a></h2>
-
-<p>Esta charla tuvo su parte teórica y su parte práctica. De la parte teórica,
-decir que debemos entender que los fallos están en todas partes, por lo que es
-nuestro trabajo hacer software que no falle, que sea tolerante a fallos de
-sistemas externos. Algunas técnicas para hacerlo podrían ser: tests automáticos
-(no mienten, la documentación sí), aislar integraciones que herramientas de
-terceros (creando interfaces que las separen de nuestra applicación), utilizar
-nuestro propio modelo de datos, política de reintentos de conexión,...</p>
-
-<p>En el taller de después tuvimos la oportunidad de poner todo esto en prática.
-Un taller super divertido.</p>
-
-<h2><a href="http://es.slideshare.net/juanignaciosl/continuous-integration-at-cartodb">Continuous integration in CartoBD</a>, de <a href="https://twitter.com/juanignaciosl">Juan Ignacio Sánchez</a></h2>
-
-<p>Juan Ignacio empezó fuerte, comentando que, aunque hay millones de
-herramientas, es el <strong>equipo</strong> quien realmente puede hacer que la integración,
-entrega y despliegue contínuo funcionen.</p>
-
-<p>¿Cómo lo hacen en CartoDB? Planeándolo desde antes que la gente entre a
-trabajar con ellos, despligando desde el primer día, planes iterativos e
-incrementales, tests, code reviews, pull requests, feature toggles, pequeñas
-releases a grupos controlados de usuarios (canary releases), posibilidad de
-hacer rollback rápidamente (pequeños despliegues llevan a que esto sea
-posible), análisis post-mortem de grandes fallos, mucha instrumentación y
-monitorización.</p>
-
-<h2><a href="http://www.slideshare.net/lantoli/believe-it-or-not-keynote-cas-2015-55802209">Keynote técnica</a>, de <a href="https://twitter.com/lantoli">Leo Antolí</a></h2>
-
-<p>Leo hizo incapié en lo más profundo de agile y lean: no te creas lo que te
-cuenten, pruébalo y si te funciona úsalo, si no te funciona, descártalo. Hay
-mucho estudios que dicen que una práctica es X veces mejor. Analiza esos
-estudios y te darás cuenta de que son humo. Pon en duda el pair programming,
-TDD, mejoras en productividad, code dojos, code retreats, craftsmanship, deuda
-técnica, tasa de proyectos software fallidos,...</p>
-
-<p>Como buena keynote, lo que me llevo de esta charla son pensamientos, dudas,
-cuestiones. Debo entender que el software no es el fin, es un medio para
-conseguir un fin. Deja de usar números no probados. Cuenta experiencias propias
-(no sirven para demostrar nada, pero son algo real). Y sobretodo, mantén un
-<strong>espiritu crítico</strong>.</p>
-
-<h2><a href="https://www.youtube.com/watch?v=_CcO9upHiDU&amp;t=9m20s">Keynote viernes</a>, de <a href="https://twitter.com/rachelcdavies">Rachel Davis</a></h2>
-
-<p>Esta keynote trató de introducir cambios, de introducir tiempo para el
-aprendizaje. Debemos crear tiempo para ello a lo largo de nuestra semana. No
-tengas prisa en introducir cambios, la gente necesita <strong>tiempo</strong>.</p>
-
-<p>De esta keynote quiero recordar dos consejos de Rachel: comparte lo aprendido
-(por ejemplo en esta CAS), invierte tiempo en profundizar en lo aprendido.</p>
-
-<h2><a href="https://medium.com/@borillo/el-modelo-de-desarrollo-mete-saca-be17304ad1df#.b0vwf7ben">Escapando del modelo mete-saca</a>, de <a href="https://twitter.com/borillo">Ricardo Borillo</a></h2>
-
-<p>¿Estamos seguros de que lo que quiere el usuario es un simple sistema CRUD? ¿No
-hay una forma de aportar más valor? Un CRUD es muy genérico, seguro que no
-resuelve las necesidades del usuario con la mejor eficiencia.</p>
-
-<p>Ricardo analizó qué nos lleva a este modelo: pobres historias de usuario, mal
-definidas, que nos llevan a hacer cosas generales; los frameworks (como ORMs);
-y arquitecturas de usuario pobres, con componentes maestro-detalle, consumo de
-apis REST,... todo esto nos conduce al modelo mete-saca.</p>
-
-<p>La solución propuesta por Ricardo, un único punto de entrada (en contraposición
-a los múltiples endpoints REST) con una arquitectura <a href="https://en.wikipedia.org/wiki/Command%E2%80%93query_separation#Command_Query_Responsibility_Segregation">CQRS</a>. Cada <em>comando</em>
-correspondería con una acción del usuario, una historia de usuario, un caso de
-uso muy específico, que nos conduciría a tener las mínimas funcionalidades
-desarrolladas con la máxima eficiencia y la mejor usabilidad para el usuario.</p>
-
-<h2><a href="http://www.slideshare.net/programania/software-economics-tradeoffs-of-decoupled-softwre">Economía del software</a>, de <a href="https://twitter.com/artolamola">Luis Artola</a> y <a href="https://twitter.com/ggalmazor">Guillermo Gutierrez</a></h2>
-
-<p>Luis y Guillermo nos condujeron en un viaje apasionante desde las necesidades
-de negocio hasta detalles del código, tales como las dependencias. En el
-camino, comentaron multitud de conceptos, de buenas prácticas, hicieron
-referencia a charlas de todo el evento (lo que pone de manifiesto lo amplio de
-su charla).</p>
-
-<p>Concepto clave: negocio quiere entrega de <strong>valor</strong>, minimizando <strong>costes</strong> y
-<strong>riesgos</strong> pero manteniendo <strong>opciones</strong> abiertas. El mayor en el software es
-el coste de evolución. Cuanto más difícil sea cambiar algo, más costoso será a
-lo largo del tiempo. El desarrollo iterativo e incremental reduce los riestos.
-El despliegue de pequeñas funcionalidades, interfaces, inversión de control son
-formas de crear opciones.</p>
-
-<h2><a href="http://eamodeorubio.github.io/effective-ui-bdd-with-js/short.html#/">Effective UI testing</a>, de <a href="https://twitter.com/eamodeorubio">Enrique Amodeo</a></h2>
-
-<p>Todo comenzó con el dilema: ¿debo testear cada clase individual o todo el
-sistema? Pues ni lo uno, ni lo otro. En cuanto a la interfaz gráfica, la
-podríamos dividir en dos dominios: la presentación y la lógica de usabilidad.</p>
-
-<p>¿Como testear cada parte? Para testear la presentación debemos mockear el DOM
-del navegador. Para testear la lógica de usabilida, debemos mockear el acceso
-al servidor. Basándose en eso, Enrique recomienda seguir dos prácticas:
-encapsular los accesos al servidor y los accesos al DOM.</p>
-
-<h2>Trabajo para casa</h2>
-
-<ul>
-<li>Parece que integración, entrega y despliegue contínuos son prácticas básicas para empresas exitosas.</li>
-<li>Prepara las conferencias a las que asistas: busca el lugar donde se va a
-celebrar e imprime un plano de las salas que se van a utilizar, crea una
-checklist con las cosas que hacer antes de asistir a un evento. Como por
-ejemplo prepar preguntas a hacer a gente interesante que quiero conocer (me
-gustó aquello que hiciste/dijiste, discrepo con aquello que ...)</li>
-<li>Echar un vistazo a la herramienta Screen Hero</li>
-<li>Libro recomendado por Leo Antolí: Pensar rápido, pensar despacio</li>
-<li>Libro recomendado por Rachel Davis: Drive (cómo introducir cambios)</li>
-<li>Busca slide de Rachel Davis sobre <em>Sources of learning</em></li>
-<li>Busca referencia a lo que falta de SOLID: RCCASS</li>
-<li>¿Qué es el patrón Page Object?</li>
-<li>Slide con las <em>mejores prácticas</em> recomendadas por Enrique Amodeo</li>
-</ul>
-
-
-<h2>Recursos</h2>
-
-<ul>
-<li><a href="https://gist.github.com/nhpatt/89f90a27042e4fd1db7b">Charlas, artículos y más sobre la CAS 2015</a></li>
-<li><a href="https://www.youtube.com/watch?v=C6Sy0v19RAc">Streaming del día 1</a></li>
-<li><a href="https://www.youtube.com/watch?v=_CcO9upHiDU">Streaming del día 2</a></li>
-<li><a href="http://martinfowler.com/bliki/CQRS.html">Martin Fowler acerca de CQRS</a></li>
 </ul>
 
 ]]></content>

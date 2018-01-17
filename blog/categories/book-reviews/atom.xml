@@ -4,7 +4,7 @@
   <title><![CDATA[Category: book reviews | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/book-reviews/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2017-12-13T22:06:56+01:00</updated>
+  <updated>2018-01-17T22:33:23+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,165 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Practical Object-Oriented Design in Ruby]]></title>
+    <link href="http://rchavarria.github.io/blog/2018/01/17/practical-object-oriented-design-in-ruby/"/>
+    <updated>2018-01-17T22:03:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2018/01/17/practical-object-oriented-design-in-ruby</id>
+    <content type="html"><![CDATA[<h5>de Sandi Metz</h5>
+
+<p><img class="left" src="/images/2018/poodr.jpg" width="250" height="323"></p>
+
+<h3>Por qué lo he leído</h3>
+
+<p>Éste es un libro que lo recomienda mucha gente cuando se habla de <em>programación
+orientada a objetos</em>, es muy mencionado en conversaciones por twitter y el
+mundo online. Pero la guinda del pastel vino cuando ví que lo recomendaba
+<a href="https://twitter.com/carlosble">Carlos Blé</a> en su blog. Entonces supe que era una lectura obligada.</p>
+
+<!-- more -->
+
+
+<h3>De qué trata el libro</h3>
+
+<p>Va sobre programación orientada a objetos. Normalmente, al hablar de POO, no se
+avanza mucho más allá de herencia y polimorfismo. Sandi va muchos pasos más
+allá. Explica la POO desde un punto de vista un poco diferente, donde los
+objetos no son el centro del paradigma, si no los mensajes que se intercambian
+entre ellos.</p>
+
+<p>Por supuesto, el libro también habla de herencia, de cuándo usarla y cuándo no.
+Habla de composición, comparándola con la herencia. Y habla de otras formas de
+reutilizar o compartir el código.</p>
+
+<p>Por último, habla sobre cómo gestionar los tests de nuestra aplicación
+manteniendo unos costes de desarrollo bajo control.</p>
+
+<h3>Conclusiones y valoración</h3>
+
+<p>Es curioso que para describir el paradigma de la programación orientada a
+objetos no se centre en objetos, si no en los mensajes que deben pasarse entre
+ellos. Es un cambio de punto de vista, y me gustaría poder interiorizarlo
+fácilmente, pero no me resulta así. Es un esfuerzo que debo hacer y que seguro
+que merecerá la pena.</p>
+
+<p>Aunque centrado en Ruby, describe otras formas de reutilizar código aparte de
+la herencia y la composición. Les llama módulos, o roles. En otros lenguajes
+existen conceptos similares, como los <em>traits</em> en PHP o los <em>mixins</em> en
+JavaScript. No creo que se puedan aplicar a todos los lenguajes de
+programación, pero si a la mayoría de los lenguajes dinámicos.</p>
+
+<p>En cuanto a la valoración, coincido con muchísima gente: este libro puede ser
+un antes y un después en la comprensión de la Programación Orientada a
+Objectos, sobre todo por el punto de vista tan diferente a la hora de
+entenderla. Envío de mensajes, envío de mensajes, envío de mensajes,...</p>
+
+<h3>Qué he aprendido</h3>
+
+<p>Impresionante ver cómo refactoriza una herencia a una composición de objetos:
+engloba una colección de objetos en una nueva clase, crea una factoría que crea
+cada una de las partes, simplifica las partes como dadas de configuación. De
+esta forma, añadir un nuevo tipo no requiere una nueva clase, solamente nueva
+configuración</p>
+
+<p>Diseñar basado en mensajes crea aplicaciones más flexibles que diseñar pensando
+en objetos. En lugar de preguntarte: tengo un objeto ¿qué debería hacer?,
+deberías preguntarte tengo un mensaje, ¿a quién se lo envío? No hay que
+centrarse en los objetos de dominio, si no en los mensajes que se pasan entre
+ellos.</p>
+
+<p>Eligiendo relaciones (herencia, roles/<em>duck typing</em>, composición)</p>
+
+<ol>
+<li>Herencia para relaciones <em>es-un</em> (is-a). Especialmente si la jerarquía es
+estrecha y tiene pocos niveles</li>
+<li>Role/duck type para relaciones <em>se-comporta-como</em> (behaves-like-a). Donde
+varios objetos no relacionados se quieren comportar del mismo modo</li>
+<li>Composición para relaciones <em>tiene-un</em> (has-a). Un objeto tiene varias
+partes pero es más que la suma de ellas, si no sería una colección y ya está</li>
+</ol>
+
+
+<p>Para obtener el máximo valor de los tests, hay que tener el mínimo de ellos.
+Para ello, hay que testear cada cosa una sola vez, y en el lugar apropiado.</p>
+
+<ol>
+<li>Mensajes entrantes tipo <em>query</em> hay que testear el <strong>estado</strong> que devuelven</li>
+<li>Mensajes salientes tipo <em>command</em>, hay que testear que son llamados, cuantas
+veces y con qué parámetros</li>
+<li>Mensajes salientes tipo <em>query</em>, no se testean (ya los testearán los tests
+de otro objeto)</li>
+</ol>
+
+
+<h3>Frases que me gustaría recordar</h3>
+
+<blockquote><p>Siempre existe una tension entre mejorarlo ahora o mejorarlo después. Un buen
+diseñador sabe minimizar los costes tomando decisiones valorando lo que sabe
+ahora y lo que sabrá en el futuro, porque nunca sabrás menos de lo que sabes
+hoy</p></blockquote>
+
+<!-- more -->
+
+
+<blockquote><p>Gestiona la dirección de las dependencias: depende de cosas que cambien menos
+frecuentemente que tú. Para conocer las dependencias más interesantes nos
+fijamos en 3 aspectos: probabilidad del cambio, nivel de abstracción y número
+de dependencias (sobretodo de la 1ª y 3ª)</p></blockquote>
+
+<!-- more -->
+
+
+<blockquote><p>Las cosas que una clase conoce conforman su <strong>contexto</strong>, lo cual tiene un
+efecto directo en lo fácil o difícil que es reusar (y por tanto testear) esa
+clase</p></blockquote>
+
+<!-- more -->
+
+
+<blockquote><p>Para que una herencia funcione, debe de haber una relación de
+generalización-especialización, donde la especialización sea todo lo general
+y algo más</p></blockquote>
+
+<!-- more -->
+
+
+<blockquote><p>La regla general de refactorizar a una herencia es colocar el código de tal
+forma que haya que promocionar abstracciones a las superclases, en lugar de
+<em>rebajar</em> concrecciones a las subclases</p></blockquote>
+
+<!-- more -->
+
+
+<blockquote><p>Si hay código que pregunta por el tipo de un objeto para enviar un mensaje u
+otro, estamos necesitando <em>duck typing</em>, una abstracción. Cuando además del
+interfaz (<em>duck type</em>) necesitamos compartir comportamiento, necesitamos un
+<em>role</em> (módulo, trait, mixing,...)</p></blockquote>
+
+<!-- more -->
+
+
+<blockquote><p>La composición es otra forma de organizar el código donde cada parte es más
+independiente, pero no tenemos delegacion automática de mensajes, si no que
+hay que hacerlo de forma explícita</p></blockquote>
+
+<!-- more -->
+
+
+<blockquote><p>Código creado con composición es <em>transparente</em> (T de <em>true</em>), suelen ser
+clases pequeñas con una única responsabilidad y suele ser fácil entenderlas.
+Son <em>usables</em> (U de <em>true</em>) porque son pequeños y enfocados. Son <em>razonables</em>
+(R de true) porque se pueden extender sin modificar</p></blockquote>
+
+<h3>Recursos relacionados</h3>
+
+<ul>
+<li>El resto de <a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/practical-object-oriented-design-ruby-by-sandi-metz.markdown">notas sobre POODR</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[99 bottles of OOP]]></title>
@@ -571,101 +730,6 @@ hábitos y mejorando algo</p></blockquote>
 <li><a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/phoenix-project-by-gene-kim.markdown">Notas sobre el libro</a></li>
 <li>Blog de <a href="http://www.eferro.net/2016/03/some-books-i-recently-read.html">Eduardo Ferro</a></li>
 <li><a href="https://es.wikipedia.org/wiki/Teor%C3%ADa_de_las_limitaciones">Teoría de las restricciones</a></li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[The 4 hour body]]></title>
-    <link href="http://rchavarria.github.io/blog/2016/12/04/the-4-hour-body/"/>
-    <updated>2016-12-04T18:14:00+01:00</updated>
-    <id>http://rchavarria.github.io/blog/2016/12/04/the-4-hour-body</id>
-    <content type="html"><![CDATA[<h6>de Tim Ferriss</h6>
-
-<p><img class="left" src="https://raw.githubusercontent.com/rchavarria/blog-post-incubator/master/published-book-notes/img/4-hour-body-cover.jpeg" width="200" height="250"></p>
-
-<h3>Por qué lo he leído</h3>
-
-<p>Soy un oyente del podcast de <a href="http://fourhourworkweek.com/about/">Tim Ferriss</a>, <a href="http://fourhourworkweek.com/podcast/">the 4 hour workweek podcast</a>, y me parece una persona bastante peculiar, con unas ideas bastante rompedoras, y muy preocupado por el aprender y dominar muy distintas disciplinas rápidamente. No estoy de acuerdo con todo lo que Tim <em>predica</em>, pero la verdad es que muchas de sus ideas me parecen muy buenas y les han dado resultados a muchos de sus seguidores. Entiendo que eso no quiere decir que funcionen en todos los casos, pero al menos las ideas locas de Tim han sido probadas más de una vez.</p>
-
-<p><a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/4-hour-body-by-tim-ferriss.markdown">The 4 hour body</a>, o <em>El cuerpo perfecto en 4 horas</em> que es su título en español, trata de dos cosas básicamente: cómo perder peso, y cómo ganar músculo. Y yo estoy interesado en perder peso, asi que ¿por qué no conocer algunas ideas de una persona seguida por millones?</p>
-
-<!-- more -->
-
-
-<h3>De qué trata el libro</h3>
-
-<p>El libro trata de enseñarte cómo conseguir un cuerpo perfecto en 4 horas. Bueno, el título creo que está más escogido para cuadrar con otros libros del autor como <em>La semana laboral de 4 horas</em> y otros con títulos similares.</p>
-
-<p>Trata temas relacionados con la pérdida de peso, otros temas sobre cómo ganar músculos de forma brutal o de cómo tener sexo increíble. En el libro propone seguir una dieta que llama <em>de bajos hidratos de carbono</em> y sugiere seguir una serie de ejercicios para ganar músculo basado en el concepto de <em>mínima dosis efectiva</em>.</p>
-
-<p>Al tratar temas muy diversos y con objetivos casi contradictorios (no puede ser que quieras perder peso y que quieras tener cuerpo de culturista a la vez), el autor explica que no es necesario leer el libro de principio a fin, basta con concentrarte en los aspectos que a uno más le interesen.</p>
-
-<h3>Conclusiones y valoración</h3>
-
-<p>Como ya he dicho, el tema que me interesaba (y me interesa) es el de la pérdida de peso. Por eso no puedo valorar el libro al completo, pero la parte de la pérdida de peso es algo controvertida.</p>
-
-<p>A lo largo de su vida, el autor ha experimentado con varios alimentos y técnicas para conseguir reducir la grasa corporal y con ejercicios para ganar músculo. Son métodos fuera de lo común y no parecen estar basados en datos muy científicos. En realidad, creo que el autor se queda con los estudios científicos que apoyan sus creencias.</p>
-
-<p>Aún así, con todo lo inusual de sus consejos, algunos me parece que tienen su lógica, y cogiéndolos con cuidado, creo que se pueden aprovechar algunas ideas. Aunque hay otras, como por ejemplo el consejo de no comer nada de fruta si se quiere perder grasa corporal (porque se supone que la fructosa es un azúcar que se absorve rápidamente y luego se convertirá en grasa) no me gusta mucho. Una cosa es estar interesado en perder peso y otra cosa es dejar de comer alimentos saludables por conseguirlo más rápido. Además, parece ser que la carencia de vitaminas debido a dejar de comer fruta, la aconseja suplir tomando complementos vitamínicos. Y eso no me mola, no tengo ganas de tomar pastillas para suplir un alimento que tengo al alcance de la mano.</p>
-
-<h3>Qué he aprendido</h3>
-
-<p>Dieta para perder peso, ejercicio para ganar musculo</p>
-
-<p>Concepto de <strong>Mínima Dosis Efectiva</strong>: la mínima dosis que produce el resultado esperado. Cualquiercosa por encima de MED es desperdicio. Por ejemplo, para hervir agua necesitas hasta 100ºC. Todo lo que sobrepases esa temperatura no va a hacer que hierba más. O si necesitas 15 minutos de sol para activar la melanina, 4 horas friéndote en la playa no te van a poner mucho más moreno.</p>
-
-<p>Dieta básica baja en carbohidratos: evita carbohidratos blancos, come las mismas pequeñas comidas una y otra vez, no hagas menús complicados, no bebas calorías, no comas fruta, tómate un día de descanso a la semana</p>
-
-<h3>Frases que me gustaría recordar</h3>
-
-<blockquote><p>Cualquier dieta popular se puede resumir en estos 4 puntos: comer más verdura, comer menos grasa saturada, hacer más ejercicio y quemar más calorías, comer más ácidos grasos omega-3</p></blockquote>
-
-<!-- more -->
-
-
-<blockquote><p>Es <strong>tu responsabilidad</strong>, no la de tu médico o dietista, aprender a qué es lo que mejor responde tu cuerpo (<em>algo así como: experimenta con tu cuerpo</em>)</p></blockquote>
-
-<!-- more -->
-
-
-<blockquote><p>En el contexto del libro, hay dos dosis mínimas a tener en cuenta: para eliminar grasa acumulada: hacer lo mínimo necesario para disparar una cascada de hormonas específicas de pérdida de grasa, y que para añadir músculo: hacer lo mínimo necesario para disparar mecanismos de crecimiento específicos (músculos) y sistémicos (hormonales)</p></blockquote>
-
-<!-- more -->
-
-
-<blockquote><p>Tu peso viene y va, como un yo-yo. Acéptalo, búscalo, eso es mejor buscar un balance fijo.</p></blockquote>
-
-<!-- more -->
-
-
-<blockquote><p>Diferentes fuentes de calorías producen diferentes resultados. Influyen 3 variables: digestión, la proporción hidratos-proteína-grasa y el tiempo.</p></blockquote>
-
-<!-- more -->
-
-
-<blockquote><p>4 principios de comportamientos anti-fallos: hazlo consciente (diario de ingestas, foto de comida que vas a comer), hazlo como un juego (medidas, motivacion,...), hazlo competitivo (acepta la presión de otros como tú), hazlo pequeño y temporal (en lugar de correr 1h todos los días, corre 5min los primeros días)</p></blockquote>
-
-<!-- more -->
-
-
-<blockquote><p>Dieta básica baja en carbohidratos: evita carbohidratos blancos, come las mismas pequeñas comidas una y otra vez, no hagas menús complicados, no bebas calorías, no comas fruta, tómate un día de descanso a la semana</p></blockquote>
-
-<!-- more -->
-
-
-<blockquote><p>Alimentos que bajan el nivel de glucosa en sangre (aunque no quiere decir que adelgacen por sí mismos): alimentos con alto contenido graso, fructosa, zumo de limòn y canela</p></blockquote>
-
-<!-- more -->
-
-
-<blockquote><p>Más que la cantidad, es el tamaño y la velocidad de las comidas que determina el nivel de glucosa. Lo mejor que puedes hacer es comer despacio.</p></blockquote>
-
-<h3>Recursos relacionados</h3>
-
-<ul>
-<li>Todas las <a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/4-hour-body-by-tim-ferriss.markdown">notas sobre el libro</a></li>
 </ul>
 
 ]]></content>

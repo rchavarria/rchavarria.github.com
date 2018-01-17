@@ -1,0 +1,428 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Practical Object-Oriented Design in Ruby - R. Chavarria's Blog</title>
+  <meta name="author" content="Rub&eacute;n Chavarr&iacute;a">
+
+  
+  <meta name="description" content="de Sandi Metz Por qué lo he leído Éste es un libro que lo recomienda mucha gente cuando se habla de programación
+orientada a objetos, es muy &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://rchavarria.github.io/blog/2018/01/17/practical-object-oriented-design-in-ruby/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="R. Chavarria's Blog" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36829645-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">R. Chavarria's Blog</a></h1>
+  
+    <h2>Proud of developing software, proud of being an Engineer</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:rchavarria.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archivos</a></li>
+  <li><a href="/readings">Lista de lectura</a></li>
+  <li><a href="/pet-projects">Proyectos</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Practical Object-Oriented Design in Ruby</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2018-01-17T22:03:00+01:00" pubdate data-updated="true">Jan 17<span>th</span>, 2018</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h5>de Sandi Metz</h5>
+
+<p><img class="left" src="/images/2018/poodr.jpg" width="250" height="323"></p>
+
+<h3>Por qué lo he leído</h3>
+
+<p>Éste es un libro que lo recomienda mucha gente cuando se habla de <em>programación
+orientada a objetos</em>, es muy mencionado en conversaciones por twitter y el
+mundo online. Pero la guinda del pastel vino cuando ví que lo recomendaba
+<a href="https://twitter.com/carlosble">Carlos Blé</a> en su blog. Entonces supe que era una lectura obligada.</p>
+
+<!-- more -->
+
+
+<h3>De qué trata el libro</h3>
+
+<p>Va sobre programación orientada a objetos. Normalmente, al hablar de POO, no se
+avanza mucho más allá de herencia y polimorfismo. Sandi va muchos pasos más
+allá. Explica la POO desde un punto de vista un poco diferente, donde los
+objetos no son el centro del paradigma, si no los mensajes que se intercambian
+entre ellos.</p>
+
+<p>Por supuesto, el libro también habla de herencia, de cuándo usarla y cuándo no.
+Habla de composición, comparándola con la herencia. Y habla de otras formas de
+reutilizar o compartir el código.</p>
+
+<p>Por último, habla sobre cómo gestionar los tests de nuestra aplicación
+manteniendo unos costes de desarrollo bajo control.</p>
+
+<h3>Conclusiones y valoración</h3>
+
+<p>Es curioso que para describir el paradigma de la programación orientada a
+objetos no se centre en objetos, si no en los mensajes que deben pasarse entre
+ellos. Es un cambio de punto de vista, y me gustaría poder interiorizarlo
+fácilmente, pero no me resulta así. Es un esfuerzo que debo hacer y que seguro
+que merecerá la pena.</p>
+
+<p>Aunque centrado en Ruby, describe otras formas de reutilizar código aparte de
+la herencia y la composición. Les llama módulos, o roles. En otros lenguajes
+existen conceptos similares, como los <em>traits</em> en PHP o los <em>mixins</em> en
+JavaScript. No creo que se puedan aplicar a todos los lenguajes de
+programación, pero si a la mayoría de los lenguajes dinámicos.</p>
+
+<p>En cuanto a la valoración, coincido con muchísima gente: este libro puede ser
+un antes y un después en la comprensión de la Programación Orientada a
+Objectos, sobre todo por el punto de vista tan diferente a la hora de
+entenderla. Envío de mensajes, envío de mensajes, envío de mensajes,&#8230;</p>
+
+<h3>Qué he aprendido</h3>
+
+<p>Impresionante ver cómo refactoriza una herencia a una composición de objetos:
+engloba una colección de objetos en una nueva clase, crea una factoría que crea
+cada una de las partes, simplifica las partes como dadas de configuación. De
+esta forma, añadir un nuevo tipo no requiere una nueva clase, solamente nueva
+configuración</p>
+
+<p>Diseñar basado en mensajes crea aplicaciones más flexibles que diseñar pensando
+en objetos. En lugar de preguntarte: tengo un objeto ¿qué debería hacer?,
+deberías preguntarte tengo un mensaje, ¿a quién se lo envío? No hay que
+centrarse en los objetos de dominio, si no en los mensajes que se pasan entre
+ellos.</p>
+
+<p>Eligiendo relaciones (herencia, roles/<em>duck typing</em>, composición)</p>
+
+<ol>
+<li>Herencia para relaciones <em>es-un</em> (is-a). Especialmente si la jerarquía es
+estrecha y tiene pocos niveles</li>
+<li>Role/duck type para relaciones <em>se-comporta-como</em> (behaves-like-a). Donde
+varios objetos no relacionados se quieren comportar del mismo modo</li>
+<li>Composición para relaciones <em>tiene-un</em> (has-a). Un objeto tiene varias
+partes pero es más que la suma de ellas, si no sería una colección y ya está</li>
+</ol>
+
+
+<p>Para obtener el máximo valor de los tests, hay que tener el mínimo de ellos.
+Para ello, hay que testear cada cosa una sola vez, y en el lugar apropiado.</p>
+
+<ol>
+<li>Mensajes entrantes tipo <em>query</em> hay que testear el <strong>estado</strong> que devuelven</li>
+<li>Mensajes salientes tipo <em>command</em>, hay que testear que son llamados, cuantas
+veces y con qué parámetros</li>
+<li>Mensajes salientes tipo <em>query</em>, no se testean (ya los testearán los tests
+de otro objeto)</li>
+</ol>
+
+
+<h3>Frases que me gustaría recordar</h3>
+
+<blockquote><p>Siempre existe una tension entre mejorarlo ahora o mejorarlo después. Un buen
+diseñador sabe minimizar los costes tomando decisiones valorando lo que sabe
+ahora y lo que sabrá en el futuro, porque nunca sabrás menos de lo que sabes
+hoy</p></blockquote>
+
+<!-- more -->
+
+
+<blockquote><p>Gestiona la dirección de las dependencias: depende de cosas que cambien menos
+frecuentemente que tú. Para conocer las dependencias más interesantes nos
+fijamos en 3 aspectos: probabilidad del cambio, nivel de abstracción y número
+de dependencias (sobretodo de la 1ª y 3ª)</p></blockquote>
+
+<!-- more -->
+
+
+<blockquote><p>Las cosas que una clase conoce conforman su <strong>contexto</strong>, lo cual tiene un
+efecto directo en lo fácil o difícil que es reusar (y por tanto testear) esa
+clase</p></blockquote>
+
+<!-- more -->
+
+
+<blockquote><p>Para que una herencia funcione, debe de haber una relación de
+generalización-especialización, donde la especialización sea todo lo general
+y algo más</p></blockquote>
+
+<!-- more -->
+
+
+<blockquote><p>La regla general de refactorizar a una herencia es colocar el código de tal
+forma que haya que promocionar abstracciones a las superclases, en lugar de
+<em>rebajar</em> concrecciones a las subclases</p></blockquote>
+
+<!-- more -->
+
+
+<blockquote><p>Si hay código que pregunta por el tipo de un objeto para enviar un mensaje u
+otro, estamos necesitando <em>duck typing</em>, una abstracción. Cuando además del
+interfaz (<em>duck type</em>) necesitamos compartir comportamiento, necesitamos un
+<em>role</em> (módulo, trait, mixing,&#8230;)</p></blockquote>
+
+<!-- more -->
+
+
+<blockquote><p>La composición es otra forma de organizar el código donde cada parte es más
+independiente, pero no tenemos delegacion automática de mensajes, si no que
+hay que hacerlo de forma explícita</p></blockquote>
+
+<!-- more -->
+
+
+<blockquote><p>Código creado con composición es <em>transparente</em> (T de <em>true</em>), suelen ser
+clases pequeñas con una única responsabilidad y suele ser fácil entenderlas.
+Son <em>usables</em> (U de <em>true</em>) porque son pequeños y enfocados. Son <em>razonables</em>
+(R de true) porque se pueden extender sin modificar</p></blockquote>
+
+<h3>Recursos relacionados</h3>
+
+<ul>
+<li>El resto de <a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/practical-object-oriented-design-ruby-by-sandi-metz.markdown">notas sobre POODR</a></li>
+</ul>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Ruben Chavarria</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2018-01-17T22:03:00+01:00" pubdate data-updated="true">Jan 17<span>th</span>, 2018</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/book-reviews/'>book reviews</a>, <a class='category' href='/blog/categories/design/'>design</a>, <a class='category' href='/blog/categories/personal/'>personal</a>, <a class='category' href='/blog/categories/programming/'>programming</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://rchavarria.github.io/blog/2018/01/17/practical-object-oriented-design-in-ruby/" data-via="rchavarriat" data-counturl="http://rchavarria.github.io/blog/2018/01/17/practical-object-oriented-design-in-ruby/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2017/12/12/programacion-reactiva-javascript/" title="Previous Post: Programación reactiva en JavaScript">&laquo; Programación reactiva en JavaScript</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2018/01/17/practical-object-oriented-design-in-ruby/">Practical Object-Oriented Design in Ruby</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2017/12/12/programacion-reactiva-javascript/">Programación reactiva en JavaScript</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2017/11/29/mi-codemotion-2017/">Así fue mi Codemotion 2017</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2017/11/22/global-day-of-code-retreat-2017/">Global day of code retreat 2017</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2017/10/30/elixir-undecimo-asalto/">Elixir: undécimo asalto</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("rchavarriat", 4, true);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <p>Follow <a href="http://twitter.com/rchavarriat">@rchavarriat</a></p>
+  
+</section>
+
+
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/rchavarriat?count=5&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/rchavarriat">My Delicious Bookmarks &raquo;</a></p>
+</section>
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2018 - Rub&eacute;n Chavarr&iacute;a -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'rchavarria-github-com';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://rchavarria.github.io/blog/2018/01/17/practical-object-oriented-design-in-ruby/';
+        var disqus_url = 'http://rchavarria.github.io/blog/2018/01/17/practical-object-oriented-design-in-ruby/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
