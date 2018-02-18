@@ -4,7 +4,7 @@
   <title><![CDATA[Category: elixir | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/elixir/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2018-01-17T22:33:23+01:00</updated>
+  <updated>2018-02-18T10:39:45+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,145 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Elixir: duodécimo asalto]]></title>
+    <link href="http://rchavarria.github.io/blog/2018/02/18/elixir-duodecimo-asalto/"/>
+    <updated>2018-02-18T22:08:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2018/02/18/elixir-duodecimo-asalto</id>
+    <content type="html"><![CDATA[<p>Este será el último asalto relativo a <a href="http://elixir-lang.org/">Elixir</a> por ahora, y en él aprenderemos
+qué son las <a href="https://hexdocs.pm/elixir/Task.html">Tasks</a> y los <a href="https://hexdocs.pm/elixir/Agent.html">Agents</a>, que se podrían traducir como <em>tareas</em> y
+<em>agentes</em>.</p>
+
+<p>Éstas serán las dos últimas abstracciones de Elixir que vamos a estudiar. No
+son de tan bajo nivel como las primitivas <code>spawn</code>, <code>send</code> y <code>receive</code> que vimos
+en el <a href="/blog/2016/09/18/elixir-septimo-asalto/">séptimo asalto</a> y tampoco son tan pesados como el <a href="http://erlang.org/doc/">framework OTP</a>.</p>
+
+<p>Son un punto intermedio. Utilizan funcionalidades de OTP, pero nos aíslan de
+muchos detalles, lo que hace que trabajar con procesos y procesos distribuidos
+sea muchísimo más fácil.</p>
+
+<p><img class="center" src="/images/2018/down-the-board.jpg"></p>
+
+<div style="text-align: center">
+  <span style="font-size: 60%">
+Imagen basada en <a href="https://flic.kr/p/majY5a">Down the board</a> de <a href="https://www.flickr.com/photos/erinthomaswilson/">Erin</a>, <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/">CC BY-NC-ND 2.0</a>
+  </span>
+</div>
+
+
+
+
+<!-- more -->
+
+
+<p>Todo esto, siguiendo el <a href="/blog/2016/01/17/aprendiendo-elixir/">método de aprendizaje</a> con el que comenzé la serie:</p>
+
+<ul>
+<li>Aprender lo suficiente para comenzar</li>
+<li>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</li>
+<li>Aprender lo suficiente para hacer algo de utilidad</li>
+<li>Enseñar lo aprendido</li>
+</ul>
+
+
+<h2>Aprender lo suficiente para comenzar</h2>
+
+<h4>Tareas</h4>
+
+<p>Una tarea o <code>Task</code> es una función que se ejecuta en segundo plano. Existen dos
+funciones principales: <code>async</code> y <code>await</code> y su forma de usarla sería la
+siguiente:</p>
+
+<p>```</p>
+
+<h1>...</h1>
+
+<h1>Realizar una computación que tarde mucho tiempo</h1>
+
+<p>worker = Task.async(fn -> Fibonacci.of(200000) end)</p>
+
+<h1>...</h1>
+
+<h1>Obtener el valor devuelto por la función</h1>
+
+<p>result = Task.await(worker)</p>
+
+<h1>...</h1>
+
+<p>```</p>
+
+<p><code>async</code> crea un proceso separado que ejecuta la función. Devuelve un descriptor
+del proceso o <em>worker</em>. <code>await</code> espera a que el proceso termine para recuperar
+el valor devuelto por la función. En lugar de pasar una función, también
+podemos pasar el nombre de un módulo, función y parámetros:
+<code>Task.async(Fibonacci, :of, [ 200000 ])</code>.</p>
+
+<p>Las <code>Task</code>s están implementadas como servidores OTP, por lo que podemos
+incluirlas en nuestro árbol de supervisión de aplicaciones. Existen dos formas:</p>
+
+<ol>
+<li>Pasando la función a ejecutar a <code>Task.start_link</code> en lugar de llamar a
+<code>Task.async</code> desde un proceso que ya esté supervisado</li>
+<li>Creando un worker desde un supervisor:</li>
+</ol>
+
+
+<p><code>
+import Supervisor.Spec
+children = [
+  worker(Task, [ fn -&gt; do_something_extraordinary() end ])
+]
+supervise children, strategy: :one_for_one
+</code></p>
+
+<h4>Agentes</h4>
+
+<p>Un agente o <code>Agent</code> es un proceso también en segundo plano que mantiene un
+estado. El estado puede ser accedido desde un proceso, nodo o múltiples nodos.</p>
+
+<p>El estado inicial se toma desde una función que se le pasa a la hora de
+arrancar el <code>Agent</code>.</p>
+
+<p>Se utiliza <code>Agent.get</code> para obtener el estado. Hay que pasarle una función,
+cuyo parámetro será el estado actual del <code>Agent</code>. El valor devuelto por
+<code>Agent.get</code> es el valor devuelto por la función.</p>
+
+<p>Se utiliza <code>Agent.update</code> para modificar el estado. También hay que pasar una
+función. El valor devuelto por la función será el nuevo estado.</p>
+
+<p>Veamos un ejemplo:</p>
+
+<p>```</p>
+
+<h1>count es el descriptor del Agent</h1>
+
+<p>iex> { :ok, count } = Agent.start(fn -> 0 end)
+{:ok, #PID&lt;0.69.0>}
+iex> Agent.get(count, &amp;(&amp;1))
+0            </p>
+
+<h1>incrementa el en uno el estado</h1>
+
+<p>iex> Agent.update(count, &amp;(&amp;1+1))
+:ok          
+iex> Agent.update(count, &amp;(&amp;1+1))
+:ok          </p>
+
+<h1>obtiene el estado actual</h1>
+
+<p>iex> Agent.get(count, &amp;(&amp;1))
+2
+```</p>
+
+<p>Los agentes son una abstracción especialmente pensada para almacenar el estado
+de nuestros procesos. Por lo tanto, se recomienda no guardar el estado en
+nuestros procesos, si no que los procesos que creemos nosotros usen un <code>Agent</code>
+para almacenar. De esta forma, en caso de fallo en nuestro proceso, el estado
+estará todavía disponible en el <code>Agent</code>, ya que es un proceso diferente al
+nuestro.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Elixir: undécimo asalto]]></title>
@@ -683,168 +822,6 @@ el siguiente asalto.</p>
 <li>Artículo sobre <a href="http://rubenfa.github.io/2017-01-25-protocols-en-elixir">protocolos</a> en Elixir</li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Elixir: octavo asalto]]></title>
-    <link href="http://rchavarria.github.io/blog/2016/12/31/elixir-octavo-asalto/"/>
-    <updated>2016-12-31T19:13:00+01:00</updated>
-    <id>http://rchavarria.github.io/blog/2016/12/31/elixir-octavo-asalto</id>
-    <content type="html"><![CDATA[<p>Último post del año, que no de la serie sobre aprender <a href="http://elixir-lang.org/">Elixir</a>. Este asalto va de nodos, PIDs y un poquito (muy poco) de entrada/salida.</p>
-
-<p>Aprenderemos qué es un nodo, cómo crear nuevos nodos y cómo comunicarlos a un nivel muy básico. Y algo muy interesante, cómo hacer que un nodo ejecute una función a nuestro antojo.</p>
-
-<p>Todo esto, siguiendo el <a href="/blog/2016/01/17/aprendiendo-elixir/">método de aprendizaje</a> con el que comenzé la serie:</p>
-
-<ul>
-<li>Aprender lo suficiente para comenzar</li>
-<li>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</li>
-<li>Aprender lo suficiente para hacer algo de utilidad</li>
-<li>Enseñar lo aprendido</li>
-</ul>
-
-
-<p><img class="center" src="/images/2016/risk.jpg"></p>
-
-<div style="text-align: center">
-  <span style="font-size: 60%">
-Imagen basada en <a href="https://flic.kr/p/3pUVs">Risk</a> de <a href="https://www.flickr.com/photos/benstephenson/">Ben Stephenson</a>, <a href="https://creativecommons.org/licenses/by/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>
-  </span>
-</div>
-
-
-
-
-<!-- more -->
-
-
-<h2>Aprender lo suficiente para comenzar</h2>
-
-<h4>Nodos - La clave para los servicios distribuidos</h4>
-
-<p>Un <strong>nodo</strong> no es más que una instancia de la máquina virtual de Erlang
-ejecutándose. Es como un sistema operativo completo, y ofrece servicios como
-tal a procesos locales o remotos.</p>
-
-<h5>Nombres de nodos</h5>
-
-<p>En <code>iex</code>, podemos saber el nombre del nodo actual con <code>Node.self</code>:</p>
-
-<p><code>
-iex&gt; Node.self
-:"rchavarria@localhost"
-</code></p>
-
-<p>Podemos dar un nombre al nodo al iniciar <code>iex</code>:</p>
-
-<p><code>
-$ iex -name foobar@localhost
-iex(foobar@localhost)&gt; Node.self
-:"foobar@localhost"
-</code></p>
-
-<p>Si te fijas, el valor devuelto por <code>Node.self</code> tiene los dos puntos delante,
-como si fuera un <code>Atom</code>. Y es que en Elixir, los nombres de los nodos son
-tratados como <code>Atom</code>s, lo que hace super sencillo referenciar nodos en el
-código.</p>
-
-<p>También, podemos saber qué nodos conoce un nodo al que estemos conectados:</p>
-
-<p>```
-iex(node_two)> Node.list
-[]</p>
-
-<h1>y al conectarnos a un nodo, aparecerá como conectado</h1>
-
-<p>iex(node_two)> Node.connect :"node_one@localhost"
-true
-iex(node_two)> Node.list
-[ :"node_one@localhost" ]
-```</p>
-
-<p>Podemos ejecutar una función en un nodo remoto:</p>
-
-<p><code>
-iex(node_one)&gt; func = fn -&gt; IO.puts "Hello, I'm in #{inspect Node.self}"
-iex(node_one)&gt; Node.spawn( :"node_two@localhost", func )
-Hello, I'm in :"node_two@localhost"
-</code></p>
-
-<p><code>Node.spawn</code> es impresionante. Podemos ejecutar una función en otro nodo
-fácilmente. Pero aunque se ejecute en <code>node_two</code>, hereda lo que se llama <em>group
-leader</em>, con lo que es capaz de mostrar mensajes por consola en <code>node_one</code> (en
-lugar del dos, que es donde se ejecuta).</p>
-
-<p>Además de poder dar un nombre a un nodo, podemos establecer su <em>cookie</em>. La
-cookie de un node no es más que un token, y se utiliza para permitir que los
-nodos se conecten entre sí. Nodos con la misma cookie se pueden conectar. Si es
-distinta, los nodos rechazarán la conexión. Las cookies se mandan en texto
-plano, así que cuidado con las conexiones a través de internet.</p>
-
-<h5>Nombrando tus procesos</h5>
-
-<p>Cada proceso se identifica con un PID. Un PID está compuesto por tres números,
-aunque sólo contiene dos campos: el número de nodo (<code>0</code> si el nodo es el local)
-y el número de proceso en sí. Este número de proceso está compuesto por sus
-bits más y menos representativos (de ahí que veamos tres números en un PID como
-éste <code>#PID&lt;0.71.0&gt;</code>). El id de node es el id del nodo donde <em>vive</em> el proceso.</p>
-
-<h4>Entrada/salida, PIDs y Nodos</h4>
-
-<p>La entrada/salida en la máquina virtual de Erlang se hace a través de
-servidores de entrada/salida. Elixir y Erlang proporcionan librerías para no
-tener que lidiar con ellos, ya que son a muy bajo nivel.</p>
-
-<p>En Elixir, se identifica un fichero por el PID del proceso del servidor de
-entrada/salida que lo está manejando.</p>
-
-<p>Por ejemplo, la función <code>IO.puts</code> utiliza el PID devuelto por
-<code>:erlang.group_leader()</code> como valor por defecto para enviar una cadena al
-proceso que la muestra por consola: <code>send :erlang.group_leader(), str</code> podría
-ser el código equivalente.</p>
-
-<h2>Aprender lo suficiente para hacer algo de utilidad</h2>
-
-<ul>
-<li>Ejercicio 1: en el código del servidor de ticks (<a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-08/ticker.ex">ticker.ex</a>), el autor habla
-de que el tick se envía cada 2 segundos más o menos.  Pero el timeout está
-puesto a 2 segundos exactos. ¿Por qué habla de <em>más o menos</em>?</li>
-</ul>
-
-
-<p><strong>Respuesta</strong></p>
-
-<p>El timeout es de justo 2 segundos, pero el timeout solo saltará si no se
-registra ningún cliente en esos 2 segundos. Si un cliente se registra (digamos
-en el momento 1.55 segundos) no saltará el timeout hasta los 3.55 segundos
-siguientes (1.55 segundos que pasaron desde el anterior tick hasta el registro
-del último cliente más 2 segundos del timeout normal).</p>
-
-<ul>
-<li><p>Ejercicio 2: modificar el servidor de ticks para que mande solo un
-tick cada vez, de forma circular, a cada uno de los clientes registrados (el
-primer tick al primer cliente, el segundo tick al segundo cliente
-registrado,...). El programa deberá lidiar con nuevos clientes registrados.</p></li>
-<li><p>Ejercicio 3: reimplementar el servidor de ticks, pero esta vez
-debe ser circular, de forma que el cliente 1 mande un tick al cliente 2.
-Pasados 2 segundos, el cliente 2 mandará un tick al 3. Y así hasta el último, el cual
-enviará un tick al 1. Y vuelta a empezar. El problema está en cómo añadir
-clientes al círculo (o <em>ring</em>) y quién tiene la responsabilidad de actualizar
-ese círculo de clientes.</p></li>
-</ul>
-
-
-<p><strong>Respuesta</strong></p>
-
-<p>Me costó un tiempo dar con la solución al ejercicio (<a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-08/ring_ticker.ex">ring_ticker.ex</a>). Puede
-que el <em>ring</em> lo tenga que gestionar el servidor central. De otra forma, los
-clientes perderán el timeout del <code>receive</code> y se volverán un poco locos.</p>
-
-<h2>Enseñar lo aprendido, y repetir desde el paso 7</h2>
-
-<p>Aquí está, este post, mis notas, mis pensamientos, mis dudas y mi código. Hasta
-el siguiente asalto.</p>
 ]]></content>
   </entry>
   
