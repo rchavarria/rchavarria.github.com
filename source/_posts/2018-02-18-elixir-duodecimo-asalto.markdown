@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Elixir: duodécimo asalto"
-date: 2018-02-10 22:08
+date: 2018-02-18 22:08
 author: Ruben Chavarria
 comments: true
 categories: 
