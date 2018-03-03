@@ -24,6 +24,7 @@ Los escenarios propuestos van desde sencillos cambios de peticiones de un client
 
 En el taller aprendí alguna estrategia a aplicar en migraciones de bases de datos y a prestar atención a los cambios que hacemos a nuestros sistemas, porque pueden tener más consecuencias de las que podemos pensar en un principio.
 
+
 La idea fue aplicada a arquitecturas/sistemas/servicios, pero podría ser aplicada a refactorizaciones de código, gestión de la configuración,... Muchos otros campos.
 
 ### Effects, co-effects y subscriptions in SPAs, con Manuel Rivero
@@ -32,7 +33,7 @@ Podríamos definir *side-effect* como aquello que una función hace al *mundo* e
 
 Así, un *effect* sería un *side-effect* y un *co-effect* sería un *side-cause*.
 
-Para conseguir que mis funciones no dependan del mundo exterior, se podría aplicar un concepto que se parece mucho a inyección de dependencias, pero aplicado a funciones. La idea es que ahora, tus funciones reciben co-effects y devuelven effects. Del manejo de effects y co-effects se encarga el lenguaje o la librería en cuestión, dejando a tus funciones como funciones puras, fácilmente entendibles, fácilemnte testeables.
+Para conseguir que mis funciones no dependan del mundo exterior, se podría aplicar un concepto que se parece mucho a inyección de dependencias, pero aplicado a funciones. La idea es que ahora, tus funciones reciben co-effects y devuelven effects. Del manejo de effects y co-effects se encarga el lenguaje o la librería en cuestión, dejando a tus funciones como funciones puras, fácilmente entendibles, fácilmente testeables.
 
 Subscripciones de la librería [re-frame](https://github.com/Day8/re-frame) (librería ClojureScript con un concepto similar a React en JavaScript): funciones que hacen una query sobre el estado de la applicación y el resultado lo pasan a las funciones que renderizan la vista. Similar a las funciones de [ReactiveX](/blog/2017/12/12/programacion-reactiva-javascript/) que tenía funciones que podías ir encadenando.
 
