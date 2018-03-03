@@ -16,9 +16,34 @@ Pro tip: trabajar directamente con los usuarios del sistema, para ir teniendo fe
 
 ### Taller: Parallel changes, cambios grandes pasos pequeños, con Eduardo Ferro
 
+El título del taller parecía prometer, y el material necesario era bastante fácil de conseguir. Y la verdad es que la prometió.
+
+La idea del taller es espectacular: se van proponiendo escenarios donde se parte de una situación inicial y hay que realizar un cambio para llegar a la situación objetivo. Dicho así es muy sencillo, pero hay una serie de reglas/restricciones que hay que cumplir (no se puede parar el servicio, los despliegues deben ser mínimos y cuanto más pequeños mejor,...).
+
+Los escenarios propuestos van desde sencillos cambios de peticiones de un cliente a un servidor, hasta la interacción de varios servicios, pasando por consultas a bases de datos.
+
+En el taller aprendí alguna estrategia a aplicar en migraciones de bases de datos y a prestar atención a los cambios que hacemos a nuestros sistemas, porque pueden tener más consecuencias de las que podemos pensar en un principio.
+
+La idea fue aplicada a arquitecturas/sistemas/servicios, pero podría ser aplicada a refactorizaciones de código, gestión de la configuración,... Muchos otros campos.
+
 ### Effects, co-effects y subscriptions in SPAs, con Manuel Rivero
 
-### Guarda to ego en el cajón, con Alberto aka APA42
+Podríamos definir *side-effect* como aquello que una función hace al *mundo* exterior. De la misma forma, podríamos definir *side-cause* como aquello que el mundo hace a mi función (datos que necesita mi función pero no es pasado como parámetro).
+
+Así, un *effect* sería un *side-effect* y un *co-effect* sería un *side-cause*.
+
+Para conseguir que mis funciones no dependan del mundo exterior, se podría aplicar un concepto que se parece mucho a inyección de dependencias, pero aplicado a funciones. La idea es que ahora, tus funciones reciben co-effects y devuelven effects. Del manejo de effects y co-effects se encarga el lenguaje o la librería en cuestión, dejando a tus funciones como funciones puras, fácilmente entendibles, fácilemnte testeables.
+
+Subscripciones de la librería [re-frame](https://github.com/Day8/re-frame) (librería ClojureScript con un concepto similar a React en JavaScript): funciones que hacen una query sobre el estado de la applicación y el resultado lo pasan a las funciones que renderizan la vista. Similar a las funciones de [ReactiveX](/blog/2017/12/12/programacion-reactiva-javascript/) que tenía funciones que podías ir encadenando.
+
+Juraría que Manuel recomendó una charla, con un título parecido a *Arquitecturas front unidireccionales*, relacionada con Cycle.js, pero sólo soy capaz de encontrar el artículo [Unidirectional user interface architectures](https://staltz.com/unidirectional-user-interface-architectures.html) de André Staltz.
+
+### Guarda tu ego en el cajón, con Alberto aka APA42
+
+Bueno, a ésta llegué realmente tarde, y con un buen debate bastante avanzado, así que tampoco pude aprovercharlo tanto como me hubiera gustado. Aún así, me quedo con dos cosas:
+
+1. Si quieres hacer que alguien cambie, tienes que darle una motivación para que la otra persona quiera cambiar
+2. Ha ocasiones en las que las razones técnicas NO valen, así que para esas ocasiones, no intentes convencer a la otra persona con razones técnicas, si no con razones económicas, personales,...
 
 ## ¿Qué me llevo?
 
@@ -28,25 +53,18 @@ Parece que no atendí a muchas charlas, y así es. Bueno, el taller abarcaba var
 
 - Interaction Driven Design, de Sandro Mancuso
 - PSR7 y PSR15, ¿de qué van? ¿cuántos PSRs hay?
-- ¿Qué fuente usó Eduardo Ferro en las slides de su taller?
+- ¿Qué fuente usó Eduardo Ferro en las slides de su taller? [Sniglet](https://fonts.google.com/specimen/Sniglet)
 - En las slides de Manuel Rivero ha un enlace a una app para aprender gramática (spelling). ¿Interesante para Einar?
 - Cycle.js, charla con un título parecido a *Unidirectionals front Arquitectures*
 - Método Suzuki, para comunicarse, convencer al otro, psicología,...
 - [The core protocols: a guide to greatness](https://www.amazon.es/Core-Protocols-Guide-Greatness/dp/0692381082), de Richard Kasperowski
 
-## ¿xxx?
-
 ## Referencias
 
 - [Notas sobre el Open Space](https://github.com/SoftwareCraftersMadrid/resumen-madswcraft18) en el GitHub de SW Crafters Madrid
-- [Slides del taller sobre Parallel Changes](), de Eduardo Ferro
+- [Slides del taller sobre Parallel Changes](http://www.eferro.net/2018/02/slides-taller-parallel-changes-software.html), de Eduardo Ferro
 
 ## Personas
 
-Todos estos eventos van de personas, de ver a compañeros de profesión, viejos (o no tan viejos) amigos, y de crear nuevas relaciones:
+Todos estos eventos van de personas, de ver a compañeros de profesión, viejos (o no tan viejos) amigos, y de crear nuevas relaciones. Ahí van unas cuantas personas con las que me encontré (perdón, no me acuerdo de todas), sin ningún orden en particular: [Manuel Rivero](https://twitter.com/trikitrok), [Ronny Ancorini](https://twitter.com/RonnyAncorini), [Toño de la Torre](https://twitter.com/adelatorrefoss), [Eduardo Ferro](https://twitter.com/eferro), [Modesto San Juan](https://twitter.com/msanjuan), [Abel](https://twitter.com/amisai), [Jesús](https://twitter.com/jeslopcru), [Rubén](https://twitter.com/rubendm23), [Juan David](https://twitter.com/juandvegarguez), [Alberto](https://twitter.com/APA42), [Raúl Villares](https://twitter.com/RaulVillaresBg), [Helder de Oliveira](https://twitter.com/HelderDOliveira),... (arg, maldita memoria)
 
-- Manuel Rivero
-- Rony
-- Toño de la Torre
-- Eduardo Ferro
-- xxx
