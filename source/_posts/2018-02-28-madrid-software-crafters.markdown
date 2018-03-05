@@ -1,6 +1,12 @@
 # Madrid Software Crafters 2018
 
-Notas sobre el Open Space [Madrid Software Crafters](http://madswcraft.com/)
+En este post dejo las notas que tomé en el Open Space [Madrid Software Crafters](http://madswcraft.com/). La verdad es que tenía ganas de que se celebrara un evento así por Madrid. La distancia y sobretodo la pereza, me pueden, y todavía no me he decidido a asistir a eventos similares que se celebran en Barcelona o Pamplona.
+
+El día fue espectacular, no tanto por las charlas, pero sí por las personas con las que tuve el placer de compartir el día
+
+{% img center /images/2018/madswcraft.jpg %}
+
+<!-- more -->
 
 ## Sesiones
 
@@ -14,7 +20,7 @@ Su cliente entiende que el legacy hace mucho (ha ido creciendo orgánicamente, s
 
 Pro tip: trabajar directamente con los usuarios del sistema, para ir teniendo feedback. El Feature Toggle va a ir tienda por tienda.
 
-### Taller: Parallel changes, cambios grandes pasos pequeños, con Eduardo Ferro
+### Taller: Parallel changes, cambios grandes pasos pequeños, con Eduardo Ferro - [slides](http://www.eferro.net/2018/02/slides-taller-parallel-changes-software.html)
 
 El título del taller parecía prometer, y el material necesario era bastante fácil de conseguir. Y la verdad es que la prometió.
 
@@ -27,7 +33,7 @@ En el taller aprendí alguna estrategia a aplicar en migraciones de bases de dat
 
 La idea fue aplicada a arquitecturas/sistemas/servicios, pero podría ser aplicada a refactorizaciones de código, gestión de la configuración,... Muchos otros campos.
 
-### Effects, co-effects y subscriptions in SPAs, con Manuel Rivero
+### Effects, co-effects y subscriptions in SPAs, con Manuel Rivero - [slides](https://drive.google.com/file/d/1VtVziPtOvI68AQiMcq5nq2YGO1YI_x4D/view)
 
 Podríamos definir *side-effect* como aquello que una función hace al *mundo* exterior. De la misma forma, podríamos definir *side-cause* como aquello que el mundo hace a mi función (datos que necesita mi función pero no es pasado como parámetro).
 
@@ -37,7 +43,7 @@ Para conseguir que mis funciones no dependan del mundo exterior, se podría apli
 
 Subscripciones de la librería [re-frame](https://github.com/Day8/re-frame) (librería ClojureScript con un concepto similar a React en JavaScript): funciones que hacen una query sobre el estado de la applicación y el resultado lo pasan a las funciones que renderizan la vista. Similar a las funciones de [ReactiveX](/blog/2017/12/12/programacion-reactiva-javascript/) que tenía funciones que podías ir encadenando.
 
-Juraría que Manuel recomendó una charla, con un título parecido a *Arquitecturas front unidireccionales*, relacionada con Cycle.js, pero sólo soy capaz de encontrar el artículo [Unidirectional user interface architectures](https://staltz.com/unidirectional-user-interface-architectures.html) de André Staltz.
+Juraría que Manuel recomendó una charla, con un título parecido a *Arquitecturas front unidireccionales*, relacionada con Cycle.js, pero sólo soy capaz de encontrar el artículo [Unidirectional user interface architectures](https://staltz.com/unidirectional-user-interface-architectures.html) de André Staltz. No hay nada como preguntar, Manuel me pasó las slides y encontré el enlace a la charla: [Unidirectional data flow architectures](https://vimeo.com/168652278).
 
 ### Guarda tu ego en el cajón, con Alberto aka APA42
 
@@ -56,7 +62,7 @@ Parece que no atendí a muchas charlas, y así es. Bueno, el taller abarcaba var
 - PSR7 y PSR15, ¿de qué van? ¿cuántos PSRs hay?
 - ¿Qué fuente usó Eduardo Ferro en las slides de su taller? [Sniglet](https://fonts.google.com/specimen/Sniglet)
 - En las slides de Manuel Rivero ha un enlace a una app para aprender gramática (spelling). ¿Interesante para Einar?
-- Cycle.js, charla con un título parecido a *Unidirectionals front Arquitectures*
+- Relacionada con Cycle.js, charla [Unidirectional data flow architectures](https://vimeo.com/168652278)
 - Método Suzuki, para comunicarse, convencer al otro, psicología,...
 - [The core protocols: a guide to greatness](https://www.amazon.es/Core-Protocols-Guide-Greatness/dp/0692381082), de Richard Kasperowski
 
@@ -64,6 +70,7 @@ Parece que no atendí a muchas charlas, y así es. Bueno, el taller abarcaba var
 
 - [Notas sobre el Open Space](https://github.com/SoftwareCraftersMadrid/resumen-madswcraft18) en el GitHub de SW Crafters Madrid
 - [Slides del taller sobre Parallel Changes](http://www.eferro.net/2018/02/slides-taller-parallel-changes-software.html), de Eduardo Ferro
+- [Slides sobre la charla de effects y co-effects](https://drive.google.com/file/d/1VtVziPtOvI68AQiMcq5nq2YGO1YI_x4D/view)
 
 ## Personas
 
