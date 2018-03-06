@@ -16,6 +16,12 @@ En el cuadrante del [artículo anterior] vimos cómo los *Observables* podrían 
 
 Los arrays son síncronos, y por lo tanto, se iteran síncronamente. En cambio, los Observables son *observados* (bienvenido Capitán Obvio) y *reaccionan* en cuanto hay un nuevo valor presente en el flujo asíncrono.
 
+EL ORIGEN DE LA AFOTO ES
+
+https://www.flickr.com/photos/kbphoto/28199311322/in/photolist-KnxGq-Wsw2fx-JXSQNN-XNP9eX-ntKcfD-np7fEC-iYPG58-ouU9fg-6uy5zT-PkEYS-fArBGx-6na2D1-6g8XhZ-37fzpg-6na2Qj-4dyisj-VAowXa-a4Q3cG-9sXSEe-6kGjaC-9ae1p4-4sTSmJ-a5vtyn-pYeCXY-PkEYQ-eBTiZC-K9L6R3-2Df9c-4kssR5-ikrt6-7wP5st-m9rXZc-5boj4c-3bQs5-rBtFda-6cxZQQ-72ACuh-adEePx-6Lasxr-o4HNTa-iRDmqu-5h7RJx-72wC18-5AEy7C-7PSdQD-mC5QN-dzUqKm-54taNr-JehQis-XhsTQ6
+
+ASÍ QUE YA SE PUEDE ESCRIBIR EL HTML PARA DAR LAS GRACIAS Y RESPETAR LA LICENCIA
+
 {% img center /images/2018/bees.jpb %}
 
 <!-- more -->
