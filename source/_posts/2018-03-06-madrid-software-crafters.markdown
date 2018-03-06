@@ -20,7 +20,7 @@ El día fue espectacular, no tanto por las charlas, pero sí por las personas co
 
 <div style="text-align: center">
   <span style="font-size: 60%">
-    <a href="https://twitter.com/madswcraft/status/967447494526488576">Imagen</a> reproducida con perimso de <a href="https://twitter.com/HelderDOliveira">Helder de Oliveira</a>, autor de la misma. Gracias!!
+    <a href="https://twitter.com/madswcraft/status/967447494526488576">Imagen</a> reproducida con permiso de <a href="https://twitter.com/HelderDOliveira">Helder de Oliveira</a>, autor de la misma. Gracias!!
   </span>
 </div>
 
