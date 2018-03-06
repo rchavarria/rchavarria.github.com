@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2018-02-18T10:39:45+01:00</updated>
+  <updated>2018-03-06T21:36:01+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,98 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Madrid Software Crafters 2018]]></title>
+    <link href="http://rchavarria.github.io/blog/2018/03/06/madrid-software-crafters/"/>
+    <updated>2018-03-06T21:34:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2018/03/06/madrid-software-crafters</id>
+    <content type="html"><![CDATA[<p>En este post dejo las notas que tomé en el Open Space <a href="http://madswcraft.com/">Madrid Software Crafters</a>. La verdad es que tenía ganas de que se celebrara un evento así por Madrid. La distancia y sobretodo la pereza, me pueden, y todavía no me he decidido a asistir a eventos similares que se celebran en Barcelona o Pamplona.</p>
+
+<p>El día fue espectacular, no tanto por las charlas, pero sí por las personas con las que tuve el placer de compartir el día</p>
+
+<p><img class="center" src="http://rchavarria.github.io/images/2018/madswcraft.jpg"></p>
+
+<!-- more -->
+
+
+<p>Y ahí van las notas de cada sesión:</p>
+
+<h3>Estrategias de <em>decoupling</em> en <em>legacy code</em>, con Rony Ancorini y Toño de la Torre</h3>
+
+<p>Primera estrategia, Interaction Driven Design. Simplificando, de una clase/fichero enorme, se extrae una parte (la que tenemos que modificar) a una clase/componente más pequeño y aprovechamos para testearlo.</p>
+
+<p>Segunda, un poco bestia, un gran Feature Toggle (por tienda de ropa). Si está activado, en lugar de ejecutar el monolito (legacy), se ejecuta un sistema totalmente distinto (el nuevo, el <em>bonito</em>).</p>
+
+<p>Su cliente entiende que el legacy hace mucho (ha ido creciendo orgánicamente, se ha ido añadiendo funcionalidades sin orden alguno) y que habrá que ir avanzando a muchas aplicaciones más pequeñas.</p>
+
+<p>Pro tip: trabajar directamente con los usuarios del sistema, para ir teniendo feedback. El Feature Toggle va a ir tienda por tienda.</p>
+
+<h3>Taller: Parallel changes, cambios grandes pasos pequeños, con Eduardo Ferro - <a href="http://www.eferro.net/2018/02/slides-taller-parallel-changes-software.html">slides</a></h3>
+
+<p>El título del taller parecía prometer, y el material necesario era bastante fácil de conseguir. Y la verdad es que la prometió.</p>
+
+<p>La idea del taller es espectacular: se van proponiendo escenarios donde se parte de una situación inicial y hay que realizar un cambio para llegar a la situación objetivo. Dicho así es muy sencillo, pero hay una serie de reglas/restricciones que hay que cumplir (no se puede parar el servicio, los despliegues deben ser mínimos y cuanto más pequeños mejor,&#8230;).</p>
+
+<p>Los escenarios propuestos van desde sencillos cambios de peticiones de un cliente a un servidor, hasta la interacción de varios servicios, pasando por consultas a bases de datos.</p>
+
+<p>En el taller aprendí alguna estrategia a aplicar en migraciones de bases de datos y a prestar atención a los cambios que hacemos a nuestros sistemas, porque pueden tener más consecuencias de las que podemos pensar en un principio.</p>
+
+<p>La idea fue aplicada a arquitecturas/sistemas/servicios, pero podría ser aplicada a refactorizaciones de código, gestión de la configuración,&#8230; Muchos otros campos.</p>
+
+<h3>Effects, co-effects y subscriptions in SPAs, con Manuel Rivero - <a href="https://drive.google.com/file/d/1VtVziPtOvI68AQiMcq5nq2YGO1YI_x4D/view">slides</a></h3>
+
+<p>Podríamos definir <em>side-effect</em> como aquello que una función hace al <em>mundo</em> exterior. De la misma forma, podríamos definir <em>side-cause</em> como aquello que el mundo hace a mi función (datos que necesita mi función pero no es pasado como parámetro).</p>
+
+<p>Así, un <em>effect</em> sería un <em>side-effect</em> y un <em>co-effect</em> sería un <em>side-cause</em>.</p>
+
+<p>Para conseguir que mis funciones no dependan del mundo exterior, se podría aplicar un concepto que se parece mucho a inyección de dependencias, pero aplicado a funciones. La idea es que ahora, tus funciones reciben co-effects y devuelven effects. Del manejo de effects y co-effects se encarga el lenguaje o la librería en cuestión, dejando a tus funciones como funciones puras, fácilmente entendibles, fácilmente testeables.</p>
+
+<p>Subscripciones de la librería <a href="https://github.com/Day8/re-frame">re-frame</a> (librería ClojureScript con un concepto similar a React en JavaScript): funciones que hacen una query sobre el estado de la applicación y el resultado lo pasan a las funciones que renderizan la vista. Similar a las funciones de <a href="http://rchavarria.github.io/blog/2017/12/12/programacion-reactiva-javascript/">ReactiveX</a> que tenía funciones que podías ir encadenando.</p>
+
+<p>Juraría que Manuel recomendó una charla, con un título parecido a <em>Arquitecturas front unidireccionales</em>, relacionada con Cycle.js, pero sólo soy capaz de encontrar el artículo <a href="https://staltz.com/unidirectional-user-interface-architectures.html">Unidirectional user interface architectures</a> de André Staltz. No hay nada como preguntar, Manuel me pasó las slides y encontré el enlace a la charla: <a href="https://vimeo.com/168652278">Unidirectional data flow architectures</a>.</p>
+
+<h3>Guarda tu ego en el cajón, con Alberto (aka APA42)</h3>
+
+<p>Bueno, a ésta llegué realmente tarde, y con un buen debate bastante avanzado, así que tampoco pude aprovercharlo tanto como me hubiera gustado. Aún así, me quedo con dos cosas:</p>
+
+<ol>
+<li>Si quieres hacer que alguien cambie, tienes que darle una motivación para que la otra persona quiera cambiar</li>
+<li>Ha ocasiones en las que las razones técnicas NO valen, así que para esas ocasiones, no intentes convencer a la otra persona con razones técnicas, si no con razones económicas, personales,&#8230;</li>
+</ol>
+
+
+<h2>¿Qué me llevo?</h2>
+
+<p>Parece que no atendí a muchas charlas, y así es. Bueno, el taller abarcaba varias charlas, así que esa es una de las razones. Otra es que tampoco surgieron charlas que me atrajeran demasiado, pero eso es problema mío. Pero la mejor excusa para no haber asistido a charlas es que disfruté mucho de las conversaiones en los pasillos conociendo a mucha gente nueva.</p>
+
+<h2>¿Qué tengo que mirar?</h2>
+
+<ul>
+<li>Interaction Driven Design, de Sandro Mancuso</li>
+<li>PSR7 y PSR15, ¿de qué van? ¿cuántos PSRs hay?</li>
+<li>¿Qué fuente usó Eduardo Ferro en las slides de su taller? <a href="https://fonts.google.com/specimen/Sniglet">Sniglet</a></li>
+<li>En las slides de Manuel Rivero hay un enlace a una app para aprender gramática (spelling). ¿Interesante para Einar?</li>
+<li>Relacionada con Cycle.js, charla <a href="https://vimeo.com/168652278">Unidirectional data flow architectures</a></li>
+<li>Método Suzuki, para comunicarse, convencer al otro, psicología,&#8230;</li>
+<li><a href="https://www.amazon.es/Core-Protocols-Guide-Greatness/dp/0692381082">The core protocols: a guide to greatness</a>, de Richard Kasperowski</li>
+</ul>
+
+
+<h2>Referencias</h2>
+
+<ul>
+<li><a href="https://github.com/SoftwareCraftersMadrid/resumen-madswcraft18">Notas sobre el Open Space</a> en el GitHub de SW Crafters Madrid</li>
+<li><a href="http://www.eferro.net/2018/02/slides-taller-parallel-changes-software.html">Slides del taller sobre Parallel Changes</a>, de Eduardo Ferro</li>
+<li><a href="https://drive.google.com/file/d/1VtVziPtOvI68AQiMcq5nq2YGO1YI_x4D/view">Slides sobre la charla de effects y co-effects</a>, de Manuel Rivero</li>
+</ul>
+
+
+<h2>Personas</h2>
+
+<p>Todos estos eventos van de personas, de ver a compañeros de profesión, viejos (o no tan viejos) amigos, y de crear nuevas relaciones. Ahí van unas cuantas personas con las que me encontré (perdón, no me acuerdo de todas), sin ningún orden en particular: <a href="https://twitter.com/trikitrok">Manuel Rivero</a>, <a href="https://twitter.com/RonnyAncorini">Ronny Ancorini</a>, <a href="https://twitter.com/adelatorrefoss">Toño de la Torre</a>, <a href="https://twitter.com/eferro">Eduardo Ferro</a>, <a href="https://twitter.com/msanjuan">Modesto San Juan</a>, <a href="https://twitter.com/amisai">Abel</a>, <a href="https://twitter.com/jeslopcru">Jesús</a>, <a href="https://twitter.com/rubendm23">Rubén</a>, <a href="https://twitter.com/juandvegarguez">Juan David</a>, <a href="https://twitter.com/APA42">Alberto</a>, <a href="https://twitter.com/RaulVillaresBg">Raúl Villares</a>, <a href="https://twitter.com/HelderDOliveira">Helder de Oliveira</a>,&#8230; (arg, maldita memoria)</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Elixir: duodécimo asalto]]></title>
@@ -2825,261 +2917,6 @@ pasando el tiempo, las vas conociendo.</p></blockquote>
 <li><a href="https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q">Canal de YouTube FunFunFunction</a></li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Elixir: séptimo asalto]]></title>
-    <link href="http://rchavarria.github.io/blog/2016/09/18/elixir-septimo-asalto/"/>
-    <updated>2016-09-18T16:20:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2016/09/18/elixir-septimo-asalto</id>
-    <content type="html"><![CDATA[<p>El aprendizaje va avanzando, ya vamos por el séptimo asalto. Éste trata sobre
-cómo <a href="http://elixir-lang.org/">Elixir</a> maneja múltiples procesos, por lo que trataremos algún tema de
-concurrencia. También veremos algunas cosas básicas sobre cómo monitorizar los
-procesos de los que consta nuestra aplicación.</p>
-
-<p>Sin olvidar del método de aprendizaje con el que <a href="http://rchavarria.github.io/blog/2016/01/17/aprendiendo-elixir/">comenzé</a>:</p>
-
-<ul>
-<li>Aprender lo suficiente para comenzar</li>
-<li>Experimentar, jugar, buscar puntos desconocidos, hacerse preguntas</li>
-<li>Aprender lo suficiente para hacer algo de utilidad</li>
-<li>Enseñar lo aprendido</li>
-</ul>
-
-
-<p><img class="right" src="http://rchavarria.github.io/images/2016/you-gotta-fight-for-your-right-to-eat.jpg"></p>
-
-<div style="text-align: center">
-  <span style="font-size: 60%">
-Imagen basada en <a href="https://flic.kr/p/4rvPED">You gotta fight for your right to&#8230; eat</a> de <a href="https://www.flickr.com/photos/r2wk/">ldjpg</a>, <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/">CC BY NC ND 2.0</a>
-  </span>
-</div>
-
-
-
-
-<!-- more -->
-
-
-<h2>Aprender lo suficiente para comenzar</h2>
-
-<p><strong>Trabajando con múltiples procesos</strong></p>
-
-<p>Elixir usa el <a href="https://en.wikipedia.org/wiki/Actor_model">modelo de actores</a> para gestionar la concurrencia.</p>
-
-<p>Elixir se apoya en Erlang para gestionar los procesos, que no son los procesos
-del sistema operativo.</p>
-
-<p>Para crear un proceso, se hace con la llamada <code>spawn</code>. <code>spawn</code> puede crear un
-proceso y ejecutar en él código que tengas en un módulo cualquiera. El proceso
-puede empezar en cualquier momento (asíncrono total) y se utilizan mensajes
-entre procesos para sincronizarlos.</p>
-
-<p>Los mensajes no tienen por qué ser <code>Strings</code>, pueden ser de cualquier tipo
-(generalmente tuplas o atoms). Los mensajes se mandan con <code>send</code>, y debes usar
-un <code>PID</code> (devuelto por <code>spawn</code>).</p>
-
-<p>El receptor, espera mensajes con <code>receive</code>. <code>receive</code> funciona como <code>case</code>: se
-pueden poner varios casos, y el primero que coincida, se ejecuta.</p>
-
-<p><code>receive</code> maneja sólo un mensaje. Si queremos recibir varios, debemos volver a
-llamar al método que contiene el <code>receive</code>, de forma recursiva (y Elixir es muy
-bueno con la recursividad). <code>receive</code> también acepta un parámetro, <code>after</code>,
-para definir un timeout.</p>
-
-<p>El autor dice que los procesos en Elixir son como los objetos en lenguajes
-orientados a objectos, pero con mejor sentido del humor. El hecho es que son
-muy livianos, y pueden mantener estado, así que podemos pensar en ellos como en
-objetos de la programación orientada a objetos.</p>
-
-<p><strong>Enlazar procesos</strong></p>
-
-<p>Normalmente, un proceso no sabe cuando muere un proceso hijo. Debemos hacer
-algo manualmente para que se notifique. Podemos crear procesos <em>enlazados</em>
-(linked) con <code>spawn_link</code>. Por defecto, si un proceso hijo muere, mata al
-proceso padre. Para controlar esto y poder escuchar el mensaje que lanza el
-proceso hijo al morir, debemos <em>atrapar la salida</em> mediante
-<code>Process.flag(:trap_exit, true)</code> justo antes de hacer <code>spawn_link</code>.</p>
-
-<p>Dos procesos enlazados pueden comunicarse bidireccionalmente.</p>
-
-<p>Elixir usa el framework OTP para construir árboles de procesos. OTP lleva mucho
-tiempo en funcionamiento, y debemos confiar en que lo hace mucho mejor que
-nosotros, por lo que lo usaremos prácticamente siempre. OTP incluye el concepto
-de <em>Supervisor de procesos</em>. Más adelante estudiaremos temas relacionados con
-OTP.</p>
-
-<p><strong>Monitorizando procesos</strong></p>
-
-<p>Si <code>spawn_link</code> permite comunicación bidireccional, <code>spawn_monitor</code> solo la
-permite unidireccional. El proceso hijo puede notificar al padre, pero no al
-revés.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'># monitor devuelve el pid del proceso hijo y una referencia de la monitorización
-</span><span class='line'>res = spawn_monitor(&lt;module&gt;, &lt;function&gt;, &lt;params&gt;)
-</span><span class='line'>IO.inspect res
-</span><span class='line'># =&gt; { #PID{3.3.3.3}, #Reference{1.2.3.4} }</span></code></pre></td></tr></table></div></figure>
-
-
-<p>También se puede monitorizar un proceso existente con <code>Process.monitor</code>.</p>
-
-<p>¿Cuándo utilizar cada uno? Depende de la utilidad. Si la muerte de un hijo
-debería matar al padre, usa procesos enlazados. Si la muerte/fallo de un hijo
-solamente debería notificar al padre, usa monitorización.</p>
-
-<h2>Aprender lo suficiente para hacer algo de utilidad</h2>
-
-<ul>
-<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-07/exercise-01-round-07.exs">exercise-01-round-07.exs</a>: ejecutar el programa que pasa mensajes en cadena
-de un proceso a otro hasta llegar al millón de procesos.</li>
-<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-07/exercise-02-round-07.exs">exercise-02-round-07.exs</a>: escribir un código que cree dos procesos, y que a
-cada uno le mande un token (p.e.: &#8220;pepito&#8221; y &#8220;fulanito&#8221;), y que los procesos
-lo devuelvan. En teoría, ¿es determinista el orden en el que se reciben las
-respuestas? ¿Y en la práctica? En caso de que no, ¿cómo podría hacerse que
-fuera determinista?.</li>
-</ul>
-
-
-<p><strong>Resultados</strong></p>
-
-<p>Parece que sí es determinista (al menos con dos procesos). Depende del orden en
-el que se creen los procesos, incluso si invertimos el orden en el que se
-envían los tokens, el primer proceso creado es el primero en responder.</p>
-
-<ul>
-<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-07/exercise-03-round-07.exs">exercise-03-round-07.exs</a>: usa <code>spawn_link</code> para crear un proceso, el cual
-envía un mensaje al padre y finaliza inmediatamente. Mientras, en el padre,
-después de crear el proceso, espera 500ms y luego comienza a recibir todos los
-mensajes que están esperando. Tracea todo lo que recibas. ¿Importa que no
-estuvieras recibiendo notificaciones cuando el hijo terminó?</li>
-</ul>
-
-
-<p><strong>Resultados</strong></p>
-
-<p>No recibe ningún mensaje, el hijo termina, terminando al padre durante la
-espera.</p>
-
-<ul>
-<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-07/exercise-04-round-07.exs">exercise-04-round-07.exs</a>: repite el ejercicio anterior, pero en lugar de
-terminar con <code>exit</code>, que el hijo lance una excepción. ¿qué diferencia notas?</li>
-</ul>
-
-
-<p><strong>Resultados</strong></p>
-
-<p>No hay mucha difrencia. El padre sigue terminando, sin escuchar ningún mensaje.
-Al menos, la excepción aparece por consola, mostrándose un error diciendo que
-el proceso hijo (con su PID) ha lanzado una excepción. En el ejercicio
-anterior, solamente aparecía que el proceso padre terminaba, nada más.</p>
-
-<p>Usando <code>Process.flag(:trap_exit, true)</code>, el proceso padre recibe mensajes:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ elixir -r exercise-03-round-07.exs -e "Exercise3.run"
-</span><span class='line'>Parent's PID #PID&lt;0.48.0&gt;
-</span><span class='line'>PID's child #PID&lt;0.53.0&gt;
-</span><span class='line'>Received: "Hello!"
-</span><span class='line'>Received: {:EXIT, #PID&lt;0.53.0&gt;, :boom}
-</span><span class='line'>
-</span><span class='line'>$ elixir -r exercise-04-round-07.exs -e "Exercise4.run"
-</span><span class='line'>Parent's PID #PID&lt;0.48.0&gt;
-</span><span class='line'>Child's PID #PID&lt;0.53.0&gt;
-</span><span class='line'>
-</span><span class='line'>22:46:14.313 [error] Process #PID&lt;0.53.0&gt; raised an exception
-</span><span class='line'>** (RuntimeError) Child finished
-</span><span class='line'>    exercise-04-round-07.exs:19: Exercise4.child/1
-</span><span class='line'>Received: "Hello!"
-</span><span class='line'>Received: {:EXIT, #PID&lt;0.53.0&gt;, %{RuntimeError{message: "Child finished"},
-</span><span class='line'>[{Exercise4, :child, 1, [file: 'exercise-04-round-07.exs', line: 19]}]}}</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Las diferencias están en lo recibido en el mensaje de terminación del hijo. En
-caso de <code>exit</code> se recibe <code>:EXIT</code>, un PID, y la causa de la salida. En el caso
-de la excepción: <code>:EXIT</code>, un PID y la excepción, parece, porque tiene pinta de
-pila de llamadas, con su módulo, función, parámetros,&#8230;</p>
-
-<ul>
-<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-07/exercise-05-round-07.exs">exercise-05-round-07.exs</a>: repetir el ejercicio pero con <code>spawn_monitor</code>.</li>
-</ul>
-
-
-<p><strong>Resultados</strong></p>
-
-<p>No creo que lo esté haciendo bien. Se supone que monitorizando la comunicación
-no es bidireccional, pero el padre recibe el mensaje que envía el hijo, así
-como el mensaje que se envía al terminar o lanzar la excepción. La única
-diferencia visible es que en lugar de recibir solamente un PID, se recibe un
-PID y la referencia de monitorización.</p>
-
-<ul>
-<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-07/exercise-06-round-07.exs">exercise-06-round-07.exs</a>: escribir una función implementando <em>pararell
-map</em>, que es como una función <code>map</code> pero cada elemento es procesado por un
-proceso distinto. Preguntas: ¿por qué es necesario guardar en la variable <code>me</code>
-el PID del proceso padre? Se debe utilizar <code>^pid</code> para recibir los resultados
-en orden, pero&#8230; ¿qué pasa si se utiliza <code>_pid</code>? ¿cómo hacer para que falle:
-esperas, aumentar número elementos, que la función que procesa cada elemento
-sea más complicada,&#8230;?</li>
-</ul>
-
-
-<p><strong>Resultados</strong></p>
-
-<p>Aumentando el número de elementos afecta al orden en el que se reciben los
-mensajes. También he conseguido recibir mensajes en orden distinto con el
-siguiente código:</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Parallel.pmap 1..10, fn (i) -&gt;
-</span><span class='line'>  # la espera es más corta según el elemento `i` se va a haciendo mayor
-</span><span class='line'>  wait_up_to = round(10 / i)
-</span><span class='line'>  :timer.sleep(wait_up_to)
-</span><span class='line'>  i
-</span><span class='line'>end
-</span><span class='line'>  #=&gt; [ 7, 8, 9, 10, 5, 6, 3, 4, 2, 1 ]</span></code></pre></td></tr></table></div></figure>
-
-
-<p>Volviendo a poner <code>^pid</code> el orden vuelve a ser correcto.</p>
-
-<ul>
-<li><a href="https://github.com/rchavarria/learning-elixir/blob/master/code/round-07/exercise-07-round-07.exs">exercise-07-round-07.exs</a>: toma como referencia un planificador (servidor de
-Fibonacci) de un ejercicio del libro y crea otro similar. Esta vez, se deben
-contar las apariciones de la palabra <code>cat</code> en cada fichero que se encuentre en
-un directorio dado. Cada fichero será procesado por un proceso distinto.
-¿Podrías escribir el planificador de una forma más genérica?</li>
-</ul>
-
-
-<h2>Enseñar lo aprendido, y repetir desde el paso 7</h2>
-
-<p>Aquí está, este post, mis notas, mis pensamientos, mis dudas y mi código. Hasta
-el siguiente asalto.</p>
 ]]></content>
   </entry>
   
