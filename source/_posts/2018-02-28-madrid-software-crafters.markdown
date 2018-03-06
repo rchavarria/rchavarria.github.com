@@ -1,4 +1,16 @@
-# Madrid Software Crafters 2018
+---
+layout: post
+title: "Madrid Software Crafters 2018"
+date: 2018-03-06 21:34
+author: Ruben Chavarria
+comments: true
+categories: 
+- personal
+- conferences
+published: true
+footer: false
+sidebar: true
+---
 
 En este post dejo las notas que tomé en el Open Space [Madrid Software Crafters](http://madswcraft.com/). La verdad es que tenía ganas de que se celebrara un evento así por Madrid. La distancia y sobretodo la pereza, me pueden, y todavía no me he decidido a asistir a eventos similares que se celebran en Barcelona o Pamplona.
 
@@ -8,7 +20,7 @@ El día fue espectacular, no tanto por las charlas, pero sí por las personas co
 
 <!-- more -->
 
-## Sesiones
+Y ahí van las notas de cada sesión:
 
 ### Estrategias de *decoupling* en *legacy code*, con Rony Ancorini y Toño de la Torre
 
@@ -45,7 +57,7 @@ Subscripciones de la librería [re-frame](https://github.com/Day8/re-frame) (lib
 
 Juraría que Manuel recomendó una charla, con un título parecido a *Arquitecturas front unidireccionales*, relacionada con Cycle.js, pero sólo soy capaz de encontrar el artículo [Unidirectional user interface architectures](https://staltz.com/unidirectional-user-interface-architectures.html) de André Staltz. No hay nada como preguntar, Manuel me pasó las slides y encontré el enlace a la charla: [Unidirectional data flow architectures](https://vimeo.com/168652278).
 
-### Guarda tu ego en el cajón, con Alberto aka APA42
+### Guarda tu ego en el cajón, con Alberto (aka APA42)
 
 Bueno, a ésta llegué realmente tarde, y con un buen debate bastante avanzado, así que tampoco pude aprovercharlo tanto como me hubiera gustado. Aún así, me quedo con dos cosas:
 
@@ -61,7 +73,7 @@ Parece que no atendí a muchas charlas, y así es. Bueno, el taller abarcaba var
 - Interaction Driven Design, de Sandro Mancuso
 - PSR7 y PSR15, ¿de qué van? ¿cuántos PSRs hay?
 - ¿Qué fuente usó Eduardo Ferro en las slides de su taller? [Sniglet](https://fonts.google.com/specimen/Sniglet)
-- En las slides de Manuel Rivero ha un enlace a una app para aprender gramática (spelling). ¿Interesante para Einar?
+- En las slides de Manuel Rivero hay un enlace a una app para aprender gramática (spelling). ¿Interesante para Einar?
 - Relacionada con Cycle.js, charla [Unidirectional data flow architectures](https://vimeo.com/168652278)
 - Método Suzuki, para comunicarse, convencer al otro, psicología,...
 - [The core protocols: a guide to greatness](https://www.amazon.es/Core-Protocols-Guide-Greatness/dp/0692381082), de Richard Kasperowski
@@ -70,7 +82,7 @@ Parece que no atendí a muchas charlas, y así es. Bueno, el taller abarcaba var
 
 - [Notas sobre el Open Space](https://github.com/SoftwareCraftersMadrid/resumen-madswcraft18) en el GitHub de SW Crafters Madrid
 - [Slides del taller sobre Parallel Changes](http://www.eferro.net/2018/02/slides-taller-parallel-changes-software.html), de Eduardo Ferro
-- [Slides sobre la charla de effects y co-effects](https://drive.google.com/file/d/1VtVziPtOvI68AQiMcq5nq2YGO1YI_x4D/view)
+- [Slides sobre la charla de effects y co-effects](https://drive.google.com/file/d/1VtVziPtOvI68AQiMcq5nq2YGO1YI_x4D/view), de Manuel Rivero
 
 ## Personas
 
