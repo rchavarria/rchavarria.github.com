@@ -18,6 +18,12 @@ El día fue espectacular, no tanto por las charlas, pero sí por las personas co
 
 {% img center /images/2018/madswcraft.jpg %}
 
+<div style="text-align: center">
+  <span style="font-size: 60%">
+    <a href="https://twitter.com/madswcraft/status/967447494526488576">Imagen</a> reproducida con perimso de <a href="https://twitter.com/HelderDOliveira">Helder de Oliveira</a>, autor de la misma. Gracias!!
+  </span>
+</div>
+
 <!-- more -->
 
 Y ahí van las notas de cada sesión:
