@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Programación reactiva con RxJS: comparando arrays con Observables"
-date: 2018-03-01 22:22
+date: 2018-03-01 20:20
 author: Ruben Chavarria
 comments: true
 categories: 
@@ -16,7 +16,7 @@ En el cuadrante del [artículo anterior] vimos cómo los *Observables* podrían 
 
 Los arrays son síncronos, y por lo tanto, se iteran síncronamente. En cambio, los Observables son *observados* (bienvenido Capitán Obvio) y *reaccionan* en cuanto hay un nuevo valor presente en el flujo asíncrono.
 
-IMAGEN SOBRE UN OBSERVABLE¿?¿?¿??¿¿
+{% img center /images/2018/bees.jpb %}
 
 <!-- more -->
 
