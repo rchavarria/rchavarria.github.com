@@ -37,6 +37,12 @@ Observable.from([ 1, 2, 3 ])
     .subscribe(i => console.log(i));
 ```
 
+<div style="text-align: center">
+  <span style="font-size: 60%">
+    Hay una versión ejecutable de este código en GitHub, en el fichero <a href="https://github.com/rchavarria/reactive-programming-rxjs/blob/master/02-arrays-vs-observables/01-array-vs-observable.js">01-array-vs-observable.js</a>
+  </span>
+</div>
+
 En este primer ejemplo la diferencia no es muy grande. Incluso la función pasada a `forEach` y a `subscribe` podría ser la misma. Más adelante veremos mayores diferencias.
 
 Como vemos, con `Observable.from` podemos crear un `Observable` a partir de un array. Pero también podemos crearlos a partir de otras fuentes, por ejemplo, a partir de eventos generados por el usuario o generados programáticamente, pero para este ejemplo, `.from` nos puede servir.
@@ -56,6 +62,12 @@ Observable.from([ 1, 2, 3, ])
     );
 ```
 
+<div style="text-align: center">
+  <span style="font-size: 60%">
+    Hay una versión ejecutable de este código en GitHub, en el fichero <a href="https://github.com/rchavarria/reactive-programming-rxjs/blob/master/02-arrays-vs-observables/02-next-error-complete.js">02-next-error-complete.js</a>
+  </span>
+</div>
+
 3. En lugar de pasar las tres funciones, podemos pasar un objeto que implemente al menos tres funciones con los nombres anteriormente vistos. En este caso, estaríamos *implementando* el interfaz `Observer` (en caso de que se pudieran escribir o implementar interfaces en JavaScript).
 
 ```
@@ -68,6 +80,12 @@ const myObserver = {
 Observable.from([ 1, 2, 3, ])
     .subscribe(myObserver);
 ```
+
+<div style="text-align: center">
+  <span style="font-size: 60%">
+    Hay una versión ejecutable de este código en GitHub, en el fichero <a href="https://github.com/rchavarria/reactive-programming-rxjs/blob/master/02-arrays-vs-observables/03-first-observer.js">03-first-observer.js</a>
+  </span>
+</div>
 
 En este artículo hemos visto lo parecido que es consumir un `Observable` a consumir un `array`, al menos en el uso más básico. Pero hemos empezado a ver alguna diferencia.
 
