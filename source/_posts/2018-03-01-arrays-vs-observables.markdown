@@ -28,7 +28,6 @@ Imagen basada en <a href="https://flic.kr/p/JXSQNN">Bees</a> de <a href="https:/
 
 A mancharnos las manos con código, que es a lo que hemos venido. Comparemos cómo iterar un array y un flujo (por ahora síncrono, no abandones todavía) de elementos observables.
 
-ESCRIBIR ESTE CÓDIGO EN EL REPO DE GITHUB PARA HACERLO "EJECUTABLE"
 ```
 // array
 [ 1, 2, 3 ].forEach(i => console.log(i));
@@ -61,9 +60,9 @@ Observable.from([ 1, 2, 3, ])
 
 ```
 const myObserver = {
-    (item) => console.log('`next` processes:', item),
-    (e) => console.error('`error` receives:', e),
-    () => console.log('Completed!')
+    next: (item) => console.log('`next` processes:', item),
+    error: (e) => console.error('`error` receives:', e),
+    complete: () => console.log('Completed!')
 };
 
 Observable.from([ 1, 2, 3, ])
@@ -72,11 +71,15 @@ Observable.from([ 1, 2, 3, ])
 
 En este artículo hemos visto lo parecido que es consumir un `Observable` a consumir un `array`, al menos en el uso más básico. Pero hemos empezado a ver alguna diferencia.
 
-En la siguiente entrega veremos cómo podemos tomar un mayor control sobre cuándo se llama a `error` y `completed`. También veremos la equivalencia de esos métodos en la consumición de los arrays.
+En la siguiente entrega veremos cómo podemos tomar un mayor control sobre cuándo se llama a `error` y `completed`. También veremos la equivalencia de esos métodos en la iteración de los arrays.
 
 ## Referencias
 
-- ReactiveX
-- Observable
-- Observer
+- [ReactiveX]
+- [Observable] object
+- [Observer] interface
 
+[artículo anterior]: /blog/2017/12/12/programacion-reactiva-javascript/
+[ReactiveX]: http://reactivex.io/
+[Observable]: http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html
+[Observer]: http://reactivex.io/rxjs/class/es6/MiscJSDoc.js~ObserverDoc.html
