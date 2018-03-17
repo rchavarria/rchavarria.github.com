@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: reactivex | R. Chavarria's Blog]]></title>
+  <link href="http://rchavarria.github.io/blog/categories/reactivex/atom.xml" rel="self"/>
+  <link href="http://rchavarria.github.io/"/>
+  <updated>2018-03-17T14:39:45+01:00</updated>
+  <id>http://rchavarria.github.io/</id>
+  <author>
+    <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Programación reactiva con RxJS: comparando arrays con Observables]]></title>
+    <link href="http://rchavarria.github.io/blog/2018/03/01/arrays-vs-observables/"/>
+    <updated>2018-03-01T20:20:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2018/03/01/arrays-vs-observables</id>
+    <content type="html"><![CDATA[<p>En el cuadrante del <a href="/blog/2017/12/12/programacion-reactiva-javascript/">artículo anterior</a> vimos cómo los <em>Observables</em> podrían
+verse como arrays asíncronos.</p>
+
+<p>Los arrays son síncronos, y por lo tanto, se iteran síncronamente. En cambio,
+los Observables son <em>observados</em> (bienvenido Capitán Obvio) y <em>reaccionan</em> en
+cuanto hay un nuevo valor presente en el flujo asíncrono.</p>
+
+<p><img class="center" src="/images/2018/bees.jpg"></p>
+
+<div style="text-align: center">
+  <span style="font-size: 60%">
+Imagen basada en <a href="https://flic.kr/p/JXSQNN">Bees</a> de <a href="https://www.flickr.com/photos/kbphoto/">Keith</a>, <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/">CC BY-NC-ND 2.0</a>
+  </span>
+</div>
+
+
+
+
+<!-- more -->
+
+
+<p>A mancharnos las manos con código, que es a lo que hemos venido. Comparemos
+cómo iterar un array y un flujo (por ahora síncrono, no abandones todavía) de
+elementos observables.</p>
+
+<p>```
+// array
+[ 1, 2, 3 ].forEach(i => console.log(i));
+// salida:
+// 1
+// 2
+// 3</p>
+
+<p>// observable
+Observable.from([ 1, 2, 3 ])</p>
+
+<pre><code>.subscribe(i =&gt; console.log(i));
+</code></pre>
+
+<p>// salida:
+// 1
+// 2
+// 3
+```</p>
+
+<div style="text-align: center">
+  <span style="font-size: 60%">
+    Hay una versión ejecutable de este código en GitHub, en el fichero <a href="https://github.com/rchavarria/reactive-programming-rxjs/blob/master/02-arrays-vs-observables/01-array-vs-observable.js">01-array-vs-observable.js</a>
+  </span>
+</div>
+
+
+<p>En este primer ejemplo la diferencia no es muy grande. Incluso la función
+pasada a <code>forEach</code> y a <code>subscribe</code> podría ser la misma. Más adelante veremos
+mayores diferencias.</p>
+
+<p>Como vemos, con <code>Observable.from</code> podemos crear un <code>Observable</code> a partir de un
+array. Pero también podemos crearlos a partir de otras fuentes, por ejemplo, a
+partir de eventos generados por el usuario o generados programáticamente, pero
+para este ejemplo, <code>.from</code> nos puede servir.</p>
+
+<p>Para procesar los elementos del flujo, debemos pasar una función a <code>subscribe</code>.
+En realidad, <code>subscribe</code> admite los siguientes usos:</p>
+
+<p>1-. El más sencillo, el paso de una función, conocida como <code>next</code>, que será
+llamada una vez por cada elemento del flujo. La función <code>next</code> admite recibe
+dicho elemento como primer parámetro</p>
+
+<p>2-. Pasar tres funciones: <code>next</code>, <code>error</code> y <code>completed</code>. Ya conocemos el uso de
+<code>next</code>, <code>error</code> es autoexplicativo, y <code>completed</code> es llamada cuando ya no hay
+más elementos en el flujo.</p>
+
+<p>```
+Observable.from([ 1, 2, 3, ])</p>
+
+<pre><code>.subscribe(
+    (item) =&gt; console.log('`next` processes:', item),
+    (e) =&gt; console.error('`error` receives:', e),
+    () =&gt; console.log('Completed!')
+);
+</code></pre>
+
+<p>// salida:
+// <code>next</code> processes: 1
+// <code>next</code> processes: 2
+// <code>next</code> processes: 3
+// Completed!
+```</p>
+
+<div style="text-align: center">
+  <span style="font-size: 60%">
+    Hay una versión ejecutable de este código en GitHub, en el fichero <a href="https://github.com/rchavarria/reactive-programming-rxjs/blob/master/02-arrays-vs-observables/02-next-error-complete.js">02-next-error-complete.js</a>
+  </span>
+</div>
+
+
+<p>3-. En lugar de pasar las tres funciones, podemos pasar un objeto que
+implemente al menos tres funciones con los nombres anteriormente vistos. En
+este caso, estaríamos <em>implementando</em> el interfaz <code>Observer</code> (en caso de que se
+pudieran escribir o implementar interfaces en JavaScript).</p>
+
+<p>```
+const myObserver = {</p>
+
+<pre><code>next: (item) =&gt; console.log('`next` processes:', item),
+error: (e) =&gt; console.error('`error` receives:', e),
+complete: () =&gt; console.log('Completed!')
+</code></pre>
+
+<p>};</p>
+
+<p>Observable.from([ 1, 2, 3, ])</p>
+
+<pre><code>.subscribe(myObserver);
+</code></pre>
+
+<p>// salida:
+// <code>next</code> processes: 1
+// <code>next</code> processes: 2
+// <code>next</code> processes: 3
+// Completed!
+```</p>
+
+<div style="text-align: center">
+  <span style="font-size: 60%">
+    Hay una versión ejecutable de este código en GitHub, en el fichero <a href="https://github.com/rchavarria/reactive-programming-rxjs/blob/master/02-arrays-vs-observables/03-first-observer.js">03-first-observer.js</a>
+  </span>
+</div>
+
+
+<p>En este artículo hemos visto lo parecido que es consumir un <code>Observable</code> a
+consumir un <code>array</code>, al menos en el uso más básico. Pero hemos empezado a ver
+alguna diferencia.</p>
+
+<p>En la siguiente entrega veremos cómo podemos tomar un mayor control sobre
+cuándo se llama a <code>error</code> y <code>completed</code>. También veremos la equivalencia de
+esos métodos en la iteración de los arrays.</p>
+
+<h2>Referencias</h2>
+
+<ul>
+<li><a href="http://reactivex.io/">ReactiveX</a></li>
+<li><a href="http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html">Observable</a> object</li>
+<li><a href="http://reactivex.io/rxjs/class/es6/MiscJSDoc.js~ObserverDoc.html">Observer</a> interface</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

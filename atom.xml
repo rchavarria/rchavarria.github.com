@@ -4,7 +4,7 @@
   <title><![CDATA[R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2018-03-06T22:26:42+01:00</updated>
+  <updated>2018-03-17T14:39:45+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -111,6 +111,193 @@
 <h2>Personas</h2>
 
 <p>Todos estos eventos van de personas, de ver a compañeros de profesión, viejos (o no tan viejos) amigos, y de crear nuevas relaciones. Ahí van unas cuantas personas con las que me encontré (perdón, no me acuerdo de todas), sin ningún orden en particular: <a href="https://twitter.com/trikitrok">Manuel Rivero</a>, <a href="https://twitter.com/RonnyAncorini">Ronny Ancorini</a>, <a href="https://twitter.com/adelatorrefoss">Toño de la Torre</a>, <a href="https://twitter.com/eferro">Eduardo Ferro</a>, <a href="https://twitter.com/msanjuan">Modesto San Juan</a>, <a href="https://twitter.com/amisai">Abel</a>, <a href="https://twitter.com/jeslopcru">Jesús</a>, <a href="https://twitter.com/rubendm23">Rubén</a>, <a href="https://twitter.com/juandvegarguez">Juan David</a>, <a href="https://twitter.com/APA42">Alberto</a>, <a href="https://twitter.com/RaulVillaresBg">Raúl Villares</a>, <a href="https://twitter.com/HelderDOliveira">Helder de Oliveira</a>,&#8230; (arg, maldita memoria)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Programación reactiva con RxJS: comparando arrays con Observables]]></title>
+    <link href="http://rchavarria.github.io/blog/2018/03/01/arrays-vs-observables/"/>
+    <updated>2018-03-01T20:20:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2018/03/01/arrays-vs-observables</id>
+    <content type="html"><![CDATA[<p>En el cuadrante del <a href="http://rchavarria.github.io/blog/2017/12/12/programacion-reactiva-javascript/">artículo anterior</a> vimos cómo los <em>Observables</em> podrían
+verse como arrays asíncronos.</p>
+
+<p>Los arrays son síncronos, y por lo tanto, se iteran síncronamente. En cambio,
+los Observables son <em>observados</em> (bienvenido Capitán Obvio) y <em>reaccionan</em> en
+cuanto hay un nuevo valor presente en el flujo asíncrono.</p>
+
+<p><img class="center" src="http://rchavarria.github.io/images/2018/bees.jpg"></p>
+
+<div style="text-align: center">
+  <span style="font-size: 60%">
+Imagen basada en <a href="https://flic.kr/p/JXSQNN">Bees</a> de <a href="https://www.flickr.com/photos/kbphoto/">Keith</a>, <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/">CC BY-NC-ND 2.0</a>
+  </span>
+</div>
+
+
+
+
+<!-- more -->
+
+
+<p>A mancharnos las manos con código, que es a lo que hemos venido. Comparemos
+cómo iterar un array y un flujo (por ahora síncrono, no abandones todavía) de
+elementos observables.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>// array
+</span><span class='line'>[ 1, 2, 3 ].forEach(i =&gt; console.log(i));
+</span><span class='line'>// salida:
+</span><span class='line'>// 1
+</span><span class='line'>// 2
+</span><span class='line'>// 3
+</span><span class='line'>
+</span><span class='line'>// observable
+</span><span class='line'>Observable.from([ 1, 2, 3 ])
+</span><span class='line'>    .subscribe(i =&gt; console.log(i));
+</span><span class='line'>// salida:
+</span><span class='line'>// 1
+</span><span class='line'>// 2
+</span><span class='line'>// 3</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<div style="text-align: center">
+  <span style="font-size: 60%">
+    Hay una versión ejecutable de este código en GitHub, en el fichero <a href="https://github.com/rchavarria/reactive-programming-rxjs/blob/master/02-arrays-vs-observables/01-array-vs-observable.js">01-array-vs-observable.js</a>
+  </span>
+</div>
+
+
+<p>En este primer ejemplo la diferencia no es muy grande. Incluso la función
+pasada a <code>forEach</code> y a <code>subscribe</code> podría ser la misma. Más adelante veremos
+mayores diferencias.</p>
+
+<p>Como vemos, con <code>Observable.from</code> podemos crear un <code>Observable</code> a partir de un
+array. Pero también podemos crearlos a partir de otras fuentes, por ejemplo, a
+partir de eventos generados por el usuario o generados programáticamente, pero
+para este ejemplo, <code>.from</code> nos puede servir.</p>
+
+<p>Para procesar los elementos del flujo, debemos pasar una función a <code>subscribe</code>.
+En realidad, <code>subscribe</code> admite los siguientes usos:</p>
+
+<p>1-. El más sencillo, el paso de una función, conocida como <code>next</code>, que será
+llamada una vez por cada elemento del flujo. La función <code>next</code> admite recibe
+dicho elemento como primer parámetro</p>
+
+<p>2-. Pasar tres funciones: <code>next</code>, <code>error</code> y <code>completed</code>. Ya conocemos el uso de
+<code>next</code>, <code>error</code> es autoexplicativo, y <code>completed</code> es llamada cuando ya no hay
+más elementos en el flujo.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Observable.from([ 1, 2, 3, ])
+</span><span class='line'>    .subscribe(
+</span><span class='line'>        (item) =&gt; console.log('`next` processes:', item),
+</span><span class='line'>        (e) =&gt; console.error('`error` receives:', e),
+</span><span class='line'>        () =&gt; console.log('Completed!')
+</span><span class='line'>    );
+</span><span class='line'>
+</span><span class='line'>// salida:
+</span><span class='line'>// `next` processes: 1
+</span><span class='line'>// `next` processes: 2
+</span><span class='line'>// `next` processes: 3
+</span><span class='line'>// Completed!</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<div style="text-align: center">
+  <span style="font-size: 60%">
+    Hay una versión ejecutable de este código en GitHub, en el fichero <a href="https://github.com/rchavarria/reactive-programming-rxjs/blob/master/02-arrays-vs-observables/02-next-error-complete.js">02-next-error-complete.js</a>
+  </span>
+</div>
+
+
+<p>3-. En lugar de pasar las tres funciones, podemos pasar un objeto que
+implemente al menos tres funciones con los nombres anteriormente vistos. En
+este caso, estaríamos <em>implementando</em> el interfaz <code>Observer</code> (en caso de que se
+pudieran escribir o implementar interfaces en JavaScript).</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>const myObserver = {
+</span><span class='line'>    next: (item) =&gt; console.log('`next` processes:', item),
+</span><span class='line'>    error: (e) =&gt; console.error('`error` receives:', e),
+</span><span class='line'>    complete: () =&gt; console.log('Completed!')
+</span><span class='line'>};
+</span><span class='line'>
+</span><span class='line'>Observable.from([ 1, 2, 3, ])
+</span><span class='line'>    .subscribe(myObserver);
+</span><span class='line'>
+</span><span class='line'>// salida:
+</span><span class='line'>// `next` processes: 1
+</span><span class='line'>// `next` processes: 2
+</span><span class='line'>// `next` processes: 3
+</span><span class='line'>// Completed!</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<div style="text-align: center">
+  <span style="font-size: 60%">
+    Hay una versión ejecutable de este código en GitHub, en el fichero <a href="https://github.com/rchavarria/reactive-programming-rxjs/blob/master/02-arrays-vs-observables/03-first-observer.js">03-first-observer.js</a>
+  </span>
+</div>
+
+
+<p>En este artículo hemos visto lo parecido que es consumir un <code>Observable</code> a
+consumir un <code>array</code>, al menos en el uso más básico. Pero hemos empezado a ver
+alguna diferencia.</p>
+
+<p>En la siguiente entrega veremos cómo podemos tomar un mayor control sobre
+cuándo se llama a <code>error</code> y <code>completed</code>. También veremos la equivalencia de
+esos métodos en la iteración de los arrays.</p>
+
+<h2>Referencias</h2>
+
+<ul>
+<li><a href="http://reactivex.io/">ReactiveX</a></li>
+<li><a href="http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html">Observable</a> object</li>
+<li><a href="http://reactivex.io/rxjs/class/es6/MiscJSDoc.js~ObserverDoc.html">Observer</a> interface</li>
+</ul>
+
 ]]></content>
   </entry>
   
@@ -2830,100 +3017,6 @@ cervezas.</li>
 <li><a href="https://github.com/athiele/key-promoter-fork">Key promoter</a>. El enlace es un fork de un plugin que parece descontinuado:
 <a href="https://plugins.jetbrains.com/plugin/4455">Key promoter plugin</a>.</li>
 <li>Github de <a href="https://github.com/SoftwareCraftsmanshipMadrid/global-day-of-coderetreat-2016">Software Craftmanship Madrid</a>.</li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Zen y el arte en el mantenimiento de motocicletas]]></title>
-    <link href="http://rchavarria.github.io/blog/2016/09/18/zen-arte-mantenimiento-motocicletas/"/>
-    <updated>2016-09-18T16:56:00+02:00</updated>
-    <id>http://rchavarria.github.io/blog/2016/09/18/zen-arte-mantenimiento-motocicletas</id>
-    <content type="html"><![CDATA[<h6>de Robert M. Pirsig</h6>
-
-<p><img class="left" src="https://raw.githubusercontent.com/rchavarria/blog-post-incubator/master/published-book-notes/img/zen.jpg"></p>
-
-<h3>Por qué lo he leído</h3>
-
-<p>El título no es que sea muy llamativo, parece más un libro sobre filosofía (con
-un subtítulo un poco extraño eso sí). Pero estaba recomendado por Mattias
-(<a href="https://twitter.com/mpjme">@mpjme</a>) en el capítulo 18 de
-<a href="https://www.youtube.com/watch?v=lrf6xuFq1Ms&amp;t=90">FunFunFunction</a>, su <em>canal</em>
-de YouTube, y no era la primera vez que oía hablar de
-<a href="https://www.amazon.es/Arte-Mantenimiento-Motocicleta-Narrativa-Sexto/dp/8415601956/">Zen y el arte en el mantenimiento de motocicletas</a>.</p>
-
-<p>Así que&#8230; si recibes varias referencias de un libro por distintas personas y
-en distintas ocasiones, es que puede ser un libro interesante.</p>
-
-<!-- more -->
-
-
-<h3>De qué trata el libro</h3>
-
-<p>Me esperaba una historia, una novela, que sirviera de hilo conductor para que
-el autor fuera exponiendo una serie de consejos sobre la vida en general y
-sobre cómo mantener las cosas materiales en esta vida, ya fueran motocicletas,
-ordenadores,&#8230; cualquier cosa. De echo, las personas que hablaban del libro
-decían que varias ideas eran bastante trasladables al área del desarrollo del
-software.</p>
-
-<p>Y sí, en parte el libro va de eso. Cuenta una historia, un viaje de un padre y
-su hijo, en busca de algo, o alguien. Y durante el viaje, el autor cuenta
-multitud de historias de <em>abuelo cebolleta</em>.</p>
-
-<h3>Conclusiones y valoración</h3>
-
-<p>El libro está lleno de historias interesantes, e incluso divertidas. Hay
-multitud de consejos sobre la vida, y en general estoy muy de acuerdo con
-ellos. Me gusta cuidar las cosas, me gusta disfrutar de ellas. Cojo cariño a
-mis máquinas, me acostumbro a ellas, tiendo a aceptarlas como son, con sus
-deficiencias. Me siento muy identificado con muchos aspectos de los que habla
-el protagonista.</p>
-
-<p>Pero el libro no ha calado en mi. ¿El inglés? ¿Muchas historias? ¿La filosofía
-detrás de ellas? No sé, pero no he podido terminarlo.</p>
-
-<p>Podría recomendar el libro a gente joven, que tiene toda una vida por delante,
-para que aprendiera a disfrutar de las cosas sencillas de la vida. Podría
-recomendárselo a gente no tan joven, para que aprendiera lo mismo (nunca es
-tarde). Pero tendría que advertirles que tiene un componente muy filosófico, y
-que al menos a mí, creo que es lo que me ha hechado hacia atrás a la hora de
-terminarlo. No diría que el libro es malo, simplemente que no ha suscitado el
-interés suficiente en mí.</p>
-
-<h3>Frases que me gustaría recordar</h3>
-
-<blockquote><p>Diferencias entre <em>pensamiento clásico</em> (o científico, basado en hechos, con el
-que me siento más identificado) y el <em>pensamiento romático</em> (más idílico, más
-centrado en la belleza, más artístico)</p></blockquote>
-
-<!-- -->
-
-
-<blockquote><p>Cada motocicleta (o máquina) tiene su personalidad propia y única. Según vas
-manteniendo las cosas, vas cogiéndoles cariño, las vas haciendo tuyas según va
-pasando el tiempo, las vas conociendo.</p></blockquote>
-
-<p>Varios pasos a la hora de hacer un análisis lógico:</p>
-
-<ol>
-<li>Describir el problema</li>
-<li>Describir diferentes hipótesis que describan el problema</li>
-<li>Crear experimentos para testear cada una de las hipótesis</li>
-<li>Predecir los resultados de los experimentos</li>
-<li>Anotar los resultados obtenidos de los experimentos</li>
-<li>Realizar conclusiones a partir de los resultados de los experimentos</li>
-</ol>
-
-
-<h3>Recursos relacionados</h3>
-
-<ul>
-<li>Mis <a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/zen-and-the-art-of-motorcycle-maintenance-by-robert-m-pirsig.markdown">notas sobre Zen y el arte en el mantenimiento de motocicletas</a></li>
-<li>El libro <a href="https://www.amazon.es/Arte-Mantenimiento-Motocicleta-Narrativa-Sexto/dp/8415601956/">Zen y el arte en el mantenimiento de motocicletas</a> en Amazon</li>
-<li><a href="https://twitter.com/mpjme">Mattias P. Johansson</a> en twitter</li>
-<li><a href="https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q">Canal de YouTube FunFunFunction</a></li>
 </ul>
 
 ]]></content>
