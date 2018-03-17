@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Programación reactiva con RxJS: comparando arrays con Observables"
-date: 2018-03-01 20:20
+date: 2018-03-16 14:00
 author: Ruben Chavarria
 comments: true
 categories: 
