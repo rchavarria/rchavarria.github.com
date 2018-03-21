@@ -27,8 +27,16 @@ Así que aquí está mi Lista de Lectura:
 
 ## Tengo pensado leer
 
+- [Human Vs Computers](https://leanpub.com/humansvscomputers/), de [Gojko Adzic](https://gojko.net/), lo consegúi porque Gojko publicó una encuesta y si la hacías te regalaba el libro. Qué mejor campaña publicitaria que regalar el libro.
+- [Educación financiera avanzada partiendo de cero](https://www.amazon.es/Educaci%C3%B3n-Financiera-partiendo-gestionar-transformar-ebook/dp/B00COMQOM0/), de Gregorio Hernández, recomendado por un usuario en el Telegram de ZetaMoney. Parece algo básico, pero podría estar bien hacer una lectura rápida. Algo sacaré
 - [Refactoring for Software Design Smells](https://www.amazon.co.uk/Refactoring-Software-Design-Smells-Technical/dp/0128013974/), de Girish Suryanarayana, Ganesh Samarthyam y Tushar Sharma, me recuerda mucho a los libros de Sandi Metz (refactorizaiones y demás)
-- [Educación financiera avanzada partiendo de cero](https://www.amazon.es/Educaci%C3%B3n-Financiera-partiendo-gestionar-transformar-ebook/dp/B00COMQOM0/), de Gregorio Hernández, recomendado por un usuario en el Telegram de ZetaMoney
+- [Cómo invertir en bolsa a largo plazo, partiendo de 0](http://www.invertirenbolsa.info/Tienda-de-Invertirenbolsa.info/tienda.html), de Gregorio Hernández. Recomendado por varios ZetaMoneys, uno de ellos, el flipao que está estudiando la bolsa a tope (y que habla de hacer un 12% anual con opciones y futuros), publicó un resumen
+- [Mas cosas sobre la bolsa](http://www.invertirenbolsa.info/Tienda-de-Invertirenbolsa.info/tienda.html), de Gregorio Hernández, supongo que seá la parte 2 del libro 2.
+- [Analisis técnico y velas japonesas....](http://www.invertirenbolsa.info/Tienda-de-Invertirenbolsa.info/tienda.html), de Gregorio Hernández, hmmm, sabidurida
+- [Opciones y futuros](http://www.invertirenbolsa.info/Tienda-de-Invertirenbolsa.info/tienda.html), de Gregorio Hernández, aquí llega la chicha
+- [Ejercicios de opciones y futuros](http://www.invertirenbolsa.info/Tienda-de-Invertirenbolsa.info/tienda.html), de Gregorio Hernández, 
+- [Pensiones públicas](http://www.invertirenbolsa.info/Tienda-de-Invertirenbolsa.info/tienda.html), de Gregorio Hernández, hmm, ya empieza a oler la lista, no creo que este me interse mucho
+- [Conoce la bolsa, y deja de tenerle miedo](http://www.invertirenbolsa.info/Tienda-de-Invertirenbolsa.info/tienda.html), de Gregorio Hernández, publi total, es una recopilación de artículos del blog
 - [Release it](https://pragprog.com/book/mnee2/release-it-second-edition), de Michael Nygard
 - [Barking Up the Wrong Tree](https://www.amazon.es/Barking-Wrong-Tree-Surprising-Everything-ebook/dp/B01KT104RI/), de Erik Barker, recomendado por [Zetatesters](http://zetatesters.com/) y creo recordar que también por Tim Ferris
 - [Competitive engineering](https://www.amazon.com/Competitive-Engineering-Handbook-Requirements-Planguage/dp/0750665076/), y [Principles of Software Engineering management](https://www.amazon.com/Principles-Software-Engineering-Management-Gilb/dp/0201192462/), ambos de Tom Gilb, recomendados en Developer on fire. Me pueden servir para tener un punto de vista ingenieril del desarrollo de software, que últimamente me está faltando mucho esa visión
@@ -38,6 +46,8 @@ Así que aquí está mi Lista de Lectura:
 - [Code Complete](http://www.stevemcconnell.com/cc.htm), de Steve McConnell, recomendado por John Sonmez en uno de sus [vídeos](https://www.youtube.com/watch?v=aG5ks3de_wQ) y en varios episodios del podcast Developer On Fire
 - [The new one minute manager](https://www.amazon.com/New-One-Minute-Manager/dp/0062367544), de Ken Blanchard, recomendado por [Jorge (@flipper83)](https://twitter.com/flipper83) y [Carlos Blé](https://twitter.com/carlosble)
 - [xUnit test patterns](http://xunitpatterns.com/index.html), de Gerard Meszaros
+- [The Bogleheads' guide to investing](https://www.amazon.es/Bogleheads-Guide-Investing-Second/dp/1118921283/), de Taylor Larimore, Mel Lindauer y Michael LeBoeuf. Parece que es un libro indispensable para aquellos que quieren aprender a invertir en bolsa
+- [A random walk down Wall Street](https://www.amazon.es/Random-Walk-Down-Wall-Street/dp/0393352242), de Burton G. Malkiel. Libro recomendado sobre invertir en bolsa, muy recomendado por la gente de ZetMoney
 - [The grumpy programmer's PHPUnit cookbook](https://leanpub.com/grumpy-phpunit), de Chris Hartjes, amigo de J.B.Rainsberger
 - [Mientras escribo](http://www.amazon.es/Mientras-escribo-BEST-SELLER-Stephen/dp/849759732X/), de Stephen King (traducción de *On writing*), recomendado por [Kathleen Dollard](https://twitter.com/KathleenDollard/) en el podcast [Developer on Fire #65](http://developeronfire.com/Podcast/Episodes/kathleen-dollard-relentless-dedication)
 - [The coding dojo handbook](https://leanpub.com/codingdojohandbook), de Emiliy Bache
