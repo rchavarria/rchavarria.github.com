@@ -4,7 +4,7 @@
   <title><![CDATA[Category: book reviews | R. Chavarria's Blog]]></title>
   <link href="http://rchavarria.github.io/blog/categories/book-reviews/atom.xml" rel="self"/>
   <link href="http://rchavarria.github.io/"/>
-  <updated>2018-03-17T14:42:34+01:00</updated>
+  <updated>2018-03-23T20:18:34+01:00</updated>
   <id>http://rchavarria.github.io/</id>
   <author>
     <name><![CDATA[Rub&eacute;n Chavarr&iacute;a]]></name>
@@ -12,6 +12,66 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Down and out of the Magic Kingdom]]></title>
+    <link href="http://rchavarria.github.io/blog/2018/03/23/down-out-magic-kingdom/"/>
+    <updated>2018-03-23T18:59:00+01:00</updated>
+    <id>http://rchavarria.github.io/blog/2018/03/23/down-out-magic-kingdom</id>
+    <content type="html"><![CDATA[<h5>de Cory Doctorow</h5>
+
+<h3>Por qué lo he leído</h3>
+
+<p>No recuerdo exactamente quién lo recomendó, simplemente estaba en mi lista de
+lectura y quería leer un libro que no fuera técnico, una novela, un libro que
+contara una historia. Y tiene licencia libre, así que está disponible para la
+lectura de cualquiera. ¿Por qué dejarlo escapar?</p>
+
+<p><a href="http://craphound.com/category/down/"><img src="http://craphound.com/images/056c026d-1c66-4d42-9fae-a8e96df290c5-1020x982.jpg" alt="Down and out of the Magic Kingdom" /></a></p>
+
+<!-- more -->
+
+
+<h3>De qué trata el libro</h3>
+
+<p>El libro está ambientado en un futuro donde la gente puede vivir tanto tiempo
+como quiera. Sus memorias, consciencias, pueden ser transferidas de un cuerpo a
+otro, acumulando sabiduría, conocimientos, recuerdos y amores.</p>
+
+<p>Los protagonistas trabajan en Disney World, en la atracción de Mickey,
+llevándola con métodos <em>artesanales</em>. Pero otro grupo de personas están
+consiguiendo mejorar el resto de atracciones con una tecnología que realmente
+encanta a todo el mundo.</p>
+
+<p>El libro es una constante lucha entre lo tradicional y lo moderno, la
+tecnología y los recuerdos, la presión social o el individualismo, la amistad o
+el amor, la vida o la muerte, la victoria o la derrota.</p>
+
+<h3>Conclusiones y valoración</h3>
+
+<p>El libro me ha gustado bastante, tiene ideas muy buenas. Ideas de ciencia
+ficción, pero le permiten al autor presentar situaciones que invitan a pensar.
+¿Qué pasaría si pudieras vivir para siempre? ¿Cuánto durarían tus relaciones?
+¿Cómo sería una relación de una persona de 25 años con una de 150? ¿Cuantas
+profesiones podrías llegar a aprender? ¿Cuántos amigos te quedarían después de
+vivir más de 100 años? ¿A cuantas personas queridas verías morir?</p>
+
+<p>La trama es sencilla de seguir, con pocos personajes principales, pero lo leí
+en inglés, y se me hizo un poco complicado seguir el libro en algunos puntos
+debido al lenguaje.</p>
+
+<p>Aún así, si te gusta la ciencia ficción donde la tecnología se mezcla con lo
+social y las relaciones humanas, este libro te gustará.</p>
+
+<h3>Recursos relacionados</h3>
+
+<ul>
+<li><a href="http://craphound.com/category/down/">Down and out of the Magic Kingdom</a></li>
+<li><a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/down-out-magic-kingdom.markdown">Notas tomadas del libro</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Practical Object-Oriented Design in Ruby]]></title>
@@ -628,108 +688,6 @@ enderezamos refactorizando el código.</p></blockquote>
 <ul>
 <li><a href="https://vimeo.com/79106557">The fundamental theorem of Agile Software Development</a>, de J.B.Rainsberger</li>
 <li><a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/the-nature-of-software-development-by-ron-jeffries.markdown">Notas sobre The nature of Software development</a></li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[The Phoenix project]]></title>
-    <link href="http://rchavarria.github.io/blog/2017/01/19/the-phoenix-project/"/>
-    <updated>2017-01-19T22:23:00+01:00</updated>
-    <id>http://rchavarria.github.io/blog/2017/01/19/the-phoenix-project</id>
-    <content type="html"><![CDATA[<h5>de Gene Kim</h5>
-
-<p><img class="left" src="/images/2017/phoenix-project.png" width="200" height="246"></p>
-
-<h2>Por qué lo he leído</h2>
-
-<p>Había visto varias referencias al libro por Twitter, blogs y distintos
-podcasts. Sabía que el libro era muy similar a <a href="/blog/2013/04/10/la-meta">La meta</a>, de Eliyahu M.
-Goldratt, un libro que me gustó bastante.</p>
-
-<p>Así que, tras ver que <a href="http://www.eferro.net/2016/03/some-books-i-recently-read.html">Eduardo Ferro</a> también lo había leído, me decidí a
-leerlo yo también.</p>
-
-<!-- more -->
-
-
-<h2>Qué esperaba</h2>
-
-<p>No creo que se pudiera esperar tanto como de <a href="/blog/2013/04/10/la-meta">La meta</a>. Ese libro es un recurso
-más que recomendable para conocer la <a href="https://es.wikipedia.org/wiki/Teor%C3%ADa_de_las_limitaciones">Teoría de las restricciones</a>. Pero
-esperaba algo similar enfocado en el mundo del software.</p>
-
-<p>Esperaba una historia de éxito de una persona o grupo de personas que van
-superando problemas, uno tras otro, donde el autor los aproveche para explicar
-su punto de vista y dar forma a las teorías que quiere explorar.</p>
-
-<h2>Qué encontre</h2>
-
-<p>Más o menos lo que esperaba. A través de una historia llena de problemas a
-solucionar, el autor expone las teorías que quiere difundir. Estas teorías
-están relacionadas con el desarrollo de software y más concretamente con el
-mundillo DevOps.</p>
-
-<p>En realidad, el autor defiende unas prácticas que son la fundación del
-movimiento DevOps, pero para llegar hasta ahí, el protagonista de la historia
-comienza con un ascenso que le lleva a ser el director del departamento de TI
-de una empresa que no destaca por su gestión de servicios tecnológicos, pero
-que solucionando problema tras problema, y con la ayuda de una figura un poco
-enigmática (muy al estilo de <em>La meta</em>), va mejorando hasta hacer del
-departamento y la empresa un lugar mucho mejor.</p>
-
-<h2>Conclusiones</h2>
-
-<p>Por un lado, el libro me ha gustado. Es un libro sobre el mundo del desarrollo
-de software, muy al estilo de <em>La meta</em>, que también me gustó. Y describe el
-proceso que sigue una empresa ficticia de ser un desastre, a ser una empresa
-envidiable en su sector.</p>
-
-<p>Pero por otro, me ha decepcionado un poco. Esperaba que estuviera más centrado
-en el desarrollo, pero está más centrado en la gestión y provisión de servicios
-de TI. No es nada malo, pero estoy más interesado en lo primero.</p>
-
-<p>De todas formas, el libro es interesante, sobre todo si quieres conocer cómo
-hacer bien las cosas en un departamento de TI. Creo que este libro es una buena
-aproximación al mundo DevOps. Pero no deja a los desarrolladores en muy buen
-lugar, así que si eres desarrollador, no te tomes todas las cosas que dicen
-sobre nosotros muy a pecho.</p>
-
-<h2>Qué he aprendido</h2>
-
-<blockquote><p>La única cosa más peligrosa que un desarrollador, es un desarrollador
-conspirando sobre temas de seguridad</p></blockquote>
-
-<!-- space -->
-
-
-<blockquote><p>Eliyahu M. Goldratt, quien creó la teoría de las restricciones, nos mostró
-que cualquier mejora echa en cualquier sitio que no sea el cuello de botella
-es una ilusión, es inútil</p></blockquote>
-
-<!-- space -->
-
-
-<blockquote><p>Los tiempos de espera dependen de la utilización del recurso</p></blockquote>
-
-<!-- space -->
-
-
-<blockquote><p>La necesidad reducir contínuamente los ciclos de tiempo es parte del <em>Primer
-Camino</em>. La necesidad de la amplificación de los bucles de <em>feedback</em> (o
-realimentación), idealmente desde el cliente, es parte del <em>Segundo Camino</em>.
-El <em>Tercer Camino</em> va de asegurarnos de estar introduciendo tensión
-continuamente en el sistema, de forma que estamos contínuamente reforzando
-hábitos y mejorando algo</p></blockquote>
-
-<h2>Recursos relacionados</h2>
-
-<ul>
-<li><a href="/blog/2013/04/10/la-meta">La meta</a>, de Eliyahu M. Goldratt</li>
-<li><a href="https://github.com/rchavarria/blog-post-incubator/blob/master/published-book-notes/phoenix-project-by-gene-kim.markdown">Notas sobre el libro</a></li>
-<li>Blog de <a href="http://www.eferro.net/2016/03/some-books-i-recently-read.html">Eduardo Ferro</a></li>
-<li><a href="https://es.wikipedia.org/wiki/Teor%C3%ADa_de_las_limitaciones">Teoría de las restricciones</a></li>
 </ul>
 
 ]]></content>
