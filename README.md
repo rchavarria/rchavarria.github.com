@@ -1,16 +1,18 @@
-# New Jekyll blog
+# R. Chavarría's blog
 
-Project to migrate the blog from Octopus to a simpler Jekyll theme/project
+Project to write a [blog] like a hacker
 
-This project is based on [Primer Jekyll theme]
+It's been migrated from Octopress to plain Jekyll, and it's using the
+[Primer Jekyll theme].
 
 # TODOs
 
 - [ ] Add notes from articles, videos, and so on that are for years in gmail
 - [ ] Categories for posts:
-    1. :heavy_check_mark: the post url should not include any category, just start with the date and title
+    1. the post url should not include any category, just start with the date and title :heavy_check_mark:
     2. how could I create a link to show all posts within a single category, this way, I could
     create links to a single category in the `archives.md` page
+- [ ] Improve header UI
 
 # DONEs
 
@@ -57,6 +59,7 @@ docker-compose up &
 - [GitHub Flavored Markdown]
 - [GitHub pages documentation] 
 
+[blog]: https://rchavarria.github.io
 [Primer Jekyll theme]: https://github.com/pages-themes/primer
 [GitHub Flavored Markdown]: https://guides.github.com/features/mastering-markdown/
 [GitHub pages documentation]: https://help.github.com/categories/github-pages-basics/ 
