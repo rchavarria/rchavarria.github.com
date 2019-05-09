@@ -6,10 +6,9 @@ This project is based on [Primer Jekyll theme]
 
 # TODOs
 
-- [ ] **PUBLISH**
 - [ ] Add notes from articles, videos, and so on that are for years in gmail
 - [ ] Categories for posts:
-    1. the post url should not include any category, just start with the date and title
+    1. :heavy_check_mark: the post url should not include any category, just start with the date and title
     2. how could I create a link to show all posts within a single category, this way, I could
     create links to a single category in the `archives.md` page
 
@@ -31,6 +30,7 @@ This project is based on [Primer Jekyll theme]
 - [x] Run blog locally with docker compose
 - [x] Add affiliate links to book reviews
 - [x] Merge PWA course
+- [x] **PUBLISH**
 
 # Run Jekyll locally with docker
 
