@@ -1,0 +1,28 @@
+theme: jekyll-theme-primer
+
+url: http://rchavarria.github.io
+name: Rubén Chavarría
+title: Migración del blog (R. Chavarria's blog)
+description: Proud of developing software, proud of being an Engineer
+
+# If publishing to a subdirectory as in http://site.com/project set 'root: /project'
+#root: /
+baseurl: ""
+permalink: /blog/:year/:month/:day/:title/
+
+show_downloads: false
+google_analytics:
+
+excerpt_separator: <!-- more -->
+
+# Default date format is "ordinal" (resulting in "July 22nd 2007")
+# You can customize the format as defined in
+# http://www.ruby-doc.org/core-1.9.2/Time.html#method-i-strftime
+# Additionally, %o will give you the ordinal representation of the day
+#date_format: "ordinal"
+
+# RSS / Email (optional) subscription links (change if using something like Feedburner)
+#subscribe_rss: /atom.xml
+#subscribe_email:
+# RSS feeds can list your email address if you like
+#email:

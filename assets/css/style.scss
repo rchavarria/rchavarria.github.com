@@ -1,0 +1,63 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+body > header h1 {
+  display: inline-block;
+  font-size: 2.2em;
+  line-height: 1.2em;
+}
+
+body > header h2 {
+  color: #aaa;
+}
+
+body > nav {
+  margin-bottom: 2em;
+}
+
+body > nav ul li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  margin-right: 1em;
+  white-space: nowrap;
+  display: inline;
+  float: right;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.rss-logo {
+  width: 1.6em;
+}
+
+article {
+  border-bottom: 1px dashed #ddd;
+  padding-top: 1.75em;
+  padding-bottom: 1em;
+}
+
+.markdown-body article h1.article-title {
+  border: none;
+  margin-top: 0;
+}
+
+.article-date {
+  color: #aaa;
+}
+
+a[rel="full-article"] {
+  background: #ebebeb;
+  display: inline-block;
+  padding: .4em .8em;
+  margin-right: .5em;
+  text-decoration: none;
+  color: #666;
+}
+
+a[rel="full-article"]:hover {
+  background-color: #0366d6;
+  color: #ddd;
+}

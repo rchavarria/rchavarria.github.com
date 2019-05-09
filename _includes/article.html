@@ -1,0 +1,17 @@
+<article>
+  <div class="article-date">
+    {{ post.date | date: "%d-%m-%Y" }}
+  </div>
+
+  <h1 class="article-title">
+    {{ post.title }}
+  </h1>
+
+  <content>
+    {{ post.excerpt }}
+  </content>
+
+  <a rel="full-article" href="{{ site.baseurl | append:post.url }}">
+    Continuar leyendo →
+  </a>
+</article>

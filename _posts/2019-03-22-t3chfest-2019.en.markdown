@@ -1,0 +1,328 @@
+---
+title: "T3chFest 2019 (English)"
+date: 2019-03-22 10:01
+author: Ruben Chavarria
+categories:
+- Conferencias
+---
+
+## Conference itself
+
+[T3chFest conference agenda](https://t3chfest.uc3m.es/2019/programa/):
+
+- +1650 attendees
+- +80 volunteers
+- +80 talks
+- 30 companies
+
+<!-- more -->
+
+## Attended talks
+
+### [Visual attention: How to guide a machine in the world around us](https://t3chfest.uc3m.es/2019/programa/visual-attention-how-guide-machine-the-world-around/), by [Miguel Ángel Fernández Torres](https://twitter.com/@imangelft)
+
+- Talk not available yet, in Spanish
+
+He talked about using AI to see the world as human do, to help automate some
+tasks that are visually intensive.
+
+What's visual attention? recognize objects, track them, the human ability to
+focus on something outstanding.
+
+Features: color, intensity, object orientation, movement, text, scale, shape,...
+
+They use *eye tracking* as input data to know and learn how humans pay attention
+to what. So they need lots of this data.
+
+With eye tracking data, they build maps (as heat maps), to create models:
+
+- Spatial models: where humans pay attention in a picture
+- Temporal models: how attention change over time. They can detect anomalies.
+Big changes tell us about outstanding events (explosions,...)
+
+Classic models (image processing,...) have evolved thanks to convolutional neural
+networks (or CNNs).
+
+Input for these networks usually are color and movement.
+
+Applications, what are they doing at the University:
+
+1. Object recognition: to help people with Alzheimer in their daily life and
+tasks
+2. Accion recognition, such as grabbing objects: to help impaired people
+3. Anomaly detection: to automate video surveillance
+
+### [A framework-independent, decoupled frontend architecture for large-scale projects](https://t3chfest.uc3m.es/2019/programa/framework-independent-decoupled-frontend-architecture-for-large-scale-projects/), by [Carlos Villuendas](https://twitter.com/carlosvillu)
+
+- [Talk](https://www.youtube.com/watch?v=yDlp2o2Eh7Q&feature=youtu.be), in Spanish
+
+Carlos presented a front-end architecture, that allows them to build different
+sites with the same code base.
+
+They structured the front-end architecture in tiers:
+
+- Core: where business rules live. Here they use an hexagonal architecture to
+separate the domain model from the infrastructure.
+- Site components: common components, content-container pattern
+- Specific components: extend and use the common ones
+- Common UI theme
+- Specific site UI theme: extend the common theme
+- Web app: it just wire theme, components and logic
+
+They started with 5 monoliths, for well-known Spanish sites: motor.es, fotocasa.es,
+coches.net, motos.net, milanuncios.es
+
+At some point, they had a single JS file, with 13k lines of code, where *jQuery
+was their architecture*.
+
+Knowledge must flow from outside to inside, from UI to business rules.
+
+> A place for everything, and everything in its place
+
+Common components or theme define *tokens* to be overridden by specific components
+or themes.
+
+The web app tier wraps and provides coherence to lower tiers. It doesn't provide
+new features, it just wires things.
+
+### [Compu-mathe-sci-tics](https://t3chfest.uc3m.es/2019/programa/compu-mathe-sci-tics/), by [Jennifer Wong](https://twitter.com/mybluewristband)
+
+- [Talk](https://www.youtube.com/watch?v=ICi4wmdEoDI), in English
+
+A talk about the `Math` object in JavaScript.
+
+She started talking about history, from math to computer science.
+
+She talked about how math and computer science understand the concept of *function*:
+for math it's about input and output relationship, in CS, it's about side effects
+and procedures.
+
+Funny thing, the talk was on pi day (March 14th, 3.14)
+
+ES6 adds lots of new methods to `Math` object: e**(x - 1), hypotenuse, trunc,...
+
+JavaScript is not very good at precision. It's admitted even in the standard. Most
+mathematical functions are approximations.
+
+She could have demonstrated how most of the `Math` methods work, but the talk
+wasn't too much interactive. It was a bit disappointing.
+
+### [Bad UX](https://t3chfest.uc3m.es/2019/programa/bad-ux/), by [Almudena Martín Castro](https://twitter.com/puratura)
+
+- [Talk](https://www.youtube.com/watch?v=unfZWX8OsJw), in Spanish
+- [Slides](https://docs.google.com/presentation/d/15oYiICfH1PclizAo-lDGQfsh_bK-JUb2sNBbBqfVd-Q/edit?usp=sharing)
+
+Talk about UX, users and graphic designs
+
+There are too many apps, but too few designers.
+
+Goals:
+
+1. Provide control to the user, do not control them
+2. Feedback: there is no cause without effect, things happen because of something
+3. Minimize effort: mechanical (click), visual (noise, images, color) and 
+cognitive (decisions, doubts)
+
+Ten errors to fix:
+
+1. You're not your user: users don't know your product as well as you do
+2. There's no such thing as a mean user: if you don't measure, you don't know
+what your users are using
+3. Users don't read the text in your app: your app should be usable even if it's
+blurred
+4. Users don't have the latest devices (screens, light, internet connection,...)
+5. Users don't take optimal decisions: they don't think
+6. Do you think saving clicks is really important? clicks are cheaper than thinking
+7. Be consistent (similar elements do similar things), use conventions (extracted
+from other products)
+8. Your app must look nice
+9. Dark patterns: to cheat users, to lie them, to force them to do wrong things.
+Please, don't do that, don't lie to users.
+10. Arg, I missed one :(
+
+I repeat a good idea:
+
+> clicks are cheaper than thinking
+
+### [Let's play with the open web](https://t3chfest.uc3m.es/2019/programa/juguemos-web-abierta/), by [Jesús M. González Barahona](https://twitter.com/jgbarah)
+
+- [Talk](https://www.youtube.com/watch?v=vE7J8nzpycI), in Spanish
+- [Playing with the open web](https://jgbarah.github.io/presentations/open-web/), code and examples, worth taking a look
+
+The browser is the greatest platform ever. Much better than any operating system.
+It makes the old idea *write once, run everywhere* a reality, not Java.
+
+Browser's APIs are open, and we have different implementations. In fact, we
+**need** different implementations.
+
+The speaker showed us and demonstrated us very interactive examples that are
+worth a try: [Playing with the open web](https://jgbarah.github.io/presentations/open-web/)
+
+Examples:
+
+1. You can see your phone camera in the browser with 2 JavaScript lines
+2. Transform the input of your camera into ASCII art
+3. Maps with [leaflet](https://leafletjs.com/) library
+4. Virtual reality, [aframe](https://aframe.io/) library
+
+With `aframe` you compose your VR scenes with HTML elements!! And you can manipulate
+the VR scene as a DOM document.
+
+Really, really try some of the examples in your browser:
+[Playing with the open web](https://jgbarah.github.io/presentations/open-web/)
+
+### [Verifying fake news: Newtral](https://t3chfest.uc3m.es/2019/programa/verificacion-contra-las-fake-news/), by [Ana Pastor](https://twitter.com/_anapastor_), [Inés Calderón](https://twitter.com/ines_calderon) and [Marilín Gonzalo](https://twitter.com/marilink)
+
+- [Talk](https://www.youtube.com/watch?v=RMJO2w8vTJw), in Spanish
+- [Transparentia](https://newtral.es/transparentia/), the public money search engine.
+Try to search public Spanish politicians to know how much they're paid:
+Pedro Sánchez (President),
+Pablo Casado (President candidate),
+Ada Colau (Barcelona mayor),
+Manuela Carmena (Madrid mayor)
+
+The speakers are 3 journalists, the main one is a well-known journalist for doing
+great questions in interviews. She has a TV program where some data provided by the
+interviewee is checked on real time.
+
+> Journalists must be where the public is, we must communicate in the same media
+as people communicate to each other (paper, tv, internet, messaging,...)
+
+Newtral creates content that is easy to share, to help spreading the verification
+as fast as the news (fake or not).
+
+Are fake news a issue for democracy?
+
+Checking the facts is much harder than making up fake news. It so hard, and it takes
+so much effort that technology is needed to help journalist to do the job. They 
+mention some machine learning terminology, but not too technical.
+
+The problems with the data the speakers talk, remind me the problems people working
+with *open data* talk. Data is open, but it's in different formats, it's incomplete,
+with no too much coherence, out of date,...
+
+### [Technology behind movies visual effects](https://t3chfest.uc3m.es/2019/programa/tecnologia-los-vfx-digitales-para-cine/), by [Carolina Jiménez García](https://twitter.com/okinfografia)
+
+- [Talk](https://www.youtube.com/watch?v=D39he1DwmQg), in Spanish
+
+I expected a technological talk, but it was more related about filming techniques.
+Anyway, it was quite visual and interesting.
+
+It started with some history about cameras.
+
+One main trick used for a long time is to use a glass, where half the scene has
+been painted, and film the movie scene through the glass, playing with
+perspective.
+
+Then, there are some process, like Williams process or Dunning process, that lead
+us to the *chroma*.
+
+First, it was used a blue chroma, because blue is the most different color from
+the human skin (making it easier to replace for other things during movie edition).
+Nowadays, in digital filming, a green chroma is used, because digital sensors are
+more sensitive to green than to blue or red.
+
+### [Guardians of the Front galaxy](https://t3chfest.uc3m.es/2019/programa/guardianes-galaxia-front/), by [Cristina Ponce](https://twitter.com/CristinaGrim) and [Cristina Fernández](https://twitter.com/cristinafsanz)
+
+- [Talk](https://www.youtube.com/watch?v=Z6qM0qsUu50), in Spanish
+- [Slides](https://docs.google.com/presentation/d/1YHJPZjEJbgeoWIvZOwmNyOCGogI60vBiYMTtk0al-z8/edit#slide=id.g35f391192_00), half English, half Spanish
+
+They showed us lots and lots of suggestions for clean code (*guarding* us from 
+bad code). The sad part is that they didn't explain them deeply. At some point,
+they were just saying the name of the concept.
+
+I got some nice ideas:
+
+`.editorconfig`, it's a convention (supported in PhpStorm with a plugin) to 
+configure some parameters in software projects such as: tabs vs spaces, 
+indentation,...
+
+ESLint to check JavaScript style, best with published guides: airbnb, google,...
+
+[StyleLint](https://stylelint.io/), the same but for CSS
+
+[Husky](https://github.com/typicode/husky), git hooks without the need of 
+installing them on `.git/hooks`
+
+Of course, they mention tests, all kind of them: unit, integration, end-to-end,
+coverage,... But, they didn't go deep on any of them.
+
+Team workflow: protect some branches, pull requests.
+
+Automatic deployments. They showed a case with GitHub pages and Netlify. They
+use Circle CI, a tool similar to Jenkins.
+
+### [Subscribe, like and another way to spread science](https://t3chfest.uc3m.es/2019/programa/suscribete-dale-like-y-descubre-otra-forma-de-comunicar/), by [Rocío Vidal](https://www.youtube.com/channel/UCoXtmmnLCbXDiSo8GxsmOzA), [Santi García Cremades](http://youtube.com/raizdepi), [Carlos DotCSV](https://www.youtube.com/c/dotcsv) and [Javier Santaolalla](https://www.youtube.com/channel/UCns-8DssCBba7M4nu7wk7Aw)
+
+- [Talk](https://www.youtube.com/watch?v=BPUTne4v7OY), in Spanish
+- [Carlos' YouTube channel](https://www.youtube.com/c/dotcsv), about Math, AI and Machine Learning
+
+The speakers are four well-known Spanish youtubers. One of them have a channel
+about AI and machine learning, and another one about math in general. The 
+conversation was nice, because they're used to interact with people. The idea
+was to have a moderator that asked some questions, and each of them give his
+own experience.
+
+Are youtubers free about creating content? They say they're more free than in a
+traditional media, but they say nothing whether they create content guided by
+likes or subscriber numbers.
+
+All of them agree on the fact that they don't want the tool, the mean, YouTube,
+to control what the want to communicate.
+
+Can someone live out of YouTube? They agree on you can, but you never know for
+how long it will be that way. Maybe tomorrow you're out of business.
+
+Is YouTube adult? Other social media are much younger. Other social media are
+evolving to other activities (twitch -> games, instagram -> celebrities,...), but
+YouTube seems to have its place among all social media.
+
+They told too that popular science has a great momentum right now.
+
+They discussed about YouTube algorithm, and it seems to be as well known (or as
+well unknown) as Google search algorithm. The only thing they know is that it
+seems to like videos that keep the audience online, but it doesn't mean the video
+is good. There are popular videos of irrelevant or even malicious things.
+
+They were asked about why science audience seems to be mostly men. They talked
+about the algorithm here too. One cause can be that if YouTube knows you're a man,
+it suggests you science channels. If you're a woman, it suggests you other kind
+of channels.
+
+### Missed talks
+
+- [Advanced microservices with Micronaut](https://t3chfest.uc3m.es/2019/programa/microservicios-avanzados-con-micronaut/), by [Iván López Martín Morgado](https://twitter.com/ilopmar): how to make IT work environment more reasonable, human, nice and productive (better)
+- [Shooting hoops with machine learning](https://t3chfest.uc3m.es/2019/programa/shooting-hoops-with-machine-learning/), by [Zack Akil](https://twitter.com/ZackAkil), [English talk](https://www.youtube.com/watch?v=pE8WAeuLMGk)
+
+## Ideas
+
+I talked to a friend about push notifications. At work, they implemented
+*offline notifications*. They're able to show notifications in the browser
+even when the tab of their product is closed. The tech behind this is
+Service Workers (and websockets for notifications I think). The idea is
+quite interesting: you login into EVSM, you close the tab, if anything new
+happens, you're notified with a link to the task you need to perform. Nice!
+
+Use [leaflet](https://leafletjs.com/) maps instead of Google Maps. The library
+is open source, and it can show map tiles from different sources.
+
+Este comic de CommitStrip viene que ni pintada para esto:
+
+<blockquote class="twitter-tweet" data-lang="en">
+  <p lang="en" dir="ltr">
+      Over-excited
+    <a href="https://t.co/LQWqzl4ZTW">
+      https://t.co/LQWqzl4ZTW
+    </a>
+    <a href="https://t.co/UKclEfTPmb">
+      pic.twitter.com/UKclEfTPmb
+    </a>
+  </p>
+  &mdash; CommitStrip (@CommitStrip) 
+  <a href="https://twitter.com/CommitStrip/status/1107746878886735877?ref_src=twsrc%5Etfw">
+    March 18, 2019
+  </a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+## References

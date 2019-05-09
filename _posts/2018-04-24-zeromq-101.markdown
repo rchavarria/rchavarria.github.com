@@ -1,0 +1,119 @@
+---
+layout: post
+title: "Empezando con ZeroMQ"
+date: 2018-04-24 00:00
+author: Ruben Chavarria
+categories:
+- Proyectos
+- Aprendizaje
+---
+
+En el trabajo nos hemos encontrado con un problema: tenemos un servidor al que los clientes
+se conectan a través de Web Sockets desde un navegador. Este servidor se encargará de generar
+datos en tiempo real para esos clientes. La idea es que sea capaz de soportar cuantos
+más clientes mejor, claro. Para ello, digamos que el trabajo del servidor debería ser
+lo más liviano posible y **no bloquearse** nunca, no hacer ninguna operación que sea
+bloqueante. Estrictamente, leer de un fichero o hacer una llamada a través de la red ya
+sería *bloqueante*.
+
+En definitiva, la solución que vamos a probar es comunicar dos procesos: el servidor y el
+*proceso bloqueante* a través de un software de intercambio de mensajes. Vamos a comenzar
+con [ZeroMQ](http://zeromq.org/),
+que es una herramienta que parece que funciona bien con las tecnologías que estamosç
+utilizando.
+
+<!-- more -->
+
+El servidor que acepta conexiones de Web Sockets está realizado con
+[Ratchet](http://socketo.me/docs/deploy)
+el cual se apoya direcatemente en
+[ReactPHP](https://reactphp.org/),
+sí, todo tecnologías PHP, es lo que hay.
+
+Parece que ambos se llevan bien con ZeroMQ a través de la librería
+[react/zmq](https://github.com/friends-of-reactphp/zmq).
+
+Para aprender un poquito sore ZeroMQ, el siguiente vídeo tiene buena pinta, y aquí
+van las notas:
+
+## [ZeroMQ is the answer](https://vimeo.com/20605470), charla de Ian Barber
+
+ZeroMQ no es una cola de mensajes, no es un *daemon*, no es un servidor, **es una
+librería**. Es una librería que te permite comunicar procesos. Es un sistema de
+*sockets* que te permite comunicar procesos. Puede comunicar procesos entre máquinas,
+en la misma máquina o incluso hilos de un mismo proceso.
+
+Existen distinto patrones que se pueden implementar con ZeroMQ: queue, pipeline,
+pub/sub,...
+
+Es un producto construido por iMatrix para sistemas financieros. Creo que lo dice
+como para apoyar la idea de que es un software robusto y rápido.
+
+Puede funcionar como una extensión para PHP (PECL extension)
+
+#### Patrón petición/respuesta
+
+Puede funcionar como un cliente/servidor clásico, comunicándose a través de una
+conexión TCP. Varios clientes se pueden conectar al mismo servidor. No importa
+mucho si arrancas primero el cliente y luego el servidor (¿maneja reconexiones?).
+Impide que un cliente anule a otro, todos los clientes son atendidos.
+
+#### Mensajes
+
+El envío de un mensaje es atómico: o lo recibes, o no lo recibirás nunca
+
+ZeroMQ no añade mucho *overhead* a la comunicación a través del *cable*
+
+Los mensajes se pueden partir en partes más pequeñas, y se pueden enrutar de forma
+diferente,...
+
+Los mensajes son almacenados en *buffers* (o encolados) tanto en la parte que envía
+como en la que recibe, de forma que en general ningún mensaje se pierde.
+
+La idea es tener muchos pequeños programas, que saben cómo hacer las cosas, y entre
+medias de ellos, tener cosas tontas, como una cola de mensajes. De las cosas tontas
+y aburridas se encarga ZeroMQ.
+
+#### Estable / Inestable
+
+En ZeroMQ los clientes y los workers son inestables, lo que quiere decir dinámicos.
+Puede haber tantos clientes como queramos. O no pasa nada si no hay ningún servidor
+todavía que atienda nuestras peticiones.
+
+Estable significa *fijo*. Es como la parte servidor de la comunicación. Debe de haber
+al menos uno para que haya una comunicación.
+
+#### Pipelines
+
+Creando sockets de tipo push/pull podemos hacer que un productor mande trabajo a
+`N` workers (push), y que cada uno de ellos lo recoja (pull) y lo mande a la siguente
+fase (pipeline o tubería o workflow o ...
+
+Con el protocolo `ipc` (Inter Process Communication) se pueden comunicar varios
+procesos a través de la memoria principal, no se necesita una conexión TCP
+
+#### Pub/Sub
+
+El publicador es la parte estable de la arquitectura, el servidor. El suscriptor es la
+parte dinámica, que puede haber `0` o `N`.
+
+El publicador puede recibir el mensaje o los datos a publicar. En ese caso, los puede
+esperar con un *socket pull*, de donde extraerá los datos. En otro lugar, se necesita
+algún proceso que haga *push* de esos datos. Los push/pull son más o menos como
+enviar/recibir.
+
+#### Tipos de transporte
+
+1. IPC (inter process comm.): dos procesos hablando entre ellos
+2. Inproc: dos hilos de un mismo proceso hablando entre ellos
+3. TCP: dos procesos hablando a través de una conexión
+4. PGM: opción multicast, uno envía, muchos escuchan
+
+## Referencias
+
+- [ZGuide](http://zguide.zero.mq)
+- [ZeroMQ](http://zeromq.org/)
+- [Ratchet](http://socketo.me/docs/deploy)
+- [ReactPHP](https://reactphp.org/),
+- [react/zmq](https://github.com/friends-of-reactphp/zmq).
+- [ZeroMQ is the answer](https://vimeo.com/20605470)

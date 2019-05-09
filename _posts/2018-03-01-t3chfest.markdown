@@ -1,0 +1,240 @@
+---
+title: "T3chFest 2018"
+date: 2018-03-01 22:39
+author: Ruben Chavarria
+categories:
+- Conferencias
+---
+
+[La conferencia en sí](https://t3chfest.uc3m.es/2018/):
+
+- Más de 60 voluntarios
+- +1 al cuaderno incluido en el pack
+- +1 al agua por todas partes
+- +1 al espacio para el café, que era mayor que el año anterior y estaba mejor organizado
+- +1 a la música de fondo mientras se esperaba para que la charla comenzara
+- +1 al encuentro con gente de otras comunidades
+
+<!-- more -->
+
+## Charlas
+
+### Keynote, [Artificial intelligence to stop dyslexia](https://t3chfest.uc3m.es/2018/programa/inteligencia-artificial-acabar-dislexia/), by [Luz Rello](https://twitter.com/luzrello)
+
+La dislexia no está relacionada con ningún tipo de inteligencia. Por lo que una persona muy (o muy poco) inteligente puede tener dislexia.
+
+La gente con dislexia es capaz de leer, con la misma capacidad de entendimiento, textos con errores, sin ellos o con las letras del revés. La gente sin dislexia lee mucho peor los textos que contienen errores. 
+
+No ha sido una charla técnica, para nada, pero muchísimo sestudios sobre la dislexia se apoyan en la tecnología: seguimiento de movimiento de ojos (eye tracking), estadística,...
+
+**¿Einar es disléxico? Confunde mucho la `a` y la `e` al leer y le cuesta hacer dibujos simétricos (cuando para otras tareas parece que la abstracción espacial la tiene bastante buena).**
+
+### [The Future of the Conversational UIs](https://t3chfest.uc3m.es/2018/programa/the-future-the-conversational-uis/), by [Jorge del Casar](https://twitter.com/JorgeCasar)
+
+Varias fases: diseño, implementación, test y desplegar. Muy similar a cualquier desarrollo de software. No estoy seguro porqué el ponente no unió ambas visiones, hubiera sido un paralelismo bastante bueno.
+
+La fase de diseño es la más importante al desarrollar una interfaz conversacional, al contrario que las UI tradicionales. Es muy importante en pensar todos los casos de uso posibles antes de avanzar.
+
+1. Debe de haber una *Persona*, para que los usuarios *sientan* la conversación
+2. Piensa a lo loco: cada usuario es diferente, cada usuario llevará la conversación por diferentes caminos. Las conversaciones no son simplemente Comando-Respuesta. Hay varios contextos, varios significados, malos entendidos,...
+
+Hay muchísimas herramientas para crear interfaces conversacionales
+
+- En el lado del servidor: Luis (Microsoft), IBM Watson,... Todos ellos están basados en la *nube*, y requieren de mucho tiempo de entrenamiento para hacer que la herramienta aprenda lo más posible sobre tus casos de uso
+- SDKs, para implementar el lado del cliente: ActionsSDK, MS Bot Framework,...
+
+La idea parece interesante, pero parece que las empresas solo se preocupan de vender sus productos en la nube, y que la herramienta es *básicamente* una herramienta de dictado (speech to text). Algunas compañías van un poco más allá, pero el negocio principal es sencillo. Lo están vendiendo como un negocio súper complicado, algo que no puedes hacer sin ellos, sin su nube.
+
+**Feedback**
+
+:( Parece que faltaba un poco de preparación a la charla, los ejemplos parecían inventados en el momento, fallos en el texto de las slides (copy&paste?)
+
+### [So, you think the technology is neutral?](https://t3chfest.uc3m.es/2018/programa/crees-que-la-tecnologia-es-neutra/), by [esus M González Barahona](https://twitter.com/jgbarah)
+
+Charla muy, muy interesante sobre tecnología. No el lado técnico, si no el humano y social. El ponente expuso más preguntas que respuestas, la charla está llena de ideas sobre las que pensar.
+
+La tecnología permite/habilita... pero también limita
+
+Las decisiones técnicas de hoy limitan lo que seremos capaces de hacer y crear en el futuro, incluso más que las decisiones políticas
+
+La tecnología está hecha por humanos, si no nos gusta, deberíamos ser capaces de cambiarla
+
+Pero eso no suele estar presente en discusiones sociales. Normalmente, no nos preguntamos a nosotros mismos como sociedad lo que la tecnología nos permite y lo que nos limita
+
+Hay 3 clases de servicios de comunicación: centralizado, federado y punto a punto (peer to peer, p2p)
+
+¿Cuál es más fácil de controllar? ¿Cuál hace más fácil la innovación?
+
+¿Quién es capaz de actualizar el software de tu coche? ¿Estaría bien que fuera el dueño quien lo actualizara? Ahora, cambia *coche* por nevera, teléfono, cafetera,... ¿Cuántas empresas saben dónde te encuentras tú ahora mismo?
+
+El ponente mencionó el eterno debate entre seguridad y libertad/privacidad
+
+¿Quién es responsable de lo que podemos o no podemos ver/hacer en internet?
+
+El problema no es si una empresa (Facebook, Twitter, Google,...) censuran ciertos contenidos. El problema es que una empresa, una empresa privada pueda censurar, que sea legal que una empresa censure, que esté socialmente aceptado que una empresa pueda censurar. ¿Una posible solución? Más poder de computación y almacenamiento, más barato, menos consumo de energía, más movilidad. Más conectvidad, más velocidad de conexión, más barato. Mejores tecnologías federadas, mejores comunicaciones p2p.
+
+**Tendencias**
+
+Código y Ley: históricamente, la ley ha sido quien limita la sociedad. Hoy en día, es la tecnología la que nos limita. Normalmente, hoy la ley va por detrás de la tecnología
+
+Guerra contra el ordenador de propósito general: especialización, casi todos los dispositivos electrónicos funcionan con software, pero tú no eres capaz de decidir qué tipo de software los hace funcionar (coche, cafetera, lavadora, móvil,...)
+
+Hardware + Software: conocimiento que funciona. El código no es sólo la receta, también te cocina el plato.
+
+En los 80, hubo un grupo de gente que pensó que el software debería permitir mucho más de lo que lo hacía, y de ese grupo de personas nació el Open Source
+
+### [Contactless magnetic mechanisms for aerospace and robotic applications](https://t3chfest.uc3m.es/2018/programa/contactless-magnetic-mechanisms-for-aerospace-and-robotic-applications/), by [Ignacio Valiente-Blanco](https://www.linkedin.com/in/ignacio-valiente-96528a2b) and [Judit Esnoz](https://www.linkedin.com/in/judit-esnoz-larraya-05388882)
+
+No fue una charla relacionada con el software, pero sí lo fue con la ingeniería.
+
+Mecanismos magnéticos: reemplazan partes de los mechanismos tradicionales (ruedas dentadas,...) con dispositivos magnéticos: imanes, metales férricas (ferritas, materiales magnéticos débiles,...), materiales que incluso son fuente de campos magnéticos.
+
+Estos dispositivos no tienen las mismas limitaciones que los tradicionales: no hay fricción, no hay contacto, no generan tanto calor, el aceite para lubricar no es necesario,... todo esto se traduce en un mantenimiento mucho menor.
+
+Su mejor producto es una [reductora magnética](https://www.youtube.com/watch?v=MP5ah6tEi04). Usan imanes para transferir movimiento de una parte a otra de la reductora, reduciendo las vueltas por minuto por 7, 50 o incluso cientos de veces.
+
+Otro de sus productos, [z-damper, o amortiguador](https://www.youtube.com/watch?v=hswcmO7wiBA). Está basado en el mismo principio que los frenos magnéticos (hay trenes que frenan gracias a que hacen pasar unos campos magnéticos por sus ruedas en movimiento). Reduce la transmisión de vibraciones. Se puede usar en aviones para reducir las vibraciones de sonido y aislar donde van los pasajeros.
+
+Superconductores: son metales que no tienen resistencia eléctrica, y algunos de ellos son capaces de emitir un campo magnético. Hicieron una demo donde un trozo de metal, a muy baja temperatura, flotaba en el aire, al ser repelido por el campo magnético (muy parecido a este [vídeo](https://www.youtube.com/watch?v=2EaZCaH0t78) ).
+
+### [Side-projects for fun and learning](https://t3chfest.uc3m.es/2018/programa/side-projects-fun-and-learning/), by [Marta Cruz](https://twitter.com/espoletavt) and [Daniel Villalobos](https://twitter.com/dvillalobos) - [slides](https://docs.google.com/presentation/d/e/2PACX-1vQGKlndXer_IGM7Y3IpRpahgbeoqngGnk4r1RWHhzEhWKuhhn4lq6T0T9sg-RC9RQ6jLGdK-PpzRS2-/pub#slide=id.g335b6d559c_0_0)
+
+Es imposible saber todo, saber de todo, tienes que elegir. Intenta encontrar el punto donde se unen: pasión + creatividad + intentar cosas nuevas + disfrutar, el llamado *sweet spot*.
+
+Usa los proyectos personales para aprender algo nuevo, para aprender algo muy diferente a lo que usas en tu trabajo diario, para aprender y experimentar con otra gnete, para conseguir experiencia sin necesidad de un trabajo formal.
+
+Elementos de un proyecto personal:
+
+1. Pasión
+2. Comienza poco a poco
+3. Sin presión
+4. Hazlo simple
+
+Beneficios: aprendizaje, disfrute, conocimiento compartido,...
+
+Fases:
+
+1. Idea
+2. Debate, discusión: para mejorar la idea original
+3. Validar
+4. MVSP (most valuable side-project)
+5. Demo, compartir
+
+Experimenta sin miedo, un proyecto personal es un proyecto donde los fallos son bienvenidos. Hazlo bien, hazlo con amor.
+
+Los ponentes hablaron de proyectos personales como si se debieran hacer siempre en equipo, e incluso con los compañeros de trabajo. Creo que solamente expusieron su experiencia. La verdad es que podría haber visto con una perspectiva más amplia
+
+### [Let's understand what is reactivity](https://t3chfest.uc3m.es/2018/programa/entendamos-la-reactividad/), by [José Manuel García](https://twitter.com/semagarcia) - [slides](https://www.slideshare.net/sema_hkd/t3chfest-2018-entendamos-de-una-vez-qu-es-eso-de-la-reactividad), [code](https://github.com/semagarcia/rxjs-t3chfest-reactividad)
+
+¿Qué es la reactividad (ReactiveX)? Es un paradigma para trabajar con flujos de datos asíncronos
+
+Cualquier valor que cambia con el timepo es un buen candidato para ser *observado*. Después de esto, verás *observables* por todos los lados, y tendrás razón.
+
+JavaScript es asíncrono hasta la médula: callbacks, promises, generators, async/await,...
+
+Los `Observable`s **son funciones**. No hacen nada hasta que se les invoca, son perezosos. Pero también, hacen cosas cada vez que se les llama, cada vez que alguien se suscribe a ellos.
+
+El método `subscribe` devuelve un objeto `subscription` que permite gestionar algunas cosas de la suscripción: cancelarla, desuscribirse,... Es muy útil para evitar fugas de memoria (memory leaks) (Por cierto, no sabía que tenías que desuscribirte de ellos para evitar problemas de memoria)
+
+Una suscripción termina cuando:
+
+1. El flujo de datos termina
+2. El cliente se desuscribe
+
+`Subject` puede jugar dos papeles: el que publica y el que se suscribe. El ponente ha creado un interfaz (UI) a través de una máquina de estados, publicando eventos observables, y observándolos en otro componente de la aplicación: [Angular app showing it](https://github.com/semagarcia/rxjs-t3chfest-reactividad/tree/master/07-subject-t3chfy)
+
+Operador: es una función que recibe un `Observable` como parámetro y devuelve otro `Observable` (normalmente transformado). Los operadores pueden ser encadenados. Hay operadores para casi cualquier cosa. Son la parte más interesante de ReactiveX
+
+**Feedback**
+
+:) Ejemplos (y muy visuales) en vivo y en directo en la consola del navegador
+
+:) Muy buen ejemplo de un observable, la lotería (las bolas son el flujo de datos,...) (echar un vistazo a la trasparencia #23)
+
+### [AireMad and Open Source](https://t3chfest.uc3m.es/2018/programa/airemad-open-source/), by [Ulises Gascón](https://twitter.com/kom_256) - [slides](http://slides.com/ulisesgascon/airemad-t3chfest-2018#/)
+
+Para que un software sea Open Source, debe cumplir 4 *leyes de libertad*, o 4 libertades:
+
+1. Libertad de ejecutar la aplicación como uno quiera
+2. Libertad de estudiar el código fuente
+3. Libertad de distribuir la aplicación
+4. Libertad de copiar y compartir el código
+
+Los Datos Abiertos (Open Data) debería ser promovido por los gobiernos
+
+Es ilegal recoger datos personales en los Datos Abiertos, para proteger a la gente. Si estás queriendo *abrir* tus datos, no deberías recoger datos personales
+
+**Problemas encontrados mientras se desarrollaba Aire Madrid**
+
+Estaciones de medición: aparecían nuevas sin noticia alguna, otras viejas desaparecía, las estaciones cambian de localización,...
+
+La fuente de datos usa conceptos relativos:
+
+1. Tiempo real: un informe cada hora (en el mejor de los casos), informes una vez al día, con datos del día anterior
+2. Formatos: no hay ningún estándar, ni siquiera para el mismo grupo de datos. Existen guías de usuario para entender los datos. A veces, hay errores de formato en los datos publicados (en serio? ni que se crearan los datos a mano)
+
+El desarrollador debe escribir mucho código defensivo. [Postel's law](https://en.wikipedia.org/wiki/Robustness_principle)
+
+Suele haber cambios sin ningún tipo de anuncio, incluso nuevos datos sin ningún tipo de documentación
+
+La gente que publica los datos tiene sus problemas también: lo quieren hacer mejor, pero puede que no tengan el conocimiento (necesitan desarrolladores como nosotros), no tienen el dinero, no tienen el apoyo de su jefe (o más arriba en la jerarquía),...
+
+Aire Madrid evolucionó a AireMAD API. Mantienen un API con datos saneados. Aumentaron los datos añadiendo nuevas estaciones (de otras fuentes de datos abiertos), nuevos tipos de estación, nuevos datos: estaciones, polución, ruido, polen, gripe,...
+
+### [Wubba lubba dub dub!](https://t3chfest.uc3m.es/2018/programa/wubba-lubba-dub-dub/), by [Jorge Barroso](https://twitter.com/flipper83)
+
+Esta fue una charla del tipo: ¿Qué me diría a mi yo de hace N años?
+
+El título hace referencia a la serie [Rick y Morti](https://en.wikipedia.org/wiki/Rick_and_Morty) y significa algo así como: tengo una pena dentro que me está volviendo loco.
+
+**Haz una reflexión/retrospectiva cada año, como persona, como profesional**
+
+Aprende inglés (cada vez que escucho este consejo estoy más convencido de lo bien hice al seguirlo)
+
+La vocación no nace, se hace. A veces, de repente, uno se da cuenta de algo en lo que es realmente bueno y que además te encanta hacer.
+
+*Con 4 años de experiencia yo pensaba que era el mejor programador del mundo* ~ ponente (o cualquier programador con 4 años de experiencia)
+
+Deberías estar intentando crecer como persona y como profesional, intentando crecer con otros, nunca solo (si eres la persona más inteligente de tu alrededor, estás en el sitio equivocado)
+
+In tu tiempo libre, haz cosas que te gusten, no hagas cosas que son buenas para tu trabajo
+
+Habla en conferencias, y si no, al menos escribe, y hazlo público
+
+Ve a conferencias
+
+Te pagan **solo** para crear software que funcione. Para ello, necesitas ser bueno programando (entre otras habilidades). Para ser bueno programando debes exigir cierto nivel de calidad en el trabajo que haces. Presta atención a la calidad de tu trabajo.
+
+Ética: ¿compartes los valores que defiende tu empresa? Si hay algo mal en tu entorno (abusos, ilegalidades,...) deberías señalarlo, deberías *levantar la liebre*. Si no te gusta tu empresa, encuentra otra que te guste
+
+Ama lo que haces, no pierdas esa energía. Sé feliz en el trabajo, enorgullécete de lo que construyes.
+
+### [How to be an investor without millions thanks to Blockchain and ICOs](https://t3chfest.uc3m.es/2018/programa/como-ser-inversor-sin-tener-millones-gracias-a-blockchain-y-sus-icos/), by [Paola García](https://twitter.com/gGarciaPaola)
+
+DAO (Decentralized Axxx Organization): intenta eliminar la parte tóxica (o demaniado poderosa) presente en las empresas centralizadas.
+
+Antes de crear una Blockchain o ICO deberías crear una comunidad (de usuarios). Para eso, las empresas crean *tokens*, para proporcionar valor a la gente. La comunidad es lo más importante detrás de una Blockchain.
+
+ICO, Initial Coin Offering: una oferta con descuento para comprar alguna moneda basada en una Blockchain
+
+¿Cómo se si debería invertir en una ICO?
+
+1. ¿Cuánta moneda puede existir?
+2. ¿El precio está subiendo?
+3. ¿Confías en el origen de la idea?
+4. Equipo detrás de la idea
+
+No compres/vendas si no entiendes lo que estás comprando/vendiendo
+
+**Feedback**
+
+:( Parece que la charla no ha sido preparada lo suficiente. Al final, la ponente no ha hablado demasiado sobre cómo o por qué invertir. Ha hablado de conceptos generales de Blockchain que cualquiera puede encontrar en millones de sitios
+
+### Charlas que me hubiera gustado asistir
+
+- [The happy developer](https://t3chfest.uc3m.es/2018/programa/el-feliz-developer/), by [Irene M. Morgado](https://twitter.com/IrnMM): cómo hacer el entorno de los trabajos de IT más razonables, humanos, agradables y productivos
+- [Salarios y carreras profesionales en IT](https://t3chfest.uc3m.es/2018/programa/salarios-y-carreras-profesionales-en-industria-software/), by [David Bonilla](https://twitter.com/david_bonilla) - [slides](https://t3chfest.uc3m.es/2018/static/resources/events_slides/t3chfest2018_david_bonilla.pdf?q=1520008764): salarios **reales** de IT en España, carreras profesionales en IT y tendencias.
+
+## Referencias
+
+- [Let's understand what is reactivity](https://t3chfest.uc3m.es/2018/programa/entendamos-la-reactividad/), by [José Manuel García](https://twitter.com/semagarcia) - [slides](https://www.slideshare.net/sema_hkd/t3chfest-2018-entendamos-de-una-vez-qu-es-eso-de-la-reactividad), [code](https://github.com/semagarcia/rxjs-t3chfest-reactividad)

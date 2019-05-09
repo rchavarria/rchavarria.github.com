@@ -1,0 +1,13 @@
+
+<footer class="container-lg footer border-top border-gray-light mt-5 pt-3 text-right text-gray" role="contentinfo">
+  <div>
+    Contenido liberado bajo
+    <a href="https://www.gnu.org/licenses/gpl-3.0.en.html">licencia GPLv3</a>
+  </div>
+
+  {% if site.github.private != true and site.github.license %}
+  <div>
+    Puedes contribuir a este blog editando {% github_edit_link "este fichero" %} en GitHub
+  </div>
+  {% endif %}
+</footer>
