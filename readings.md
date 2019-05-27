@@ -112,6 +112,7 @@ Así que aquí está mi Lista de Lectura:
 - [Beautiul Code](http://www.amazon.es/gp/product/0596510047/ref=as_li_tf_tl?ie=UTF8&camp=3626&creative=24790&creativeASIN=0596510047&linkCode=as2&tag=koalite-21), de Greg Wilson y Andy Oram, recomendado por Juanma (Gulnor), de Koalite, descrito como *porno (para desarrolladores) puro*
 - [Software craftsmanship: the new imperative](http://www.amazon.com/Software-Craftsmanship-Imperative-Pete-McBreen/dp/0201733862), de Pete McBreen
 - [¿Qué pasaría si...? (What if...?)](http://www.amazon.es/gp/product/B00TV7HI4E), de Randall Munrow (xkcd.com), recomendado por Bill Gates
+- [The information](https://amzn.to/2EA79C9), de James Gleick, recomendado por Ludo en su podcast [Cabalga el cometa](https://cabalgaelcometa.com/podcast/ep-10-la-cuarta-revolucion-industrial-josep-maria-ganyet/)
 - [Your code as a crime scene](https://pragprog.com/book/atcrime/your-code-as-a-crime-scene), de Adam Tornhill, The pragmatic bookshelf
 - [The effective engineer](https://www.theeffectiveengineer.com/book), de Edmond Lau (para aprender técnicas de ingenieros software espectaculares)
 - Patterns of Enterprise Application Architecture, de Martin Fowler
