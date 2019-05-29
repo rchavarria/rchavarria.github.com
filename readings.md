@@ -27,12 +27,14 @@ Así que aquí está mi Lista de Lectura:
 - [Planning eXtreme programming](https://amzn.to/2HKycNs), de Kent Beck y Martin Fowler, visto por ahí, y si los autores son estos dos semidioses, no hay razón para no leerlo
 - [Your money or your life](https://amzn.to/2KdrJxN), de Robin/Dominguez, recomendado por J.B.Rainsberger: *cambió cómo entiendo el propósito del dinero y el trabajo*
 - [Friendly command line](https://hellowebbooks.com/learn-command-line/), de Tracy Osborn, libro gratuito, descargable, imprimible y de todo, con unas ilustraciones muy curiosas
+- [Rapid development](https://amzn.to/2W2nTrX), de Steve McConnell, recomendado por [Javier Garzás](http://www.javiergarzas.com/2013/02/dijkstra-secret.html)
 - [DDD, first 15 years](https://leanpub.com/ddd_first_15_years), de DDD Europe Community, recomendado por [Rafael Luque](https://twitter.com/rafael_luque/status/1092387872404111360), colección gratuita de artículos (viejos y nuevos) sobre DDD
 - [Una breve historia de casi todo](https://amzn.to/2HwdLE2), de Bill Bryson, Álvaro García Loaisa dice de él: [Posiblemente el mejor libro de divulgación científica que me he leído](https://twitter.com/aloaisa/status/1020955449905082369/photo/1)
 - [On writing well](https://amzn.to/2Y63aWj), de William Zinsser, recomendado por [Nacho Coloma](https://twitter.com/nachocoloma/status/1102564787802779648), *ha cambiado la forma en la que escribo, explicando algunas cosas que pasan en una buena revisión*
 - [Educación financiera avanzada partiendo de cero](https://www.amazon.es/Educaci%C3%B3n-Financiera-partiendo-gestionar-transformar-ebook/dp/B00COMQOM0/), de Gregorio Hernández, recomendado por un usuario en el Telegram de ZetaMoney. Parece algo básico, pero podría estar bien hacer una lectura rápida. Algo sacaré
 - [Becoming a technical leader](https://amzn.to/2CkVo1m), de Gerald Weinberg, recomendado por Gonzalo @gzpunkt a Raúl Villares por twitter
 - [Refactoring for Software Design Smells](https://www.amazon.co.uk/Refactoring-Software-Design-Smells-Technical/dp/0128013974/), de Girish Suryanarayana, Ganesh Samarthyam y Tushar Sharma, me recuerda mucho a los libros de Sandi Metz (refactorizaiones y demás)
+- [Software Configuration Management Pattern](https://amzn.to/2MhvJOB), de Stephen P. Berczuk, recomendado por [Javier Garzás](http://www.javiergarzas.com/2013/02/dijkstra-secret.html) 
 - [Grokking Algorithms](https://amzn.to/2Odwplp), de Aditya Bhargava, An illustrated guide for programmers and other curious people
 - [Coding: on software design process](https://amzn.to/2HBRIf4), de Jonathan Locke, recomendado por [Rafael Luque](https://twitter.com/rafael_luque/status/1095355032399216640), que dice que es cortito
 - [Refactoring JavaScript](https://amzn.to/2HynObF), de Evan Burchard, 500 páginas, un poco gordo, pero puede estar interesante
