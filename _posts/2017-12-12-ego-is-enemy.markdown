@@ -13,7 +13,14 @@ categories:
 
 ### Por qué lo he leído
 
-¿porque por qué por que?
+Pues la verdad es que no sé muy bien por qué. Podría entrar en la categoría de libros
+de autoayuda, pero una vez leído siento que el libro no está dirigido a personas
+como yo. Habla mucho de las personas de éxito y demás, y yo me considero más una
+persona normal, nada de un famosete o algo así.
+
+Vi que el libro lo recomendaba [Derek Sivers], que me parece razón suficiente, y
+quizá el autor lo haya oído por ahí, por el podcast de Tim Ferris, no sé, me
+suena de algo. Pero sobretodo por la recomendación.
 
 <!-- more -->
 
@@ -37,29 +44,33 @@ Lorem ipsum
 
 ## Notas tomadas
 
-THE PAINFUL PROLOGUE
-it’s the book I wish existed at critical turning points in my own life. When I, like everyone else, was called to answer the most critical questions a person can ask themselves in life: Who do I want to be? And: What path will I take?
-“EGO IS THE ENEMY”
-“THE OBSTACLE IS THE WAY.”
-INTRODUCTION
+### El prólogo doloroso
 
-EGO WAS ALWAYS THERE. NOW IT’S EMBOLDENED.
-WHEREVER YOU ARE, EGO IS TOO.
-At any given time in life, people find themselves at one of three stages.
-aspiring to something—trying
-have achieved success—perhaps
-have achieved success—perhaps
-have failed—recently
-SO, WHAT NOW?
+El ego es el enemigo, y el obstáculo es el camino
 
-part one
-ASPIRE
-to wharever you aspire. ... ego is your enemy
+### Introducción
 
+El ego siempre estuvo ahí. Y ahora está envalentonado. Allá donde estés, el ego está ahí también.
 
-does fantasy and “vision.” In this phase, you must practice seeing yourself with a little distance, cultivating the ability to get out of your own head. Detachment is a sort of natural ego antidote. It’s easy to be emotionally invested and infatuated with your own work. Any and every narcissist can do that. What is rare is not raw talent, skill, or even confidence, but humility, diligence, and self-awareness.
-In this phase, you must practice seeing yourself with a little distance, cultivating the ability to get out of your own head. Detachment is a sort of natural ego antidote. It’s easy to be emotionally invested and infatuated with your own work. Any and every narcissist can do that. What is rare is not raw talent, skill, or even confidence, but humility, diligence, and self-awareness.
-TALK, TALK, TALK
+En un momento cualquiera de la vida, la gente se encuentra en alguna de estas
+fases:
+
+1. Aspirando a algo más
+2. Ha alcanzado el éxito
+3. Ha fracasado
+
+### Aspirar
+
+Da lo mismo a lo que aspires, el ego es tu enemigo
+
+En esta fase, debes practicar verte a tí mismo con un poco de distancia, cultivando
+la habilidad de salir de tu propia mente. El desapego es un antídoto natural para
+el ego. Es fácil estar emocionalmente enamorado de tu propio trabajo. Cualquira
+puede hacerlo. Lo que es raro no es el talento natural, las habilidades o incluso
+la confianza. Lo que es raro es la humildad, la diligencia y la consciencia de 
+sí mismo.
+
+### Hablar, hablar, hablar
 
 It’s a temptation that exists for everyone—for talk and hype to replace action.
 Blank spaces, begging to be filled in with thoughts, with photos, with stories. With what we’re going to do,
