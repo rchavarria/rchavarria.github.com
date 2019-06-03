@@ -38,7 +38,7 @@ Lorem ipsum
 
 ### Frases que me gustaría recordar
 
-> lorem ipsum
+> La única relación entre el trabajo y el parloteo es que el uno mata al otro
 
 <!-- -->
 
@@ -72,22 +72,24 @@ sí mismo.
 
 ### Hablar, hablar, hablar
 
-It’s a temptation that exists for everyone—for talk and hype to replace action.
-Blank spaces, begging to be filled in with thoughts, with photos, with stories. With what we’re going to do,
-espacios en blanco donde escribir lo que vamos a hacer. no lo que hacemos o hemos hecho
-she did what a lot of us do when we’re scared or overwhelmed by a project: she did everything but focus on
-parece comonprocastinar. pero peor
-Even a child knows how to gossip and chatter. Most people are decent at hype and sales. So what is scarce and rare? Silence.
-Most people are decent at hype and sales. So what is scarce and rare? Silence.
+Hablar en lugar de hacer es una tentación que existe para todo el mundo. 
 
-talk—it’s earned. The only relationship between work and chatter is that one kills the other.
-that one kills the other.
-do talk—it’s earned. The only relationship between work and chatter is that one kills the other.
-do talk—it’s earned. The only relationship between work and chatter is that one kills the other.
-talk—it’s earned. The only relationship between work and chatter is that one kills the other.
-no hables tanto . ni siquiera a ti mismo  y haz el trabajo duro. lucha contra las ganas de parar para hablar
-Success requires a full 100 percent of our effort, and talk flitters part of that effort away before we can use it.
-TO BE OR TO DO?
+Los espacios en blanco piden ser llenados con pensamientos, fotos e historias. Debemos
+llenarlos con lo que vamos a hacer, no con lo que hacemos o hemos hecho.
+
+Muchos de nosotros, cuando un proyecto nos asusta o nos sentimos sobrepasados por él,
+hacemos cualquier cosa, menos enfocarnos en él (es como procrastinar, pero peor)
+
+La mayoría de la gente es decente a la hora de generar espectativas sobre lo que
+está trabajando. Pero, ¿que es lo que más escasea? El silencio. 
+
+La única relación entre el trabajo y el parloteo es que el uno mata al otro.
+
+No hables tanto, ni siquiera a ti mismo y haz el trabajo duro. Lucha contra las 
+ganas de parar para hablar.
+
+### Ser o hacer?
+
 Having authority is not the same as being an authority. Having the right and being right are not the same either. Being promoted doesn’t necessarily mean you’re doing good work and it doesn’t mean you are worthy of promotion (they call it failing upward in such bureaucracies). Impressing people is utterly different from being truly impressive.
 Boyd puts in front of us comes down to purpose. What is your purpose? What are you here to do? Because purpose helps you answer the question “To be or to do?“
 Boyd puts in front of us comes down to purpose. What is your purpose? What are you here to do? Because purpose helps you answer the question “To be or to do?“
