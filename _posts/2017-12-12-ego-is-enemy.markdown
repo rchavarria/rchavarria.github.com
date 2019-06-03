@@ -90,11 +90,19 @@ ganas de parar para hablar.
 
 ### Ser o hacer?
 
-Having authority is not the same as being an authority. Having the right and being right are not the same either. Being promoted doesn’t necessarily mean you’re doing good work and it doesn’t mean you are worthy of promotion (they call it failing upward in such bureaucracies). Impressing people is utterly different from being truly impressive.
-Boyd puts in front of us comes down to purpose. What is your purpose? What are you here to do? Because purpose helps you answer the question “To be or to do?“
-Boyd puts in front of us comes down to purpose. What is your purpose? What are you here to do? Because purpose helps you answer the question “To be or to do?“
-What is your purpose? What are you here to do? Because purpose helps you answer the question “To be or to do?“
+Tener autoridad no es lo mismo que serla. Tener un derecho y tener razón (juego
+de palabras en inglés: have right Vs be right) tampoco. Ser ascendido no tiene
+porqué significar que te lo merezcas.
+
+¿Cuál es tu propósito? ¿Qué haces aquí? Porque tener un propósito te ayuda a
+responder la pregunta: ser o hacer?
+
+### Convertirse en estudiante
+
 BECOME A STUDENT
+
+📜
+
 The power of being a student is not just that it is an extended period of instruction, it also places the ego and ambition in someone else’s hands.
 imposed—one knows that he is not better than the “master” he apprentices under.
 plus, minus, and equal. Each fighter, to become great, he said, needs to have someone better that they can learn from, someone lesser who they can teach, and someone equal that they can challenge themselves against.
