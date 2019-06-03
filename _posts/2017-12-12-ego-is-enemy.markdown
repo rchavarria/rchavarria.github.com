@@ -42,6 +42,12 @@ Lorem ipsum
 
 <!-- -->
 
+> Método más, menos e igual: cada luchador, para llegar a ser grande, necesita tener
+  alguien mejor que él del que aprender, peor que él para enseñarle y alguien similar
+  con el que poder desafiarse mutuamente
+
+<!-- -->
+
 ## Notas tomadas
 
 ### El prólogo doloroso
@@ -99,17 +105,23 @@ responder la pregunta: ser o hacer?
 
 ### Convertirse en estudiante
 
-BECOME A STUDENT
+El poder de ser un estudiante no es solo que es un período largo de instrucción,
+también pone el ego y la ambición en manos de otro. Uno sabe que no es mejor que
+el maestro.
+
+Método más, menos e igual: cada luchador, para llegar a ser grande, necesita tener
+alguien mejor que él del que aprender, peor que él para enseñarle y alguien similar
+con el que poder desafiarse mutuamente.
+
+No solamente necesitamos aceptar el feedback severo y crítico, debemos buscarlo
+actívamente, debemos buscar lo negativo precisamente cuando nuestros familiares,
+amigos y cerebro nos dicen que lo estamos haciendo muy bien.
+
+### No seas apasionado
+
+DON’T BE PASSIONATE
 
 📜
-
-The power of being a student is not just that it is an extended period of instruction, it also places the ego and ambition in someone else’s hands.
-imposed—one knows that he is not better than the “master” he apprentices under.
-plus, minus, and equal. Each fighter, to become great, he said, needs to have someone better that they can learn from, someone lesser who they can teach, and someone equal that they can challenge themselves against.
-el metodo mas. menos e igual
-We not only need to take this harsh feedback, but actively solicit it, labor to seek out the negative precisely when our friends and family
-We not only need to take this harsh feedback, but actively solicit it, labor to seek out the negative precisely when our friends and family and brain are telling us that we’re doing great.
-DON’T BE PASSIONATE
 
 Passion typically masks a weakness. Its breathlessness and impetuousness and franticness are poor substitutes for discipline, for mastery, for strength and purpose and perseverance.
 en lufar de pasion necesitamos disciplina. objetivos. proposito. perseverancia...
