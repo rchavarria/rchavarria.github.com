@@ -48,6 +48,16 @@ Lorem ipsum
 
 <!-- -->
 
+> La falta de respiración, impetuosidad y locura desesperada (breathlessness, 
+  impetuousness, franticness) de la pasión son pobres sustitutos de la 
+  disciplina, maestría, fuerza, propósito y perseverancia
+
+<!-- -->
+
+> Canvas strategy: va de ayudarte a tí mismo ayudando a los demás
+
+<!-- -->
+
 ## Notas tomadas
 
 ### El prólogo doloroso
@@ -118,24 +128,36 @@ actívamente, debemos buscar lo negativo precisamente cuando nuestros familiares
 amigos y cerebro nos dicen que lo estamos haciendo muy bien.
 
 ### No seas apasionado
+La pasión, normalmente, enmascara una debilidad. Su falta de respiración, 
+impetuosidad y locura desesperada (breathlessness, impetuousness, franticness) 
+son pobres sustitutos de la disciplina, maestría, fuerza, propósito y
+perseverancia.
 
-DON’T BE PASSIONATE
+Deja la pasión para los aficionados. Utilízala para lo que sientes que tienes
+que hacer y decir, no para lo que quieres ser.
+
+### Sigue la estategia del lienzo (canvas)
+
+Encuentra *lienzos* para que otras personas pinten sobre ellos. Despeja el camino
+para la gente por encima de tí y al final crearás un camino para tí.
+
+La estategia del lienzo (canvas strategy) va de ayudarte a tí mismo ayudando a
+los demás.
+
+### Contente, domínate a tí mismo
+
+Enfadarse, volverse muy emocional, perder los nervios: es una receta para fallar.
+
+Cuando quieres hacer algo grande, espera que las reacciones varíen desde la
+indiferencia hasta el sabotaje más abierto.
+
+Cuando los demás te tratan mal, no te rebajan a tí, se rebajan ellos.
+
+### Sal de tu propia cabeza
+
+GET OUT OF YOUR OWN HEAD
 
 📜
-
-Passion typically masks a weakness. Its breathlessness and impetuousness and franticness are poor substitutes for discipline, for mastery, for strength and purpose and perseverance.
-en lufar de pasion necesitamos disciplina. objetivos. proposito. perseverancia...
-Leave passion for the amateurs. Make it about what you feel you must do and say, not what you care about and wish to be.
-FOLLOW THE CANVAS STRATEGY
-Find canvases for other people to paint on. Be an anteambulo. Clear the path for the people above you and you will eventually create a path for yourself.
-That’s what the canvas strategy is about—helping yourself by helping others.
-
-RESTRAIN YOURSELF
-Getting angry, getting emotional, losing restraint is a recipe for failure in
-your connections are, how much money you have. When you want to do something—something big and important and meaningful—you will be subjected to treatment ranging from indifference to outright sabotage. Count
-When you want to do something—something big and important and meaningful—you will be subjected to treatment ranging from indifference to outright sabotage. Count
-it doesn’t degrade you when others treat you poorly; it degrades them.
-GET OUT OF YOUR OWN HEAD
 
 practicality? Living clearly and presently takes courage. Don’t live in the haze of the abstract, live with the tangible and real, even if—especially if—it’s uncomfortable.
 practicality? Living clearly and presently takes courage. Don’t live in the haze of the abstract, live with the tangible and real, even if—especially if—it’s uncomfortable.
