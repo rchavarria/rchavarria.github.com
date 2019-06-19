@@ -35,6 +35,7 @@ Así que aquí está mi Lista de Lectura:
 - [Educación financiera avanzada partiendo de cero](https://www.amazon.es/Educaci%C3%B3n-Financiera-partiendo-gestionar-transformar-ebook/dp/B00COMQOM0/), de Gregorio Hernández, recomendado por un usuario en el Telegram de ZetaMoney. Parece algo básico, pero podría estar bien hacer una lectura rápida. Algo sacaré
 - [Becoming a technical leader](https://amzn.to/2CkVo1m), de Gerald Weinberg, recomendado por Gonzalo @gzpunkt a Raúl Villares por twitter
 - [Refactoring for Software Design Smells](https://www.amazon.co.uk/Refactoring-Software-Design-Smells-Technical/dp/0128013974/), de Girish Suryanarayana, Ganesh Samarthyam y Tushar Sharma, me recuerda mucho a los libros de Sandi Metz (refactorizaiones y demás)
+- [Agile technical practices distilled](https://leanpub.com/agiletechnicalpracticesdistilled/), de Pedro Moreira Santos y otros
 - [Software Configuration Management Pattern](https://amzn.to/2MhvJOB), de Stephen P. Berczuk, recomendado por [Javier Garzás](http://www.javiergarzas.com/2013/02/dijkstra-secret.html) 
 - [Grokking Algorithms](https://amzn.to/2Odwplp), de Aditya Bhargava, An illustrated guide for programmers and other curious people
 - [Coding: on software design process](https://amzn.to/2HBRIf4), de Jonathan Locke, recomendado por [Rafael Luque](https://twitter.com/rafael_luque/status/1095355032399216640), que dice que es cortito
