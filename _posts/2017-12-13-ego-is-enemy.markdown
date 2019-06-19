@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "Ego is the enemy"
-date: 2017-12-12 19:39
+date: 2017-12-13 19:39
 author: Ruben Chavarria
 categories:
 - Reseñas
