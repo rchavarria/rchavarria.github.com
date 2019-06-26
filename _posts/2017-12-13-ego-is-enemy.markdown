@@ -154,44 +154,47 @@ Cuando los demás te tratan mal, no te rebajan a tí, se rebajan ellos.
 
 ### Sal de tu propia cabeza
 
-GET OUT OF YOUR OWN HEAD
+Vivir con claridad y en el presente demanda coraje. No vivas en la confusión de 
+lo abstracto, vive con lo tangible y real, incluso si (espcialmente si) es 
+incómodo. Se parte de lo que te rodea.
+
+### El peligro de un orgullo prematuro
+
+El orgullo, incluso de logros reales, es una distracción y nos engaña.
+
+Nuestra habilidad de aprender, adaptarnos, de ser flexibles, de construir
+relaciones, todo esto es nublado/apagado por el orgullo.
+
+La pregunta a hacerse, cuando uno se siente orgulloso, es la siguiente: ¿qué me
+estoy perdiendo ahora mismo que una persona más humilde estaría viendo?
+
+### Trabaja, trabaja, trabaja
+
+Acepta que tener una idea no es suficiente, debes trabajar.
+
+Llegar hasta donde queremos ir, no es una cuestión de ser brillante, si no de
+un esfuerzo contínuo.
+
+Cuando no estás practicando, recuerda, alguien, en algún sitio está practicando,
+y cuando os encontréis, él te ganará.
+
+Cada vez que te pones a trabajar, recuérdate a ti mismo: estoy retrasando una
+gratificación al hacer esto, estoy haciendo una inversión en mí en lugar de 
+invertir en mi ego.
+
+Tienes que volver a ponerte manos a la obra: practicar, trabajar, mejorar.
+
+En lugar de *Fake it 'till you make it*, a él le gusta decir *Make it so that
+you don't have to fake it*
+
+### Para todo lo que está por venir, el ego es el enemigo
+
+### Parte 2: Exito
 
 📜
 
-practicality? Living clearly and presently takes courage. Don’t live in the haze of the abstract, live with the tangible and real, even if—especially if—it’s uncomfortable.
-practicality? Living clearly and presently takes courage. Don’t live in the haze of the abstract, live with the tangible and real, even if—especially if—it’s uncomfortable.
-Living clearly and presently takes courage. Don’t live in the haze of the abstract, live with the tangible and real, even if—especially if—it’s uncomfortable.
-Living clearly and presently takes courage. Don’t live in the haze of the abstract, live with the tangible and real, even if—especially if—it’s uncomfortable. Be part of what’s going on around you.
-THE DANGER OF EARLY PRIDE
-
-pride—even in real accomplishments—is a distraction and a deluder.
-Our ability to learn, to adapt, to be flexible, to build relationships, all of this is dulled by pride.
-The question to ask, when you feel pride, then, is this: What am I missing right now that a more humble person might see?
-WORK, WORK, WORK
-
-you accept that having an idea is not enough; that you must work
-Is it ten thousand hours or twenty thousand hours to mastery?
-There is no end zone.
-to get where we want to go isn’t about brilliance, but continual effort.
-basketball player, Bill Bradley would remind himself, “When you are not practicing, remember, someone somewhere is practicing, and when you meet him he will win.”
-“When you are not practicing, remember, someone somewhere is practicing, and when you meet him he will win.”
-Fake it ’til you make it.
-no le gusta esta frase
-Make it so you don’t have to fake it—that’s
-esta en cambio si
-Every time you sit down to work, remind yourself: I am delaying gratification by doing this.
-am making an investment in myself instead of in my ego.
-I am making an investment in myself instead of in my ego.
-you’ve got to get back
-you’ve got to get back to the task at hand: practicing, working, improving. Work is finding yourself alone at the track
-you’ve got to get back to
-you’ve got to get back to the task at hand: practicing, working, improving.
-tienes q ponerte a currsr. practicar. ...
-FOR EVERYTHING THAT COMES NEXT, EGO IS THE ENEMY . . .
-
-parte 2. exito
-SUCCESS
 Success is intoxicating, yet to sustain it requires sobriety. We can’t keep learning if we think we already know everything.
+
 ALWAYS STAY A STUDENT
 
 —RALPH WALDO EMERSON The legend of Genghis
