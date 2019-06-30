@@ -210,7 +210,7 @@ defmodule Times do
   end
 
   ## define una función privada
-  defp quadruple(n) do: n * 4
+  defp quadruple(n), do: n * 4
 end
 ```
 
@@ -223,7 +223,7 @@ defmodule Factorial do
   def of(0), do: 1
 
   # el factorial de cualquier otro número, es recursivo
-  def of(n), do: n * factorial(n - 1)
+  def of(n), do: n * of(n - 1)
 end
 
 Factor.of(5)
