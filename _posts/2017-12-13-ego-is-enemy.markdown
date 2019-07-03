@@ -191,24 +191,33 @@ you don't have to fake it*
 
 ### Parte 2: Exito
 
+El éxito es intoxicante, aún así, para sostenerlo, se requiere sobriedad. No
+se puede seguir aprendiendo si pensamos que ya lo sabemos todo.
+
+### Permanece siempre con una actitud de estudiante
+
+Genghis Khan no nació siendo un genio. En vez de eso, como un biógrafo escribió
+sobre él, estaba *en un permanente ciclo de aprendizaje pragmático, adaptación
+experimental y constante revisión dirigido por su voluntad única, disciplinada
+y enfocada* ~ Ralph Waldo Emerso, en The legend of Genghis
+
+El cañón, que revolucinó la guerra, se dice que fue el resultado de la fusión
+de la pólvora china, los lanzallamas musulmanes y los metales europeos. Fueron
+los mongolos, con su abierto aprendizaje y sus nuevas ideas quienes juntaron
+todo eso. 
+
+Cada victoria y avance que hizo a Khan más inteligente también le llevó a
+enfrentarse a nuevas situaciones que no se había encontrado nunca antes.
+
+Se necesita cierto toque de humildad reconocer que sabes poco, incluso si cada
+vez sabes más y más.
+
+El entendimiento y la maestría es un proceso fluído y contínuo.
+
 📜
 
-Success is intoxicating, yet to sustain it requires sobriety. We can’t keep learning if we think we already know everything.
-
-ALWAYS STAY A STUDENT
-
-—RALPH WALDO EMERSON The legend of Genghis
-culture learned and absorbed something new. Genghis Khan was not born a genius. Instead, as one biographer put it, his was “a persistent cycle of pragmatic learning, experimental adaptation, and constant revision driven
-culture learned and absorbed something new. Genghis Khan was not born a genius. Instead, as one biographer put it, his was “a persistent cycle of pragmatic learning, experimental adaptation, and constant revision driven by his uniquely disciplined and focused will.”
-Genghis Khan was not born a genius. Instead, as one biographer put it, his was “a persistent cycle of pragmatic learning, experimental adaptation, and constant revision driven by his uniquely disciplined and focused will.”
-mining technology, French metalworking, and Islam. The cannon, which revolutionized warfare, was said to be the resulting fusion of Chinese gunpowder, Muslim flamethrowers, and European metalwork. It was Mongol openness to learning
-The cannon, which revolutionized warfare, was said to be the resulting fusion of Chinese gunpowder, Muslim flamethrowers, and European metalwork. It was Mongol openness to learning and
-The cannon, which revolutionized warfare, was said to be the resulting fusion of Chinese gunpowder, Muslim flamethrowers, and European metalwork. It was Mongol openness to learning and new ideas that brought them together.
-each victory and advancement that made Khan smarter also bumped him against new situations he’d never encountered before.
-It takes a special kind of humility to grasp that you know less, even as you know and grasp more and more.
-that we’re set and secure, when in reality understanding and mastery is a fluid, continual process.
-understanding and mastery is a fluid, continual process.
 DON’T TELL YOURSELF A STORY
+
 you doubted yourself? Crafting stories out of past events is a very human impulse. It’s also dangerous and untrue. Writing our own narrative leads to arrogance.
 Crafting stories out of past events is a very human impulse. It’s also dangerous and untrue. Writing our own narrative leads to arrogance.
 uy podemos creernos nuestra propua mentira o historua
