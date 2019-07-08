@@ -57,6 +57,12 @@ Lorem ipsum
 
 <!-- -->
 
+> Cuando alcancemos el éxito nosotros mismos, no debemos montar una gran historia
+  a su alrededor. No la hay. Sólo trabajo duro. (El éxito) está basado en el 
+  trabajo, la creatividad, la persistencia y la suerte.
+
+<!-- -->
+
 ## Notas tomadas
 
 ### El prólogo doloroso
@@ -214,20 +220,30 @@ vez sabes más y más.
 
 El entendimiento y la maestría es un proceso fluído y contínuo.
 
+### No te cuentes historias
+
+Inventarse historias sobre eventos pasados es un impulso muy humano. Pero también
+es peligroso e incierto. Escribir nuestra propia narrativa nos conduce a la
+arrogancia. No debemos creernos nuestra propia mentira o historia.
+
+Solo cuando ellos (los que han alcanzado el éxito) pararon de inventarse 
+historias y se enfocaron en la tarea que tocaba es cuando ellos comenzaron a 
+ganar como lo hacía antes.
+
+Cuando alcancemos el éxito nosotros mismos, no debemos montar una gran historia
+a su alrededor. No la hay. Sólo trabajo duro.
+
+Podemos llegar a pensar que el éxito en el futuro es solamente el siguiente paso
+natural de la historia. Cuando en realidad está basado en el trabajo, la
+creatividad, la persistencia y la suerte.
+
+En lugar de creer que estamos viviendo alguna gran historia, debemos permanecer
+enfocados en la ejecución, y en la ejecución con excelencia.
+
+WHAT’S IMPORTANT TO YOU?
+
 📜
 
-DON’T TELL YOURSELF A STORY
-
-you doubted yourself? Crafting stories out of past events is a very human impulse. It’s also dangerous and untrue. Writing our own narrative leads to arrogance.
-Crafting stories out of past events is a very human impulse. It’s also dangerous and untrue. Writing our own narrative leads to arrogance.
-uy podemos creernos nuestra propua mentira o historua
-Only when they stopped with the stories and focused on the task at hand did they begin to win like they had before.
-engineer success from other people’s stories. When we achieve our own, we must resist the desire to pretend that everything unfolded exactly as we’d planned. There was no grand narrative.
-When we achieve our own, we must resist the desire to pretend that everything unfolded exactly as we’d planned. There was no grand narrative.
-al alcanzar el exito. no debemos montar una granhistoria. no la hay. solo trabajo duro
-we might think that success in the future is just the natural next part of the story—when really it’s rooted in work, creativity, persistence, and luck.
-Instead of pretending that we are living some great story, we must remain focused on the execution—and on executing with excellence.
-WHAT’S IMPORTANT TO YOU?
 mattered—to him. That’s how it seems to go: we’re never happy
 mattered—to him. That’s how it seems to go: we’re never happy
 mattered—to him. That’s how it seems to go: we’re never happy with what we have, we want what others have too.
