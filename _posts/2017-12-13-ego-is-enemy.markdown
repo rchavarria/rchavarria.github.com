@@ -240,19 +240,26 @@ creatividad, la persistencia y la suerte.
 En lugar de creer que estamos viviendo alguna gran historia, debemos permanecer
 enfocados en la ejecución, y en la ejecución con excelencia.
 
-WHAT’S IMPORTANT TO YOU?
+### ¿Qué es importante para ti?
+
+Parece que la cosa funciona así: nunca estamos contentos con lo que tenemos,
+también queremos lo que tienen los demás.
+
+Todos nosotros desperdiciamos tiempo precioso de nuestra vida para hacer cosas
+que no nos gustan, solamente para sentirnos valorados por gente que no
+respetamos y para conseguir cosas que no queremos.
+
+El ego nos lleva a la envidia.
+
+Cuanto más lejos llegas en tu viaje de realización, lo que sea que es, es más
+frecuente que te encuentres con otra gente exitosa que te hace sentir
+insignificante.
+
+No se trata de ganar a la otra persona. No se trata de tener más que los demás.
+
+ENTITLEMENT, CONTROL, AND PARANOIA
 
 📜
-
-mattered—to him. That’s how it seems to go: we’re never happy
-mattered—to him. That’s how it seems to go: we’re never happy
-mattered—to him. That’s how it seems to go: we’re never happy with what we have, we want what others have too.
-when in reality it prevents exactly what we seek. All of us waste precious life doing things we don’t like, to prove ourselves to people
-All of us waste precious life doing things we don’t like, to prove ourselves to people we don’t respect, and to get things we don’t want. Why
-Ego leads to envy
-The farther you travel down that path of accomplishment, whatever it may be, the more often you meet other successful people who make you feel insignificant.
-it’s not about beating the other guy. It’s not about having more than the others.
-ENTITLEMENT, CONTROL, AND PARANOIA
 
 we begin to overestimate our own power.
 It’s human to think that since it’s been done once—that the world was changed in some big or small way—that there is now a magical power in our possession.
