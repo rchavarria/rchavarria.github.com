@@ -63,6 +63,11 @@ Lorem ipsum
 
 <!-- -->
 
+> Los días pasan a ser menos y menos de *hacer* y se vuelven
+  más y más de *tomar decisiones*. Y esa es la naturaleza del liderazgo.
+
+<!-- -->
+
 ## Notas tomadas
 
 ### El prólogo doloroso
@@ -257,27 +262,42 @@ insignificante.
 
 No se trata de ganar a la otra persona. No se trata de tener más que los demás.
 
-ENTITLEMENT, CONTROL, AND PARANOIA
+### Privilegio, control y paranoia
+
+Comenzamos a sobreestimar nuestro poder. Es humano pensar, que como se ha hecho
+una vez (el mundo ha cambiado de alguna forma, grande o pequeña), entonces
+tenemos en nuestro poder como una especie de poder mágico.
+
+### Gestionarse a uno mismo
+
+La mayoría de nosotros no somos el presidente, ni siquiera el presidente de una
+empresa. Pero a la hora de escalar el escalafón de la vida, el sistema y los
+hábitos de trabajo que no han traído donde estamos, no necesariamente nos van
+a mantener ahí.
+
+Conforme vas siendo exitoso en tu propio campo, tus responsabiliades puede que
+comiencen a cambiar. Los días pasan a ser menos y menos de *hacer* y se vuelven
+más y más de *tomar decisiones*. Y esa es la naturaleza del liderazgo. 
+
+BEWARE THE DISEASE OF ME
 
 📜
 
-we begin to overestimate our own power.
-It’s human to think that since it’s been done once—that the world was changed in some big or small way—that there is now a magical power in our possession.
-MANAGING YOURSELF
-Most of us are not the president, or even president of a company, but in moving up the ladder in life, the system and work habits that got us where we are won’t necessarily keep us there.
-As you become successful in your own field, your responsibilities may begin to change. Days become less and less about doing and more and more about making decisions.
-Such is the nature of leadership.
-BEWARE THE DISEASE OF ME
-Ego needs honors in order to be validated. Confidence, on the other hand, is able to wait and focus on
 Ego needs honors in order to be validated. Confidence, on the other hand, is able to wait and focus on the task at hand regardless of external recognition.
+
 MEDITATE ON THE IMMENSITY
+
 walk onto ancient battlefield or a place of historical significance. Look at the statues and you can’t help but see how similar the people look,
 walk onto ancient battlefield or a place of historical significance. Look at the statues and you can’t help but see how similar the
 walk onto ancient battlefield or a place of historical significance. Look at the statues and you can’t help but see how similar the people look, how little has changed since then—since
 Yes, we are small. We are also a piece of this great universe and a process.
+
 MAINTAIN
+
 MAINTAIN YOUR SOBRIETY
+
 Most successful people are people you’ve never heard of. They want it that way. It keeps them sober. It helps them do their jobs.
+
 FOR WHAT OFTEN COMES NEXT, EGO IS THE ENEMY . . .
 
 instead of taking what we have for granted, we’d be better to spend our time preparing for the shifts of fate that inevitably occur in life. That is, adversity, difficulty, failure.
