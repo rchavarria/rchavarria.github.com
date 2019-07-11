@@ -279,87 +279,141 @@ Conforme vas siendo exitoso en tu propio campo, tus responsabiliades puede que
 comiencen a cambiar. Los días pasan a ser menos y menos de *hacer* y se vuelven
 más y más de *tomar decisiones*. Y esa es la naturaleza del liderazgo. 
 
-BEWARE THE DISEASE OF ME
+### Cuidado con la enfermedad del mí
+
+El ego necesita de honores para validarse. Por otro lado, la confianza puede
+esperar y enfocarse en la tarea que toca ignorando cualquier reconocimiento
+externo.
+
+### Medita sobre la inmensidad
+
+Si visitas algún lugar con una gran significancia histórica, mira las estatuas
+que allí se encuentren. Si te das cuenta, la gente es bastante similar a la
+gente de hoy. Las cosas no han cambiado tanto desde entonces.
+
+Sí, somos pequeños. Nosotros también formamos parte de este gran universo y de
+un proceso.
+
+### Mantén tu sobriedad
+
+La mayoría de la gente exitosa es gente de la que nunca has oído hablar. Ellos
+lo quieren así. Eso les mantiene serenos, sobrios. Eso les ayuda a realizar su
+trabajo.
+
+### Parte 3: para lo que suele venir después, el ego es el enemigo
+
+En lugar de tomar por seguro aquello que tenemos, sería mejor pasar cierto tiempo
+preparándonos para los golpes de destino que inevitablemente ocurrirán en la 
+vida: adversidad, dificultad y fallos.
+
+FAILURE
 
 📜
 
-Ego needs honors in order to be validated. Confidence, on the other hand, is able to wait and focus on the task at hand regardless of external recognition.
-
-MEDITATE ON THE IMMENSITY
-
-walk onto ancient battlefield or a place of historical significance. Look at the statues and you can’t help but see how similar the people look,
-walk onto ancient battlefield or a place of historical significance. Look at the statues and you can’t help but see how similar the
-walk onto ancient battlefield or a place of historical significance. Look at the statues and you can’t help but see how similar the people look, how little has changed since then—since
-Yes, we are small. We are also a piece of this great universe and a process.
-
-MAINTAIN
-
-MAINTAIN YOUR SOBRIETY
-
-Most successful people are people you’ve never heard of. They want it that way. It keeps them sober. It helps them do their jobs.
-
-FOR WHAT OFTEN COMES NEXT, EGO IS THE ENEMY . . .
-
-instead of taking what we have for granted, we’d be better to spend our time preparing for the shifts of fate that inevitably occur in life. That is, adversity, difficulty, failure.
-parte 3
-FAILURE
 chance of failure or setbacks. Bill Walsh says, “Almost always, your road to victory goes through a place called ‘failure.’” In order to taste success again, we’ve got to understand what led to this moment (or these years) of difficulty, what went wrong and why. We must deal with the situation in order to move past it. We’ll need to accept it and to push through it.
+
 “Almost always, your road to victory goes through a place called ‘failure.’” In order to taste success again, we’ve got to understand what led to this moment (or these years) of difficulty, what went wrong and why. We must deal with the situation in order to move past it. We’ll need to accept it and to push through it.
+
 When we face difficulty, particularly public difficulty (doubters, scandals, losses), our friend the ego will show its true colors. Absorbing the negative feedback, ego says: I knew you couldn’t do it. Why did you ever try? It claims: This isn’t worth it. This isn’t fair. This is somebody else’s problem. Why don’t you come up with a good excuse and wash your hands of this?
+
 The only way out is through.
 la unic orma de salir de la adversidad es atravesarla
+
 ALIVE TIME OR DEAD TIME?
+
 Every moment of failure, every moment or situation that we did not deliberately choose or control, presents this choice: Alive time. Dead time.
+
 When injustice or the capriciousness of fate are inflicted on someone, the normal reaction is to yell, to fight back, to resist. You know the feeling: I don’t want this. I want ______. I want it my way. This is shortsighted.
+
 when we fail or get ourselves into trouble. Lacking the ability to examine ourselves, we reinvest our energy into exactly the patterns of behavior that caused our problems to begin with.
-But what if we said: This is an opportunity for me. I am using it for my
+
 But what if we said: This is an opportunity for me. I am using it for my purposes. I will not let this be dead time for me.
+
 where you are.” Make use of what’s around you. Don’t let stubbornness make a bad situation worse.
+
 Don’t let stubbornness make a bad situation worse.
+
 THE EFFORT IS ENOUGH
+
 was enough. In life, there will be times when we do everything right, perhaps even perfectly. Yet the results will somehow be negative:
+
 In life, there will be times when we do everything right, perhaps even perfectly. Yet the results will somehow be negative:
+
 If ego holds sway, we’ll accept nothing less than full appreciation.
+
 Will we work hard for something that can be taken away from us? Will we invest time and energy even if an outcome is not guaranteed? With the right motives we’re willing to proceed. With ego, we’re not.
+
 understand? It’s far better when doing good work is sufficient. In other words, the less attached we are to outcomes the better.
+
 It’s far better when doing good work is sufficient. In other words, the less attached we are to outcomes the better.
+
 bad—is enough. With ego, this is not nearly sufficient. No, we need to be recognized. We need to be compensated.
+
 FIGHT CLUB MOMENTS
+
 hard things. The bigger the ego the harder the fall.
+
 The bigger the ego the harder the fall.
 todo el mundo toca fondo alguna vez
+
 Does everyone take advantage of that opportunity? Of course not. Ego often causes the crash and then blocks us from improving.
+
 Face the symptoms. Cure the disease. Ego makes it so hard—it’s easier to delay, to double down,
+
 But change begins by hearing the criticism and the words of the people around you.
+
 DRAW THE LINE
 
-You’ve seen this. You’ve done this. Fighting desperately
 You’ve seen this. You’ve done this. Fighting desperately for something we’re only making worse.
+
 Athenians to their ultimate ruin. Ego kills what we love. Sometimes, it comes close to killing us too.
+
 Ego kills what we love. Sometimes, it comes close to killing us too.
+
 Have the courage to make a full stop.”
+
 You have to be able to see the bigger picture. But when ego is in control, who can?
+
 Shit happens and, as they say, sometimes shit happens in public. It’s not fun. The questions remain: Are you going to make it worse?
+
 MAINTAIN YOUR OWN SCORECARD
+
 middle.”) This is characteristic of how great people think. It’s not that they find failure in every success. They just hold themselves to a standard that exceeds what society might consider to be objective success. Because of that, they don’t much care what other people think; they care whether they meet their own standards.
+
 improve. Ego can’t see both sides of the issue. It can’t get better because it only sees the validation.
+
 Remember, “Vain men never hear anything but praise.” It can only see what’s going well, not what isn’t.
+
 It can only see what’s going well, not what isn’t.
+
 and strong during the occasional defeat as well. When you take ego out of the equation, other people’s opinions and external markers won’t matter as much.
+
 people’s opinions and external markers won’t matter as much.
+
 When you take ego out of the equation, other people’s opinions and external markers won’t matter as much.
+
 ALWAYS LOVE
 
 In the Internet age, we call this the Streisand effect
+
 Attempting to destroy something out of hate or ego often ensures that it will be preserved and disseminated forever.
+
 to quote his lyrics, “smile[d] its blacktooth grin.” This obsession with the past, with something that someone did or how things should have been, as much as it hurts, is ego embodied. Everyone else has moved on, but you can’t, because you can’t see anything but your own way.
+
 This obsession with the past, with something that someone did or how things should have been, as much as it hurts, is ego embodied. Everyone else has moved on, but you can’t, because you can’t see anything but your own way.
+
 Does this get us any closer to where we want to be? No.
+
 FOR EVERYTHING THAT COMES NEXT, EGO IS THE ENEMY . . .
+
 the old Celtic saying tells us, “See much, study much, suffer much, that is the path to wisdom.”
+
 Aspiration leads to success (and adversity). Success creates its own adversity (and, hopefully, new ambitions). And adversity leads to aspiration and more success. It’s an endless loop.
+
 EPILOGUE
+
 what is most obvious but most ignored is that perfecting the personal regularly leads to success as a professional, but rarely the other way around.
+
 WHAT SHOULD YOU READ NEXT?
 
 ## Recursos
