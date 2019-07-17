@@ -347,25 +347,27 @@ mis propósitos, no dejaré que esto sea un momento de *muerte* para mi.
 
 No dejes que la cabezonería haga que una situación mala se vuelva peor.
 
-THE EFFORT IS ENOUGH
+### El esfuerzo es suficiente
 
-📜
+En la vida, hay veces que lo hacemos todo bien, incluso perfecto, y aún así,
+los resultados son de alguna forma negativos.
 
-was enough. In life, there will be times when we do everything right, perhaps even perfectly. Yet the results will somehow be negative:
+Si el ego domina de forma imparable, no aceptaremos nada que sea menos que una
+apreciación total.
 
-In life, there will be times when we do everything right, perhaps even perfectly. Yet the results will somehow be negative:
+¿Vamos a trabajar duro por algo que nos pueden arrebatar? ¿Vamos a invertir
+tiempo y energía incluso si los resultados no están garantizados? Con la
+motivación correcta sí, con el ego, no.
 
-If ego holds sway, we’ll accept nothing less than full appreciation.
+Es mucho mejor cuando el hecho de hacer un buen trabajo es suficiente. Cuanto
+menos apego tenemos a los resultados, mejor.
 
-Will we work hard for something that can be taken away from us? Will we invest time and energy even if an outcome is not guaranteed? With the right motives we’re willing to proceed. With ego, we’re not.
-
-understand? It’s far better when doing good work is sufficient. In other words, the less attached we are to outcomes the better.
-
-It’s far better when doing good work is sufficient. In other words, the less attached we are to outcomes the better.
-
-bad—is enough. With ego, this is not nearly sufficient. No, we need to be recognized. We need to be compensated.
+Con el ego, nada parece ser suficiente. Necesitamos ser reconocidos, necesitamos
+ser recompensados.
 
 FIGHT CLUB MOMENTS
+
+📜
 
 hard things. The bigger the ego the harder the fall.
 
