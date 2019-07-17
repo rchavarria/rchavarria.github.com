@@ -329,23 +329,27 @@ te lavas las manos en el asunto?
 
 La única forma de salir de la adversidad es atraversarla
 
-ALIVE TIME OR DEAD TIME?
+### Es tiempo de estar vivo, o de estar muerto?
 
-📜
+Cada momento de fallo, cada momento o situación que no controlamos o elegimos
+deliberadamente, nos presenta este dilema: estar vivo o estar muerto.
 
-Every moment of failure, every moment or situation that we did not deliberately choose or control, presents this choice: Alive time. Dead time.
+Cuando una injusticia o el capricho del destino caen sobre alguien, la reacción
+normal es gritar, luchar contra ello, resistirse. *No quiero esto, quiero 
+aquello, quiero que sea de esta forma*. Esto es de ser corto de miras.
 
-When injustice or the capriciousness of fate are inflicted on someone, the normal reaction is to yell, to fight back, to resist. You know the feeling: I don’t want this. I want ______. I want it my way. This is shortsighted.
+Si no tenemos la habilidad de autoexaminarnos, vamos a reinvertir nuestra
+energía exactamente en los mismos patrones de comportamiento que nos causaron
+los problemas con los que comenzamos.
 
-when we fail or get ourselves into trouble. Lacking the ability to examine ourselves, we reinvest our energy into exactly the patterns of behavior that caused our problems to begin with.
+Qué tal si nos decimos: esto es una oportunidad para mí, voy a usar esto para
+mis propósitos, no dejaré que esto sea un momento de *muerte* para mi.
 
-But what if we said: This is an opportunity for me. I am using it for my purposes. I will not let this be dead time for me.
-
-where you are.” Make use of what’s around you. Don’t let stubbornness make a bad situation worse.
-
-Don’t let stubbornness make a bad situation worse.
+No dejes que la cabezonería haga que una situación mala se vuelva peor.
 
 THE EFFORT IS ENOUGH
+
+📜
 
 was enough. In life, there will be times when we do everything right, perhaps even perfectly. Yet the results will somehow be negative:
 
