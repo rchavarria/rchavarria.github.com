@@ -68,6 +68,10 @@ Lorem ipsum
 
 <!-- -->
 
+> La única forma de salir de la adversidad es atraversarla
+
+<!-- -->
+
 ## Notas tomadas
 
 ### El prólogo doloroso
@@ -306,20 +310,28 @@ En lugar de tomar por seguro aquello que tenemos, sería mejor pasar cierto tiem
 preparándonos para los golpes de destino que inevitablemente ocurrirán en la 
 vida: adversidad, dificultad y fallos.
 
-FAILURE
+### Fallo
 
-📜
+> Casi siempre, el camino a la victoria pasa por un lugar llamado *fallo*
 
-chance of failure or setbacks. Bill Walsh says, “Almost always, your road to victory goes through a place called ‘failure.’” In order to taste success again, we’ve got to understand what led to this moment (or these years) of difficulty, what went wrong and why. We must deal with the situation in order to move past it. We’ll need to accept it and to push through it.
+~ Bill Walsh
 
-“Almost always, your road to victory goes through a place called ‘failure.’” In order to taste success again, we’ve got to understand what led to this moment (or these years) of difficulty, what went wrong and why. We must deal with the situation in order to move past it. We’ll need to accept it and to push through it.
+Para saborear el éxito otra vez, debemos entender qué nos llevó a ese momento
+(o años) de dificultad, qué salió mal y por qué. Debemos lidiar con la situación
+para poder superarla. Necesitamos aceptarla y esforzarnos para superarla.
 
-When we face difficulty, particularly public difficulty (doubters, scandals, losses), our friend the ego will show its true colors. Absorbing the negative feedback, ego says: I knew you couldn’t do it. Why did you ever try? It claims: This isn’t worth it. This isn’t fair. This is somebody else’s problem. Why don’t you come up with a good excuse and wash your hands of this?
+Cuando nos enfrentamos a una dificultad, especialmente una en un contexto
+público (dudas, escándalos, pérdidas), nuestro amigo ego nos mostrará sus
+verdaderos colores. Absorbiendo las críticas negativas, el ego dice: sabía
+que no podrías hacerlo, por qué lo intentaste? El ego reclama: no vale la pena,
+no es justo, es problema de otros, por qué no te inventas una buena excusa y
+te lavas las manos en el asunto?
 
-The only way out is through.
-la unic orma de salir de la adversidad es atravesarla
+La única forma de salir de la adversidad es atraversarla
 
 ALIVE TIME OR DEAD TIME?
+
+📜
 
 Every moment of failure, every moment or situation that we did not deliberately choose or control, presents this choice: Alive time. Dead time.
 
