@@ -365,22 +365,19 @@ menos apego tenemos a los resultados, mejor.
 Con el ego, nada parece ser suficiente. Necesitamos ser reconocidos, necesitamos
 ser recompensados.
 
-FIGHT CLUB MOMENTS
+### Momentos del Club de la lucha
 
-📜
+Cuanto mayor es el ego, mayor es la caída. Todo el mundo toca fondo alguna vez.
 
-hard things. The bigger the ego the harder the fall.
+El ego generalmente causa la caída y luego nos bloquea para que no podamos
+mejorar y recuperarnos.
 
-The bigger the ego the harder the fall.
-todo el mundo toca fondo alguna vez
-
-Does everyone take advantage of that opportunity? Of course not. Ego often causes the crash and then blocks us from improving.
-
-Face the symptoms. Cure the disease. Ego makes it so hard—it’s easier to delay, to double down,
-
-But change begins by hearing the criticism and the words of the people around you.
+Enfréntate a los síntomas. Cura la enfermedad. El cambio comienza cuando escuchas
+las críticas y las palabras de las personas a tu alrededor
 
 DRAW THE LINE
+
+📜
 
 You’ve seen this. You’ve done this. Fighting desperately for something we’re only making worse.
 
