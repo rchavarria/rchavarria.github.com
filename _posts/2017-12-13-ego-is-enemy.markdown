@@ -375,23 +375,19 @@ mejorar y recuperarnos.
 Enfréntate a los síntomas. Cura la enfermedad. El cambio comienza cuando escuchas
 las críticas y las palabras de las personas a tu alrededor
 
-DRAW THE LINE
+### Dibuja la línea
 
-📜
+Luchar desesperadamente por algo que ya está perdido solo hace que las cosas
+vayan a peor.
 
-You’ve seen this. You’ve done this. Fighting desperately for something we’re only making worse.
+Ten el coraje de parar de golpe.
 
-Athenians to their ultimate ruin. Ego kills what we love. Sometimes, it comes close to killing us too.
-
-Ego kills what we love. Sometimes, it comes close to killing us too.
-
-Have the courage to make a full stop.”
-
-You have to be able to see the bigger picture. But when ego is in control, who can?
-
-Shit happens and, as they say, sometimes shit happens in public. It’s not fun. The questions remain: Are you going to make it worse?
+Todo el mundo la caga (shit happens), y a veces, la cagamos en público. No es
+divertido. La pregunta es: vas a hacer que vaya a peor?
 
 MAINTAIN YOUR OWN SCORECARD
+
+📜
 
 middle.”) This is characteristic of how great people think. It’s not that they find failure in every success. They just hold themselves to a standard that exceeds what society might consider to be objective success. Because of that, they don’t much care what other people think; they care whether they meet their own standards.
 
