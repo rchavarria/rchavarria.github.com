@@ -17,7 +17,6 @@ Así que aquí está mi Lista de Lectura:
 
 ## Estoy leyendo
 
-- [Ego is the enemy](https://sivers.org/book/EgoEnemy), de Ryan Holiday, recomendado una y otra vez por [Derek Sivers](https://sivers.org/), por lo que algo tendrá que tener
 - [Crafting quality software](https://qafoo.com/book/download.html), de [Qafoo Team Blog](https://qafoo.com/blog%22), visto por twitter y que trata sobre cómo escribir código de calidad en PHP
 - [Human Vs Computers](https://leanpub.com/humansvscomputers/), de [Gojko Adzic](https://gojko.net/), lo consegúi porque Gojko publicó una encuesta y si la hacías te regalaba el libro. Qué mejor campaña publicitaria que regalar el libro.
 - [Expertología](http://www.amazon.es/dp/8492414502), de Andrés Pérez Ortega
@@ -147,6 +146,7 @@ Así que aquí está mi Lista de Lectura:
 
 - [Down and out in the magic kindom]({{ site.baseurl }}{% post_url 2018-03-23-down-out-magic-kingdom %}), de Cory Doctorow ~ *Marzo 2018*
 - [Practical object-oriented design with Ruby (POODR)]({{ site.baseurl }}{% post_url 2018-01-17-practical-object-oriented-design-in-ruby %}), de Sandi Metz, visto en el blog de [Carlos Blé](https://twitter.com/carlosble) ~ *Enero 2018*
+- [Ego is the enemy]({{ site.baseurl }}{% post_url 2017-12-13-ego-is-enemy.markdown %}), de Ryan Holiday, recomendado una y otra vez por [Derek Sivers](https://sivers.org/) ~ *Diciembre 2017*
 - [Seveneves (7 Evas)]({{ site.baseurl }}{% post_url 2017-10-30-seveneves %}), de Neal Stephenson ~ *Octubre 2017*
 - [99 bottles of OOP]({{ site.baseurl }}{% post_url 2017-10-19-99-bottles-oop %}), de Sandi Metz y Katrina Owen ~ *Octubre 2017*
 - [Front-end developer handbook 2017](https://www.gitbook.com/book/frontendmasters/front-end-handbook-2017/), de [Code Lindley](http://codylindley.com/) y esponsorizado por [Frontend Masters](https://frontendmasters.com/) ~ *Verano 2017*

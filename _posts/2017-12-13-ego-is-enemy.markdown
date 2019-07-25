@@ -464,5 +464,8 @@ contrario (éxito -> perfección)
 ## Recursos
 
 - [Ego is the enemy][1] en Amazon
+- [Notas de Derek Sivers]
 
 [1]: https://amzn.to/2W0Oy8q
+[Derek Sivers]: https://sivers.org
+[Notas de Derek Sivers]: https://sivers.org/book/EgoEnemy
