@@ -72,6 +72,18 @@ Lorem ipsum
 
 <!-- -->
 
+> Las aspiraciones nos llevan al éxito (y a la adversidad). El éxito crea sus
+  propia adversidad (y posiblemente nuevas ambiciones). Y la adversidad nos lleva
+  a la aspiración y a más éxito. Es un ciclo contínuo
+
+<!-- -->
+
+> Lo más obvio, pero también más ignorado es que la perfección de la regularidad
+  personal nos lleva al éxito como profesionales, pero muy rara vez ocurre lo
+  contrario (éxito -> perfección)
+
+<!-- -->
+
 ## Notas tomadas
 
 ### El prólogo doloroso
@@ -142,6 +154,7 @@ actívamente, debemos buscar lo negativo precisamente cuando nuestros familiares
 amigos y cerebro nos dicen que lo estamos haciendo muy bien.
 
 ### No seas apasionado
+
 La pasión, normalmente, enmascara una debilidad. Su falta de respiración, 
 impetuosidad y locura desesperada (breathlessness, impetuousness, franticness) 
 son pobres sustitutos de la disciplina, maestría, fuerza, propósito y
@@ -150,7 +163,7 @@ perseverancia.
 Deja la pasión para los aficionados. Utilízala para lo que sientes que tienes
 que hacer y decir, no para lo que quieres ser.
 
-### Sigue la estategia del lienzo (canvas)
+### Sigue la estrategia del lienzo (canvas)
 
 Encuentra *lienzos* para que otras personas pinten sobre ellos. Despeja el camino
 para la gente por encima de tí y al final crearás un camino para tí.
@@ -201,8 +214,6 @@ Tienes que volver a ponerte manos a la obra: practicar, trabajar, mejorar.
 
 En lugar de *Fake it 'till you make it*, a él le gusta decir *Make it so that
 you don't have to fake it*
-
-### Para todo lo que está por venir, el ego es el enemigo
 
 ### Parte 2: Exito
 
@@ -312,9 +323,8 @@ vida: adversidad, dificultad y fallos.
 
 ### Fallo
 
-> Casi siempre, el camino a la victoria pasa por un lugar llamado *fallo*
-
-~ Bill Walsh
+> Casi siempre, el camino a la victoria pasa por un lugar llamado fallo ~ *Bill
+Walsh*
 
 Para saborear el éxito otra vez, debemos entender qué nos llevó a ese momento
 (o años) de dificultad, qué salió mal y por qué. Debemos lidiar con la situación
@@ -402,42 +412,32 @@ bien.
 Cuando sacas el ego de la ecuación, la opinión del resto de la gente y otros
 factores externos no importan demasiado.
 
-ALWAYS LOVE
+### Ama siempre
 
-📜
+*Strisand effect*: el intento de destrozar algo por odio o por nuestro ego suele
+resultar en la diseminación y permanencia de justo eso que queremos destruir
 
-In the Internet age, we call this the Streisand effect
+Esta obsesión con el pasado, con algo que alguien hizo o cómo las cosas
+deberían haber sido, por mucho que duela, está personificado en el ego. El resto
+del mundo ha pasado página, pero tú no puedes pasar página, porque lo único que
+puedes ver es tu propia forma de hacer las cosas.
 
-Attempting to destroy something out of hate or ego often ensures that it will 
-be preserved and disseminated forever.
+¿Nos lleva eso más cerca del lugar donde queremos estar? Por supuesto que no.
 
-to quote his lyrics, “smile[d] its blacktooth grin.” This obsession with the 
-past, with something that someone did or how things should have been, as much 
-as it hurts, is ego embodied. Everyone else has moved on, but you can’t, because 
-you can’t see anything but your own way.
+### Para todo lo que está por venir, el ego es el enemigo
 
+> Ve mucho, estudia mucho, sufre mucho, ese es el camino de la 
+sabiduría ~ *proverbio Celta*
 
-This obsession with the past, with something that someone did or how things 
-should have been, as much as it hurts, is ego embodied. Everyone else has moved 
-on, but you can’t, because you can’t see anything but your own way.
+Las aspiraciones nos llevan al éxito (y a la adversidad). El éxito crea sus
+propia adversidad (y posiblemente nuevas ambiciones). Y la adversidad nos lleva
+a la aspiración y a más éxito. Es un ciclo contínuo.
 
-Does this get us any closer to where we want to be? No.
+### Epílogo
 
-FOR EVERYTHING THAT COMES NEXT, EGO IS THE ENEMY . . .
-
-the old Celtic saying tells us, “See much, study much, suffer much, that is the 
-path to wisdom.”
-
-Aspiration leads to success (and adversity). Success creates its own adversity 
-(and, hopefully, new ambitions). And adversity leads to aspiration and more 
-success. It’s an endless loop.
-
-EPILOGUE
-
-what is most obvious but most ignored is that perfecting the personal regularly 
-leads to success as a professional, but rarely the other way around.
-
-WHAT SHOULD YOU READ NEXT?
+Lo más obvio, pero también más ignorado es que la perfección de la regularidad
+personal nos lleva al éxito como profesionales, pero muy rara vez ocurre lo
+contrario (éxito -> perfección)
 
 ## Recursos
 
