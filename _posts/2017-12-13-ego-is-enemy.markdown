@@ -25,15 +25,37 @@ suena de algo. Pero sobretodo por la recomendación.
 
 ### De qué trata el libro
 
-De qué va
+Es un poco como una crónica de una muerte anunciada. No el libro con ese título,
+si no más bien, la experiencia narrada de alguien que ya ha recorrido el camino.
+
+Parece ser que el autor ha tenido éxito en varias ocasiones, y en todas ellas
+el éxito ha llegado a su fin. En este libro te cuenta por qué ha pasado eso,
+qué papel juega el ego en todo esto.
+
+Cuenta tres fases posibles en cualquier historia de éxito:
+
+1. Ambición, aspiración a algo más
+2. Éxito
+3. Fracaso
+
+¿Define qué es éxito? No de forma concreta. ¿Dice cómo alcanzarlo? No exactamente.
+¿Cómo evitar el fracaso? Pssé.
 
 ### Conclusiones y valoración
 
-Conclusiones
+Como todo libro de desarrollo personal, el libro está lleno de vivencias y
+experiencias que le sirven al autor para *justificar* los consejos que da, y
+venderlos como máximas vitales a seguir.
 
-### Qué he aprendido
+No siento que me sirva la gran mayoría del libro. No considero que sea una
+persona muy exitosa. Tampoco soy un fracasado, ¿no?, pero no he conseguido
+nada grandioso y tampoco tengo esperanzas de conseguirlo. Soy una persona del
+montón, así que veo todos los consejos o vivencias como algo lejano para mi
+situación actual.
 
-Lorem ipsum
+Algo interesante del libro podría ser distintas ideas relacionadas con el
+binomio: trabajo duro -> éxito. ¿Está asegurado el éxito si trabajas duro?
+¿Es sólo necesario trabajar duro para alcanzar el éxito? 
 
 ### Frases que me gustaría recordar
 
