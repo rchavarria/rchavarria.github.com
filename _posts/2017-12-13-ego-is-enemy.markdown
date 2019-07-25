@@ -385,45 +385,57 @@ Ten el coraje de parar de golpe.
 Todo el mundo la caga (shit happens), y a veces, la cagamos en público. No es
 divertido. La pregunta es: vas a hacer que vaya a peor?
 
-MAINTAIN YOUR OWN SCORECARD
+### Manten una tabla de resultados
 
-📜
+Esto es una característica de los grandes personajes. No es que ellos encuentran
+fallos en sus éxitos, es simplemente que tienen unos estándares que sobrepasan
+lo que la sociedad considera éxito. Debido a esto, no le dan mucha importancia
+a lo que piense la gente. Lo que les importa a ellos es si han conseguido
+cumplir con sus propios estándares.
 
-middle.”) This is characteristic of how great people think. It’s not that they find failure in every success. They just hold themselves to a standard that exceeds what society might consider to be objective success. Because of that, they don’t much care what other people think; they care whether they meet their own standards.
+El ego no puede ver las dos caras de la moneda. No puede mejorar porque solo ve
+el lado de la validación. Sólo puede ver lo que va bien, no lo que no va tan
+bien.
 
-improve. Ego can’t see both sides of the issue. It can’t get better because it only sees the validation.
+> La gente vanidosa solo escucha los elogios
 
-Remember, “Vain men never hear anything but praise.” It can only see what’s going well, not what isn’t.
-
-It can only see what’s going well, not what isn’t.
-
-and strong during the occasional defeat as well. When you take ego out of the equation, other people’s opinions and external markers won’t matter as much.
-
-people’s opinions and external markers won’t matter as much.
-
-When you take ego out of the equation, other people’s opinions and external markers won’t matter as much.
+Cuando sacas el ego de la ecuación, la opinión del resto de la gente y otros
+factores externos no importan demasiado.
 
 ALWAYS LOVE
 
+📜
+
 In the Internet age, we call this the Streisand effect
 
-Attempting to destroy something out of hate or ego often ensures that it will be preserved and disseminated forever.
+Attempting to destroy something out of hate or ego often ensures that it will 
+be preserved and disseminated forever.
 
-to quote his lyrics, “smile[d] its blacktooth grin.” This obsession with the past, with something that someone did or how things should have been, as much as it hurts, is ego embodied. Everyone else has moved on, but you can’t, because you can’t see anything but your own way.
+to quote his lyrics, “smile[d] its blacktooth grin.” This obsession with the 
+past, with something that someone did or how things should have been, as much 
+as it hurts, is ego embodied. Everyone else has moved on, but you can’t, because 
+you can’t see anything but your own way.
 
-This obsession with the past, with something that someone did or how things should have been, as much as it hurts, is ego embodied. Everyone else has moved on, but you can’t, because you can’t see anything but your own way.
+
+This obsession with the past, with something that someone did or how things 
+should have been, as much as it hurts, is ego embodied. Everyone else has moved 
+on, but you can’t, because you can’t see anything but your own way.
 
 Does this get us any closer to where we want to be? No.
 
 FOR EVERYTHING THAT COMES NEXT, EGO IS THE ENEMY . . .
 
-the old Celtic saying tells us, “See much, study much, suffer much, that is the path to wisdom.”
+the old Celtic saying tells us, “See much, study much, suffer much, that is the 
+path to wisdom.”
 
-Aspiration leads to success (and adversity). Success creates its own adversity (and, hopefully, new ambitions). And adversity leads to aspiration and more success. It’s an endless loop.
+Aspiration leads to success (and adversity). Success creates its own adversity 
+(and, hopefully, new ambitions). And adversity leads to aspiration and more 
+success. It’s an endless loop.
 
 EPILOGUE
 
-what is most obvious but most ignored is that perfecting the personal regularly leads to success as a professional, but rarely the other way around.
+what is most obvious but most ignored is that perfecting the personal regularly 
+leads to success as a professional, but rarely the other way around.
 
 WHAT SHOULD YOU READ NEXT?
 
