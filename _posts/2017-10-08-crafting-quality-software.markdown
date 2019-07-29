@@ -6,13 +6,15 @@ categories:
 - Reseñas
 ---
 
-##### de Ryan Holiday
+##### de Qafoo GmbH
 
-[![Ego is the enemy](https://images-na.ssl-images-amazon.com/images/I/51os4QMx98L._SX365_BO1,204,203,200_.jpg)][1]
+[![Crafting quality software](https://qafoo.com/book/cover.png)][1]
 
 ### Por qué lo he leído
 
-¿Quién lo ha recomendado? ¿Dónde lo he visto?
+Simplemente pasó por mi timeline de twitter, y me pareció interesante porque trata
+de escribir código de calidad en PHP. Así que me picó la curiosidad si había algo
+de especial por el hecho de estar enfocado en PHP.
 
 <!-- more -->
 
@@ -31,14 +33,9 @@ La *review* en sí del libro. ¿Ha sido lo que esperaba? ¿Qué me ha parecido? 
 
 ### Recursos relacionados
 
-[titulo sobre el enlace a las notas]: foo-bar-foo-bar
+[1]: https://qafoo.com/book
 
 ### Notas tomadas
-
-<!-- more -->
-
-# Crafting Quality Software
-##### de Qafoo GmbH
 
 ### 2 Clean Code
 
