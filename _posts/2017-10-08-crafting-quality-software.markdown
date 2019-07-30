@@ -31,18 +31,31 @@ La *review* en sí del libro. ¿Ha sido lo que esperaba? ¿Qué me ha parecido? 
 
 ### Frases que me gustaría recordar
 
+> There is no silver bullet and one of the most important skills every developer 
+needs to hone is to assess possibilities and to find the best trade-off for 
+the current challenge.
+
+> The solution to the mismatch of fast change and clean code is the art of 
+refactoring. Automatic testing and continuous refactoring are the key 
+methodologies.
+
+> Once the software stabilizes, you should refactor tests from the acceptance-and 
+integration-levels towards the unit-test-level.
+
+> The pure existence of the bug shows that there is room for another test.
+
 ### Recursos relacionados
 
 [1]: https://qafoo.com/book
 
 ### Notas tomadas
 
-El libro está en inglés, así que las notas que tomé, las ideas que subrayé, están en
-inglés. Normalmente las traduzco, pero me lleva mucho tiempo y no sé hasta qué punto
-todo ese tiempo es valioso.
+El libro está en inglés, así que las notas que tomé, las ideas que subrayé, 
+están en inglés. Normalmente las traduzco, pero me lleva mucho tiempo y no sé
+hasta qué punto todo ese tiempo es valioso.
 
-Aquellas ideas más interesantes que he encontrado, están un poco más arriba, y esas
-sí que las he traducido. Para el resto de notas tomadas... lo siento, no.
+Aquellas ideas más interesantes que he encontrado, están un poco más arriba, y
+esas sí que las he traducido. Para el resto de notas tomadas... lo siento, no.
 
 ### 2 Clean Code
 
@@ -54,15 +67,19 @@ the current challenge.
 
 One of the most important tasks of a developer is to make trade-offs.
 
-you need to be able to reflect your decisions and be prepared to revise them.
+You need to be able to reflect your decisions and be prepared to revise them.
 
 #### 2.2 Never Use null
 
-Use a so called null object if you need a default instance which does nothing.
+Use a so called *null object* if you need a default instance which does nothing.
 
-todavia no tengo claro si lanza excpcin o no
+If a value could not be found do not return `null` but throw an exception.
 
-If a value could not be found do not return null but throw an exception
+Nota: bueno, esta idea está en conflicto con otras que dicen que las excepciones
+solo deberían lanzarse en casos excepcionales. Por lo general, si algún
+caso puede ser comprobado (el fichero existe,...), es preferible no lanzar
+ninguna excepción. No se debería controlar el flujo de la aplicación lanzando
+o no excepciones. Pero en la práctica, he hecho y me he encontrado de todo. 
 
 #### 2.3 Struct classes in PHP
 
@@ -74,7 +91,6 @@ As can be seen in many projects, working at the fast feature pace often led to
 big ball of mud (BBOM) code bases, which reduced the agility of the project 
 day by day, eventually leading to the stage where changes are costly and 
 developers demanded yet another re-write to free themselves of legacy hell. 
-This
 
 The solution to the mismatch of fast change and clean code is the art of 
 refactoring.
@@ -89,14 +105,8 @@ testing.
 
 #### 3.3 Ducks Do Not Type
 
-si una clase implementa una interfaz i clas abstracta. no deberia añadoir 
-nuevos metodos publicos
-
-We have an abstract base type for HTTP clients (which could also be an 
-interface (See: Abstract Classes vs. Interfaces)) and one implementation. 
-Implementations then sometimes tend to define additional public methods, 
-like setConfiguration() in this case, for various different reasons. I 
-want to explain why I consider this a code smell.
+Si una clase implementa una interfaz o clase abstracta, no debería añadir
+nuevos métodos públicos.
 
 #### 3.4 Abstract Classes vs. Interfaces
 
@@ -106,19 +116,16 @@ want to explain why I consider this a code smell.
 
 #### 3.7 Utilize Dynamic Dispatch
 
-mas o menis como inyeccion de depndenias. qu cambia de implementacion en 
-tiemoo de ejecucion
+*Despacho dinámico* llama a algo parecido a la inyección de dependencias, que
+cambia su implementación en tiempo de ejecución.
 
-This is what we call dynamic dispatch.
-
-compara un trait con una llamada estatica. porque dice que no puedes cambiarla 
-en tiempo de ejecuion. y en part tiene razon. peo no lo veo del too cierto
-
-A trait is static dispatch, too.
+A `trait` is static dispatch, too. Compara un `trait` con una llamada estática,
+porque dice que no puedes cambiarla en tiempo de ejecución, y en parte tiene
+razón, pero no lo veo del todo cierto.
 
 #### 3.8 When to Abstract?
 
-abstraction is a bet on the future development of the software
+Abstraction is a bet on the future development of the software
 
 The circumstances will change, so will the view on the best abstraction change.
 
@@ -136,13 +143,6 @@ Unit-tests are necessary to stabilize your code, but when you know the
 requirements are not stable yet, then having too many unit-tests can be 
 a burden as well.
 
-when you know the requirements are not stable yet, then having too many 
-unit-tests can be a burden as well.
-
-4.1.1 The Test-Mix Tradeoff
-
-4.1.1 The Test-Mix Tradeoff
-
 TDD is about design and not about unit-testing and 100% coverage.
 
 Using acceptance- and integration-tests is a valid approach for TDD and serves 
@@ -150,29 +150,19 @@ well during periods of spikes and frequent requirement changes.
 
 #### 4.2 Mocking with Phake
 
-There are two ways to create these test doubles: You can write them yourself 
-or use one of the many existing libraries.
-
 PHPUnit mocks and Mockery require expectations to be part of the "setup" phase.
-
 This is unfortunate, because mock expectations are much more related to the 
 "Verify" phase instead.
 
-because they don't explicitly differentiate between methods that are mocked 
+They don't explicitly differentiate between methods that are mocked 
 (verification) or stubbed (returning results). Phake introduces a differentiation
 
 #### 4.3 Testing Effects of Commands With Phake::capture()
 
-See after the \Phake::capture($order) call, the $order variable contains the 
-argument that
-
-See after the \Phake::capture($order) call, the $order variable contains the 
-argument that was passed to the OrderRepository from your code.
+See after the `\Phake::capture($order)` call, the `$order` variable contains the 
+argument that was passed to the `OrderRepository` from your code.
 
 #### 4.4 Using Mink in PHPUnit
-
-you can easily do this using the Mink library. Mink is well known from the 
-Behat community to facilitate Behaviour-Driven Development (BDD),
 
 Mink is well known from the Behat community to facilitate Behaviour-Driven 
 Development (BDD),
@@ -182,9 +172,9 @@ Development (BDD),
 The Page Objects maps the HTML (or JSON) to an object oriented structure you 
 can interact with and assert on.
 
-This already is the nice thing with page objects. The test are readable
+This already is the nice thing with page objects. The test are readable.
 
-the logic must be implemented in the Page Object. By implementing it in a Page 
+The logic must be implemented in the Page Object. By implementing it in a Page 
 Object it is re-usable in other tests
 
 Since end-to-end tests also will always be slow'ish (compared to unit tests) 
@@ -195,54 +185,38 @@ we advise to only write those tests for critical parts of your application.
 All decisions boil down to: More test atomicity leads to longer test runs, and 
 we can buy test speed by omitting test atomicity.
 
-4.6.1 Removing Data versus Schema Reset
+##### 4.6.1 Removing Data versus Schema Reset
 
 Resetting the full schema is the cleanest approach, but also takes the most 
 time. Resetting a selected number of tables is faster, but also more 
 cumbersome and error-prone.
 
-ademas. borrar los datos no siempre ocurre. oor errores o porque se te olvida. 
-lo que provoca side effects
+Además, borrar los datos no siempre ocurre, por errores o porque se te olvida
+al escribir el test, lo que provoca efectos colaterales.
 
 Except for very small and simple projects it is usually best to initialize 
-the database before each test class.
-
-no estoy de acuerdo. eso seguro que sera muy lento. y sigues teniendo side 
-effects
+the database before each test class (no estoy de acuerdo, eso seguro que será
+muy lento, y sigues teniendo la posibilidad de los efectos colaterales).
 
 #### 4.7 Database Fixture Setup in PHPUnit
-
-The way you initialise your database fixtures depends on your test schema management.
 
 The way you initialise your database fixtures depends on your test schema 
 management. We suggest to reset schemas at the begin of each test case and 
 creating the data right in the test case.
 
-We suggest to reset schemas at the begin of each test case and creating 
-the data right in the test case.
-
-The way you initialise your database fixtures depends on your test schema 
-management.
-
 #### 4.8 Using Traits With PHPUnit
 
-Why would traits ever be considered a code smell?
-
-There is no reason for dynamic dispatch.
-
-en un test probablemente no quiero dynamic dispatch
+Why would traits ever be considered a code smell? There is no reason for 
+dynamic dispatch.
 
 A trait establishes a dependency to another class which is defined by the name 
-of the trait
+of the trait. Traits establish a static dependency which is hard to mock and
+hard to replace during runtime. But we will never mock our test cases, and 
+there are no other options.
 
-Traits establish a static dependency which is hard to mock and hard to replace 
-during runtime
-
-But we will never mock our test cases,
-
-And there are no other options.
-
-porque no hay forma de psasr parametros al constructor de u  test
+En un test probablemente no quiero *dynamic dispatch* porque no hay forma de
+pasar parámetros al constructor de un test, por lo que no puedo decirle al test
+qué implementación quiero usar.
 
 #### 4.9 Testing the Untestable
 
@@ -255,7 +229,7 @@ function file_get_contents($path) {
      return \file_get_contents($path);
 ```
 
-es posible mockear funciones globales en codigo con namespace. luego. para 
+Es posible mockear funciones globales en codigo con namespace. Luego, para 
 llamar a la original hay que poner la barra invertida delante
 
 #### 4.10 Outside-In Testing and the Adapter and Facade Patterns
@@ -263,9 +237,6 @@ llamar a la original hay que poner la barra invertida delante
 Outside-In testing leads to interfaces that are written from what is useful 
 for the client object using them, in contrast to objects that are composed 
 of collaborators that already exist.
-
-we have written code that is entirely written in our business domain and uses 
-concepts from this domain.
 
 The technique stays the same: Think in terms of what you want the API to look 
 from the outside and invent collaborators that help you think about the 
@@ -279,23 +250,20 @@ Only the leafs should actually contain code to third party software.
 There is generally no point in having code coverage for Behat test cases 
 because of their nature: The purpose of an acceptance test
 
-there is still a scenario where you want to peek at code coverage of Behat 
+There is still a scenario where you want to peek at code coverage of Behat 
 tests: When creating them as wide-coverage tests before starting to refactor 
 legacy code.
 
 #### 4.13 Testing Micro Services
 
-we moved away from the classical testing approach for our end-to-end tests and 
+We moved away from the classical testing approach for our end-to-end tests and 
 instead focused on metrics.
 
 In order to perform a system test, we install all micro services into a single 
-VM.
+virtual machine.
 
-systems with entry points to our application. These "emulation daemons" feed 
+Systems with entry points to our application. These "emulation daemons" feed 
 the system with randomized but production-like data and actions.
-
-"emulation daemons" feed the system with randomized but production-like data 
-and actions.
 
 #### 4.14 Five Tips to Improve Your Unit Testing
 
@@ -303,14 +271,7 @@ Be Pragmatic About a "Unit"
 
 Test Where the Logic is
 
-getters/setters, constructors and so on. Please do not test these trivials 
-explicitely.
-
-getters/setters, constructors and so
-
-Please do not test these trivials explicitely.
-
-look where there really is logic.
+Please do not test these trivials explicitely: getters, setters, constructors
 
 Continuously Refactor Test Code
 
@@ -319,22 +280,22 @@ Never change production and test code at the same time.
 Keep test code simple. Simple does not mean dirty, it means easy to read and 
 understand.
 
-fixtures
+Fixtures
 
-custom assertions
+Custom assertions
 
 Identify the patterns that evolve in your test suite and reduce duplication 
 by extracting utilities.
 
 Whenever you encounter a bug in your software, write a test that fails due to 
-this bug and fix the bug afterwards.
-
-important for your users and therefore deserves a test. The pure existence of 
-the bug shows that there is room for another test.
+this bug and fix the bug afterwards. The pure existence of the bug shows that
+there is room for another test.
 
 The pure existence of the bug shows that there is room for another test.
 
 ### 5 Refactoring
+
+📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜
 
 #### 5.1 Loving Legacy Code
 
