@@ -44,9 +44,23 @@ integration-levels towards the unit-test-level.
 
 > The pure existence of the bug shows that there is room for another test.
 
+> Chances that you will get through a large refactoring without being disturbed 
+are low
+
+> If your team accepts refactoring as an essential part of every work they 
+perform, you will experience how fast your code base will improve at exactly 
+the places you work on a lot.
+
+> Don't be discouraged if the first attempts lead to nothing or weird APIs,
+remember that refactoring is a constant process and intermediate steps may 
+actually make the code worse.
+
 ### Recursos relacionados
 
+- Libería [sciencetist]
+
 [1]: https://qafoo.com/book
+[sciencetist]: https://github.com/github/scientist
 
 ### Notas tomadas
 
@@ -295,36 +309,30 @@ The pure existence of the bug shows that there is room for another test.
 
 ### 5 Refactoring
 
-📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜
-
 #### 5.1 Loving Legacy Code
 
-The business rules that the appplication is meant to reflect are already written 
+The business rules that the application is meant to reflect are already written 
 down in code.
 
 #### 5.2 Refactoring with the Advanced Boy Scout Rule
 
 If you managed to fix it, commit and resume your original work.
 
-when refactoring...
-
 If you did not manage to resolve the issue within $x (maybe 15-20) minutes:
+Revert the refactoring attempt, add a `@refactor` annotation. If there already 
+is a @refactor annotation, append a `!` to it. After 1-2 sprints, grep your 
+code for `@refactor`
 
-Revert the refactoring attempt
-
-Add a @refactor annotation
-
-If there already is a @refactor annotation, append a ! to it
-
-After 1-2 sprints, grep your code for @refactor
+Nota: eso suena mucho a `TODO`, de los que nunca se llegan a hacer. No veo
+diferencia entre `TODO` y esa etiqueta de `@refactor`.
 
 #### 5.3 Extended Definition Of Done
 
-define them as a guide for code reviews which are then part of the "Definition 
+Define them as a guide for code reviews which are then part of the "Definition 
 Of Done" for the team. This also means that the team gets clear guidelines 
 for Code Reviews and the reviewer knows what to look for.
 
-common rules for code structure and patterns on top of what PSR-2 defines are 
+Common rules for code structure and patterns on top of what PSR-2 defines are 
 helpful for developers and speed up the development.
 
 #### 5.4 How to Refactor Without Breaking Things
@@ -336,59 +344,30 @@ are low.
 
 #### 5.5 Getting Rid of static
 
-The original Cache class will always be called, thus we will always test the 
-Cache class together with the UserService. This is, by definition, not an Unit 
+The original `Cache` class will always be called, thus we will always test the 
+`Cache` class together with the `UserService`. This is, by definition, not an Unit 
 Test any more.
 
 Step 1: Replaceable Singletons
 
-Why is this still problematic?
+Why is this still problematic? Global side effects, more complex test setup,
+anything messing unnecessarily with the test code can be considered bad.
 
-Global side effects
-
-More complex test setup
-
-Anything messing unnecessarily with the test code can be considered bad.
+Bueno, en este punto, casi lo considero al revés. Quiero decir, prefiero
+soportar un poco de complejidad en los tests, a costa de tener un código de 
+producción más sencillo, que al revés.
 
 Step 2: Service Locator
 
 Step 3: Dependency Injection
 
-Problems with using a Service Locator are:
+Problems with using a Service Locator are: still global side effects, hidden
+dependencies
 
-Still global side effects
-
-Hidden dependencies
-
-Make everything testable
-
-Make everything testable
-
-Use Dependency Injection for all your code
-
-This seems like a lot of work and it really is. But most of the work can 
-actually be taken over by
-
-you achieved actually two goals by doing this:
-
-Make everything testable
-
-Extract application configuration
-
-using simple Dependency Injection Containers like Pimple
-
-dependencies only when the route is called. You can even replace the code 
-above by using simple Dependency Injection Containers like Pimple
-
-using simple Dependency Injection Containers like Pimple
-
-You can even replace the code above by using simple Dependency Injection 
-Containers like Pimple
+You achieved actually two goals by doing this: make everything testable,
+extract application configuration
 
 #### 5.6 Refactoring Should not Only be a Ticket
-
-If your team accepts refactoring as an essential part of every work they 
-perform, you will experience how fast your code base will improve
 
 If your team accepts refactoring as an essential part of every work they 
 perform, you will experience how fast your code base will improve at exactly 
@@ -396,44 +375,33 @@ the places you work on a lot.
 
 #### 5.7 Extracting Data Objects
 
-Too Many Parameters
-
-issues
-
-It is really hard to remember which parameter is at which position,
-
-additional information will require you to add even more parameters
-
-introducing more mandatory data will even force you to change the parameter order
+Too Many Parameters issues: it is really hard to remember which parameter is at
+which position, additional information will require you to add even more
+parameters, introducing more mandatory data will even force you to change the
+parameter order
 
 Associative Arrays
 
-is therefore a good idea to replace any associative array structure with a data 
-object
+Is a good idea to replace any associative array structure with a data 
+object. They're a really good tool for prototyping
 
-them a really good tool for prototyping,
+Real pain: no defined way to document array structures so the IDE will not be
+able to tell you which fields exist, what their purpose is and what type the
+fields expect.
 
-real pain:
+There is a high risk for typos.
 
-no defined way to document array structures so the IDE will not be able to tell
-you which fields exist, what their purpose is and what type the fields expect.
+People will eventually add whatever they need at a single place
 
-there is a high risk for typos.
-
-people will eventually add whatever they need at a single place
-
-replace any associative array structure with a data object once the structure 
+Replace any associative array structure with a data object once the structure 
 has stabilized a bit.
 
-Smooth Migration
+Smooth Migration:
 
-5.7.3.1 Create a New Method
-
-5.7.3.2 Dispatch Old Method To New
-
-5.7.3.3 Change Use Case
-
-5.7.3.4 Iterate
+1. Create a New Method
+2. Dispatch Old Method To New
+3. Change Use Case
+4. Iterate
 
 #### 5.8 Basic Refactoring Techniques: Extract Method
 
@@ -443,159 +411,103 @@ refactoring, something that PHPStorm cannot do for you.
 As a rule of thumb, code in a method should work on the same level of 
 abstraction
 
-5.8.1 Step 1: Identify code fragment to extract
+Risky Extract Method Checklist
 
-5.8.2 Step 2: Create empty method and copy code
-
-5.8.3 Step 3: Identify undeclared variables that must be arguments
-
-5.8.4 Step 4: Identify variables that are still used in old method
-
-All variables of this kind must be returned from the new method
-
-5.8.5 Step 5: Call new method from original method
-
-5.8.6 Risky Extract Method Checklist
-
-Arrays are not passed by reference,
-
-Side effects to instance variables
-
-check this more carefully when your extracted method is called in a loop.
-
-Variables that are declared before and used after the extracted method
-
-5.8.7 Fin
-
-5.9 How to Perform Extract Service Refactoring
+- Arrays are not passed by reference,
+- Side effects to instance variables: check this more carefully when your
+extracted method is called in a loop
+- Variables that are declared before and used after the extracted method
 
 #### 5.9 How to Perform Extract Service Refactoring When You Don't Have Tests
 
 The primary risk of failure is the temptation to do too many steps at the same 
 time, delaying the re-execution and verification that the code still works
 
-5.9.1 Step 1: Create Class and Copy Method
+**Step 1**: Create Class and Copy Method
 
-5.9.2 Step 2: Fix Visibility, Namespace, Use and Autoloading
+**Step 2**: Fix Visibility, Namespace, Use and Autoloading
 
-5.9.3 Step 3: Check for Instance Variable Usage
+**Step 3**: Check for Instance Variable Usage
 
-instance variable that is only used in the extracted method itself.
+Instance variable that is only used in the extracted method itself. You can
+copy (don't delete it just yet) the variable to the new service.
 
-Then you can copy (don't delete it just yet) the variable to the new service.
-
-instance variable is another object that is injected into the originals class 
+Instance variable is another object that is injected into the originals class 
 constructor or with setter injection. Copy
 
-instance variable is used for state that is only read in the new class.
+Instance variable is used for state that is only read in the new class. Pass it
+as a new argument
 
-pass it as a new argument
-
-instance variable is used for state that is read, changed or both in the new 
-class.
-
-pass it to a setter
-
-retrieve it back with a getter
+Instance variable is used for state that is read, changed or both in the new 
+class. Pass it to a setter. Retrieve it back with a getter
 
 Don't be discouraged if the first attempts lead to nothing or weird APIs,
 remember that refactoring is a constant process and intermediate steps may 
 actually make the code worse.
 
-5.9.4 Step 4: Use New Class Inline
+**Step 4**: Use New Class Inline
 
-5.9.5 Step 5: Inline Method
+**Step 5**: Inline Method
 
-5.9.6 Step 6: Move Instantiation into Constructor or Setter
+**Step 6**: Move Instantiation into Constructor or Setter
 
-5.9.7 Step 7: Cleanup Dependency Injection
-
-5.9.8 Fin
+**Step 7**: Cleanup Dependency Injection
 
 #### 5.10 How You Can Successfully Ship New Code in a Legacy Codebase
 
-good strategy for this kind of change is called "Branch By Abstraction".
+Good strategy for this kind of change is called "Branch By Abstraction".
 
-introduce an abstraction in your code-base and implement the branching part 
+Introduce an abstraction in your code-base and implement the branching part 
 by selecting different implementations of this abstraction at runtime.
 
-5.10.1 Example 1: Replacing the Backend in a CMS
+**Step 1**: Refactoring The First Client
 
-5.10.2 Example 2: Rewriting a submodule without changing public API
+We create a new API for this. While moving the old code we also create an
+abstraction
 
-We built a new mail parser from scratch with a nice new API.
-
-The code was feature flagged to our new customer first:
-
-5.10.3 Example 3: Github reimplements Merge button
-
-They refactored the old code into a dedicated method and then wrote new code 
-with the same method signature.
-
-5.10.4 The Process
-
-We have several "Clients" (classes, functions) which use and probably implement 
-an implicitly defined concept like in one of the examples above.
-
-5.10.4.1 Step 1: Refactoring The First Client
-
-We create a new API for this.
-
-While moving the old code we also create an abstraction
-
-5.10.4.2 Step 2: Iterate Across Clients
+**Step 2**: Iterate Across Clients
 
 You will have to adapt the Facade and the abstraction during this process.
 
-5.10.4.3 Step 3: Finish The Clients
+**Step 3**: Finish The Clients
 
 If the code is working well enough and we do not have to change it often it 
 is valid to just keep it there and ignore
 
-5.10.4.4 Step 4: Starting a new Implementation
+**Step 4**: Starting a new Implementation
 
-5.10.4.4 Step 4: Starting a new Implementation
-
-por ahora. lo que tenemos es solo la fachada. nada de una nueva imple.entacion
-
-5.10.4.4 Step 4: Starting a new Implementation
-
-is just unmaintainable we can start with this now. We have an abstraction which 
-we "just" need to implement. Please do this test-driven.
+Por ahora, lo que tenemos es solo la fachada, nada de una nueva implementacion
 
 We have an abstraction which we "just" need to implement. Please do this 
 test-driven.
 
 The Verifier knows the legacy Facade and the new code – it also implements the 
-abstraction.
+abstraction. The Verifier now always calls the Facade wrapping the old code and
+the new implementation and compares their output.
 
-The Verifier now always calls the Facade wrapping the old code and the new 
-implementation and compares their output.
+Librerias como [sciencetist] ayudan a esto
 
-librerias como sciencetist ayudan a esto
-
-5.10.4.5 Step 5: Delete the Old Code
-
-5.10.5 Conclusion
+**Step 5**: Delete the Old Code
 
 #### 5.11 Extracting Value Objects
 
-code smell that is widespread in every codebase I have ever seen and is called 
+The code smell that is widespread in every codebase I have ever seen and is called 
 "Primitive Obsession".
 
-our example we are missing a DateRange
+In our example we are missing a DateRange. It'll allow us to heavily unit-test
+business logic related to date ranges.
 
-allow us to heavily unit-test business logic related to date ranges.
-
-5.12 Refactoring Singleton Usage to get Testable Code
+Refactoring Singleton Usage to get Testable Code
 
 To make this code testable without the singleton, we can use the lazy 
 initialization pattern.
 
 Since you would want to use constructor injection for all mandatory 
-dependencies you could also introduce an optional constructor argument,
+dependencies you could also introduce an optional constructor argument.
 
 ### 6 Architecture
+
+📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜
 
 #### 6.1 Why Architecture is Important
 
