@@ -636,11 +636,9 @@ Hypertext Application Language (HAL): encodes any resource using the
 
 ### 7 Workflow
 
-📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜
-
 #### 7.1 Coding in Katas
 
-if you want to grow beyond yourself, you need to create an environment for 
+If you want to grow beyond yourself, you need to create an environment for 
 your practice where failure is allowed.
 
 The actual result of this work is only a secondary concern, same applies to 
@@ -648,11 +646,9 @@ finishing the task. What counts is the actual practice.
 
 The important part is to reflect on what you did:
 
-How did you approach the problem?
-
-Where did your approach lead you?
-
-What were the problems?
+- How did you approach the problem?
+- Where did your approach lead you?
+- What were the problems?
 
 #### 7.2 Why you need infrastructure and deployment automation
 
@@ -661,35 +657,25 @@ applications is often ignored by teams and managers.
 
 7.2.1 Can you make a build in one step?
 
-any member of the team and therefore reduces the possibility of errors
-
-argument for introducing a reliable one-step build is that it can be safely 
+An argument for introducing a reliable one-step build is that it can be safely 
 triggered by any member of the team and therefore reduces the possibility 
 of errors drastically.
-
-it can be safely triggered by any member of the team and therefore reduces the 
-possibility of errors drastically.
 
 7.2.2 Do you make daily builds?
 
 7.2.3 Do you use configuration management tools to automate infrastructure?
 
-Configuration management tools all solve the problem of consistenly automating 
+Configuration management tools all solve the problem of consistently automating 
 the setup of new and old servers.
 
 7.2.4 Is the development setup documented and automated?
 
 7.2.5 Can you rollout and rollback deployments in one step?
 
-asset compilation and database schema migrations that are backwards and 
+Asset compilation and database schema migrations that are backwards and 
 forwards compatible.
 
 7.2.6 Can applications be deployed to a new server setup without changes to 
 the code?
 
-hardcoding configuration variables.
-
-common mistake
-
-7.2.7 Conclusion
-
+Hardcoded configuration variables are the problem here.
