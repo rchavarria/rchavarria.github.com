@@ -507,8 +507,6 @@ dependencies you could also introduce an optional constructor argument.
 
 ### 6 Architecture
 
-📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜
-
 #### 6.1 Why Architecture is Important
 
 There are even studies 2 pointing out the costs of bugs in your architecture. 
@@ -518,7 +516,7 @@ fixing these bugs can amplify the costs hundredfold.
 One of the things which are hardest to repair in existing systems are 
 inconsistencies of your data.
 
-What are the main points you should check when designing a system architecture
+What are the main points you should check when designing a system architecture?
 
 How can the consistency of data be ensured across multiple systems?
 
@@ -527,74 +525,52 @@ the technical and operational risks of newly introduced systems? How will
 the system handle latencies and failures of nodes? Is the overall application 
 resilient against single node failures or how can this be accomplished?
 
-6.1.1 Summary
-
 #### 6.2 Scaling Constraints of Languages
 
 6.2.1 Why PHP?
 
-One reason is LCoDC$SS
+One reason is LCoDC$SS, the abbreviations which describes the network 
+architectural properties of HTTP / REST stands for:
 
-The abbreviations which describes the network architectural properties of 
-HTTP / REST stands for:
+- Layered (L)
+- Code on Demand (CoD): rendering does not happen on the server
+- Client-Server (CS)
+- Cached ($)
+- Stateless (S)
 
-Layered (L)
-
-Code on Demand (CoD)
-
-rendering does not happen on the server.
-
-Client-Server (CS)
-
-Cached ($)
-
-Stateless (S)
-
-PHP
-
-handles stateless HTTP requests perfectly.
+PHP handles stateless HTTP requests perfectly.
 
 6.2.2 So, Why Not PHP?
 
-Besides HTTP browsers also speak other protocols like WebSocket.
-
-cycle but bi-directional permanent connections. PHP is not built for this.
-
-PHP is not built for this.
+Besides HTTP browsers also speak other protocols like WebSocket, 
+bi-directional permanent connections. PHP is not built for this.
 
 6.2.2.1 Node.js
 
 What I like to use Node.js for is quickly developing simple servers.
 
-6.2.2.2 Go
-
-6.2.2.3 Java
-
 6.2.3 Summary
 
 Choosing the language (virtual machine) is not just a matter of taste.
 
-developer experience,
-
-license costs
-
-different paradigms
+- developer experience,
+- license costs
+- different paradigms
 
 #### 6.3 How To Synchronize a Database With ElasticSearch?
 
-naiive approach of synchronizing both data storages. It boils down to: Store 
-data in database Store data in search index
+The naive approach of synchronizing both data storages: store 
+data in database, then store data in search index
 
 The problem with this approach is, as in any distributed system, that both the 
-first and the second write will fail at some point.
-
-data inconsistency
+first and the second write will fail at some point and we end up with data 
+inconsistency
 
 6.3.1 Transactions
 
 6.3.2 Changes Feed
 
-is a better way to implement this, often used in systems where you have one 
+Is a better way to implement this, often used in systems where you have one 
 primary storage and any number of secondary storages.
 
 In this scenario your primary storage defines the state of your system – it is 
@@ -606,9 +582,6 @@ index.
 Any other system, like your search index or caches should be updated based on 
 the state in the database.
 
-What we want to do is passing every change in the database on to the search 
-index.
-
 With the last sequence number returned from the target system we can now load 
 all or just a batch of changes from our database.
 
@@ -616,13 +589,9 @@ all or just a batch of changes from our database.
 
 The easiest way to implement this is an additional table
 
-6.3.4 Storing The Sequence Number
-
-6.3.5 Conclusion
-
 #### 6.4 Common Bottlenecks in Performance Tests
 
-true for optimizations in your PHP code but also for optimizations regarding your 
+True for optimizations in your PHP code but also for optimizations regarding your 
 infrastructure. We should measure before we try to optimize and waste time.
 
 PHP scripts you'd use XDebug and KCacheGrind or something like Tideways
@@ -631,10 +600,8 @@ PHP scripts you'd use XDebug and KCacheGrind or something like Tideways
 
 6.4.2 Stack Analysis
 
-configurar una herramienta para simular los pasos que un usuarios tipico haria 
-en tu página 
-
-ejecutar esos tests y monitorizar cpu. memoria. red...
+Configurar una herramienta para simular los pasos que un usuario típico haría 
+en tu página. Ejecutar esos tests y monitorizar cpu, memoria, red,...
 
 6.4.3 It is Not Always The Database
 
@@ -650,37 +617,26 @@ Opcode cache failures
 But this is also something you will not notice without putting the system under 
 load.
 
-6.4.4 Summary
-
 #### 6.5 Embedding REST Entities
 
 6.5.1 Entities
 
-As an example I chose the resources Product and Category
-
 As an example I chose the resources Product and Category from the e-commerce 
-domain.
-
-Note that here is a list of product items linked from a category,
+domain. Note that here is a list of product items linked from a category.
 
 6.5.2 The Use-Case
-
-API is to retrieve the top 20 products from a category.
 
 API is to retrieve the top 20 products from a category. To retrieve these 
 together with product details, a client needs 21 GET requests on the first go.
 
 6.5.3 Resource Embedding with HAL
 
-Hypertext Application Language (HAL)
-
-HAL encodes any resource using the <resource> tag and has its own <link> tag.
-
-6.5.4 Better Resource Embedding
-
-6.5.5 Bottom Line
+Hypertext Application Language (HAL): encodes any resource using the 
+<resource> tag and has its own <link> tag.
 
 ### 7 Workflow
+
+📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜📜
 
 #### 7.1 Coding in Katas
 
