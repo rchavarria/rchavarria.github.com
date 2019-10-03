@@ -17,7 +17,6 @@ Así que aquí está mi Lista de Lectura:
 
 ## Estoy leyendo
 
-- [Crafting quality software](https://qafoo.com/book/download.html), de [Qafoo Team Blog](https://qafoo.com/blog%22), visto por twitter y que trata sobre cómo escribir código de calidad en PHP
 - [Human Vs Computers](https://leanpub.com/humansvscomputers/), de [Gojko Adzic](https://gojko.net/), lo consegúi porque Gojko publicó una encuesta y si la hacías te regalaba el libro. Qué mejor campaña publicitaria que regalar el libro.
 - [Expertología](http://www.amazon.es/dp/8492414502), de Andrés Pérez Ortega
 
@@ -148,6 +147,7 @@ Así que aquí está mi Lista de Lectura:
 - [Practical object-oriented design with Ruby (POODR)]({{ site.baseurl }}{% post_url 2018-01-17-practical-object-oriented-design-in-ruby %}), de Sandi Metz, visto en el blog de [Carlos Blé](https://twitter.com/carlosble) ~ *Enero 2018*
 - [Ego is the enemy]({{ site.baseurl }}{% post_url 2017-12-13-ego-is-enemy %}), de Ryan Holiday, recomendado una y otra vez por [Derek Sivers](https://sivers.org/) ~ *Diciembre 2017*
 - [Seveneves (7 Evas)]({{ site.baseurl }}{% post_url 2017-10-30-seveneves %}), de Neal Stephenson ~ *Octubre 2017*
+- [Crafting quality software]({{ site.baseurl }}{% post_url 2017-10-08-crafting-quality-software %}), de [Qafoo Team Blog](https://qafoo.com/blog) ~ *Octubre 2017*
 - [99 bottles of OOP]({{ site.baseurl }}{% post_url 2017-10-19-99-bottles-oop %}), de Sandi Metz y Katrina Owen ~ *Octubre 2017*
 - [Front-end developer handbook 2017](https://www.gitbook.com/book/frontendmasters/front-end-handbook-2017/), de [Code Lindley](http://codylindley.com/) y esponsorizado por [Frontend Masters](https://frontendmasters.com/) ~ *Verano 2017*
 - [Los 88 peldaños del éxito]({{ site.baseurl }}{% post_url 2017-07-02-peldanos-exito %}), de Anxo Pérez ~ *Julio 2017*
@@ -155,7 +155,7 @@ Así que aquí está mi Lista de Lectura:
 - [Ready player one]({{ site.baseurl }}{% post_url 2017-03-26-ready-player-one %}), de Ernest Cline, recomendado por Microsiervos varias veces, y por Kevin Kelly en el [podcast de Tim Ferriss](http://fourhourworkweek.com/2016/06/05/kevin-kelly-ai-virtual-reality-and-the-inevitable) ~ *Abril 2017*
 - [The nature of software development]({{ site.baseurl }}{% post_url 2017-03-05-the-nature-of-software-developent %}), de Ron Jeffries, recomendado por [Carlos Buenosvinos](https://twitter.com/buenosvinos/status/721623461702078464/photo/1) (antes en Atrápalo Eng, ahora en Xing,...) ~ *Marzo 2017*
 - [The Phoenix project]({{ site.baseurl }}{% post_url 2017-01-19-the-phoenix-project %}), de Gene Kim, libro similar a
-[The goal]({{ site.baseurl }}{% post_url 2013-04-10-la-meta %}) pero orientado a IT, encontrado en el [blog de Eduardo Ferro](http://www.eferro.net/2016/03/some-books-i-recently-read.html) ~ *Enero 2017*
+- [The goal]({{ site.baseurl }}{% post_url 2013-04-10-la-meta %}) pero orientado a IT, encontrado en el [blog de Eduardo Ferro](http://www.eferro.net/2016/03/some-books-i-recently-read.html) ~ *Enero 2017*
 - [The four hour body]({{ site.baseurl }}{% post_url 2016-12-04-four-hour-body %}), de Tim Ferris ~ *Septiembre 2016*
 - [Zen y el arte del mantenimiento de motocicletas]({{ site.baseurl }}{% post_url 2016-09-18-zen-arte-mantenimiento-motocicletas %}), de Robert M. Pirsig, recomendado por [@mpjme en FunFunFunction #18](https://www.youtube.com/watch?v=lrf6xuFq1Ms&t=90) ~ *Agosto 2016*
 - [Practical Vim]({{ site.baseurl }}{% post_url 2016-07-17-practical-vim %}), de Drew Neil ~ *Julio 2016*
