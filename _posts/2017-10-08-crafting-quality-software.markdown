@@ -20,40 +20,57 @@ de especial por el hecho de estar enfocado en PHP.
 
 ### De qué trata el libro
 
-Si le tuviera que contar a alguien de qué va el libro, ¿qué le diría?
-¿Qué esperaba encontrar yo en él? 
+Qafoo es una empresa que se dedica a la consultoría y a la formación de programadores.
+Según ellos, están muy enfocados en desarrollos de calidad y la misma es una
+pilar indispensable del desarrollo de software.
+
+En este libro se ve un poco esa filosofía: nos hablan de buenas prácticas, de
+costes escondidos por hacer las cosas con prisa,...
+
+No se centra sólo en el desarrollo puro y duro, también en arquitectura y
+despliegue de las aplicaciones.
 
 ### Conclusiones y valoración
 
-La *review* en sí del libro. ¿Ha sido lo que esperaba? ¿Qué me ha parecido? ¿Lo recomendaría? ¿Me ha gustado el estilo?
+Me ha gustado lo justito. Es una compilación de muchos detalles. Son importante,
+sí, pero para mi gusto le ha faltado un hilo conductor.
+
+Tiene el formato de un libro de referencia, pero tampoco valdría como eso, porque
+no llega a cubrir los conceptos con muchísimo detalle.
+
+Si quieres tener una visión general de qué es escribir código de calidad, puede
+venir bien. Básicamente: refactorizar y tests automáticos, aderezado con un poco
+de programación orientada a objectos. 
+
+Aún así, hay unos cuantos detalles que me gustaría recordar.
 
 ### Qué he aprendido
 
 ### Frases que me gustaría recordar
 
-> There is no silver bullet and one of the most important skills every developer 
-needs to hone is to assess possibilities and to find the best trade-off for 
-the current challenge.
+> Una de las habilidades más importantes que cualquier desarrollador debería
+tener es la de ser capaz de valorar todas las posibilidades y encontrar el
+mejor balance para el contexto actual
 
-> The solution to the mismatch of fast change and clean code is the art of 
-refactoring. Automatic testing and continuous refactoring are the key 
-methodologies.
+> La solución a la tensión de los dos extremos: cambios rápidos y código
+limpio; es el arte de refactorizar. Los tests automáticos y la refactorización
+contínua son las metodologías clave.
 
-> Once the software stabilizes, you should refactor tests from the acceptance-and 
-integration-levels towards the unit-test-level.
+> Una vez que el software se estabiliza, deberías refactorizar los tests desde
+el nivel de los tests de aceptación/integración hacia los tests unitarios.
 
-> The pure existence of the bug shows that there is room for another test.
+> La sola existencia de un bug significa que todavía hay espacio para otro test
 
-> Chances that you will get through a large refactoring without being disturbed 
-are low
+> Las posibilidades de que te embarques en una refactorización grande y larga
+sin ser molestado son bastante bajas
 
-> If your team accepts refactoring as an essential part of every work they 
-perform, you will experience how fast your code base will improve at exactly 
-the places you work on a lot.
+> Si tu equipo acepta la refactorización como una parte esencial del trabajo que
+realizan, experimentarás cómo de rápido mejora la base de código justamente en
+los lugares donde más trabajo realizáis
 
-> Don't be discouraged if the first attempts lead to nothing or weird APIs,
-remember that refactoring is a constant process and intermediate steps may 
-actually make the code worse.
+> No te desanimes si el primer intento te lleva a nada o APIs extrañas. Recuerda
+que la refactorización es un proceso constante y que algunos pasos intermedios
+pueden hacer que tu software sea un poquito peor
 
 ### Recursos relacionados
 
