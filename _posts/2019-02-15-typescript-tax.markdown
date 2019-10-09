@@ -109,6 +109,23 @@ lenguajes. Uno puede empezar rápido, pero le cuesta dominarlo*.
 Este acompañamiento, esta mentoría, es un efecto secundario de la colaboración,
 y es un hábito saludable que ayuda a ahorrar costes a largo plazo.
 
+**Sobrecarga con los tipos**: aquí el autor incluye todo el tiempo extra empleado
+en usar tipos, testeándolos, depurándolos y manteniendo las anotaciones de tipos.
+*Otra vez, ahora resulta que los tipos son malos*.
+
+También se aprecia un gran aumento de *ruido* en la sintaxis. Este ruido es uno
+de los mayores costes de TypeScript, pero se puede mejorar:
+
+- Mejorar el soporte de genéricos usando [higher-kinded types] (*perdón, no tengo
+traducción para este concepto*)
+- Recomendar definiciones de tipos por separado, no incrustados en la definición
+de las funciones (*inline typings*)
+
+##### Conclusiones
+
+TypeScript puede y debería mejorar en inferencia de tipos, funciones de orden
+superior y genéricos.
+
 ### Referencias
 
 - [The TypeScript tax]
@@ -118,3 +135,4 @@ y es un hábito saludable que ayuda a ahorrar costes a largo plazo.
 [The TypeScript tax]: https://medium.com/javascript-scene/the-typescript-tax-132ff4cb175b
 [Eirc Elliot]: https://ericelliottjs.com/
 [The State of JavaScript]: 
+[higher-kinded types]: https://typelevel.org/blog/2016/08/21/hkts-moving-forward.html
