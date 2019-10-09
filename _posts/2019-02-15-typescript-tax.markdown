@@ -51,6 +51,36 @@ código TypeScript para reducir la sobrecarga introducida por los mismos. Los ti
 es uno de los costes añadidos por el lenguaje. Pero los parámetros por defecto
 pueden ser usados en JavaScript también.
 
+**Documentación del API**: uno de los beneficios de TypeScript es la mejor
+documentación para APIs que siempre está sincronizada con tu código fuente.
+
+Esto sería una gran diferencia, pero en JavaScript existen multitud de generadores
+de documentación. *Sí, pero no viene dado por el lenguaje, es algo que tienes
+que configurar tú. Hmmm, para mí TypeScript tiene más ventaja aquí de lo que
+transmite el autor*.
+
+**Refactorings**: si obtienes un gran beneficio de TypeScript en tus 
+refactorizaciones, suele ser un *mal olor* indicando que tu código está altamente
+acoplado. *Pero eso será malo en JavaScript igualmente, no veo por qué el autor
+lo considera solo malo para TypeScript*.
+
+**Seguridad de tipos**: no hay mucha evidencia de que los tipos ayuden a 
+disminuir drásticamente el número de bugs. Otras prácticas (TDD, programación
+por parejas,...) sí que lo hacen, pero son más complicadas de llevar a cabo.
+
+Algunos comentan que con TypeScript puedes obtener información sobre algunos tipos
+de bugs en tiempo real, pero eso es algo que también se puede lograr con 
+herramientas de inferencia de tipos.
+
+Las mayores fuentes de bugs en el software, de lejos, son los fallos a la hora
+de definir el comportamiento que realmente se quiere de él o implementar
+correctamente la especificación.
+
+Teóricamente, TypeScript puede detectar hasta un 20% de los posibles bugs. Eso
+es un montón, pero no parece que sea lo suficiente. Los errores de tipado son
+sólo un pequeño conjunto de todos los posibles errores, y existen otros métodos
+de detectar errores de tipado.
+
 ### Referencias
 
 - [The TypeScript tax]
