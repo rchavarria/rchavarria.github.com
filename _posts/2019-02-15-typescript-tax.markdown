@@ -32,7 +32,7 @@ clarificar el uso de las mismas y reducir la sobrecarga cognitiva.
 Los plugins de TypeScript de los editores de código proporcionan todavía mucha
 mejor experiencia de desarrollo que en el ecosistema JavaScript.
 
-##### Retorno sobre la inversion
+##### Retorno sobre la inversion, beneficios
 
 El análisis de beneficios Vs costes que hace el autor le da un probable ROI
 negativo a TypeScript
@@ -81,10 +81,40 @@ es un montón, pero no parece que sea lo suficiente. Los errores de tipado son
 sólo un pequeño conjunto de todos los posibles errores, y existen otros métodos
 de detectar errores de tipado.
 
+##### Costes
+
+**Contratación de desarrolladores**: no todo el mundo está interesado en
+TypeScript (el autor recoge datos de la encuesta [The State of JavaScript]).
+*Yo veo que eso pasa también con todos los lenguajes, entiendo que no todo el
+mundo esté interesado en JavaScript, por lo que no veo que esto sea un problema
+específico de TypeScript*.
+
+**Falta de funcionalidades**: faltan algunas funcionalidades como funciones de
+orden superior (HOFs), composición, genéricos,...
+
+Para el autor, uno de los mayores costes de TypeScript es que éste no es
+*co-expresivo* (si ese término existe) con JavaScript idiomático. Es decir,
+TypeScript no te permite utilizar todas las funcionalidad de JavaScript, con lo
+que en ocasiones te limita.
+
+En ocasiones, se pierde mucho tiempo intentando tipar cosas que TypeScript no
+puede tipar adecuadamente. *Ahora resulta que para el autor, el sistema de tipos
+es ahora un coste*.
+
+**Acompañamiento**: sí, es cierto, la gente es productiva con TypeScript más o
+menos de forma rápida, pero suele tardar mucho tiempo en tener cierta fluidez
+con el lenguaje. *Pero es exactamente como antes, esto pasa con muchos, muchos
+lenguajes. Uno puede empezar rápido, pero le cuesta dominarlo*.
+
+Este acompañamiento, esta mentoría, es un efecto secundario de la colaboración,
+y es un hábito saludable que ayuda a ahorrar costes a largo plazo.
+
 ### Referencias
 
 - [The TypeScript tax]
 - [Eirc Elliot]
+- Encuesta [The State of JavaScript]
 
 [The TypeScript tax]: https://medium.com/javascript-scene/the-typescript-tax-132ff4cb175b
 [Eirc Elliot]: https://ericelliottjs.com/
+[The State of JavaScript]: 
