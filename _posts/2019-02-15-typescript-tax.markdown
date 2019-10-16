@@ -10,18 +10,30 @@ categories:
 Comentarios sobre el artículo [The TypeScript tax], escrito por [Eric Elliot], un
 fuera de serie.
 
+El artículo expone una serie de beneficios obtenidos a usar TypeScript y unos
+costes asociados a lo mismo. Al final, hace un balance de ambos.
+
 <!-- more -->
 
-foo bar foo bar
+Para el autor, los puntos fuertes del lenguaje son las herramientas de desarrollo,
+la documentación del API que se consigue mediante el tipado, los refactorings y
+la sensación de detectar bugs más pronto.
 
-> lorem impsum
+Por otro lado, lo que detecta como costes (contratación de gente, falta de
+funcionalidades en el lenguaje, aprendizaje, y el tipado propio del lenguaje) me
+parecen bastante genéricos y asociados a bastantes, por no decir todos, los
+lenguajes de programación.
 
-<!-- -->
+En mi opinión, el autor tiene preferencia por *vanilla JavaScript* y su lado
+funcional (ya he leído algún artículo suyo en el pasado). Podríamos decir que
+TypeScript potencia el lado de la Programación Orientada a Objetos de
+JavaScript, así que no va a favorecer a TypeScript. Y el título ya deja entrever
+por dónde van los tiros del artículo.
 
-> dolor sig amet
-
-blah blah
-
+Intenta no dejar bien a TypeScript, pero los malos argumentos, los costes, los
+veo aplicables a muchos otros lenguajes. Al final, lo reduce todo al sistema
+de tipos, que me recuerda a la lucha Orientación a Objetos Vs Funcional.
+ 
 ### Notas
 
 ##### Qué me gusta de TypeScript
@@ -134,5 +146,5 @@ superior y genéricos.
 
 [The TypeScript tax]: https://medium.com/javascript-scene/the-typescript-tax-132ff4cb175b
 [Eirc Elliot]: https://ericelliottjs.com/
-[The State of JavaScript]: 
+[The State of JavaScript]: https://stateofjs.com/
 [higher-kinded types]: https://typelevel.org/blog/2016/08/21/hkts-moving-forward.html
