@@ -146,6 +146,26 @@ f5 se puede jugar más tarde
 
 ###### Gambito de rey
 
+Línea principal: **e4 e5 / f4**
+
+Las blancas ofrecen ese peón a cambio del dominio e iniciativa en el juego.
+Actualmente se considera una línea minoritaria y arriesgada. Se usa poco por la
+respuesta del Contragambito Falkbeer.
+
+Con ese tiempo de más, las blancas deben montar un centro de peones fuerte y
+móvil y atacar al rey, mientras se abre completamente la columna f.
+
+A diferencia de otros gambitos, en los que el sacrificio del peón es temporal,
+en este gambito el real.
+
+- Gambito de Rey Aceptado: e4 e5 / f4 **exf4 / Nf3 g5**
+- Gambito de Alfil: e4 e5 / f4 **exf4 / Bc4 Qh4+**: no me parece muy allá, por
+que hay que estar moviendo el rey y tal y no se puede enrocar
+- Gambito de Rey Declinado: e4 e5 / f4 **Bc5 / Nf3 d6 / c3**: la consideración
+general es que se concede demasiado espacio en el centro a las blancas
+- Contragambito Falkbeer: e4 e5 / f4 **d5 / exd5 e4!?**: sigue siendo considerado
+favorable ligeramente a blancas
+
 #### Aperturas semiabiertas
 
 (Por si acaso, dejo algunas aquí)
