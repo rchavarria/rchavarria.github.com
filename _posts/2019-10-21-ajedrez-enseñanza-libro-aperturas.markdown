@@ -10,7 +10,7 @@ categories:
 
 ##### de Glenn Livingston
 
-[![Libro de aperturas](https://www.aj edrezeureka.com/wp-content/uploads/2016/02/ajedrez-y-su-ensenanza-libro-de-aperturas-400x500.jpg)][1]
+[![Libro de aperturas](https://www.ajedrezeureka.com/wp-content/uploads/2016/02/ajedrez-y-su-ensenanza-libro-de-aperturas-400x500.jpg)][1]
 
 ### Por qué lo he leído
 
