@@ -133,6 +133,17 @@ ese orden.
 
 ###### Apertura española
 
+Línea principal: **e4 e5 / Nf3 Nc6 / Bb5**
+
+Da a las blancas una ventaja ligera y duradera.
+
+- Defensa Murphy: e4 e5 / Nf3 Nc6 / Bb5 **a6**
+- Defensa Noruega: e4 e5 / Nf3 Nc6 / Bb5 **a6 / Ba4 b5 / Bb3 Na5**
+- Defensa Berlinesa: e4 e5 / Nf3 Nc6 / Bb5 **Nf6 / 0-0 Nxe4 / d4 Nd6**: una de las
+variantes más sólidas para negras
+- Defensa Schliemann: e4 e5 / Nf3 Nc6 / Bb5 **f5!?**: en algunas variantes, ese
+f5 se puede jugar más tarde
+
 ###### Gambito de rey
 
 #### Aperturas semiabiertas
