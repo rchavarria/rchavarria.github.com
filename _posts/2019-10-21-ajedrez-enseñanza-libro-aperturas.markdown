@@ -176,6 +176,41 @@ favorable ligeramente a blancas
 
 ###### Defensa siciliana
 
+Línea principal: **e4 c5**
+
+Es quizá la que más posibilidades brinda contra 1.e4.
+
+La idea principal es, por parte de las negras, contraatacar en el centro del
+tablero con un peón lateral desde la primera jugada.
+
+Las negras están prácticamente obligadas a realizar el enroque por el ala de
+rey, pero tienen posibilidades de atacar por el flanco de dama.
+
+Las blancas, presentan una desventaja posicional en el centro, pero sus piezas
+tienen gran libertad de movimiento y pueden organizar ataques en ambos flancos.
+
+- Línea principal 2...Nf3: e4 c5 / **Nf3 Nc6 / d4**
+- Variante Pelikán: e4 c5 / Nf3 Nc6 / d4 **cxd4 / Nxd4 Nf6 / Nc3 e5**: negras
+lanzan ataque rápido en flanco de dama
+- Línea principal 2...d6: e4 c5 / Nf3 **d6**: quizá sea la forma más correcta de
+plantear la Siciliana
+- Variante clásica: e4 c5 / Nf3 d6 / **d4 cxd4 / Nxd4 Nf6 / Nc3 Nc6**
+- Variante del dragón: e4 c5 / Nf3 d6 / d4 cxd4 / Nxd4 **Nf6 / Nc3 g6 / 
+Be3 Bg7 / Be2**: una de las más populares y una de las más peligrosas para las
+blancas. Negras pretenden asegurar la defensa de su rey, su fianchetto del alfil
+en g7 controla el centro y apunta al flanco de dama, donde suele situarse el
+rey blanco, este alfil permite un ataque muy rápido
+- Formación Maroczy: e4 c5 / Nf3 d6 / d4 cxd4 / Nxd4 **g6 / c4**
+- Variante Najdorf: e4 c5 / Nf3 d6 / d4 cxd4 / Nxd4 **Nf6 / Nc3 a6**: una de las
+formas más agudas de jugar la Siciliana. 5...a6 es muy flexible, retrasa la
+definición de los peones centrales, aunque esto permite a las blancas a organizar
+ataques muy fuertes, pero las posibilidades de defensa son buenas, y las de
+contraatacar aún mejores
+- Variante de la clavada: e4 c5 / Nf3 **e6 / d4 cxd4 / Nxd4 Nf6 / Nc3 Bb4**: 2...e6
+tiene la ventaja de que libera la diagonal para el alfil negro de casillas negras
+- Variante Alapin: e4 c5 / **c3 Nf6 / e5 Nd5 / Nf3 Nc6 / Na3**: las negras suelen
+poder igualar sin problemas, conociendo un poco de teoría
+
 ###### Defensa francesa
 
 ###### Defensa escandinava
