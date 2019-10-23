@@ -213,6 +213,21 @@ poder igualar sin problemas, conociendo un poco de teoría
 
 ###### Defensa francesa
 
+Línea principal: **e4 e6 / d4 d5**
+
+Con esta defensa se alcanza rápidamente un equilibrio con el centro cerrado que
+protege el enroque negro. Negras se lanzan a un ataque rápido en flanco de dama
+con c5 y contra el peón en d4. Pero tienen un problema, el desarrollo del alfil
+de casillas blancas.
+
+Blancas tratarán de proteger su punto más débil, d4, y lanzarán el ataque por el
+flanco de rey antes de que Negras desarrolen su alfil. Este alfil no se debe
+capturar, aunque se pueda, si no es en condiciones muy ventajosas.
+
+- Variante Paulsen: e4 e6 / d4 d5 / **Nc3 Nf6** 
+- Variante Wináwer: e4 e6 / d4 d5 / **Nc3 Bb4 / e5**: se considera la línea más fuerte
+- Variante Tarrash: e4 e6 / d4 d5 / **Nd2 (Nf6, c5)**
+
 ###### Defensa escandinava
 
 #### Aperturas cerradas
