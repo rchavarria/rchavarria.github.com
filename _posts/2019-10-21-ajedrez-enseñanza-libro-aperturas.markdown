@@ -230,6 +230,18 @@ capturar, aunque se pueda, si no es en condiciones muy ventajosas.
 
 ###### Defensa escandinava
 
+Línea principal: **e4 d5 / exd5**
+
+La idea general es la de un gambito, hacer perder tiempo al blanco, el que emplea
+en capturar el peón para desarrollar las piezas.
+
+En algunas variantes, tras e4 d5 / exd5 Qxd5 / Nc3; lo que no se debe hacer es
+volver a d8. Qa5 o la mejor Qd6.
+
+Las blancas no deben empeñarse en defender su peón de d5.
+
+- Línea principal: **e4 d5 / exd5 Qxd5 / Nc3 Qa5 / d4 Nf6 / Nf3 Bf5**
+
 #### Aperturas cerradas
 
 (Por si acaso, dejo algunas aquí)
