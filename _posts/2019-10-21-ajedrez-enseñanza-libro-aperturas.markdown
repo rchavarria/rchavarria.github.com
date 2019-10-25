@@ -256,6 +256,21 @@ partidas rápidas.
 
 ###### Gambito de dama
 
+Línea principal: **d4 d5 / c4**
+
+Este gambito es falso, ya que Blancas pueden recuperar su peón cuando quieran, y
+si Negras se empeñan en conservar el peón de más, suele caer en posiciones
+perdidas, o en el mejor de los casos, inferiores.
+
+- Gambito de dama aceptado: d4 d5 / c4 **dxc4 / Nf3 Nf6 / e3 e6 / Bxc4 c5**:
+Negras atacarán por flanco de dama, da muchas oportunidades a Negras
+- Gambito de dama declinado, variante semieslava: d4 d5 / c4 **e6 / Nc3 c6 / Nf3 dxc4**
+- Gambito de dama declinado, defensa Tarrasch: d4 d5 / c4 **e6 / Nc3 c5 / cxd5 exd5**:
+se supone que es algo peor para negras
+- Gambito de dama declinado, variante muy cerrada: d4 d5 / c4 e6 / **Nc3 Nf6 / Bg5 Be7**
+- Gambito de dama declinado, defensa Marshall: d4 d5 / c4 **Nf6**: quizá sea
+mejor forma de declinar el gambito que e6
+
 ###### Defensa eslava
 
 ###### Defensa Nimzo-India
