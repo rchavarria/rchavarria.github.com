@@ -273,6 +273,15 @@ mejor forma de declinar el gambito que e6
 
 ###### Defensa eslava
 
+Línea principal: **d4 d5 / c4 c6**
+
+La idea de 2...c6 es no dejar al alfil negro de casillas blancas encerrado antes
+de tiempo. Suele dar a Negras posiciones sólidas.
+
+- d4 d5 / c4 c6 / **Nf3 Nf6 / e3**
+
+###### Defensa India de dama
+
 ###### Defensa Nimzo-India
 
 #### Aperturas semicerradas
