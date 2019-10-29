@@ -307,6 +307,16 @@ Esta defensa da muchas tablas.
 
 ###### Defensa Nimzo-India
 
+Línea principal: **d4 Nf6 / c4 e6 / Nc3 Bb4**
+
+Esta es una de las más populares y efectivas defensas contra 1.d4
+
+Aaron Nimzowitsch, al utilizar esta apertura pretendía cambiar su alfil de b4 por
+el caballo en c3 para así controlar e4 y obligar al blanco a doblar peones en la
+columna c.
+
+- d4 Nf6 / c4 e6 / Nc3 Bb4 / **a3 Bxc3 / bxc3 b5**
+
 #### Aperturas semicerradas
 
 1. Sistemas indios, que empiezan por: d4 Nf6
