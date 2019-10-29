@@ -43,6 +43,12 @@ centrales
 
 <!-- -->
 
+> Contra el fianchetto del alfil hay dos formas básicas de jugar: un fianchetto
+opuesto o formar una cadena de peones en la gran diagonal.
+
+
+<!-- -->
+
 > Cita del libro aquí
 
 <!-- -->
@@ -281,6 +287,23 @@ de tiempo. Suele dar a Negras posiciones sólidas.
 - d4 d5 / c4 c6 / **Nf3 Nf6 / e3**
 
 ###### Defensa India de dama
+
+Línea principal: **d4 Nf6 / c4 e6 / Nf3 b6**
+
+Una defensa india es aquella en la que las negras ponen su alfil en fianchetto.
+Luego la defensa india de dama es aquella que fianchetta el alfil de dama.
+
+Contra el fianchetto del alfil hay dos formas básicas de jugar: un fianchetto
+opuesto o formar una cadena de peones en la gran diagonal.
+
+Así, aquí, Negras deberán evitar colocar sus peones en la gran diagonal blanca.
+El fianchetto de rey de Blancas en mejor que el fianchetto de dama de Negras, ya
+que una vez enrocado, el rey está más protegido.
+
+Esta defensa da muchas tablas.
+
+- d4 Nf6 / c4 e6 / Nf3 b6 / **g3 Bb7 / Bg2 Be7**
+- También sin 2.c4: d4 Nf6 / Nf3 b6 / **g3 Bb7 / Bg2 Be7**
 
 ###### Defensa Nimzo-India
 
