@@ -1,0 +1,76 @@
+---
+title: "CommitConf 2019"
+date: 2019-11-25 10:01
+author: Ruben Chavarria
+categories:
+- Conferencias
+---
+
+## Conference itself
+
+[Commit Conf 2019 conference agenda](https://t3chfest.uc3m.es/2019/programa/):
+
+- +2000 attendees
+- +140 talks and labs
+- +45 user groups
+
+<!-- more -->
+
+## Attended talks
+
+### [Refactoring rhyme with simplify](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5690945286701056/5682927522283520)
+
+- [🎙️ Javier Abadía](https://twitter.com/javierabadia)
+- [🎥 Tal](https://www.youtube.com/watch?v=ihu6sEbWHFE&t=4617)
+- [📝 Slides](link) (not available yet)
+
+### [DevOps with Docker, Kubernetes and other tools](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5690945286701056/5667812190191616)
+
+- [🎙️ Laura Morillo](https://twitter.com/Laura_Morillo)
+- [🎥 Talk](link) (not available yet)
+- [📝 Slides](link) (not available yet)
+
+### [How to improve as a developer](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5690945286701056/5729000374665216)
+
+- [🎙️ Jorge Franco](https://twitter.com/jfrancoleza)
+- [🎙️ Angélica Sanz](link)
+- [🎥 Talk](link), Spanish (not available yet)
+- [📝 Slides](link) (not available yet)
+
+### [SOLID front-end architecture](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5690945286701056/5702151527464960)
+
+- 🎙️ Jose Antonio Suarez Guerrero
+- [🎥 Talk](https://www.youtube.com/watch?v=xxFvMF5j99o&t=13525), Spanish
+- [📝 Slides](https://speakerdeck.com/albarian/solid-frontend-architecture-do-we-need-it-yes-for-commit-conf-19)
+
+### [Live coding DDD](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5137837183729664/5151916791169024)
+
+- [🎙️ Javier Cane](https://twitter.com/JavierCane)
+- [🎙️ Rafa Gómez Casas](https://twitter.com/rafaoe)
+- [🎥 Talk](https://www.youtube.com/watch?v=YVxTSht-zc0&t=4180), Spanish
+- [📝 Slides](link) (not available yet)
+
+### [Unbiasing teams](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5137837183729664/5716886352297984)
+
+- [🎙️ Félix Lopez](https://twitter.com/flopezluis)
+- [🎥 Talk](https://www.youtube.com/watch?v=cITVtXublBg&t=13659), Spanish
+- [📝 Slides](link)
+
+### [TDD in the real world](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5137837183729664/5701249852768256)
+
+- [🎙️ Eduardo Sánchez Contreras](https://twitter.com/edusanchezcon)
+- [🎥 Talk](https://www.youtube.com/watch?v=cITVtXublBg&t=21272), Spanish
+- [📝 Slides](link)
+
+## Missed talks
+
+- [DevTools: tools and tricks](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5137837183729664/5754544893984768),
+[🎥 Talk](https://www.youtube.com/watch?v=cITVtXublBg&t=24578‬)
+- [Three.js: creando entornos interactivos en 3D](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5137837183729664/5690357815705600)
+- [El peor lenguaje del mundo](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5137837183729664/5640221722935296)
+- [Git avanzado](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5137837183729664/6331844668686336),
+[📝 Slides](https://www.jesusamieiro.com/wp-content/uploads/2019/11/20191123-Commit-Conf-Git-avanzado-r2.pdf)
+
+## Ideas
+
+## References
