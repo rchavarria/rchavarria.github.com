@@ -101,6 +101,48 @@ Me da la impresión de que este concepto lo intenta vender alguien de *cloud*.
 - [🎙️ Angélica Sanz](link)
 - [🎥 Talk](link), Spanish (not available yet)
 - [📝 Slides](link) (not available yet)
+- Rating ⭐⭐⭐⭐⭐
+
+¿Se necesita carrera universitaria para ser desarrollador? Bueno, no mucho. Se
+estudian conceptos relacionados, pero sobra mucho de lo aprendido en la
+universidad. La charla empezó bastante controvertida.
+
+¿Especializado a generalista? Ni una cosa ni la otra, t-shaped
+
+¿Deberías seguir las modas? Está bien conocerlas, pero no merece la pena pasar
+mucho tiempo con ellas (con todas ellas). Mejor dedicar el tiempo a estudiar
+las bases.
+
+¿Objetivos individuales o de equipo? Ambos están bien, pero preferiblemente
+objetivos a nivel de equipo.
+
+> Las code review te deberían de encantar
+
+Te sientes mejor cuando los compañeros te dan buen feedback y aprendes con
+ellos. Y a la inversa, podrás hacer que tus compañeros se sientan mejor si
+les enseñas y les das buen feedback.
+
+Elige tus batallas, no impongas tu opinión, no discutas demasiado, hay veces
+que hay que ceder.
+
+Comparte tus ideas, todas ellas tienen valor.
+
+No tengas miedo a preguntar, pero también dedica un poco de tiempo a investigar.
+
+No dejes que tu trabajo te limite, busca tus pequeñas tareas para encontrar
+motivación, satisfaccón.
+
+Automatiza todo aquello que tengas que hacer 2 veces o más.
+
+Sé minimalista. Cuanto menos elementos tenga tu código, mejor. Nada de complejidades
+añadidas innecesariamente.
+
+Comentar las tareas grandes con el equipo antes de comenzar a realizarlas.
+Hay pocas cosas más frustrantes que dedicar tiempo a una tarea que después no
+sirva para nada.
+
+Charla tipo entrevista, uno hace las preguntas, otro contesta. Un formato muy
+curioso.
 
 ### [SOLID front-end architecture](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5690945286701056/5702151527464960)
 
