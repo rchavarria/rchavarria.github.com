@@ -149,6 +149,43 @@ curioso.
 - 🎙️ Jose Antonio Suarez Guerrero
 - [🎥 Talk](https://www.youtube.com/watch?v=xxFvMF5j99o&t=13525), Spanish
 - [📝 Slides](https://speakerdeck.com/albarian/solid-frontend-architecture-do-we-need-it-yes-for-commit-conf-19)
+- Rating ⭐⭐⭐
+
+¿Necesitamos arquitectura en el front?
+
+¿Las tecnologías front, son más fuertes o más débiles que las back?
+
+TypeScript pone más difícil que JavaScript hacer las cosas mal.
+
+[Microfrontends], una nueva tendencia, según Jose Antonio no estamos preparados
+para ellos todavía. En mi opinión, creo que hay gente muy interesada en este
+tema y lo lleva bastante avanzado (ver [ThoughtWorks Tech Radar]).
+
+La gran diferencia entre el front y el back es que el front es lo que ve el
+cliente.
+
+En los proyectos en general, el front-end se diseña como una cajita enana
+comparada con el gran mega-diseño del back.
+
+Normalmente, no se pasa mucho tiempo diseñando el front:
+
+- componentes que llaman directamente al API
+- respuestas del API que se pasan tal cual directamente a la parte visual
+
+Se termina creando dependencias entre componentes, compartiendo estado entre
+ellos, acoplándose a respuestas del API,...
+
+El desarrollo front-end es como cualquier otro desarrollo software:
+
+- aplican las mismas metodologías y métodos sistemáticos
+- buenas prácticas
+- patrones, diseño
+- arquitectura
+
+Imagen: propuesta de arquitectura
+
+Muchas siglas, mucha tecnología involucrada que no aporta gran cosa a la charla.
+El autor está bastante flipado con el front y con TypeScript en particular.
 
 ### [Live coding DDD](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5137837183729664/5151916791169024)
 
@@ -189,3 +226,7 @@ curioso.
 - Libro: bundle sobre PHP, TDD y refactoring de Fran Iglesias
 
 [eXtreme Programming]: http://www.extremeprogramming.org/
+[Microfrontends]: https://www.thoughtworks.com/radar/techniques/micro-frontends
+[ThoughtWorks Tech Radar]: https://www.thoughtworks.com/radar
+[patrón Criteria]: https://en.wikipedia.org/wiki/Specification_pattern
+[Disonancia cognitiva]: https://en.wikipedia.org/wiki/Cognitive_dissonance
