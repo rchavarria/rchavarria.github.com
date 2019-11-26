@@ -337,6 +337,50 @@ con asumir que la gente entiende exactamente lo que tú quieres transmitir
 - [🎙️ Eduardo Sánchez Contreras](https://twitter.com/edusanchezcon)
 - [🎥 Talk](https://www.youtube.com/watch?v=cITVtXublBg&t=21272), Spanish
 - [📝 Slides](link)
+- Rating ⭐⭐⭐
+
+> TDD es una herramienta de diseño de funcionalidad, no de diseño de arquitectura
+
+¿Qué no es TDD?
+
+- Diseño de arquitectura
+- Conocer tu IDE
+- Frameworks
+- Separación de tests unitarios e integración
+- Tests de base de datos
+
+**Tests de dentro hacia afuera**
+
+Así empiezan los tutoriales, así lo muestran, pero
+en el mundo real es difícil de aplicar. ¿Por qué? Porque tengo dos incógnitas,
+la entrada y la salida, lo que hace que tenga que hacer más suposiciones de las
+necesarias:
+
+```
+    ?   --- in --->  SUT   ---- out --->   ?
+```
+
+**Tests de fuera hacia adentro**
+
+Así tengo menos incertidumbre, porque soy el que comienza el flujo.
+
+```
+    SUT    ---- out --->   ?  --->   ?
+```
+
+Cuando paso a testear la siguiente unidad, más interior, puedo desentenderme
+de la anterior, su comportamiento ya está totalmente testeado.
+
+Evito el exceso de programación defensiva, porque esas defensas ya las habré
+implementado en las unidades exteriores.
+
+Ya tenemos todos los tests, tenemos 100% de cobertura. ¿Puede fallar algo? Sí,
+por supuesto, pero no debería ser relativo al código. Será configuración,
+inyección de la dependencia equivocada,...
+
+Comienza con temas generales de TDD y luego un live coding sin ritmo. Al final,
+como conclusión, me quedo con que su forma de trabajar es de afuera hacia 
+adentro.
 
 ## Missed talks
 
@@ -349,7 +393,6 @@ con asumir que la gente entiende exactamente lo que tú quieres transmitir
 - [How to implement a peer review learning workflow that your team will love](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5690945286701056/5662705071423488),
 [🎥 Talk](https://www.youtube.com/watch?v=xxFvMF5j99o&t=10040),
 [📝 Slides](https://prezi.com/afludoizu-dx/peer-reviews/?utm_campaign=share&token=37fd6558aa201726510e1827979d9b5911774b6e4a4b4ac38f1003f0ff682f2d&utm_medium=copy)
-
 
 ## Ideas
 
