@@ -259,6 +259,78 @@ sobre DDD, arquitectura hexagonal, event sourcing,...
 - [🎙️ Félix Lopez](https://twitter.com/flopezluis)
 - [🎥 Talk](https://www.youtube.com/watch?v=cITVtXublBg&t=13659), Spanish
 - [📝 Slides](link)
+- Rating ⭐⭐⭐⭐⭐
+
+¿Cómo tomamos decisiones? ¿Cómo piensan las personas? Conociendo algunos de los
+sesgos existentes, podremos entender mejor a las personas que forman parte de
+nuestros equipos y a las decisiones que toman.
+
+Creemos que el mundo es como lo percibimos nosotros, pero existen tantas
+percepciones diferentes como personas.
+
+Sesgos y estereotipos: no tienen por qué ser malos, nos ayudan a tomar decisiones
+diarias de forma eficiente, ahorrando carga cognitiva.
+
+Reciprocidad: tendemos a devolver los favores que recibimos.
+
+El sentido común no existe de forma global, depende de la cultura
+
+Creemos que tomamos decisiones razonadas, pero nos influyen mucho factores
+externos: hambre, sueño, frío/calor,... Por ejemplo, unos jueces condenaban al
+100% de los juzgados justo antes de la hora de comer
+
+En una valoración, si pides información antes, te puede afectar, como el *ancla*
+en una negociación. Ten en cuenta esto antes de valorar/juzgar a alguien.
+
+Sesgo de utilidad: la opinión de un senior pesa más que la de un junior
+
+Sesgo status quo: aquí se hace siempre así
+
+**Entendiendo a los demás**
+
+Las personas tienden a justificarse siempre, por muy ridículo que sea (historia
+del hombre hipnotizado que despierta con paraguas en día soleado)
+
+[Disonancia cognitiva:] nos cuesta dejar algo que no nos gusta si nos ha costado
+mucho trabajo llegar hasta ahí
+
+Error de atribución: atribuimos los errores de otros a su personalidad 
+(es malo, es vago) mientras que nuestros errores los atribuimos a causas 
+externas (mala suerte, esto falló,...). Una posible solución es asumir que todo
+el mundo es bueno, que intenta hacer las cosas lo mejor que sabe/puede
+
+Las empresas deberían fomentar la ayuda entre personas, es bueno que la gente
+se focalice en los demás
+
+Solemos hacer favores a personas a las que hemos hecho favores anteriormente
+
+Cuando alguien te cae mal, buscas justificaciones para representarlo como mala
+persona
+
+Si quieres que alguien se comporte de alguna forma en concreto, facilítale que
+se comporte de esa forma, ayúdale, incentíbale (si quieres que alguien coma
+bien, pon la comida sana en un lugar visible y esconde la comida menos sana)
+
+> Cambiando el entorno puedes cambiar el comportamiento de las personas
+
+**Comunicación**
+
+Tomamos decisiones dependiendo de cómo nos presentan la información. ¿Qué
+prefieres?
+
+1. Una operación con 90% de supervivencia
+2. Una operación con 10% de mortalidad
+
+La comunicación entre iguales sólo es posible si no hay castigo. Por eso no te
+quejas a tu jefe, por miedo a que te despida
+
+Incompetencia aprendida: la gente/alumnos cumple las espectativas (buenas y 
+malas) de su jefe/profesor. Historia de los alumnos y los anagramas
+
+Experimento con nosotros doblando una hoja de papel:
+
+> Siempre interpretamos los mensajes, por sencillos y concretos que sean. Cuidado
+con asumir que la gente entiende exactamente lo que tú quieres transmitir
 
 ### [TDD in the real world](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5137837183729664/5701249852768256)
 
