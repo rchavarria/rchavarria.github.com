@@ -396,12 +396,28 @@ adentro.
 
 ## Ideas
 
+Libros interesantes:
+
+- [La guía del refactor cotidiano], de Fran Iglesias (o porqué no, un [bundle]
+con tres libros de Fran)
+- [Domain-Driven Design distilled], de Vaughn Vernon, más conocido como *el libro
+verde*
+
+También puede estar muy intersante participar en el [Advent of Code 2019]
+
 ## References
 
-- Libro: bundle sobre PHP, TDD y refactoring de Fran Iglesias
+- Concepto de [Microfrontends]
+- [ThoughtWorks Tech Radar]
+- Libro [La guía del refactor cotidiano]
+- [Advent of Code 2019]
 
 [eXtreme Programming]: http://www.extremeprogramming.org/
 [Microfrontends]: https://www.thoughtworks.com/radar/techniques/micro-frontends
 [ThoughtWorks Tech Radar]: https://www.thoughtworks.com/radar
 [patrón Criteria]: https://en.wikipedia.org/wiki/Specification_pattern
 [Disonancia cognitiva]: https://en.wikipedia.org/wiki/Cognitive_dissonance
+[La guía del refactor cotidiano]: https://leanpub.com/refactorcotidiano
+[bundle]: https://leanpub.com/b/talkingbitbundle
+[Domain-Driven Design distilled]: https://amzn.to/2OiY2eq
+[Advent of Code 2019]: https://adventofcode.com/
