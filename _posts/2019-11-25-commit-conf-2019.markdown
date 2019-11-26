@@ -1,0 +1,428 @@
+---
+title: "CommitConf 2019"
+date: 2019-11-25 10:01
+author: Ruben Chavarria
+categories:
+- Conferencias
+---
+
+## La conferencia en sí
+
+[Agenda de la Commit Conf 2019](https://t3chfest.uc3m.es/2019/programa/):
+
+- +2000 asistentes
+- +140 charlas y talleres
+- +45 comunidades
+
+<!-- more -->
+
+## Charlas a las que atendí
+
+### [Refactorizar rima con simplificar](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5690945286701056/5682927522283520)
+
+- [🎙️ Javier Abadía](https://twitter.com/javierabadia)
+- [🎥 Charla](https://www.youtube.com/watch?v=ihu6sEbWHFE&t=4617)
+- [📝 Presentación](link) (no disponible todavía)
+- Valoración: ⭐⭐⭐⭐⭐
+
+¿Por qué el miedo conduce a código inmantenible? Como manager, refactorizar
+conlleva un riesgo. Tocas algo que funciona, pero se puede romper.
+
+Típica historia de un proyecto fallido: código duplicado, merges enormes, nada
+de pair programming, conocimiento aislado, no se entiende el código de los
+demás ni hay esfuerzos por hacerlo,...
+
+> Llega un momento en el que cada vez es más atractivo reescribir el proyecto
+>desde cero, lo que hace aún más difícil tener ganas de mejorar el código
+>existente
+
+![Círculo vicioso del mal software]({{ site.baseurl }}/assets/images/2019/bad-software-cycle.jpg)
+
+El código legacy no es malo para nada, es un repositorio de decisiones tomadas
+durante muchísimo tiempo. Es la historia viva del proyecto. Esta es la razón
+fundamental para decir no a la reescritura.
+
+Podríamos ver las prácticas de [eXtreme Programming] como la solución a estos
+problemas.
+
+![Círculo virtuoso del refactoring]({{ site.baseurl }}/assets/images/2019/refactoring-software-cycle.jpg)
+
+¿Qué razones podemos dar para refactorizar? Dar sólo razones económicas, nada de
+razones técnicas. De esta forma *Negocio* nos entenderá mejor:
+
+- Es más fácil cambiarlo, para añadir nuevas funcionalidades
+- Es más fácil entenderlo, para resolver bugs más rápidamente
+- ...
+
+*Collective ownership*: el código es de todos, se comparten unas guías de estilo,
+se fomenta el respeto entre los compañeros del equipo,...
+
+En definitiva, comenta varias prácticas de XP, situando el Refactoring en el
+centro de todas ellas.
+
+Charla muy bien expuesta, con historias relacionadas con el tema (storytelling),
+charla muy ensayada seguramente.
+
+### [DevOps con Docker, Kubernetes y otras herramientas](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5690945286701056/5667812190191616)
+
+- [🎙️ Laura Morillo](https://twitter.com/Laura_Morillo)
+- [🎥 Charla](link) (no disponible todavía)
+- [📝 Presentación](link) (no disponible todavía)
+- Valoración: ⭐⭐⭐⭐
+
+Se comienza a hablar de *DevOps* allá por 2009, donde en una conferencia, dos
+trabajadores de Flickr, un desarrollador y un administrador de sistemas presentaron
+cómo desplegaban hasta 10 veces al día.
+
+DevOps trata de colaboración, es como un ciclo infinito.
+
+C.A.L.M.S.: cultura, automatización, lean (acortar ciclos de feedback,...),
+medir (el impacto de los cambios), share (compartir lo aprendido)
+
+> Kubernetes hace lo mismo que el mejor de los sysadmin
+
+Habla de muchas herramientas:
+
+- Docker
+- Kubernetes: y de cómo configurar servicios, pods, instancias,...
+- Prometheus: como herramienta para almacenar series temporales de datos, nos
+sirve para medir
+- Graphana: herramienta de visualización, creación de alertas,...
+
+*NoOps*: concepto que defiende que la colaboración debe ser entre Negocio y
+Desarrollo, porque se presupone que la infraestructura ya debería ser parte de
+Desarrollo (cloud,...).
+
+Me da la impresión de que este concepto lo intenta vender alguien de *cloud*.
+
+### [Cómo mejorar como desarrollador](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5690945286701056/5729000374665216)
+
+- [🎙️ Jorge Franco](https://twitter.com/jfrancoleza)
+- [🎙️ Angélica Sanz](https://twitter.com/_AngelicaSanz)
+- [🎥 Charla](link), Spanish (no disponible todavía)
+- [📝 Presentación](link) (no disponible todavía)
+- Valoración: ⭐⭐⭐⭐⭐
+
+¿Se necesita carrera universitaria para ser desarrollador? Bueno, no mucho. Se
+estudian conceptos relacionados, pero sobra mucho de lo aprendido en la
+universidad. La charla empezó bastante controvertida.
+
+¿Especializado a generalista? Ni una cosa ni la otra, t-shaped
+
+¿Deberías seguir las modas? Está bien conocerlas, pero no merece la pena pasar
+mucho tiempo con ellas (con todas ellas). Mejor dedicar el tiempo a estudiar
+las bases.
+
+¿Objetivos individuales o de equipo? Ambos están bien, pero preferiblemente
+objetivos a nivel de equipo.
+
+> Las code review te deberían de encantar
+
+Te sientes mejor cuando los compañeros te dan buen feedback y aprendes con
+ellos. Y a la inversa, podrás hacer que tus compañeros se sientan mejor si
+les enseñas y les das buen feedback.
+
+Elige tus batallas, no impongas tu opinión, no discutas demasiado, hay veces
+que hay que ceder.
+
+Comparte tus ideas, todas ellas tienen valor.
+
+No tengas miedo a preguntar, pero también dedica un poco de tiempo a investigar.
+
+No dejes que tu trabajo te limite, busca tus pequeñas tareas para encontrar
+motivación, satisfaccón.
+
+Automatiza todo aquello que tengas que hacer 2 veces o más.
+
+Sé minimalista. Cuanto menos elementos tenga tu código, mejor. Nada de complejidades
+añadidas innecesariamente.
+
+Comentar las tareas grandes con el equipo antes de comenzar a realizarlas.
+Hay pocas cosas más frustrantes que dedicar tiempo a una tarea que después no
+sirva para nada.
+
+Charla tipo entrevista, uno hace las preguntas, otro contesta. Un formato muy
+curioso.
+
+### [SOLID front-end architecture](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5690945286701056/5702151527464960)
+
+- 🎙️ Jose Antonio Suarez Guerrero
+- [🎥 Charla](https://www.youtube.com/watch?v=xxFvMF5j99o&t=13525), Spanish
+- [📝 Presentación](https://speakerdeck.com/albarian/solid-frontend-architecture-do-we-need-it-yes-for-commit-conf-19)
+- Valoración: ⭐⭐⭐
+
+¿Necesitamos arquitectura en el front?
+
+¿Las tecnologías front, son más fuertes o más débiles que las back?
+
+TypeScript pone más difícil que JavaScript hacer las cosas mal.
+
+[Microfrontends], una nueva tendencia, según Jose Antonio no estamos preparados
+para ellos todavía. En mi opinión, creo que hay gente muy interesada en este
+tema y lo lleva bastante avanzado (ver [ThoughtWorks Tech Radar]).
+
+La gran diferencia entre el front y el back es que el front es lo que ve el
+cliente.
+
+En los proyectos en general, el front-end se diseña como una cajita enana
+comparada con el gran mega-diseño del back.
+
+Normalmente, no se pasa mucho tiempo diseñando el front:
+
+- componentes que llaman directamente al API
+- respuestas del API que se pasan tal cual directamente a la parte visual
+
+Se termina creando dependencias entre componentes, compartiendo estado entre
+ellos, acoplándose a respuestas del API,...
+
+El desarrollo front-end es como cualquier otro desarrollo software:
+
+- aplican las mismas metodologías y métodos sistemáticos
+- buenas prácticas
+- patrones, diseño
+- arquitectura
+
+![Propuesta de arquitecture]({{ site.baseurl }}/assets/images/2019/arquitecture-proposition.jpg)
+
+Muchas siglas, mucha tecnología involucrada que no aporta gran cosa a la charla.
+El autor está bastante flipado con el front y con TypeScript en particular.
+
+### [Live coding DDD](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5137837183729664/5151916791169024)
+
+- [🎙️ Javier Cane](https://twitter.com/JavierCane)
+- [🎙️ Rafa Gómez Casas](https://twitter.com/rafaoe)
+- [🎥 Charla](https://www.youtube.com/watch?v=YVxTSht-zc0&t=4180), Spanish
+- [📝 Presentación](link) (no disponible todavía)
+- Valoración: ⭐⭐⭐⭐⭐
+
+Segunda parte de una serie de charlas tipo elige tu propia aventura.
+
+Primero un poco de contexto, siguiendo una arquitectura hexagonal, proponen la
+siguiente nomenclatura para los tests:
+
+- unitario, testea un caso de uso, implementado por un Application Service al que
+le inyectamos otros Services, Models y Repositories
+- integración: testea las implementaciones de los Repositories
+- aceptación: testea todo, desde el Controller hasta la implementación del
+Repository pasando por el Application Service
+
+¿Cómo comunicar dos módulos (hablando en términos de DDD)? Por ejemplo, el módulo
+de notificaciones quiere mandar un email a todos los usuarios (módulo de usuarios)
+informándoles sobre los nuevos cursos (módulo de cursos) del último mes.
+
+1. CQRS (elegido), enviando queries a los otros módulos y enviando comandos a
+nuestro módulo
+2. Inyectar Repository en nuestro Application Service
+3. Inyectar Application Service
+
+Comienza a testear de fuera hacia dentro, implementando un test de aceptación.
+
+En el Controller, como estoy en infrastructura, me permito acoplarme a la BBDD
+(implementación del Repo), a Spring, al framework
+
+El Controller manda un DTO (con tipos primitivos, que son fáciles de serializar)
+al Application Service. Pero no le llama directamente, si no que manda un
+Comando al Command Bus donde lo recibirá el Command Handler que será donde
+comienza nuestro caso de uso. El Command Handler es como el Application Service
+en CQRS.
+
+*Aquí mezcla arquitectura hexagonal, DDD, event driven arquitecture,... y me
+empiezo a perder*
+
+Para comunicar con otros módulos mandará queries al Query Bus. Quizá no sean
+Bounded Context diferentes todavía, pero El Query Bus nos desacopla muchísimo
+por si en un futuro queremos que sean Bounded Context diferentes.
+
+¿Inyectar el Repo? Mejor que no, porque un módulo (o Bounded Context) conocerá
+el modelo de datos de otro módulo/BC
+
+¿Inyectar el Application Service? Algo menos malo. Compartirían DTOs, pero aún
+así sigue conociendo detalles de otro módulo/bc.
+
+¿Y si ahora cambiamos la base de datos, de MySQL a Elasticsearch? Fácil, no?
+Cambiamos la implementación del Repository, y ya está.
+
+Casi, casi. En las queries a MySQL, se utiliza el [patrón Specification] (o
+Criteria), donde el Repository específico utiliza esa Criteria para mapear con
+Hibernate a MySQL. En la implementación de Elasticsearch, mantendremos los 
+Criteria, pero el mapeo será diferente, dependerá de la nueva implementación.
+
+Ahora ya solo faltaría migrar los datos. Aquí me he perdido: eventos guardados,
+etiquetas de los elementos de la base de datos en JSON para facilitar las
+búsquedas (que?), ¿?
+
+Charla con ritmo trepidante, mucho contexto anterior, me falta mucho conocimiento
+sobre DDD, arquitectura hexagonal, event sourcing,...
+
+### [Unbiasing teams](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5137837183729664/5716886352297984)
+
+- [🎙️ Félix Lopez](https://twitter.com/flopezluis)
+- [🎥 Charla](https://www.youtube.com/watch?v=cITVtXublBg&t=13659), Spanish
+- [📝 Presentación](link)
+- Valoración: ⭐⭐⭐⭐⭐
+
+¿Cómo tomamos decisiones? ¿Cómo piensan las personas? Conociendo algunos de los
+[sesgos existentes], podremos entender mejor a las personas que forman parte de
+nuestros equipos y a las decisiones que toman.
+
+Creemos que el mundo es como lo percibimos nosotros, pero existen tantas
+percepciones diferentes como personas.
+
+Sesgos y estereotipos: no tienen por qué ser malos, nos ayudan a tomar decisiones
+diarias de forma eficiente, ahorrando carga cognitiva.
+
+Reciprocidad: tendemos a devolver los favores que recibimos.
+
+El sentido común no existe de forma global, depende de la cultura
+
+Creemos que tomamos decisiones razonadas, pero nos influyen mucho factores
+externos: hambre, sueño, frío/calor,... Por ejemplo, unos jueces condenaban al
+100% de los juzgados justo antes de la hora de comer
+
+En una valoración, si pides información antes, te puede afectar, como el *ancla*
+en una negociación. Ten en cuenta esto antes de valorar/juzgar a alguien.
+
+Sesgo de utilidad: la opinión de un senior pesa más que la de un junior
+
+Sesgo status quo: aquí se hace siempre así
+
+**Entendiendo a los demás**
+
+Las personas tienden a justificarse siempre, por muy ridículo que sea (historia
+del hombre hipnotizado que despierta con paraguas en día soleado)
+
+[Disonancia cognitiva:] nos cuesta dejar algo que no nos gusta si nos ha costado
+mucho trabajo llegar hasta ahí
+
+Error de atribución: atribuimos los errores de otros a su personalidad 
+(es malo, es vago) mientras que nuestros errores los atribuimos a causas 
+externas (mala suerte, esto falló,...). Una posible solución es asumir que todo
+el mundo es bueno, que intenta hacer las cosas lo mejor que sabe/puede
+
+Las empresas deberían fomentar la ayuda entre personas, es bueno que la gente
+se focalice en los demás
+
+Solemos hacer favores a personas a las que hemos hecho favores anteriormente
+
+Cuando alguien te cae mal, buscas justificaciones para representarlo como mala
+persona
+
+Si quieres que alguien se comporte de alguna forma en concreto, facilítale que
+se comporte de esa forma, ayúdale, incentíbale (si quieres que alguien coma
+bien, pon la comida sana en un lugar visible y esconde la comida menos sana)
+
+> Cambiando el entorno puedes cambiar el comportamiento de las personas
+
+**Comunicación**
+
+Tomamos decisiones dependiendo de cómo nos presentan la información. ¿Qué
+prefieres?
+
+1. Una operación con 90% de supervivencia
+2. Una operación con 10% de mortalidad
+
+La comunicación entre iguales sólo es posible si no hay castigo. Por eso no te
+quejas a tu jefe, por miedo a que te despida
+
+Incompetencia aprendida: la gente/alumnos cumple las espectativas (buenas y 
+malas) de su jefe/profesor. Historia de los alumnos y los anagramas
+
+Experimento con nosotros doblando una hoja de papel:
+
+> Siempre interpretamos los mensajes, por sencillos y concretos que sean. Cuidado
+con asumir que la gente entiende exactamente lo que tú quieres transmitir
+
+### [TDD en el mundo real](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5137837183729664/5701249852768256)
+
+- [🎙️ Eduardo Sánchez Contreras](https://twitter.com/edusanchezcon)
+- [🎥 Charla](https://www.youtube.com/watch?v=cITVtXublBg&t=21272), Spanish
+- [📝 Presentación](link)
+- Valoración: ⭐⭐⭐
+
+> TDD es una herramienta de diseño de funcionalidad, no de diseño de arquitectura
+
+¿Qué no es TDD?
+
+- Diseño de arquitectura
+- Conocer tu IDE
+- Frameworks
+- Separación de tests unitarios e integración
+- Tests de base de datos
+
+**Tests de dentro hacia afuera**
+
+Así empiezan los tutoriales, así lo muestran, pero
+en el mundo real es difícil de aplicar. ¿Por qué? Porque tengo dos incógnitas,
+la entrada y la salida, lo que hace que tenga que hacer más suposiciones de las
+necesarias:
+
+```
+    ?   --- in --->  SUT   ---- out --->   ?
+```
+
+**Tests de fuera hacia adentro**
+
+Así tengo menos incertidumbre, porque soy el que comienza el flujo.
+
+```
+    SUT    ---- out --->   ?  --->   ?
+```
+
+Cuando paso a testear la siguiente unidad, más interior, puedo desentenderme
+de la anterior, su comportamiento ya está totalmente testeado.
+
+Evito el exceso de programación defensiva, porque esas defensas ya las habré
+implementado en las unidades exteriores.
+
+Ya tenemos todos los tests, tenemos 100% de cobertura. ¿Puede fallar algo? Sí,
+por supuesto, pero no debería ser relativo al código. Será configuración,
+inyección de la dependencia equivocada,...
+
+Comienza con temas generales de TDD y luego un live coding sin ritmo. Al final,
+como conclusión, me quedo con que su forma de trabajar es de afuera hacia 
+adentro.
+
+## Charlas que me perdí (pero me gustaría ver)
+
+- [DevTools: tools and tricks](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5137837183729664/5754544893984768),
+[🎥 Charla](https://www.youtube.com/watch?v=cITVtXublBg&t=24578‬)
+- [Three.js: creando entornos interactivos en 3D](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5137837183729664/5690357815705600)
+- [El peor lenguaje del mundo](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5137837183729664/5640221722935296)
+- [Git avanzado](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5137837183729664/6331844668686336),
+[📝 Presentación](https://www.jesusamieiro.com/wp-content/uploads/2019/11/20191123-Commit-Conf-Git-avanzado-r2.pdf)
+- [How to implement a peer review learning workflow that your team will love](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5690945286701056/5662705071423488),
+[🎥 Charla](https://www.youtube.com/watch?v=xxFvMF5j99o&t=10040),
+[📝 Presentación](https://prezi.com/afludoizu-dx/peer-reviews/?utm_campaign=share&token=37fd6558aa201726510e1827979d9b5911774b6e4a4b4ac38f1003f0ff682f2d&utm_medium=copy)
+
+## Ideas
+
+Libros interesantes:
+
+- [La guía del refactor cotidiano], de Fran Iglesias (o porqué no, un [bundle]
+con tres libros de Fran)
+- [Domain-Driven Design distilled], de Vaughn Vernon, más conocido como *el libro
+verde*
+
+También puede estar muy intersante participar en el [Advent of Code 2019]
+
+## Referencias
+
+- Concepto de [Microfrontends]
+- [ThoughtWorks Tech Radar]
+- Libro [La guía del refactor cotidiano]
+- [Advent of Code 2019]
+- [TDD - Outside In vs Inside Out] en Stack Exchange
+- [TDD - From the Inside Out or the Outside In?] en el blog de 8th Light
+
+[eXtreme Programming]: http://www.extremeprogramming.org/
+[Microfrontends]: https://www.thoughtworks.com/radar/techniques/micro-frontends
+[ThoughtWorks Tech Radar]: https://www.thoughtworks.com/radar
+[patrón Specification]: https://en.wikipedia.org/wiki/Specification_pattern
+[sesgos existentes]: https://en.wikipedia.org/wiki/List_of_cognitive_biases#/media/File:Cognitive_bias_codex_en.svg
+[Disonancia cognitiva]: https://en.wikipedia.org/wiki/Cognitive_dissonance
+[La guía del refactor cotidiano]: https://leanpub.com/refactorcotidiano
+[bundle]: https://leanpub.com/b/talkingbitbundle
+[Domain-Driven Design distilled]: https://amzn.to/2OiY2eq
+[Advent of Code 2019]: https://adventofcode.com/
+[TDD - Outside In vs Inside Out]: https://softwareengineering.stackexchange.com/questions/166409/tdd-outside-in-vs-inside-out
+[TDD - From the Inside Out or the Outside In?]: https://8thlight.com/blog/georgina-mcfadyen/2016/06/27/inside-out-tdd-vs-outside-in.html
