@@ -36,7 +36,7 @@ demás ni hay esfuerzos por hacerlo,...
 >desde cero, lo que hace aún más difícil tener ganas de mejorar el código
 >existente
 
-Imagen: círculo vicioso del mal software
+![Círculo vicioso del mal software]({{ site.baseurl }}/assets/images/2019/bad-software-cycle.jpg)
 
 El código legacy no es malo para nada, es un repositorio de decisiones tomadas
 durante muchísimo tiempo. Es la historia viva del proyecto. Esta es la razón
@@ -45,7 +45,7 @@ fundamental para decir no a la reescritura.
 Podríamos ver las prácticas de [eXtreme Programming] como la solución a estos
 problemas.
 
-Imagen: círculo virtuoso del refactoring
+![Círculo virtuoso del refactoring]({{ site.baseurl }}/assets/images/2019/refactoring-software-cycle.jpg)
 
 ¿Qué razones podemos dar para refactorizar? Dar sólo razones económicas, nada de
 razones técnicas. De esta forma *Negocio* nos entenderá mejor:
@@ -182,7 +182,7 @@ El desarrollo front-end es como cualquier otro desarrollo software:
 - patrones, diseño
 - arquitectura
 
-Imagen: propuesta de arquitectura
+![Propuesta de arquitecture]({{ site.baseurl }}/assets/images/2019/arquitecture-proposition.jpg)
 
 Muchas siglas, mucha tecnología involucrada que no aporta gran cosa a la charla.
 El autor está bastante flipado con el front y con TypeScript en particular.
@@ -242,10 +242,10 @@ así sigue conociendo detalles de otro módulo/bc.
 ¿Y si ahora cambiamos la base de datos, de MySQL a Elasticsearch? Fácil, no?
 Cambiamos la implementación del Repository, y ya está.
 
-Casi, casi. En las queries a MySQL, se utiliza el [patrón Criteria], donde el
-Repository específico utiliza esa Criteria para mapear con Hibernate a MySQL.
-En la implementación de Elasticsearch, mantendremos los Criteria, pero el
-mapeo será diferente, dependerá de la nueva implementación.
+Casi, casi. En las queries a MySQL, se utiliza el [patrón Specification] (o
+Criteria), donde el Repository específico utiliza esa Criteria para mapear con
+Hibernate a MySQL. En la implementación de Elasticsearch, mantendremos los 
+Criteria, pero el mapeo será diferente, dependerá de la nueva implementación.
 
 Ahora ya solo faltaría migrar los datos. Aquí me he perdido: eventos guardados,
 etiquetas de los elementos de la base de datos en JSON para facilitar las
@@ -262,7 +262,7 @@ sobre DDD, arquitectura hexagonal, event sourcing,...
 - Valoración: ⭐⭐⭐⭐⭐
 
 ¿Cómo tomamos decisiones? ¿Cómo piensan las personas? Conociendo algunos de los
-sesgos existentes, podremos entender mejor a las personas que forman parte de
+[sesgos existentes], podremos entender mejor a las personas que forman parte de
 nuestros equipos y a las decisiones que toman.
 
 Creemos que el mundo es como lo percibimos nosotros, pero existen tantas
@@ -411,13 +411,18 @@ También puede estar muy intersante participar en el [Advent of Code 2019]
 - [ThoughtWorks Tech Radar]
 - Libro [La guía del refactor cotidiano]
 - [Advent of Code 2019]
+- [TDD - Outside In vs Inside Out] en Stack Exchange
+- [TDD - From the Inside Out or the Outside In?] en el blog de 8th Light
 
 [eXtreme Programming]: http://www.extremeprogramming.org/
 [Microfrontends]: https://www.thoughtworks.com/radar/techniques/micro-frontends
 [ThoughtWorks Tech Radar]: https://www.thoughtworks.com/radar
-[patrón Criteria]: https://en.wikipedia.org/wiki/Specification_pattern
+[patrón Specification]: https://en.wikipedia.org/wiki/Specification_pattern
+[sesgos existentes]: https://en.wikipedia.org/wiki/List_of_cognitive_biases#/media/File:Cognitive_bias_codex_en.svg
 [Disonancia cognitiva]: https://en.wikipedia.org/wiki/Cognitive_dissonance
 [La guía del refactor cotidiano]: https://leanpub.com/refactorcotidiano
 [bundle]: https://leanpub.com/b/talkingbitbundle
 [Domain-Driven Design distilled]: https://amzn.to/2OiY2eq
 [Advent of Code 2019]: https://adventofcode.com/
+[TDD - Outside In vs Inside Out]: https://softwareengineering.stackexchange.com/questions/166409/tdd-outside-in-vs-inside-out
+[TDD - From the Inside Out or the Outside In?]: https://8thlight.com/blog/georgina-mcfadyen/2016/06/27/inside-out-tdd-vs-outside-in.html
