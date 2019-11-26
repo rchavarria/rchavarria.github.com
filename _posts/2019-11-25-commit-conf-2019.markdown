@@ -6,24 +6,24 @@ categories:
 - Conferencias
 ---
 
-## Conference itself
+## La conferencia en sí
 
-[Commit Conf 2019 conference agenda](https://t3chfest.uc3m.es/2019/programa/):
+[Agenda de la Commit Conf 2019](https://t3chfest.uc3m.es/2019/programa/):
 
-- +2000 attendees
-- +140 talks and labs
-- +45 user groups
+- +2000 asistentes
+- +140 charlas y talleres
+- +45 comunidades
 
 <!-- more -->
 
-## Attended talks
+## Charlas a las que atendí
 
-### [Refactoring rhyme with simplify](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5690945286701056/5682927522283520)
+### [Refactorizar rima con simplificar](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5690945286701056/5682927522283520)
 
 - [🎙️ Javier Abadía](https://twitter.com/javierabadia)
-- [🎥 Tal](https://www.youtube.com/watch?v=ihu6sEbWHFE&t=4617)
-- [📝 Slides](link) (not available yet)
-- Rating: ⭐⭐⭐⭐⭐
+- [🎥 Charla](https://www.youtube.com/watch?v=ihu6sEbWHFE&t=4617)
+- [📝 Presentación](link) (no disponible todavía)
+- Valoración: ⭐⭐⭐⭐⭐
 
 ¿Por qué el miedo conduce a código inmantenible? Como manager, refactorizar
 conlleva un riesgo. Tocas algo que funciona, pero se puede romper.
@@ -63,12 +63,12 @@ centro de todas ellas.
 Charla muy bien expuesta, con historias relacionadas con el tema (storytelling),
 charla muy ensayada seguramente.
 
-### [DevOps with Docker, Kubernetes and other tools](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5690945286701056/5667812190191616)
+### [DevOps con Docker, Kubernetes y otras herramientas](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5690945286701056/5667812190191616)
 
 - [🎙️ Laura Morillo](https://twitter.com/Laura_Morillo)
-- [🎥 Talk](link) (not available yet)
-- [📝 Slides](link) (not available yet)
-- Rating ⭐⭐⭐⭐
+- [🎥 Charla](link) (no disponible todavía)
+- [📝 Presentación](link) (no disponible todavía)
+- Valoración: ⭐⭐⭐⭐
 
 Se comienza a hablar de *DevOps* allá por 2009, donde en una conferencia, dos
 trabajadores de Flickr, un desarrollador y un administrador de sistemas presentaron
@@ -95,13 +95,13 @@ Desarrollo (cloud,...).
 
 Me da la impresión de que este concepto lo intenta vender alguien de *cloud*.
 
-### [How to improve as a developer](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5690945286701056/5729000374665216)
+### [Cómo mejorar como desarrollador](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5690945286701056/5729000374665216)
 
 - [🎙️ Jorge Franco](https://twitter.com/jfrancoleza)
-- [🎙️ Angélica Sanz](link)
-- [🎥 Talk](link), Spanish (not available yet)
-- [📝 Slides](link) (not available yet)
-- Rating ⭐⭐⭐⭐⭐
+- [🎙️ Angélica Sanz](https://twitter.com/_AngelicaSanz)
+- [🎥 Charla](link), Spanish (no disponible todavía)
+- [📝 Presentación](link) (no disponible todavía)
+- Valoración: ⭐⭐⭐⭐⭐
 
 ¿Se necesita carrera universitaria para ser desarrollador? Bueno, no mucho. Se
 estudian conceptos relacionados, pero sobra mucho de lo aprendido en la
@@ -147,9 +147,9 @@ curioso.
 ### [SOLID front-end architecture](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5690945286701056/5702151527464960)
 
 - 🎙️ Jose Antonio Suarez Guerrero
-- [🎥 Talk](https://www.youtube.com/watch?v=xxFvMF5j99o&t=13525), Spanish
-- [📝 Slides](https://speakerdeck.com/albarian/solid-frontend-architecture-do-we-need-it-yes-for-commit-conf-19)
-- Rating ⭐⭐⭐
+- [🎥 Charla](https://www.youtube.com/watch?v=xxFvMF5j99o&t=13525), Spanish
+- [📝 Presentación](https://speakerdeck.com/albarian/solid-frontend-architecture-do-we-need-it-yes-for-commit-conf-19)
+- Valoración: ⭐⭐⭐
 
 ¿Necesitamos arquitectura en el front?
 
@@ -191,9 +191,9 @@ El autor está bastante flipado con el front y con TypeScript en particular.
 
 - [🎙️ Javier Cane](https://twitter.com/JavierCane)
 - [🎙️ Rafa Gómez Casas](https://twitter.com/rafaoe)
-- [🎥 Talk](https://www.youtube.com/watch?v=YVxTSht-zc0&t=4180), Spanish
-- [📝 Slides](link) (not available yet)
-- Rating ⭐⭐⭐⭐⭐
+- [🎥 Charla](https://www.youtube.com/watch?v=YVxTSht-zc0&t=4180), Spanish
+- [📝 Presentación](link) (no disponible todavía)
+- Valoración: ⭐⭐⭐⭐⭐
 
 Segunda parte de una serie de charlas tipo elige tu propia aventura.
 
@@ -257,9 +257,9 @@ sobre DDD, arquitectura hexagonal, event sourcing,...
 ### [Unbiasing teams](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5137837183729664/5716886352297984)
 
 - [🎙️ Félix Lopez](https://twitter.com/flopezluis)
-- [🎥 Talk](https://www.youtube.com/watch?v=cITVtXublBg&t=13659), Spanish
-- [📝 Slides](link)
-- Rating ⭐⭐⭐⭐⭐
+- [🎥 Charla](https://www.youtube.com/watch?v=cITVtXublBg&t=13659), Spanish
+- [📝 Presentación](link)
+- Valoración: ⭐⭐⭐⭐⭐
 
 ¿Cómo tomamos decisiones? ¿Cómo piensan las personas? Conociendo algunos de los
 sesgos existentes, podremos entender mejor a las personas que forman parte de
@@ -332,12 +332,12 @@ Experimento con nosotros doblando una hoja de papel:
 > Siempre interpretamos los mensajes, por sencillos y concretos que sean. Cuidado
 con asumir que la gente entiende exactamente lo que tú quieres transmitir
 
-### [TDD in the real world](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5137837183729664/5701249852768256)
+### [TDD en el mundo real](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5137837183729664/5701249852768256)
 
 - [🎙️ Eduardo Sánchez Contreras](https://twitter.com/edusanchezcon)
-- [🎥 Talk](https://www.youtube.com/watch?v=cITVtXublBg&t=21272), Spanish
-- [📝 Slides](link)
-- Rating ⭐⭐⭐
+- [🎥 Charla](https://www.youtube.com/watch?v=cITVtXublBg&t=21272), Spanish
+- [📝 Presentación](link)
+- Valoración: ⭐⭐⭐
 
 > TDD es una herramienta de diseño de funcionalidad, no de diseño de arquitectura
 
@@ -382,17 +382,17 @@ Comienza con temas generales de TDD y luego un live coding sin ritmo. Al final,
 como conclusión, me quedo con que su forma de trabajar es de afuera hacia 
 adentro.
 
-## Missed talks
+## Charlas que me perdí (pero me gustaría ver)
 
 - [DevTools: tools and tricks](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5137837183729664/5754544893984768),
-[🎥 Talk](https://www.youtube.com/watch?v=cITVtXublBg&t=24578‬)
+[🎥 Charla](https://www.youtube.com/watch?v=cITVtXublBg&t=24578‬)
 - [Three.js: creando entornos interactivos en 3D](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5137837183729664/5690357815705600)
 - [El peor lenguaje del mundo](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5137837183729664/5640221722935296)
 - [Git avanzado](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5137837183729664/6331844668686336),
-[📝 Slides](https://www.jesusamieiro.com/wp-content/uploads/2019/11/20191123-Commit-Conf-Git-avanzado-r2.pdf)
+[📝 Presentación](https://www.jesusamieiro.com/wp-content/uploads/2019/11/20191123-Commit-Conf-Git-avanzado-r2.pdf)
 - [How to implement a peer review learning workflow that your team will love](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5690945286701056/5662705071423488),
-[🎥 Talk](https://www.youtube.com/watch?v=xxFvMF5j99o&t=10040),
-[📝 Slides](https://prezi.com/afludoizu-dx/peer-reviews/?utm_campaign=share&token=37fd6558aa201726510e1827979d9b5911774b6e4a4b4ac38f1003f0ff682f2d&utm_medium=copy)
+[🎥 Charla](https://www.youtube.com/watch?v=xxFvMF5j99o&t=10040),
+[📝 Presentación](https://prezi.com/afludoizu-dx/peer-reviews/?utm_campaign=share&token=37fd6558aa201726510e1827979d9b5911774b6e4a4b4ac38f1003f0ff682f2d&utm_medium=copy)
 
 ## Ideas
 
@@ -405,7 +405,7 @@ verde*
 
 También puede estar muy intersante participar en el [Advent of Code 2019]
 
-## References
+## Referencias
 
 - Concepto de [Microfrontends]
 - [ThoughtWorks Tech Radar]
