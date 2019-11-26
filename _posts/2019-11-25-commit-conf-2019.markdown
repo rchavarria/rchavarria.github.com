@@ -193,6 +193,66 @@ El autor está bastante flipado con el front y con TypeScript en particular.
 - [🎙️ Rafa Gómez Casas](https://twitter.com/rafaoe)
 - [🎥 Talk](https://www.youtube.com/watch?v=YVxTSht-zc0&t=4180), Spanish
 - [📝 Slides](link) (not available yet)
+- Rating ⭐⭐⭐⭐⭐
+
+Segunda parte de una serie de charlas tipo elige tu propia aventura.
+
+Primero un poco de contexto, siguiendo una arquitectura hexagonal, proponen la
+siguiente nomenclatura para los tests:
+
+- unitario, testea un caso de uso, implementado por un Application Service al que
+le inyectamos otros Services, Models y Repositories
+- integración: testea las implementaciones de los Repositories
+- aceptación: testea todo, desde el Controller hasta la implementación del
+Repository pasando por el Application Service
+
+¿Cómo comunicar dos módulos (hablando en términos de DDD)? Por ejemplo, el módulo
+de notificaciones quiere mandar un email a todos los usuarios (módulo de usuarios)
+informándoles sobre los nuevos cursos (módulo de cursos) del último mes.
+
+1. CQRS (elegido), enviando queries a los otros módulos y enviando comandos a
+nuestro módulo
+2. Inyectar Repository en nuestro Application Service
+3. Inyectar Application Service
+
+Comienza a testear de fuera hacia dentro, implementando un test de aceptación.
+
+En el Controller, como estoy en infrastructura, me permito acoplarme a la BBDD
+(implementación del Repo), a Spring, al framework
+
+El Controller manda un DTO (con tipos primitivos, que son fáciles de serializar)
+al Application Service. Pero no le llama directamente, si no que manda un
+Comando al Command Bus donde lo recibirá el Command Handler que será donde
+comienza nuestro caso de uso. El Command Handler es como el Application Service
+en CQRS.
+
+*Aquí mezcla arquitectura hexagonal, DDD, event driven arquitecture,... y me
+empiezo a perder*
+
+Para comunicar con otros módulos mandará queries al Query Bus. Quizá no sean
+Bounded Context diferentes todavía, pero El Query Bus nos desacopla muchísimo
+por si en un futuro queremos que sean Bounded Context diferentes.
+
+¿Inyectar el Repo? Mejor que no, porque un módulo (o Bounded Context) conocerá
+el modelo de datos de otro módulo/BC
+
+¿Inyectar el Application Service? Algo menos malo. Compartirían DTOs, pero aún
+así sigue conociendo detalles de otro módulo/bc.
+
+¿Y si ahora cambiamos la base de datos, de MySQL a Elasticsearch? Fácil, no?
+Cambiamos la implementación del Repository, y ya está.
+
+Casi, casi. En las queries a MySQL, se utiliza el [patrón Criteria], donde el
+Repository específico utiliza esa Criteria para mapear con Hibernate a MySQL.
+En la implementación de Elasticsearch, mantendremos los Criteria, pero el
+mapeo será diferente, dependerá de la nueva implementación.
+
+Ahora ya solo faltaría migrar los datos. Aquí me he perdido: eventos guardados,
+etiquetas de los elementos de la base de datos en JSON para facilitar las
+búsquedas (que?), ¿?
+
+Charla con ritmo trepidante, mucho contexto anterior, me falta mucho conocimiento
+sobre DDD, arquitectura hexagonal, event sourcing,...
 
 ### [Unbiasing teams](https://www.koliseo.com/events/commit-2019/r4p/5106829466009600/agenda#/5137837183729664/5716886352297984)
 
