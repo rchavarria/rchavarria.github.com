@@ -8,24 +8,59 @@ categories:
 - Ajedrez
 ---
 
-##### de Glenn Livingston
+##### de Ajedrez Eureka
 
 [![Libro de aperturas](https://www.ajedrezeureka.com/wp-content/uploads/2016/02/ajedrez-y-su-ensenanza-libro-de-aperturas-400x500.jpg)][1]
 
 ### Por qué lo he leído
 
+Desde pequeño me ha gustado jugar al ajedrez, y de pequeño jugué algunos torneos
+locales y solía jugar más o menos de forma regular. Luego dejé de jugar durante
+una larga temporada. No tenía a nadie con quien practicar, y tampoco lo buscaba.
+
+Hasta que, después de muchos años, jugué una partida y mi contrincante me
+barrió, literalmente. Entonces me decidí a mejorar mi ajedrez.
+
+Encontré la plataforma [chess.com] y llevo un tiempo practicando pequeños puzzles
+cada día. Y mi ajedrez mejoró.
+
+Después descubrí que podía jugar contra otras personas de la plataforma. Empecé
+poco a poco. Partida a partida. Tenía miedo de jugar mal, de que me ganaran, de
+hacer el ridículo. Pero me forcé a seguir jugando.
+
+Más tarde descubrí que podía formar parte de *clubs*, de grupos de jugadores. Y
+que también podía jugar campeonatos online. Y ¡¡boom!!. Mi universo de ajedrez
+ha explotado.
+
+Ahora puedo retar a jugadores infinitamente mejores que yo. Así
+que el nivel de juego en el que estoy se me queda pequeño, y quiero mejorar.
+Así que creo que aprender un poco sobre aperturas me vendrá bien. 
 
 <!-- more -->
 
 ### De qué trata el libro
 
+No es una novela de ficción, no es un libro sobre una tecnología o algo así. Es
+un libro donde explora las aperturas más comunes del ajedrez.
+
+Se puede entender como un libro de consulta, de referencia. En él se listan las
+múltiples variantes de muchas aperturas.
 
 ### Conclusiones y valoración
 
-*Nota*: aprender sobre *estructura de peones*.
+Como lectura, pues hay que reconocer que es un rollo. Es una pesadilla leer
+movimientos del ajedrez sin verlos en un tablero (aunque sea virtual). Está a la
+altura de leer la guía telefónica o un diccionario.
 
-### Qué he aprendido
+Pero como consulta es un muy buen recurso. También tiene algo muy bueno. Antes
+de desgranar cada apertura, se comenta las posibilidades de cada color. Por
+ejemplo, esta apertura es muy ventajosa para blancas por esto y por esto. O esta
+defensa para negras puede acabar en una partida muy dinámica.
 
+Las primeras páginas vienen muy bien como consejos para poder afrontar tus
+partidas de ajedrez.
+
+Siguientes pasos: aprender sobre *estructuras de peones*.
 
 ### Frases que me gustaría recordar
 
@@ -45,11 +80,6 @@ centrales
 
 > Contra el fianchetto del alfil hay dos formas básicas de jugar: un fianchetto
 opuesto o formar una cadena de peones en la gran diagonal.
-
-
-<!-- -->
-
-> Cita del libro aquí
 
 <!-- -->
 
@@ -326,3 +356,4 @@ columna c.
 
 [1]: https://www.ajedrezeureka.com/libro-de-aperturas-de-ajedrez-con-licencia-creative-commons/
 [Ajedrez Eureka]: https://www.ajedrezeureka.com
+[chess.com]: https://chess.com
