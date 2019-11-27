@@ -143,7 +143,7 @@ Así que aquí está mi Lista de Lectura:
 
 ## He leído
 
-- [Ajedrez y su enseñanza: libro de aperturas]({{ site.baseurl }}{% post_url 2019-10-21-ajedrez-enseñanza-libro-aperturas %}), de Ajedrez Eureka ~ *Octubre 2019*
+- [Ajedrez y su enseñanza: libro de aperturas]({{ site.baseurl }}{% post_url 2019-10-21-ajedrez-ensenanza-libro-aperturas %}), de Ajedrez Eureka ~ *Octubre 2019*
 - [Down and out in the magic kindom]({{ site.baseurl }}{% post_url 2018-03-23-down-out-magic-kingdom %}), de Cory Doctorow ~ *Marzo 2018*
 - [Practical object-oriented design with Ruby (POODR)]({{ site.baseurl }}{% post_url 2018-01-17-practical-object-oriented-design-in-ruby %}), de Sandi Metz, visto en el blog de [Carlos Blé](https://twitter.com/carlosble) ~ *Enero 2018*
 - [Ego is the enemy]({{ site.baseurl }}{% post_url 2017-12-13-ego-is-enemy %}), de Ryan Holiday, recomendado una y otra vez por [Derek Sivers](https://sivers.org/) ~ *Diciembre 2017*
