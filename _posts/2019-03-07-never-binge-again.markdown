@@ -59,7 +59,7 @@ algún otro sitio, para conseguir algo similar, pero ahora no recuerdo dónde.
 
 ### Qué he aprendido
 
-Debo repasar al confección del Plan de Comida.
+Debo repasar la confección del Plan de Comida.
 
 ### Frases que me gustaría recordar
 
