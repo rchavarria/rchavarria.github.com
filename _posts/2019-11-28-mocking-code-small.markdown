@@ -10,15 +10,37 @@ categories:
 Comentarios sobre el artículo [Mocking is a code smell], escrito por [Eric Elliot],
 un conocido por aquí.
 
-El artículo expone ...
+El artículo expone una serie de razones por las que mockear son un mal olor en
+el código. Intenta justificar que si necesitas mocks, es porque tu código está
+acoplado. Bueno, no le falta razón, al mockear estás sustituyendo dependencias
+de un elemento (componente, clase,...) por otras implementaciones de esas
+dependencias. Si necesitas dependencias, es porque hay algún tipo de acoplamiento.
+
+Las soluciones que Eric propone para esto son utilizar características de la
+programación funcional. Son proposiciones bastante asumibles, pero las veo
+bastante difíciles de llevar a cabo en un proyecto con un cierto recorrido, o
+para lenguajes lejanos del paradigma funcional.
 
 Me recuerda de alguna manera al artículo de [James Shore] sobre [patrones para
-no mockear].
+no mockear] (del cual tengo pendiente publicar por aquí las pertinentes notas).
 
 <!-- more -->
 
-ESCRIBE POR AQUI TU CONCLUSION Y OPINIÓN SOBRE EL ARTÍCULO
- 
+En cierta manera, entiendo el razonamiento del autor para decir que *si usas
+mocks tienes un fuerte acoplamiento en los componentes de tu aplicación*. Y
+también estoy de acuerdo en que las soluciones propuestas ayudan.
+
+Pero ni veo tan grave esa relación que él ve entre los mocks y las dependencias,
+ni veo muy factibles sus soluciones en un proyecto real que esté un poco alejado
+de la programación funcional.
+
+Al final, como todo, hay que poner en la balanza los dos extremos:
+
+> Los olores en el código son señales de advertencia, no leyes
+
+Que los olores te guíen en tu diseño, úsalos como señales para pensar dos veces
+el trabajo que estás haciendo.
+
 ### Notas
 
 Algunos proyectos, para poder utilizar mocks en sus aplicaciones, envuelven
@@ -111,14 +133,12 @@ como una forma de ejecutarlas en el futuro.
 
 > Los olores en el código son señales de advertencia, no leyes
 
-Mockear viene genial para los tests de integración
+Mockear viene genial para los tests de integración.
 
 A veces te gustaría testear cómo tus componentes se comunican con una API de
 terceros, y esa API es prohibitiva económicamente.
 
 Es imposible llegar al 100% de cobertura sin tests de integración.
-
-### Conclusiones
 
 ### Referencias
 
@@ -127,6 +147,6 @@ Es imposible llegar al 100% de cobertura sin tests de integración.
 
 [The TypeScript tax]: https://medium.com/javascript-scene/the-typescript-tax-132ff4cb175b
 [Eric Elliot]: https://ericelliottjs.com/
-[James Shore]: 
-[patrones para no mockear]: 
-[connascence]: 
+[James Shore]: https://www.jamesshore.com/
+[patrones para no mockear]: https://www.jamesshore.com/Blog/Testing-Without-Mocks.html
+[connascence]: http://garajeando.blogspot.com/2017/01/about-connascence.html
