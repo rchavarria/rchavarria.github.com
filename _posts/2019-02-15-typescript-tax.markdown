@@ -141,10 +141,10 @@ superior y genéricos.
 ### Referencias
 
 - [The TypeScript tax]
-- [Eirc Elliot]
+- [Eric Elliot]
 - Encuesta [The State of JavaScript]
 
 [The TypeScript tax]: https://medium.com/javascript-scene/the-typescript-tax-132ff4cb175b
-[Eirc Elliot]: https://ericelliottjs.com/
+[Eric Elliot]: https://ericelliottjs.com/
 [The State of JavaScript]: https://stateofjs.com/
 [higher-kinded types]: https://typelevel.org/blog/2016/08/21/hkts-moving-forward.html
