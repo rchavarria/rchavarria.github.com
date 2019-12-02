@@ -15,7 +15,7 @@ James propone un lenguaje de patrones...
 
 <!-- more -->
 
-Referenciar al post sobre [mokcing is a code smell].
+Referenciar al post sobre [mocking is a code smell].
 
 Mi conclusión/valoración/opinión aquí
 
