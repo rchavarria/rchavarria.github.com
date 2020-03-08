@@ -100,21 +100,21 @@ public class GridBagLayoutDemo extends javax.swing.JPanel {
 
    setLayout(new java.awt.GridBagLayout());
 
-   btn1.setText(&quot;btn 01&quot;);
+   btn1.setText("btn 01");
    add(btn1, new java.awt.GridBagConstraints());
 
-   btn2.setText(&quot;btn 02&quot;);
+   btn2.setText("btn 02");
    gridBagConstraints = new java.awt.GridBagConstraints();
    gridBagConstraints.gridwidth = 2;
    add(btn2, gridBagConstraints);
 
-   btn3.setText(&quot;btn 03&quot;);
+   btn3.setText("btn 03");
    gridBagConstraints = new java.awt.GridBagConstraints();
    gridBagConstraints.gridx = 0;
    gridBagConstraints.gridy = 1;
    add(btn3, gridBagConstraints);
 
-   btn4.setText(&quot;btn 04&quot;);
+   btn4.setText("btn 04");
    gridBagConstraints = new java.awt.GridBagConstraints();
    gridBagConstraints.gridx = 0;
    gridBagConstraints.gridy = 2;
@@ -122,14 +122,14 @@ public class GridBagLayoutDemo extends javax.swing.JPanel {
    gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTH;
    add(btn4, gridBagConstraints);
 
-   btn5.setText(&quot;btn 05&quot;);
+   btn5.setText("btn 05");
    gridBagConstraints = new java.awt.GridBagConstraints();
    gridBagConstraints.gridx = 2;
    gridBagConstraints.gridy = 3;
    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
    add(btn5, gridBagConstraints);
 
-   btn6.setText(&quot;large btn&quot;);
+   btn6.setText("large btn");
    gridBagConstraints = new java.awt.GridBagConstraints();
    gridBagConstraints.gridx = 1;
    gridBagConstraints.gridy = 1;
@@ -164,7 +164,7 @@ public class RunDemo {
 public static void main(String[] args) {
   SwingUtilities.invokeLater(new Runnable() {
     public void run() {
-      JFrame frm = new JFrame(&quot;GridBagLayout HowTo&quot;);
+      JFrame frm = new JFrame("GridBagLayout HowTo");
       frm.getContentPane().add(new GridBagLayoutDemo());
       frm.pack();
       frm.setVisible(true);
