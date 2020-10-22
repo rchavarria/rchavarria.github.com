@@ -33,7 +33,7 @@ conllevan mucho tiempo, por ejemplo, leer un archivo XML cuando el usuario pulse
 botón. La forma más rápida y sencilla de realizar esta tarea podría ser los siguiente:
 
 ```java
-JButton button = new JButton(&quot;Cargar fichero XML&quot;);
+JButton button = new JButton("Cargar fichero XML");
 button.addActionListener(new ActionListener() {
     public void actionPerformed(ActionEvent e) {
         xmlDocument = loadXML();
@@ -68,7 +68,7 @@ La forma más simple de utilizar `SwingWorker` es implementando el método `doIn
 extendiendo la clase `SwingWorker` o creando una clase anónima:
 
 ```java
-SwingWorker worker = new SwingWorker&lt;MyXMLFile, Void&gt;() {
+SwingWorker worker = new SwingWorker<MyXMLFile, Void>() {
     public MyXMLFile doInBackground() {
         MyXMLFile myXMLDoc = loadXML();
         return myXMLDoc;
@@ -90,7 +90,7 @@ manejador de eventos después de que la tarea haya finalizado.
 ```java
 private MyXMLFile doc;
 //...
-SwingWorker&lt;Document, Void&gt; worker = new SwingWorker&lt;MyXMLFile, Void&gt;() {
+SwingWorker<Document, Void> worker = new SwingWorker<MyXMLFile, Void>() {
     public MyXMLFile doInBackground() {
         MyXMLFile myXMLDoc = loadXML();
         return myXMLDoc;

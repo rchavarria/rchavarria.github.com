@@ -67,10 +67,10 @@ import java.sql.Statement;
 public class CreateDataBase {
 
   public static void main(String[] args) {
-    String driver = &quot;org.apache.derby.jdbc.EmbeddedDriver&quot;;
-    String dbName = &quot;/DerbyDB/ExampleDB&quot;;
-    String dbParam = &quot;create=true&quot;; //la base de datos se creará si no existe todavía
-    String connectionURL = &quot;jdbc:derby:&quot; + dbName + &quot;;&quot; + dbParam;
+    String driver = "org.apache.derby.jdbc.EmbeddedDriver&quot;;
+    String dbName = "/DerbyDB/ExampleDB&quot;;
+    String dbParam = "create=true&quot;; //la base de datos se creará si no existe todavía
+    String connectionURL = "jdbc:derby:" + dbName + &quot;;" + dbParam;
     Connection conn = null;
 
     try{
@@ -84,17 +84,17 @@ public class CreateDataBase {
 
       Statement st = conn.createStatement();
       String sqlCreateTableUsers =
-             &quot;CREATE TABLE users ( &quot; +
-             &quot;FirstName VARCHAR(20) NOT NULL, &quot; +
-             &quot;LastName VARCHAR(20) NOT NULL, &quot; +
-             &quot;idUser INTEGER NOT NULL CONSTRAINT idUser_PK PRIMARY KEY &quot; +
-             &quot;)&quot;;
+             "CREATE TABLE users ( " +
+             "FirstName VARCHAR(20) NOT NULL, " +
+             "LastName VARCHAR(20) NOT NULL, " +
+             "idUser INTEGER NOT NULL CONSTRAINT idUser_PK PRIMARY KEY " +
+             ")&quot;;
       // la sentencia SQL crea una tabla con 3 campos
       st.execute(sqlCreateTableUsers);
 
-      System.out.println(&quot;La base de datos '&quot; + dbName + &quot;' se ha creado correctamente&quot;);
+      System.out.println("La base de datos '" + dbName + "' se ha creado correctamente");
     }  catch (Throwable e)  {
-      System.out.println(&quot;Error al crear la base de datos '&quot; + dbName + &quot;'&quot;);
+      System.out.println("Error al crear la base de datos '" + dbName + "'");
       e.printStackTrace();
     } finally {
       try { conn.close(); }
@@ -115,9 +115,9 @@ en el directorio: `C:\DerbyDB\ExampleDB`
 Con el siguiente código seremos capaces de introducir datos en nuestra tabla:
 
 ```java
-String driver = &quot;org.apache.derby.jdbc.EmbeddedDriver&quot;;
-String dbName = &quot;/DerbyDB/ExampleDB&quot;;
-String connectionURL = &quot;jdbc:derby:&quot; + dbName;
+String driver = "org.apache.derby.jdbc.EmbeddedDriver&quot;;
+String dbName = "/DerbyDB/ExampleDB&quot;;
+String connectionURL = "jdbc:derby:" + dbName;
 Connection conn = null;
 
 try{
@@ -130,12 +130,12 @@ try {
   conn = DriverManager.getConnection(connectionURL);
 
   Statement st = conn.createStatement();
-  st.executeUpdate(&quot;INSERT INTO users VALUES('Jose', 'Olmedo', 1)&quot;);
-  st.executeUpdate(&quot;INSERT INTO users VALUES('Maria', 'Hoz', 2)&quot;);
+  st.executeUpdate("INSERT INTO users VALUES('Jose', 'Olmedo', 1)");
+  st.executeUpdate("INSERT INTO users VALUES('Maria', 'Hoz', 2)");
 
-  System.out.println(&quot;Se han insertado dos registros&quot;);
+  System.out.println("Se han insertado dos registros");
 } catch (Throwable e)  {
-  System.out.println(&quot;Ha fallado la insercion de dos registros&quot;);
+  System.out.println("Ha fallado la insercion de dos registros");
   e.printStackTrace();
 } finally {
   try { conn.close(); }
@@ -149,9 +149,9 @@ Con el siguiente código, realizamos una consulta a nuestra tabla y mostramos po
 la información en ella almacenada:
 
 ```java
-String driver = &quot;org.apache.derby.jdbc.EmbeddedDriver&quot;;
-String dbName = &quot;/DerbyDB/ExampleDB&quot;;
-String connectionURL = &quot;jdbc:derby:&quot; + dbName;
+String driver = "org.apache.derby.jdbc.EmbeddedDriver&quot;;
+String dbName = "/DerbyDB/ExampleDB&quot;;
+String connectionURL = "jdbc:derby:" + dbName;
 Connection conn = null;
 
 try{
@@ -164,16 +164,16 @@ try {
   conn = DriverManager.getConnection(connectionURL);
 
   Statement st = conn.createStatement();
-  ResultSet rs=st.executeQuery(&quot;SELECT * FROM users&quot;);
+  ResultSet rs=st.executeQuery("SELECT * FROM users");
   while (rs.next()){
-    Integer idUser = rs.getInt(&quot;idUser&quot;);
-    String first = rs.getString(&quot;FirstName&quot;);
-    String last = rs.getString(&quot;LastName&quot;);
-    System.out.println(idUser + &quot; se llama: &quot; + first + &quot; &quot; + last);
+    Integer idUser = rs.getInt("idUser");
+    String first = rs.getString("FirstName");
+    String last = rs.getString("LastName");
+    System.out.println(idUser + " se llama: " + first + " " + last);
   }
   rs.close();
 } catch (Throwable e)  {
-  System.out.println(&quot;Ha fallado la consulta de datos&quot;);
+  System.out.println("Ha fallado la consulta de datos");
   e.printStackTrace();
 } finally {
   try { conn.close(); }

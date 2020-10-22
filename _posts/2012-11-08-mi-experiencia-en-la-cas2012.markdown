@@ -84,8 +84,8 @@ creativo. ~ *Luis Fraile*
 
 <!-- more -->
 
-> Mejor cuanto más caliente es la comunicación: cara a cara -&gt; 
-videoconferencia -&gt; teléfono -&gt; chat -&gt; mail -&gt; nada 
+> Mejor cuanto más caliente es la comunicación: cara a cara -> 
+videoconferencia -> teléfono -> chat -> mail -> nada 
 ~ *Israel Alcázar*
 
 <!-- more -->
