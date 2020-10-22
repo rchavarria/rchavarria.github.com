@@ -76,7 +76,7 @@ siguiente excepción:
 
 ```
 [...]
-Exception in thread &quot;main&quot; java.lang.UnsatisfiedLinkError: C:\TIBCO\tibrv\8.2\bin\tibrvj.dll: Can't load AMD 64-bit .dll on a IA 32-bit platform
+Exception in thread "main" java.lang.UnsatisfiedLinkError: C:\TIBCO\tibrv\8.2\bin\tibrvj.dll: Can't load AMD 64-bit .dll on a IA 32-bit platform
     at java.lang.ClassLoader$NativeLibrary.load(Native Method)
     at java.lang.ClassLoader.loadLibrary0(ClassLoader.java:1758)
     at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1683)
@@ -93,8 +93,8 @@ tendré que instalar una de 64bits.
 Compruebo mi versión de java:
 
 ```
-C:\&gt;java -version
-java version &quot;1.6.0_17&quot;
+C:\>java -version
+java version "1.6.0_17"
 Java(TM) SE Runtime Environment (build 1.6.0_17-b04)
 Java HotSpot(TM) Client VM (build 14.3-b01, mixed mode, sharing)
 ```
@@ -108,8 +108,8 @@ Descargo la última versión de java 1.6 de 64bits, la instalo y vuelvo a
 comprobar la versión instalada:
 
 ```
-C:\&gt;java -version
-java version &quot;1.6.0_29&quot;
+C:\>java -version
+java version "1.6.0_29"
 Java(TM) SE Runtime Environment (build 1.6.0_29-b11)
 Java HotSpot(TM) 64-Bit Server VM (build 20.4-b02, mixed mode)
 ```
@@ -148,25 +148,25 @@ public class TibrvLoaderTest {
     openTibrvjLibrary();
   }
   private void printClasspath() {
-    String cp = System.getProperty(&quot;java.class.path&quot;);
-    for(String cpElement : cp.split(&quot;;&quot;)){
-      System.out.println(&quot;Classpath element: &quot; + cpElement);
+    String cp = System.getProperty("java.class.path");
+    for(String cpElement : cp.split(&quot;;")){
+      System.out.println("Classpath element: " + cpElement);
     }
   }
   private void printLibraryPath() {
-    String lp = System.getProperty(&quot;java.library.path&quot;);
-    for(String lpElement : lp.split(&quot;;&quot;)){
-      System.out.println(&quot;Library path element: &quot; + lpElement);
+    String lp = System.getProperty("java.library.path");
+    for(String lpElement : lp.split(&quot;;")){
+      System.out.println("Library path element: " + lpElement);
     }
   }
   private void testLoadLibrary() {
-    System.loadLibrary(&quot;tibrvj&quot;);
+    System.loadLibrary("tibrvj");
   }
   private void openTibrvjLibrary() {
     try {
       Tibrv.open(Tibrv.IMPL_NATIVE);
     } catch (TibrvException e) {
-      throw new RuntimeException(&quot;Can't load Tibrv&quot;, e);
+      throw new RuntimeException("Can't load Tibrv", e);
     }
   }
 }

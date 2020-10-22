@@ -44,14 +44,14 @@ que ya está enlazada por defecto. La propiedad `state` (indica el estado de la 
 de la tarea: `INCIADA`, `CANCELADA`, `COMPLETADA`, ...) también lo está.
 
 ```java
-class FibonacciWorker extends SwingWorker&lt;List&lt;Integer&gt;, Integer&gt; {
+class FibonacciWorker extends SwingWorker<List<Integer>, Integer> {
   PrimeNumbersTask(JTextArea textArea, int numbersToCalculate) {
     //initialize
   }
 
   @Override
-  public List&lt;Integer&gt; doInBackground() {
-    while (numbers.size &lt;= numberstoCalculate &amp;&amp; !isCancelled()) {
+  public List<Integer> doInBackground() {
+    while (numbers.size <= numberstoCalculate &amp;&amp; !isCancelled()) {
       number = nextFibonacciNumber();
       numbers.add(number);
       publish(number);
@@ -61,9 +61,9 @@ class FibonacciWorker extends SwingWorker&lt;List&lt;Integer&gt;, Integer&gt; {
   }
 
   @Override
-  protected void process(List&lt;Integer&gt; chunks) {
+  protected void process(List<Integer> chunks) {
     for (Integer number : chunks) {
-      textArea.append(number + &quot;\n&quot;);
+      textArea.append(number + "\n");
     }
   }
 
