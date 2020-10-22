@@ -17,15 +17,15 @@ Así que aquí está mi Lista de Lectura:
 
 ## Estoy leyendo
 
-- [Human Vs Computers](https://leanpub.com/humansvscomputers/), de [Gojko Adzic](https://gojko.net/), lo consegúi porque Gojko publicó una encuesta y si la hacías te regalaba el libro. Qué mejor campaña publicitaria que regalar el libro.
-- [Expertología](http://www.amazon.es/dp/8492414502), de Andrés Pérez Ortega
+- [Your money or your life](https://amzn.to/2KdrJxN), de Robin/Dominguez, 
+recomendado por J.B.Rainsberger: *cambió cómo entiendo el propósito del dinero 
+y el trabajo*
 
 ## Tengo pensado leer
 
 - [Diarios de las estrellas](https://amzn.to/2yPChxB), de 	Stanislaw Lem, recomendado por [Ricardo Borillo](https://twitter.com/borillo) por Twitter
 - [Pragmatic thinking and learning](https://amzn.to/2IOfDHe), de Andy Hunt, recomendado por [Rachel M. Carmena](https://rachelcarmena.github.io/) en un [tweet](https://twitter.com/bberrycarmen/status/1140883917651755009)
 - [Planning eXtreme programming](https://amzn.to/2HKycNs), de Kent Beck y Martin Fowler, visto por ahí, y si los autores son estos dos semidioses, no hay razón para no leerlo
-- [Your money or your life](https://amzn.to/2KdrJxN), de Robin/Dominguez, recomendado por J.B.Rainsberger: *cambió cómo entiendo el propósito del dinero y el trabajo*
 - [Friendly command line](https://hellowebbooks.com/learn-command-line/), de Tracy Osborn, libro gratuito, descargable, imprimible y de todo, con unas ilustraciones muy curiosas
 - [Rapid development](https://amzn.to/2W2nTrX), de Steve McConnell, recomendado por [Javier Garzás](http://www.javiergarzas.com/2013/02/dijkstra-secret.html)
 - [DDD, first 15 years](https://leanpub.com/ddd_first_15_years), de DDD Europe Community, recomendado por [Rafael Luque](https://twitter.com/rafael_luque/status/1092387872404111360), colección gratuita de artículos (viejos y nuevos) sobre DDD
@@ -205,3 +205,11 @@ de Dale Carnegie ~ *Julio 2013*
 - [The pragmatic programmer](https://amzn.to/2Verl2O), de Adrew Hunt y David Thomas ~ *Verano 2010*
 - [Head first: design patterns](https://amzn.to/2CSdkkq), de Kathy Sierra ~ *Verano 2010*
 - [Design patterns](https://amzn.to/2FRNpeq), de Gang of Four ~ *Verano 2010*
+
+## En pausa (temporal o permanente)
+
+- [Human Vs Computers](https://leanpub.com/humansvscomputers/),
+de [Gojko Adzic](https://gojko.net/), lo consegúi porque Gojko publicó una 
+encuesta y si la hacías te regalaba el libro. Qué mejor campaña publicitaria 
+que regalar el libro.
+- [Expertología](http://www.amazon.es/dp/8492414502), de Andrés Pérez Ortega
