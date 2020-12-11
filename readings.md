@@ -25,7 +25,6 @@ y el trabajo*
 
 - [Diarios de las estrellas](https://amzn.to/2yPChxB), de 	Stanislaw Lem, recomendado por [Ricardo Borillo](https://twitter.com/borillo) por Twitter
 - [Pragmatic thinking and learning](https://amzn.to/2IOfDHe), de Andy Hunt, recomendado por [Rachel M. Carmena](https://rachelcarmena.github.io/) en un [tweet](https://twitter.com/bberrycarmen/status/1140883917651755009)
-- [Planning eXtreme programming](https://amzn.to/2HKycNs), de Kent Beck y Martin Fowler, visto por ahí, y si los autores son estos dos semidioses, no hay razón para no leerlo
 - [Friendly command line](https://hellowebbooks.com/learn-command-line/), de Tracy Osborn, libro gratuito, descargable, imprimible y de todo, con unas ilustraciones muy curiosas
 - [Rapid development](https://amzn.to/2W2nTrX), de Steve McConnell, recomendado por [Javier Garzás](http://www.javiergarzas.com/2013/02/dijkstra-secret.html)
 - [DDD, first 15 years](https://leanpub.com/ddd_first_15_years), de DDD Europe Community, recomendado por [Rafael Luque](https://twitter.com/rafael_luque/status/1092387872404111360), colección gratuita de artículos (viejos y nuevos) sobre DDD
@@ -145,7 +144,8 @@ y el trabajo*
 
 - [Ajedrez y su enseñanza: libro de aperturas]({{ site.baseurl }}{% post_url 2019-10-21-ajedrez-ensenanza-libro-aperturas %}), de Ajedrez Eureka ~ *Octubre 2019*
 - [Educación financiera avanzada partiendo de cero]({{ site.baseurl }}{% post_url 2018-12-29-educacion-financiera-avanzada-cero %}), de Gregorio Hernández, recomendado por un usuario en el Telegram de ZetaMoney. Parece algo básico, pero podría estar bien hacer una lectura rápida ~ *Diciembre 2018*
-- [Stop being lazy]({{ site.baseurl }}{% post_url 2018-11-02-stop-baing-lazy %}), de John Sonmez ~ *Noviembre 2018*
+- [Stop being lazy]({{ site.baseurl }}{% post_url 2018-11-02-stop-being-lazy %}), de John Sonmez ~ *Noviembre 2018*
+- [Planning eXtreme programming]({{ site.baseurl }}{% post_url 2018-05-18-planning-extreme-programming %}), de Kent Beck y Martin Fowler, visto por ahí, y si los autores son estos dos semidioses, no hay razón para no leerlo
 - [Down and out in the magic kindom]({{ site.baseurl }}{% post_url 2018-03-23-down-out-magic-kingdom %}), de Cory Doctorow ~ *Marzo 2018*
 - [You are your own gym]({{ site.baseurl }}{% post_url 2018-01-19-yayog %}), de Mark Lauren ~ *Enero 2018*
 - [Practical object-oriented design with Ruby (POODR)]({{ site.baseurl }}{% post_url 2018-01-17-practical-object-oriented-design-in-ruby %}), de Sandi Metz, visto en el blog de [Carlos Blé](https://twitter.com/carlosble) ~ *Enero 2018*
