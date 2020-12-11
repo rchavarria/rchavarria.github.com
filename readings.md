@@ -31,7 +31,6 @@ y el trabajo*
 - [DDD, first 15 years](https://leanpub.com/ddd_first_15_years), de DDD Europe Community, recomendado por [Rafael Luque](https://twitter.com/rafael_luque/status/1092387872404111360), colección gratuita de artículos (viejos y nuevos) sobre DDD
 - [Una breve historia de casi todo](https://amzn.to/2HwdLE2), de Bill Bryson, Álvaro García Loaisa dice de él: [Posiblemente el mejor libro de divulgación científica que me he leído](https://twitter.com/aloaisa/status/1020955449905082369/photo/1)
 - [On writing well](https://amzn.to/2Y63aWj), de William Zinsser, recomendado por [Nacho Coloma](https://twitter.com/nachocoloma/status/1102564787802779648), *ha cambiado la forma en la que escribo, explicando algunas cosas que pasan en una buena revisión*
-- [Educación financiera avanzada partiendo de cero](https://www.amazon.es/Educaci%C3%B3n-Financiera-partiendo-gestionar-transformar-ebook/dp/B00COMQOM0/), de Gregorio Hernández, recomendado por un usuario en el Telegram de ZetaMoney. Parece algo básico, pero podría estar bien hacer una lectura rápida. Algo sacaré
 - [Becoming a technical leader](https://amzn.to/2CkVo1m), de Gerald Weinberg, recomendado por Gonzalo @gzpunkt a Raúl Villares por twitter
 - [Refactoring for Software Design Smells](https://www.amazon.co.uk/Refactoring-Software-Design-Smells-Technical/dp/0128013974/), de Girish Suryanarayana, Ganesh Samarthyam y Tushar Sharma, me recuerda mucho a los libros de Sandi Metz (refactorizaiones y demás)
 - [Agile technical practices distilled](https://leanpub.com/agiletechnicalpracticesdistilled/), de Pedro Moreira Santos y otros
@@ -145,6 +144,7 @@ y el trabajo*
 ## He leído
 
 - [Ajedrez y su enseñanza: libro de aperturas]({{ site.baseurl }}{% post_url 2019-10-21-ajedrez-ensenanza-libro-aperturas %}), de Ajedrez Eureka ~ *Octubre 2019*
+- [Educación financiera avanzada partiendo de cero]({{ site.baseurl }}{% post_url 2018-12-29-educacion-financiera-avanzada-cero %}), de Gregorio Hernández, recomendado por un usuario en el Telegram de ZetaMoney. Parece algo básico, pero podría estar bien hacer una lectura rápida ~ *Diciembre 2018*
 - [Stop being lazy]({{ site.baseurl }}{% post_url 2018-11-02-stop-baing-lazy %}), de John Sonmez ~ *Noviembre 2018*
 - [Down and out in the magic kindom]({{ site.baseurl }}{% post_url 2018-03-23-down-out-magic-kingdom %}), de Cory Doctorow ~ *Marzo 2018*
 - [You are your own gym]({{ site.baseurl }}{% post_url 2018-01-19-yayog %}), de Mark Lauren ~ *Enero 2018*
