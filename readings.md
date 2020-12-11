@@ -17,13 +17,9 @@ Así que aquí está mi Lista de Lectura:
 
 ## Estoy leyendo
 
-- [Your money or your life](https://amzn.to/2KdrJxN), de Robin/Dominguez, 
-recomendado por J.B.Rainsberger: *cambió cómo entiendo el propósito del dinero 
-y el trabajo*
-
 ## Tengo pensado leer
 
-- [Diarios de las estrellas](https://amzn.to/2yPChxB), de 	Stanislaw Lem, recomendado por [Ricardo Borillo](https://twitter.com/borillo) por Twitter
+- [Diarios de las estrellas](https://amzn.to/2yPChxB), de Stanislaw Lem, recomendado por [Ricardo Borillo](https://twitter.com/borillo) por Twitter
 - [Pragmatic thinking and learning](https://amzn.to/2IOfDHe), de Andy Hunt, recomendado por [Rachel M. Carmena](https://rachelcarmena.github.io/) en un [tweet](https://twitter.com/bberrycarmen/status/1140883917651755009)
 - [Friendly command line](https://hellowebbooks.com/learn-command-line/), de Tracy Osborn, libro gratuito, descargable, imprimible y de todo, con unas ilustraciones muy curiosas
 - [Rapid development](https://amzn.to/2W2nTrX), de Steve McConnell, recomendado por [Javier Garzás](http://www.javiergarzas.com/2013/02/dijkstra-secret.html)
@@ -142,6 +138,7 @@ y el trabajo*
 
 ## He leído
 
+- [Your money or your life]({{ site.baseurl }}{% post_url 2020-10-20-your-money-your-life %}), de de Vicki Robin, Joe Dominguez y Monique Tilford, recomendado por J.B.Rainsberger: *cambió cómo entiendo el propósito del dinero y el trabajo* ~ *Octubre 2020*
 - [Ajedrez y su enseñanza: libro de aperturas]({{ site.baseurl }}{% post_url 2019-10-21-ajedrez-ensenanza-libro-aperturas %}), de Ajedrez Eureka ~ *Octubre 2019*
 - [Educación financiera avanzada partiendo de cero]({{ site.baseurl }}{% post_url 2018-12-29-educacion-financiera-avanzada-cero %}), de Gregorio Hernández, recomendado por un usuario en el Telegram de ZetaMoney. Parece algo básico, pero podría estar bien hacer una lectura rápida ~ *Diciembre 2018*
 - [Stop being lazy]({{ site.baseurl }}{% post_url 2018-11-02-stop-being-lazy %}), de John Sonmez ~ *Noviembre 2018*

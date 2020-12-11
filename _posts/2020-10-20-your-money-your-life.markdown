@@ -1,0 +1,989 @@
+﻿---
+layout: post
+title: "Your money or your life"
+date: 2019-03-07 19:39
+author: Ruben Chavarria
+categories:
+- Reseñas
+---
+
+##### de Vicki Robin, Joe Dominguez y Monique Tilford
+
+[![Your money or your life](https://images-eu.ssl-images-amazon.com/images/I/51X2%2BpB1gHL.jpg)][1]
+
+### Por qué lo he leído
+
+### De qué trata el libro
+
+### Conclusiones y valoración
+
+### Qué he aprendido
+
+### Frases que me gustaría recordar
+
+## Notas tomadas
+
+thinking about the ideas and to bring Vicki Robin out of her peaceful island retirement
+Instead of a dark box billionaire, you are probably hoping to become a lighthearted, productive, free person who just happens
+Instead of a dark box billionaire, you are probably hoping to become a lighthearted, productive, free person who just happens to never have to worry about money again.
+Vicki Robin out of her peaceful island retirement to write this updated version.
+Ya estamos. El tipico rico vendie do su metodo
+Endless desire is one of the pitfalls of human
+Endless desire is one of the pitfalls of human nature,
+Siempre deseamos mas y mas
+The result of all this training is not just an improved financial picture—it’s an improved you.
+Un libro de auto ayuda?
+Hasta aqui el prologo
+Mr. Money Mustache
+Introduction to the New Edition
+I can make these promises:
+Financial Independence
+“This isn’t really a book about money. It’s a book about life.”
+Se viene autoayuda
+How This Book Came into Being
+Retire by thirty. Exit the money game. Be in life, not in the prison of a job.
+Buuuufffffff
+Changing Times
+
+Adapting to a New World
+Who Is This Book For?
+In fact, “enough” is the radical promise of Your Money or Your Life.
+Ni mas dinero. Ni menos dinero. Solo. Lo justo
+“how much would it take to make you happy,”
+Nunca es suficiente siempre se quiere mas
+As I’ve studied this FIRE movement I’ve seen in its bones three strands—frugality, simplicity, and self-sufficiency—that
+Ninjas, Minimalists, and DIYers.
+Ninjas: Personal finance Ninjas love to run the numbers, optimize systems, exploit niches, study personal finance blogs, mess with investments,
+Minimalists: It’s not about the money; it’s about the meaning, about clearing away clutter to get to the marrow of life.
+DIYers: Money’s not the point. Dinking around with the material world is where all the fun lies. Building, farming, tinkering, making, cooking, gardening, designing, creating, painting,
+Turtles and Hares
+
+The Four FIs
+Financial Intelligence
+ability to step back from your assumptions and your emotions about money and observe them objectively.
+Financial Integrity
+It is knowing what is enough money and material goods to keep you at the peak of fulfillment—and what is just excess and clutter.
+It is having all aspects of your financial life in alignment with your values.
+Financial Independence
+is anything that frees you from a dependence on money to handle your life.
+Financial Interdependence
+Todo esta conectado. Una ve solucionas tus problemas con el dinero. Quieres hacer este mundo mejor
+What’s New in This Edition
+When we talk with others about our dreams, confusion, fears, and persistent questions, change happens.
+Let the Transformation Begin!
+1 The Money Trap: The Old Road Map for Money
+MONEY: THE TENDER TRAP?
+In Japan they have a name for this: karoshi (death by overwork).
+Even though some people really like their jobs, very few of us can say with honesty that our work lives are perfect.
+Even the best jobs have trade-offs.
+We Aren’t Making a Living, We’re Making a Dying
+
+What they do for money dominates their waking hours, and life is what can be fit into the scant remaining time.
+We are sacrificing our lives for money, but it’s happening so slowly that we barely notice.
+We Think We Are Our Jobs
+When swapping tales at high school reunions, how do we secretly assess the success of our peers? Do we ask whether our classmates are fulfilled, living true to their values, or do we ask
+Que le preguntas a tus amigos? Si viven de scyetdo a sus valores o que coche confucefn
+society has a hidden hierarchy based on what you do for money. That’s called jobism,
+The High Cost of Making a Dying
+LaBier found that focusing on money/position/success at the expense of personal fulfillment and meaning had led 60 percent of his sample of several hundred to suffer from depression, anxiety, and other job-related disorders,
+We are working more, but enjoying life less.
+What Do We Have to Show for It?
+Our savings rate has actually gone down.
+With relatively lower wages and less savings, our level of debt has gone up—way
+Debt is one of our main shackles.
+Our levels of debt and our lack of savings make the nine-to-five routine mandatory.
+We Make a Dying at Work so We Can Live It Up on the Weekend
+
+The bottom line is that we think we work to pay the
+The bottom line is that we think we work to pay the bills—but we spend more than we make on
+What About Happiness?
+it is becoming increasingly clear that, beyond a certain minimum of comfort, money is not buying us the happiness we seek.
+needed “more” to be happy.
+they can be unhappy no matter how much money they make.
+PROSPERITY AND THE PLANET
+The Ecological Footprint, a metric distributed by the Global Footprint Network, measures everything we buy—from cars to sofas—in terms of how much of the earth’s resources are embodied in that purchase.
+Puede estsr bien hacet la prueba
+The Biggest Loser in the Money Game
+Is More Better?
+our experience is that the more we have, the more we want—and
+“More is better” turns out to be a formula for dissatisfaction.
+If more is better, then what I have is not enough.
+The Limits to Growth
+Our economy’s version of “more is better” is “growth is good.”
+economic growth comes from nature,
+There are limits in nature.
+There always comes a point where the individual or the specific population either collapses or dies off due to lack of resources, or stabilizes at a level that the environment can handle.
+The Cleopatra Explanation
+It’s they who need to change.
+Yo no tengo q cabiar. Son los demas. Los demas tienen la culpa y la forma de csnbiar las cosas
+The Creation of Consumers
+We buy everything from hope to happiness. We no longer live life. We consume it.
+The alternative to growth, however, was seen not as maturity but as the precursor to the stagnation of civilization and the death of productivity.
+And thus the rat race was born, leading to our excruciating balancing act between working more to buy luxuries and having enough leisure to enjoy them.
+The astounding capacity of machinery to fill human needs had been so successful that economic activity was slowing down. Instinctively knowing they had enough, American workers were asking for a shorter workweek and more leisure
+Two sectors of American society were alarmed at this trend.
+The moralists, who had internalized the Protestant work ethic, believed that “idle hands do the devil’s work.”
+Industrialists also sounded the alarm. Reduced demand for factory output threatened to halt economic growth.
+The Right to Buy
+the masses. In our initial enthusiasm for
+
+If we have the money, we can buy whatever we want, whether or not we need it, use it, or even enjoy
+If we don’t consume, we’re told, masses of people will be thrown out of work.
+We are in a no-win situation. You’re wrong if you buy and wrong if you don’t.
+Si compras te endeudas. Si no. No eres patriota
+We need to shift from an ethic of growth to an ethic of sustainability,
+THE BEGINNING OF A NEW ROAD MAP FOR MONEY
+Patterns of Belief
+humans tend to create patterns of response.
+What Do Our Actions Say?
+financial behavior reveal about our superstitions?
+Nuestras finanzas son supersticion?
+We try to satisfy essentially psychological and spiritual needs with consumption at a physical level.
+The Fulfillment Curve
+Notice that while each one was still a thrill, it cost more per thrill and the “high” wore off more quickly.
+Segun vamos crecienjdo. La "necesidad" es cads veZ Mmas grande y cara. Pero la felicidad pasa cada vedz mas rapido
+We hit a fulfillment ceiling and never recognized that the formula of money = fulfillment not only had stopped working but had started to work against us.
+Copiar lacgrafica del fullfilment
+Enough: The Peak of the Curve
+There is a name for this peak of the fulfillment curve, and it provides the basis for
+There is a name for this peak of the fulfillment curve, and it provides the basis for transforming your relationship with money.
+The word is enough.
+Clutter: A Fate Worse Than Dearth
+enough—beyond the peak,
+begins to go down? Clutter, that’s what! Clutter is anything that is excess—for you.
+begins to go down? Clutter, that’s what! Clutter is anything that is excess—for you.
+Clutter is anything that is excess—for you.
+Stations of the Crass
+What creates clutter?
+through the “more is better”
+from the disease of materialism,
+looking for inner fulfillment in outer possessions.
+Faces and Functions of Clutter
+attics, basements, garages, closets, and storage sheds—are havens of clutter,
+Once you catch on to what clutter is, you’ll find it everywhere. Isn’t
+Now it’s called minimalism or “tidying up.” We call it “enough”
+“How did it all get here? And what is it worth to me now? Really?”
+Al estilo marycondo. Me gsce feliz. No. Pues lo tiro
+Step 1: Making Peace with the Past
+we suggest that you read the whole book first, rather than doing each step as it comes up; then come back and get started.
+There are two parts to this step:
+how much money you have earned in your lifetime—the
+creating a personal balance sheet
+HOW MUCH HAVE YOU EARNED IN YOUR LIFE?
+The Value of Step 1
+people have no idea how much money has entered their lives, and therefore no idea how much money could enter their lives.
+eradicates such myths and false self-concepts as “I can’t earn very much money”
+It gets you to ground zero,
+It allows you to see and let go
+It allows you to see and let go of any
+secrets or lies that may be distorting your current relationship with money.
+Useful Attitudes
+No shame, no blame.
+Sinking into blame and shame slows your progress toward financial freedom.
+Your lifetime earnings represent just a number, not your value.
+Impeccability.
+power of this program increases with every ounce of honesty and integrity you invest in it.
+CHECKLIST
+B. WHAT HAVE YOU GOT TO SHOW FOR IT?
+
+Be prepared. You will be calculating your net worth (your total assets minus your total liabilities),
+listing everything you own (assets) and everything you owe (liabilities).
+Liquid Assets
+Cash,
+Fixed Assets
+your house, your car (or cars).
+Go through every room and inventory everything.
+Confront your clutter squarely.
+Mary condo al rescate
+Give an approximate cash value to everything you own.
+value—what you could get for each item
+Don’t overlook debts owed to you,
+security deposits on utilities, phone, or house
+Liabilities
+all your debts, whether payable in money, goods, or services—everything
+If you list as an asset the current market value of your house, include as a liability the balance owed on it.
+Net Worth
+Add the figures for liquid assets and fixed assets, and subtract from that the figure for liabilities. In the most simplified, concrete, material sense, this is your current net worth.
+WHY DO A BALANCE SHEET?
+souvenirs that could be converted into cash. With the power and clear direction that taking the reins of your financial affairs will give you, you will be far more effective in the world.
+With the power and clear direction that taking the reins of your financial affairs will give you, you will be far more effective in the world.
+La hoja de balanxce te dara perspe tiva. Direccion. Conocimiento
+SUMMARY OF STEP 1
+Find out how much money you have earned in your lifetime.
+Create a balance sheet
+MONEY TALK QUESTIONS
+adding “Why?” to the end of any question will take it deeper. Adding “How has society shaped my answer?” to any question will take it wider.
+Who gave you your first lessons about money? What did you learn? What messages did you get about money growing up? Where did you get them from? Parents, teachers, ads, or . . . ? Talk about an early memory of money and how it affects you now. Talk about a money mistake. What would you do differently? What does “enough” mean to you? What do you have (in storage or closets) that you’d be better off without? Why do you keep
+2 Money Ain’t What It Used to Be—and Never Was
+Money is a means of exchange. “Good.
+It’s paper.”
+Money is a means of exchange.
+money is a means of exchange only if the trading partners agree it has value.
+Money is a means of exchange only when both parties agree on its value.
+“It’s a store of value,” meaning you can save it up to spend another day.
+Money’s value can disappear overnight.”
+Hiperinflaccion por ejemplo
+No definition would stick. All are true—sometimes.
+Money is something you trade your life energy for. You sell your time for money.
+The only real asset you have is your time.
+money is simply your life energy
+A Simple Summary of What Money Is—and Is Not
+
+Material.
+most people most of the time think of as money.
+Psychological. Your fears and longings.
+Cultural. The beliefs embedded in our laws and customs.
+Life energy. Something you trade the hours of your life for.
+Knowing that money is your life energy transforms your relationship with money,
+Money is also like water—it flows,
+We feel happy when it flows our way, distressed when it doesn’t.
+Resisting consumerism becomes easy: Is that bathing suit or car worthy of my life energy?
+Winning isn’t having the most toys. It’s having precisely what you need and nothing in excess and being able to stop playing the game at will.
+Habla del juego del dinero. Comprar. Comorar. Comorar. Deudas. Inflaccion. Intereses...
+Your Life Energy
+A FIRST LOOK AT FINANCIAL INDEPENDENCE
+
+John Stuart Mill once said, “Men do not desire to be rich, only to be richer than other men.”
+Mito de mas ezs mejor.. Nunca tenemos suficiente
+Financial Independence has nothing to do with rich. It is the experience of having enough—and then some.
+Enough, you will remember, is found at the peak of the fulfillment curve.
+Financial and Psychological Freedom
+Step 2: Being in the Present—Tracking Your Life Energy
+
+There are two parts to step 2:
+Establish the actual costs in time and money required to maintain your job(s), and compute your real hourly wage.
+Keep track of every cent that comes into or goes out of your life.
+A. HOW MUCH ARE YOU TRADING YOUR LIFE ENERGY FOR?
+how much money are you making for the amount of time you work?
+Commuting
+Costuming
+personal grooming,
+Meals
+Daily Decompression
+Escape
+Escape Entertainment
+How much of your weekend entertainment do you consider your just reward for sticking it out at a boring job?
+Vacations
+Solo si estan relacionafas con el trabajo. Para desconectar o para aliviar estres
+Job-Related Illness
+visits to the doctor, trips to the drugstore, and sniffling under the covers.
+Other Job-Related Expenses
+Examine your balance sheet of assets and liabilities (step 1).
+Look at what you pay “the help”: Would you need a housekeeper, gardener, handyman, or nanny if you didn’t have a job?
+educational programs, books, tools and conferences.
+Your Real Hourly Wage
+create a table, adding the approximate extra job-related hours to your normal workweek and subtracting the job-related expenses from your usual pay.
+The corollary figure is also interesting. In this example, every dollar you spend represents 6 minutes of your
+The corollary figure is also interesting. In this example, every dollar you spend represents 6 minutes of your life. Think
+Why Do This Step?
+No Shame, No Blame
+
+your feelings about your work/job/identity will most strongly bubble to the surface.
+this is where your feelings about your work/job/identity will most strongly bubble to the surface.
+Compassionate self-awareness is the key. Just notice each feeling as it presents itself, without criticizing
+So what if you’ve been paying to work?
+That’s all in the past.
+CHECKLIST: LIFE ENERGY VS. SALARY
+Aqui resenta una tabla con todas las ideas
+B. KEEP TRACK OF EVERY CENT THAT COMES INTO OR GOES OUT OF YOUR LIFE
+All of these situations stem from the same root thought: Money is money and love is love and never the twain shall meet.
+Separar el dinero de las reka iones solo trae problemas
+A Spiritual Discipline
+Instead of watching your breath, you watch your money.
+For many people, a pocket-size memo book is the perfect constant companion in which to note every cent that enters or leaves their lives,
+Computers and smartphones are making this easier than ever, but there’s no right way to do
+Computers and smartphones are making this easier than ever, but there’s no right way to do it—whatever
+record any and all movements of money, the exact amount, and the reason for the exchange.
+Every Cent? . . . But Why?
+In practice we often reverse the old adage of “penny wise, pound foolish.”
+Que significa este refran?
+Why every cent,
+Why every cent, rather than just rounding off to the nearest dollar, or using approximate figures?
+Because this helps to establish important lifelong habits. After all, how big is a “fudge factor”? How close is “close enough”? Granted, in practice many FIers settle into rounding to the dollar, but that’s as far as they slip. Human nature being what it is, if you start cheating, even “just a little bit,” that little bit tends to get bigger and soon you’ll find yourself thinking, “Well, I don’t have to write everything down, just the major expenses”; and then, “Well, I’ve done this for a month now, so I think I’ll start rounding it off to the nearest thousand.” (It’s like dieting: If you break your diet on Tuesday morning by having a buttered English muffin instead of dry toast, the tendency is to cheat even more, and by evening you’re gobbling down a carton of ice cream and a pound cake.) If you want this to be a worthwhile undertaking, it’s worth your while to do it right. If you rebel against every penny, try every dime or dollar (or euro or yen), but more than that is a little
+Because this helps to establish important lifelong habits.
+if you start cheating, even “just a little bit,” that little bit tends to get bigger
+Useful Attitudes
+
+No leeway.
+One of the keys to your success in this program (and in life) is a shift in attitude from one of laxity and leeway to one of accuracy, precision, and impeccability.
+Lo mismo que dicen del nejercicio
+No judgment—lots of discernment.
+judgment and blame do not serve. Discernment, on the other hand, is an essential skill.
+In the process of writing down every cent that comes into or goes out of your life, you will begin to discern which expenses are fitting and fulfilling and which are unnecessary, extravagant, or even downright embarrassing.
+SUMMARY OF STEP
+SUMMARY OF STEP 2
+MONEY TALK QUESTIONS
+What is money? Describe your relationship with money in five words or less. Why those words? Do you experience more stress when you have money, or when you don’t have it? Finish the sentence “If I had more money, then I’d be . . .” Elaborate! Are you earning what you’re worth? What belief about money keeps you from being,
+What is money? Describe your relationship with money in five words or less. Why those words? Do you experience more stress when you have money, or when you don’t have it? Finish the sentence “If I had more money, then I’d be . . .” Elaborate! Are you earning what you’re worth? What belief about money keeps you from being, doing, or having what you want?
+3 Where Is It All Going?
+DO YOU NEED A BUDGET?
+This approach to money is actually the opposite of a budget.
+But budgeting is a planning tool, while this program is an “awareness of your enough point” tool.
+Rather than using standard categories and standard percentages and making a spending plan, with this approach you will discover your patterns from observing how you actually spend your life energy, and revealing your own unique relationship with money.
+This financial program points you in the same direction as mindful eating:
+Mindful eating. Ser consciente de lo que se come. Singiendo caxda bicado...
+You need to identify and follow internal signals, not external admonishments or habitual desires.
+You need to observe and adjust your patterns of spending over the long term, not what you spend over the short term.
+This is not about guilt.
+It’s about identifying, for yourself, what you need as opposed to what you crave, what purchases or types of purchases actually bring you fulfillment, what represents “enough” to you, and
+NO SHAME, NO BLAME
+What you are confronting is just the truth about the choices you’ve been making in your
+What you are confronting is just the truth about the choices you’ve been making in your life.
+Step 3: Monthly Tabulation
+In this step you will establish spending categories that reflect the uniqueness of your life
+ESTABLISHING CATEGORIES
+Food
+“Just Us” and “Guests.”
+“Too Tired to Cook” and “Special Occasions”
+Son distintas subcategorias
+Housing
+mortgage (or rent)
+Having a category for each one
+Una categoria por cada casa que tengas?
+Clothing
+utility and fashion
+clothing you wear in your everyday home life,
+clothing you believe is appropriate attire for the workplace,
+This isn’t just accounting—this is a process of self-discovery.
+Transportation
+you own one at all instead of relying on public transportation.
+Puezde que te des cuenta de que te sale mas barato el transporte publico que ser dueño de tu coche
+insurance
+anything else overinsured,
+your second car go under: Transportation, Hobby, or Ostentation?
+cab fares
+Your Technology
+cost of accessing and sending data. Cell phones, Internet, cable access, tablets, and smart watches
+Cell phones, Internet, cable access, tablets, and smart watches
+Landline, Cell Phone, and Equipment,
+technology you need for work versus leisure or personal development.
+Entertainment
+streaming services
+Going to the movies
+music?
+Do you go clubbing?
+Do you rent entertainers for your kids’ parties—and
+children, what portion of the services and gadgets you buy them are under Entertainment?
+Babysitting?
+Refining Your Categories
+doing this exercise will lead not to the punishment of a budget but rather to the freedom of self-acceptance,
+For example, under Transportation you would list separately the cost of commuting and other (non-reimbursed) work-related transportation expenses.
+according to mileage
+cell phone for work-related as well as personal
+Medical category
+A further refinement will come as you decide how you want to account for large, “unusual” expenses like annual
+Que categoria usas para gastos muy muy inusuales?
+you may want to establish subcategories for income also.
+wages/salaries/tips
+interest/dividend
+Viene una tabla ejemplo de categorias
+Sample Monthly Tabulation Form
+Viene una tabla ejemplo de categorias. Donde incluye ll que gana por hora. Life energy...
+TOTALING IT ALL UP
+
+THE BALANCING ACT
+the money you actually have at the end of the month (in cash and bank accounts) will be equal to the money you had at the beginning of the month plus your total monthly income minus your total monthly expenses.
+MAKING MONEY REAL
+notice that translating dollars into hours of your life reveals the real trade-offs you are making for your style of living.
+A la hora de comprar algo. Traducelo a horas de trabajo. No a dinero
+SOME PICTURES ARE WORTH A THOUSAND WORDS
+SUMMARY OF STEP 3
+Discern your unique spending and income categories and subcategories
+Set up your Monthly Tabulation.
+Enter all money transactions
+Convert the dollars spent in each subcategory into hours of life energy,
+MONEY TALK QUESTIONS
+How do you stay conscious with your money? What do you insure—and why? What question would you most like to ask a friend about money? An expert? A relative? How do you feel when you spend money? What are some of your best experiences with tipping, tithing, or giving? What are your top priorities and how does your spending support them—or not?
+4 How Much Is Enough? The Quest for Happiness
+We cannot let our lives be “dreams deferred,” as Langston Hughes
+We cannot let our lives be “dreams deferred,” as Langston Hughes wrote in his famous poem, “Harlem.”
+It’s time to let your dreams speak—even
+Use these questions to trigger memories and stimulate thoughts: What did you want to be when you grew up? What have you always wanted to do that you haven’t yet done? What have you done in your life that you are really proud of? If you knew you were going to die within a year, how would you spend that year? What brings you the most fulfillment—and how is that related to money? If you didn’t have to work for a living, what would you do with your time?
+Step 4 of this financial program is your chance to make your dreams come true by aligning your earning and spending with your values, aspirations, purpose, and happiness.
+Step 4: Three Questions That Will Transform Your Life
+you evaluate your spending by asking three questions about the total money spent in each of your subcategories: Did I receive fulfillment, satisfaction, and value in proportion to life energy spent? Is this expenditure of life energy in alignment with my values and life purpose? How might this expenditure change if I didn’t have to work for money? Each
+you evaluate your spending by asking three questions about the total money spent in each of your subcategories: Did I receive fulfillment, satisfaction, and value in proportion to life energy spent? Is this expenditure of life energy in alignment with my values and life purpose? How might this expenditure change if I didn’t have to work for money?
+These three questions, applied to each spending subcategory on your Monthly Tabulation,
+These three questions, applied to each spending subcategory on your Monthly Tabulation, will give you a basis for evaluating
+These three questions, applied to each spending subcategory on your Monthly Tabulation, will give you a basis for evaluating the way you spend your money.
+QUESTION 1: DID I RECEIVE FULFILLMENT, SATISFACTION, AND VALUE IN PROPORTION TO LIFE ENERGY SPENT?
+If you received so much fulfillment from this expenditure of life energy that you’d even like to increase spending in this subcategory, place a + (or an up arrow) in the first box. If you received little or no fulfillment from it, put a – (or a down arrow) in that box. If the expense feels OK just as it is, mark the box with a 0.
+Asi evalua cada categoria
+Cheap Thrills and Deep Thrills
+
+Cheap thrills are like that little feeling you get when you buy something.
+Deeper thrills come when you’ve achieved a dream bigger than your ego’s aspirations.
+Developing an Internal Yardstick for Fulfillment
+Enough—the Deepest Thrill
+Your internal yardstick dismisses superficial desires—to
+Financial Integrity
+You learn to make your financial choices independent of what advertising
+You learn to make your financial choices independent of what advertising and industry have decided would be good for their business.
+QUESTION 2: IS THIS EXPENDITURE OF LIFE ENERGY IN ALIGNMENT WITH MY VALUES
+QUESTION 2: IS THIS EXPENDITURE OF LIFE ENERGY IN ALIGNMENT WITH MY VALUES AND LIFE PURPOSE?
+As you did with the first question, ask of each spending subcategory, “Was this expenditure of life energy in alignment with my values and my life purpose?”
+put a + (or an up arrow) in the second box in that row. If it’s a no, just put a – (or
+Part One: What Are Values?
+financial choices against question 2
+
+Values are like an ethical DNA, made up of our sense of right and wrong, that structures our choices.
+Our behavior is a concrete representation of our values.
+How we spend our time and money speaks volumes about who we are and what we stand for.
+Part Two: What Is Purpose?
+Purpose is the overarching goal that embodies our values and our dreams.
+Purpose implies direction and time—you do something now to have something later that you value.
+It is a chosen dedication of your life energy to something you believe is more important than your individual little existence.
+“Life purpose,”
+It is a chosen dedication of your life energy to something you believe is more important than your individual little existence.
+How Do We Find Our Purpose?
+three directions
+passion,
+What’s the work you would do even if you weren’t paid to do it?
+pain,
+Is there an aspect of suffering in the world that calls you to action?
+opportunities that arise daily
+Measuring Our Movement Toward Purpose
+Remember that asking the question “Is this expenditure in alignment with my purpose?” will help you connect with your sense of purpose.
+FIGURE 4-1 Purpose in Life Test
+QUESTION 3: HOW MIGHT THIS EXPENDITURE CHANGE IF I DIDN’T HAVE TO WORK FOR MONEY?
+
+mark a – (or down arrow) if you think this expense would decrease, a + (or up arrow) if it would increase, or a 0 if it would probably remain unchanged.
+Marcs co.o en las otras prehyntgas
+You don’t have to know precisely what you would do if you didn’t have to work for money.
+Remember: No shame, no blame.
+yourself coming to a startling conclusion. If you weren’t spending most of your time making money, life could be a whole lot cheaper!
+that you are there by choice. By asking question 3, you may find yourself coming to a startling conclusion. If you weren’t spending most of your time making money, life could be a whole lot cheaper!
+By asking question 3, you may find yourself coming to a startling conclusion. If you weren’t spending most of your time making money, life could be a whole lot cheaper!
+ASSESSING THE THREE QUESTIONS
+Do you see any patterns?
+Hay alcun patron en las respuesdas  a lAs tres preguntAs
+Don’t punish yourself and don’t resolve to “do better next month.”
+Simply use this information and any insights you’ve gained to assist in clarifying your values and purpose.
+For some individuals this program has been the process by which they defined their values and purpose.
+The point is to adjust your spending until you have zeros or pluses for all your categories.
+Getting to Enough
+Asking the three questions is the primary tool for defining, experientially, how much is enough for you.
+“enough” has four components, four common
+qualities:
+Accountability—knowing
+if you never know how much you have or where it’s all going, you can never have enough.
+internal yardstick for fulfillment.
+you can never have enough if you are measuring by what others have or think.
+purpose in life higher than satisfying your own wants and desires,
+you can never have enough if every desire becomes a need that must be filled.
+Responsibility,
+living for more than just “me, myself, and I.”
+craft a fourth question
+What would expenditures in this category look like in a just and compassionate world where everyone had everything they needed for a life they loved, now and in the future?
+“What if everybody . . . ate at restaurants, bought used clothes, planted fruit trees in the yard, bought this vacation package, picked this car for their daily commute . . . ?”
+no shame, no blame, just widening those circles
+no shame, no blame, just widening those circles of compassion.
+SUMMARY OF STEP 4
+Of each spending subcategory in your Monthly Tabulation ask question 1:
+hazte las pregi ntas una. Dos y rres
+4. Review and make a list of all categories with the – symbol (or down arrow).
+   MONEY TALK QUESTIONS
+   What did you want to be when you grew up? What about now? What’s on your “bucket list,” those things you want to do before you die? What is your calling, the work of your heart and soul? Talk about one of your happiest memories. What made you happy? What could happen out of the blue that would be like a dream come true? What do you want for your children/loved ones that money can buy?
+   5 Getting It Out in the Open
+   Step 5: Making Life Energy Visible
+   In step 5 you make visible the results of the previous steps, plotting them on a graph
+   How do you motivate yourself to keep going?
+   Dezspis de tres meSes siguiendo el pkan... Como mantienes la motivaxion
+   three keys:
+   Make it a habit rather than a choice.
+1. Make it a habit rather than a choice.
+   You have a system and you follow the system
+2. Be accountable to someone else.
+3. Chart.
+   MAKING YOUR WALL CHART
+
+Step 5 entails setting up a graph of your income and your expenses,
+large enough to accommodate three to five years of data.
+At the end of each month you will plot the figures for your total
+At the end of each month you will plot the figures for your total monthly income and total monthly expenses.
+the real learning—and the real fun—comes as you plot your figures month by month, year by year.
+THE INITIAL PURGE AND SPLURGE CYCLE
+They concentrate daily on that expenses line,
+Cuando el primer mes resulta que gastas mas de lo que ganas. Tu primwra instinto seta el de recortar los gastos a lo vestia
+This kind of austerity, however, isn’t sustainable.
+with money will happen over time. By observing your reactions to your Wall Chart instead of getting upset about it, you will be clearing away the attitudes and beliefs that got you where you are today.
+By observing your reactions to your Wall Chart instead of getting upset about it, you will be clearing away the attitudes and beliefs that got you where you are today.
+Emn lugar de corregit inmediatamente tu comportamiento. Simplemente observa los nu.meros mes a mes
+HOW THE THREE QUESTIONS CAN SAVE YOU MONEY
+Automatic Lowering of Expenses
+Question 1 is: “Did I receive fulfillment, satisfaction, and value in proportion to life energy spent?” Asking this question every month about each of your spending categories increases your consciousness about your choices
+Now you can be in line with yourself—you’re neither fighting yourself nor trying to buy happiness and satisfaction.
+Alignment and Personal Integration
+question 2 each month: “Is this expenditure of life energy in alignment with my values and life purpose?”
+This is a feedback system for integrity.
+The data on how you spend your life energy provides a nitty-gritty, tangible measure of that integrity,
+Often expenses will go down with this question because so many unconscious expenses are simply emotional or cultural programs
+The subtle but effective process of reinforcement (spend money on X = feel good; spend money on Y = feel bad) actually works; it serves to break robotic spending patterns.
+third question, “How might this expenditure change if I didn’t have to work for money?” can further affect your expense line.
+WHAT ABOUT “UNUSUAL” MONTHS?
+For one thing, you may recognize that every month is an unusual month.
+Another strategy would be to prorate annual expenses over the whole twelve months.
+GETTING YOUR FINANCES OUT IN THE OPEN
+Accountability.
+Open the subject with friends via a Money Talk.
+your relationship with money. The chart becomes a representation of how well you are living your values, something that reflects the care you are taking with every decision about your material world.
+It becomes a source of pride—not arrogance,
+The degree of your discomfort is a measure of the degree of your financial disease.
+Como ge sientes si muestras el grafico a todo el mikndo? Bien mal...
+FINANCIAL INDEPENDENCE AS A BY-PRODUCT OF DOING THE STEPS
+Financial Independence Is Getting Out of Debt
+
+Often they don’t even realize what a burden debt is until it disappears.
+Debt has become the American way, making it hard to see that it is debt that chains us to our jobs.
+Getting out of debt, then, is one form of Financial Independence.
+Once you’re out of debt, you have choices.
+Savings are another form of Financial Independence.
+Veras muy claramente los ahoros en tu grafico de fastos y ingresos
+Becoming a Super Saver
+Ask yourself how you would spend your time if you could take a year off with pay.
+discover the possibilities of what you would choose to do if you had enough savings that you didn’t need paid employment for one year.
+ALL THIS FROM A GRAPH?
+Part of Financial Intelligence is the continuing awareness of your earning, spending, and saving patterns over time.
+It is a constant reminder of your commitment to transform your relationship with money.
+It is a feedback system, showing you at a glance, clearly and graphically, your current status and your progress toward your goal.
+inspiration, an experience of satisfaction with the progress you’re making
+motivation,
+harder) to lie to yourself about your progress in the presence of your Wall Chart.
+continuing suggestion that you honor your life energy.
+can stimulate your interest in personal finance,
+Como esta a la vista de todos. Todos te pregintaran y tendras grandes conversacoones
+it enlists continuing support.
+FINAL INSPIRATION FROM LINDA AND MIKE LENICH
+
+SUMMARY OF STEP 5
+MONEY TALK QUESTIONS
+Social support is a key to behavior change.
+How much money do you need to be happy? What or who can help you change your relationship with money? What might change if you could know what others—a friend, date, boss, stranger—earn? What motivates you to save? What helps you save money?
+6 The American Dream—on a Shoestring
+
+simplicity and minimalism
+tidying up
+spark joy,
+frugality
+Intenta usar una palabra para indicar el estado de tener suficiente oero no demasiado. El estado ideal descrito al ppio
+THE PLEASURES OF FRUGALITY
+Frugality is enjoying the virtue of getting good value for every minute of your life energy and from everything you have the use of.
+Se invrnta esta defibicipn
+Frugality means enjoying what we have.
+There’s a word in Spanish that encompasses all this: aprovechar.
+It means to use something wisely—be
+For many of life’s pleasures it may be far better to use something than to possess it
+young people today seem less wedded to their stuff than prior generations.
+being frugal and being happy with having enough means that more will be available for others.
+Step 6: Valuing Your Life Energy—Minimizing Spending
+This step involves the intelligent use of your life energy (money) and the conscious lowering or elimination of expenses.
+Frugality is about enjoyment, not penny-pinching!
+hay que ahorrar pero hay que disfrutarde la vda de life energy
+ONE SURE WAY TO SAVE MONEY
+Stop Trying to Impress Other People
+plus others are likely so busy trying to impress you that they will, at best, not notice your efforts.
+others are likely so busy trying to impress you that they will, at best, not notice your efforts.
+TEN SURE WAYS TO SAVE MONEY
+1. Don’t Go Shopping
+   men tended to buy while drunk and women while bored or sad, with both genders doing it when angry.
+   Don’t use shopping as a reward, a relief, or entertainment.
+2. Live Within Your Means
+   To live within your means is to buy only what you can prudently afford,
+   Vamos. No endeudarte. Como hacian nuestros padres. Qie vivian con lo q podian pagar
+   wait until you have the money before you buy something.
+3. Take Care of What You Have
+   There is one thing we all have that we want to last a long time: our bodies.
+   Cuida de tu cuerpo y ahorraras en muchis gastos medicos
+   Extend this principle to all your possessions.
+   Mantenimientos preventivoa de tus herramientas. Xoche. Casa...
+   We need to rewire our brains to think repair rather than replace.
+4. Wear It Out
+   Think how much money you would save if you simply decided to use things even 20 percent longer.
+   Usa un año mas tu cocje. Un invierno mas el abrigo. Un mes mas las zapatillas
+   ask, before trashing something, whether there might be another way to use part or all of it.
+5. Do It Yourself
+   “Can I do this myself? What would it take to learn how? Would it be a useful skill to know?”
+   reverse that trend, just ask yourself, when you’re about to hire an expert: “Can I do this myself? What would it take to learn how? Would it be a useful skill to know?”
+   when you’re about to hire an expert: “Can I do this myself? What would it take to learn how? Would it be a useful skill to know?”
+6. Anticipate Your Needs
+
+With enough lead time you will likely find the items you need at a cheaper price.
+Keep a list of things you anticipate needing in the coming year.
+Anticipating your needs also eliminates one of the biggest threats to your frugality: impulse buying.
+7. Research Value, Quality, Durability, Multiple Use, and Price
+8. Buy It for Less
+
+Comparison-shop:
+metasearch sites or browser add-ons that allow you to check pricing on many sites
+Bargain:
+You can ask for discounts anywhere, anytime.
+Regatear?
+Haggling
+You can also buy it used.
+9. Meet Your Needs Differently
+   substitution isn’t deprivation; it’s about getting creative.
+   when it’s creative, also reminds us that what we seek when we buy something new is to change a feeling state.
+   what we seek when we buy something new is to change a feeling state.
+   “When you feel a desire to shop, take time to trace it back to the need
+10. Follow the Nine Steps of This Program
+    SAVING ON THE BASICS
+    From Penny-Pinching to Smart Saving
+    Managing Debt and Your Finances
+    Having a Place to Live
+
+being creative about housing can reduce your costs significantly.
+Getting Around
+So let’s just get some perspective as we see how we might, in our short lifetimes, frugalize our ride.
+a car is the second-most expensive thing they buy,
+Taking Care of Your Body
+staying well is good for your wallet as well as for your body.
+Sharing/Bartering
+one of the paths to happiness (and frugality) is being involved in community.
+Eating
+ways to save money
+making a list and sticking to
+making a list and sticking to it, knowing
+Michael Pollan’s pithy seven-word food rule, “Eat food, not too much, mostly plants,”
+Staying Connected, Informed, and Entertained
+Getting Away
+you will have less of a need to “vacate.” Consider relaxing closer to home.
+Consider relaxing closer to home.
+“staycation.”
+Wherever you go, avoid the tourist traps, eat where the locals do, and walk or use public transportation whenever possible—you’ll
+Protecting What You Own
+live in a large, multigenerational cohousing community in a place that would work even if they ended up in wheelchairs.
+Segun te haces mayor. Vivir en una comuna solo giene benficios pra ti
+four strategies for living well while living long.
+first is to be active in pursuit of health
+second is to cultivate new friends, especially younger ones, and to participate in community—both
+simplifying possessions
+third is simplifying possessions
+attend to traditional investments like owning a house and having enough—but not more than enough—income.
+Raising Children
+Many FIers have reported that when their children realized they would have to spend their own money for the stuff they wanted, they became frugal and entrepreneurial
+when their children realized they would have to spend their own money for the stuff they wanted, they became frugal and entrepreneurial
+Connecting children with nature
+substitute creativity for money
+Hacer las cosas vosotros mismis. Disfraces. Regalos...
+Throwing Stuff Away
+Gifting and Celebrating
+Holiday7 may be helpful here. Some FIers promise their children one, or at most three, toys at Christmas—and
+promise their children one, or at most three, toys at Christmas—and
+Partnering
+
+SAVE MONEY, SAVE THE PLANET?
+Money is a lien on the earth’s resources.
+Al comprar algo. Pagamos por los materiales. Transporte... Y por lo que conta.mina
+We call this the Pogonomics Principle—economics from cartoon character Pogo’s point of view. Pogo’s contribution to Earth Day 1970 was the observation that “we have met the enemy and he is us.” It’s no mystery why the planet is polluted.
+Creative frugality is a double win—for our wallets and our world.
+The key is remembering that anything you buy and don’t use,
+is money down the drain, wasting your life energy and wasting the finite resources of the planet.
+1,001 SURE WAYS TO SAVE MONEY
+The empowerment comes from your cleverness and your creativity in finding your strategies for frugality.
+creative frugality.
+1,000,001 SURE WAYS TO SAVE MONEY
+SUMMARY OF STEP 6
+Lower your total monthly expenses by valuing your life energy and increasing your consciousness in spending.
+MONEY
+MONEY TALK QUESTIONS
+Whom are you trying to impress or please through what you have or how you spend? How do you economize? On what? How do you feel about it? Talk about one thing you own that you love. What do you love about it? Take us shopping with you, describing where you are, how you feel, what you buy. What’s your gazingus pin (your “gotta have it” purchase)? What’s the last item you actually wore out?
+7 For Love or Money: Valuing Your Life Energy—Work and Income
+we will talk about valuing your life energy by looking at how well you spend your time.
+So far you have learned to value your life energy by aligning your spending with your fulfillment and your values.
+Now it’s time to learn about valuing your life energy by maximizing your compensation—in love or money—for the hours you invest in your work.
+WHAT
+WHAT IS WORK?
+WORK THROUGH THE AGES
+
+El trabajo a lo larg de la historia
+Minimum Daily Requirement of Work
+place this figure at about three hours a day
+The Right to Life, Liberty, and the Pursuit of a Paycheck?
+leisure is a commodity to be consumed rather than free time to be enjoyed.
+Instead, additional leisure has been seen as a drain on the economy, a liability on wages, and the abandonment of economic progress.
+En lugar de considerar el tiwmpo lubre como algo buego. Lo consederamos como perjudicial para la economia
+Work Takes On New Meaning
+Without this experience of being part of a people and a place, leisure leads more often to loneliness and boredom.
+Sustituimos el tiempo libre placentero con estar ocipados . En el trabajo quiza
+Our jobs now serve the function that traditionally belonged to religion:
+They are the place where we seek answers to the perennial questions “Who am I?” and “Why am I here?” and “What’s it all for?”
+DID WE WIN THE INDUSTRIAL REVOLUTION?
+
+we still suffer from Job Charming syndrome.
+Como el principe azul. Creemos que necesitamos el trabajo
+WHAT IS THE PURPOSE OF WORK?
+there is only one purpose served by paid employment: getting paid.
+What if we removed most of these expectations from our paid employment and recognized that all purposes for work other than earning money could be fulfilled by unpaid activities?
+There are two sides to work.
+On one side is our need and desire for money.
+On the other side, totally separate from our wages, is the fact that we work in order to fulfill many other positive goals in our lives.
+BREAKING THE LINK BETWEEN WORK AND WAGES
+
+Breaking the link between work and money allows us to reclaim balance and sanity.
+Money is our life energy; it takes its value not from external definitions but from what we invest in it. Similarly, paid employment takes its only intrinsic value from the fact that we are paid to do it. Everything else we do is an expression of who we are, not what we must do out of economic necessity.
+Salario tiene su valor en que nos pagan. Lo demas. El trabajom es lo que gacemos para llenarnos por dentro
+By breaking the link, we can redefine work simply as whatever we do in alignment with our purpose in life.
+Le va a costar conbencerme de esto
+THE STUNNING IMPLICATIONS OF BREAKING THE LINK
+1. Redefining Work Increases Choices
+   Si trabajas en algo que no tw gcuata. Resifinir el trabajo y el salario te abvre la mente para dedicarte a lo que te ista en tiempo libre  hasta que puedes hacerlo zcobrando
+2. Redefining Work Allows You to Work from the Inside Out
+   will allow us to survive best at our job. But if who you are and what you do to make money are distinct, as they can be when you disconnect work from wages, you can reclaim your lost self.
+   if who you are and what you do to make money are distinct, as they can be when you disconnect work from wages, you can reclaim your lost self.
+   No tendras que fingir o aguactar en el trabajo. Si no que podras serquien erws de verdad
+   As you come to know yourself,
+   you will be able to work from the inside out.
+   living according to others’ values (living from the outside in) to discovering and living her values (living from the inside out).
+3. Redefining Work Makes Us Life Designers, Not Just Wage Earners
+   Hay muchas tareas fuera del trabjo. Quien sabe. Igual llegas a dominar algo y te pagan por ello
+4. Redefining Work Adds Life to Your Retirement
+   you are valuable in every role, task, activity—and
+5. Redefining Work Honors Unpaid Activity
+6. Redefining Work Reunites Work and Play
+   watching a person fully engaged in an activity, one would not know if he or she was being paid or just playing.
+7. Redefining Work Allows You to Enjoy Your Leisure More
+
+If we did not identify so strongly with what we do for money, we might honor and enjoy our leisure more.
+It’s OK to play.
+8. Redefining Work Sheds a New Light on “Right Livelihood”
+   “Right livelihood” is the ideal of finding a way for your true work or vocation to be your paid work as well.
+   Insisting that your calling and your paid employment be one and the same can tip the balance of your focus from mission to money.
+   Implications for Your Income
+   Step 7: Valuing Your Life Energy—Maximizing Income
+   Step 7 is about increasing your income by valuing the life energy you invest in your job and exchanging it for the highest pay consistent with your health and integrity.
+   enough is not the minimum amount for survival; it is the exact amount that gives you fulfillment without excess.
+   If money = life energy, then by increasing your income you increase the amount of life available to you.
+   NEW OPTIONS FOR PAID EMPLOYMENT
+   Higher Pay: A Matter of Attitude
+   If you see yourself as a victim, you may well be too busy feeling sorry for yourself to notice the many opportunities to change your dismal destiny.
+   Financial
+   Financial
+   Financial Independence as a Part-Time Job
+   you are working part-time on someone else’s agenda for money so you can work as much time as possible on your own agenda.
+   But What If I Like My Job?
+   But What If I Don’t Have—or Want—a “Job”?
+   How to Get a High-Paying, High-Integrity Job
+   SUMMARY OF STEP 7
+   MONEY TALK QUESTIONS
+   How could you double your income without selling your soul or compromising your health? What was your first job? Best job? Worst job? What would be your dream job—whether or not you were paid for it? What is work and why do we do it? What is your life’s work? What do you like—and dislike—about the work you do for money?
+   8 Catching Fire: The Crossover Point
+
+“magic of compound interest” talk—the
+Ahora gastas menos. Ingresas mas. Ahorras mas. Si lo inviertes setas rico gracias al intetes compursto... Veamos que dice el libro
+Wall Chart.
+Notice that once your expense line goes down, your income line goes up, your debt disappears, and you start to have savings.
+eso deveria mostrar el wall chart ideal
+Capital
+growing gap between income and expenses—that
+growing gap between income and expenses—that is, savings.
+FI thinking calls that gap “capital.”
+Capital is money that makes money,
+A New Line on Your Chart: Monthly Investment Income
+Step 8: Capital and the Crossover Point
+Each month, apply the following formula to your total accumulated capital and record the result on your Wall Chart:
+capital × current long-term interest rate 12 months = monthly investment income
+“crosses over” your expense line,
+Multiplica tus ahorros por el tipo de interes de bonos a largo plazo
+(we are not saying to buy them; just use the interest rate).
+It simulates the kind of income you will have later from your FI portfolio
+use 4 percent,
+in traditional financial planning 4 percent is also a key percentage for calculating retirement income.
+La idea es sacar el 4 por ciento de tus ahorros cada mes y vivir con ello
+$1,000 in savings and the current interest rate is 4 percent, your equation will read:   $1,000 × 4% 12 = $3.33 monthly investment
+WHERE DO YOU ACTUALLY PUT YOUR SAVINGS?
+We call this liquid cash your “cushion.”
+De tres a seis meses de ahorro
+Many call it an “emergency fund”
+Beyond Your Cushion
+THE CROSSOVER POINT
+at some time in the not-too-distant future those two lines (total monthly expenses and monthly investment income) will cross.
+your employment officially becomes optional!
+The Crossover Point provides us with our final definition of Financial Independence. At the Crossover Point, where monthly investment income exceeds your monthly expenses, you will be financially independent in the traditional sense of that term.
+THE POWER OF A VISIBLE TIME HORIZON
+
+you need to work for money for a finite period of
+Cuando descubres que pronto podrias dejar de trabajar por dinero. Te motivas mas
+You would still appear to be working for your boss, but you would know you were working for your own freedom.
+FIGURE 8-6 Dorothy and Larry’s Financials
+Busca esta imagen
+One of the cornerstones of this program, for those wishing to go all the way to Financial Independence, is concentrating on making money now so that you don’t have to make money later.
+For some, FIRE is more like sequential sabbaticals: You work, save, invest, exit paid employment for travel or study or raising kids or retooling skills, and reenter paid employment some months or years later.
+“too much month at the end of the money”
+Buen refran
+CACHE
+Cache (pronounced “cash”) is savings in addition to core capital or cushion.
+
+that builds up for future use.
+where does cache come from? Most people find that their expenses go down significantly when they leave paid employment.
+Most people find that their expenses go down significantly when they leave paid employment.
+Pues byo esto no lo veo tan claro
+Pues byo esto no lo veo tan claro. Pero puede ayudar a aumentar esa "cache"
+In addition, your FI habits don’t end.
+many things you bought during your accumulation phase (like your sturdy car or ultimate camping gear or off-the-grid house) will never need to be replaced—they
+Mas ahorro. Mas cache
+Further savings. Further cache.
+Taxes on post-FI income are—and should continue to be—far lower
+Capital. Cushion. Cache. The three pillars of Financial Independence.
+NATURAL WEALTH AND FINANCIAL INTERDEPENDENCE
+“Money isn’t everything. If you have self-respect and love and family and help others, that’s your true wealth.”
+Esa es la riquea "naturak"
+The more we weave our lives beneficially with others, the less money we need to have access to everything we could possibly want.
+sharing economy—whether
+secondary market
+DIY economy,
+Financial Interdependence,
+the wealth we all share when we coexist together.
+ABCs OF NATURAL WEALTH
+
+Abilities
+Belonging
+Community
+As you take your eyes off the false prize (of more, better, and different stuff), you put them on the real prizes: friends, family, sharing, caring, learning, meeting challenges, intimacy, rest, and being present, connected, and respected.
+building this wealth takes time, attention, patience, and reciprocity
+Abilities
+Abilities are the do-it-yourself skills that save you lots of money—and can make you money if you need it.
+learning is a key to happiness.
+Belonging
+Whom can you turn to when you need help? Who will listen to you with compassion? Who would bring you meals when you are sick?
+reversing that trend. Not only does this caring
+caring economy
+Death and dying groups, aging-in-place groups, and book groups are focusing on this gap and weaving local caring networks.
+This is why a lifelong practice of building belonging wealth is crucial
+Loneliness is epidemic—and expensive.
+Community
+Isolation is expensive; sharing is wealth—sometimes
+The ABCs of Inflation
+
+“Consciousness grows faster than inflation.” In other words, you can “inflate” your skills, competencies, knowledge, close companions, and community connections faster than money.
+What about the s in those ABCs of wealth? That’s your “stuff,” your financial and material wealth.
+Crossover Point Jitters
+Desventajas? Miedos? De la indepe financiera?
+Choice is the true heart of Financial Independence.
+Podras hacer lo que ye de la ganA
+There is no formula for how you live after the Crossover Point. And that’s the point. You are free to invent your
+There is no formula for how you live after the Crossover Point. And that’s the point. You are free to invent your life.
+SUMMARY OF STEP 8
+separate line on your Wall Chart:   capital × current long-term interest rate 12 months = monthly investment
+MONEY TALK QUESTIONS
+What ideas—practical to wild—do you have about how you’d pay off all your debt? What do you want your legacy to be? If you didn’t have to work for a living, what would you do with your time? If you could take a year off work, how would you spend it? What skills or social networks could you build now to depend less on money to meet your needs?
+9 Where to Stash Your Cash for Long-Term Financial Freedom
+Step 9: Investing for FI
+This step will help you become knowledgeable and sophisticated about income-producing investments that can provide a consistent income sufficient for your needs over the long term.
+
+EMPOWER YOURSELF
+learning enough to free yourself from the fear and confusion that pervade the realm of personal investments—from
+Creo que no va a hablar de inversio es tipicas
+Nothing in this section is to be construed as specific investment advice, but is simply to highlight common ways to store wealth for the long run.
+A Brief Glossary
+Risk Tolerance
+After the Crossover Point, you want to maximize passive income while minimizing risk so you can pay the least attention possible to your money.
+Asset Classes and Diversification
+
+Income
+five ways
+Interest
+Dividends
+corporations. Capital
+corporations. Capital gains
+Capital gains
+Rents
+Royalties
+Time
+Conventional wisdom (CW) suggests that when you are young, you should risk more for greater wealth accumulation; as you age, you shift to a focus on preservation of capital for a stable income.
+La regla del 120 para mezclar renta fija y vble
+Fees
+Index funds have become a favorite of FIers because of low fees
+Financial Advisers
+Socially Responsible Investing
+socially responsible investing (SRI):
+TREASURY BONDS: JOE’S PLAN
+The chart in Figure 9-1,2 developed by J. P. Livingston, founder of the website the Money Habit, is eloquent in illustrating why Joe chose and recommended Treasury bonds.
+La imagen ilustra que todos los libros de indepe financiera se escribieron en epoca de buenos numeros en el mercado
+He’d amassed $75,000, which would be $225,000 in today’s dollars. With an average of 8 percent on his money, that provided just under $20,000 a year in today’s dollars. Given his lifestyle, that was plenty. At today’s interest rates, he would have needed four times that amount (close to that magic number of $1 million) to supply his frugal FI income.
+Como ejemplo de que Joe acerto en el momento de invertir
+Primer on Treasury Bonds
+
+Treasury bonds are the government’s way of borrowing money.
+Treasury bonds, when they are newly issued, can be bought directly from the Federal Reserve, with no commissions whatsoever,
+The other way for an individual to buy treasuries (any issue, not just the most recent one) is through the “secondary market” from a willing seller.
+Look for BBB or better.
+Haybque buscar bonos con mejor puntuscion bbb
+A Caveat
+Nothing is certain. Nothing.
+If someone tells you he or she has a foolproof method for making money effortlessly and you follow it, Joe would have said that you are the fool.
+Buyer—of investments—beware. LOW-COST INDEX FUNDS: THE FIRE PLAN
+LOW-COST INDEX FUNDS: THE FIRE PLAN
+John Bogle, who founded investment management company Vanguard in 1975,
+returning net profits to its shareholders in the form of lower costs.
+En lugar de pagarte. Te cobra menos
+outperform most investment professionals.”3 Index funds are mutual funds or exchange-traded funds (ETFs) designed to track the performance of stock market indices
+you are not trying to beat the market.
+Millennial FIRE fans use stock index funds like boomers used banks,
+Lo tratan como si fueta algo seguro
+Over the past ninety years, the stock market has taken five big hits (32 to 86 percent drops) with recovery times afterward ranging from four to twenty-seven years.
+Los fondos indexados estan bien pero que no te pile un bajon de la bolsa. Que trada varios años en Recuprarase
+The Index Fund Philosophy
+Bogleheads—as
+Bogleheads—as followers of John Bogle call themselves—believe
+Invest in low-fee index funds diversified over a few asset classes and hold them for many years.
+Filosofia de inverdion de los boggleheads
+Take Every Advantage of Company Plans
+Do People Really Do This?
+Mr. Money Mustache.
+Contrary to most, he thinks of market crashes as a blowout sale on stocks.
+
+this—low-fee index funds often outperform managed funds.”
+Lo rwpite una y otra vez
+few simple rules to remember from the Bogleheads, it’s the following: Pay off debt and avoid it in the future. Live below your means by spending less than you earn. Invest the rest in low-cost index funds. Hold on to funds for many years.
+REAL ESTATE
+Another kind of real estate investing is investing in your own home and land
+Investing in renewable energy for your home and in farmstead infrastructure
+MY CHOICES: MULTIPLE SOCIALLY
+MY CHOICES: MULTIPLE SOCIALLY RESPONSIBLE INCOME STREAMS
+Real Estate
+Social Security
+Local Lending
+Green Energy
+Side Hustles
+CHECKLIST OF THINGS TO CONSIDER WHEN INVESTING
+In Conclusion
+SUMMARY OF STEP 9
+Become knowledgeable and sophisticated about long-term income-producing investments and manage your finances for a consistent income sufficient for your needs over the long term.
+MONEY TALK QUESTIONS
+What are you putting in place now to keep you afloat as you age? In a pinch, what could you do to make extra money? Whom or what would you trust to help you invest your money? What’s been your experience to date with investing? What are your hopes? What values and beliefs do you bring to investing? What is your risk tolerance—in money and life? What does Financial Independence mean to you?
+Quick Reference for the 9-Step Program
+
+You are in the business of maximizing the return you get in happiness for every hour of life energy spent.
+Step 1: Making Peace with the Past A. How much have you earned in your life? Find out your total lifetime earnings—the sum total of your gross income, from the first penny you ever earned to your most recent paycheck. B. What have you got to show for it? Find out your net worth by creating a personal balance sheet of assets and liabilities—everything you own and everything you owe.
+Step 2: Being in the Present—Tracking Your Life Energy A. How much are you trading your life energy for? Establish the actual costs in time and money required to maintain your job, and compute your real hourly wage. B. Keep track of every cent that comes into or goes out of your life.
+Step 3: Where Is It All Going? (The Monthly Tabulation) Every month, total all expenses within categories generated by your own unique spending pattern. Then total income. Convert dollars spent in each category to “hours of life energy,” using your real hourly wage as computed in step 2.
+Step 4: Three Questions That Will Transform Your Life On your Monthly Tabulation, ask these three questions of each of your category totals expressed as hours of life energy and record your responses: Did I receive fulfillment, satisfaction, and value in proportion to life energy spent? Is this expenditure of life energy in alignment with my values and life purpose? How might this expenditure change if I didn’t have to work for money? For each question in each category, evaluate whether the expense should increase, decrease, or stay the same for your optimal fulfillment. This is the heart of the program.
+Step 5: Making Life Energy Visible Create a large Wall (or Online) Chart plotting the total monthly income and total monthly expenses from your Monthly Tabulation. Put it where you will see it every day.
+Step 6: Valuing Your Life Energy—Minimizing Spending Learn and practice intelligent use of your life energy (money), which will result in lowering your expenses and increasing your savings. This will create greater fulfillment, integrity, and alignment in your life.
+Step 7: Valuing Your Life Energy—Maximizing Income Respect the life energy you are putting into your job. Money is simply something you trade your life energy for. Trade it with purpose and integrity for increased earnings.
+Step 8: Capital and the Crossover Point Each month apply the following equation to your total accumulated capital, and post the monthly independence income as a separate line on your Wall Chart:   capital × current long-term interest rate 12 months = monthly investment income
+Step 9: Investing for FI This step will help you become knowledgeable and sophisticated about income-producing investments that can provide a consistent income sufficient for your needs over the long term. Set up your financial plan using the three pillars: Capital: The income-producing core of your Financial Independence Cushion: Enough ready cash, earning bank interest, to cover six months of expenses Cache: The surplus of funds resulting from your continued practice of the nine steps
+yourmoneyoryourlife.com.
+Epilogue: Money Talks
+Money Talks are deceptively simple, yet they can change your life. A few guidelines, a potent topic or question, a process that lets everyone have a turn.
+In Money Talks there are no experts because it’s not about fixing ourselves, it’s about understanding ourselves as people caught in a consumerist money culture that may feed our greed but not our real needs
+Rules for Money Talks
+Who and Where
+Anyone willing to engage with you in a candid, curious, “no shame, no blame” spirit is a perfect partner for a Money Talk.
+Process for Journaling (1 Person)
+Escribe la conversacion contugo mismo
+Process for a Dialogue (2 People)
+Process for Small Groups (3–8 People)
+shifting from ordinary conversation to an intentional dialogue. Half a minute of silence works wonders.
+Process for Small Groups (3–8 People)
+Agreements
+No shame, no blame: Keep a nonjudgmental attitude, as best you can, toward yourself and others.
+Topics
+Money, Work, Meaning, Purpose, Priorities, Simplicity, Stuff, Debt, Borrowing, Lending, Tithing, Taxes, Insurance, and so on—followed by three questions: What do you think about it? What do you feel about it? What are you doing about it?
+If we keep a cult of silence about our relationships with money, we all stay in the grip of that shame-and-blame, more-is-better-and-it’s-never-enough, greed-is-good, whoever-dies-with-the-most-toys-wins story we’re taught.
+
+## Recursos
+
+- [Your money or your life][1], de Vicki Robin, Joe Dominguez y Monique Tilford, en Amazon
+
+[1]: https://amzn.to/2KdrJxN
