@@ -145,6 +145,7 @@ y el trabajo*
 ## He leído
 
 - [Ajedrez y su enseñanza: libro de aperturas]({{ site.baseurl }}{% post_url 2019-10-21-ajedrez-ensenanza-libro-aperturas %}), de Ajedrez Eureka ~ *Octubre 2019*
+- [Stop being lazy]({{ site.baseurl }}{% post_url 2018-11-02-stop-baing-lazy %}), de John Sonmez ~ *Noviembre 2018*
 - [Down and out in the magic kindom]({{ site.baseurl }}{% post_url 2018-03-23-down-out-magic-kingdom %}), de Cory Doctorow ~ *Marzo 2018*
 - [You are your own gym]({{ site.baseurl }}{% post_url 2018-01-19-yayog %}), de Mark Lauren ~ *Enero 2018*
 - [Practical object-oriented design with Ruby (POODR)]({{ site.baseurl }}{% post_url 2018-01-17-practical-object-oriented-design-in-ruby %}), de Sandi Metz, visto en el blog de [Carlos Blé](https://twitter.com/carlosble) ~ *Enero 2018*
