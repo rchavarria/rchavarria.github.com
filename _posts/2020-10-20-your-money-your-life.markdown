@@ -23,55 +23,58 @@ categories:
 
 ## Notas tomadas
 
-thinking about the ideas and to bring Vicki Robin out of her peaceful island retirement
-Instead of a dark box billionaire, you are probably hoping to become a lighthearted, productive, free person who just happens
-Instead of a dark box billionaire, you are probably hoping to become a lighthearted, productive, free person who just happens to never have to worry about money again.
-Vicki Robin out of her peaceful island retirement to write this updated version.
-Ya estamos. El tipico rico vendie do su metodo
-Endless desire is one of the pitfalls of human
-Endless desire is one of the pitfalls of human nature,
-Siempre deseamos mas y mas
-The result of all this training is not just an improved financial picture—it’s an improved you.
-Un libro de auto ayuda?
-Hasta aqui el prologo
-Mr. Money Mustache
-Introduction to the New Edition
-I can make these promises:
-Financial Independence
-“This isn’t really a book about money. It’s a book about life.”
-Se viene autoayuda
-How This Book Came into Being
-Retire by thirty. Exit the money game. Be in life, not in the prison of a job.
-Buuuufffffff
-Changing Times
+#### Prólogo
 
-Adapting to a New World
-Who Is This Book For?
-In fact, “enough” is the radical promise of Your Money or Your Life.
-Ni mas dinero. Ni menos dinero. Solo. Lo justo
-“how much would it take to make you happy,”
-Nunca es suficiente siempre se quiere mas
-As I’ve studied this FIRE movement I’ve seen in its bones three strands—frugality, simplicity, and self-sufficiency—that
-Ninjas, Minimalists, and DIYers.
-Ninjas: Personal finance Ninjas love to run the numbers, optimize systems, exploit niches, study personal finance blogs, mess with investments,
-Minimalists: It’s not about the money; it’s about the meaning, about clearing away clutter to get to the marrow of life.
-DIYers: Money’s not the point. Dinking around with the material world is where all the fun lies. Building, farming, tinkering, making, cooking, gardening, designing, creating, painting,
-Turtles and Hares
+En lugar de ser un billonario oculto, quizá te gustaría ser una persona libre,
+productiva, alegre que resulta que ya no tiene que volverse a preocupar por el 
+dinero nunca más
 
-The Four FIs
-Financial Intelligence
-ability to step back from your assumptions and your emotions about money and observe them objectively.
-Financial Integrity
-It is knowing what is enough money and material goods to keep you at the peak of fulfillment—and what is just excess and clutter.
-It is having all aspects of your financial life in alignment with your values.
-Financial Independence
-is anything that frees you from a dependence on money to handle your life.
-Financial Interdependence
-Todo esta conectado. Una ve solucionas tus problemas con el dinero. Quieres hacer este mundo mejor
-What’s New in This Edition
-When we talk with others about our dreams, confusion, fears, and persistent questions, change happens.
-Let the Transformation Begin!
-1 The Money Trap: The Old Road Map for Money
+> Ya estamos. El tipico rico vendiendo su método, esa es la impresión que me
+> está dando
+
+Siempre deseamos más y más. El deseo sin fin es una de los inconvenientes de la
+naturaleza humana
+
+Recomienda el libro o los libros de Mr. Money Mustache
+
+#### Introduction to the New Edition
+
+De echo, "suficiente" es la promesa radical de este libro
+
+> Ni mas dinero. Ni menos dinero. Solo. Lo justo
+
+¿Cuánto necesitarías para ser feliz? Nunca es suficiente, siempre se quiere más
+
+Según ha estudiado el movimiento *FIRE* (Financialy Independent, Retire Early),
+me he dado cuenta que se apoya en 3 facetas: frugalidad, simplicidad y autosuficiencia
+
+Hay tres tipos de gente en cuanto a las finanzas:
+
+1. Ninjas: les encantan los números, optimizar sistemas, explotar nichos, estudiar
+blogs de finanzas personales, trastear con inversiones
+2. Minimalistas: no va de dinero, si no sobre el significado, va sobre despejar
+el desorden para llegar al meollo de la vida
+3. Hágalo usted mismo: el dinero no importa. La diversión está en cacharrear con
+los materiales. Construir, cultivar, cuidar el ganado, hacer, cocinar, cuidar del
+jardín, diseñar, pintar, crear
+
+Las cuatro FI:
+
+1. Financial Intelligence: habilidad para dar un paso atrás en tus asunciones y
+creencias sobre el dinero y observarlo objetivamente
+2. Financial Integrity: está en saber cuánto es suficiente dinero o suficientes
+posesiones para mantenerte el el *pico de la plenitud* (¿recuerdas la gráfica de
+la necesidad?) y en distinguirlo del exceso y el desorden
+3. Financial Independence: es cualquier cosa que te libera de tu dependencia con
+el dinero para manejar tu vida
+4. Financial Interdependence: todo está conectado. Una vez solucionas tus problemas
+con el dinero, lo que quieres es hacer este mundo mejor
+
+Cuando hablamos con otras personas sobre nuestros sueños, confusiones, miedos y
+preguntas persistentes, es cuando ocurren los cambios
+
+#### Capítulo 1: La trampa del dinero, el viejo camino del dinero
+
 MONEY: THE TENDER TRAP?
 In Japan they have a name for this: karoshi (death by overwork).
 Even though some people really like their jobs, very few of us can say with honesty that our work lives are perfect.
