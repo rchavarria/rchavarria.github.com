@@ -20,6 +20,9 @@ Así que aquí está mi Lista de Lectura:
 - [Your money or your life](https://amzn.to/2KdrJxN), de Robin/Dominguez, 
 recomendado por J.B.Rainsberger: *cambió cómo entiendo el propósito del dinero 
 y el trabajo*
+- [Modernizing Legacy Applications In PHP](https://leanpub.com/mlaphp),
+de Paul M. Jones,
+recomendado por [Jesús L.C.](https://twitter.com/jeslopcru) 
 
 ## Tengo pensado leer
 
