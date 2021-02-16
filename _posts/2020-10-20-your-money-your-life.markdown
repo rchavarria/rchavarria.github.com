@@ -29,7 +29,7 @@ En lugar de ser un billonario oculto, quizá te gustaría ser una persona libre,
 productiva, alegre que resulta que ya no tiene que volverse a preocupar por el 
 dinero nunca más
 
-> Ya estamos. El tipico rico vendiendo su método, esa es la impresión que me
+> Ya estamos. El típico rico vendiendo su método, esa es la impresión que me
 > está dando
 
 Siempre deseamos más y más. El deseo sin fin es una de los inconvenientes de la
@@ -79,11 +79,11 @@ Recomienda el libro o los libros de Mr. Money Mustache
 
 De echo, "suficiente" es la promesa radical de este libro
 
-> Ni mas dinero. Ni menos dinero. Solo. Lo justo
+> Ni más dinero. Ni menos dinero. Solo. Lo justo
 
 ¿Cuánto necesitarías para ser feliz? Nunca es suficiente, siempre se quiere más
 
-Según ha estudiado el movimiento *FIRE* (Financialy Independent, Retire Early),
+Según ha estudiado el movimiento *FIRE* (Financially Independent, Retire Early),
 me he dado cuenta que se apoya en 3 facetas: frugalidad, simplicidad y autosuficiencia
 
 Hay tres tipos de gente en cuanto a las finanzas:
@@ -113,36 +113,73 @@ preguntas persistentes, es cuando ocurren los cambios
 
 #### Capítulo 1: La trampa del dinero, el viejo camino del dinero
 
-MONEY: THE TENDER TRAP?
-In Japan they have a name for this: karoshi (death by overwork).
-Even though some people really like their jobs, very few of us can say with honesty that our work lives are perfect.
-Even the best jobs have trade-offs.
-We Aren’t Making a Living, We’re Making a Dying
+En Japón tienen una palabra para esto: karoshi (muerte por trabajar demasiado)
 
-What they do for money dominates their waking hours, and life is what can be fit into the scant remaining time.
-We are sacrificing our lives for money, but it’s happening so slowly that we barely notice.
-We Think We Are Our Jobs
-When swapping tales at high school reunions, how do we secretly assess the success of our peers? Do we ask whether our classmates are fulfilled, living true to their values, or do we ask
-Que le preguntas a tus amigos? Si viven de scyetdo a sus valores o que coche confucefn
-society has a hidden hierarchy based on what you do for money. That’s called jobism,
-The High Cost of Making a Dying
-LaBier found that focusing on money/position/success at the expense of personal fulfillment and meaning had led 60 percent of his sample of several hundred to suffer from depression, anxiety, and other job-related disorders,
-We are working more, but enjoying life less.
-What Do We Have to Show for It?
-Our savings rate has actually gone down.
-With relatively lower wages and less savings, our level of debt has gone up—way
-Debt is one of our main shackles.
-Our levels of debt and our lack of savings make the nine-to-five routine mandatory.
-We Make a Dying at Work so We Can Live It Up on the Weekend
+Aunque a alguna gente realmente le gusta su trabajo, muy pocos de nosotros puede
+decir honestamente que nuestras vidas en el trabajo son perfectas. Incluso los
+mejores trabajos tienen sus peros
 
-The bottom line is that we think we work to pay the
-The bottom line is that we think we work to pay the bills—but we spend more than we make on
-What About Happiness?
-it is becoming increasingly clear that, beyond a certain minimum of comfort, money is not buying us the happiness we seek.
-needed “more” to be happy.
-they can be unhappy no matter how much money they make.
+> No estamos ganándonos la vida, estamos ganándonos la muerte
+> (make a living Vs. make a dying)
+
+Lo que hacen por dinero domina sus vidas, y la vida es lo que puede encajar en
+el escaso tiempo restante
+
+Estamos sacrificando nuestra vida por dinero, pero está pasando tan despacio que
+apenas nos damos cuenta
+
+Pensamos que *somos* nuestro trabajo
+
+Cuando intercambiamos historias en las reuniones de reencuentro de instituto,
+¿cómo decidimos secretamente que nuestros antiguos compañeros han tenido éxito?
+¿les preguntamos si están satisfechos, si viven de acuerdo a sus valores? ¿o les
+preguntamos qué coche conducen?
+
+La sociedad tiene una jerarquía secreta basada en lo que hacemos por dinero. A
+eso le llaman *trabajismo* (jobism)
+
+El alto coste de *ganarse la muerte*
+
+Un tal LaBier encontró en uno de sus estudios que mucha gente había acabado con
+depresión, ansiedad y otros trastornos relacionados con el trabajo debido a que
+se habían focalizado en dinero/posición/éxito a costa de su satisfacción personal
+
+Trabajamos más, pero disfrutamos menos de la vida
+
+###### ¿Qué hemos conseguido con ello (el dinero ganado a lo largo de toda nuestra vida)? 
+
+Nuestra capacidad de ahorro está tendiendo hacia abajo
+
+Con relativamente menores salarios y menores ahorros, nuestro nivel de deuda no
+ha parado de crecer
+
+La deuda es una de nuestros mayores grilletes (shackles)
+
+Nuestros niveles de deuda y nuestra incapacidad de ahorro hace que la rutina de
+trabajar de 9 a 5 sea obligatoria
+
+Nos *ganamos la muerte* en el trabajo para que podamos disfrutar la vida un poco
+los fines de semana
+
+Pensamos que trabajamos para pagar las facturas, pero en realidad gastamos más
+de lo que ganamos
+
+¿Y qué pasa con la felicidad?
+
+Cada vez es más evidente que, a partir de un cierto mínimo de confort, el dinero
+no nos puede comprar la felicidad que estamos buscando
+
+Necesitamos más para ser felices
+
+Podemos ser infelices, sin importar cuánto dinero estemos ganando
+
+###### Properidad y el planeta
+
 PROSPERITY AND THE PLANET
-The Ecological Footprint, a metric distributed by the Global Footprint Network, measures everything we buy—from cars to sofas—in terms of how much of the earth’s resources are embodied in that purchase.
+
+The Ecological Footprint, a metric distributed by the Global Footprint Network, 
+measures everything we buy—from cars to sofas—in terms of how much of the earth’s 
+resources are embodied in that purchase.
 Puede estsr bien hacet la prueba
 The Biggest Loser in the Money Game
 Is More Better?
