@@ -37,7 +37,45 @@ naturaleza humana
 
 Recomienda el libro o los libros de Mr. Money Mustache
 
-#### Introduction to the New Edition
+
+-------- índice
+1. the money trap....
+    - step 1: making peace with the past
+        a. how much have you earned inthe past
+        b. what have you got to show for it
+
+2. money ain't what it used to be
+    - step 2: being in the present
+        a. how much are you trading for your life energy
+        b. keep track of every cent that entra o sale de tu bolsillo
+      
+3. where is it all going
+    - step 3: monthly tabulation
+    
+4. how much is enough
+    - step 4: three questions...
+        q1. did I recevive fulfillment...
+        q2. is this expenditure...
+        q3. how might this expediture change if I didn't
+      
+5. getting it out n the open
+    - step 5: making life energy visible
+    
+6. the americcan drean
+    - step 6: valueing your life energy: minimizing spending
+    
+7. for love or money
+    - step 7: valuening your life energy: maximinzing income
+    
+8. catching fire
+    - step 8: capital and the crossover point
+    
+9. where to stash your cash
+    - step 9: investing for fi
+--------
+
+
+#### Introducción a la nueva edición
 
 De echo, "suficiente" es la promesa radical de este libro
 
