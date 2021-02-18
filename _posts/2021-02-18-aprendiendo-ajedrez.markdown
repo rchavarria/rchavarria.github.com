@@ -48,6 +48,7 @@ Si te interesa el ajedrez, y quieres echar una partida,
 ### Libros
 
 - [Ajedrez y su enseñanza: libro de aperturas]
+- [100 finales que debes conocer]
 
 ### Referencias
 
@@ -56,4 +57,5 @@ Si te interesa el ajedrez, y quieres echar una partida,
 [me encontrarás en chess.com]: https://www.chess.com/member/txingo
 [plataforma chess.com]: https://www.chess.com
 [Weak squares and outposts]: https://www.chess.com/blog/KingsBishop/weak-squares-and-outposts
+[100 finales que debes conocer]: https://forwardchess.com/product/100-endgames-you-must-know%284th-edition%29
 [Ajedrez y su enseñanza: libro de aperturas]: {{ site.baseurl }}{% post_url 2019-10-21-ajedrez-ensenanza-libro-aperturas %}
