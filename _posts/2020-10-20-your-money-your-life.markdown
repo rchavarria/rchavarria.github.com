@@ -1063,5 +1063,7 @@ If we keep a cult of silence about our relationships with money, we all stay in 
 ## Recursos
 
 - [Your money or your life][1], de Vicki Robin, Joe Dominguez y Monique Tilford, en Amazon
+- [Resumen del libro en YouTube][2], por parte de Un poco mejor, un canal con muchísimos resúmenes de libros
 
 [1]: https://amzn.to/2KdrJxN
+[2]: https://www.youtube.com/watch?v=CA_Y4qUv3bo
