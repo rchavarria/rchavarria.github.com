@@ -10,7 +10,7 @@ categories:
 ---
 
 Esta pequeña nota forma parte de mi camino sobre profundizar en mi
-[aprendizaje del ajedrez], en el apartado sbore las lecciones que puedes
+[aprendizaje del ajedrez], en el apartado sobre las lecciones que puedes
 encontrar y seguir en la [plataforma chess.com].
 
 Y hoy toca hablar sobre capturar piezas:
