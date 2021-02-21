@@ -57,7 +57,7 @@ Si te interesa el ajedrez, y quieres echar una partida,
 [1]: https://www.chess.com/member/txingo
 [2]: https://www.chess.com
 [3]: {{ site.baseurl }}{% post_url 2021-02-19-ajedrez-capturas %}
-[4]: {{ site.baseurl }}{% post_url 2021-02-21-ajedrez-mates %}
+[4]: {{ site.baseurl }}{% post_url 2021-02-20-ajedrez-mates %}
 [Weak squares and outposts]: https://www.chess.com/blog/KingsBishop/weak-squares-and-outposts
 [100 finales que debes conocer]: https://forwardchess.com/product/100-endgames-you-must-know%284th-edition%29
 [Ajedrez y su enseñanza: libro de aperturas]: {{ site.baseurl }}{% post_url 2019-10-21-ajedrez-ensenanza-libro-aperturas %}
