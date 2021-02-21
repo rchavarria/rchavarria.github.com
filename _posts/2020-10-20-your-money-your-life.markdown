@@ -173,44 +173,69 @@ Necesitamos más para ser felices
 
 Podemos ser infelices, sin importar cuánto dinero estemos ganando
 
-###### Properidad y el planeta
+###### Prosperidad y el planeta
 
-PROSPERITY AND THE PLANET
+Más significa mejor? Nuestra (los autores) experiencia es que cuanto más tenemos,
+más queremos. *Más es mejor* resulta ser un fórmula para la insatisfacción
 
-The Ecological Footprint, a metric distributed by the Global Footprint Network, 
-measures everything we buy—from cars to sofas—in terms of how much of the earth’s 
-resources are embodied in that purchase.
-Puede estsr bien hacet la prueba
-The Biggest Loser in the Money Game
-Is More Better?
-our experience is that the more we have, the more we want—and
-“More is better” turns out to be a formula for dissatisfaction.
-If more is better, then what I have is not enough.
-The Limits to Growth
-Our economy’s version of “more is better” is “growth is good.”
-economic growth comes from nature,
-There are limits in nature.
-There always comes a point where the individual or the specific population either collapses or dies off due to lack of resources, or stabilizes at a level that the environment can handle.
-The Cleopatra Explanation
-It’s they who need to change.
-Yo no tengo q cabiar. Son los demas. Los demas tienen la culpa y la forma de csnbiar las cosas
-The Creation of Consumers
-We buy everything from hope to happiness. We no longer live life. We consume it.
-The alternative to growth, however, was seen not as maturity but as the precursor to the stagnation of civilization and the death of productivity.
-And thus the rat race was born, leading to our excruciating balancing act between working more to buy luxuries and having enough leisure to enjoy them.
-The astounding capacity of machinery to fill human needs had been so successful that economic activity was slowing down. Instinctively knowing they had enough, American workers were asking for a shorter workweek and more leisure
-Two sectors of American society were alarmed at this trend.
-The moralists, who had internalized the Protestant work ethic, believed that “idle hands do the devil’s work.”
-Industrialists also sounded the alarm. Reduced demand for factory output threatened to halt economic growth.
-The Right to Buy
-the masses. In our initial enthusiasm for
+Si más es mejor, entonces lo que tengo no es suficiente
 
-If we have the money, we can buy whatever we want, whether or not we need it, use it, or even enjoy
-If we don’t consume, we’re told, masses of people will be thrown out of work.
-We are in a no-win situation. You’re wrong if you buy and wrong if you don’t.
-Si compras te endeudas. Si no. No eres patriota
-We need to shift from an ethic of growth to an ethic of sustainability,
+La versión de nuestra economía de *más es mejor* es *crecer está bien*
+
+Pero, el crecimiento económico viene de la naturaleza. Y la naturalez tiene
+límites
+
+Siempre se llega a una situación donde el individuo o unos habitantes colapsan
+o simplemente mueren debido a una falta de recursos, o se estabiliza en un
+nivel que el entorno puede mantener
+
+La explicación Cleopatra: son ellos quien necesitan cambiar. Yo no tengo que
+cambiar, son los demás. Los demás tienen la culpa y la forma de cambiar las
+cosas
+
+###### La creación de consumidores
+
+Compramos todo desde la esperanza a la felicidad. Ya no vivimos la vida. La
+consumimos
+
+La alternativa al crecimiento, no era visto como madurez, si no como el precursor
+de un estancamiento en la civilización y la muerte de la productividad
+
+Y así fue como nació *la carrera de la rata* (rat race). Llevándonos a nuestro
+inexorable acto de tener que decidir entre trabajar más para comprar lujos o
+tener los suficientes lujos para poder disfrutarlos
+
+La increíble capacidad de la maquinara de llenar nuestras necesidades humanas ha
+sido tan exitosa que la actividad económica se esta ralentizando. Dándose cuenta
+instintivamente de que ya tenían suficiente, los trabajadores americanos comenzaron
+a pedir jornadas semanales más cortas y más tiempo de ocio
+
+Dos sectores de la sociedad americana se alarmaron ante esta tendencia:
+
+1. Moralistas: que habían interiorizado la ética de trabajo protestante, creyendo
+que *manos ociosas hacen el trabajo del diablo*
+2. Industrialistas: una reducción en la demanda de la producción de las fábricas
+amenazaría con paralizar el crecimiento económico
+   
+El derecho a comprar
+
+Si tenemos dinero, podemos comprar lo que queramos, independientemente de que lo
+necesitemos, lo usemos o, siquiera, lo disfrutemos
+
+Si no consumimos, nos dijeron, multitud de gente perderá su trabajo, ya no será
+necesaria. Estamos en un situación donde siempre vamos a perder, tanto si compras
+como si no compras: si compras, te endeudas; si no compras, no eres patriota
+porque abandonas a los trabajadores
+
+Debemos cambiar de una ética de crecimiento a una ética de sostenibilidad
+
+###### El comienzo de una nueva andadura para el dinero
+
+
+
+
 THE BEGINNING OF A NEW ROAD MAP FOR MONEY
+
 Patterns of Belief
 humans tend to create patterns of response.
 What Do Our Actions Say?
