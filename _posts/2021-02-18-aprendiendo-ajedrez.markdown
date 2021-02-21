@@ -18,7 +18,7 @@ de cero, pero tengo mucho camino que recorrer. Ese camino lo quiero ir registran
 aquí.
 
 Si te interesa el ajedrez, y quieres echar una partida, 
-[me encontrarás en chess.com].
+[me encontrarás en chess.com][1].
 
 <!-- more -->
 
@@ -31,10 +31,10 @@ Si te interesa el ajedrez, y quieres echar una partida,
     - Francesa
     - Inglesa
     
-- Lecciones en la [plataforma chess.com]
+- Lecciones en la [plataforma chess.com][2]
 
-    - Capturar piezas (falta enlace a las notas sobres estas lecciones)
-    - Encontrar el jaque mate (la estoy siguiendo ahora mismo)
+    - [Capturar piezas][3]
+    - [Encontrar el jaque mate][4]
     - Introducción al libro de aperturas (la seguiré en un futuro)
     - Saca el máximo partido a tus piezas (la seguiré en un futuro)
     - Entender el final del juego (la seguiré en un futuro)
@@ -52,10 +52,12 @@ Si te interesa el ajedrez, y quieres echar una partida,
 
 ### Referencias
 
-- La [plataforma chess.com]
+- [Plataforma chess.com][2]
 
-[me encontrarás en chess.com]: https://www.chess.com/member/txingo
-[plataforma chess.com]: https://www.chess.com
+[1]: https://www.chess.com/member/txingo
+[2]: https://www.chess.com
+[3]: {{ site.baseurl }}{% post_url 2021-02-19-ajedrez-capturas %}
+[4]: {{ site.baseurl }}{% post_url 2021-02-21-ajedrez-mates %}
 [Weak squares and outposts]: https://www.chess.com/blog/KingsBishop/weak-squares-and-outposts
 [100 finales que debes conocer]: https://forwardchess.com/product/100-endgames-you-must-know%284th-edition%29
 [Ajedrez y su enseñanza: libro de aperturas]: {{ site.baseurl }}{% post_url 2019-10-21-ajedrez-ensenanza-libro-aperturas %}

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Ajedrez: encontrar jaque mate"
-date: 2021-02-21 19:24
+date: 2021-02-20 19:24
 author: Ruben Chavarria
 categories: 
 - Aprender
