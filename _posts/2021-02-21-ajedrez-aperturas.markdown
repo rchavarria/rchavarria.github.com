@@ -31,6 +31,22 @@ Y a partir de aquí tenemos 3 aperturas muy comunes:
 
 ### Aperturas con 1.d4 para principiantes
 
+La alternativa más común a 1.e4 es 1.d4
+
+Es una apertura más lenta, porque se tarda un poco más en abrir columnas y en
+desarrollar completamente las piezas
+
+Después de que negras jueguen 1...d5, blancas suelen jugar 2.c4, apertura
+conocida como Gambito de Dama, intentando desviar el peón en el centro de
+negras para tomar el control completo del mismo
+
+Jugadas comunes de negras:
+
+1. Aceptar el gambito con 2...dxc4, no es muy buena idea, las blancas no suelen
+tener problemas para recuperar ese peón y negras deja el centro muy desprotegido
+2. Defensa Slav (Eslovaca?): 2...c6, protegiendo su peón
+3. Declinar el gambito con 2...e6
+
 ### Introducción a defensas de negras contra 1.e4
 
 ### Más defensas de negras contra 1.e4
