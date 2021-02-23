@@ -49,6 +49,19 @@ tener problemas para recuperar ese peón y negras deja el centro muy desprotegid
 
 ### Introducción a defensas de negras contra 1.e4
 
+Digamos que el objetivo de las negras es evitar que blancas consigan tener un
+centro controlado con los dos peones centrales
+
+Para ello, lo más común es responder con 1...e5 o 1...c5
+
+1. Defensa Philidor: 1.e4 e5 2.Nf3 **d6**. Es una defensa sólida pero pasiva, porque
+bloquea al alfil negro
+2. Defensa Petrov/Rusa: 1.e4 e5 2.Nf3 **Nf6**. Si blancas toman el peón
+con 3.Nxe5 es muy importante jugar 3...d6 en lugar de tomar el peón e4. Si no lo
+hacemos, estaremos en serios problemas
+3. Defensa Italiana: 1.e4 e5 2.Nf3 Nc6 3. Bc4
+4. Defensa Siciliana: 1.e4 **c5**
+
 ### Más defensas de negras contra 1.e4
 
 ### Aperturas con 1.d4 para negras
