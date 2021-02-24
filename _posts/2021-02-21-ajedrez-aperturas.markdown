@@ -44,7 +44,7 @@ Jugadas comunes de negras:
 
 1. Aceptar el gambito con 2...dxc4, no es muy buena idea, las blancas no suelen
 tener problemas para recuperar ese peón y negras deja el centro muy desprotegido
-2. Defensa Slav (Eslovaca?): 2...c6, protegiendo su peón
+2. Defensa Eslava: 2...c6, protegiendo su peón
 3. Declinar el gambito con 2...e6
 
 ### Introducción a defensas de negras contra 1.e4
@@ -63,6 +63,17 @@ hacemos, estaremos en serios problemas
 4. Defensa Siciliana: 1.e4 **c5**
 
 ### Más defensas de negras contra 1.e4
+
+Si negras no juegan 1...e5 ni 1...c5 su plan suele ser preparar alguna forma de
+atacar el peón blanco en e4
+
+1. Defensa Escandinava: 1.e4 **d5**. El problema de esta defensa es que negras
+terminan moviendo la dama demasiado pronto, perdiendo un tiempo a la hora de
+poner en juego el resto de piezas menores
+2. Defensa Francesa: 1.e4 **e6**, preparando el terreno para jugar d5, atacando
+a e4, pero sin tener que retomar luego con la dama
+3. Defensa Caro-Kann: 1.e4 **c6**, con una idea similar a la Francesa. Antes de
+mover e6, negras deben desarrollar su alfil blanco
 
 ### Aperturas con 1.d4 para negras
 
