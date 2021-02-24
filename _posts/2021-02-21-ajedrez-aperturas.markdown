@@ -77,5 +77,14 @@ mover e6, negras deben desarrollar su alfil blanco
 
 ### Aperturas con 1.d4 para negras
 
+La respuesta más común a 1.d4 es 1...d5
+
+Cuando blancas salen con peón de dama, suelen jugar el Gambito de Dama. Es
+importante para negras defender el peón de d5 con otro peón (e6 o c6)
+
+- Si aceptan el gambito, ceden todo el centro a las blancas
+- Si defienden con el caballo, Nf6, blancas jugarán e4, amenazando el caballo
+y negras perderán un tiempo al tener que retroceder
+
 [aprendizaje del ajedrez]: {{ site.baseurl }}{% post_url 2021-02-18-aprendiendo-ajedrez %}
 [plataforma chess.com]: https://www.chess.com
