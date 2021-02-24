@@ -231,43 +231,65 @@ Debemos cambiar de una ética de crecimiento a una ética de sostenibilidad
 
 ###### El comienzo de una nueva andadura para el dinero
 
+Patrones de creencias
 
+Los humanos tienden a crear patrones de respuesta
 
+¿Qué dicen nuestras acciones?
 
-THE BEGINNING OF A NEW ROAD MAP FOR MONEY
+¿Qué dice nuestro comportamiento financiero sobre nuestras supersticiones?
 
-Patterns of Belief
-humans tend to create patterns of response.
-What Do Our Actions Say?
-financial behavior reveal about our superstitions?
-Nuestras finanzas son supersticion?
-We try to satisfy essentially psychological and spiritual needs with consumption at a physical level.
-The Fulfillment Curve
-Notice that while each one was still a thrill, it cost more per thrill and the “high” wore off more quickly.
-Segun vamos crecienjdo. La "necesidad" es cads veZ Mmas grande y cara. Pero la felicidad pasa cada vedz mas rapido
-We hit a fulfillment ceiling and never recognized that the formula of money = fulfillment not only had stopped working but had started to work against us.
-Copiar lacgrafica del fullfilment
-Enough: The Peak of the Curve
-There is a name for this peak of the fulfillment curve, and it provides the basis for
-There is a name for this peak of the fulfillment curve, and it provides the basis for transforming your relationship with money.
-The word is enough.
-Clutter: A Fate Worse Than Dearth
-enough—beyond the peak,
-begins to go down? Clutter, that’s what! Clutter is anything that is excess—for you.
-begins to go down? Clutter, that’s what! Clutter is anything that is excess—for you.
-Clutter is anything that is excess—for you.
-Stations of the Crass
-What creates clutter?
-through the “more is better”
-from the disease of materialism,
-looking for inner fulfillment in outer possessions.
-Faces and Functions of Clutter
-attics, basements, garages, closets, and storage sheds—are havens of clutter,
-Once you catch on to what clutter is, you’ll find it everywhere. Isn’t
-Now it’s called minimalism or “tidying up.” We call it “enough”
-“How did it all get here? And what is it worth to me now? Really?”
-Al estilo marycondo. Me gsce feliz. No. Pues lo tiro
+Intentamos satisfacer necesidades psicológicas y espirituales esenciales con
+consumismo a nivel físico
+
+La curva de la satisfacción
+
+Según vamos creciendo, la necesidad es cada vez más y más grande (y cara). Pero
+la satisfacción que obtenemos por ella pasa cada vez más rápido. Necesidades más
+caras con satisfacciones menos duraderas
+
+En algún punto, llegamos al techo de la satisfacción y nunca reconocemos que la
+fórmula de *dinero = satisfacción* ha dejado de funcionar, si no que también ha
+empezado a ir en contra nuestra
+
+/////
+/////
+/////
+/////
+///// gráfica de la satisfacción
+/////
+/////
+/////
+/////
+/////
+/////
+
+Suficiente: el pico de la curva
+
+Hay una palabra para el pico de la Curva de la Satisfacción, y nos proporciona las
+bases para transformar nuestra relación con el dinero: **suficiente**
+
+Trastos: un destino peor que la escasez
+
+Cuando vamos más allá del pico de la curva, la satisfacción comienza a bajar.
+El autor llama a eso Trastos (Clutter). Los Trastos son cualquier cosa que sea
+un exceso para tí
+
+¿Qué crea esa fase? Llegamos a ella a través de la creencia que hablábamos antes:
+*más es mejor*. El mal del materialismo. La búsqueda de la satisfacción interior
+a través de posesiones externas y materiales
+
+Los áticos, sótanos, garajes, armarios y estanterías son el cielo de los Trastos.
+Una vez entiendes lo que son, los encontrarás en todos los sitios
+
+Ahora llaman a eso *minimalismo*. Los autores lo llaman *Suficiente*
+
+Proponen algo muy al estilo Mary Kondo: ¿esto me hace feliz? No. Pues lo tiro
+
+###### Paso 1: hacer las paces con el pasado
+
 Step 1: Making Peace with the Past
+
 we suggest that you read the whole book first, rather than doing each step as it comes up; then come back and get started.
 There are two parts to this step:
 how much money you have earned in your lifetime—the
