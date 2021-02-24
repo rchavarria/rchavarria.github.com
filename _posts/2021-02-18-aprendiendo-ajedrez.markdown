@@ -36,7 +36,7 @@ Si te interesa el ajedrez, y quieres echar una partida,
     - [Capturar piezas][3]
     - [Encontrar el jaque mate][4]
     - [Introducción al libro de aperturas][5]
-    - Saca el máximo partido a tus piezas (la seguiré en un futuro)
+    - Saca el máximo partido a tus piezas (estoy con ella)
     - Entender el final del juego (la seguiré en un futuro)
     - Y más y más lecciones en esta plataforma
     
