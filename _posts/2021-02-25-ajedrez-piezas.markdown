@@ -41,6 +41,18 @@ mayor número de ellas, es decir, en casillas centrales
 
 ### Torres
 
+Las torres no son muy útiles al principio, porque están arrinconadas, y necesitan
+de filas o columnas vacías para ser poderosas
+
+¿Qué es más poderos que una torre en una columna abierta (sin peones)? Dos torres
+en una columna abierta, trabajando en tándem (battery)
+
+Otro lugar especial para las torres es la 7ª o penúltima fila, donde puede atacar
+a los peones todavía inactivos y suele dejar encerrado al rey opuesto
+
+*XXX (pics) on the 7th*: las dos torres trabajando conjuntamente en la penúltima fila,
+peligrosísimo
+
 ### Dama
 
 ### Rey
