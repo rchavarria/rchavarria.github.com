@@ -33,6 +33,12 @@ alfil?
 
 ### Caballos
 
+Pocas cosas hay más satisfactorias que hacer un gran movimiento con el caballo.
+Y es verdad, quizá sea porque es la única pieza que puede saltar
+
+Para sacar lo mejor de ellos, deberías colocarlos en casillas donde controlen un
+mayor número de ellas, es decir, en casillas centrales
+
 ### Torres
 
 ### Dama
