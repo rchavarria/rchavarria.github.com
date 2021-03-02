@@ -55,6 +55,12 @@ peligrosísimo
 
 ### Dama
 
+La dama es la pieza más poderosa, pero es muy importante saber cuándo y dónde
+debemos utilizarla
+
+Toda esa fortaleza, es incluso mejor cuando trabaja conjuntamente con alfiles,
+caballos o torres
+
 ### Rey
 
 ### Peones
