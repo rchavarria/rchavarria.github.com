@@ -75,6 +75,32 @@ Recomienda el libro o los libros de Mr. Money Mustache
 --------
 
 
+#### Resumen de los pasos
+
+1. Calcula cuánto dinero has ganado en lo que llevas de vida. Después, crea una
+hoja de balance para calcular tu valor neto (activos - pasivos)
+
+#### Preguntas para hablar sobre dinero
+
+Cada pregunta, se puede ampliar en alguna dirección:
+
+- Añadiendo *¿por qué?* hará que la pregunta sea más profunda
+- Añadiendo *¿cómo ha influido la sociedad en mi respuesta?* hará que la pregunta
+sea más amplia
+
+**Capítulo 1**
+
+- ¿Quién te dió tus primeras lecciones sobre el dinero?
+- ¿Qué aprendiste?
+- ¿Qué mensajes recibiste sobre el dinero cuando eras niño?
+- ¿De dónde los recibiste? Padres, profesores, anuncios...
+- Habla de algún recuerdo sobre el dinero y sobre cómo te afecta ahora
+- Habla de algún error con el dinero
+- ¿Qué podrías hacer de forma diferente?
+- ¿Qué significa *suficiente* para tí?
+- ¿Qué tienes guardado pero estarías mejor sin ello?
+- ¿Por qué lo sigues guardando?
+
 #### Introducción a la nueva edición
 
 De echo, "suficiente" es la promesa radical de este libro
@@ -288,60 +314,56 @@ Proponen algo muy al estilo Mary Kondo: ¿esto me hace feliz? No. Pues lo tiro
 
 ###### Paso 1: hacer las paces con el pasado
 
-Step 1: Making Peace with the Past
+Hay dos partes en este paso:
 
-we suggest that you read the whole book first, rather than doing each step as it comes up; then come back and get started.
-There are two parts to this step:
-how much money you have earned in your lifetime—the
-creating a personal balance sheet
-HOW MUCH HAVE YOU EARNED IN YOUR LIFE?
-The Value of Step 1
-people have no idea how much money has entered their lives, and therefore no idea how much money could enter their lives.
-eradicates such myths and false self-concepts as “I can’t earn very much money”
-It gets you to ground zero,
-It allows you to see and let go
-It allows you to see and let go of any
-secrets or lies that may be distorting your current relationship with money.
-Useful Attitudes
-No shame, no blame.
-Sinking into blame and shame slows your progress toward financial freedom.
-Your lifetime earnings represent just a number, not your value.
-Impeccability.
-power of this program increases with every ounce of honesty and integrity you invest in it.
-CHECKLIST
-B. WHAT HAVE YOU GOT TO SHOW FOR IT?
+1. ¿Cuánto dinero has ganado a lo largo de tu vida?
+2. Crear una hoja personal de balance financiero
 
-Be prepared. You will be calculating your net worth (your total assets minus your total liabilities),
-listing everything you own (assets) and everything you owe (liabilities).
-Liquid Assets
-Cash,
-Fixed Assets
-your house, your car (or cars).
-Go through every room and inventory everything.
-Confront your clutter squarely.
-Mary condo al rescate
-Give an approximate cash value to everything you own.
-value—what you could get for each item
-Don’t overlook debts owed to you,
-security deposits on utilities, phone, or house
-Liabilities
-all your debts, whether payable in money, goods, or services—everything
-If you list as an asset the current market value of your house, include as a liability the balance owed on it.
-Net Worth
-Add the figures for liquid assets and fixed assets, and subtract from that the figure for liabilities. In the most simplified, concrete, material sense, this is your current net worth.
-WHY DO A BALANCE SHEET?
-souvenirs that could be converted into cash. With the power and clear direction that taking the reins of your financial affairs will give you, you will be far more effective in the world.
-With the power and clear direction that taking the reins of your financial affairs will give you, you will be far more effective in the world.
-La hoja de balanxce te dara perspe tiva. Direccion. Conocimiento
-SUMMARY OF STEP 1
-Find out how much money you have earned in your lifetime.
-Create a balance sheet
-MONEY TALK QUESTIONS
-adding “Why?” to the end of any question will take it deeper. Adding “How has society shaped my answer?” to any question will take it wider.
-Who gave you your first lessons about money? What did you learn? What messages did you get about money growing up? Where did you get them from? Parents, teachers, ads, or . . . ? Talk about an early memory of money and how it affects you now. Talk about a money mistake. What would you do differently? What does “enough” mean to you? What do you have (in storage or closets) that you’d be better off without? Why do you keep
-2 Money Ain’t What It Used to Be—and Never Was
-Money is a means of exchange. “Good.
-It’s paper.”
+¿Cuánto dinero has ganado a lo largo de tu vida?
+
+La gente no tiene ni idea de cuánto dinero ha entrado en sus vidas, y por lo tanto,
+no tiene ni idea de cuánto dinero podría entrar en el futuro
+
+Esto erradica aquellos mitos y falsos conceptos de que *Yo no puedo ganar mucho
+dinero*
+
+Hacer esto te pone a cero, y te permite ver y dejar pasar los secretos o mentiras
+que pueden estar distorsionando tu actual relación con el dinero
+
+Una actitud muy valiosa es *Ni vergüenza, ni culpa* (*No shame, no blame*)
+
+Sentirse culpable o tener vergüenza hace que avances más despacio hacia la 
+libertad financiera
+
+Los ingresos de tu vida representan sólo un número, no tu valor
+
+Otra buena actitud es hacer las cosas de forma impecable: el poder de este
+programa se incrementa con cada gramo de honestidad e integridad que inviertes
+en él
+
+¿Qué has conseguido con él?
+
+Prepárate, vas a calcular tu valor neto (el total de tus activos (assets) menos
+el total de tus pasivos (liabilities)). Para ello deberás listar todo lo que
+posees y todo lo que debes: activos líquidos, efectivo, activos fijos (inmuebles?),
+casa, coche. Date una vuelta por tu casa y ve haciendo inventario de todo lo que
+ves. Aguanta, observa todos esos trastos que llevan almacenado años.
+
+Después, asigna un valor económico aproximado a todo ello, lo que podrías obtener
+si lo vendieras.
+
+Cuenta el dinero que te deben a tí, depósitos por utilizar ciertas cosas,...
+
+Pasivos: todas tus deudas
+
+Valor neto = activos - pasivos
+
+¿Por qué hacer una hoja de balance? Porque te dará perspectiva, dirección y
+conocimiento. Tomarás las riendas de tus asuntos financieros
+
+#### Capítulo 2: el dinero no es lo que solía ser (y nunca fue)
+
+Money is a means of exchange. “Good. It’s paper.”
 Money is a means of exchange.
 money is a means of exchange only if the trading partners agree it has value.
 Money is a means of exchange only when both parties agree on its value.
@@ -366,6 +388,7 @@ Resisting consumerism becomes easy: Is that bathing suit or car worthy of my lif
 Winning isn’t having the most toys. It’s having precisely what you need and nothing in excess and being able to stop playing the game at will.
 Habla del juego del dinero. Comprar. Comorar. Comorar. Deudas. Inflaccion. Intereses...
 Your Life Energy
+
 A FIRST LOOK AT FINANCIAL INDEPENDENCE
 
 John Stuart Mill once said, “Men do not desire to be rich, only to be richer than other men.”
@@ -373,6 +396,7 @@ Mito de mas ezs mejor.. Nunca tenemos suficiente
 Financial Independence has nothing to do with rich. It is the experience of having enough—and then some.
 Enough, you will remember, is found at the peak of the fulfillment curve.
 Financial and Psychological Freedom
+
 Step 2: Being in the Present—Tracking Your Life Energy
 
 There are two parts to step 2:
