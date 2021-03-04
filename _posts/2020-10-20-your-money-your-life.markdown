@@ -363,46 +363,53 @@ conocimiento. Tomarás las riendas de tus asuntos financieros
 
 #### Capítulo 2: el dinero no es lo que solía ser (y nunca fue)
 
-Money is a means of exchange. “Good. It’s paper.”
-Money is a means of exchange.
-money is a means of exchange only if the trading partners agree it has value.
-Money is a means of exchange only when both parties agree on its value.
-“It’s a store of value,” meaning you can save it up to spend another day.
-Money’s value can disappear overnight.”
-Hiperinflaccion por ejemplo
-No definition would stick. All are true—sometimes.
-Money is something you trade your life energy for. You sell your time for money.
-The only real asset you have is your time.
-money is simply your life energy
-A Simple Summary of What Money Is—and Is Not
+Hay muchas definiciones de *dinero*, y todas son ciertas... a veces, no siempre:
 
-Material.
-most people most of the time think of as money.
-Psychological. Your fears and longings.
-Cultural. The beliefs embedded in our laws and customs.
-Life energy. Something you trade the hours of your life for.
-Knowing that money is your life energy transforms your relationship with money,
-Money is also like water—it flows,
-We feel happy when it flows our way, distressed when it doesn’t.
-Resisting consumerism becomes easy: Is that bathing suit or car worthy of my life energy?
-Winning isn’t having the most toys. It’s having precisely what you need and nothing in excess and being able to stop playing the game at will.
-Habla del juego del dinero. Comprar. Comorar. Comorar. Deudas. Inflaccion. Intereses...
-Your Life Energy
+- Es un medio de intercambio (cuando las dos partes están de acuerdo en su valor)
+- Es sólo papel
+- Es un almacén de valor (menos con hiperinflacción)
 
-A FIRST LOOK AT FINANCIAL INDEPENDENCE
+La definición del autor:
 
-John Stuart Mill once said, “Men do not desire to be rich, only to be richer than other men.”
-Mito de mas ezs mejor.. Nunca tenemos suficiente
-Financial Independence has nothing to do with rich. It is the experience of having enough—and then some.
-Enough, you will remember, is found at the peak of the fulfillment curve.
-Financial and Psychological Freedom
+> Dinero es por lo que comercias/intercambias tu energía vital, vendes tu tiempo
+> por dinero, así, tu único activo es tu tiempo
 
-Step 2: Being in the Present—Tracking Your Life Energy
+Simplemente:
+
+> El dinero es tu energía vital
+
+**Resumen de qué es y qué no es el dinero**
+
+- Material: es lo que piensa la mayoría de la gente la mayor parte del tiempo
+- Psicológico: tus miedos y anhelos
+- Cultural: las creencias incrustadas en nuestras leyes y costumbres
+- Energía vital: algo por lo que intercambias las horas de tu vida
+- Es como el agua: fluye. Nos sentimos bien si fluye hacia nosotros, y mal cuando
+no lo hace
+
+Saber que el dinero es tu energía vital transforma tu relación con él
+
+Resistirse al consumismo es fácil: merece la pena mi energía vital por ese coche
+o ese traje de neopreno?
+
+Ganar no es tener la mayoría de caprichos, ganar es tener precisamente lo que
+necesitas y nada en exceso y ser capaz de parar de jugar el juego del dinero
+a voluntad
+
+Juego del dinero: comprar, comprar, comprar, deudas, inflacción, intereses...
+
+La Independencia Financiera no tiene nada que ver con ser rico. Es la experiencia
+de tener suficiente (y algo más para después)
+
+###### Paso 2: estar en el presente, monitorizar tu energía vital
 
 There are two parts to step 2:
-Establish the actual costs in time and money required to maintain your job(s), and compute your real hourly wage.
+Establish the actual costs in time and money required to maintain your job(s), 
+and compute your real hourly wage.
 Keep track of every cent that comes into or goes out of your life.
+
 A. HOW MUCH ARE YOU TRADING YOUR LIFE ENERGY FOR?
+
 how much money are you making for the amount of time you work?
 Commuting
 Costuming
@@ -411,19 +418,22 @@ Meals
 Daily Decompression
 Escape
 Escape Entertainment
-How much of your weekend entertainment do you consider your just reward for sticking it out at a boring job?
+How much of your weekend entertainment do you consider your just reward for 
+sticking it out at a boring job?
 Vacations
 Solo si estan relacionafas con el trabajo. Para desconectar o para aliviar estres
 Job-Related Illness
 visits to the doctor, trips to the drugstore, and sniffling under the covers.
 Other Job-Related Expenses
 Examine your balance sheet of assets and liabilities (step 1).
-Look at what you pay “the help”: Would you need a housekeeper, gardener, handyman, or nanny if you didn’t have a job?
+Look at what you pay “the help”: Would you need a housekeeper, gardener, 
+handyman, or nanny if you didn’t have a job?
 educational programs, books, tools and conferences.
 Your Real Hourly Wage
-create a table, adding the approximate extra job-related hours to your normal workweek and subtracting the job-related expenses from your usual pay.
-The corollary figure is also interesting. In this example, every dollar you spend represents 6 minutes of your
-The corollary figure is also interesting. In this example, every dollar you spend represents 6 minutes of your life. Think
+create a table, adding the approximate extra job-related hours to your normal 
+workweek and subtracting the job-related expenses from your usual pay.
+The corollary figure is also interesting. In this example, every dollar you 
+spend represents 6 minutes of your life. Think
 Why Do This Step?
 No Shame, No Blame
 
@@ -432,9 +442,13 @@ this is where your feelings about your work/job/identity will most strongly bubb
 Compassionate self-awareness is the key. Just notice each feeling as it presents itself, without criticizing
 So what if you’ve been paying to work?
 That’s all in the past.
+
 CHECKLIST: LIFE ENERGY VS. SALARY
+
 Aqui resenta una tabla con todas las ideas
+
 B. KEEP TRACK OF EVERY CENT THAT COMES INTO OR GOES OUT OF YOUR LIFE
+
 All of these situations stem from the same root thought: Money is money and love is love and never the twain shall meet.
 Separar el dinero de las reka iones solo trae problemas
 A Spiritual Discipline
@@ -446,11 +460,13 @@ record any and all movements of money, the exact amount, and the reason for the 
 Every Cent? . . . But Why?
 In practice we often reverse the old adage of “penny wise, pound foolish.”
 Que significa este refran?
-Why every cent,
+
 Why every cent, rather than just rounding off to the nearest dollar, or using approximate figures?
-Because this helps to establish important lifelong habits. After all, how big is a “fudge factor”? How close is “close enough”? Granted, in practice many FIers settle into rounding to the dollar, but that’s as far as they slip. Human nature being what it is, if you start cheating, even “just a little bit,” that little bit tends to get bigger and soon you’ll find yourself thinking, “Well, I don’t have to write everything down, just the major expenses”; and then, “Well, I’ve done this for a month now, so I think I’ll start rounding it off to the nearest thousand.” (It’s like dieting: If you break your diet on Tuesday morning by having a buttered English muffin instead of dry toast, the tendency is to cheat even more, and by evening you’re gobbling down a carton of ice cream and a pound cake.) If you want this to be a worthwhile undertaking, it’s worth your while to do it right. If you rebel against every penny, try every dime or dollar (or euro or yen), but more than that is a little
+
 Because this helps to establish important lifelong habits.
+
 if you start cheating, even “just a little bit,” that little bit tends to get bigger
+
 Useful Attitudes
 
 No leeway.
