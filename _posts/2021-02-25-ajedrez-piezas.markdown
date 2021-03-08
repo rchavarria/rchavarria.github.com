@@ -63,6 +63,16 @@ caballos o torres
 
 ### Rey
 
+Durante la mayor parte de la partida, lo que quieres es mantener tu rey a salvo
+
+Esto se consigue normalmente con el enroque
+
+Pero, en ocasiones, necesitas tu rey atacando para conseguir ganar la partida
+
+El rey no es rápido, pero muy fuerte, siempre y cuando no sea vulnerable. Por
+eso, al final de la partida, cuando quedan pocas piezas, es una pieza clave en
+el juego
+
 ### Peones
 
 ### Piezas trabajando juntas
