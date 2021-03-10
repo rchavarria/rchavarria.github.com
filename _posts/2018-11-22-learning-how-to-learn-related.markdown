@@ -168,6 +168,6 @@ Bueno, parece que sí he encontrado alguna referencia:
 - [Be lucky, it's an easy skill to learn]
 - [30 seconds habit that can have a big impact on your life]
 
-[Aprendiendo a aprender]: https://rchavarria.github.io/notes/cursos/coursera/2017/01/04/learning-how-to-learn.html
+[Aprendiendo a aprender]: {{ site.baseurl }}{% post_url 2017-01-04-learning-how-to-learn %}
 [Be lucky, it's an easy skill to learn]: https://www.telegraph.co.uk/technology/3304496/Be-lucky-its-an-easy-skill-to-learn.html
 [30 seconds habit that can have a big impact on your life]: https://www.huffingtonpost.com/robyn-scott/the-30-second-habit-that-_b_4808632.html

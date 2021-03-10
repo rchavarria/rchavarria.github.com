@@ -5,7 +5,7 @@ categories:
 - Coursera
 ---
 
-Curso de Coursera [Learning how to rearn](https://www.coursera.org/learn/learning-how-to-learn)
+Curso de Coursera [Learning how to learn](https://www.coursera.org/learn/learning-how-to-learn)
 
 <!-- more -->
 
