@@ -75,7 +75,21 @@ el juego
 
 ### Peones
 
-### Piezas trabajando juntas
+A pesar de ser las piezas menos valoradas y más vulnerables, mucha gente cree
+que los peones son el alma del ajedrez
+
+Básicamente, cómo se desarrolla el juego depende de la estructura que formen
+los peones
+
+Principalmente, tienen 4 usos:
+
+1. Para controlar casillas
+2. Para proteger otras piezas
+3. Arietes (battering rams) para abrir posiciones
+4. Cuando llegan al otro lado del tableros, se usan para conseguir piezas de
+más valor, para coronar/promocionar/...
+   
+## Piezas trabajando juntas
 
 [aprendizaje del ajedrez]: {{ site.baseurl }}{% post_url 2021-02-18-aprendiendo-ajedrez %}
 [plataforma chess.com]: https://www.chess.com
