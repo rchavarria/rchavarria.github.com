@@ -91,5 +91,9 @@ más valor, para coronar/promocionar/...
    
 ## Piezas trabajando juntas
 
+El ajedrez es como un juego de equipo. En fútbol o baloncesto, un solo jugador
+no puede hacer nada contra el equipo contrario. En ajedrez, si todas las piezas
+trabajan con un objetivo común, serán imparables
+
 [aprendizaje del ajedrez]: {{ site.baseurl }}{% post_url 2021-02-18-aprendiendo-ajedrez %}
 [plataforma chess.com]: https://www.chess.com
