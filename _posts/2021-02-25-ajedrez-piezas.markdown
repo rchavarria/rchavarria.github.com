@@ -50,8 +50,8 @@ en una columna abierta, trabajando en tándem (battery)
 Otro lugar especial para las torres es la 7ª o penúltima fila, donde puede atacar
 a los peones todavía inactivos y suele dejar encerrado al rey opuesto
 
-*XXX (pics) on the 7th*: las dos torres trabajando conjuntamente en la penúltima fila,
-peligrosísimo
+*Rooks (pics) on the 7th*: las dos torres trabajando conjuntamente en la
+penúltima fila, peligrosísimo
 
 ### Dama
 
@@ -86,7 +86,7 @@ Principalmente, tienen 4 usos:
 1. Para controlar casillas
 2. Para proteger otras piezas
 3. Arietes (battering rams) para abrir posiciones
-4. Cuando llegan al otro lado del tableros, se usan para conseguir piezas de
+4. Cuando llegan al otro lado del tablero, se usan para conseguir piezas de
 más valor, para coronar/promocionar/...
    
 ## Piezas trabajando juntas
