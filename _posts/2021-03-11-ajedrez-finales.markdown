@@ -13,11 +13,24 @@ Esta pequeña nota forma parte de mi camino sobre profundizar en mi
 [aprendizaje del ajedrez], en el apartado sobre las lecciones que puedes
 encontrar y seguir en la [plataforma chess.com].
 
-Y hoy toca hablar sobre entender el final del juego:
+Y hoy toca hablar acerca de entender el final del juego:
 
 <!-- more -->
 
 ### Peones pasados
+
+Un peón pasado es aquel que ya no puede ser atacado o bloqueado por ningún peón
+enemigo, es decir, que ha dejado a todos los peones enemigos atrás
+
+Una característica importante de los peones pasados es saber si están conectados
+o no. Un peón (pasado) está conectado si está defendido por otro peón
+
+Mayoría de peones: cuando tienes más peones que tu oponente, puedes intercambiar
+algunos de ellos para conseguir un peón pasado
+
+Al coronar los peones pasados, hay que ser muy cuidadoso, mirar unos movimientos
+en el futuro y protegerse o atacar con jaques, *pins*, *skewers*...
+
 ### Escoltar el peón
 ### Sacrificar para coronar
 ### Enfrenamiento de peones 3 a 3
