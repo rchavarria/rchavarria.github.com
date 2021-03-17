@@ -32,6 +32,15 @@ Al coronar los peones pasados, hay que ser muy cuidadoso, mirar unos movimientos
 en el futuro y protegerse o atacar con jaques, *pins*, *skewers*...
 
 ### Escoltar el peón
+
+Si quieres coronar tu peón, muchas veces tendrás que hacer de escudo con tu rey
+para que el oponente no pueda capturar tu peón
+
+En aquellos finales peón y rey contra rey donde el peón está en la columna `a` o
+`h`, lo más importante es que el rey opuesto no encuentre un camino hasta la
+casilla de la esquina (`a8`, `h8`, `a1` o `h1`). Si consigue llegar allí, la
+partida será tablas
+
 ### Sacrificar para coronar
 ### Enfrenamiento de peones 3 a 3
 ### Intercambio desfavorable para ganar
