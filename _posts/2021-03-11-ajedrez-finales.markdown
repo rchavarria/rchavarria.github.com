@@ -42,6 +42,20 @@ casilla de la esquina (`a8`, `h8`, `a1` o `h1`). Si consigue llegar allí, la
 partida será tablas
 
 ### Sacrificar para coronar
+
+En finales donde uno de los jugadores tiene dos peones contra uno, suele ser una
+buena idea sacrificar uno de ellos para quitar del camino el peón contrario y de
+esta manera coronar nuestro peón
+
+Pero no es el único sacrificio. Otros sacrificios pueden romper una cadena de
+peones para retirar peones contrarios del camino de los nuestros
+
+Pueden ocurrir incluso dobles sacrificios
+
+Personalmente, me he encontrado partidas donde he sacrificado o intercambiado
+alguna torre para poder coronar un peón, y aún después del sacrificio, conseguir
+tener una ventaja
+
 ### Enfrenamiento de peones 3 a 3
 ### Intercambio desfavorable para ganar
 ### Regla de la casilla
