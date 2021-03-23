@@ -57,6 +57,24 @@ alguna torre para poder coronar un peón, y aún después del sacrificio, conseg
 tener una ventaja
 
 ### Enfrenamiento de peones 3 a 3
+
+Muchos de los grandes movimientos en el ajedrez son realizados gracias a visualizar
+varios movimientos en el futuro, y a veces, éstos parecen no tener sentido,
+hasta que lo tiene
+
+En un enfrentamiento 3 a 3, tiene ventaja aquel quien mueva primero (y esté
+más cerca de la última fila para coronar)
+
+El *truco* está en mover el peón central. Si el contrincante captura con el peón
+derecho, avanzamos el izquierdo. Y al revés. Si no capturan el peón central,
+podremos capturar unos de los laterales y cruzaremos la línea de peones
+
+Si en lugar de mover el central, mueves uno lateral, estarás perdido. Será tu
+contrincante quien cruce la línea, no tú
+
+Si eres tú quien está más lejos de coronar, solo moviendo el peón central serás
+capaz de para a tu adversario
+
 ### Intercambio desfavorable para ganar
 ### Regla de la casilla
 ### Crear peones pasados
