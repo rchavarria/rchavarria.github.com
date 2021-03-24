@@ -75,7 +75,23 @@ contrincante quien cruce la línea, no tú
 Si eres tú quien está más lejos de coronar, solo moviendo el peón central serás
 capaz de para a tu adversario
 
-### Intercambio desfavorable para ganar
+### Simplificar para ganar
+
+Normalmente, sólo se debe capturar si:
+
+1. El intercambio de piezas nos es favorable
+2. La posición del contrario empeora tras el intercambio
+
+Hay un refrán (en inglés) que dice:
+
+> To take is a mistake
+
+Traducido libremente sería: *Capturar es un error"
+
+Otras veces, si tenemos una ventaja de material, podemos intercambiar piezas
+con el mismo valor. Esto sería *simplificar* la posición, y puesto que ya tenemos
+ventaja, cada intercambio nos estaría beneficiando un poco más
+
 ### Regla de la casilla
 ### Crear peones pasados
 
