@@ -92,7 +92,22 @@ Otras veces, si tenemos una ventaja de material, podemos intercambiar piezas
 con el mismo valor. Esto sería *simplificar* la posición, y puesto que ya tenemos
 ventaja, cada intercambio nos estaría beneficiando un poco más
 
-### Regla de la casilla
+### Regla del cuadrado
+
+¿Cómo podemos saber si un peón llegará a coronar antes de que sea alcanzado por
+el rey contrario? 
+
+No hace falta hacer grandes cálculos, ni contar casillas con los dedos
+
+Desde la posición del peón, imagina una diagonal hasta la última fila. Esa diagonal
+es el *cuadrado del peón*. Si el rey contrario entra en ese cuadrado en el 
+siguiente movimiento, capturará el peón antes de que corone o justo al coronar.
+Si el rey contrario queda fuera de ese cuadrado, el peón coronará satisfactoriamente
+
+Para hilar más fino, hay que tener en cuenta que los peones pueden avanzar dos
+casillas en su primer movimiento, o que puede haber otras piezas que interrumpan
+el paso al peón o al rey contrario
+
 ### Crear peones pasados
 
 [aprendizaje del ajedrez]: {{ site.baseurl }}{% post_url 2021-02-18-aprendiendo-ajedrez %}
