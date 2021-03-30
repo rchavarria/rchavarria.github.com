@@ -108,7 +108,17 @@ Para hilar más fino, hay que tener en cuenta que los peones pueden avanzar dos
 casillas en su primer movimiento, o que puede haber otras piezas que interrumpan
 el paso al peón o al rey contrario
 
-### Crear peones pasados
+### Crear un peón pasado
+
+Aron Nimzowitsch dijo (traducción mía muy, muy libre, no la tomes muy en serio):
+
+> Un peón pasado es un criminal, hay que mantenerlo bajo llave
+
+Son así de peligrosos. Si no tenemos cuidado con ellos y los capturamos o 
+bloqueamos, podrían llegar al otro lado del tablero y coronar
+
+Muchas veces podemos crear peones pasado sacrificando una pieza, de forma que
+el contrario se vea obligado a quitar el peón bloqueando el nuestro
 
 [aprendizaje del ajedrez]: {{ site.baseurl }}{% post_url 2021-02-18-aprendiendo-ajedrez %}
 [plataforma chess.com]: https://www.chess.com
