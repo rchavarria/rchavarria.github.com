@@ -18,6 +18,12 @@ Y hoy toca hablar acerca de ganar mediante el uso de tácticas:
 <!-- more -->
 
 ### Sacrificar para ganar
+
+Un sacrificio, en ajedrez, es cuando pierdes alguna pieza de forma temporal con
+la esperanza de recuperar algo de más valor o utilidad
+
+Aunque no siempre los sacrificios salen bien, ten mucho cuidado
+
 ### Pieza atrapada
 ### Ataque al descubierto
 ### Jaque al descubierto
