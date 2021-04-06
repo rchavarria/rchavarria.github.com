@@ -25,6 +25,17 @@ la esperanza de recuperar algo de más valor o utilidad
 Aunque no siempre los sacrificios salen bien, ten mucho cuidado
 
 ### Pieza atrapada
+
+Hay muchas casillas en el tablero, sí, pero a veces ocurre que una de tus piezas
+no tiene ninguna casilla donde moverse sin ser capturada
+
+Uno de estos casos puede darse con más o menos frecuencia si sitúas un caballo
+en los límites del tablero, porque estás limitando mucho sus movimientos
+
+Cualquier pieza, no importa lo poderosa que sea, puede quedar atrapada
+
+Mucho cuidado con tu dama. Es toda una calamidad si queda atrapada
+
 ### Ataque al descubierto
 ### Jaque al descubierto
 ### Jaque doble
