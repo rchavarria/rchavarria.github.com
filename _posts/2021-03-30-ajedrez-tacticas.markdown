@@ -49,6 +49,13 @@ Una de las ventajas de los ataques al descubierto es que puedes tener un
 *perdiendo* así un movimiento, porque no puede gestionar dos ataques a la vez
 
 ### Jaque al descubierto
+
+Un jaque al descubierto es como un ataque al descubierto. Al mover una pieza,
+dejas otra al descubierto que es con la que realmente estás atacando
+
+Como el oponente tendrá que hacer algo porque está en jaque, tú tendrás un
+*movimiento gratis*
+
 ### Jaque doble
 ### Eliminar al defensor
 ### Mate del asfixiado
