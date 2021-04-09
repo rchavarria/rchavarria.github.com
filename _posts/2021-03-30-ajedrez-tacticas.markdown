@@ -37,6 +37,17 @@ Cualquier pieza, no importa lo poderosa que sea, puede quedar atrapada
 Mucho cuidado con tu dama. Es toda una calamidad si queda atrapada
 
 ### Ataque al descubierto
+
+Normalmente, quieres atacar directamente con la pieza que mueves, pero no siempre
+es así
+
+En ocasiones, hay ataques muy potentes realizados, no con la pieza que se mueve,
+si no con la pieza que queda al descubierto al hacer el movimiento
+
+Una de las ventajas de los ataques al descubierto es que puedes tener un
+*movimiento gratis*, debido a que el oponente tendrá que mover la pieza atacada,
+*perdiendo* así un movimiento, porque no puede gestionar dos ataques a la vez
+
 ### Jaque al descubierto
 ### Jaque doble
 ### Eliminar al defensor
