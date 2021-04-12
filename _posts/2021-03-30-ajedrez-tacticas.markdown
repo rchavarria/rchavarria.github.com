@@ -57,6 +57,14 @@ Como el oponente tendrá que hacer algo porque está en jaque, tú tendrás un
 *movimiento gratis*
 
 ### Jaque doble
+
+¿Qué es mejor que dar jaque con una de tus piezas? Dar jaque con **2** de tus
+piezas a la vez. Eso es un jaque doble
+
+El oponente estará obligado a mover su rey, porque al haber dos jaques al mismo
+tiempo, no podrá bloquear los dos a la vez y por supuesto no podrá capturar tus
+dos piezas a la vez
+
 ### Eliminar al defensor
 ### Mate del asfixiado
 ### Desviación (deflection)
