@@ -101,6 +101,20 @@ sea más amplia
 - ¿Qué tienes guardado pero estarías mejor sin ello?
 - ¿Por qué lo sigues guardando?
 
+**Capítulo 2**
+
+Necesito revisar este capítulo para extraer estas preguntas
+
+- ¿?
+- ¿?
+- ¿?
+- ¿?
+- ¿?
+- ¿?
+- ¿?
+- ¿?
+- ¿?
+
 #### Introducción a la nueva edición
 
 De echo, "suficiente" es la promesa radical de este libro
@@ -446,41 +460,43 @@ Aqui resenta una tabla con todas las ideas
 +-------+-------+---------+
 ```
 
-B. KEEP TRACK OF EVERY CENT THAT COMES INTO OR GOES OUT OF YOUR LIFE
+**Registra cada céntimo que entra o sale de tu vida**
 
-All of these situations stem from the same root thought: Money is money and love is love and never the twain shall meet.
-Separar el dinero de las reka iones solo trae problemas
-A Spiritual Discipline
-Instead of watching your breath, you watch your money.
-For many people, a pocket-size memo book is the perfect constant companion in which to note every cent that enters or leaves their lives,
-Computers and smartphones are making this easier than ever, but there’s no right way to do
-Computers and smartphones are making this easier than ever, but there’s no right way to do it—whatever
-record any and all movements of money, the exact amount, and the reason for the exchange.
-Every Cent? . . . But Why?
-In practice we often reverse the old adage of “penny wise, pound foolish.”
-Que significa este refran?
+Separar el dinero de las reacciones sólo trae problemas
 
-Why every cent, rather than just rounding off to the nearest dollar, or using approximate figures?
+En lugar de vigilar tu respiración, vamos a vigilar tu dinero
 
-Because this helps to establish important lifelong habits.
+Para mucha gente, una pequeña libreta es la compañía constante perfecta para anotar
+cada céntimo que entra o sale de sus vidas
 
-if you start cheating, even “just a little bit,” that little bit tends to get bigger
+Los ordenadores y los móviles están haciendo esto más fácil que nunca, pero no
+hay una forma única de hacerlo bien
 
-Useful Attitudes
+Debes registrar todos y cada uno de los movimientos del dinero, la cantidad exacta
+y la razón del movimiento
 
-No leeway.
-One of the keys to your success in this program (and in life) is a shift in attitude from one of laxity and leeway to one of accuracy, precision, and impeccability.
-Lo mismo que dicen del nejercicio
-No judgment—lots of discernment.
-judgment and blame do not serve. Discernment, on the other hand, is an essential skill.
-In the process of writing down every cent that comes into or goes out of your life, you will begin to discern which expenses are fitting and fulfilling and which are unnecessary, extravagant, or even downright embarrassing.
-SUMMARY OF STEP
-SUMMARY OF STEP 2
-MONEY TALK QUESTIONS
-What is money? Describe your relationship with money in five words or less. Why those words? Do you experience more stress when you have money, or when you don’t have it? Finish the sentence “If I had more money, then I’d be . . .” Elaborate! Are you earning what you’re worth? What belief about money keeps you from being,
-What is money? Describe your relationship with money in five words or less. Why those words? Do you experience more stress when you have money, or when you don’t have it? Finish the sentence “If I had more money, then I’d be . . .” Elaborate! Are you earning what you’re worth? What belief about money keeps you from being, doing, or having what you want?
-3 Where Is It All Going?
+¿Es necesario ir al céntimo? Sí, porque queremos establecer hábitos para toda 
+la vida. Si comienzas redondeando, o haciendo pequeñas trampas, esas pequeñas
+trampas se convertirán en grandes según vaya pasando el tiempo. No queremos caer
+en el refrán:
+
+> Lo barato, sale caro (penny wise, pound foolish) 
+
+Como en el ejercicio físico, una de las claves del éxito de este programa (y en
+la vida en general) es un cambio de actitud, de una actitud de descuido y 
+flexibilidad a una de exactitud, precisión e impecabilidad
+
+El enjuiciamiento y la culpabilidad no sirven aquí, el buen criterio, en cambio,
+es una habilidad esencial
+
+Durante el proceso de registrar cada céntima que entra o sale de tu vida,
+comenzarás a distinguir qué gastos son necesarios y enriquecedores y qué gastos
+son innecesarios, extravagantes o incluso embarazosos
+
+#### Capítulo 3: ¿Dónde nos lleva todo esto?
+
 DO YOU NEED A BUDGET?
+
 This approach to money is actually the opposite of a budget.
 But budgeting is a planning tool, while this program is an “awareness of your enough point” tool.
 Rather than using standard categories and standard percentages and making a spending plan, with this approach you will discover your patterns from observing how you actually spend your life energy, and revealing your own unique relationship with money.
@@ -490,12 +506,18 @@ You need to identify and follow internal signals, not external admonishments or 
 You need to observe and adjust your patterns of spending over the long term, not what you spend over the short term.
 This is not about guilt.
 It’s about identifying, for yourself, what you need as opposed to what you crave, what purchases or types of purchases actually bring you fulfillment, what represents “enough” to you, and
+
+
 NO SHAME, NO BLAME
-What you are confronting is just the truth about the choices you’ve been making in your
+
 What you are confronting is just the truth about the choices you’ve been making in your life.
-Step 3: Monthly Tabulation
+
+##### Paso 3: Tabulación mensual
+
 In this step you will establish spending categories that reflect the uniqueness of your life
+
 ESTABLISHING CATEGORIES
+
 Food
 “Just Us” and “Guests.”
 “Too Tired to Cook” and “Special Occasions”
@@ -541,22 +563,33 @@ you may want to establish subcategories for income also.
 wages/salaries/tips
 interest/dividend
 Viene una tabla ejemplo de categorias
+
 Sample Monthly Tabulation Form
+
 Viene una tabla ejemplo de categorias. Donde incluye ll que gana por hora. Life energy...
+
 TOTALING IT ALL UP
 
 THE BALANCING ACT
+
 the money you actually have at the end of the month (in cash and bank accounts) will be equal to the money you had at the beginning of the month plus your total monthly income minus your total monthly expenses.
+
 MAKING MONEY REAL
+
 notice that translating dollars into hours of your life reveals the real trade-offs you are making for your style of living.
 A la hora de comprar algo. Traducelo a horas de trabajo. No a dinero
+
 SOME PICTURES ARE WORTH A THOUSAND WORDS
+
 SUMMARY OF STEP 3
+
 Discern your unique spending and income categories and subcategories
 Set up your Monthly Tabulation.
 Enter all money transactions
 Convert the dollars spent in each subcategory into hours of life energy,
+
 MONEY TALK QUESTIONS
+
 How do you stay conscious with your money? What do you insure—and why? What question would you most like to ask a friend about money? An expert? A relative? How do you feel when you spend money? What are some of your best experiences with tipping, tithing, or giving? What are your top priorities and how does your spending support them—or not?
 4 How Much Is Enough? The Quest for Happiness
 We cannot let our lives be “dreams deferred,” as Langston Hughes
@@ -570,7 +603,9 @@ you evaluate your spending by asking three questions about the total money spent
 These three questions, applied to each spending subcategory on your Monthly Tabulation,
 These three questions, applied to each spending subcategory on your Monthly Tabulation, will give you a basis for evaluating
 These three questions, applied to each spending subcategory on your Monthly Tabulation, will give you a basis for evaluating the way you spend your money.
+
 QUESTION 1: DID I RECEIVE FULFILLMENT, SATISFACTION, AND VALUE IN PROPORTION TO LIFE ENERGY SPENT?
+
 If you received so much fulfillment from this expenditure of life energy that you’d even like to increase spending in this subcategory, place a + (or an up arrow) in the first box. If you received little or no fulfillment from it, put a – (or a down arrow) in that box. If the expense feels OK just as it is, mark the box with a 0.
 Asi evalua cada categoria
 Cheap Thrills and Deep Thrills
@@ -583,8 +618,9 @@ Your internal yardstick dismisses superficial desires—to
 Financial Integrity
 You learn to make your financial choices independent of what advertising
 You learn to make your financial choices independent of what advertising and industry have decided would be good for their business.
-QUESTION 2: IS THIS EXPENDITURE OF LIFE ENERGY IN ALIGNMENT WITH MY VALUES
+
 QUESTION 2: IS THIS EXPENDITURE OF LIFE ENERGY IN ALIGNMENT WITH MY VALUES AND LIFE PURPOSE?
+
 As you did with the first question, ask of each spending subcategory, “Was this expenditure of life energy in alignment with my values and my life purpose?”
 put a + (or an up arrow) in the second box in that row. If it’s a no, just put a – (or
 Part One: What Are Values?
