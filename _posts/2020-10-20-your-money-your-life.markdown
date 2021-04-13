@@ -403,49 +403,48 @@ de tener suficiente (y algo más para después)
 
 ###### Paso 2: estar en el presente, monitorizar tu energía vital
 
-There are two parts to step 2:
-Establish the actual costs in time and money required to maintain your job(s), 
-and compute your real hourly wage.
-Keep track of every cent that comes into or goes out of your life.
+El paso 2 consta de 2 partes:
 
-A. HOW MUCH ARE YOU TRADING YOUR LIFE ENERGY FOR?
+1. Establecer el coste actual en tiempo y dinero de mantener tu trabajo
+2. Calcular tu salario real (cuánto ganas cada hora)
 
-how much money are you making for the amount of time you work?
-Commuting
-Costuming
-personal grooming,
-Meals
-Daily Decompression
-Escape
-Escape Entertainment
-How much of your weekend entertainment do you consider your just reward for 
-sticking it out at a boring job?
-Vacations
-Solo si estan relacionafas con el trabajo. Para desconectar o para aliviar estres
-Job-Related Illness
-visits to the doctor, trips to the drugstore, and sniffling under the covers.
-Other Job-Related Expenses
-Examine your balance sheet of assets and liabilities (step 1).
-Look at what you pay “the help”: Would you need a housekeeper, gardener, 
-handyman, or nanny if you didn’t have a job?
-educational programs, books, tools and conferences.
-Your Real Hourly Wage
-create a table, adding the approximate extra job-related hours to your normal 
-workweek and subtracting the job-related expenses from your usual pay.
-The corollary figure is also interesting. In this example, every dollar you 
-spend represents 6 minutes of your life. Think
-Why Do This Step?
-No Shame, No Blame
+Debes registrar cada céntimo que entra o sale de tu vida, cada céntimo
 
-your feelings about your work/job/identity will most strongly bubble to the surface.
-this is where your feelings about your work/job/identity will most strongly bubble to the surface.
-Compassionate self-awareness is the key. Just notice each feeling as it presents itself, without criticizing
-So what if you’ve been paying to work?
-That’s all in the past.
+**¿Por cuánto dinero estás cambiando tu energía vital?**
 
-CHECKLIST: LIFE ENERGY VS. SALARY
+¿Cuánto dinero ganas por el tiempo que trabajas? Trayecto al trabajo, vestimenta,
+aspecto personal, comidas, desconexión diaria, entretenimiento para desconectar,
+¿Cuánto de tu entretenimiento del fin de semana está relacionado con la desconexión
+del trabajo?, vacaciones (solo si están relacionadas con liberar estrés
+profesional), enfermedades profesionales, visitas al médico, a la farmacia y
+llorar debajo de las sábanas, y cualquier otro gasto relacionado con el trabajo...
+
+Echa un vistazo a tu hoja de activos y pasivos (paso 1). Presta atención a lo que
+pagas por que te ayuden: si no trabajaras, ¿necesitarías una asistenta, que
+cuiden de tus hijos, que te cuiden el jardín?
+
+Crea una tabla, añadiendo a tus horas laborales todas las actividades fuera del
+trabajo, pero que están relacionadas con el mismo y con la desconexión y restando
+de tu nómina los gastos relacionados con el trabajo
+
+Lo interesante es llegar a un número que mida euros por cada minuto de tu vida,
+(€/min)
+
+**Ni vergüenza, ni culpa**: aquí es donde tus sentimientos sobre tu trabajo,
+tu puesto, tu identidad saldrán a flote. La clave es ser auto-compasivo con la
+conciencia que tenemos de nosotros mismos. Simplemente, presta atención a cómo
+cada sentimiento se presenta, pero no lo critiques. ¿Y qué, si has estado pagando
+para poder trabajar? No pasa nada, es cosa del pasado.
+
+**Checklist: energía vital Vs salario**
 
 Aqui resenta una tabla con todas las ideas
+
+```
++-------+-------+---------+
+|       |       |         |
++-------+-------+---------+
+```
 
 B. KEEP TRACK OF EVERY CENT THAT COMES INTO OR GOES OUT OF YOUR LIFE
 
