@@ -495,22 +495,31 @@ son innecesarios, extravagantes o incluso embarazosos
 
 #### Capítulo 3: ¿Dónde nos lleva todo esto?
 
-DO YOU NEED A BUDGET?
+¿Necesitas un presupuesto? Lo recomendado en este libro es justamente lo contrario
+a tener un presupuesto
 
-This approach to money is actually the opposite of a budget.
-But budgeting is a planning tool, while this program is an “awareness of your enough point” tool.
-Rather than using standard categories and standard percentages and making a spending plan, with this approach you will discover your patterns from observing how you actually spend your life energy, and revealing your own unique relationship with money.
-This financial program points you in the same direction as mindful eating:
-Mindful eating. Ser consciente de lo que se come. Singiendo caxda bicado...
-You need to identify and follow internal signals, not external admonishments or habitual desires.
-You need to observe and adjust your patterns of spending over the long term, not what you spend over the short term.
-This is not about guilt.
-It’s about identifying, for yourself, what you need as opposed to what you crave, what purchases or types of purchases actually bring you fulfillment, what represents “enough” to you, and
+Un presupuesto es una herramienta de planificación, mientras que el plan descrito
+aquí es una herramienta *para averiguar dónde esta tu punto de _suficiente_*
 
+En lugar de usar categorías y porcentajes estándar y de crear un plan de gastos,
+con nuestra aproximación descubrirás tus patrones al observar cómo gastas tu
+energía vital y revelará tu relación con el dinero, que es única tuya
 
-NO SHAME, NO BLAME
+Este programa financiero te lleva en la misma dirección que el *comer
+conscientemente*: sé consciente de lo que comes, sintiendo cada bocado,...
 
-What you are confronting is just the truth about the choices you’ve been making in your life.
+Necesitas identificar y seguir señales internas, no repremendas externas o
+deseos habituales
+
+Necesitas observar y ajustar tus patrones de gastos a largo plazo, no lo que gastas
+en el corto plazo
+
+Esto no va de culpabilidad, trata de identificar, por tí mismo, lo que necesitas
+en oposición a lo que ansías. Qué compras o tipos de compras te traen satisfacción,
+qué representa *Suficiente* para tí
+
+**Ni vergüenza, ni culpa**: te estás enfrentando a la verdad en cuanto a las
+elecciones que has estado haciendo en tu vida
 
 ##### Paso 3: Tabulación mensual
 
