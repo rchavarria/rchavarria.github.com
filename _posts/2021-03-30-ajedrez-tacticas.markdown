@@ -66,6 +66,19 @@ tiempo, no podrá bloquear los dos a la vez y por supuesto no podrá capturar tu
 dos piezas a la vez
 
 ### Eliminar al defensor
+
+El ajedrez es un juego de balance entre atacar y defender
+
+A veces, una pieza se coloca en una casilla para proteger a otra pieza o para
+protegerse de un jaque mate. En estas ocasiones, esa pieza se convierte en un
+defensor clave
+
+Si capturas a uno de estos defensores, cualquier pieza o acción que estén
+protegiendo, quedará desprotegida
+
+En muchas ocasiones, la captura de este defensor se hace mediante el sacrificio
+de una de nuestras piezas
+
 ### Mate del asfixiado
 ### Desviación (deflection)
 ### Celada (decoy)
