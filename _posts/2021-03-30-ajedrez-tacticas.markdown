@@ -79,10 +79,20 @@ protegiendo, quedará desprotegida
 En muchas ocasiones, la captura de este defensor se hace mediante el sacrificio
 de una de nuestras piezas
 
-### Mate del asfixiado
+### Mate ahogado (o por asfixia)
+
+Cuando un caballo hace jaque mate a un rey rodeado de piezas de su color, se
+llama *mate ahogado* (o por asfixia, no estoy seguro de la traducción de
+*smothered mate*), y es uno de los mates más codiciados en ajedrez
+
+Es un mate muy codiciado porque se usan jugadas como el jaque doble y el sacrificio
+de la reina. Como una imagen/vídeo vale más que mil palabras, echa un vistazo
+a [este mate en Wikipedia][1]
+
 ### Desviación (deflection)
 ### Celada (decoy)
 ### Desperado y Zwischenzug
 
 [aprendizaje del ajedrez]: {{ site.baseurl }}{% post_url 2021-02-18-aprendiendo-ajedrez %}
 [plataforma chess.com]: https://www.chess.com
+[1]: https://en.wikipedia.org/wiki/Smothered_mate
