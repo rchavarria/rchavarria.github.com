@@ -115,6 +115,17 @@ Necesito revisar este capítulo para extraer estas preguntas
 - ¿?
 - ¿?
 
+**Capítulo 3**
+
+- ¿Cómo de consciente eres de tu dinero?
+- ¿Qué tienes asegurado? y ¿por qué?
+- ¿Qué pregunta sobre dinero más te gustaría preguntar a un amigo?
+- ¿Y a un experto?
+- ¿Y a un familiar?
+- ¿Cómo te sientes cuando gastas dinero?
+- ¿Cuáles son tus mejores experiencias al dar propina, regalar o pagar impuestos?
+- ¿Cuáles son tus prioridades y cómo tus gastos reflejan las mismas? 
+
 #### Introducción a la nueva edición
 
 De echo, "suficiente" es la promesa radical de este libro
@@ -523,84 +534,45 @@ elecciones que has estado haciendo en tu vida
 
 ##### Paso 3: Tabulación mensual
 
-In this step you will establish spending categories that reflect the uniqueness of your life
+En este paso establecerás categorías de gastos que reflejen cómo de única es tu
+vida
 
-ESTABLISHING CATEGORIES
+- Comida: nosotros, con invitados, demasiado cansado para cocinar, ocasión
+especial... Son distintas subcategorías
+- Casa: hipoteca, alquiler... una categoría por cada casa?
+- Ropa: día a día, para llevar al trabajo, por placer... No es sólo contabilidad,
+es también un ejercicio de auto descubrimiento
+- Transporte: coche propio, transporte público... Puede que te des cuenta de que
+es más barato (o no) el transporte público que ser dueño de un coche, seguros...
+¿dónde encaja el segundo coche? transporte, hobby, ostentación... gastos en taxi
+- Tecnología: coste de acceder a los datos, móviles, internet, cable, tablets...
+qué tecnología necesitas para el trabajo, o qué tecnología es entretenimiento
+- Entretenimiento: servicios de streaming, cines, música, fiestas nocturnas
+- Hijos: niñeras, fiestas de cumpleaños, regalos
 
-Food
-“Just Us” and “Guests.”
-“Too Tired to Cook” and “Special Occasions”
-Son distintas subcategorias
-Housing
-mortgage (or rent)
-Having a category for each one
-Una categoria por cada casa que tengas?
-Clothing
-utility and fashion
-clothing you wear in your everyday home life,
-clothing you believe is appropriate attire for the workplace,
-This isn’t just accounting—this is a process of self-discovery.
-Transportation
-you own one at all instead of relying on public transportation.
-Puezde que te des cuenta de que te sale mas barato el transporte publico que ser dueño de tu coche
-insurance
-anything else overinsured,
-your second car go under: Transportation, Hobby, or Ostentation?
-cab fares
-Your Technology
-cost of accessing and sending data. Cell phones, Internet, cable access, tablets, and smart watches
-Cell phones, Internet, cable access, tablets, and smart watches
-Landline, Cell Phone, and Equipment,
-technology you need for work versus leisure or personal development.
-Entertainment
-streaming services
-Going to the movies
-music?
-Do you go clubbing?
-Do you rent entertainers for your kids’ parties—and
-children, what portion of the services and gadgets you buy them are under Entertainment?
-Babysitting?
-Refining Your Categories
-doing this exercise will lead not to the punishment of a budget but rather to the freedom of self-acceptance,
-For example, under Transportation you would list separately the cost of commuting and other (non-reimbursed) work-related transportation expenses.
-according to mileage
-cell phone for work-related as well as personal
-Medical category
-A further refinement will come as you decide how you want to account for large, “unusual” expenses like annual
-Que categoria usas para gastos muy muy inusuales?
-you may want to establish subcategories for income also.
-wages/salaries/tips
-interest/dividend
-Viene una tabla ejemplo de categorias
+Hacer este ejercicio no te llevará al castigo de un presupuesto y ceñirte a él,
+si no a la libertad de aceptarte como eres
 
-Sample Monthly Tabulation Form
+Quizá quieras usar categorías también para los ingresos: salario, propinas,
+impuestos, intereses, dividendos...
 
-Viene una tabla ejemplo de categorias. Donde incluye ll que gana por hora. Life energy...
+**Balance**
 
-TOTALING IT ALL UP
+> € a finales de mes = € a inicio de mes + ingresos mensuales totales - gastos mensuales totales
 
-THE BALANCING ACT
+**Hacer del dinero algo real**
 
-the money you actually have at the end of the month (in cash and bank accounts) will be equal to the money you had at the beginning of the month plus your total monthly income minus your total monthly expenses.
+A la hora de comprar algo, tradúcelo a horas de trabajo, no a dinero
 
-MAKING MONEY REAL
+En resumen:
 
-notice that translating dollars into hours of your life reveals the real trade-offs you are making for your style of living.
-A la hora de comprar algo. Traducelo a horas de trabajo. No a dinero
+- Identifica tus categorías y subcategorías de ingresos y gastos
+- Prepara tu *Balance mensual*
+- Introduce todas las transacciones monetarias
+- Convierte el dinero gastado en cada subcategoría en horas de energía vital
 
-SOME PICTURES ARE WORTH A THOUSAND WORDS
+#### Chapter 4 How Much Is Enough? The Quest for Happiness
 
-SUMMARY OF STEP 3
-
-Discern your unique spending and income categories and subcategories
-Set up your Monthly Tabulation.
-Enter all money transactions
-Convert the dollars spent in each subcategory into hours of life energy,
-
-MONEY TALK QUESTIONS
-
-How do you stay conscious with your money? What do you insure—and why? What question would you most like to ask a friend about money? An expert? A relative? How do you feel when you spend money? What are some of your best experiences with tipping, tithing, or giving? What are your top priorities and how does your spending support them—or not?
-4 How Much Is Enough? The Quest for Happiness
 We cannot let our lives be “dreams deferred,” as Langston Hughes
 We cannot let our lives be “dreams deferred,” as Langston Hughes wrote in his famous poem, “Harlem.”
 It’s time to let your dreams speak—even
