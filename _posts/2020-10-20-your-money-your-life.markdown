@@ -571,19 +571,42 @@ En resumen:
 - Introduce todas las transacciones monetarias
 - Convierte el dinero gastado en cada subcategoría en horas de energía vital
 
-#### Chapter 4 How Much Is Enough? The Quest for Happiness
+#### Capítulo 4: Cuánto es suficiente? La búsqueda de la felicidad
 
-We cannot let our lives be “dreams deferred,” as Langston Hughes
-We cannot let our lives be “dreams deferred,” as Langston Hughes wrote in his famous poem, “Harlem.”
-It’s time to let your dreams speak—even
-Use these questions to trigger memories and stimulate thoughts: What did you want to be when you grew up? What have you always wanted to do that you haven’t yet done? What have you done in your life that you are really proud of? If you knew you were going to die within a year, how would you spend that year? What brings you the most fulfillment—and how is that related to money? If you didn’t have to work for a living, what would you do with your time?
-Step 4 of this financial program is your chance to make your dreams come true by aligning your earning and spending with your values, aspirations, purpose, and happiness.
-Step 4: Three Questions That Will Transform Your Life
-you evaluate your spending by asking three questions about the total money spent in each of your subcategories: Did I receive fulfillment, satisfaction, and value in proportion to life energy spent? Is this expenditure of life energy in alignment with my values and life purpose? How might this expenditure change if I didn’t have to work for money? Each
-you evaluate your spending by asking three questions about the total money spent in each of your subcategories: Did I receive fulfillment, satisfaction, and value in proportion to life energy spent? Is this expenditure of life energy in alignment with my values and life purpose? How might this expenditure change if I didn’t have to work for money?
-These three questions, applied to each spending subcategory on your Monthly Tabulation,
-These three questions, applied to each spending subcategory on your Monthly Tabulation, will give you a basis for evaluating
-These three questions, applied to each spending subcategory on your Monthly Tabulation, will give you a basis for evaluating the way you spend your money.
+> No debemos dejar que nuestras vidas sean *sueños pospuestos* ~ Langston Hughes,
+> en *Harlem*
+
+Va siendo hora de dejar que tus sueños hablen
+
+Usa estas preguntas para recordar y estimular pensamientos:
+
+- De pequeño... ¿qué querías ser de mayor?
+- ¿Qué has querido hacer siempre que todavía no has hecho?
+- ¿Qué has hecho en tu vida de lo que realmente te sientes orgulloso?
+- Si supieras que te queda un año de vida... ¿cómo pasarías ese año?
+- ¿Qué es con lo que más realizado te sientes? ¿cómo está relacionado con el
+dinero?
+- Si no tuvieras que trabajar por dinero... ¿qué harías con tu tiempo?
+
+Este cuarto paso es tu oportunidad de hacer realidad tus sueños, alineando tus
+gastos e ingresos con tus valores, aspiraciones, propósito y felicidad
+
+##### Paso 4: 3 preguntas que transformarán tu vida
+
+Vas a evaluar tus gastos haciéndote 3 preguntas sobre el dinero gastado en cada
+una de las categorías y subcategorías:
+
+1. ¿He recibido realización, satisfacción y valor en proporción a la energía
+vital gastada?
+2. ¿Está este gasto en energía vital alineado con mis valores y propósito en la
+vida?
+3. ¿Cómo cambiaría este gasto si no tuviera que trabajar por dinero?
+
+Estas 3 preguntas, aplicadas a cada subcategoría de gastos en tu Balance Mensual
+te dará las bases para evaluar la forma en la que gastas tu dinero
+
+**Pregunta 1: ¿He recibido realización, satisfacción y valor en proporción a
+la energía vital gastada?**
 
 QUESTION 1: DID I RECEIVE FULFILLMENT, SATISFACTION, AND VALUE IN PROPORTION TO LIFE ENERGY SPENT?
 
