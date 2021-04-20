@@ -90,6 +90,17 @@ de la reina. Como una imagen/vídeo vale más que mil palabras, echa un vistazo
 a [este mate en Wikipedia][1]
 
 ### Desviación (deflection)
+
+A veces, no puedes capturar una pieza para eliminar un defensor, pero lo que sí
+puedes hacer es *distraerla*
+
+La *desviación* es la táctica de eliminar un defensor forzando que se mueva a
+otra casilla. Normalmente, haciendo un sacrificio del que saldremos ganando
+(jaque mate, ganar más material un poco más adelante en el juego...)
+
+Una posición muy común es cuando el rey está protegiendo una pieza (dama o torre)
+y forzamos a que se mueva con un jaque
+
 ### Celada (decoy)
 ### Desperado y Zwischenzug
 
