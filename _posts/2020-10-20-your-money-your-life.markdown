@@ -608,48 +608,76 @@ te dará las bases para evaluar la forma en la que gastas tu dinero
 **Pregunta 1: ¿He recibido realización, satisfacción y valor en proporción a
 la energía vital gastada?**
 
-QUESTION 1: DID I RECEIVE FULFILLMENT, SATISFACTION, AND VALUE IN PROPORTION TO LIFE ENERGY SPENT?
+¿Cómo evaluar cada categoría? Si te has sentido tan realizado con el gasto que te
+gustaría incluso aumentar el gasto en esta subcategoría, pon un `+` (o una flecha
+ascendente) en la primera caja. Si no te sentiste muy realizado, pon un `-`.
+Si sientes que el gasto está más o menos bien cómo está, pon un `0`
 
-If you received so much fulfillment from this expenditure of life energy that you’d even like to increase spending in this subcategory, place a + (or an up arrow) in the first box. If you received little or no fulfillment from it, put a – (or a down arrow) in that box. If the expense feels OK just as it is, mark the box with a 0.
-Asi evalua cada categoria
-Cheap Thrills and Deep Thrills
+*Emociones baratas* (cheap thrills): son aquellos pequeños sentimientos que tienes
+simplemente por el hecho de comprar algo
 
-Cheap thrills are like that little feeling you get when you buy something.
-Deeper thrills come when you’ve achieved a dream bigger than your ego’s aspirations.
-Developing an Internal Yardstick for Fulfillment
-Enough—the Deepest Thrill
-Your internal yardstick dismisses superficial desires—to
-Financial Integrity
-You learn to make your financial choices independent of what advertising
-You learn to make your financial choices independent of what advertising and industry have decided would be good for their business.
+*Emociones profundas* (deep thrills): son aquellas que se obtienen al conseguir
+realizar un sueño mayor que las aspiraciones de tu ego
+
+En este momento, irás desarrollando una vara de medir interna relacionada con
+la realización que sientes. Saber dónde está tu punto donde ya tienes suficiente
+es una de las emociones más profundas que podemos tener
+
+Gracias a esta pregunta, aprenderás a hacer tus elecciones financieras
+independientemente de lo que los anuncios y la industria decidan que es bueno
+para sus negocios
 
 QUESTION 2: IS THIS EXPENDITURE OF LIFE ENERGY IN ALIGNMENT WITH MY VALUES AND LIFE PURPOSE?
 
-As you did with the first question, ask of each spending subcategory, “Was this expenditure of life energy in alignment with my values and my life purpose?”
-put a + (or an up arrow) in the second box in that row. If it’s a no, just put a – (or
+As you did with the first question, ask of each spending subcategory, “Was this 
+expenditure of life energy in alignment with my values and my life purpose?”
+put a + (or an up arrow) in the second box in that row. If it’s a no, just put 
+a – (or
+
 Part One: What Are Values?
+
 financial choices against question 2
 
 Values are like an ethical DNA, made up of our sense of right and wrong, that structures our choices.
+
 Our behavior is a concrete representation of our values.
+
 How we spend our time and money speaks volumes about who we are and what we stand for.
+
 Part Two: What Is Purpose?
+
 Purpose is the overarching goal that embodies our values and our dreams.
+
 Purpose implies direction and time—you do something now to have something later that you value.
+
 It is a chosen dedication of your life energy to something you believe is more important than your individual little existence.
+
 “Life purpose,”
+
 It is a chosen dedication of your life energy to something you believe is more important than your individual little existence.
+
 How Do We Find Our Purpose?
+
 three directions
+
 passion,
+
 What’s the work you would do even if you weren’t paid to do it?
+
 pain,
+
 Is there an aspect of suffering in the world that calls you to action?
+
 opportunities that arise daily
+
 Measuring Our Movement Toward Purpose
+
 Remember that asking the question “Is this expenditure in alignment with my purpose?” will help you connect with your sense of purpose.
+
 FIGURE 4-1 Purpose in Life Test
+
 QUESTION 3: HOW MIGHT THIS EXPENDITURE CHANGE IF I DIDN’T HAVE TO WORK FOR MONEY?
+
 
 mark a – (or down arrow) if you think this expense would decrease, a + (or up arrow) if it would increase, or a 0 if it would probably remain unchanged.
 Marcs co.o en las otras prehyntgas
