@@ -109,6 +109,16 @@ una bifurcación (*fork*), o incluso atraer el rey a una posición de mate
 
 ### Desperado y Zwischenzug
 
+Una pieza que estamos seguros de que va a ser capturada pronto, todavía puede
+hacer alguna buena acción antes de ser capturada. Los sacrificios útiles de
+aquellas piezas que ya están perdidas se les llama *sacrificios a la
+desesperada*
+
+Zwischenzug es un término alemás que significaría algo así como *movimiento
+entre medias*. Por ejemplo, en una secuencia de intercambios, puede haber un
+movimiento intermedio, muy útil aunque no relacionado, pero que nos resulta
+beneficioso para ganar material
+
 [aprendizaje del ajedrez]: {{ site.baseurl }}{% post_url 2021-02-18-aprendiendo-ajedrez %}
 [plataforma chess.com]: https://www.chess.com
 [1]: https://en.wikipedia.org/wiki/Smothered_mate
