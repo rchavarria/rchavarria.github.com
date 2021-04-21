@@ -44,7 +44,7 @@ sale ganando porque el valor de las piezas que atacan es mucho mayor
 
 Normalmente, hay que comenzar a capturar con la pieza de menor valor
 
-### Forks
+### Bifurcaciones (*forks*)
 
 Cuando una pieza ataca a dos a la vez:
 
