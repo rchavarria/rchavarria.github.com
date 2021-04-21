@@ -101,7 +101,12 @@ otra casilla. Normalmente, haciendo un sacrificio del que saldremos ganando
 Una posición muy común es cuando el rey está protegiendo una pieza (dama o torre)
 y forzamos a que se mueva con un jaque
 
-### Celada (decoy)
+### Trampa (decoy)
+
+La celada es una táctica donde fuerzas a que una pieza se mueva a una casilla en
+la que no quiere estar. Se puede usar para eliminar un defensor, atraer una pieza a
+una bifurcación (*fork*), o incluso atraer el rey a una posición de mate
+
 ### Desperado y Zwischenzug
 
 [aprendizaje del ajedrez]: {{ site.baseurl }}{% post_url 2021-02-18-aprendiendo-ajedrez %}
