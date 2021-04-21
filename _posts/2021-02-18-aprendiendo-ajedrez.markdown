@@ -39,7 +39,7 @@ Si te interesa el ajedrez, y quieres echar una partida,
     - [Saca el máximo partido a tus piezas][6], comienza el nivel intermedio
     - [Entender el final del juego][7]
     - [Ganar con tácticas][8]
-    - Movimientos forzados (la seguiré en un futuro)
+    - [Movimientos forzados][9]
     - Leer el tablero (la seguiré en un futuro)
     - Aperturas clave, comienza el nivel avanzado (la seguiré en un futuro)
     - Y más y más lecciones en esta plataforma
@@ -65,7 +65,8 @@ Si te interesa el ajedrez, y quieres echar una partida,
 [5]: {{ site.baseurl }}{% post_url 2021-02-21-ajedrez-aperturas %}
 [6]: {{ site.baseurl }}{% post_url 2021-02-25-ajedrez-piezas %}
 [7]: {{ site.baseurl }}{% post_url 2021-03-11-ajedrez-finales %}
-[7]: {{ site.baseurl }}{% post_url 2021-03-11-ajedrez-tacticas %}
+[8]: {{ site.baseurl }}{% post_url 2021-03-30-ajedrez-tacticas %}
+[9]: {{ site.baseurl }}{% post_url 2021-04-21-ajedrez-movimientos %}
 [Weak squares and outposts]: https://www.chess.com/blog/KingsBishop/weak-squares-and-outposts
 [100 finales que debes conocer]: https://forwardchess.com/product/100-endgames-you-must-know%284th-edition%29
 [Ajedrez y su enseñanza: libro de aperturas]: {{ site.baseurl }}{% post_url 2019-10-21-ajedrez-ensenanza-libro-aperturas %}
