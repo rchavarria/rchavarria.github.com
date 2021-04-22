@@ -126,6 +126,15 @@ Necesito revisar este capítulo para extraer estas preguntas
 - ¿Cuáles son tus mejores experiencias al dar propina, regalar o pagar impuestos?
 - ¿Cuáles son tus prioridades y cómo tus gastos reflejan las mismas? 
 
+**Capítulo 4**
+
+- De pequeño... ¿qué querías ser de mayor? ¿y ahora?
+- ¿Qué cosas quieres hacer antes de morir? (*what's on your bucket list?*)
+- ¿Cuál es tu vocación, el trabajo de corazón y alma?
+- Habla sobre el recuerdo más feliz que tengas, ¿qué te hacía feliz?
+- ¿Qué podría pasar de repente que fuera como un sueño hecho realidad?
+- ¿Qué quieres para tus seres queridos que pueda ser comprado con dinero?
+
 #### Introducción a la nueva edición
 
 De echo, "suficiente" es la promesa radical de este libro
@@ -722,14 +731,6 @@ trabajo...
 
 No te sientas culpable, simplemente, amplía esos *círculos de compasión*
 
-   MONEY TALK QUESTIONS
-
-   What did you want to be when you grew up? What about now? What’s on your 
-   “bucket list,” those things you want to do before you die? What is your 
-   calling, the work of your heart and soul? Talk about one of your happiest 
-   memories. What made you happy? What could happen out of the blue that would 
-   be like a dream come true? What do you want for your children/loved ones 
-   that money can buy?
 
    5 Getting It Out in the Open
 
