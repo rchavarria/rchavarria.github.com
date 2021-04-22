@@ -605,13 +605,13 @@ vida?
 Estas 3 preguntas, aplicadas a cada subcategoría de gastos en tu Balance Mensual
 te dará las bases para evaluar la forma en la que gastas tu dinero
 
-**Pregunta 1: ¿He recibido realización, satisfacción y valor en proporción a
-la energía vital gastada?**
-
 ¿Cómo evaluar cada categoría? Si te has sentido tan realizado con el gasto que te
 gustaría incluso aumentar el gasto en esta subcategoría, pon un `+` (o una flecha
 ascendente) en la primera caja. Si no te sentiste muy realizado, pon un `-`.
 Si sientes que el gasto está más o menos bien cómo está, pon un `0`
+
+**Pregunta 1: ¿He recibido realización, satisfacción y valor en proporción a
+la energía vital gastada?**
 
 *Emociones baratas* (cheap thrills): son aquellos pequeños sentimientos que tienes
 simplemente por el hecho de comprar algo
@@ -625,59 +625,58 @@ es una de las emociones más profundas que podemos tener
 
 Gracias a esta pregunta, aprenderás a hacer tus elecciones financieras
 independientemente de lo que los anuncios y la industria decidan que es bueno
-para sus negocios
+para sus negocios, no para tí
 
-QUESTION 2: IS THIS EXPENDITURE OF LIFE ENERGY IN ALIGNMENT WITH MY VALUES AND LIFE PURPOSE?
+**Pregunta 2: ¿Está este gasto en energía vital alineado con mis valores y
+propósito en la vida?**
 
-As you did with the first question, ask of each spending subcategory, “Was this 
-expenditure of life energy in alignment with my values and my life purpose?”
-put a + (or an up arrow) in the second box in that row. If it’s a no, just put 
-a – (or
+¿Qué son valores? 
 
-Part One: What Are Values?
+Son como un ADN ético, creados desde nuestro sentido del bien
+y del mal, aquello que estructura nuestras elecciones
 
-financial choices against question 2
+Nuestro comportamiento es una representación concreta de nuestros valores
 
-Values are like an ethical DNA, made up of our sense of right and wrong, that structures our choices.
+Cómo empleamos nuestro tiempo y dinero muestra bien clarito quién somos y qué
+representamos/defendemos
 
-Our behavior is a concrete representation of our values.
+¿Qué es propósito?
 
-How we spend our time and money speaks volumes about who we are and what we stand for.
+Es el objetivo principal que encarna/representa tanto nuestros valores como
+nuestros sueños
 
-Part Two: What Is Purpose?
+Propóstio implica dirección y tiempo: haces algo ahora para obtener algo que
+tú valoras más tarde
 
-Purpose is the overarching goal that embodies our values and our dreams.
+**Propósito vital**: es una dedicación expresa de tu energía vital a algo que
+crees que es más importante que tu pequeña existencia individual
 
-Purpose implies direction and time—you do something now to have something later that you value.
+¿Cómo encontramos nuestro propósito?
 
-It is a chosen dedication of your life energy to something you believe is more important than your individual little existence.
+Tres direcciones:
 
-“Life purpose,”
+1. Pasión: ¿Qué trabajo harías incluso si no te pagaran por hacerlo?
+2. Dolor: ¿Hay algún sufrimiento en el mundo que te llame a la acción?
+3. Oportunidades diarias
 
-It is a chosen dedication of your life energy to something you believe is more important than your individual little existence.
+Responder a esta segunda pregunta te ayudará a conectar con tu sentido de
+propósito
 
-How Do We Find Our Purpose?
-
-three directions
-
-passion,
-
-What’s the work you would do even if you weren’t paid to do it?
-
-pain,
-
-Is there an aspect of suffering in the world that calls you to action?
-
-opportunities that arise daily
-
-Measuring Our Movement Toward Purpose
-
-Remember that asking the question “Is this expenditure in alignment with my purpose?” will help you connect with your sense of purpose.
-
-FIGURE 4-1 Purpose in Life Test
+/////
+/////
+/////
+/////
+/////
+/////
+///// FIGURE 4-1 Purpose in Life Test
+/////
+/////
+/////
+/////
+/////
+/////
 
 QUESTION 3: HOW MIGHT THIS EXPENDITURE CHANGE IF I DIDN’T HAVE TO WORK FOR MONEY?
-
 
 mark a – (or down arrow) if you think this expense would decrease, a + (or up arrow) if it would increase, or a 0 if it would probably remain unchanged.
 Marcs co.o en las otras prehyntgas
