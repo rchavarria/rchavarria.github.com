@@ -676,99 +676,180 @@ propósito
 /////
 /////
 
-QUESTION 3: HOW MIGHT THIS EXPENDITURE CHANGE IF I DIDN’T HAVE TO WORK FOR MONEY?
+**Pregunta 3: ¿Cómo cambiaría este gasto si no tuviera que trabajar por dinero?**
 
-mark a – (or down arrow) if you think this expense would decrease, a + (or up arrow) if it would increase, or a 0 if it would probably remain unchanged.
-Marcs co.o en las otras prehyntgas
-You don’t have to know precisely what you would do if you didn’t have to work for money.
-Remember: No shame, no blame.
-yourself coming to a startling conclusion. If you weren’t spending most of your time making money, life could be a whole lot cheaper!
-that you are there by choice. By asking question 3, you may find yourself coming to a startling conclusion. If you weren’t spending most of your time making money, life could be a whole lot cheaper!
-By asking question 3, you may find yourself coming to a startling conclusion. If you weren’t spending most of your time making money, life could be a whole lot cheaper!
-ASSESSING THE THREE QUESTIONS
-Do you see any patterns?
-Hay alcun patron en las respuesdas  a lAs tres preguntAs
-Don’t punish yourself and don’t resolve to “do better next month.”
-Simply use this information and any insights you’ve gained to assist in clarifying your values and purpose.
-For some individuals this program has been the process by which they defined their values and purpose.
-The point is to adjust your spending until you have zeros or pluses for all your categories.
-Getting to Enough
-Asking the three questions is the primary tool for defining, experientially, how much is enough for you.
-“enough” has four components, four common
-qualities:
-Accountability—knowing
-if you never know how much you have or where it’s all going, you can never have enough.
-internal yardstick for fulfillment.
-you can never have enough if you are measuring by what others have or think.
-purpose in life higher than satisfying your own wants and desires,
-you can never have enough if every desire becomes a need that must be filled.
-Responsibility,
-living for more than just “me, myself, and I.”
-craft a fourth question
-What would expenditures in this category look like in a just and compassionate world where everyone had everything they needed for a life they loved, now and in the future?
-“What if everybody . . . ate at restaurants, bought used clothes, planted fruit trees in the yard, bought this vacation package, picked this car for their daily commute . . . ?”
-no shame, no blame, just widening those circles
-no shame, no blame, just widening those circles of compassion.
-SUMMARY OF STEP 4
-Of each spending subcategory in your Monthly Tabulation ask question 1:
-hazte las pregi ntas una. Dos y rres
-4. Review and make a list of all categories with the – symbol (or down arrow).
+Ni vergüenza, ni culpa: no tienes por qué saber exactamente qué harías si no
+tuvieras que trabajar por dinero, no pasa nada
+
+Estás donde estás por las elecciones que has hecho. Respondiendo a esta pregunta,
+con el tiempo, quizá vayas llegando a esta conclusión: 
+
+> si no pasaras la mayor parte de tu tiempo haciendo dinero,
+> la vida podría ser mucho más barata
+
+**Evaluando las 3 preguntas**
+
+¿Hay algún patrón en las respuestas a estas 3 preguntas?
+
+No te castigues a tí mismo, y no te prometas que lo harás mejor al mes siguiente
+
+Simplemente, usa esta información y cualquier otra percepción para ayudarte a
+clarificar tus valores y propósito
+
+Para algunas personas, este programa ha sido el proceso mediante el cual ellos
+definieron sus valores y propósito
+
+El objetivo está en ir ajustando tus gastos hasta que tengas '0's y '+'s para
+todas tus (sub)categorías
+
+**Alcanzar el nivel suficiente**
+
+Trabajar estas 3 preguntas es la herramienta principal para definir, en base
+a experiencias, cuánto es *suficiente* para tí, y te ayudará con:
+
+1. Rendir cuentas: si nunca sabes cuánto tienes o vas a tener, nunca sabrás si
+tienes suficiente
+2. Responsabilidad: vivir más allá de *yo, mi y yo mismo*
+
+Puedes hacerte, incluso, una cuarta pregunta:
+
+¿Cómo serían los gastos de esta categoría en un mundo justo y compasivo donde
+todo el mundo tuviera todo lo que necesitara en la vida, ahora y en el futuro?
+
+Por ejemplo, qué pasaría si todo el mundo comiera en restaurantes, comprara
+ropa usada, plantara árboles, comprara esas vacaciones, fuera en coche al
+trabajo...
+
+No te sientas culpable, simplemente, amplía esos *círculos de compasión*
+
    MONEY TALK QUESTIONS
-   What did you want to be when you grew up? What about now? What’s on your “bucket list,” those things you want to do before you die? What is your calling, the work of your heart and soul? Talk about one of your happiest memories. What made you happy? What could happen out of the blue that would be like a dream come true? What do you want for your children/loved ones that money can buy?
+
+   What did you want to be when you grew up? What about now? What’s on your 
+   “bucket list,” those things you want to do before you die? What is your 
+   calling, the work of your heart and soul? Talk about one of your happiest 
+   memories. What made you happy? What could happen out of the blue that would 
+   be like a dream come true? What do you want for your children/loved ones 
+   that money can buy?
+
    5 Getting It Out in the Open
+
    Step 5: Making Life Energy Visible
-   In step 5 you make visible the results of the previous steps, plotting them on a graph
+
+   In step 5 you make visible the results of the previous steps, plotting them 
+   on a graph
+
    How do you motivate yourself to keep going?
+
    Dezspis de tres meSes siguiendo el pkan... Como mantienes la motivaxion
+
    three keys:
+
    Make it a habit rather than a choice.
+
 1. Make it a habit rather than a choice.
    You have a system and you follow the system
+
 2. Be accountable to someone else.
+
 3. Chart.
+
    MAKING YOUR WALL CHART
 
 Step 5 entails setting up a graph of your income and your expenses,
+
 large enough to accommodate three to five years of data.
-At the end of each month you will plot the figures for your total
-At the end of each month you will plot the figures for your total monthly income and total monthly expenses.
-the real learning—and the real fun—comes as you plot your figures month by month, year by year.
+
+At the end of each month you will plot the figures for your total monthly income 
+and total monthly expenses.
+
+the real learning—and the real fun—comes as you plot your figures month by month, 
+year by year.
+
 THE INITIAL PURGE AND SPLURGE CYCLE
+
 They concentrate daily on that expenses line,
-Cuando el primer mes resulta que gastas mas de lo que ganas. Tu primwra instinto seta el de recortar los gastos a lo vestia
+
+Cuando el primer mes resulta que gastas mas de lo que ganas. Tu primwra instinto 
+seta el de recortar los gastos a lo vestia
+
 This kind of austerity, however, isn’t sustainable.
-with money will happen over time. By observing your reactions to your Wall Chart instead of getting upset about it, you will be clearing away the attitudes and beliefs that got you where you are today.
-By observing your reactions to your Wall Chart instead of getting upset about it, you will be clearing away the attitudes and beliefs that got you where you are today.
-Emn lugar de corregit inmediatamente tu comportamiento. Simplemente observa los nu.meros mes a mes
+
+with money will happen over time. By observing your reactions to your Wall Chart 
+instead of getting upset about it, you will be clearing away the attitudes and 
+beliefs that got you where you are today.
+
+By observing your reactions to your Wall Chart instead of getting upset about it, 
+you will be clearing away the attitudes and beliefs that got you where you are 
+today.
+Emn lugar de corregit inmediatamente tu comportamiento. Simplemente observa los 
+nu.meros mes a mes
+
 HOW THE THREE QUESTIONS CAN SAVE YOU MONEY
+
 Automatic Lowering of Expenses
-Question 1 is: “Did I receive fulfillment, satisfaction, and value in proportion to life energy spent?” Asking this question every month about each of your spending categories increases your consciousness about your choices
-Now you can be in line with yourself—you’re neither fighting yourself nor trying to buy happiness and satisfaction.
+
+Question 1 is: “Did I receive fulfillment, satisfaction, and value in proportion
+to life energy spent?” Asking this question every month about each of your 
+spending categories increases your consciousness about your choices
+
+Now you can be in line with yourself—you’re neither fighting yourself nor 
+trying to buy happiness and satisfaction.
+
 Alignment and Personal Integration
-question 2 each month: “Is this expenditure of life energy in alignment with my values and life purpose?”
+
+question 2 each month: “Is this expenditure of life energy in alignment with 
+my values and life purpose?”
+
 This is a feedback system for integrity.
-The data on how you spend your life energy provides a nitty-gritty, tangible measure of that integrity,
-Often expenses will go down with this question because so many unconscious expenses are simply emotional or cultural programs
-The subtle but effective process of reinforcement (spend money on X = feel good; spend money on Y = feel bad) actually works; it serves to break robotic spending patterns.
-third question, “How might this expenditure change if I didn’t have to work for money?” can further affect your expense line.
+
+The data on how you spend your life energy provides a nitty-gritty, tangible 
+measure of that integrity,
+
+Often expenses will go down with this question because so many unconscious 
+expenses are simply emotional or cultural programs
+
+The subtle but effective process of reinforcement (spend money on X = feel 
+good; spend money on Y = feel bad) actually works; it serves to break robotic 
+spending patterns.
+
+third question, “How might this expenditure change if I didn’t have to work for
+money?” can further affect your expense line.
+
 WHAT ABOUT “UNUSUAL” MONTHS?
+
 For one thing, you may recognize that every month is an unusual month.
-Another strategy would be to prorate annual expenses over the whole twelve months.
+
+Another strategy would be to prorate annual expenses over the whole twelve 
+months.
+
 GETTING YOUR FINANCES OUT IN THE OPEN
+
 Accountability.
+
 Open the subject with friends via a Money Talk.
+
 your relationship with money. The chart becomes a representation of how well you are living your values, something that reflects the care you are taking with every decision about your material world.
+
 It becomes a source of pride—not arrogance,
+
 The degree of your discomfort is a measure of the degree of your financial disease.
+
 Como ge sientes si muestras el grafico a todo el mikndo? Bien mal...
+
 FINANCIAL INDEPENDENCE AS A BY-PRODUCT OF DOING THE STEPS
+
 Financial Independence Is Getting Out of Debt
 
 Often they don’t even realize what a burden debt is until it disappears.
+
 Debt has become the American way, making it hard to see that it is debt that chains us to our jobs.
+
 Getting out of debt, then, is one form of Financial Independence.
+
 Once you’re out of debt, you have choices.
+
 Savings are another form of Financial Independence.
+
 Veras muy claramente los ahoros en tu grafico de fastos y ingresos
 Becoming a Super Saver
 Ask yourself how you would spend your time if you could take a year off with pay.
