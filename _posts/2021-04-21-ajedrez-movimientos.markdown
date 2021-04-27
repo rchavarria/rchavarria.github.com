@@ -18,6 +18,22 @@ Y hoy toca hablar acerca de movimientos forzados:
 <!-- more -->
 
 ### Movimientos poderosos
+
+Podemos considerar algunos movimientos como *forzados*. Estos movimientos forzados
+serían: un jaque, un ataque o una captura, por ejemplo. Este tipo de movimientos
+obligan al contrincante a reaccionar inmediatamente si no quiere perder material
+o incluso la partida
+
+> El ajedrez es una batalla de ideas, entre lo que tú quieres que pase y lo que
+tu oponente quiere que pase
+
+Una forma de hacer que tu oponente haga los movimientos que tú quieres que
+ocurran es con este tipo de movimientos *poderosos*
+
+En ocasiones, estos movimientos obligan a nuestro oponente a mover una pieza para
+ponerla a buen recaudo. Con esto, hacemos que nuestro oponente pierda un
+*tiempo*. Ganar o perder *tiempo* es crítico durante la fase de apertura
+
 ### Combinaciones
 ### Mate en 3
 ### Sacrificios de la reina
