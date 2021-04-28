@@ -35,6 +35,18 @@ ponerla a buen recaudo. Con esto, hacemos que nuestro oponente pierda un
 *tiempo*. Ganar o perder *tiempo* es crítico durante la fase de apertura
 
 ### Combinaciones
+
+Va siendo hora de ir poniendo en práctica todas las tácticas que hemos ido
+aprendiendo hasta el momento. Uniendo dos o más de estas tácticas, tenemos
+las combinaciones
+
+Una combinación es una serie de movimientos forzados, normalmente con sacrificios,
+que nos ayudan a ganar la partida
+
+> Unos de los momentos más satisfactorios en el ajedrez es cuando eres capaz de
+> ver varios movimientos en el futuro y tu oponente no tiene ni idea de lo que
+> se le viene encima
+
 ### Mate en 3
 ### Sacrificios de la reina
 ### Asegurando tablas
