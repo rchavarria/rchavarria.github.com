@@ -135,6 +135,14 @@ Necesito revisar este capítulo para extraer estas preguntas
 - ¿Qué podría pasar de repente que fuera como un sueño hecho realidad?
 - ¿Qué quieres para tus seres queridos que pueda ser comprado con dinero?
 
+**Capítulo 5**
+
+- ¿Cuánto dinero necesitas para ser feliz?
+- ¿Qué o quién puede ayudarte a cambiar tu relación con el dinero?
+- ¿Qué podría cambiar si supieras lo que ganan otros (amigo, pareja, jefe, extraño...)?
+- ¿Qué te motiva a ahorrar?
+- ¿Qué te ayuda a ahorrar dinero?
+
 #### Introducción a la nueva edición
 
 De echo, "suficiente" es la promesa radical de este libro
@@ -731,213 +739,261 @@ trabajo...
 
 No te sientas culpable, simplemente, amplía esos *círculos de compasión*
 
+#### Capítulo 5: Sacarlo a la luz
 
-   5 Getting It Out in the Open
+##### Paso 5: Hacer visible la energía vital
 
-   Step 5: Making Life Energy Visible
+En este paso haremos visibles los resultados de los pasos anteriores, mostrando
+los datos en un gráfico
 
-   In step 5 you make visible the results of the previous steps, plotting them 
-   on a graph
+Después de meses siguiendo el plan... ¿cómo mantienes la motivación?
 
-   How do you motivate yourself to keep going?
+1. Haciendo que sea un hábito, en lugar de una elección. Tienes un sistema, y lo
+que haces es seguir ese sistema
+2. Rinde cuentas a alguien
+3. Visibilízalo
 
-   Dezspis de tres meSes siguiendo el pkan... Como mantienes la motivaxion
+El gráfico a crear debe ser lo suficientemente grande como para poder albergar
+de 3 a 5 años de datos
 
-   three keys:
+Al final de cada mes, sitúa los datos del total de ingresos y el total de gastos
+en la gráfica
 
-   Make it a habit rather than a choice.
+El verdadero aprendizaje (y la diversión) viene de ir mostrando los números en lá
+gráfica mes a mes, año a año
 
-1. Make it a habit rather than a choice.
-   You have a system and you follow the system
+**El ciclo inicial de purga y despilfarro**
 
-2. Be accountable to someone else.
+Cuando el primer mes resulta que gastas mas de lo que ganas. Tu primer instinto
+es el de recortar los gastos a lo bestia (purga)
 
-3. Chart.
+Esta clase de austeridad, sin embargo, no es sostenible. Seguramente después venga
+un período de *despilafarro*, para compensar lo que no gastaste el mes austero
 
-   MAKING YOUR WALL CHART
+En lugar de corregir inmediatamente tu comportamiento, simplemente observa los
+números mes a mes. Observa, no reacciones (todavía)
 
-Step 5 entails setting up a graph of your income and your expenses,
+**Cómo ahorrar dinero con las 3 preguntas**
 
-large enough to accommodate three to five years of data.
+La primera pregunta era: *¿recibí reconocimiento, satisfacción y valor en 
+proporción a la energía vital gastada?*
 
-At the end of each month you will plot the figures for your total monthly income 
-and total monthly expenses.
+Responder a esta pregunta cada mes para cada una de las categorías de gastos
+incrementa tu percepción y conocimiento de las elecciones que haces
 
-the real learning—and the real fun—comes as you plot your figures month by month, 
-year by year.
+Ahora puedes estar alineado contigo mismo, ya no estás luchando contigo mismo ni
+estás intentando comprar la felicidad ni la satisfacción
 
-THE INITIAL PURGE AND SPLURGE CYCLE
+La segunda pregunta: *¿este gasto en energía vital está alineado con mis valores
+y propósito en la vida?* es un sistema de retroalimentación para tu integridad
 
-They concentrate daily on that expenses line,
+Los datos sobre cómo gastas tu energía vital proporciona una medida tangible de
+esa integridad
 
-Cuando el primer mes resulta que gastas mas de lo que ganas. Tu primwra instinto 
-seta el de recortar los gastos a lo vestia
+Normalmente, los gastos descienden al hacernos esta pregunta, porque muchos gastos
+inconscientes son simplemente emocionales o culturales
 
-This kind of austerity, however, isn’t sustainable.
+El siguiente proceso de refuerzo funciona: gasto dinero en X, me siento bien; gasto
+dinero en Y, me siento mal
 
-with money will happen over time. By observing your reactions to your Wall Chart 
-instead of getting upset about it, you will be clearing away the attitudes and 
-beliefs that got you where you are today.
+**¿Qué pasa con los meses _fuera de lo normal_?**
 
-By observing your reactions to your Wall Chart instead of getting upset about it, 
-you will be clearing away the attitudes and beliefs that got you where you are 
-today.
-Emn lugar de corregit inmediatamente tu comportamiento. Simplemente observa los 
-nu.meros mes a mes
+Hay que reconocer que cada mes tiene algo, aunque solo sea una cosa, que hace que
+sea *fuera de lo normal*. No hay dos meses iguales, no hay un mes *normal*
 
-HOW THE THREE QUESTIONS CAN SAVE YOU MONEY
+También se puede prorratear un gasto anual entre los 12 meses
 
-Automatic Lowering of Expenses
+**Hacer públicas tus finanzas**
 
-Question 1 is: “Did I receive fulfillment, satisfaction, and value in proportion
-to life energy spent?” Asking this question every month about each of your 
-spending categories increases your consciousness about your choices
+Es la forma básica de rendir cuentas (*accountability*)
 
-Now you can be in line with yourself—you’re neither fighting yourself nor 
-trying to buy happiness and satisfaction.
+Puedes sacar el tema con los amigos en una de esas conversaciones sobre el dinero
+o *money talk*
 
-Alignment and Personal Integration
+La gráfica se convierte en una representación de cómo de bien estás viviendo
+tus valores, algo que refleja el cuidado con el que tomas con cada decisión 
+sobre el mundo material
 
-question 2 each month: “Is this expenditure of life energy in alignment with 
-my values and life purpose?”
+Se convierte en una fuente de orgullo, no de arrogancia
 
-This is a feedback system for integrity.
+El grado de disconformidad es una medida del grado de *enfermedad financiera*
 
-The data on how you spend your life energy provides a nitty-gritty, tangible 
-measure of that integrity,
+¿Cómo te sientes cuando muestras el gráfico a todo el mundo? Bien... Mal...
+Avergonzado... 
 
-Often expenses will go down with this question because so many unconscious 
-expenses are simply emotional or cultural programs
+**Independencia financiera como un sub-producto de seguir los pasos**
 
-The subtle but effective process of reinforcement (spend money on X = feel 
-good; spend money on Y = feel bad) actually works; it serves to break robotic 
-spending patterns.
+Independencia financiera es saldar toda la deuda
 
-third question, “How might this expenditure change if I didn’t have to work for
-money?” can further affect your expense line.
+La gente no se da cuenta de la carga que resulta una deuda, hasta que se la
+quitan de encima
 
-WHAT ABOUT “UNUSUAL” MONTHS?
+La deuda se ha convertido en el *camino americano*, lo que hace muy difícil darnos
+cuenta de que la deuda es lo que nos encadena a nuestros trabajos
 
-For one thing, you may recognize that every month is an unusual month.
+Así pues, saldar la deuda es una forma de indenpendencia financiera
 
-Another strategy would be to prorate annual expenses over the whole twelve 
-months.
+Una vez que estás libre de deuda, tienes elecciones
 
-GETTING YOUR FINANCES OUT IN THE OPEN
+Los ahorros son otra forma de indenpendencia financiera
 
-Accountability.
+En el gráfico de ingresos y gastos, verás muy fácilmente esos ahorros
 
-Open the subject with friends via a Money Talk.
+Pregúntate en qué usarías tu tiempo si pudieras tomarte un año sabático con todos
+los gastos pagados. Descubrirás las posibilidades de lo que podrías elegir hacer si
+tuvieras suficientes ahorros para no tener que trabajar durante un año
 
-your relationship with money. The chart becomes a representation of how well you are living your values, something that reflects the care you are taking with every decision about your material world.
+**Todo esto a partir de un gráfico**
 
-It becomes a source of pride—not arrogance,
+Parte de la inteligencia financiera es la contínua conciencia de tus ingresos,
+gastos y patrones de ahorro a lo largo del tiempo
 
-The degree of your discomfort is a measure of the degree of your financial disease.
+Es un recordatorio constante de tu compromiso a transformar tu relación con el
+dinero
 
-Como ge sientes si muestras el grafico a todo el mikndo? Bien mal...
+Es un sistema de retroalimentación, que te muestra de un vistazo, de forma 
+clara y gráfica, dónde estas y tu progreso hacia tu objetivo
 
-FINANCIAL INDEPENDENCE AS A BY-PRODUCT OF DOING THE STEPS
+Experiencia de satisfacción con el progreso que vas haciendo
 
-Financial Independence Is Getting Out of Debt
+Motivación
 
-Often they don’t even realize what a burden debt is until it disappears.
+Es más difícil mentirte a tí mismo sobre el progreso que vas haciendo, lo puedes
+ver directamente en la gráfica
 
-Debt has become the American way, making it hard to see that it is debt that chains us to our jobs.
+Es la recomendación contínua de que honras tu energía vital
 
-Getting out of debt, then, is one form of Financial Independence.
+Puede estimular tu interés por las finanzas personales
 
-Once you’re out of debt, you have choices.
+Como esta a la vista de todos. Todos te preguntarán y tendrás grandes
+conversaciones
 
-Savings are another form of Financial Independence.
+> El componente social es clave para cambios de comportamiento
 
-Veras muy claramente los ahoros en tu grafico de fastos y ingresos
-Becoming a Super Saver
-Ask yourself how you would spend your time if you could take a year off with pay.
-discover the possibilities of what you would choose to do if you had enough savings that you didn’t need paid employment for one year.
-ALL THIS FROM A GRAPH?
-Part of Financial Intelligence is the continuing awareness of your earning, spending, and saving patterns over time.
-It is a constant reminder of your commitment to transform your relationship with money.
-It is a feedback system, showing you at a glance, clearly and graphically, your current status and your progress toward your goal.
-inspiration, an experience of satisfaction with the progress you’re making
-motivation,
-harder) to lie to yourself about your progress in the presence of your Wall Chart.
-continuing suggestion that you honor your life energy.
-can stimulate your interest in personal finance,
-Como esta a la vista de todos. Todos te pregintaran y tendras grandes conversacoones
-it enlists continuing support.
-FINAL INSPIRATION FROM LINDA AND MIKE LENICH
-
-SUMMARY OF STEP 5
-MONEY TALK QUESTIONS
-Social support is a key to behavior change.
-How much money do you need to be happy? What or who can help you change your relationship with money? What might change if you could know what others—a friend, date, boss, stranger—earn? What motivates you to save? What helps you save money?
-6 The American Dream—on a Shoestring
+#### Capítulo 6: el sueño americano (pendiente de un hilo)
 
 simplicity and minimalism
+
 tidying up
+
 spark joy,
+
 frugality
-Intenta usar una palabra para indicar el estado de tener suficiente oero no demasiado. El estado ideal descrito al ppio
+
+Intenta usar una palabra para indicar el estado de tener suficiente oero no
+demasiado. El estado ideal descrito al ppio
+
 THE PLEASURES OF FRUGALITY
-Frugality is enjoying the virtue of getting good value for every minute of your life energy and from everything you have the use of.
+
+Frugality is enjoying the virtue of getting good value for every minute of 
+your life energy and from everything you have the use of.
+
 Se invrnta esta defibicipn
+
 Frugality means enjoying what we have.
+
 There’s a word in Spanish that encompasses all this: aprovechar.
+
 It means to use something wisely—be
-For many of life’s pleasures it may be far better to use something than to possess it
+
+For many of life’s pleasures it may be far better to use something than to 
+possess it
+
 young people today seem less wedded to their stuff than prior generations.
-being frugal and being happy with having enough means that more will be available for others.
+
+being frugal and being happy with having enough means that more will be
+available for others.
+
 Step 6: Valuing Your Life Energy—Minimizing Spending
-This step involves the intelligent use of your life energy (money) and the conscious lowering or elimination of expenses.
+
+This step involves the intelligent use of your life energy (money) and the
+conscious lowering or elimination of expenses.
+
 Frugality is about enjoyment, not penny-pinching!
+
 hay que ahorrar pero hay que disfrutarde la vda de life energy
+
 ONE SURE WAY TO SAVE MONEY
+
 Stop Trying to Impress Other People
-plus others are likely so busy trying to impress you that they will, at best, not notice your efforts.
-others are likely so busy trying to impress you that they will, at best, not notice your efforts.
+
+plus others are likely so busy trying to impress you that they will, at best, 
+not notice your efforts.
+
+others are likely so busy trying to impress you that they will, at best, not 
+notice your efforts.
+
 TEN SURE WAYS TO SAVE MONEY
+
 1. Don’t Go Shopping
-   men tended to buy while drunk and women while bored or sad, with both genders doing it when angry.
+
+   men tended to buy while drunk and women while bored or sad, with both genders
+   doing it when angry.
    Don’t use shopping as a reward, a relief, or entertainment.
+
 2. Live Within Your Means
    To live within your means is to buy only what you can prudently afford,
-   Vamos. No endeudarte. Como hacian nuestros padres. Qie vivian con lo q podian pagar
+   Vamos. No endeudarte. Como hacian nuestros padres. Qie vivian con lo q podian
+   pagar
    wait until you have the money before you buy something.
+
 3. Take Care of What You Have
    There is one thing we all have that we want to last a long time: our bodies.
    Cuida de tu cuerpo y ahorraras en muchis gastos medicos
    Extend this principle to all your possessions.
    Mantenimientos preventivoa de tus herramientas. Xoche. Casa...
    We need to rewire our brains to think repair rather than replace.
+
 4. Wear It Out
-   Think how much money you would save if you simply decided to use things even 20 percent longer.
+   Think how much money you would save if you simply decided to use things even 
+   20 percent longer.
    Usa un año mas tu cocje. Un invierno mas el abrigo. Un mes mas las zapatillas
-   ask, before trashing something, whether there might be another way to use part or all of it.
+   ask, before trashing something, whether there might be another way to use 
+   part or all of it.
+
 5. Do It Yourself
-   “Can I do this myself? What would it take to learn how? Would it be a useful skill to know?”
-   reverse that trend, just ask yourself, when you’re about to hire an expert: “Can I do this myself? What would it take to learn how? Would it be a useful skill to know?”
-   when you’re about to hire an expert: “Can I do this myself? What would it take to learn how? Would it be a useful skill to know?”
+   “Can I do this myself? What would it take to learn how? Would it be a useful 
+   skill to know?”
+   reverse that trend, just ask yourself, when you’re about to hire an expert: 
+   “Can I do this myself? What would it take to learn how? Would it be a useful 
+   skill to know?”
+   when you’re about to hire an expert: “Can I do this myself? What would it 
+   take to learn how? Would it be a useful skill to know?”
+
 6. Anticipate Your Needs
 
 With enough lead time you will likely find the items you need at a cheaper price.
+
 Keep a list of things you anticipate needing in the coming year.
-Anticipating your needs also eliminates one of the biggest threats to your frugality: impulse buying.
+
+Anticipating your needs also eliminates one of the biggest threats to your 
+frugality: impulse buying.
+
 7. Research Value, Quality, Durability, Multiple Use, and Price
+
 8. Buy It for Less
 
 Comparison-shop:
+
 metasearch sites or browser add-ons that allow you to check pricing on many sites
+
 Bargain:
+
 You can ask for discounts anywhere, anytime.
+
 Regatear?
+
 Haggling
+
 You can also buy it used.
+
 9. Meet Your Needs Differently
    substitution isn’t deprivation; it’s about getting creative.
-   when it’s creative, also reminds us that what we seek when we buy something new is to change a feeling state.
+   when it’s creative, also reminds us that what we seek when we buy something
+   new is to change a feeling state.
    what we seek when we buy something new is to change a feeling state.
    “When you feel a desire to shop, take time to trace it back to the need
+
 10. Follow the Nine Steps of This Program
     SAVING ON THE BASICS
     From Penny-Pinching to Smart Saving
@@ -945,98 +1001,219 @@ You can also buy it used.
     Having a Place to Live
 
 being creative about housing can reduce your costs significantly.
+
 Getting Around
-So let’s just get some perspective as we see how we might, in our short lifetimes, frugalize our ride.
+
+So let’s just get some perspective as we see how we might, in our short lifetimes, 
+frugalize our ride.
+
 a car is the second-most expensive thing they buy,
+
 Taking Care of Your Body
+
 staying well is good for your wallet as well as for your body.
+
 Sharing/Bartering
+
 one of the paths to happiness (and frugality) is being involved in community.
+
 Eating
+
 ways to save money
+
 making a list and sticking to
+
 making a list and sticking to it, knowing
-Michael Pollan’s pithy seven-word food rule, “Eat food, not too much, mostly plants,”
+
+Michael Pollan’s pithy seven-word food rule, “Eat food, not too much, mostly
+plants,”
+
 Staying Connected, Informed, and Entertained
+
 Getting Away
+
 you will have less of a need to “vacate.” Consider relaxing closer to home.
+
 Consider relaxing closer to home.
+
 “staycation.”
-Wherever you go, avoid the tourist traps, eat where the locals do, and walk or use public transportation whenever possible—you’ll
+
+Wherever you go, avoid the tourist traps, eat where the locals do, and walk or 
+use public transportation whenever possible—you’ll
+
 Protecting What You Own
-live in a large, multigenerational cohousing community in a place that would work even if they ended up in wheelchairs.
+
+live in a large, multigenerational cohousing community in a place that would 
+work even if they ended up in wheelchairs.
+
 Segun te haces mayor. Vivir en una comuna solo giene benficios pra ti
+
 four strategies for living well while living long.
+
 first is to be active in pursuit of health
-second is to cultivate new friends, especially younger ones, and to participate in community—both
+
+second is to cultivate new friends, especially younger ones, and to participate 
+in community—both
+
 simplifying possessions
+
 third is simplifying possessions
-attend to traditional investments like owning a house and having enough—but not more than enough—income.
+
+attend to traditional investments like owning a house and having enough—but not 
+more than enough—income.
+
 Raising Children
-Many FIers have reported that when their children realized they would have to spend their own money for the stuff they wanted, they became frugal and entrepreneurial
-when their children realized they would have to spend their own money for the stuff they wanted, they became frugal and entrepreneurial
+
+Many FIers have reported that when their children realized they would have to 
+spend their own money for the stuff they wanted, they became frugal and 
+entrepreneurial
+
+when their children realized they would have to spend their own money for the 
+stuff they wanted, they became frugal and entrepreneurial
+
 Connecting children with nature
+
 substitute creativity for money
+
 Hacer las cosas vosotros mismis. Disfraces. Regalos...
+
 Throwing Stuff Away
+
 Gifting and Celebrating
-Holiday7 may be helpful here. Some FIers promise their children one, or at most three, toys at Christmas—and
+
+Holiday7 may be helpful here. Some FIers promise their children one, or at most 
+three, toys at Christmas—and
+
 promise their children one, or at most three, toys at Christmas—and
+
 Partnering
 
 SAVE MONEY, SAVE THE PLANET?
+
 Money is a lien on the earth’s resources.
+
 Al comprar algo. Pagamos por los materiales. Transporte... Y por lo que conta.mina
-We call this the Pogonomics Principle—economics from cartoon character Pogo’s point of view. Pogo’s contribution to Earth Day 1970 was the observation that “we have met the enemy and he is us.” It’s no mystery why the planet is polluted.
+
+We call this the Pogonomics Principle—economics from cartoon character Pogo’s 
+point of view. Pogo’s contribution to Earth Day 1970 was the observation that 
+“we have met the enemy and he is us.” It’s no mystery why the planet is polluted.
+
 Creative frugality is a double win—for our wallets and our world.
+
 The key is remembering that anything you buy and don’t use,
-is money down the drain, wasting your life energy and wasting the finite resources of the planet.
+
+is money down the drain, wasting your life energy and wasting the finite 
+resources of the planet.
+
 1,001 SURE WAYS TO SAVE MONEY
-The empowerment comes from your cleverness and your creativity in finding your strategies for frugality.
+
+The empowerment comes from your cleverness and your creativity in finding your
+strategies for frugality.
+
 creative frugality.
+
 1,000,001 SURE WAYS TO SAVE MONEY
+
 SUMMARY OF STEP 6
-Lower your total monthly expenses by valuing your life energy and increasing your consciousness in spending.
+
+Lower your total monthly expenses by valuing your life energy and increasing 
+your consciousness in spending.
+
 MONEY
+
 MONEY TALK QUESTIONS
-Whom are you trying to impress or please through what you have or how you spend? How do you economize? On what? How do you feel about it? Talk about one thing you own that you love. What do you love about it? Take us shopping with you, describing where you are, how you feel, what you buy. What’s your gazingus pin (your “gotta have it” purchase)? What’s the last item you actually wore out?
+
+Whom are you trying to impress or please through what you have or how you spend? 
+How do you economize? On what? How do you feel about it? Talk about one thing you
+own that you love. What do you love about it? Take us shopping with you, 
+describing where you are, how you feel, what you buy. What’s your gazingus pin
+(your “gotta have it” purchase)? What’s the last item you actually wore out?
+
 7 For Love or Money: Valuing Your Life Energy—Work and Income
-we will talk about valuing your life energy by looking at how well you spend your time.
-So far you have learned to value your life energy by aligning your spending with your fulfillment and your values.
-Now it’s time to learn about valuing your life energy by maximizing your compensation—in love or money—for the hours you invest in your work.
+
+we will talk about valuing your life energy by looking at how well you spend 
+your time.
+
+So far you have learned to value your life energy by aligning your spending 
+with your fulfillment and your values.
+
+Now it’s time to learn about valuing your life energy by maximizing your 
+compensation—in love or money—for the hours you invest in your work.
+
 WHAT
+
 WHAT IS WORK?
+
 WORK THROUGH THE AGES
 
+
+
 El trabajo a lo larg de la historia
+
 Minimum Daily Requirement of Work
+
 place this figure at about three hours a day
+
 The Right to Life, Liberty, and the Pursuit of a Paycheck?
+
 leisure is a commodity to be consumed rather than free time to be enjoyed.
-Instead, additional leisure has been seen as a drain on the economy, a liability on wages, and the abandonment of economic progress.
-En lugar de considerar el tiwmpo lubre como algo buego. Lo consederamos como perjudicial para la economia
+
+Instead, additional leisure has been seen as a drain on the economy, a liability 
+on wages, and the abandonment of economic progress.
+
+En lugar de considerar el tiwmpo lubre como algo buego. Lo consederamos como
+perjudicial para la economia
+
 Work Takes On New Meaning
-Without this experience of being part of a people and a place, leisure leads more often to loneliness and boredom.
+
+Without this experience of being part of a people and a place, leisure leads more
+often to loneliness and boredom.
+
 Sustituimos el tiempo libre placentero con estar ocipados . En el trabajo quiza
+
 Our jobs now serve the function that traditionally belonged to religion:
-They are the place where we seek answers to the perennial questions “Who am I?” and “Why am I here?” and “What’s it all for?”
+
+They are the place where we seek answers to the perennial questions “Who am I?”
+and “Why am I here?” and “What’s it all for?”
+
 DID WE WIN THE INDUSTRIAL REVOLUTION?
 
 we still suffer from Job Charming syndrome.
+
 Como el principe azul. Creemos que necesitamos el trabajo
+
 WHAT IS THE PURPOSE OF WORK?
+
 there is only one purpose served by paid employment: getting paid.
-What if we removed most of these expectations from our paid employment and recognized that all purposes for work other than earning money could be fulfilled by unpaid activities?
+
+What if we removed most of these expectations from our paid employment and 
+recognized that all purposes for work other than earning money could be
+fulfilled by unpaid activities?
+
 There are two sides to work.
+
 On one side is our need and desire for money.
-On the other side, totally separate from our wages, is the fact that we work in order to fulfill many other positive goals in our lives.
+
+On the other side, totally separate from our wages, is the fact that we work in 
+order to fulfill many other positive goals in our lives.
+
 BREAKING THE LINK BETWEEN WORK AND WAGES
 
 Breaking the link between work and money allows us to reclaim balance and sanity.
-Money is our life energy; it takes its value not from external definitions but from what we invest in it. Similarly, paid employment takes its only intrinsic value from the fact that we are paid to do it. Everything else we do is an expression of who we are, not what we must do out of economic necessity.
-Salario tiene su valor en que nos pagan. Lo demas. El trabajom es lo que gacemos para llenarnos por dentro
-By breaking the link, we can redefine work simply as whatever we do in alignment with our purpose in life.
+
+Money is our life energy; it takes its value not from external definitions but 
+from what we invest in it. Similarly, paid employment takes its only intrinsic 
+value from the fact that we are paid to do it. Everything else we do is an 
+expression of who we are, not what we must do out of economic necessity.
+
+Salario tiene su valor en que nos pagan. Lo demas. El trabajom es lo que gacemos 
+para llenarnos por dentro
+
+By breaking the link, we can redefine work simply as whatever we do in alignment
+with our purpose in life.
+
 Le va a costar conbencerme de esto
+
 THE STUNNING IMPLICATIONS OF BREAKING THE LINK
 1. Redefining Work Increases Choices
    Si trabajas en algo que no tw gcuata. Resifinir el trabajo y el salario te abvre la mente para dedicarte a lo que te ista en tiempo libre  hasta que puedes hacerlo zcobrando
