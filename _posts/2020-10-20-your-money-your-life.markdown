@@ -861,7 +861,7 @@ Motivación
 Es más difícil mentirte a tí mismo sobre el progreso que vas haciendo, lo puedes
 ver directamente en la gráfica
 
-Es la recomendación contínua de que honras tu energía vital
+Es la recomendación continua de que honras tu energía vital
 
 Puede estimular tu interés por las finanzas personales
 
@@ -872,46 +872,41 @@ conversaciones
 
 #### Capítulo 6: el sueño americano (pendiente de un hilo)
 
-simplicity and minimalism
+El autor intenta usar una palabra para describir el estado de *tener suficiente
+pero no demasiado*: simplicidad, minimalismo, orden, regocijo, frugalidad
 
-tidying up
+**Los placeres de la frugalidad**
 
-spark joy,
+> Es disfrutar la virtud de obtener valor de cada minuto de energía vital y de
+> todo aquello de lo que haces uso
 
-frugality
+Frugalidad es disfrutar lo que uno tiene
 
-Intenta usar una palabra para indicar el estado de tener suficiente oero no
-demasiado. El estado ideal descrito al ppio
+Dice que en español hay una palabra que define esto muy bien: aprovechar, usar
+algo sabiamente
 
-THE PLEASURES OF FRUGALITY
+Para muchos de los placeres de la vida, puede ser mejor usar algo que poseerlo
 
-Frugality is enjoying the virtue of getting good value for every minute of 
-your life energy and from everything you have the use of.
+La gente joven de hoy en día parece menos atada a sus posesiones que generaciones
+pasadas (igual es porque tienen menos posesiones)
 
-Se invrnta esta defibicipn
+Ser frugal y ser feliz teniendo suficiente significa que los demás van a tener
+más disponible para ellos
 
-Frugality means enjoying what we have.
+##### Paso 6: valorar tu energía vital, minimizar los gastos
 
-There’s a word in Spanish that encompasses all this: aprovechar.
+Este paso va de hacer un uso inteligente de tu energía vital y de eliminar o
+reducir conscientemente tus gastos
 
-It means to use something wisely—be
+La frugalidad va de disfrutar, no de ser un tacaño! Hay que ahorrar, pero hay
+que disfrutar de la energía vital
 
-For many of life’s pleasures it may be far better to use something than to 
-possess it
+Una forma de ahorrar dinero es dejar de intentar impresionar al resto de la
+gente. Además, los demás estarán probablemente tan ocupados intentando impresionarte
+a tí (y a otros) que lo más seguro es que no se den ni cuenta de tus esfuerzos.
+Entonces... ¿para qué esforzarse en impresionarles?
 
-young people today seem less wedded to their stuff than prior generations.
-
-being frugal and being happy with having enough means that more will be
-available for others.
-
-Step 6: Valuing Your Life Energy—Minimizing Spending
-
-This step involves the intelligent use of your life energy (money) and the
-conscious lowering or elimination of expenses.
-
-Frugality is about enjoyment, not penny-pinching!
-
-hay que ahorrar pero hay que disfrutarde la vda de life energy
+**Otras 10 formas de ahorro**
 
 ONE SURE WAY TO SAVE MONEY
 
