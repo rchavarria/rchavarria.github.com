@@ -48,6 +48,13 @@ que nos ayudan a ganar la partida
 > se le viene encima
 
 ### Mate en 3
+
+Mate en 3 significa que tú tienes 3 movimientos, mientras que tu oponente tiene
+solo dos. Intenta visualizar esos 3 movimientos forzados, y quizá encuentres
+una gran combinación
+
+3 movimientos, 3. Eso significa analizar la posición en una buena profundidad
+
 ### Sacrificios de la reina
 ### Asegurando tablas
 
