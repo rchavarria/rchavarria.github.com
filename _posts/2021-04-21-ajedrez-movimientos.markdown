@@ -55,7 +55,19 @@ una gran combinación
 
 3 movimientos, 3. Eso significa analizar la posición en una buena profundidad
 
-### Sacrificios de la reina
+### Sacrificios de dama
+
+Pocas cosas son tan satisfactorias como sacrificar tu reina para conseguir ganar
+una partida
+
+Un sacrificio de dama siempre vale la pena si consigues forzar un mate
+
+A veces, también merece la pena si consigues una buena compensación en forma de
+una buena coordinación del resto de las piezas
+
+Deberíamos estar listos para sacrificar cualquier cosa (no solo la dama) si con
+ello conseguimos ganar el juego
+
 ### Asegurando tablas
 
 [1]: {{ site.baseurl }}{% post_url 2021-02-18-aprendiendo-ajedrez %}
