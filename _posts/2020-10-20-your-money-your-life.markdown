@@ -908,36 +908,28 @@ Entonces... ¿para qué esforzarse en impresionarles?
 
 **Otras 10 formas de ahorro**
 
-ONE SURE WAY TO SAVE MONEY
+1. *No vayas de compras*: los hombre suelen comprar cuando van borrachos, las
+mujeres cuando están tristes o aburridas, ambos cuando están enfadados. No vayas
+de compras a modo de recompensa, buscando alivio o entretenimiento
 
-Stop Trying to Impress Other People
+2. *Vive dentro de tus posibilidades*: compra solo lo que puedes permitirte
+prudentemente. Vamos, no endeudarte. Haz como hacían nuestros padres, que vivían
+con lo que podían pagar. Espera a tener el dinero antes de comprar cualquier
+cosa
 
-plus others are likely so busy trying to impress you that they will, at best, 
-not notice your efforts.
+3. *Cuida lo que tienes*: cuida de tu cuerpo y ahorrarás en muchos gastos médicos.
+Haz mantenimientos preventivos de tus herramientas: coche, casa... Necesitamos
+hacer un cambio de mentalidad, para reparar antes que reemplazar
 
-others are likely so busy trying to impress you that they will, at best, not 
-notice your efforts.
+4. *Extiende el uso de las cosas*: piensa cuánto dinero ahorrarías si decidieras
+usar las cosas un poquito más: un año más ese coche, un invierno más ese abrigo,
+un mes más esas zapatillas... Antes de tirar nada, pregúntate si existe alguna
+forma de usarlo o parte de ella
 
-TEN SURE WAYS TO SAVE MONEY
+5. *Hazlo tú mismo*: antes de contratar a un experto... pregúntate ¿podría
+hacerlo yo? ¿qué me costaría aprender cómo hacerlo? ¿sería una habilidad útil?
 
-1. Don’t Go Shopping
-
-   men tended to buy while drunk and women while bored or sad, with both genders
-   doing it when angry.
-   Don’t use shopping as a reward, a relief, or entertainment.
-
-2. Live Within Your Means
-   To live within your means is to buy only what you can prudently afford,
-   Vamos. No endeudarte. Como hacian nuestros padres. Qie vivian con lo q podian
-   pagar
-   wait until you have the money before you buy something.
-
-3. Take Care of What You Have
-   There is one thing we all have that we want to last a long time: our bodies.
-   Cuida de tu cuerpo y ahorraras en muchis gastos medicos
-   Extend this principle to all your possessions.
-   Mantenimientos preventivoa de tus herramientas. Xoche. Casa...
-   We need to rewire our brains to think repair rather than replace.
+6. *Anticipa tus necesidades*: 
 
 4. Wear It Out
    Think how much money you would save if you simply decided to use things even 
