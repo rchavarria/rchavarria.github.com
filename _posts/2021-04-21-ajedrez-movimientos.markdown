@@ -70,5 +70,13 @@ ello conseguimos ganar el juego
 
 ### Asegurando tablas
 
+Si vas perdiendo en una partida, aún puedes salvar los muebles, aún es posible
+encontrar formas de llegar a tablas. El ajedrez es un juego lleno de oportunidades,
+así que no te des por vencido fácilmente
+
+Busca maneras de quedar ahogado, de llegar a una situación de jaque perpetuo
+o intercambios que hagan que tu oponente se quede sin material para poder hacerte
+mate
+
 [1]: {{ site.baseurl }}{% post_url 2021-02-18-aprendiendo-ajedrez %}
 [2]: https://www.chess.com
