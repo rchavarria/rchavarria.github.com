@@ -114,7 +114,7 @@ hacer alguna buena acción antes de ser capturada. Los sacrificios útiles de
 aquellas piezas que ya están perdidas se les llama *sacrificios a la
 desesperada*
 
-Zwischenzug es un término alemás que significaría algo así como *movimiento
+Zwischenzug es un término alemán que significaría algo así como *movimiento
 entre medias*. Por ejemplo, en una secuencia de intercambios, puede haber un
 movimiento intermedio, muy útil aunque no relacionado, pero que nos resulta
 beneficioso para ganar material
