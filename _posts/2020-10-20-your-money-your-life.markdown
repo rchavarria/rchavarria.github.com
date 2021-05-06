@@ -929,151 +929,69 @@ forma de usarlo o parte de ella
 5. *Hazlo tú mismo*: antes de contratar a un experto... pregúntate ¿podría
 hacerlo yo? ¿qué me costaría aprender cómo hacerlo? ¿sería una habilidad útil?
 
-6. *Anticipa tus necesidades*: 
+6. *Anticipa tus necesidades*: si miras con suficiente tiempo de antelación,
+seguramente encontrarás lo que necesitas a mejor precio. Mantén una lista de
+cosas que quieres comprar para el próximo año. Anticipar tus necesidades también
+elimina una de las mayores amenazas a la frugalidad: la compra impulsiva
 
-4. Wear It Out
-   Think how much money you would save if you simply decided to use things even 
-   20 percent longer.
-   Usa un año mas tu cocje. Un invierno mas el abrigo. Un mes mas las zapatillas
-   ask, before trashing something, whether there might be another way to use 
-   part or all of it.
+7. Busca y compara: valor, calidad, durabilidad, uso múltiple (versatilidad)
+y finalmente precio
 
-5. Do It Yourself
-   “Can I do this myself? What would it take to learn how? Would it be a useful 
-   skill to know?”
-   reverse that trend, just ask yourself, when you’re about to hire an expert: 
-   “Can I do this myself? What would it take to learn how? Would it be a useful 
-   skill to know?”
-   when you’re about to hire an expert: “Can I do this myself? What would it 
-   take to learn how? Would it be a useful skill to know?”
+8. Cómpralo por menos: compara en varias webs/tiendas. Gangas, siempre puedes
+preguntar por posibles descuentos. Regatea. También puedes comprarlo usado
 
-6. Anticipate Your Needs
+9. Cubre tus necesidades de forma diferente: sustituir no es eliminar, es usar
+tu imaginación y creatividad. Al ser creativo, nos hace recordar que lo que buscamos
+cuando compramos algo nuevo es cambiar un sentimiento
 
-With enough lead time you will likely find the items you need at a cheaper price.
+> Cuando sientas un deseo de comprar, tómate tu tiempo para rastrearlo hasta
+> la necesidad
 
-Keep a list of things you anticipate needing in the coming year.
+10. Sigue los 9 pasos de este método
 
-Anticipating your needs also eliminates one of the biggest threats to your 
-frugality: impulse buying.
+**Ahorro en lo básico**
 
-7. Research Value, Quality, Durability, Multiple Use, and Price
+Pasa de tacañear a un ahorro inteligente
 
-8. Buy It for Less
+Gestiona tu deuda y tus finanzas
 
-Comparison-shop:
+Tu vivienda: ser creativo en relación al lugar donde vives puede reducir tus
+costes significativamente
 
-metasearch sites or browser add-ons that allow you to check pricing on many sites
+Desplazarse: un coche es la segunda pertenencia más cara que solemos comprar
 
-Bargain:
+Cuida tu cuerpo: estar sano is bueno para tu bolsillo y para tí mismo
 
-You can ask for discounts anywhere, anytime.
+Comparte, practica el trueque: uno de los caminos a la felicidad (y la 
+frugalidad) es estar involucrado en una comunidad
 
-Regatear?
+Comer: haz una lista de la compra y cíñete a ella
 
-Haggling
+> Eat food, not too much, mostly plants ~ *Michael Polland*
 
-You can also buy it used.
+Descanso: piensa qué tal sería relajarte más cerca de casa (*staycation*). Allá
+donde vayas evita las trampas para turistas: come donde coman los locales, anda
+y usa el transporte público
 
-9. Meet Your Needs Differently
-   substitution isn’t deprivation; it’s about getting creative.
-   when it’s creative, also reminds us that what we seek when we buy something
-   new is to change a feeling state.
-   what we seek when we buy something new is to change a feeling state.
-   “When you feel a desire to shop, take time to trace it back to the need
+Protege lo que posees: según te haces mayor, vivir en una comunidad solo tiene
+beneficios para tí
 
-10. Follow the Nine Steps of This Program
-    SAVING ON THE BASICS
-    From Penny-Pinching to Smart Saving
-    Managing Debt and Your Finances
-    Having a Place to Live
+4 estrategias para vivir bien mientras vives muchos años:
 
-being creative about housing can reduce your costs significantly.
+1. Se activo en la búsqueda de la salud
+2. cultiva nuevas amistades, especialmente las más jóvenes, y participa en la
+comunidad
+3. Simplifica las posesiones
+4. ¿?
 
-Getting Around
+Criar hijos: cuando los niños/as se dan cuenta de que necesitan gastar su propio
+dinero para las cosas que quieren, se convierten en ahorradores, frugales y 
+emprendedores. Algo muy barato es conectar a los hijos con la naturaleza
 
-So let’s just get some perspective as we see how we might, in our short lifetimes, 
-frugalize our ride.
+Sustituye creatividad por dinero: haz las cosas por tí mismo, disfraces, regalos...
 
-a car is the second-most expensive thing they buy,
-
-Taking Care of Your Body
-
-staying well is good for your wallet as well as for your body.
-
-Sharing/Bartering
-
-one of the paths to happiness (and frugality) is being involved in community.
-
-Eating
-
-ways to save money
-
-making a list and sticking to
-
-making a list and sticking to it, knowing
-
-Michael Pollan’s pithy seven-word food rule, “Eat food, not too much, mostly
-plants,”
-
-Staying Connected, Informed, and Entertained
-
-Getting Away
-
-you will have less of a need to “vacate.” Consider relaxing closer to home.
-
-Consider relaxing closer to home.
-
-“staycation.”
-
-Wherever you go, avoid the tourist traps, eat where the locals do, and walk or 
-use public transportation whenever possible—you’ll
-
-Protecting What You Own
-
-live in a large, multigenerational cohousing community in a place that would 
-work even if they ended up in wheelchairs.
-
-Segun te haces mayor. Vivir en una comuna solo giene benficios pra ti
-
-four strategies for living well while living long.
-
-first is to be active in pursuit of health
-
-second is to cultivate new friends, especially younger ones, and to participate 
-in community—both
-
-simplifying possessions
-
-third is simplifying possessions
-
-attend to traditional investments like owning a house and having enough—but not 
-more than enough—income.
-
-Raising Children
-
-Many FIers have reported that when their children realized they would have to 
-spend their own money for the stuff they wanted, they became frugal and 
-entrepreneurial
-
-when their children realized they would have to spend their own money for the 
-stuff they wanted, they became frugal and entrepreneurial
-
-Connecting children with nature
-
-substitute creativity for money
-
-Hacer las cosas vosotros mismis. Disfraces. Regalos...
-
-Throwing Stuff Away
-
-Gifting and Celebrating
-
-Holiday7 may be helpful here. Some FIers promise their children one, or at most 
-three, toys at Christmas—and
-
-promise their children one, or at most three, toys at Christmas—and
-
-Partnering
+Regalos y celebraciones: algunos adultos prometen tener sólo entre 1 y 3 regalos
+para navidad o cumpleaños, nada más
 
 SAVE MONEY, SAVE THE PLANET?
 
