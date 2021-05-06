@@ -48,10 +48,12 @@ Si te interesa el ajedrez, y quieres echar una partida,
     - Atacando al rey
     - Tácticas avanzadas
     - Patrones de finales de juego
-    - Y más y más lecciones en esta plataforma
     
 ### Siguientes pasos
 
+- [Cómo mejorar en Puzzle Rush]: un juego muy popular en chess.com es Puzzle
+Rush, donde tienes 3 o 5 minutos para resolver el máximo de puzles que puedas.
+Puedes cometer hasta 3 errores. Esta lección puede estar divertida
 - Estructuras de peones
 - [Weak squares and outposts]
 
@@ -77,3 +79,4 @@ Si te interesa el ajedrez, y quieres echar una partida,
 [Weak squares and outposts]: https://www.chess.com/blog/KingsBishop/weak-squares-and-outposts
 [100 finales que debes conocer]: https://forwardchess.com/product/100-endgames-you-must-know%284th-edition%29
 [Ajedrez y su enseñanza: libro de aperturas]: {{ site.baseurl }}{% post_url 2019-10-21-ajedrez-ensenanza-libro-aperturas %}
+[Cómo mejorar en Puzzle Rush]: https://www.chess.com/lessons/improve-your-puzzle-rush
