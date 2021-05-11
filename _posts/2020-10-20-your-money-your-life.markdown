@@ -143,6 +143,16 @@ Necesito revisar este capítulo para extraer estas preguntas
 - ¿Qué te motiva a ahorrar?
 - ¿Qué te ayuda a ahorrar dinero?
 
+**Capítulo 6**
+
+- ¿A quién intentas impresionar/complacer a través de lo que tienes o cómo lo
+gastas?
+- ¿Cómo economizas? ¿En qué lo haces? ¿Cómo te sientes al hacerlo?
+- Habla de algo que poseas que quieras mucho. ¿Qué es lo que te gusta de ello?
+- Cuando vas de compras... ¿dónde vas? ¿cómo te sientes? ¿qué compras? ¿cuál es
+tu pequeña compra insignificante (gazingus pin) que tienes que comprar sí o sí?
+- ¿Cuál fue el último objeto que desgastaste del todo?
+
 #### Introducción a la nueva edición
 
 De echo, "suficiente" es la promesa radical de este libro
@@ -993,46 +1003,31 @@ Sustituye creatividad por dinero: haz las cosas por tí mismo, disfraces, regalo
 Regalos y celebraciones: algunos adultos prometen tener sólo entre 1 y 3 regalos
 para navidad o cumpleaños, nada más
 
-SAVE MONEY, SAVE THE PLANET?
+**Ahorrar dinero... ¿es salvar el planeta?**
 
-Money is a lien on the earth’s resources.
+El dinero es un gravamen sobre los recursos de la tierra. Al comprar algo, pagamos
+por los materiales, el transporte... y por lo que contamina
 
-Al comprar algo. Pagamos por los materiales. Transporte... Y por lo que conta.mina
+> Ahora conocemos al enemigo, y ése somos nosotros ~ Pogo, un dibujo animado, en
+> el Día de la Tierra de 1970
 
-We call this the Pogonomics Principle—economics from cartoon character Pogo’s 
-point of view. Pogo’s contribution to Earth Day 1970 was the observation that 
-“we have met the enemy and he is us.” It’s no mystery why the planet is polluted.
+Todo el mundo sabe quién es el que contamina, somos nosotros, nadie más
 
-Creative frugality is a double win—for our wallets and our world.
+La creatividad al ser frugal es matar dos pájaros de un tiro, es ganar el doble,
+es beneficioso para nuestro bolsillo y beneficioso para el planeta
 
-The key is remembering that anything you buy and don’t use,
+La clave está en recordar que cualquier cosa que compras y no usas es dinero
+tirado a la basura, que malgasta tu energía vital y los recursos finitos del
+planeta
 
-is money down the drain, wasting your life energy and wasting the finite 
-resources of the planet.
+**Resumen del paso 6**
 
-1,001 SURE WAYS TO SAVE MONEY
+Reduce tus gastos mensuales totales valorando tu energía vital e incrementando
+tu conciencia en cómo los gastas
 
-The empowerment comes from your cleverness and your creativity in finding your
-strategies for frugality.
+#### Capítulo 7: Por amor o por dinero, valora tu energía vital, trabajo e ingresos
 
-creative frugality.
-
-1,000,001 SURE WAYS TO SAVE MONEY
-
-SUMMARY OF STEP 6
-
-Lower your total monthly expenses by valuing your life energy and increasing 
-your consciousness in spending.
-
-MONEY
-
-MONEY TALK QUESTIONS
-
-Whom are you trying to impress or please through what you have or how you spend? 
-How do you economize? On what? How do you feel about it? Talk about one thing you
-own that you love. What do you love about it? Take us shopping with you, 
-describing where you are, how you feel, what you buy. What’s your gazingus pin
-(your “gotta have it” purchase)? What’s the last item you actually wore out?
+##### Paso 7:.....
 
 7 For Love or Money: Valuing Your Life Energy—Work and Income
 
