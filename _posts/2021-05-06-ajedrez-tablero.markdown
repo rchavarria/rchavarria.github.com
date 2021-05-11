@@ -33,6 +33,21 @@ Un grupo de peones conectados se les suele llamar *isla de peones*. Cuantas más
 islas tengas, peor, significa que hay desconexión entre tus peones
 
 ### Cadenas de peones
+
+Un grupo de peones que se protegen unos a otros formando una diagonal, se llama
+una *cadena de peones*. El único peón desprotegido es el peón base, al principio
+de la cadena. Esta formación es una de las más fuertes
+
+Una cadena de peones puede restringir los movimientos del adversario y ayudarse
+entre ellos a avanzar al final del juego
+
+Incluso una pequeña cadena de dos peones pueden hacer frente a una poderosa
+torre (normalmente al final del juego)
+
+Pero no siempre la mejor forma de atacar una cadena es atacando la base, a veces,
+es preferible atacar al peón más avanzado, intercambiar algunos peones y hacer
+la cadena de nuestro oponente más corta (y débil)
+
 ### Espacio
 ### Juegos abiertos, cerrados y semi-abiertos
 ### Avanzar, capturar o ignorar
