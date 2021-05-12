@@ -49,6 +49,13 @@ es preferible atacar al peón más avanzado, intercambiar algunos peones y hacer
 la cadena de nuestro oponente más corta (y débil)
 
 ### Espacio
+
+Cuanto más espacio controlas en el tablero, más libres son tus piezas para
+maniobrar, y menos lo son las de tu adversario
+
+Una buena forma de reclamar espacio para tí es controlar el centro con los
+peones
+
 ### Juegos abiertos, cerrados y semi-abiertos
 ### Avanzar, capturar o ignorar
 ### Cuándo intercambiar piezas
