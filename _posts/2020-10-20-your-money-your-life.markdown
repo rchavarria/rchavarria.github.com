@@ -1027,54 +1027,39 @@ tu conciencia en cómo los gastas
 
 #### Capítulo 7: Por amor o por dinero, valora tu energía vital, trabajo e ingresos
 
+Vamos a hablar sobre valorar tu energía vital echando un vistazo a cómo de bien
+usas tu tiempo
+
+Hasta ahora hemos visto cómo valorar nuestra energía vital alineando nuestros
+gastos con nuestras satisfacciones y valores
+
+Ha llegado el momento de valorar nuestra energía vital maximizando nuestra
+compensación (en amor o dinero) por las horas que invertimos en nuestro trabajo
+
+**¿Qué ha sido el trabajo a lo largo de la historia?**
+
+Algunos historiadores han llegado a la conclusión de que nuestros ancestros
+sólo necesitaban 3 horas de trabajo al día, como una medida de lo que el autor
+llama *mínimo trabajo diario necesario*
+
+> El lujo es una mercancía para ser consumida, en lugar de disfrutar del tiempo
+> libre
+
+En lugar de considerar el tiempo libre como algo bueno y necesario, lo consideramos
+como perjudicial para la economía, algo que drena la economía, una carga para
+los sueldos y un abandono del progreso económico
+
+Sustituimos el placer de disfrutar el tiempo libre (con amigos, familiares...)
+con estar ocupados (con el trabajo probablemente). Sin esa experiencia de pertenecer
+a una comunidad o lugar, el lujo nos lleva a estar más solos y aburridos
+
+Nuestros trabajos ahora hacen la función que anteriormente tenía la religión:
+son el lugar donde buscamos respuestas a preguntas de siempre como: ¿quién soy?
+¿por qué estoy aquí? ¿para qué sirve todo esto?
+
+**¿Ganamos la revolución industrial?**
+
 ##### Paso 7:.....
-
-7 For Love or Money: Valuing Your Life Energy—Work and Income
-
-we will talk about valuing your life energy by looking at how well you spend 
-your time.
-
-So far you have learned to value your life energy by aligning your spending 
-with your fulfillment and your values.
-
-Now it’s time to learn about valuing your life energy by maximizing your 
-compensation—in love or money—for the hours you invest in your work.
-
-WHAT
-
-WHAT IS WORK?
-
-WORK THROUGH THE AGES
-
-
-
-El trabajo a lo larg de la historia
-
-Minimum Daily Requirement of Work
-
-place this figure at about three hours a day
-
-The Right to Life, Liberty, and the Pursuit of a Paycheck?
-
-leisure is a commodity to be consumed rather than free time to be enjoyed.
-
-Instead, additional leisure has been seen as a drain on the economy, a liability 
-on wages, and the abandonment of economic progress.
-
-En lugar de considerar el tiwmpo lubre como algo buego. Lo consederamos como
-perjudicial para la economia
-
-Work Takes On New Meaning
-
-Without this experience of being part of a people and a place, leisure leads more
-often to loneliness and boredom.
-
-Sustituimos el tiempo libre placentero con estar ocipados . En el trabajo quiza
-
-Our jobs now serve the function that traditionally belonged to religion:
-
-They are the place where we seek answers to the perennial questions “Who am I?”
-and “Why am I here?” and “What’s it all for?”
 
 DID WE WIN THE INDUSTRIAL REVOLUTION?
 
