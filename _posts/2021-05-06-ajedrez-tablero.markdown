@@ -57,6 +57,24 @@ Una buena forma de reclamar espacio para tí es controlar el centro con los
 peones
 
 ### Juegos abiertos, cerrados y semi-abiertos
+
+Hay posiciones donde hay pocos peones en el juego. Son posiciones *abiertas*. En
+este tipo de posiciones, los alfiles tienen más libertad de movimientos y por
+lo tanto son más poderosos.
+
+Hay otras posiciones, donde hay muchos peones en el juego. Se llaman posiciones
+*cerradas*. En ellas, los alfiles tienen los movimientos más restringidos, y son
+los caballos los que suelen encontrar casillas donde moverse, por lo tanto, aquí
+son más poderosos los caballos que los alfiles
+
+En otras ocasiones, ni para tí ni para mi. Son las posiciones *semi-abiertas*.
+Y dependerá de otros factores para considerar los alfiles más poderosos que los
+caballos o al contrario
+
+En estas últimas, hay que ser lo más flexible posible. Estando atento a la 
+apertura de columnas y diagonales, por si acaso la posición se abre. O encontrando
+buenas casillas para nuestras piezas, si la posición se va cerrando
+
 ### Avanzar, capturar o ignorar
 ### Cuándo intercambiar piezas
 ### Notación (de movimientos) avanzada
