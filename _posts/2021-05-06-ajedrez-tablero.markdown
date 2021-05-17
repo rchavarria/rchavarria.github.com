@@ -76,6 +76,15 @@ apertura de columnas y diagonales, por si acaso la posición se abre. O encontra
 buenas casillas para nuestras piezas, si la posición se va cerrando
 
 ### Avanzar, capturar o ignorar
+
+Veamos un poco cómo soportar la presión cuando hay peones enfrentados. ¿Deberíamos
+capturar, avanzar o simplemente jugar en otro lugar del tablero?
+
+Si puedes atacar y defender al mismo tiempo, quizá sea esa la mejor opción
+
+Como regla general, sólo responde a las amenazas del contrario si tú no tienes
+ninguna amenaza mayor con la que responder
+
 ### Cuándo intercambiar piezas
 ### Notación (de movimientos) avanzada
 
