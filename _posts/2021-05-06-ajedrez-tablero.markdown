@@ -97,13 +97,29 @@ Hay algunas buenas razones para saber si un intercambio es bueno:
 
 - Simplificar, cuando tenemos una pequeña ventaja de material
 - Eliminar un pieza del contrario que está bien posicionada
-- Tomar el control de una fila abierta
+- Tomar el control de una columna abierta
 
 > To take is a mistake, unless...
 
 Comer, es un error, a no ser que tu posición mejore o la de tu oponente empeore
 
 ### Notación (de movimientos) avanzada
+
+- Jaque = `+`
+- Jaque mate = `#`
+- Captura = `x`
+- Coronar = `=`, (b8=Q)
+- Enroque corto = `0-0`
+- Enroque largo = `0-0-0`
+- Buen movimiento = `!`
+- Movimiento malo = `?`
+- Movimiento interesante = `!?`
+- Dudoso movimiento = `?!`
+- Erro grave = `??`
+- Grandísimo movimiento = `!!`
+- Ganan blancas = `1-0`
+- Ganan negras = `0-1`
+- Tablas = `1/2-1/2`
 
 [1]: {{ site.baseurl }}{% post_url 2021-02-18-aprendiendo-ajedrez %}
 [2]: https://www.chess.com
