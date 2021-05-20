@@ -86,6 +86,23 @@ Como regla general, sólo responde a las amenazas del contrario si tú no tienes
 ninguna amenaza mayor con la que responder
 
 ### Cuándo intercambiar piezas
+
+Normalmente, está bien intercambiar piezas si está claro que sales ganando en 
+el intercambio. Pero... ¿qué hacer cuando ni ganas ni pierdes?
+
+Normalmente, es un error comenzar un intercambio si no eres capaz de explicar
+en qué te beneficia
+
+Hay algunas buenas razones para saber si un intercambio es bueno:
+
+- Simplificar, cuando tenemos una pequeña ventaja de material
+- Eliminar un pieza del contrario que está bien posicionada
+- Tomar el control de una fila abierta
+
+> To take is a mistake, unless...
+
+Comer, es un error, a no ser que tu posición mejore o la de tu oponente empeore
+
 ### Notación (de movimientos) avanzada
 
 [1]: {{ site.baseurl }}{% post_url 2021-02-18-aprendiendo-ajedrez %}
