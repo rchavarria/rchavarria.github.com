@@ -153,6 +153,17 @@ gastas?
 tu pequeña compra insignificante (gazingus pin) que tienes que comprar sí o sí?
 - ¿Cuál fue el último objeto que desgastaste del todo?
 
+**Capítulo 7**
+
+- ¿Cómo podrías doblar tus ingresos sin vender tu alma o comprometer tu salud?
+- ¿Cuál fue tu primer trabajo?
+- ¿Y el mejor?
+- ¿Y el peor?
+- ¿Cuál sería el trabajo de tus sueños, tanto si te pagaran por él como si no?
+- ¿Qué es trabajo y por qué lo hacemos?
+- ¿Cuál es el trabajo de tu vida?
+- ¿Qué te gusta y disgusta del trabajo que haces por dinero?
+
 #### Introducción a la nueva edición
 
 De echo, "suficiente" es la promesa radical de este libro
@@ -1059,150 +1070,176 @@ son el lugar donde buscamos respuestas a preguntas de siempre como: ¿quién soy
 
 **¿Ganamos la revolución industrial?**
 
-##### Paso 7:.....
+Todavía sufrimos el *síndrome del amor al trabajo*. Todavía creemos que necesitamos
+el trabajo
 
-DID WE WIN THE INDUSTRIAL REVOLUTION?
+Solo hay un propósito del trabajo remunerado: que te paguen tu sueldo
 
-we still suffer from Job Charming syndrome.
+¿Qué pasaría si elimináramos todas esas expectativas del trabajo remunerado y
+reconociéramos que todos aquellos propósitos, a parte del de ganar dinero, podrían
+ser alcanzados con actividades no remuneradas?
 
-Como el principe azul. Creemos que necesitamos el trabajo
+El trabajo tiene dos caras:
 
-WHAT IS THE PURPOSE OF WORK?
+1. Nuestra necesidad y deseo de dinero
+2. A parte de nuestras nóminas, esta el hecho de que trabajamos para satisfacer
+muchos otros objetivos positivos en nuestras vidas
+   
+**Rompiendo la relación entre el trabajo y el salario**
 
-there is only one purpose served by paid employment: getting paid.
+Romper esta relación nos permite recuperar equilibrio y sensatez
 
-What if we removed most of these expectations from our paid employment and 
-recognized that all purposes for work other than earning money could be
-fulfilled by unpaid activities?
+El dinero es nuestra energía vital. Toma su valor de lo que nosotros invertimos
+en ello. De forma similar, el empleo remunerado toma su único valor intrínseco
+del hecho por el cual somos pagados. El resto de cosas que hacemos son una
+expresión de quiénes somos, no lo que debemos hacer por necesidad económica
 
-There are two sides to work.
+Si rompemos esta relación, podemos redefinir *trabajo* como cualquier cosa que
+hacemos que esté alineado con nuestro propósito vital
 
-On one side is our need and desire for money.
+Ufff, no termino yo de ver esta idea
 
-On the other side, totally separate from our wages, is the fact that we work in 
-order to fulfill many other positive goals in our lives.
+**Las implicaciones de romper el enlace, de redefinir el trabajo**
 
-BREAKING THE LINK BETWEEN WORK AND WAGES
+1. Se incrementan las opciones: si trabajas en algo que no te gusta, redefinir
+   el trabajo y el salario te abre la mente para dedicarte a lo que te gusta en
+   tiempo libre hasta que puedes hacerlo cobrando
+2. Te permite trabajar desde tu interior, descubriendo y viviendo tus valores, no
+los valores de otros. Si separas quién eres de lo que haces por dinero, no tendrás
+   que fingir o aguantar en el trabajo, podrás ser quien eres de verdad
+3. Nos hace diseñadores, no solo asalariados: hay muchas tareas fuera del trabajo,
+quien sabe, igual llegas a dominar algo y te pagan por ello
+4. Añade vida a tu jubilación: eres valorado en cada rol, tarea, actividad que
+haces
+5. Honra actividades no pagadas
+6. Reunifica trabajo y diversión: observa a una persona que lo está dando todo,
+no puedes decir si le están pagando o está jugando
+7. Te permite disfrutar más de tus lujos
 
-Breaking the link between work and money allows us to reclaim balance and sanity.
+##### Paso 7: Valora tu energía vital - Maximiza los ingresos
 
-Money is our life energy; it takes its value not from external definitions but 
-from what we invest in it. Similarly, paid employment takes its only intrinsic 
-value from the fact that we are paid to do it. Everything else we do is an 
-expression of who we are, not what we must do out of economic necessity.
+El paso 7 trata de aumentar tus ingresos valorando la energía vital que inviertes
+en tu trabajo, intercambiándola por el máximo beneficio que sea consistente con
+tu salud e integridad
 
-Salario tiene su valor en que nos pagan. Lo demas. El trabajom es lo que gacemos 
-para llenarnos por dentro
+> *Suficiente* no es la cantidad mínima para sobrevivir, es la cantidad exacta que
+te proporciona satisfacción sin exceso ~ satisfacción sin exceso
 
-By breaking the link, we can redefine work simply as whatever we do in alignment
-with our purpose in life.
+Si el dinero equivale a energía vital, entonces, al incrementar tus ingresos estás
+incrementando la cantidad de vida que tienes disponible
 
-Le va a costar conbencerme de esto
+**Nuevas opciones para el trabajo remunerado**
 
-THE STUNNING IMPLICATIONS OF BREAKING THE LINK
-1. Redefining Work Increases Choices
-   Si trabajas en algo que no tw gcuata. Resifinir el trabajo y el salario te abvre la mente para dedicarte a lo que te ista en tiempo libre  hasta que puedes hacerlo zcobrando
-2. Redefining Work Allows You to Work from the Inside Out
-   will allow us to survive best at our job. But if who you are and what you do to make money are distinct, as they can be when you disconnect work from wages, you can reclaim your lost self.
-   if who you are and what you do to make money are distinct, as they can be when you disconnect work from wages, you can reclaim your lost self.
-   No tendras que fingir o aguactar en el trabajo. Si no que podras serquien erws de verdad
-   As you come to know yourself,
-   you will be able to work from the inside out.
-   living according to others’ values (living from the outside in) to discovering and living her values (living from the inside out).
-3. Redefining Work Makes Us Life Designers, Not Just Wage Earners
-   Hay muchas tareas fuera del trabjo. Quien sabe. Igual llegas a dominar algo y te pagan por ello
-4. Redefining Work Adds Life to Your Retirement
-   you are valuable in every role, task, activity—and
-5. Redefining Work Honors Unpaid Activity
-6. Redefining Work Reunites Work and Play
-   watching a person fully engaged in an activity, one would not know if he or she was being paid or just playing.
-7. Redefining Work Allows You to Enjoy Your Leisure More
+Un mayor salario es cuestión de actitud. Si te ves a ti mismo como una víctima,
+puedes estar demasiado ocupado en sentir pena por tí mismo para darte cuenta de
+todas las oportunidades de cambiar pésimo destino
 
-If we did not identify so strongly with what we do for money, we might honor and enjoy our leisure more.
-It’s OK to play.
-8. Redefining Work Sheds a New Light on “Right Livelihood”
-   “Right livelihood” is the ideal of finding a way for your true work or vocation to be your paid work as well.
-   Insisting that your calling and your paid employment be one and the same can tip the balance of your focus from mission to money.
-   Implications for Your Income
-   Step 7: Valuing Your Life Energy—Maximizing Income
-   Step 7 is about increasing your income by valuing the life energy you invest in your job and exchanging it for the highest pay consistent with your health and integrity.
-   enough is not the minimum amount for survival; it is the exact amount that gives you fulfillment without excess.
-   If money = life energy, then by increasing your income you increase the amount of life available to you.
-   NEW OPTIONS FOR PAID EMPLOYMENT
-   Higher Pay: A Matter of Attitude
-   If you see yourself as a victim, you may well be too busy feeling sorry for yourself to notice the many opportunities to change your dismal destiny.
-   Financial
-   Financial
-   Financial Independence as a Part-Time Job
-   you are working part-time on someone else’s agenda for money so you can work as much time as possible on your own agenda.
-   But What If I Like My Job?
-   But What If I Don’t Have—or Want—a “Job”?
-   How to Get a High-Paying, High-Integrity Job
-   SUMMARY OF STEP 7
-   MONEY TALK QUESTIONS
-   How could you double your income without selling your soul or compromising your health? What was your first job? Best job? Worst job? What would be your dream job—whether or not you were paid for it? What is work and why do we do it? What is your life’s work? What do you like—and dislike—about the work you do for money?
-   8 Catching Fire: The Crossover Point
+**Independencia financiera como un trabajo a tiempo parcial**
+
+Trabajas media jornada para otros por dinero, así que puedes trabajar todo el 
+tiempo posible para tí mismo
+
+#### Capítulo 8: el punto de cruce
 
 “magic of compound interest” talk—the
-Ahora gastas menos. Ingresas mas. Ahorras mas. Si lo inviertes setas rico gracias al intetes compursto... Veamos que dice el libro
+
+Ahora gastas menos. Ingresas mas. Ahorras mas. Si lo inviertes setas rico 
+gracias al intetes compursto... Veamos que dice el libro
 Wall Chart.
-Notice that once your expense line goes down, your income line goes up, your debt disappears, and you start to have savings.
+
+Notice that once your expense line goes down, your income line goes up, your 
+debt disappears, and you start to have savings.
 eso deveria mostrar el wall chart ideal
+
 Capital
+
 growing gap between income and expenses—that
+
 growing gap between income and expenses—that is, savings.
+
 FI thinking calls that gap “capital.”
+
 Capital is money that makes money,
+
 A New Line on Your Chart: Monthly Investment Income
+
 Step 8: Capital and the Crossover Point
-Each month, apply the following formula to your total accumulated capital and record the result on your Wall Chart:
+
+Each month, apply the following formula to your total accumulated capital and 
+record the result on your Wall Chart:
+
 capital × current long-term interest rate 12 months = monthly investment income
 “crosses over” your expense line,
+
 Multiplica tus ahorros por el tipo de interes de bonos a largo plazo
 (we are not saying to buy them; just use the interest rate).
+
 It simulates the kind of income you will have later from your FI portfolio
 use 4 percent,
-in traditional financial planning 4 percent is also a key percentage for calculating retirement income.
+
+in traditional financial planning 4 percent is also a key percentage for 
+calculating retirement income.
+
 La idea es sacar el 4 por ciento de tus ahorros cada mes y vivir con ello
-$1,000 in savings and the current interest rate is 4 percent, your equation will read:   $1,000 × 4% 12 = $3.33 monthly investment
+$1,000 in savings and the current interest rate is 4 percent, your equation 
+will read:   $1,000 × 4% 12 = $3.33 monthly investment
+
 WHERE DO YOU ACTUALLY PUT YOUR SAVINGS?
+
 We call this liquid cash your “cushion.”
+
 De tres a seis meses de ahorro
+
 Many call it an “emergency fund”
+
 Beyond Your Cushion
+
 THE CROSSOVER POINT
-at some time in the not-too-distant future those two lines (total monthly expenses and monthly investment income) will cross.
+
+at some time in the not-too-distant future those two lines (total monthly 
+expenses and monthly investment income) will cross.
 your employment officially becomes optional!
-The Crossover Point provides us with our final definition of Financial Independence. At the Crossover Point, where monthly investment income exceeds your monthly expenses, you will be financially independent in the traditional sense of that term.
+The Crossover Point provides us with our final definition of Financial 
+Independence. At the Crossover Point, where monthly investment income exceeds your monthly expenses, you will be financially independent in the traditional sense of that term.
 THE POWER OF A VISIBLE TIME HORIZON
 
 you need to work for money for a finite period of
 Cuando descubres que pronto podrias dejar de trabajar por dinero. Te motivas mas
-You would still appear to be working for your boss, but you would know you were working for your own freedom.
+You would still appear to be working for your boss, but you would know you were 
+working for your own freedom.
 FIGURE 8-6 Dorothy and Larry’s Financials
 Busca esta imagen
-One of the cornerstones of this program, for those wishing to go all the way to Financial Independence, is concentrating on making money now so that you don’t have to make money later.
-For some, FIRE is more like sequential sabbaticals: You work, save, invest, exit paid employment for travel or study or raising kids or retooling skills, and reenter paid employment some months or years later.
+One of the cornerstones of this program, for those wishing to go all the way to 
+Financial Independence, is concentrating on making money now so that you don’t
+have to make money later.
+For some, FIRE is more like sequential sabbaticals: You work, save, invest, exit
+paid employment for travel or study or raising kids or retooling skills, and 
+reenter paid employment some months or years later.
 “too much month at the end of the money”
 Buen refran
 CACHE
 Cache (pronounced “cash”) is savings in addition to core capital or cushion.
 
 that builds up for future use.
-where does cache come from? Most people find that their expenses go down significantly when they leave paid employment.
-Most people find that their expenses go down significantly when they leave paid employment.
+where does cache come from? Most people find that their expenses go down 
+significantly when they leave paid employment.
+Most people find that their expenses go down significantly when they leave paid 
+employment.
 Pues byo esto no lo veo tan claro
 Pues byo esto no lo veo tan claro. Pero puede ayudar a aumentar esa "cache"
 In addition, your FI habits don’t end.
-many things you bought during your accumulation phase (like your sturdy car or ultimate camping gear or off-the-grid house) will never need to be replaced—they
+many things you bought during your accumulation phase (like your sturdy car or 
+ultimate camping gear or off-the-grid house) will never need to be replaced—they
 Mas ahorro. Mas cache
 Further savings. Further cache.
 Taxes on post-FI income are—and should continue to be—far lower
 Capital. Cushion. Cache. The three pillars of Financial Independence.
 NATURAL WEALTH AND FINANCIAL INTERDEPENDENCE
-“Money isn’t everything. If you have self-respect and love and family and help others, that’s your true wealth.”
+“Money isn’t everything. If you have self-respect and love and family and help 
+others, that’s your true wealth.”
 Esa es la riquea "naturak"
-The more we weave our lives beneficially with others, the less money we need to have access to everything we could possibly want.
+The more we weave our lives beneficially with others, the less money we need
+to have access to everything we could possibly want.
 sharing economy—whether
 secondary market
 DIY economy,
@@ -1213,45 +1250,63 @@ ABCs OF NATURAL WEALTH
 Abilities
 Belonging
 Community
-As you take your eyes off the false prize (of more, better, and different stuff), you put them on the real prizes: friends, family, sharing, caring, learning, meeting challenges, intimacy, rest, and being present, connected, and respected.
+As you take your eyes off the false prize (of more, better, and different stuff),
+you put them on the real prizes: friends, family, sharing, caring, learning, 
+meeting challenges, intimacy, rest, and being present, connected, and respected.
 building this wealth takes time, attention, patience, and reciprocity
 Abilities
-Abilities are the do-it-yourself skills that save you lots of money—and can make you money if you need it.
+Abilities are the do-it-yourself skills that save you lots of money—and can make
+you money if you need it.
 learning is a key to happiness.
 Belonging
-Whom can you turn to when you need help? Who will listen to you with compassion? Who would bring you meals when you are sick?
+Whom can you turn to when you need help? Who will listen to you with compassion?
+Who would bring you meals when you are sick?
 reversing that trend. Not only does this caring
 caring economy
-Death and dying groups, aging-in-place groups, and book groups are focusing on this gap and weaving local caring networks.
+Death and dying groups, aging-in-place groups, and book groups are focusing on 
+this gap and weaving local caring networks.
 This is why a lifelong practice of building belonging wealth is crucial
 Loneliness is epidemic—and expensive.
 Community
 Isolation is expensive; sharing is wealth—sometimes
 The ABCs of Inflation
 
-“Consciousness grows faster than inflation.” In other words, you can “inflate” your skills, competencies, knowledge, close companions, and community connections faster than money.
-What about the s in those ABCs of wealth? That’s your “stuff,” your financial and material wealth.
+“Consciousness grows faster than inflation.” In other words, you can “inflate” 
+your skills, competencies, knowledge, close companions, and community 
+connections faster than money.
+What about the s in those ABCs of wealth? That’s your “stuff,” your financial 
+and material wealth.
 Crossover Point Jitters
 Desventajas? Miedos? De la indepe financiera?
 Choice is the true heart of Financial Independence.
 Podras hacer lo que ye de la ganA
-There is no formula for how you live after the Crossover Point. And that’s the point. You are free to invent your
-There is no formula for how you live after the Crossover Point. And that’s the point. You are free to invent your life.
+There is no formula for how you live after the Crossover Point. And that’s the 
+point. You are free to invent your life.
 SUMMARY OF STEP 8
-separate line on your Wall Chart:   capital × current long-term interest rate 12 months = monthly investment
+separate line on your Wall Chart:   capital × current long-term interest 
+rate 12 months = monthly investment
 MONEY TALK QUESTIONS
-What ideas—practical to wild—do you have about how you’d pay off all your debt? What do you want your legacy to be? If you didn’t have to work for a living, what would you do with your time? If you could take a year off work, how would you spend it? What skills or social networks could you build now to depend less on money to meet your needs?
+What ideas—practical to wild—do you have about how you’d pay off all your debt?
+What do you want your legacy to be? If you didn’t have to work for a living, 
+what would you do with your time? If you could take a year off work, how would 
+you spend it? What skills or social networks could you build now to depend less
+on money to meet your needs?
 9 Where to Stash Your Cash for Long-Term Financial Freedom
 Step 9: Investing for FI
-This step will help you become knowledgeable and sophisticated about income-producing investments that can provide a consistent income sufficient for your needs over the long term.
+This step will help you become knowledgeable and sophisticated about 
+income-producing investments that can provide a consistent income sufficient 
+for your needs over the long term.
 
 EMPOWER YOURSELF
-learning enough to free yourself from the fear and confusion that pervade the realm of personal investments—from
+learning enough to free yourself from the fear and confusion that pervade the 
+realm of personal investments—from
 Creo que no va a hablar de inversio es tipicas
-Nothing in this section is to be construed as specific investment advice, but is simply to highlight common ways to store wealth for the long run.
+Nothing in this section is to be construed as specific investment advice, but 
+is simply to highlight common ways to store wealth for the long run.
 A Brief Glossary
 Risk Tolerance
-After the Crossover Point, you want to maximize passive income while minimizing risk so you can pay the least attention possible to your money.
+After the Crossover Point, you want to maximize passive income while minimizing
+risk so you can pay the least attention possible to your money.
 Asset Classes and Diversification
 
 Income
@@ -1264,7 +1319,9 @@ Capital gains
 Rents
 Royalties
 Time
-Conventional wisdom (CW) suggests that when you are young, you should risk more for greater wealth accumulation; as you age, you shift to a focus on preservation of capital for a stable income.
+Conventional wisdom (CW) suggests that when you are young, you should risk more
+for greater wealth accumulation; as you age, you shift to a focus on 
+preservation of capital for a stable income.
 La regla del 120 para mezclar renta fija y vble
 Fees
 Index funds have become a favorite of FIers because of low fees
@@ -1272,35 +1329,50 @@ Financial Advisers
 Socially Responsible Investing
 socially responsible investing (SRI):
 TREASURY BONDS: JOE’S PLAN
-The chart in Figure 9-1,2 developed by J. P. Livingston, founder of the website the Money Habit, is eloquent in illustrating why Joe chose and recommended Treasury bonds.
-La imagen ilustra que todos los libros de indepe financiera se escribieron en epoca de buenos numeros en el mercado
-He’d amassed $75,000, which would be $225,000 in today’s dollars. With an average of 8 percent on his money, that provided just under $20,000 a year in today’s dollars. Given his lifestyle, that was plenty. At today’s interest rates, he would have needed four times that amount (close to that magic number of $1 million) to supply his frugal FI income.
+The chart in Figure 9-1,2 developed by J. P. Livingston, founder of the website 
+the Money Habit, is eloquent in illustrating why Joe chose and recommended
+Treasury bonds.
+La imagen ilustra que todos los libros de indepe financiera se escribieron en 
+epoca de buenos numeros en el mercado
+He’d amassed $75,000, which would be $225,000 in today’s dollars. With an 
+average of 8 percent on his money, that provided just under $20,000 a year in 
+today’s dollars. Given his lifestyle, that was plenty. At today’s interest rates,
+he would have needed four times that amount (close to that magic number of $1 
+million) to supply his frugal FI income.
 Como ejemplo de que Joe acerto en el momento de invertir
 Primer on Treasury Bonds
 
 Treasury bonds are the government’s way of borrowing money.
-Treasury bonds, when they are newly issued, can be bought directly from the Federal Reserve, with no commissions whatsoever,
-The other way for an individual to buy treasuries (any issue, not just the most recent one) is through the “secondary market” from a willing seller.
+Treasury bonds, when they are newly issued, can be bought directly from the 
+Federal Reserve, with no commissions whatsoever,
+The other way for an individual to buy treasuries (any issue, not just the 
+most recent one) is through the “secondary market” from a willing seller.
 Look for BBB or better.
 Haybque buscar bonos con mejor puntuscion bbb
 A Caveat
 Nothing is certain. Nothing.
-If someone tells you he or she has a foolproof method for making money effortlessly and you follow it, Joe would have said that you are the fool.
+If someone tells you he or she has a foolproof method for making money 
+effortlessly and you follow it, Joe would have said that you are the fool.
 Buyer—of investments—beware. LOW-COST INDEX FUNDS: THE FIRE PLAN
 LOW-COST INDEX FUNDS: THE FIRE PLAN
 John Bogle, who founded investment management company Vanguard in 1975,
 returning net profits to its shareholders in the form of lower costs.
 En lugar de pagarte. Te cobra menos
-outperform most investment professionals.”3 Index funds are mutual funds or exchange-traded funds (ETFs) designed to track the performance of stock market indices
+outperform most investment professionals.”3 Index funds are mutual funds or 
+exchange-traded funds (ETFs) designed to track the performance of stock market indices
 you are not trying to beat the market.
 Millennial FIRE fans use stock index funds like boomers used banks,
 Lo tratan como si fueta algo seguro
-Over the past ninety years, the stock market has taken five big hits (32 to 86 percent drops) with recovery times afterward ranging from four to twenty-seven years.
-Los fondos indexados estan bien pero que no te pile un bajon de la bolsa. Que trada varios años en Recuprarase
+Over the past ninety years, the stock market has taken five big hits (32 to 86 
+percent drops) with recovery times afterward ranging from four to twenty-seven 
+years.
+Los fondos indexados estan bien pero que no te pile un bajon de la bolsa. Que 
+trada varios años en Recuprarase
 The Index Fund Philosophy
 Bogleheads—as
 Bogleheads—as followers of John Bogle call themselves—believe
-Invest in low-fee index funds diversified over a few asset classes and hold them for many years.
+Invest in low-fee index funds diversified over a few asset classes and hold 
+them for many years.
 Filosofia de inverdion de los boggleheads
 Take Every Advantage of Company Plans
 Do People Really Do This?
@@ -1309,7 +1381,10 @@ Contrary to most, he thinks of market crashes as a blowout sale on stocks.
 
 this—low-fee index funds often outperform managed funds.”
 Lo rwpite una y otra vez
-few simple rules to remember from the Bogleheads, it’s the following: Pay off debt and avoid it in the future. Live below your means by spending less than you earn. Invest the rest in low-cost index funds. Hold on to funds for many years.
+few simple rules to remember from the Bogleheads, it’s the following: Pay off 
+debt and avoid it in the future. Live below your means by spending less than 
+you earn. Invest the rest in low-cost index funds. Hold on to funds for many
+years.
 REAL ESTATE
 Another kind of real estate investing is investing in your own home and land
 Investing in renewable energy for your home and in farmstead infrastructure
@@ -1323,9 +1398,15 @@ Side Hustles
 CHECKLIST OF THINGS TO CONSIDER WHEN INVESTING
 In Conclusion
 SUMMARY OF STEP 9
-Become knowledgeable and sophisticated about long-term income-producing investments and manage your finances for a consistent income sufficient for your needs over the long term.
+Become knowledgeable and sophisticated about long-term income-producing 
+investments and manage your finances for a consistent income sufficient for 
+your needs over the long term.
 MONEY TALK QUESTIONS
-What are you putting in place now to keep you afloat as you age? In a pinch, what could you do to make extra money? Whom or what would you trust to help you invest your money? What’s been your experience to date with investing? What are your hopes? What values and beliefs do you bring to investing? What is your risk tolerance—in money and life? What does Financial Independence mean to you?
+What are you putting in place now to keep you afloat as you age? In a pinch,
+what could you do to make extra money? Whom or what would you trust to help you 
+invest your money? What’s been your experience to date with investing? What are 
+your hopes? What values and beliefs do you bring to investing? What is your risk
+tolerance—in money and life? What does Financial Independence mean to you?
 Quick Reference for the 9-Step Program
 
 You are in the business of maximizing the return you get in happiness for every hour of life energy spent.
@@ -1340,22 +1421,33 @@ Step 8: Capital and the Crossover Point Each month apply the following equation 
 Step 9: Investing for FI This step will help you become knowledgeable and sophisticated about income-producing investments that can provide a consistent income sufficient for your needs over the long term. Set up your financial plan using the three pillars: Capital: The income-producing core of your Financial Independence Cushion: Enough ready cash, earning bank interest, to cover six months of expenses Cache: The surplus of funds resulting from your continued practice of the nine steps
 yourmoneyoryourlife.com.
 Epilogue: Money Talks
-Money Talks are deceptively simple, yet they can change your life. A few guidelines, a potent topic or question, a process that lets everyone have a turn.
-In Money Talks there are no experts because it’s not about fixing ourselves, it’s about understanding ourselves as people caught in a consumerist money culture that may feed our greed but not our real needs
+Money Talks are deceptively simple, yet they can change your life. A few 
+guidelines, a potent topic or question, a process that lets everyone have a 
+turn.
+In Money Talks there are no experts because it’s not about fixing ourselves, 
+it’s about understanding ourselves as people caught in a consumerist money 
+culture that may feed our greed but not our real needs
 Rules for Money Talks
 Who and Where
-Anyone willing to engage with you in a candid, curious, “no shame, no blame” spirit is a perfect partner for a Money Talk.
+Anyone willing to engage with you in a candid, curious, “no shame, no blame”
+spirit is a perfect partner for a Money Talk.
 Process for Journaling (1 Person)
 Escribe la conversacion contugo mismo
 Process for a Dialogue (2 People)
 Process for Small Groups (3–8 People)
-shifting from ordinary conversation to an intentional dialogue. Half a minute of silence works wonders.
+shifting from ordinary conversation to an intentional dialogue. Half a minute 
+of silence works wonders.
 Process for Small Groups (3–8 People)
 Agreements
-No shame, no blame: Keep a nonjudgmental attitude, as best you can, toward yourself and others.
+No shame, no blame: Keep a nonjudgmental attitude, as best you can, toward 
+yourself and others.
 Topics
-Money, Work, Meaning, Purpose, Priorities, Simplicity, Stuff, Debt, Borrowing, Lending, Tithing, Taxes, Insurance, and so on—followed by three questions: What do you think about it? What do you feel about it? What are you doing about it?
-If we keep a cult of silence about our relationships with money, we all stay in the grip of that shame-and-blame, more-is-better-and-it’s-never-enough, greed-is-good, whoever-dies-with-the-most-toys-wins story we’re taught.
+Money, Work, Meaning, Purpose, Priorities, Simplicity, Stuff, Debt, Borrowing,
+Lending, Tithing, Taxes, Insurance, and so on—followed by three questions: What
+do you think about it? What do you feel about it? What are you doing about it?
+If we keep a cult of silence about our relationships with money, we all stay in 
+the grip of that shame-and-blame, more-is-better-and-it’s-never-enough, 
+greed-is-good, whoever-dies-with-the-most-toys-wins story we’re taught.
 
 ## Recursos
 
