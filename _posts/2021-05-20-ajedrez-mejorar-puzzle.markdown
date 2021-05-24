@@ -28,6 +28,25 @@ minutos, 22 en 5 minutos y 29 puzzles sin límite de tiempo. ¿Hasta dónde ser�
 capaz de llegar después de estas lecciones?
 
 ### Qa4 y Qa5
+
+Los primeros 20 niveles, aproximadamente, los puedes resolver buscando jaques y
+capturas
+
+GM Simon Williams, el tutor de estas lecciones, usa una *pirámide* de jugadas
+a analizar. Las jugadas con más prioridad serían los jaques, seguidas de las
+capturas, luego las jugadas forzadas y por último valorar las amenazas. Pero se
+va a centrar en jaques y capturas
+
+Un tema que suele aparecer en Puzzle Rush es: dar jaque con la reina en una
+columna lateral, con Qa4 o Qa5, depende del color con el que juegues, y a la
+vez, amenazar con capturar una pieza. Es decir, jaque y captura en un solo
+movimiento de la reina
+
+Supuestamente, los puzzles de Puzzle Rush son situaciones de partidas jugadas
+en chess.com, no son puzzles preparados por maestros
+
+Resumen: busca jaques, busca capturas, recuerda patrones
+
 ### Jaque al descubierto
 ### Atrapar la dama
 ### Eliminar al defensor
