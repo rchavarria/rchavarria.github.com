@@ -780,16 +780,16 @@ de 3 a 5 años de datos
 Al final de cada mes, sitúa los datos del total de ingresos y el total de gastos
 en la gráfica
 
-El verdadero aprendizaje (y la diversión) viene de ir mostrando los números en lá
+El verdadero aprendizaje (y la diversión) viene de ir mostrando los números en la
 gráfica mes a mes, año a año
 
 **El ciclo inicial de purga y despilfarro**
 
-Cuando el primer mes resulta que gastas mas de lo que ganas. Tu primer instinto
+Cuando el primer mes resulta que gastas más de lo que ganas. Tu primer instinto
 es el de recortar los gastos a lo bestia (purga)
 
 Esta clase de austeridad, sin embargo, no es sostenible. Seguramente después venga
-un período de *despilafarro*, para compensar lo que no gastaste el mes austero
+un período de *despilfarro*, para compensar lo que no gastaste el mes austero
 
 En lugar de corregir inmediatamente tu comportamiento, simplemente observa los
 números mes a mes. Observa, no reacciones (todavía)
@@ -856,7 +856,7 @@ Así pues, saldar la deuda es una forma de indenpendencia financiera
 
 Una vez que estás libre de deuda, tienes elecciones
 
-Los ahorros son otra forma de indenpendencia financiera
+Los ahorros son otra forma de independencia financiera
 
 En el gráfico de ingresos y gastos, verás muy fácilmente esos ahorros
 
@@ -1141,158 +1141,217 @@ tiempo posible para tí mismo
 
 #### Capítulo 8: el punto de cruce
 
-“magic of compound interest” talk—the
+La *magia del interés compuesto*: ahora astas menos, ingresas más, por lo que
+ahorras más. Si lo inviertes serás rico gracias al interés compuesto. Y podrás
+tener unicornios también, no te fastidia
 
-Ahora gastas menos. Ingresas mas. Ahorras mas. Si lo inviertes setas rico 
-gracias al intetes compursto... Veamos que dice el libro
-Wall Chart.
+**Capital**
 
-Notice that once your expense line goes down, your income line goes up, your 
-debt disappears, and you start to have savings.
-eso deveria mostrar el wall chart ideal
+Poco a poco, en la gráfica del paso 5 de ingresos-gastos, deberías ver que la
+diferencia entre ingresos y gastas va aumentando. Eso son los ahorros de cada 
+mes
 
-Capital
+En Independencia Financiera, eso se llama *capital*
 
-growing gap between income and expenses—that
+Capital es dinero que hace dinero
 
-growing gap between income and expenses—that is, savings.
+##### Paso 8: capital y el punto de cruce
 
-FI thinking calls that gap “capital.”
+CAda mes, aplica la siguiente fórmula a to capital total acumulado y ve dibujando
+una nueva línea en la *Gráfica*:
 
-Capital is money that makes money,
+```
+capital   *   interés a 12 meses   =  ingreso mensual por inversiones
+```
 
-A New Line on Your Chart: Monthly Investment Income
+Multiplica tus ahorros (capital) por el tpo de interés e bonos a largo plazo. No
+está diciendo que los compres, que inviertas en ellos, solamente usar ese tipo
+de interés para hacer el cálculo
 
-Step 8: Capital and the Crossover Point
+Eso simulará el tipo de ingreso que tendrás más tarde en tu cartera de inversiones
+de Independencia Financiera. Parece que una cifra aceptable es el 4%
 
-Each month, apply the following formula to your total accumulated capital and 
-record the result on your Wall Chart:
+En planificación financiera tradicional, el 4% se acepta como porcentaje para
+calcular los ingresos de la jubilación
 
-capital × current long-term interest rate 12 months = monthly investment income
-“crosses over” your expense line,
+La idea es obtener una rentabilidad del 4% de tus ahorros al año, y vivir con ello
 
-Multiplica tus ahorros por el tipo de interes de bonos a largo plazo
-(we are not saying to buy them; just use the interest rate).
+**¿Dónde guardar esos ahorros mientras tanto?**
 
-It simulates the kind of income you will have later from your FI portfolio
-use 4 percent,
+Antes de nada, hay que mantener un *fondo de emergencia*, para poder cubrir de
+3 a 6 meses de gastos. El autor también llama a este fondo *cojín*, o más bien,
+*colchón*
 
-in traditional financial planning 4 percent is also a key percentage for 
-calculating retirement income.
+**El punto de cruce**
 
-La idea es sacar el 4 por ciento de tus ahorros cada mes y vivir con ello
-$1,000 in savings and the current interest rate is 4 percent, your equation 
-will read:   $1,000 × 4% 12 = $3.33 monthly investment
+Algún momento en el futuro, dos líneas de la Gráfica (gastos totales mensuales e
+ingresos mensuales por inversiones) se cruzarán. En ese momento, tu empleo se
+convierte oficialmente en opcional
 
-WHERE DO YOU ACTUALLY PUT YOUR SAVINGS?
+El *punto de cruce* nos da la definición final de Independencia Financiera. Cuando
+tus ingresos por inversiones superan tus gastos eres financieramente independiente
+en el sentido tradicional del término
 
-We call this liquid cash your “cushion.”
+**El poder de un horizonte temporal visible**
 
-De tres a seis meses de ahorro
+Necesitas trabajar por dinero por un espacion finito de tiempo. Cuando descubres
+que pronto podrías dejar de trabajar por dinero. Te motivas más
 
-Many call it an “emergency fund”
+Podría parecer que estás trabajando para tu jefe, pero tú sabes que estás trabajando
+para tu propia libertad
 
-Beyond Your Cushion
+/////
+/////
+/////
+/////
+/////
+/////
+///// FIGURE 8-6 Dorothy and Larry’s Financials
+/////
+/////
+/////
+/////
+/////
+/////
 
-THE CROSSOVER POINT
+Una de las piedras angulares de este programa, para aquellos que quieran andar
+todo el camino hasta la Independencia Financiera, es concentrarse en hacer dinero
+ahora de forma que no tengas que conseguir dinero después
 
-at some time in the not-too-distant future those two lines (total monthly 
-expenses and monthly investment income) will cross.
-your employment officially becomes optional!
-The Crossover Point provides us with our final definition of Financial 
-Independence. At the Crossover Point, where monthly investment income exceeds your monthly expenses, you will be financially independent in the traditional sense of that term.
-THE POWER OF A VISIBLE TIME HORIZON
+*FI*, Financial Independence
 
-you need to work for money for a finite period of
-Cuando descubres que pronto podrias dejar de trabajar por dinero. Te motivas mas
-You would still appear to be working for your boss, but you would know you were 
-working for your own freedom.
-FIGURE 8-6 Dorothy and Larry’s Financials
-Busca esta imagen
-One of the cornerstones of this program, for those wishing to go all the way to 
-Financial Independence, is concentrating on making money now so that you don’t
-have to make money later.
-For some, FIRE is more like sequential sabbaticals: You work, save, invest, exit
-paid employment for travel or study or raising kids or retooling skills, and 
-reenter paid employment some months or years later.
-“too much month at the end of the money”
-Buen refran
-CACHE
-Cache (pronounced “cash”) is savings in addition to core capital or cushion.
+*FIRE*, Financial Independence, Retire Early
 
-that builds up for future use.
-where does cache come from? Most people find that their expenses go down 
-significantly when they leave paid employment.
-Most people find that their expenses go down significantly when they leave paid 
-employment.
-Pues byo esto no lo veo tan claro
-Pues byo esto no lo veo tan claro. Pero puede ayudar a aumentar esa "cache"
-In addition, your FI habits don’t end.
-many things you bought during your accumulation phase (like your sturdy car or 
-ultimate camping gear or off-the-grid house) will never need to be replaced—they
-Mas ahorro. Mas cache
-Further savings. Further cache.
-Taxes on post-FI income are—and should continue to be—far lower
-Capital. Cushion. Cache. The three pillars of Financial Independence.
+Para algunos, *FIRE* es como una serie de tiempos sabáticos secuenciales: trabajas,
+ahorras, inviertes, dejas un empleo pagado para trabajar, estudiar, criar hijos
+o aprender nuevas habilidades, y vuelves a entrar al mercado laboral meses o
+años después
+
+> Queda demasiado mes después de todo el dinero
+
+Sería una especie de refrán, opuesto a *No queda dinero para llegar a fin de mes*
+
+**Caché**
+
+*Caché* son los ahorros adicionales al *capital* o el *colchón*
+
+El autor siempre habla de: blah blah los ingresos... y un poquito más
+
+A la mayoría de la gente le pasa que sus gastos se reducen drásticamente cuando
+dejan un empleo pagado
+
+Yo no lo veo tan claro, que esa reducción sea muchísimo dinero, pero sí puede
+ser que ayude a aumentar esa *caché*, esos ahorros no previstos
+
+Porque además de que al dejar el trabajo remunerado, tus gastos bajan, tus
+hábitos relacionados con *FI* no cambian.
+
+Muchas cosas que compraste durante la fase de acumulación (coche, equipo de
+acampada, tu apartamento en la playa) nunca necesitarán ser reemplazados
+
+Más ahorro, más caché
+
+Los impuestos sobre los ingresos en esta fase, son mucho menores. Bueno, eso será
+en su país. Prefiero no contar con menores impuestos para hacerme las cuentas
+
+Capital, colchón y caché: los 3 pilares de la Independencia Financiera
+
+** Riqueza natural e Independencia Financiera**
+
 NATURAL WEALTH AND FINANCIAL INTERDEPENDENCE
+
 “Money isn’t everything. If you have self-respect and love and family and help 
 others, that’s your true wealth.”
+
 Esa es la riquea "naturak"
+
 The more we weave our lives beneficially with others, the less money we need
 to have access to everything we could possibly want.
 sharing economy—whether
 secondary market
+
 DIY economy,
+
 Financial Interdependence,
+
 the wealth we all share when we coexist together.
+
 ABCs OF NATURAL WEALTH
 
 Abilities
+
 Belonging
+
 Community
+
 As you take your eyes off the false prize (of more, better, and different stuff),
 you put them on the real prizes: friends, family, sharing, caring, learning, 
 meeting challenges, intimacy, rest, and being present, connected, and respected.
 building this wealth takes time, attention, patience, and reciprocity
+
 Abilities
+
 Abilities are the do-it-yourself skills that save you lots of money—and can make
 you money if you need it.
+
 learning is a key to happiness.
+
 Belonging
+
 Whom can you turn to when you need help? Who will listen to you with compassion?
+
 Who would bring you meals when you are sick?
 reversing that trend. Not only does this caring
 caring economy
+
 Death and dying groups, aging-in-place groups, and book groups are focusing on 
 this gap and weaving local caring networks.
+
 This is why a lifelong practice of building belonging wealth is crucial
+
 Loneliness is epidemic—and expensive.
+
 Community
+
 Isolation is expensive; sharing is wealth—sometimes
+
 The ABCs of Inflation
 
 “Consciousness grows faster than inflation.” In other words, you can “inflate” 
 your skills, competencies, knowledge, close companions, and community 
 connections faster than money.
+
 What about the s in those ABCs of wealth? That’s your “stuff,” your financial 
 and material wealth.
+
 Crossover Point Jitters
+
 Desventajas? Miedos? De la indepe financiera?
+
 Choice is the true heart of Financial Independence.
+
 Podras hacer lo que ye de la ganA
+
 There is no formula for how you live after the Crossover Point. And that’s the 
 point. You are free to invent your life.
+
 SUMMARY OF STEP 8
+
 separate line on your Wall Chart:   capital × current long-term interest 
 rate 12 months = monthly investment
+
 MONEY TALK QUESTIONS
+
 What ideas—practical to wild—do you have about how you’d pay off all your debt?
 What do you want your legacy to be? If you didn’t have to work for a living, 
 what would you do with your time? If you could take a year off work, how would 
 you spend it? What skills or social networks could you build now to depend less
 on money to meet your needs?
-9 Where to Stash Your Cash for Long-Term Financial Freedom
-Step 9: Investing for FI
+
+#### Chapter 9 Where to Stash Your Cash for Long-Term Financial Freedom
+
+##### Step 9: Investing for FI
+
 This step will help you become knowledgeable and sophisticated about 
 income-producing investments that can provide a consistent income sufficient 
 for your needs over the long term.
