@@ -39,6 +39,22 @@ ARM 64 bits, por lo que hay que cambiar `config.txt` en la misma y poner `arm64b
 Por lo pronto, necesito actualizar mi Raspberry. Actualizo a la distribución Raspberry OS,
 antiguamente conocida como *Raspbian*
 
+No he encontrado ninguna referencia a cambiar la arquitectura del sistema operativo
+de la Raspberry *en caliente*. Creo que va a tocar instalar un nuevo sistema
+operativo desde 0 en ella.
+
+Para ello, hay que grabar una imagen en una tarjeta de memoria. Parece que,
+oficialmente, solo existen versiones de 32 bits. La versión de 64 bits es bastante
+moderna, y no está todavía estable.
+
+Se puede conseguir en el centro de descargas de Raspberry PI,
+[Raspberry OS 64 bit][4], y se puede grabar en la tarjeta de memoria usando
+[Raspberry Pi Imager][5].
+
+Continuará...
+
 [1]: https://github.com/awesome-selfhosted/awesome-selfhosted
 [2]: https://docs.photoprism.org/
 [3]: https://docs.photoprism.org/getting-started/raspberry-pi/
+[4]: https://downloads.raspberrypi.org/raspios_arm64/images/raspios_arm64-2021-04-09/2021-03-04-raspios-buster-arm64.zip
+[5]: https://www.raspberrypi.org/software/
