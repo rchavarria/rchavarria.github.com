@@ -24,7 +24,9 @@ El proyecto que tengo en la cabeza es el siguiente:
 
 <-- more -->
 
-Comenzamos con la lista de posibles servicios en el repositorio de GitHug [awesome-selfhosted][1]:
+## Comenzando
+
+Comenzamos con la lista de posibles servicios en el repositorio de GitHub [awesome-selfhosted][1]:
 
 - Uno: blah blah
 - Dos: blah foo
@@ -38,6 +40,8 @@ ARM 64 bits, por lo que hay que cambiar `config.txt` en la misma y poner `arm64b
 
 Por lo pronto, necesito actualizar mi Raspberry. Actualizo a la distribución Raspberry OS,
 antiguamente conocida como *Raspbian*
+
+## Instalar Raspberry 64 bits
 
 No he encontrado ninguna referencia a cambiar la arquitectura del sistema operativo
 de la Raspberry *en caliente*. Creo que va a tocar instalar un nuevo sistema
