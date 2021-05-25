@@ -164,6 +164,15 @@ tu pequeña compra insignificante (gazingus pin) que tienes que comprar sí o s�
 - ¿Cuál es el trabajo de tu vida?
 - ¿Qué te gusta y disgusta del trabajo que haces por dinero?
 
+**Capítulo 8**
+
+- ¿Qué ideas (prácticas o locas) tienes acerca de cómo pagar todas tus deudas?
+- ¿Qué quieres dejar como legado?
+- Si no tuvieras que trabajar para vivir, ¿qué harías con tu tiempo?
+- Si pudieras tomarte un año sabático en el trabajo, ¿cómo pasarías ese año?
+- ¿Qué habilidades o relaciones sociales podrías construir ahora para depender
+menos del dinero para satisfacer tus necesidades?
+
 #### Introducción a la nueva edición
 
 De echo, "suficiente" es la promesa radical de este libro
@@ -1258,95 +1267,50 @@ Capital, colchón y caché: los 3 pilares de la Independencia Financiera
 
 ** Riqueza natural e Independencia Financiera**
 
-NATURAL WEALTH AND FINANCIAL INTERDEPENDENCE
+El autor llama *riqueza natural* a tener respeto por uno mismo, ser amado, tener
+una familia y ayudar a los demás. El dinero no lo es todo
 
-“Money isn’t everything. If you have self-respect and love and family and help 
-others, that’s your true wealth.”
+Cuanto más entrelazamos nuestra vida con la de los demás de una forma beneficiosa
+para ambos, menos dinero necesitamos para tener acceso a todo lo que podríamos
+desear
 
-Esa es la riquea "naturak"
+Relacionado con esta riqueza natural, estaría: vivir en comunidad, economía de
+compartir, mercados de segunda mano, economía de reparaciones (*do it yourself*),
+la economía que todos compartimos cuando coexistimos juntos
 
-The more we weave our lives beneficially with others, the less money we need
-to have access to everything we could possibly want.
-sharing economy—whether
-secondary market
+Por aquí el libro toma un cáliz un poco hippie, de comuna y tal. 
 
-DIY economy,
+**El ABC de la riqueza natural**
 
-Financial Interdependence,
+Habilidades, Pertenencia y Comunidad (Abilities, Belonging, Community)
 
-the wealth we all share when we coexist together.
+Cuando dejas de prestar atención a los falsos premios (tener más, mejores cosas,
+cosas diferentes), prestas más atención a los verdaderos premios: amigos, familia,
+compartir, cuidar, aprender, superar retos, intimidad, descanso, estar presente,
+conectado, respetado. Construir esta riqueza lleva tiempo, atención, paciencia
+y reciprocidad
 
-ABCs OF NATURAL WEALTH
+- Habilidades (abilities): son las habilidades de reparar y hacer las cosas por
+tí mismo que te pueden ahorrar mucho dinero, o te pueden hacer ganar cierto
+  dinero, de vez en cuando. Aprender suele ser clave para ser feliz
+- Pertenencia (belonging): ¿a quién puedes llamar cuando necesitas ayuda?
+¿quién te escuchara con compasión? ¿quién te traerá la comida cuando estés
+  enfermo? Pertenece a una comunidad, a un grupo de *envejecer todos juntos*,
+  clubs de lectura, entrelaza redes locales de cuidados... La soledad es una
+  enfermedad, y es muy cara
+- Comunidad (communitiy): estar aislado es muy caro, compartir es riqueza
 
-Abilities
+**El ABC de la inflación**
 
-Belonging
+Tus habilidades, competencias, conocimiento, relaciones personales, comunidad 
+y conexiones pueden crecer más rápido que tu dinero
 
-Community
+**Miedos ante la Independencia Financiera**
 
-As you take your eyes off the false prize (of more, better, and different stuff),
-you put them on the real prizes: friends, family, sharing, caring, learning, 
-meeting challenges, intimacy, rest, and being present, connected, and respected.
-building this wealth takes time, attention, patience, and reciprocity
+Poder elegir es lo mejor que te da la FI. Podrás hacer lo que te de la gana
 
-Abilities
-
-Abilities are the do-it-yourself skills that save you lots of money—and can make
-you money if you need it.
-
-learning is a key to happiness.
-
-Belonging
-
-Whom can you turn to when you need help? Who will listen to you with compassion?
-
-Who would bring you meals when you are sick?
-reversing that trend. Not only does this caring
-caring economy
-
-Death and dying groups, aging-in-place groups, and book groups are focusing on 
-this gap and weaving local caring networks.
-
-This is why a lifelong practice of building belonging wealth is crucial
-
-Loneliness is epidemic—and expensive.
-
-Community
-
-Isolation is expensive; sharing is wealth—sometimes
-
-The ABCs of Inflation
-
-“Consciousness grows faster than inflation.” In other words, you can “inflate” 
-your skills, competencies, knowledge, close companions, and community 
-connections faster than money.
-
-What about the s in those ABCs of wealth? That’s your “stuff,” your financial 
-and material wealth.
-
-Crossover Point Jitters
-
-Desventajas? Miedos? De la indepe financiera?
-
-Choice is the true heart of Financial Independence.
-
-Podras hacer lo que ye de la ganA
-
-There is no formula for how you live after the Crossover Point. And that’s the 
-point. You are free to invent your life.
-
-SUMMARY OF STEP 8
-
-separate line on your Wall Chart:   capital × current long-term interest 
-rate 12 months = monthly investment
-
-MONEY TALK QUESTIONS
-
-What ideas—practical to wild—do you have about how you’d pay off all your debt?
-What do you want your legacy to be? If you didn’t have to work for a living, 
-what would you do with your time? If you could take a year off work, how would 
-you spend it? What skills or social networks could you build now to depend less
-on money to meet your needs?
+No hay una fórmula sobre qué hacer una vez sobrepases el *punto de cruce*. Y
+eso es justo lo que buscamos. Eres libre de inventar tu propia vida
 
 #### Chapter 9 Where to Stash Your Cash for Long-Term Financial Freedom
 
