@@ -1312,162 +1312,233 @@ Poder elegir es lo mejor que te da la FI. Podrás hacer lo que te de la gana
 No hay una fórmula sobre qué hacer una vez sobrepases el *punto de cruce*. Y
 eso es justo lo que buscamos. Eres libre de inventar tu propia vida
 
+#### Capítulo 9: donde almacenar tu dinero para tu libertad financiera a largo plazo
+
+##### Paso 9: invertir durante tu Independencia Financiera
+
 #### Chapter 9 Where to Stash Your Cash for Long-Term Financial Freedom
 
 ##### Step 9: Investing for FI
 
-This step will help you become knowledgeable and sophisticated about 
-income-producing investments that can provide a consistent income sufficient 
-for your needs over the long term.
+Este paso te ayudará a conocer inversiones que te proporcionen ingresos consistentes
+y suficientes par atus necesidades a largo plazo
 
-EMPOWER YOURSELF
-learning enough to free yourself from the fear and confusion that pervade the 
-realm of personal investments—from
-Creo que no va a hablar de inversio es tipicas
-Nothing in this section is to be construed as specific investment advice, but 
-is simply to highlight common ways to store wealth for the long run.
-A Brief Glossary
-Risk Tolerance
-After the Crossover Point, you want to maximize passive income while minimizing
-risk so you can pay the least attention possible to your money.
-Asset Classes and Diversification
+**Empodérate a ti mismo**
 
-Income
-five ways
-Interest
-Dividends
-corporations. Capital
-corporations. Capital gains
-Capital gains
-Rents
-Royalties
-Time
-Conventional wisdom (CW) suggests that when you are young, you should risk more
-for greater wealth accumulation; as you age, you shift to a focus on 
-preservation of capital for a stable income.
-La regla del 120 para mezclar renta fija y vble
-Fees
-Index funds have become a favorite of FIers because of low fees
-Financial Advisers
-Socially Responsible Investing
-socially responsible investing (SRI):
-TREASURY BONDS: JOE’S PLAN
-The chart in Figure 9-1,2 developed by J. P. Livingston, founder of the website 
-the Money Habit, is eloquent in illustrating why Joe chose and recommended
-Treasury bonds.
-La imagen ilustra que todos los libros de indepe financiera se escribieron en 
-epoca de buenos numeros en el mercado
-He’d amassed $75,000, which would be $225,000 in today’s dollars. With an 
-average of 8 percent on his money, that provided just under $20,000 a year in 
-today’s dollars. Given his lifestyle, that was plenty. At today’s interest rates,
-he would have needed four times that amount (close to that magic number of $1 
-million) to supply his frugal FI income.
-Como ejemplo de que Joe acerto en el momento de invertir
-Primer on Treasury Bonds
+Aprende lo suficiente para liberarte a tí mismo del miedo y la confusión que
+impregna el mundo de las inversiones personales
 
-Treasury bonds are the government’s way of borrowing money.
-Treasury bonds, when they are newly issued, can be bought directly from the 
-Federal Reserve, with no commissions whatsoever,
-The other way for an individual to buy treasuries (any issue, not just the 
-most recent one) is through the “secondary market” from a willing seller.
-Look for BBB or better.
-Haybque buscar bonos con mejor puntuscion bbb
-A Caveat
-Nothing is certain. Nothing.
-If someone tells you he or she has a foolproof method for making money 
-effortlessly and you follow it, Joe would have said that you are the fool.
-Buyer—of investments—beware. LOW-COST INDEX FUNDS: THE FIRE PLAN
+En esta sección no encontrarás recomendaciones de inversión, si no formas
+comunes de almacenar requeza para el largo plazo
+
+Una vez que has superado el *punto de cruce*, quieres maximizar los ingresos
+pasivos minimizando el riesto, de forma que puede prestar la menos atención 
+posible a tu dinero
+
+**Bonos del tesoro**
+
+Nos muestran una imagen que ilustra que la mayoría de libros sobre Indenpendencia
+Financiera se escribieron en época de buenos números en el mercado
+
+Vamos, que si aciertas en el momento histórico para invertir, te irá bien. Pero
+tienes que tener tu punto de suerte. Ahora mismo, con los tipos de interés que
+tenemos y las opciones de inversión, conseguir lo que proponen esos libros
+está un poco más difícil
+
+Nada es completamente seguro, ni cierto. Nada. Si alguien te dice que tiene un
+método infalible para hacer dinero sin esfuerzo y tú lo sigues, es que estás
+siendo *estafado*
+
+**Bonos indexados low-cost: el plan de todo _FIRE_**
+
 LOW-COST INDEX FUNDS: THE FIRE PLAN
+
 John Bogle, who founded investment management company Vanguard in 1975,
 returning net profits to its shareholders in the form of lower costs.
+
 En lugar de pagarte. Te cobra menos
+
 outperform most investment professionals.”3 Index funds are mutual funds or 
 exchange-traded funds (ETFs) designed to track the performance of stock market indices
 you are not trying to beat the market.
+
 Millennial FIRE fans use stock index funds like boomers used banks,
+
 Lo tratan como si fueta algo seguro
+
 Over the past ninety years, the stock market has taken five big hits (32 to 86 
 percent drops) with recovery times afterward ranging from four to twenty-seven 
 years.
+
 Los fondos indexados estan bien pero que no te pile un bajon de la bolsa. Que 
 trada varios años en Recuprarase
+
 The Index Fund Philosophy
+
 Bogleheads—as
+
 Bogleheads—as followers of John Bogle call themselves—believe
+
 Invest in low-fee index funds diversified over a few asset classes and hold 
 them for many years.
+
 Filosofia de inverdion de los boggleheads
+
 Take Every Advantage of Company Plans
+
 Do People Really Do This?
+
 Mr. Money Mustache.
+
 Contrary to most, he thinks of market crashes as a blowout sale on stocks.
 
 this—low-fee index funds often outperform managed funds.”
+
 Lo rwpite una y otra vez
+
 few simple rules to remember from the Bogleheads, it’s the following: Pay off 
 debt and avoid it in the future. Live below your means by spending less than 
 you earn. Invest the rest in low-cost index funds. Hold on to funds for many
 years.
+
 REAL ESTATE
+
 Another kind of real estate investing is investing in your own home and land
+
 Investing in renewable energy for your home and in farmstead infrastructure
+
 MY CHOICES: MULTIPLE SOCIALLY
+
 MY CHOICES: MULTIPLE SOCIALLY RESPONSIBLE INCOME STREAMS
+
 Real Estate
+
 Social Security
+
 Local Lending
+
 Green Energy
+
 Side Hustles
+
 CHECKLIST OF THINGS TO CONSIDER WHEN INVESTING
+
 In Conclusion
+
 SUMMARY OF STEP 9
+
 Become knowledgeable and sophisticated about long-term income-producing 
 investments and manage your finances for a consistent income sufficient for 
 your needs over the long term.
+
 MONEY TALK QUESTIONS
+
 What are you putting in place now to keep you afloat as you age? In a pinch,
 what could you do to make extra money? Whom or what would you trust to help you 
 invest your money? What’s been your experience to date with investing? What are 
 your hopes? What values and beliefs do you bring to investing? What is your risk
 tolerance—in money and life? What does Financial Independence mean to you?
+
 Quick Reference for the 9-Step Program
 
-You are in the business of maximizing the return you get in happiness for every hour of life energy spent.
-Step 1: Making Peace with the Past A. How much have you earned in your life? Find out your total lifetime earnings—the sum total of your gross income, from the first penny you ever earned to your most recent paycheck. B. What have you got to show for it? Find out your net worth by creating a personal balance sheet of assets and liabilities—everything you own and everything you owe.
-Step 2: Being in the Present—Tracking Your Life Energy A. How much are you trading your life energy for? Establish the actual costs in time and money required to maintain your job, and compute your real hourly wage. B. Keep track of every cent that comes into or goes out of your life.
-Step 3: Where Is It All Going? (The Monthly Tabulation) Every month, total all expenses within categories generated by your own unique spending pattern. Then total income. Convert dollars spent in each category to “hours of life energy,” using your real hourly wage as computed in step 2.
-Step 4: Three Questions That Will Transform Your Life On your Monthly Tabulation, ask these three questions of each of your category totals expressed as hours of life energy and record your responses: Did I receive fulfillment, satisfaction, and value in proportion to life energy spent? Is this expenditure of life energy in alignment with my values and life purpose? How might this expenditure change if I didn’t have to work for money? For each question in each category, evaluate whether the expense should increase, decrease, or stay the same for your optimal fulfillment. This is the heart of the program.
-Step 5: Making Life Energy Visible Create a large Wall (or Online) Chart plotting the total monthly income and total monthly expenses from your Monthly Tabulation. Put it where you will see it every day.
-Step 6: Valuing Your Life Energy—Minimizing Spending Learn and practice intelligent use of your life energy (money), which will result in lowering your expenses and increasing your savings. This will create greater fulfillment, integrity, and alignment in your life.
-Step 7: Valuing Your Life Energy—Maximizing Income Respect the life energy you are putting into your job. Money is simply something you trade your life energy for. Trade it with purpose and integrity for increased earnings.
-Step 8: Capital and the Crossover Point Each month apply the following equation to your total accumulated capital, and post the monthly independence income as a separate line on your Wall Chart:   capital × current long-term interest rate 12 months = monthly investment income
-Step 9: Investing for FI This step will help you become knowledgeable and sophisticated about income-producing investments that can provide a consistent income sufficient for your needs over the long term. Set up your financial plan using the three pillars: Capital: The income-producing core of your Financial Independence Cushion: Enough ready cash, earning bank interest, to cover six months of expenses Cache: The surplus of funds resulting from your continued practice of the nine steps
+You are in the business of maximizing the return you get in happiness for every 
+hour of life energy spent.
+
+Step 1: Making Peace with the Past A. How much have you earned in your life? 
+Find out your total lifetime earnings—the sum total of your gross income, from 
+the first penny you ever earned to your most recent paycheck. B. What have you 
+got to show for it? Find out your net worth by creating a personal balance sheet 
+of assets and liabilities—everything you own and everything you owe.
+
+Step 2: Being in the Present—Tracking Your Life Energy A. How much are you 
+trading your life energy for? Establish the actual costs in time and money 
+required to maintain your job, and compute your real hourly wage. B. Keep track
+of every cent that comes into or goes out of your life.
+
+Step 3: Where Is It All Going? (The Monthly Tabulation) Every month, total all 
+expenses within categories generated by your own unique spending pattern. Then 
+total income. Convert dollars spent in each category to “hours of life energy,” 
+using your real hourly wage as computed in step 2.
+
+Step 4: Three Questions That Will Transform Your Life On your Monthly Tabulation,
+ask these three questions of each of your category totals expressed as hours of
+life energy and record your responses: Did I receive fulfillment, satisfaction,
+and value in proportion to life energy spent? Is this expenditure of life energy 
+in alignment with my values and life purpose? How might this expenditure change 
+if I didn’t have to work for money? For each question in each category, evaluate
+whether the expense should increase, decrease, or stay the same for your optimal 
+fulfillment. This is the heart of the program.
+
+Step 5: Making Life Energy Visible Create a large Wall (or Online) Chart plotting
+the total monthly income and total monthly expenses from your Monthly Tabulation.
+Put it where you will see it every day.
+
+Step 6: Valuing Your Life Energy—Minimizing Spending Learn and practice 
+intelligent use of your life energy (money), which will result in lowering 
+your expenses and increasing your savings. This will create greater fulfillment,
+integrity, and alignment in your life.
+
+Step 7: Valuing Your Life Energy—Maximizing Income Respect the life energy you
+are putting into your job. Money is simply something you trade your life energy
+for. Trade it with purpose and integrity for increased earnings.
+
+Step 8: Capital and the Crossover Point Each month apply the following equation
+to your total accumulated capital, and post the monthly independence income as 
+a separate line on your Wall Chart:   capital × current long-term interest
+rate 12 months = monthly investment income
+
+Step 9: Investing for FI This step will help you become knowledgeable and 
+sophisticated about income-producing investments that can provide a consistent
+income sufficient for your needs over the long term. Set up your financial 
+plan using the three pillars: Capital: The income-producing core of your 
+Financial Independence Cushion: Enough ready cash, earning bank interest, 
+to cover six months of expenses Cache: The surplus of funds resulting from 
+your continued practice of the nine steps
+
 yourmoneyoryourlife.com.
+
 Epilogue: Money Talks
+
 Money Talks are deceptively simple, yet they can change your life. A few 
 guidelines, a potent topic or question, a process that lets everyone have a 
 turn.
+
 In Money Talks there are no experts because it’s not about fixing ourselves, 
 it’s about understanding ourselves as people caught in a consumerist money 
 culture that may feed our greed but not our real needs
+
 Rules for Money Talks
+
 Who and Where
+
 Anyone willing to engage with you in a candid, curious, “no shame, no blame”
 spirit is a perfect partner for a Money Talk.
+
 Process for Journaling (1 Person)
+
 Escribe la conversacion contugo mismo
+
 Process for a Dialogue (2 People)
+
 Process for Small Groups (3–8 People)
+
 shifting from ordinary conversation to an intentional dialogue. Half a minute 
 of silence works wonders.
+
 Process for Small Groups (3–8 People)
+
 Agreements
+
 No shame, no blame: Keep a nonjudgmental attitude, as best you can, toward 
 yourself and others.
+
 Topics
+
 Money, Work, Meaning, Purpose, Priorities, Simplicity, Stuff, Debt, Borrowing,
+
 Lending, Tithing, Taxes, Insurance, and so on—followed by three questions: What
 do you think about it? What do you feel about it? What are you doing about it?
+
 If we keep a cult of silence about our relationships with money, we all stay in 
 the grip of that shame-and-blame, more-is-better-and-it’s-never-enough, 
 greed-is-good, whoever-dies-with-the-most-toys-wins story we’re taught.
