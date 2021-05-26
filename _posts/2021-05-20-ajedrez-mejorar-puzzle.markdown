@@ -48,6 +48,18 @@ en chess.com, no son puzzles preparados por maestros
 Resumen: busca jaques, busca capturas, recuerda patrones
 
 ### Jaque al descubierto
+
+El siguiente patrón que vamos a trabajar es el ataque al descubierto, más
+concretamente el jaque al descubierto, que nos permitirá ganar material
+
+Por ejemplo, cuando el oponente sitúa su dama en línea con la tuya (línea
+horizontal, vertical o diagonal), comprueba si puedes hacer jaque con la
+pieza que está entre ambas damas, y comprueba si ese ataque al descubierto
+te permite capturar la dama del oponente
+
+En Puzzle Rush como en tus partidas, si no tienes posibilidad de dar jaque,
+comprueba qué posibilidades tienes de capturar piezas
+
 ### Atrapar la dama
 ### Eliminar al defensor
 ### Piezas indefensas
