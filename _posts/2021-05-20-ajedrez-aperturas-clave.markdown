@@ -41,11 +41,23 @@ centro
 1.a3 es la apertura Anderssen. No controla el centro, pero al menos no daña
 la posición de Blancas
 
-### Aperturas populares con 1. e4
-### Aperturas con 1. e4: defensa siciliana
-### Aperturas con 1. e4: francesa y Caro Kann
-### Aperturas populares con 1. d4
-### Aperturas con 1. d4 Nf6: holandesa
+### Aperturas populares con 1.e4
+
+Ruy López: 1.e4 e5 2.Nf3 Nc6 3.Bb5. Blancas pueden cambiar su alfil blanco por
+un caballo, doblando peones de Negras en la columna *c*. 
+
+El objetivo final de Blancas es c3, d4. Controlando así todo el centro. Para
+evitarlo, Negras pueden defender su peón en e5 con d6. Normalmente, Negras no
+llevan su alfil negro más allá de e7.
+
+Italiana: 1.e4 e5 2.Nf3 Nc6 3.Bc4, una de las aperturas más jugadas. Cuidado
+las Negras si juegan 3...Nf6, Blancas pueden encontrar un buen juego si Negras
+no prestan atención
+
+### Aperturas con 1.e4: defensa Siciliana
+### Aperturas con 1.e4: Francesa y Caro Kann
+### Aperturas populares con 1.d4
+### Aperturas con 1.d4 Nf6: Holandesa
 ### Gambitos
 ### Celadas (en la apertura)
 
