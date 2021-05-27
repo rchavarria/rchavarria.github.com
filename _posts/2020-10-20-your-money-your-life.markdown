@@ -1351,55 +1351,37 @@ siendo *estafado*
 
 **Bonos indexados low-cost: el plan de todo _FIRE_**
 
-LOW-COST INDEX FUNDS: THE FIRE PLAN
+John Bogle, fundó Vanguard en 1975, una compañía de gestión de inversiones. En
+lugar de pagar más intereses, lo que hace es cobrarte menos comisiones.
 
-John Bogle, who founded investment management company Vanguard in 1975,
-returning net profits to its shareholders in the form of lower costs.
+Este señor piensa qu eno se puede batir al mercado. Que lo que hay que hacer es
+invertir en fondos que repliquen un índice del mercado, y básicamente seguir
+ese índice
 
-En lugar de pagarte. Te cobra menos
+Los fans de *FIRE* de ahora, usan los fondos indexados como nuestros padres
+usaban los bancos. Lo tratan como si fuera algo seguro (ya veremos si nos pegamos
+una buena leche o no)
 
-outperform most investment professionals.”3 Index funds are mutual funds or 
-exchange-traded funds (ETFs) designed to track the performance of stock market indices
-you are not trying to beat the market.
+Los fondos indexados están bien pero que no te pile un bajón de la bolsa. Que
+tarda varios años en recuperarse. En los últimos 90 años, tras un bajón enorme
+de la bolsa, ésta ha tardado entre 4 y 27 años en recuperarse de cada uno de esos
+bajones
 
-Millennial FIRE fans use stock index funds like boomers used banks,
+La filosofía de los fondos indexados o Bogleheads: invierte en fondos indexados con bajas
+comisiones y que esté deversificados en varias clases de activos y mantén ahí
+tu dinero durante muchos años
 
-Lo tratan como si fueta algo seguro
+Mr. Money Mustache cree, al contrario que la mayoría, que las grandes bajadas en
+los mercados son una oportunidad única de rebajas de acciones
 
-Over the past ninety years, the stock market has taken five big hits (32 to 86 
-percent drops) with recovery times afterward ranging from four to twenty-seven 
-years.
+Unas cuantas reglas simples que vienen de los Bogleheads:
 
-Los fondos indexados estan bien pero que no te pile un bajon de la bolsa. Que 
-trada varios años en Recuprarase
+- Paga tu deuda y evítala en el futuro
+- Vive por debajo de tus necesidades, gastando menos de lo que ingreses
+- El resto, inviértelo en fondos indexados de bajas comisiones
+- Mantén esa inversión por muchos años
 
-The Index Fund Philosophy
-
-Bogleheads—as
-
-Bogleheads—as followers of John Bogle call themselves—believe
-
-Invest in low-fee index funds diversified over a few asset classes and hold 
-them for many years.
-
-Filosofia de inverdion de los boggleheads
-
-Take Every Advantage of Company Plans
-
-Do People Really Do This?
-
-Mr. Money Mustache.
-
-Contrary to most, he thinks of market crashes as a blowout sale on stocks.
-
-this—low-fee index funds often outperform managed funds.”
-
-Lo rwpite una y otra vez
-
-few simple rules to remember from the Bogleheads, it’s the following: Pay off 
-debt and avoid it in the future. Live below your means by spending less than 
-you earn. Invest the rest in low-cost index funds. Hold on to funds for many
-years.
+**Inversiones inmobiliarias**
 
 REAL ESTATE
 
