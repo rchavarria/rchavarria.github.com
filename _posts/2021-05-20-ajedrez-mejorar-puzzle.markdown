@@ -47,6 +47,8 @@ en chess.com, no son puzzles preparados por maestros
 
 Resumen: busca jaques, busca capturas, recuerda patrones
 
+Puntuación: 15
+
 ### Jaque al descubierto
 
 El siguiente patrón que vamos a trabajar es el ataque al descubierto, más
@@ -60,7 +62,26 @@ te permite capturar la dama del oponente
 En Puzzle Rush como en tus partidas, si no tienes posibilidad de dar jaque,
 comprueba qué posibilidades tienes de capturar piezas
 
+Puntuación: 15
+
 ### Atrapar la dama
+
+Siempre es recomendable echar un vistazo a posibles debilidades del oponente
+
+Una debilidad muy fácil de descubrir es una dama a la que podemos atrapar
+
+Normalmente, esto suele pasar cuando la dama de nuestro oponente está sin
+proteger, o muy alejada de otras piezas de su mismo color
+
+Una posición muy típica para atrapar la dama es cuando el oponente la mueve a
+las casillas b7 o b2 (depende del color, claro)
+
+Resumen: busca jaques, luego ataques al descubierto, luego capturas,
+luego debilidades (dama desprotegida)... amenazas a piezas, de la más valiosa a
+la menos: rey, dama,...
+
+Puntuación: 17
+
 ### Eliminar al defensor
 ### Piezas indefensas
 ### Encerrar al rey
