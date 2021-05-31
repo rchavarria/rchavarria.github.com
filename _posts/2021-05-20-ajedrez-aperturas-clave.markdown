@@ -55,6 +55,25 @@ las Negras si juegan 3...Nf6, Blancas pueden encontrar un buen juego si Negras
 no prestan atención
 
 ### Aperturas con 1.e4: defensa Siciliana
+
+Negras se defienden con 1.e4 c5
+
+Normalmente, se llega a la posición *Siciliana abierta*, donde Blancas juegan
+2.Nf3 y 3.d4
+
+Negras, normalmente capturan d4 y se llega a una posición muy abierta y 
+complicada
+
+Blancas suelen enrocar corto, y Negras largo, por lo que se suele llegar a
+juegos algo complicados
+
+Negras pueden jugar la *Dragón acelerada*, donde ponen su alfil negro en posición
+de *fianchetto*
+
+Esta defensa tiene multitud de variantes, y es una de las más estudiadas por
+aprendices, una vez se sienten (nos sentimos) cómodos con aperturas más clásicas
+como Ruy López o la Italiana
+
 ### Aperturas con 1.e4: Francesa y Caro Kann
 ### Aperturas populares con 1.d4
 ### Aperturas con 1.d4 Nf6: Holandesa
