@@ -173,6 +173,16 @@ tu pequeña compra insignificante (gazingus pin) que tienes que comprar sí o s�
 - ¿Qué habilidades o relaciones sociales podrías construir ahora para depender
 menos del dinero para satisfacer tus necesidades?
 
+**Capítulo 9**
+
+- ¿Qué acciones estás tomando ahora que te mantengan a flote cuando envejezcas?
+- ¿Qué podrías hacer para ganar un extra de dinero?
+- ¿En quién o en qué confiarías para que te ayudara a invertir tu dinero?
+- ¿Cuáles son tus experiencias sobre inversiones hasta la fecha?
+- ¿Qué valores y creencias trasladas a la inversión?
+- ¿Cuál es tu tolerancia al riesgo? Tanto con el dinero como con la vida
+- ¿Qué significa Independencia Financiera para tí?
+
 #### Introducción a la nueva edición
 
 De echo, "suficiente" es la promesa radical de este libro
@@ -1316,10 +1326,6 @@ eso es justo lo que buscamos. Eres libre de inventar tu propia vida
 
 ##### Paso 9: invertir durante tu Independencia Financiera
 
-#### Chapter 9 Where to Stash Your Cash for Long-Term Financial Freedom
-
-##### Step 9: Investing for FI
-
 Este paso te ayudará a conocer inversiones que te proporcionen ingresos consistentes
 y suficientes par atus necesidades a largo plazo
 
@@ -1383,13 +1389,14 @@ Unas cuantas reglas simples que vienen de los Bogleheads:
 
 **Inversiones inmobiliarias**
 
-REAL ESTATE
+Otra forma de hacer inversiones inmobiliarias es hacerlo en tu propio hogar y/o
+tierras. Por ejemplo, invertir en energías renovables para tu hogar o *granja*
 
-Another kind of real estate investing is investing in your own home and land
+**Resumen del paso 9**
 
-Investing in renewable energy for your home and in farmstead infrastructure
-
-MY CHOICES: MULTIPLE SOCIALLY
+Convertirse en alguien concienzudo y sofisticado a cerca de inversiones que
+produzcan ingresos a largo plazo y gestionar tus finanzas para obtener unos
+ingresos suficientes para tus necesidades de forma consistente a largo plazo
 
 MY CHOICES: MULTIPLE SOCIALLY RESPONSIBLE INCOME STREAMS
 
