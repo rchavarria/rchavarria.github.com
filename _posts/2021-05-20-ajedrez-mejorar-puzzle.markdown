@@ -83,6 +83,21 @@ la menos: rey, dama,...
 Puntuación: 17
 
 ### Eliminar al defensor
+
+Una buena manera de mejorar en Puzzle Rush es detectar casos donde hay que
+capturar defensores clave
+
+Esta táctica también es bastante común en partidas normales, así que nos puede
+venir bien mejorar en ella
+
+Como ya hemos visto antes, los primeros puzzles suelen solucionarse buscando
+tácticas como jaques, o capturas. Pero de vez en cuando, también se presentan
+tácticas como esta
+
+Algo clave suele ser echar un vistazo al último movimiento de tu oponente
+
+Puntuación: 17
+
 ### Piezas indefensas
 ### Encerrar al rey
 ### Jugar a Puzzle Rush
