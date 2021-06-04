@@ -99,6 +99,13 @@ Algo clave suele ser echar un vistazo al último movimiento de tu oponente
 Puntuación: 17
 
 ### Piezas indefensas
+
+Otra de las formas de mejorar en Puzzle Rush es detectar rápidamente piezas que
+se encuentren indefensas. Pero no sólo las de tu oponente, si no las tuyas
+propias también
+
+Puntuación: 15, errores: 1
+
 ### Encerrar al rey
 ### Jugar a Puzzle Rush
 ### ¿Qué nivel he alcanzado?
