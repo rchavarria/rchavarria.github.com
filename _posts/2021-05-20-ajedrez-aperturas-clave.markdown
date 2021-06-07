@@ -75,6 +75,21 @@ aprendices, una vez se sienten (nos sentimos) cómodos con aperturas más clási
 como Ruy López o la Italiana
 
 ### Aperturas con 1.e4: Francesa y Caro Kann
+
+Cuando Negras quieren tener un juego sólido contra 1.e4 necesitan conocer las
+aperturas Frances y Caro Kann
+
+En ambas aperturas, ayudan a avanzar el peón d7-d5 mediante 1...e6 (Francesa)
+o 1...c6 (Caro Kann)
+
+Blancas suelen tener alguna ventaja, en cuanto a espacio, pero Negras juegan
+en una posición muy sólida
+
+Una pequeña desventaja que tiene la Francesa, es que con 1...e6 estamos bloqueando
+el alfil de casillas blancas, y el desarrollo será más lento para Negras
+
+La Caro Kann *resuelve* este problema
+
 ### Aperturas populares con 1.d4
 ### Aperturas con 1.d4 Nf6: Holandesa
 ### Gambitos
