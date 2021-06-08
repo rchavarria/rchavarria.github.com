@@ -107,6 +107,26 @@ propias también
 Puntuación: 15, errores: 1
 
 ### Encerrar al rey
+
+El objetivo del ajedrez es hacer jaque mate al oponente
+
+Por esto mismo, Puzzle Rush tiene multitud de problemas relacionados con los
+mates
+
+Un problema típico relacionado con mates trata sobre cerrar la ruta de escape
+del rey contrario
+
+No solamente tienes que buscar un buen jaque o captura, además, debes buscar
+que puedes hacer mate en pocos movimientos
+
+Orden de patrones que tenemos que buscar:
+
+1. Jaques
+2. Capturas
+3. Amenazas, y claro, cuanto mayor sea la amenaza, mejor
+
+Puntuación: 14, errores: 1
+
 ### Jugar a Puzzle Rush
 ### ¿Qué nivel he alcanzado?
 
