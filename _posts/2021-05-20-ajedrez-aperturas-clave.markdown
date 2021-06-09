@@ -91,7 +91,16 @@ el alfil de casillas blancas, y el desarrollo será más lento para Negras
 La Caro Kann *resuelve* este problema
 
 ### Aperturas populares con 1.d4
-### Aperturas con 1.d4 Nf6: Holandesa
+
+1.d4 es la alternativa más común a 1.e4
+
+Después de 1...d5, blancas pueden jugar 2.c4, lo que nos lleva al *Gambito de
+Dama*
+
+Negras pueden aceptar con 2...dxc4 o defender su peón d4 con 2...c6 (la defensa
+Eslava) o e6, *Gambito de Dama Rechazado*
+
+### Defensas con 1.d4 Nf6: Holandesa
 ### Gambitos
 ### Celadas (en la apertura)
 
