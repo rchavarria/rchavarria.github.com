@@ -1425,6 +1425,49 @@ de gastos. Luego suma todos los ingresos. Convierte el dinero de cada categoría
 en *horas de energía vital* usando tu salario neto por hora calculado en el paso
 anterior
 
+**Paso 4**: 3 preguntas sobre la categorización que transformarán tu vida
+
+Para cada categoría anterior, expresada como horas de energía vital, hazte las
+siguientes preguntas (ve anotando las respuestas mes a mes):
+
+1. ¿He recibido realización, satisfacción y valor en proporción a la energía
+   vital gastada?
+2. ¿Está este gasto en energía vital alineado con mis valores y propósito en la
+   vida?
+3. ¿Cómo cambiaría este gasto si no tuviera que trabajar por dinero?
+
+Para cada una de ellas, evalúa si lo deberías incrementar, decrementar o está
+bien com está.
+
+Este paso es el corazón del programa
+
+**Paso 5**: Hacer visible la energía vital
+
+Crea un gran gráfico para pegar en la pared. Ve dibujando en él los ingresos y
+los gastos totales
+
+Ponlo en un lugar donde lo veas diariamente
+
+**Paso 6**: Valora tu energía vital: minimiza los gastos
+
+Aprende y practica el uso inteligente de tu energía vital (dinero), lo cual
+resultará en un descenso de tus gastos y un incremento de tus ahorros
+
+Esto creará una gran realización, integridad y alineamiento en tu vida
+
+**Paso 7**: Valora tu energía vital: maximiza los ingresos
+
+Repeta la energía vital que pones en tu trabajo
+
+El dinero es simplemente algo por lo que intercambias tu energía vital
+
+Comercia con él (intercámbialo) con propósito e integridad para aumentar los
+ingresos
+
+**Paso 8**: Capital y el punto de cruce
+
+
+
 Quick Reference for the 9-Step Program
 
 You are in the business of maximizing the return you get in happiness for every 
@@ -1433,15 +1476,7 @@ hour of life energy spent.
 Step 1:
 Step 2:
 Step 3:
-Step 4: Three Questions That Will Transform Your Life On your Monthly Tabulation,
-ask these three questions of each of your category totals expressed as hours of
-life energy and record your responses: Did I receive fulfillment, satisfaction,
-and value in proportion to life energy spent? Is this expenditure of life energy 
-in alignment with my values and life purpose? How might this expenditure change 
-if I didn’t have to work for money? For each question in each category, evaluate
-whether the expense should increase, decrease, or stay the same for your optimal 
-fulfillment. This is the heart of the program.
-
+Step 4:
 Step 5: Making Life Energy Visible Create a large Wall (or Online) Chart plotting
 the total monthly income and total monthly expenses from your Monthly Tabulation.
 Put it where you will see it every day.
