@@ -128,7 +128,29 @@ Orden de patrones que tenemos que buscar:
 Puntuación: 14, errores: 1
 
 ### Jugar a Puzzle Rush
+
+Simplemente vemos a Simon (el profe) practicando Puzzle Rush, a ver si soy
+capaz de seguirle el ritmo
+
+Resumiendo:
+
+- Reina a Qa4, Qa5
+- Jaques
+- Capturas
+- Amenazas (con mates)
+- Atrapar la reina
+- Eliminar al defensor
+- Piezas indefensas en ambos colores
+- Encerrar al rey
+
+Puntuación: 14, errores: 3, pero 2 de ellos fueron al mover el ratón, podría
+haber hecho 15 con 1 fallo
+
 ### ¿Qué nivel he alcanzado?
+
+Pues no parece que haya mejorado mucho, la verdad. Pero sí es cierto que voy
+identificando mejor los patrones, así que a partir de ahora ya solo queda
+practicar, practicar y practicar
 
 [1]: {{ site.baseurl }}{% post_url 2021-02-18-aprendiendo-ajedrez %}
 [2]: https://www.chess.com
