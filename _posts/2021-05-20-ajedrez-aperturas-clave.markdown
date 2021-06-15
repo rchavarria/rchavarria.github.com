@@ -101,6 +101,21 @@ Negras pueden aceptar con 2...dxc4 o defender su peón d4 con 2...c6 (la defensa
 Eslava) o e6, *Gambito de Dama Rechazado*
 
 ### Defensas con 1.d4 Nf6: Holandesa
+
+Una respuesta popular a 1.d4 es 1...Nf6, que evita que Blancas tomen el
+control del centro con 2.e4
+
+Así, normalmente, blancas mueven 2.c4. Negras debe decidir si lucha directamente
+por el centro con 2...e6 o contraataca con 2...g6
+
+Otra opción más arriesgada es la defensa Holandesa, 1...f5. Ataca el centro,
+pero expone el rey
+
+Otra defensa es la Nimzo-India: 1.e4 Nf6 2. c4 e6 3. Nc3 Bb4
+
+En esta defensa, Negras no suelen tener peones en el centro, pero lo controlan
+(o atacan más bien) desde lejos, con las piezas menores
+
 ### Gambitos
 ### Celadas (en la apertura)
 
