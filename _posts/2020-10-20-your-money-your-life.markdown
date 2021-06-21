@@ -1466,44 +1466,25 @@ ingresos
 
 **Paso 8**: Capital y el punto de cruce
 
+Cada mes, aplica la siguiente fórmula a tu capital total acumulado, y dibuja
+los *ingresos mensuales para la independencia* como una nueva línea en la
+gráfica
 
+```
+ingresos mensuales por inversiones = capital  x  interés mensual a largo plazo
+```
 
-Quick Reference for the 9-Step Program
+**Paso 9**: Invertir para conseguir la Independencia Financiera
 
-You are in the business of maximizing the return you get in happiness for every 
-hour of life energy spent.
+Este paso te ayudará a convertirte en concienciado y sofisticado acerca de
+inversiones generadoras de ingresos que te puedan dar un ingresos consistente
+suficiente para tus necesidades a largo plazo.
 
-Step 1:
-Step 2:
-Step 3:
-Step 4:
-Step 5: Making Life Energy Visible Create a large Wall (or Online) Chart plotting
-the total monthly income and total monthly expenses from your Monthly Tabulation.
-Put it where you will see it every day.
+Establece tu plan financiero usando los 3 pilares:
 
-Step 6: Valuing Your Life Energy—Minimizing Spending Learn and practice 
-intelligent use of your life energy (money), which will result in lowering 
-your expenses and increasing your savings. This will create greater fulfillment,
-integrity, and alignment in your life.
-
-Step 7: Valuing Your Life Energy—Maximizing Income Respect the life energy you
-are putting into your job. Money is simply something you trade your life energy
-for. Trade it with purpose and integrity for increased earnings.
-
-Step 8: Capital and the Crossover Point Each month apply the following equation
-to your total accumulated capital, and post the monthly independence income as 
-a separate line on your Wall Chart:   capital × current long-term interest
-rate 12 months = monthly investment income
-
-Step 9: Investing for FI This step will help you become knowledgeable and 
-sophisticated about income-producing investments that can provide a consistent
-income sufficient for your needs over the long term. Set up your financial 
-plan using the three pillars: Capital: The income-producing core of your 
-Financial Independence Cushion: Enough ready cash, earning bank interest, 
-to cover six months of expenses Cache: The surplus of funds resulting from 
-your continued practice of the nine steps
-
-yourmoneyoryourlife.com.
+1. Capital: el núcleo generador de ingresos de tu Independencia Financiera
+2. Colchón: suficiente dinero líquido para cubrir 6 meses de gasto
+3. Caché: fondos adicionales resultantes de tu práctica contínua de los 9 pasos
 
 Epilogue: Money Talks
 
@@ -1555,6 +1536,8 @@ greed-is-good, whoever-dies-with-the-most-toys-wins story we’re taught.
 
 - [Your money or your life][1], de Vicki Robin, Joe Dominguez y Monique Tilford, en Amazon
 - [Resumen del libro en YouTube][2], por parte de Un poco mejor, un canal con muchísimos resúmenes de libros
+- [Web del libro][3]
 
 [1]: https://amzn.to/2KdrJxN
 [2]: https://www.youtube.com/watch?v=CA_Y4qUv3bo
+[3]: https://yourmoneyoryourlife.com
