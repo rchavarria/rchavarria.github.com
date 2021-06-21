@@ -117,6 +117,25 @@ En esta defensa, Negras no suelen tener peones en el centro, pero lo controlan
 (o atacan más bien) desde lejos, con las piezas menores
 
 ### Gambitos
+
+A veces, sacrificar un peón o dos puede acelerar el desarrollo de las piezas y
+crear una partida agresiva.
+
+Tiene sus riesgos, pero puede llevar a grandes jugadas de ataque.
+
+Algunos gambitos famosos son:
+
+- Gambito de Rey: 1.e4 e5 2.f4
+- Gambito danés: 1.e4 e5 2.d4
+
+Un gambito es como una apuesta (*gamble* en inglés). Si funciona, genial. Si no,
+tendremos problemas y perderemos
+
+Cuando te beneficias de los sacrificios de tu oponente, puede que te quedes atrás
+a la hora de desarrollar tus piezas. Una buena táctica es *devolver* el material
+ganado, para volver a equilibrar el desarrollo o el espacio perdido. A esto se
+le conoce como *contragambito*
+
 ### Celadas (en la apertura)
 
 [1]: {{ site.baseurl }}{% post_url 2021-02-18-aprendiendo-ajedrez %}
