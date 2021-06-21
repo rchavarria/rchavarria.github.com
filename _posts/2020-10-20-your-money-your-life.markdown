@@ -80,7 +80,7 @@ Recomienda el libro o los libros de Mr. Money Mustache
 1. Calcula cuánto dinero has ganado en lo que llevas de vida. Después, crea una
 hoja de balance para calcular tu valor neto (activos - pasivos)
 
-#### Preguntas para hablar sobre dinero
+#### Conversaciones monetarias
 
 Cada pregunta, se puede ampliar en alguna dirección:
 
@@ -1486,51 +1486,41 @@ Establece tu plan financiero usando los 3 pilares:
 2. Colchón: suficiente dinero líquido para cubrir 6 meses de gasto
 3. Caché: fondos adicionales resultantes de tu práctica contínua de los 9 pasos
 
-Epilogue: Money Talks
+#### Epílogo: Conversaciones monetarias
 
-Money Talks are deceptively simple, yet they can change your life. A few 
-guidelines, a potent topic or question, a process that lets everyone have a 
-turn.
+Estas conversaciones son muy muy simples, pero aún así pueden cambiarte la vida.
+Unas pequeñas guías, una preguna o un tema potente, un proceso que permite que
+todo el mundo tenga su turno de palabra
 
-In Money Talks there are no experts because it’s not about fixing ourselves, 
-it’s about understanding ourselves as people caught in a consumerist money 
-culture that may feed our greed but not our real needs
+En ellas no hay expertos, proque no se trata de arreglar las cosas por nosotros
+mismos. Se trata de entendernos, como personas atrapadas en una cultura
+consumista que alimenta nuestra avaricia pero no nuestras necesidades reales
+(*feed our greed but not our needs*)
 
-Rules for Money Talks
+Unas pequeñas reglas:
 
-Who and Where
+Cualquier persona dispuesta a hablar contigo con un espíritu cándido, curioso
+y una mentalidad de *ni culpa ni vergüenza* es un compañero perfecto para las
+*Conversaciones Monetarias*
 
-Anyone willing to engage with you in a candid, curious, “no shame, no blame”
-spirit is a perfect partner for a Money Talk.
+Para cambiar de una conversación ordinaria, a un diálogo intencionado, un silencio
+de medio minuto (¿incómodo?) funciona de maravilla
 
-Process for Journaling (1 Person)
+Se trata de mantener una actitud de no juzgar ni a los demás ni a nosotros
+mismos (*ni culpa ni vergüenza)
 
-Escribe la conversacion contugo mismo
+Temas a tratar:
 
-Process for a Dialogue (2 People)
+Dinero, trabajo, significado, propósito, prioridades, simplicidad, trastos,
+deudo, préstamos, diezmo, propina, impuestos, seguros... seguidos de 3 preguntas:
+¿qué piensas sobre ello?, ¿qué sientes sobre ello? ¿qué estás haciendo sobre
+ello?
 
-Process for Small Groups (3–8 People)
-
-shifting from ordinary conversation to an intentional dialogue. Half a minute 
-of silence works wonders.
-
-Process for Small Groups (3–8 People)
-
-Agreements
-
-No shame, no blame: Keep a nonjudgmental attitude, as best you can, toward 
-yourself and others.
-
-Topics
-
-Money, Work, Meaning, Purpose, Priorities, Simplicity, Stuff, Debt, Borrowing,
-
-Lending, Tithing, Taxes, Insurance, and so on—followed by three questions: What
-do you think about it? What do you feel about it? What are you doing about it?
-
-If we keep a cult of silence about our relationships with money, we all stay in 
-the grip of that shame-and-blame, more-is-better-and-it’s-never-enough, 
-greed-is-good, whoever-dies-with-the-most-toys-wins story we’re taught.
+> Si mantenemos un culto de silencio sobre nuestra relación con el dinero, vamos
+> a seguir quedándonos en los estados que nos han metido en la cabeza de
+> culpa y vergüenza, más es mejor y nunca es suficiente, la avaricia es buena,
+> gana quien muera con el mayor número de juguetes (¿el más rico del 
+> cementerio?)
 
 ## Recursos
 
