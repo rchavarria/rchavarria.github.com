@@ -138,5 +138,126 @@ le conoce como *contragambito*
 
 ### Celadas (en la apertura)
 
+Todo el mundo debería saber unas cuantas celadas en las aperturas, para no perder
+la partida en los primeros movimientos
+
+El ejemplo más ilustrativo es cuando Negras copian los movimientos de apertura
+de Blancas: 1.e4 e5 2.Nf3 Nf6 3.Nxe5 Nxe4 4.Qe2
+
+Si Negras juegas Qe7, perderán el caballo en e4
+
+Si caballo vuelve a f6 o d6, hay una táctica para ganar la reina
+
+Existen celadas en muchas de las aperturas, ¡Ten cuidado!
+
+Una regla:
+
+> No intentes una celada que no mejore tu posición. Si el oponente conoce la 
+> celada y no cae en ella, y no has mejorado tu posición, serás tú el que queda
+> en mala posición, serás tú el atrapado/engañado
+
+**Celada en la Caro Kann**
+
+1. e4 c6
+2. d4 d5
+3. Nc3 dxe4
+4. Nxe4 Nd7 (Negras intentan apoyar el desarrollo del otro caballo)
+5. Qe2 (este movimiento es el raro, es la celada)
+
+Si Negras no se dan cuenta, y desarrollan el segundo caballo con 5...Nf6, Blancas
+tienen un mate por asfixia con 6. Nd6# (el peón no puede capturar el caballo
+por la dama en e2)
+
+En su lugar, Negras deberían jugar 5...e6 Aquí, es donde Qe2 ya no es un buen
+movimiento y son Blancas quien quedan en una mala posición
+
+**Celada en Gambito de Dama declinado**
+
+1. d4 d5
+2. c4 e6 (gambito declinado)
+3. Nc3 Nf6
+4. Bg5 
+
+Normalmente, Negras juegan Be7, para *desclavar* el caballo. Pero, a veces,
+juegan Nd7. Ahí está la celada. Con ese caballo entre la dama y el peón, parece
+que Negras desprotegen el peón de e4. Y Blancas creen que pueden ganarlo
+
+4... Nbd7
+5. cxe4 dxe4
+6. Nxe4 Nfxe4 (¿qué hacen negras? ¡le van a comer la dama!)
+7. Bxd1 Bb4+ (donde Blancas no pueden mover el rey, y solo pueden poner la dama en medio)
+8. Qd2 Bxd2+ (ya están casi igualados)
+9. Kxd2 Kxd8
+
+Al final, Negras salen ganando, un peón por un caballo. No está mal
+
+**Celada en Gambito de Dama**
+
+Hay que recordar que Gambito de Dama no es realmente un gambito. En un gambito
+se cede una pieza. En esta apertura, Blancas pueden recuperar *fácilmente* el
+peón cedido en c4
+
+1. d4 d5
+2. c4 dxc4
+3. e3 b5 (defendiendo el peón ganado en c4)
+
+Pero Negras van demasiado lejos tratando de mantener ese peón
+
+4. a4 (atacando b5)
+4... c6 (defendiendo b5, pero a la vez, han dejado al descubierto toda la diagonal
+h1-a8 y la torre en a8)
+
+5. Qf3 (atacando la torre, y Negras no tienen forma de defenderla)
+5... Nc6 (la única forma de proteger la torre es sacrificando un caballo entero)
+   
+6. Qxc6+ Nd7
+
+**Celada en la Escandinava**
+
+1. e4 d5
+2. exd5 Qxd5
+3. Nc3 (atacando la dama) Qd8
+
+Ahora, lo normal sería 4.d4, pero vamos a jugar la celada 
+
+4. Bc4 Nf6
+5. Nf3 (aquí la celada)
+5... Bg4 (ha caído en la trampa, aunque este movimiento es bastante natural)
+6. Bxf7+ (sacrifica un alfil) Kxf7
+7. Ne5+ Ke8
+8. Nxg4 (recuperando el alfil sacrificado)
+
+Al final, hemos ganado un peón y hemos quitado la posibilidad de enroque al
+oponente
+
+**Celada en la Caro Kann**
+
+1. e4 c6
+2. d4 d5
+3. e5 Bf5
+
+Hay una jugada, famosa, pero arriesgada a la vez
+
+4. h4 e6 (Negras han caído en la trampa, no han movido el peón en h, pero además
+han cerrado la ruta de escape a su alfil)
+   
+5. g4 Bg6
+6. h5 Be4
+7. f3 (el afil queda atrapado)
+
+**Celada en el Tango de Caballos**
+
+En esta apertura, Negras desarrollan los caballos antes que los peones centrales
+
+1. d4 Bf6
+2. c4 Bc6
+3. d5 (amenaza el caballo) Ne5 (Negras echan la red de la celada)
+4. e4 (Blancas saben que ese peón no está defendido... o es una trampa?)
+
+Deberían negras tomar ese peón? Si lo hacen, caerán en la trampa. Si lo hacen,
+Blancas jugarán 5.Qe2, amenazando ambos caballos a la vez, y perderán uno de ellos
+
+Mejor jugar 4...e6, para atacar el centro, pero sin caer en la trampa
+
 [1]: {{ site.baseurl }}{% post_url 2021-02-18-aprendiendo-ajedrez %}
 [2]: https://www.chess.com
