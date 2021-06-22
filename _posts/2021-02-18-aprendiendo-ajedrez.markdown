@@ -51,6 +51,10 @@ Si te interesa el ajedrez, y quieres echar una partida,
     
 ### Siguientes pasos
 
+El aprendizaje no termina una vez terminadas las lecciones propuestas por 
+chess.com y organizadas por niveles (hasta el avanzado). Hay más lecciones
+publicadas por maestros internacionales e influencers varios:
+
 - [Cómo mejorar en Puzzle Rush]: un juego muy popular en chess.com es Puzzle
 Rush, donde tienes 3 o 5 minutos para resolver el máximo de puzles que puedas.
 Puedes cometer hasta 3 errores. Esta lección puede estar divertida
@@ -80,4 +84,4 @@ Puedes cometer hasta 3 errores. Esta lección puede estar divertida
 [Weak squares and outposts]: https://www.chess.com/blog/KingsBishop/weak-squares-and-outposts
 [100 finales que debes conocer]: https://forwardchess.com/product/100-endgames-you-must-know%284th-edition%29
 [Ajedrez y su enseñanza: libro de aperturas]: {{ site.baseurl }}{% post_url 2019-10-21-ajedrez-ensenanza-libro-aperturas %}
-[Cómo mejorar en Puzzle Rush]: https://www.chess.com/lessons/improve-your-puzzle-rush
+[Cómo mejorar en Puzzle Rush]: {{ site.baseurl }}{% post_url 2021-05-20-ajedrez-mejorar-puzzle %}
