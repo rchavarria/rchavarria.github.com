@@ -41,7 +41,7 @@ Si te interesa el ajedrez, y quieres echar una partida,
     - [Ganar con tácticas][8]
     - [Movimientos forzados][9]
     - [Leer el tablero][10]
-    - Aperturas clave, comienza el nivel avanzado (la seguiré en un futuro)
+    - [Aperturas clave][11], comienza el nivel avanzado
     - Elige el mejor movimiento
     - Activa tus piezas
     - Finales de juego avanzados
@@ -76,6 +76,7 @@ Puedes cometer hasta 3 errores. Esta lección puede estar divertida
 [8]: {{ site.baseurl }}{% post_url 2021-03-30-ajedrez-tacticas %}
 [9]: {{ site.baseurl }}{% post_url 2021-04-21-ajedrez-movimientos %}
 [10]: {{ site.baseurl }}{% post_url 2021-05-06-ajedrez-tablero %}
+[11]: {{ site.baseurl }}{% post_url 2021-05-20-ajedrez-aperturas-clave %}
 [Weak squares and outposts]: https://www.chess.com/blog/KingsBishop/weak-squares-and-outposts
 [100 finales que debes conocer]: https://forwardchess.com/product/100-endgames-you-must-know%284th-edition%29
 [Ajedrez y su enseñanza: libro de aperturas]: {{ site.baseurl }}{% post_url 2019-10-21-ajedrez-ensenanza-libro-aperturas %}
