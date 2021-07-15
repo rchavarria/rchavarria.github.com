@@ -32,6 +32,11 @@ Lo importante en esta lección es: fijarse tanto en tus posibilidades como en la
 de tu oponente
 
 ### Creando un plan
+
+Cuando no sabes qué hacer, una buena idea sueles ser buscar tu pieza peor
+posicionada y mejorarla. Una vez que todas tus piezas estén en buenas casillas,
+habrá más posibilidades de que exista alguna táctica para ganar material
+
 ### Juego posicional
 ### Buenas y malas piezas
 ### Jugar una mala posición
