@@ -55,6 +55,42 @@ Se puede conseguir en el centro de descargas de Raspberry PI,
 [Raspberry OS 64 bit][4], y se puede grabar en la tarjeta de memoria usando
 [Raspberry Pi Imager][5].
 
+Para comprobar la arquitectura del sistema, se puede comprobar con el comando
+`uname`
+
+```
+$ uname -a
+Linux raspberrypi 5.10.17-v8+ #1421 SMP PREEMPT Thu May 27 14:01:37 BST 2021 aarch64 GNU/Linux
+```
+
+## Instalar docker y docker-compose
+
+La manera más sencilla y menos problemática para instalar `docker` en una Raspberry
+parece ser usando un [script proporcionado por Docker][6]:
+
+```
+$ curl -fsSL https://get.docker.com -o get-docker.sh
+$ sudo sh get-docker.sh
+```
+
+Y para `docker-compose`:
+
+```
+$ sudo apt install libffi-dev libssl-dev python3-dev python3 python3-pip
+$ sudo pip3 install docker-compose
+```
+
+## Ejecutar el fichero de despliegue de PhotoPrism
+
+De la documentación oficial de PhotoPrism, para *instalarlo* en la Raspberry,
+debemos descargar un fichero `docker-compose.yaml` y levantar los servicios que
+se definen en él:
+
+```
+wget https://dl.photoprism.org/docker/arm64/docker-compose.yml
+sudo docker-compose up -d
+```
+
 Continuará...
 
 [1]: https://github.com/awesome-selfhosted/awesome-selfhosted
@@ -62,3 +98,4 @@ Continuará...
 [3]: https://docs.photoprism.org/getting-started/raspberry-pi/
 [4]: https://downloads.raspberrypi.org/raspios_arm64/images/raspios_arm64-2021-04-09/2021-03-04-raspios-buster-arm64.zip
 [5]: https://www.raspberrypi.org/software/
+[6]: https://docs.docker.com/engine/install/debian/#install-using-the-convenience-script
