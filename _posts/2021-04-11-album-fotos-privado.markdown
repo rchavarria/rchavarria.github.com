@@ -132,6 +132,21 @@ recomiendan incluso un disco duro mecánico, así que no sé qué creer
 En ese fichero, el swap tiene 100Mb configurados. Voy a probar con 1Gb, lo mismo
 que la memoria RAM
 
+## Deshabilitar funcionalidades
+
+Para intentar hacer que PhotoPrism use menos CPU y memoria, deshabilito algunas
+de las funcionalidades. Puede que éstas sean muy interesantes, pero estoy seguro
+de que consumen muchos recursos, y la Raspberry no está sobrada de ellos.
+
+En el fichero `docker-compose.yml` proporcionado, modifico valores:
+
+- `PHOTOPRISM_DEBUG`
+- `PHOTOPRISM_EXPERIMENTAL`
+- `PHOTOPRISM_DISABLE_WEBDAV`
+- `PHOTOPRISM_DISABLE_TENSORFLOW`
+- `PHOTOPRISM_DETECT_NSFW`
+- `PHOTOPRISM_UPLOAD_NSFW`
+
 [1]: https://github.com/awesome-selfhosted/awesome-selfhosted
 [2]: https://docs.photoprism.org/
 [3]: https://docs.photoprism.org/getting-started/raspberry-pi/
