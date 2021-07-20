@@ -83,15 +83,33 @@ $ sudo pip3 install docker-compose
 ## Ejecutar el fichero de despliegue de PhotoPrism
 
 De la documentación oficial de PhotoPrism, para *instalarlo* en la Raspberry,
-debemos descargar un fichero `docker-compose.yaml` y levantar los servicios que
+debemos descargar un fichero `docker-compose.yml` y levantar los servicios que
 se definen en él:
 
 ```
-wget https://dl.photoprism.org/docker/arm64/docker-compose.yml
-sudo docker-compose up -d
+$ wget https://dl.photoprism.org/docker/arm64/docker-compose.yml
+$ sudo docker-compose up -d
+...
+Creating mariadb    ... done
+Creating photoprism ... done
 ```
 
-Continuará...
+¡Arrancado!
+
+A partir de aquí, podemos echar un vistazo a la documentación para saber
+[qué podemos hacer con `docker-compose`][7]:
+
+- Visitar `http://localhost:2342` en el navegador para comenzar a usarlo
+- `docker-compose stop`: para parar el servicio
+- `docker-compose logs --tail=25 -f` para ver los logs
+- Documentación sobre los [comandos disponibles][8]
+
+## Usando PhotoPrism
+
+Entrar a la web de PhotoPrism, a través de [http://localhost:2342], hacer login
+como `admin` (la contraseña está en el fichero `.yml` que hemos arrancado)
+
+Ahora podemos importar nuestras fotos, subirlas y jugar con ellas
 
 [1]: https://github.com/awesome-selfhosted/awesome-selfhosted
 [2]: https://docs.photoprism.org/
@@ -99,3 +117,5 @@ Continuará...
 [4]: https://downloads.raspberrypi.org/raspios_arm64/images/raspios_arm64-2021-04-09/2021-03-04-raspios-buster-arm64.zip
 [5]: https://www.raspberrypi.org/software/
 [6]: https://docs.docker.com/engine/install/debian/#install-using-the-convenience-script
+[7]: https://docs.photoprism.org/getting-started/docker-compose/
+[8]: https://docs.photoprism.org/getting-started/docker-compose/#command-reference
