@@ -111,6 +111,27 @@ como `admin` (la contraseña está en el fichero `.yml` que hemos arrancado)
 
 Ahora podemos importar nuestras fotos, subirlas y jugar con ellas
 
+## Problema: se cuelga al indexar las fotos
+
+Para poder mostar resultados, PhotoPrism debe indexarlas. Pero al subir solamente
+una, para probar, se queda colgado. Es como que se queda sin memoria, la
+Raspberry necesita más potencia, o no sé qué...
+
+Tarda 2000 seg en indexar 4 fotos, ¡4! Puede que tenga un problema de memoria.
+Parece que la Raspberry no tiene partición de swap, veamos si se puede hacer
+algo con eso
+
+Ok, no tiene partición, pero sí usa un fichero de swap, y [se puede configurar][9]
+
+Hay que modificar el fichero `/etc/dphys-swapfile` y reiniciar claro
+
+En varios artículos mencionan que no es buena idea tener un fichero de swap en
+la tarjeta de memoria de la Raspberry, que es muy lenta. Claro que algunos 
+recomiendan incluso un disco duro mecánico, así que no sé qué creer
+
+En ese fichero, el swap tiene 100Mb configurados. Voy a probar con 1Gb, lo mismo
+que la memoria RAM
+
 [1]: https://github.com/awesome-selfhosted/awesome-selfhosted
 [2]: https://docs.photoprism.org/
 [3]: https://docs.photoprism.org/getting-started/raspberry-pi/
@@ -119,3 +140,4 @@ Ahora podemos importar nuestras fotos, subirlas y jugar con ellas
 [6]: https://docs.docker.com/engine/install/debian/#install-using-the-convenience-script
 [7]: https://docs.photoprism.org/getting-started/docker-compose/
 [8]: https://docs.photoprism.org/getting-started/docker-compose/#command-reference
+[9]: http://raspberrypimaker.com/adding-swap-to-the-raspberrypi/
