@@ -34,68 +34,111 @@ más fuerte
 
 ## Notas tomadas
 
-1. Legacy Applications
-   In its simplest definition, a “legacy application” is any application that you, as a developer, inherit from someone else.
-   The Typical PHP Application
-   they are often a series of page scripts, placed directly in the web server document root, to which clients can browse directly.
-   There are include files for common configurations and settings, headers and footers, common forms
-   Legacy applications will use individual “page scripts” as the access point for public behavior.
-   Rewrite or Refactor?
-   The Pros and Cons of Rewriting
-   Because the existing application can serve as a reference implementation, they feel confident that there will be little or no trial-and-error work in rewriting the application.
-   Fred Brooks calls the urge to do a complete rewrite “the second-system effect.”
-   The general tendency is to over-design
-   Why Don’t Rewrites Work?
-   developers who will have to do both maintenance on the existing program and write the completely new version
-   The Context-switching Problem
-   The Knowledge Problem
-   If we put the new developers on the rewrite project, they won’t know enough about the existing system,
-   They will have to be trained on these things, most likely by the existing developers.
-   linear increase in resources results in a less-than-linear increase in productivity:
-   The Schedule Problem
+### Capítulo 1: aplicaciones *legacy*
+
+Legacy Applications
+In its simplest definition, a “legacy application” is any application that you,
+as a developer, inherit from someone else.
+The Typical PHP Application
+they are often a series of page scripts, placed directly in the web server 
+document root, to which clients can browse directly.
+There are include files for common configurations and settings, headers and 
+footers, common forms
+Legacy applications will use individual “page scripts” as the access point for
+public behavior.
+Rewrite or Refactor?
+The Pros and Cons of Rewriting
+Because the existing application can serve as a reference implementation, they 
+feel confident that there will be little or no trial-and-error work in rewriting
+the application.
+Fred Brooks calls the urge to do a complete rewrite “the second-system effect.”
+The general tendency is to over-design
+Why Don’t Rewrites Work?
+developers who will have to do both maintenance on the existing program and 
+write the completely new version
+The Context-switching Problem
+The Knowledge Problem
+If we put the new developers on the rewrite project, they won’t know enough 
+about the existing system,
+They will have to be trained on these things, most likely by the existing 
+developers.
+linear increase in resources results in a less-than-linear increase in
+productivity:
+The Schedule Problem
 
 dedicate all the existing developers on the rewrite,
-overestimate their own ability to perform a full rewrite and underestimate the amount of time needed to complete it.
-the result will be a codebase that is just as bad as the first one, only in different ways.
+overestimate their own ability to perform a full rewrite and underestimate the 
+amount of time needed to complete it.
+the result will be a codebase that is just as bad as the first one, only in 
+different ways.
 Iterative Refactoring
-quality of the program is improved in small steps, without changing the functionality of the program.
-A refactoring approach is decidedly less appealing than a complete rewrite. It defies the core sensibilities of most developers. The developers have to continue working with the system as it is,
-the goal of any single refactoring step is not “perfection”. The goal in each step is merely “improvement”.
+quality of the program is improved in small steps, without changing the 
+functionality of the program.
+A refactoring approach is decidedly less appealing than a complete rewrite. It 
+defies the core sensibilities of most developers. The developers have to continue
+working with the system as it is,
+the goal of any single refactoring step is not “perfection”. The goal in each 
+step is merely “improvement”.
 Legacy Frameworks
 Framework-based Legacy Applications
 Refactoring To A Framework
-My experience with legacy PHP applications has been that they are almost as resistant to framework integration as they are to unit testing.
-If the application was already in a state where its logic could be ported to a framework, there would be little need to port it in the first place.
+My experience with legacy PHP applications has been that they are almost as 
+resistant to framework integration as they are to unit testing.
+If the application was already in a state where its logic could be ported to a
+framework, there would be little need to port it in the first place.
 Review and Next Steps
-2. Prerequisites
-   A revision control system A PHP version of 5.0 or higher An editor or IDE with multi-file search-and-replace A style guide of some sort A test suite
-   Revision Control
-   PHP Version
-   PHP 5.0 is the bare minimum, because that was when class autoloading became available, and we depend on autoloading as one of our very first improvements.
-   Editor/IDE
-   Style Guide
-   modifying the existing style, no matter how ugly or inconsistent it is, can give rise to subtle bugs and behavioral changes from something as simple as adding or removing braces in a conditional.
-   I suggest that the only reason to modify the existing style is when it is inconsistent within an individual file.
-   If you decide to reformat, do so only as you move bits of code from one file to another, or as you move files
-   No lo modifiques en gran numero de ficheros o sera un infirno. Mejor poco a poco y con cambios controlados
-   Test Suite
-   The key here is not to test what the system units ought to do, but what the system as a whole already does.
-   The criteria for a successful test is that the system generates the same output after a change as it did before that change. This kind of test is called a characterization test
-   En un sistema legacy. Posible.ente no hay rests y las unidadrs a yestear no sean facilmenge identificabkes  . Sera mas facil hacer otro tipo de test. Nada de test unitario
+
+### Capítulo 2: prerequisitos
+
+Prerequisites
+A revision control system A PHP version of 5.0 or higher An editor or IDE 
+with multi-file search-and-replace A style guide of some sort A test suite
+Revision Control
+PHP Version
+PHP 5.0 is the bare minimum, because that was when class autoloading became 
+available, and we depend on autoloading as one of our very first improvements.
+Editor/IDE
+Style Guide
+modifying the existing style, no matter how ugly or inconsistent it is, can give
+rise to subtle bugs and behavioral changes from something as simple as adding or
+removing braces in a conditional.
+I suggest that the only reason to modify the existing style is when it is 
+inconsistent within an individual file.
+If you decide to reformat, do so only as you move bits of code from one file to
+another, or as you move files
+No lo modifiques en gran numero de ficheros o sera un infirno. Mejor poco a 
+poco y con cambios controlados
+Test Suite
+The key here is not to test what the system units ought to do, but what the 
+system as a whole already does.
+The criteria for a successful test is that the system generates the same output
+after a change as it did before that change. This kind of test is called a 
+characterization test
+En un sistema legacy. Posible.ente no hay rests y las unidadrs a yestear no sean
+facilmenge identificabkes  . Sera mas facil hacer otro tipo de test. Nada de 
+test unitario
 
 Review and Next Steps
-3. Implement An Autoloader
-   PSR-0
-   PSR-0 is a PHP Framework Interoperability Group recommendation for structuring your class files.
-   We use PSR-0 instead of the newer PSR-4 recommendation because we are dealing with legacy code,
-   Under PSR-0, the
-   the fully-qualified class name \Foo\Bar\Baz_Dib would be found in a sub-path named Foo/Bar/Baz/Dib.php
-   A Single Location For Classes
-   Before we implement a PSR-0 autoloader, we need to pick a directory location in the codebase to hold every class
-   This directory will be the central location for all classes used throughout the project.
-   Add Autoloader Code
-   register it with spl_autoload_register()
-   As A Global Function
+
+### Capítulo 3: implementar un *autoloader*
+
+Implement An Autoloader
+PSR-0
+PSR-0 is a PHP Framework Interoperability Group recommendation for structuring 
+your class files.
+We use PSR-0 instead of the newer PSR-4 recommendation because we are dealing 
+with legacy code,
+Under PSR-0, the
+the fully-qualified class name \Foo\Bar\Baz_Dib would be found in a sub-path 
+named Foo/Bar/Baz/Dib.php
+A Single Location For Classes
+Before we implement a PSR-0 autoloader, we need to pick a directory location in
+the codebase to hold every class
+This directory will be the central location for all classes used throughout the
+project.
+Add Autoloader Code
+register it with spl_autoload_register()
+As A Global Function
 
 Al fi nal. El autoloader lo que hace es un require
 classes
@@ -112,141 +155,191 @@ Common Questions
 What Are The Performance Implications Of Autoloading?
 
 evidence is mixed and situation-dependent.
-Any performance drag incurred from autoloading is minuscule compared to the other possible performance issues in your legacy application,
+Any performance drag incurred from autoloading is minuscule compared to the 
+other possible performance issues in your legacy application,
 How Do Class Names Map To File Names?
-Review and Next Steps
-4. Consolidate Classes and Functions
-   autoloader in place, we can begin to remove all the include calls that only load up class and function definitions.
-   When we are done, the only remaining include calls will be those that are executing logic.
-   Consolidate Class Files
-   Find an include statement that pulls in a class definition file.
-   Move that class definition
-   matching the PSR-0 rules.
-   remove that include statement.
-   make sure that all the files now autoload that class
-   Repeat until there are no more include
-   Consolidate Functions Into Class Files
-   autoloading only works for classes.
-   The solution here is to move the functions into class files, and call the functions as static methods on those classes.
-   process we will follow:
-   Find an include statement that pulls in a function
-   Convert that function definition file into a class file of static methods;
-   change calls to those functions into static method calls.
-   Testear. Probar en produccion. Porque no trnelos tests
-   Spot check
-   Autoload
-   Move the class file
-   remove the relevant include statement.
-   Spot check again
-   Commit, push, and notify QA.
-   Repeat
-   Common Questions
-   leave the autoloader include in place as part of our bootstrapping or setup code.
-   There is, of course, a performance reduction in loading two files instead of one. The question is how much of a reduction, and compared to what?
-   The class should be loadable without side effects, and the other logic should be executable without having to load the class.
 
-I recommend instance methods over static ones. Among other things, it gives us a constructor method that can be called on instantiation, and it makes testing easier in many cases.
-It would be great if there was some way to automate the process to make it both faster and more reliable. Unfortunately, I have not yet discovered any tools that make this process easier. As far as I can tell, this kind of refactoring is still best done “by hand” with strong attention to detail.
-5. Replace global With Dependency Injection
-   Dependency injection turns out to be very straightforward as a concept, but is sometimes difficult to adhere to as a discipline.
-   Global Dependencies
-   global keyword, and realize they can create the connection once in a setup file, then pull it in from the global scope:
-   Esta key word parece mas eligrosa que las variables globakes. Puedes hacer global practicamenge  ualqiyr cosa
-   The Replacement Process
-   Find a global variable in one of our classes.
-   Move all global variables in that class to the constructor and retain their values as properties, and use the properties instead of the globals.
-   Spot check that the class still works.
-   Convert the global calls in the constructor to constructor parameters.
-   Convert all instantiations of the class to pass the dependencies.
-   Spot check, commit, push, and notify QA.
-   Repeat with the next global call in our class files, until none remain.
-   Common Questions
+### Capítulo 4: consolidar clases y funciones
 
+autoloader in place, we can begin to remove all the include calls that only 
+load up class and function definitions.
+When we are done, the only remaining include calls will be those that are 
+executing logic.
+Consolidate Class Files
+Find an include statement that pulls in a class definition file.
+Move that class definition
+matching the PSR-0 rules.
+remove that include statement.
+make sure that all the files now autoload that class
+Repeat until there are no more include
+Consolidate Functions Into Class Files
+autoloading only works for classes.
+The solution here is to move the functions into class files, and call the
+functions as static methods on those classes.
+process we will follow:
+Find an include statement that pulls in a function
+Convert that function definition file into a class file of static methods;
+change calls to those functions into static method calls.
+Testear. Probar en produccion. Porque no trnelos tests
+Spot check
+Autoload
+Move the class file
+remove the relevant include statement.
+Spot check again
+Commit, push, and notify QA.
+Repeat
+Common Questions
+leave the autoloader include in place as part of our bootstrapping or setup code.
+There is, of course, a performance reduction in loading two files instead of 
+one. The question is how much of a reduction, and compared to what?
+The class should be loadable without side effects, and the other logic should 
+be executable without having to load the class.
+
+I recommend instance methods over static ones. Among other things, it gives us 
+a constructor method that can be called on instantiation, and it makes testing 
+easier in many cases.
+It would be great if there was some way to automate the process to make it both 
+faster and more reliable. Unfortunately, I have not yet discovered any tools 
+that make this process easier. As far as I can tell, this kind of refactoring 
+is still best done “by hand” with strong attention to detail.
+
+### Capítulo 5: reemplazar *global* con inyección de dependencias
+
+Dependency injection turns out to be very straightforward as a concept, but is 
+sometimes difficult to adhere to as a discipline.
+Global Dependencies
+global keyword, and realize they can create the connection once in a setup file,
+then pull it in from the global scope:
+Esta key word parece mas eligrosa que las variables globakes. Puedes hacer 
+global practicamenge  ualqiyr cosa
+The Replacement Process
+Find a global variable in one of our classes.
+Move all global variables in that class to the constructor and retain their 
+values as properties, and use the properties instead of the globals.
+Spot check that the class still works.
+Convert the global calls in the constructor to constructor parameters.
+Convert all instantiations of the class to pass the dependencies.
+Spot check, commit, push, and notify QA.
+Repeat with the next global call in our class files, until none remain.
+Common Questions
 
 What About Class Names In Variables?
 $record = new $class;
-The best we can do is to search for new\s+\$ without any class name, and modify the calls individually by hand.
+The best we can do is to search for new\s+\$ without any class name, and modify 
+the calls individually by hand.
 What About Superglobals?
-(although we can search for them by name). Because they truly are global, we need to remove them from our classes just as much as we need to remove the global keyword.
-Because they truly are global, we need to remove them from our classes just as much as we need to remove the global keyword.
-As a solution, we can use a Request data structure class. The Request encapsulates a copy of each of the non-$_SESSION superglobals.
+(although we can search for them by name). Because they truly are global, we 
+need to remove them from our classes just as much as we need to remove the 
+global keyword.
+Because they truly are global, we need to remove them from our classes just as
+much as we need to remove the global keyword.
+As a solution, we can use a Request data structure class. The Request 
+encapsulates a copy of each of the non-$_SESSION superglobals.
 // ... 3 $request = new \Mlaphp\Request($GLOBALS);
-Modifications to the values in one Request object will not be reflected in a different Request object,
+Modifications to the values in one Request object will not be reflected in a 
+different Request object,
 Review and Next Steps
-Replace new With Dependency Injection
 
-The point of dependency injection is to push the dependencies in from the outside, thereby revealing the dependencies in our classes.
-One of the keys to dependency injection is that an object may either create other objects, or it may operate on other objects, but not both.
+### Capítulo 6: reemplazar `new` con inyección de dependencias
+
+The point of dependency injection is to push the dependencies in from the 
+outside, thereby revealing the dependencies in our classes.
+One of the keys to dependency injection is that an object may either create 
+other objects, or it may operate on other objects, but not both.
 The Replacement Process
 Find a class with the new keyword in it.
-For each one-time creation in the class … Extract each instantiation to a constructor parameter.
-For each repeated creation in the class … Extract each block of creation code to a new Factory class. Create a constructor parameter for each Factory
-Usa factories para los casos en ls que se crean mumltiples objetos de la misma clase. En un bucle por cierto
+For each one-time creation in the class … Extract each instantiation to a 
+constructor parameter.
+For each repeated creation in the class … Extract each block of creation code 
+to a new Factory class. Create a constructor parameter for each Factory
+Usa factories para los casos en ls que se crean mumltiples objetos de la misma 
+clase. En un bucle por cierto
 We have two kinds of creation to look for: “one-time” and “repeated.”
 Common Questions
 What About Exceptions and SPL Classes?
-there are two reasonable exceptions to this rule: Exception classes themselves, and certain built-in PHP classes, such as the SPL classes.
+there are two reasonable exceptions to this rule: Exception classes themselves, 
+and certain built-in PHP classes, such as the SPL classes.
 when in doubt, err on the side of dependency injection.
 Ante la duda. Tira hacia el lado de la inyecciln dependencias
 What About Intermediary Dependencies?
 Isn’t This A Lot Of Code?
-The real issue here, though, is not “more code.” The issues are “more testable,” “more clear,” and “more decoupled.”
-how can we tell what ItemsGateway needs to operate? What other parts of the system will it affect?
+The real issue here, though, is not “more code.” The issues are “more testable,”
+“more clear,” and “more decoupled.”
+how can we tell what ItemsGateway needs to operate? What other parts of the 
+system will it affect?
 Should A Factory Create Collections?
-The key is to keep object creation (and related operations) separate from object manipulation.
+The key is to keep object creation (and related operations) separate from object 
+manipulation.
 Can We Automate All These Injections?
 Yes, there is. It is called a Container.
 Using a Container brings distinct advantages:
-Container for a database connection; the connection is created once and then reused over and over again.
+Container for a database connection; the connection is created once and then
+reused over and over again.
 We can put complex object creation
 has disadvantages as well:
 We have to drastically change how we think about our object creation,
 fancy new toy that has many of the same problems as global.
-We will add one eventually, but it will be as the very last step of our modernization process.
-7. Write Tests
-   Fighting Test Resistance
-   if we do not write tests, we are condemning ourselves to continued rounds of suffering later.
-   So while it may be true that “writing tests” sucks, it is also true that “having written tests” is awesome.
-   The Way Of Testivus
-   The core message of The Way of Testivus is “More testing karma, less testing dogma.”
-   We should not get hung up on writing “proper” unit tests that adhere to every commandment of testing dogma. Instead, we should write the best test we can, even if the test is imperfect:
-   Setting Up A Test Suite
-   Install PHPUnit
-8. Extract SQL Statements To Gateways
+We will add one eventually, but it will be as the very last step of our 
+modernization process.
+
+### Capítulo 7: escribe tests
+
+Fighting Test Resistance
+if we do not write tests, we are condemning ourselves to continued rounds of suffering later.
+So while it may be true that “writing tests” sucks, it is also true that “having written tests” is awesome.
+The Way Of Testivus
+The core message of The Way of Testivus is “More testing karma, less testing dogma.”
+We should not get hung up on writing “proper” unit tests that adhere to every commandment of testing dogma. Instead, we should write the best test we can, even if the test is imperfect:
+Setting Up A Test Suite
+Install PHPUnit
+
+### Capítulo 8: extraer sentencias SQL a *Gateways*
 
 the principles apply to any form of data storage.
 No.sql  escribir ficheros. Llamr a servicios...
 Embedded SQL Statements
-replace the embedded SQL logic with calls to our SQL-related class methods. We will do this by creating a series of Gateway classes. The only thing these Gateway classes will do is get data from, and send data back to, our data sources.
+replace the embedded SQL logic with calls to our SQL-related class methods. We 
+will do this by creating a series of Gateway classes. The only thing these 
+Gateway classes will do is get data from, and send data back to, our data sources.
 The Extraction Process
-In general, this is the process we will follow: Search the entire codebase for SQL statements.
+In general, this is the process we will follow: Search the entire codebase for 
+SQL statements.
 move the statement and relevant logic to a related Gateway class method.
 Write a test for the new Gateway method.
-Replace the statement and relevant logic in the original file with a call to the Gateway class method.
+Replace the statement and relevant logic in the original file with a call to 
+the Gateway class method.
 Search for SQL Statements
 Move SQL To A Gateway Class
-The task of extracting the SQL to a Gateway is detail-oriented and context-specific.
+The task of extracting the SQL to a Gateway is detail-oriented and 
+context-specific.
 Vamos. Que depende de cada caso
-To determine our namespace and class names, the first thing we need to decide is whether to organize by “layer” or by “entity.”
+To determine our namespace and class names, the first thing we need to decide 
+is whether to organize by “layer” or by “entity.”
 layers,
-This naming arrangement structures the classes by their operational purpose in the codebase.
+This naming arrangement structures the classes by their operational purpose in 
+the codebase.
 by domain entities,
-This naming arrangement structures the classes by their purpose within the business logic domain.
+This naming arrangement structures the classes by their purpose within the 
+business logic domain.
 I recommend organizing by domain entities.
 get() the data, find() the data, fetch() the data, select()
 Method Names
 get() the data, find() the data, fetch() the data, select()
 We should stick with any existing naming convention as much as possible.
 While the method name itself does not matter, consistency-of-naming does.
-When we create our Gateway methods, we should never assume the parameter values are safe.
+When we create our Gateway methods, we should never assume the parameter values 
+are safe.
 best solution is to use prepared statements and parameter binding
 Write A Test
 Replace The Original Code
 Common Questions
 What About Repetitive SQL Strings?
-Dependera del caso. Pero habra que añadir metodos o añadir parametros a metodos existentes
+Dependera del caso. Pero habra que añadir metodos o añadir parametros a metodos 
+existentes
 What About Complex Query Strings?
-The main considerations are to determine which variables are used in the query-building logic, and to set those up as parameters to our new Gateway method.
+The main considerations are to determine which variables are used in the 
+query-building logic, and to set those up as parameters to our new Gateway 
+method.
 What about Queries inside non-Gateway classes?
 What About Multiple Queries And Complex Result Structures?
 identify how we can split up the queries into Gateway methods.
@@ -255,33 +348,44 @@ we have to choose which is the “primary” subject of the query.
 What If There Is No Database Class?
 Calls to mysql functions
 If we can upgrade to PDO, we should.
-I suggest we wrap the mysql calls in a class that proxies method calls to the mysql functions.
-Review and Next Steps
-9. Extract Domain Logic To Transactions
+I suggest we wrap the mysql calls in a class that proxies method calls to the
+mysql functions.
+
+### Capítulo 9: extraer lógica de dominio a *Transactions*
 
 Embedded Domain Logic
-Although we have extracted SQL statements, the page scripts and classes are probably manipulating the results and performing other actions
+Although we have extracted SQL statements, the page scripts and classes are 
+probably manipulating the results and performing other actions
 These manipulations and actions are the core of the domain logic,
 Domain Logic Patterns
-Martin Fowler’s Patterns of Enterprise Application Architecture (PoEAA) catalogs four domain logic patterns:
+Martin Fowler’s Patterns of Enterprise Application Architecture (PoEAA) catalogs
+four domain logic patterns:
 Transaction Script “… organizes [domain] logic primarily as a single procedure,
 Domain Model “… creates a web of interconnected objects,
-order form.” Table Module “… organizes domain logic with one class per table in the database,
+order form.” Table Module “… organizes domain logic with one class per table in
+the database,
 Table Module “… organizes domain logic with one class per table in the database,
 Service Layer
-I strongly recommend purchasing PoEAA in hard copy and reading the pattern descriptions and examples in full.
-we will begin by using the Transaction Script pattern when we extract our domain logic.
+I strongly recommend purchasing PoEAA in hard copy and reading the pattern 
+descriptions and examples in full.
+we will begin by using the Transaction Script pattern when we extract our 
+domain logic.
 De los cuatro patroneds. El mas probable es este
-we extract the domain logic from the page script and dump it into a class method mostly intact.
+we extract the domain logic from the page script and dump it into a class 
+method mostly intact.
 one of our goals here is to avoid changing the existing logic too dramatically.
 We are refactoring, not rewriting.
 The Extraction Process
-Search the entire codebase for uses of Gateway classes that exist outside Transactions classes.
-surrounding the Gateway operations to discover which portions of that logic are related to the domain behaviors of the application.
-discover which portions of that logic are related to the domain behaviors of the application.
+Search the entire codebase for uses of Gateway classes that exist outside 
+Transactions classes.
+surrounding the Gateway operations to discover which portions of that logic are
+related to the domain behaviors of the application.
+discover which portions of that logic are related to the domain behaviors of 
+the application.
 Extract the relevant domain logic to one or more Transactions classes
 Search For Uses Of Gateway
-where the Gateway is used. The code surrounding that usage will be our candidate for extracting domain logic.
+where the Gateway is used. The code surrounding that usage will be our candidate
+for extracting domain logic.
 Discover And Extract Relevant Domain Logic
 normalizing, filtering, sanitizing, and validating of data
 these and other operations:
@@ -292,27 +396,36 @@ retention of success/failure/warning/notice messages
 retention of values and variables for later inputs and outputs
 Example Extraction
 
-We named the ArticleTransactions methods for the domain logic being performed, not for the implemenation of the underlying technical operations.
-Transactions class as properties. The code in the original page script has been greatly reduced.
+We named the ArticleTransactions methods for the domain logic being performed,
+not for the implemenation of the underlying technical operations.
+Transactions class as properties. The code in the original page script has been 
+greatly reduced.
 The code in the original page script has been greatly reduced.
-It is now essentially an object creation and injection mechanism, passing user inputs to the domain layer and getting back data to output later.
+It is now essentially an object creation and injection mechanism, passing user 
+inputs to the domain layer and getting back data to output later.
 Spot Check The Remaining Original Code
-Transactions from the original code, we need to make sure the original code works when using the Transactions
+Transactions from the original code, we need to make sure the original code 
+works when using the Transactions
 make sure the original code works when using the Transactions
 Write Tests For The Extracted Transactions
 Spot
 Spot Check Again, Commit, Push, Notify QA
-We continue extracting and testing until all Gateway calls occur inside Transactions classes.
+We continue extracting and testing until all Gateway calls occur inside 
+Transactions classes.
 Common Questions
 Are We Talking About SQL Transactions?
 The term “Transaction Script” refers to an architectural pattern,
-One useful rule-of-thumb is that pieces of domain logic should be split up according to how well they would fit inside a single SQL transaction.
+One useful rule-of-thumb is that pieces of domain logic should be split up 
+according to how well they would fit inside a single SQL transaction.
 What About Repeated Domain Logic?
-Are the pieces of logic similar enough to be combined into a single method, or must they be different methods (or even in completely different Transactions) ?
+Are the pieces of logic similar enough to be combined into a single method, or 
+must they be different methods (or even in completely different Transactions) ?
 Are Printing And Echoing Part Of Domain Logic?
-Our Transactions classes should not be using print or echo. The domain logic should only return or retain data.
+Our Transactions classes should not be using print or echo. The domain logic 
+should only return or retain data.
 Can A Transaction Be A Class Instead Of A Method?
-some transactions may be complex enough that they truly require their own separate classes.
+some transactions may be complex enough that they truly require their own 
+separate classes.
 What About Domain Logic In Gateway Classes?
 we should probably extract it to our Transactions
 What About Domain Logic Embedded In Non-Domain Classes?
@@ -320,6 +433,7 @@ it may be wise to move the class into the domain namespace.
 If the class can reasonably be considered part of the domain,
 it may be wise to move
 Review and Next Steps
+
 10. Extract Presentation Logic To View Files
 
 we will separate all of our presentation logic to its own layer so we can test it separately from our business logic.
