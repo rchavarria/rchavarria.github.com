@@ -147,6 +147,55 @@ En el fichero `docker-compose.yml` proporcionado, modifico valores:
 - `PHOTOPRISM_DETECT_NSFW`
 - `PHOTOPRISM_UPLOAD_NSFW`
 
+## Disco duro externo
+
+Ok, ya tenemos PhotoPrism ejecutándose y funcionando.
+
+Una primera prueba subiendo unas pocas fotos a través de la interfaz web de la
+herramienta y parece que funciona
+
+Pero claro, el almacenamiento de la Raspberry es bastante limitado, y la mayoría
+de las fotos las tengo en un disco duro externo
+
+Estos son los comandos para montar y desmontar unidades en Linux:
+
+```bash
+$ lsblk
+$ sudo mount /dev/sda1 /mnt/external-disk
+$ sudo umount /dev/sda1
+```
+
+La idea general es montar el disco duro en la Raspberry, configurar el fichero
+`docker-compose.yml` de PhotoPrism para enlazar los volúmenes de los contendores
+usados a los directorios adecuados del disco duro externo. Y, por fin, arrancar
+PhotoPrism y a disfrutar
+
+## Guía rápida de los comandos usados
+
+```bash
+# listar los dispositivos de bloque para encontrar el disco externo
+$ lsblk
+
+# montar disco duro
+$ sudo mount /dev/sda1 /mnt/external-disk
+
+# editar configuración PhotoPrism
+$ cd ~/photoprism
+$ vi docker-compose.yml
+
+# arrancar PhotoPrism
+$ docker-compose up -d
+
+# ver logs de las herramientas
+$ docker-compose logs --tail=30 -f
+
+# parar PhotoPrism
+$ docker-compose stop
+
+# desmontar disco
+$ sudo umount /dev/sda1
+```
+
 [1]: https://github.com/awesome-selfhosted/awesome-selfhosted
 [2]: https://docs.photoprism.org/
 [3]: https://docs.photoprism.org/getting-started/raspberry-pi/
