@@ -23,11 +23,16 @@ y el trabajo*
 - [Modernizing Legacy Applications In PHP](https://leanpub.com/mlaphp),
 de Paul M. Jones,
 recomendado por [Jesús L.C.](https://twitter.com/jeslopcru) 
+- [Pragmatic thinking and learning](https://amzn.to/2IOfDHe), de Andy Hunt,
+recomendado por [Rachel M. Carmena](https://rachelcarmena.github.io/) en un
+[tweet](https://twitter.com/bberrycarmen/status/1140883917651755009)
+- [Sapiens](https://amzn.to/2V9f4SF), de Yuval Noah Harari, también recomendado 
+por [Rachel M. Carmena](https://rachelcarmena.github.io/) en el mismo
+[tweet](https://twitter.com/bberrycarmen/status/1140883917651755009)
 
 ## Tengo pensado leer
 
 - [Diarios de las estrellas](https://amzn.to/2yPChxB), de 	Stanislaw Lem, recomendado por [Ricardo Borillo](https://twitter.com/borillo) por Twitter
-- [Pragmatic thinking and learning](https://amzn.to/2IOfDHe), de Andy Hunt, recomendado por [Rachel M. Carmena](https://rachelcarmena.github.io/) en un [tweet](https://twitter.com/bberrycarmen/status/1140883917651755009)
 - [Planning eXtreme programming](https://amzn.to/2HKycNs), de Kent Beck y Martin Fowler, visto por ahí, y si los autores son estos dos semidioses, no hay razón para no leerlo
 - [Friendly command line](https://hellowebbooks.com/learn-command-line/), de Tracy Osborn, libro gratuito, descargable, imprimible y de todo, con unas ilustraciones muy curiosas
 - [Rapid development](https://amzn.to/2W2nTrX), de Steve McConnell, recomendado por [Javier Garzás](http://www.javiergarzas.com/2013/02/dijkstra-secret.html)
