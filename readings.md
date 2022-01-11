@@ -26,12 +26,11 @@ recomendado por [Jesús L.C.](https://twitter.com/jeslopcru)
 - [Pragmatic thinking and learning](https://amzn.to/2IOfDHe), de Andy Hunt,
 recomendado por [Rachel M. Carmena](https://rachelcarmena.github.io/) en un
 [tweet](https://twitter.com/bberrycarmen/status/1140883917651755009)
-- [Sapiens](https://amzn.to/2V9f4SF), de Yuval Noah Harari, también recomendado 
-por [Rachel M. Carmena](https://rachelcarmena.github.io/) en el mismo
-[tweet](https://twitter.com/bberrycarmen/status/1140883917651755009)
 
 ## Tengo pensado leer
 
+- [Code that fits in your head](https://blog.ploeh.dk/2021/06/14/new-book-code-that-fits-in-your-head/), de Mark Seeman, recomendado por varias personas por Twitter, el último [retwiteado](https://twitter.com/stilkov/status/1480616319422713864) por [Manuel Rivero](http://garajeando.blogspot.com/)
+- [Sapiens](https://amzn.to/2V9f4SF), de Yuval Noah Harari, también recomendado por [Rachel M. Carmena](https://rachelcarmena.github.io/) en el mismo [tweet](https://twitter.com/bberrycarmen/status/1140883917651755009)
 - [Diarios de las estrellas](https://amzn.to/2yPChxB), de 	Stanislaw Lem, recomendado por [Ricardo Borillo](https://twitter.com/borillo) por Twitter
 - [Planning eXtreme programming](https://amzn.to/2HKycNs), de Kent Beck y Martin Fowler, visto por ahí, y si los autores son estos dos semidioses, no hay razón para no leerlo
 - [Friendly command line](https://hellowebbooks.com/learn-command-line/), de Tracy Osborn, libro gratuito, descargable, imprimible y de todo, con unas ilustraciones muy curiosas
