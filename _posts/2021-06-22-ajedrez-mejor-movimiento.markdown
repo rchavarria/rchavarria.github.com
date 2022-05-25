@@ -58,6 +58,19 @@ Cuando no sabes qué jugada hacer, una buena opción es buscar tu pieza peor
 posicionada, y mejorar esa posición
 
 ### Buenas y malas piezas
+
+Las _buenas_ piezas están activas y tienen un propósito
+
+Una _mala_ pieza es justo lo contrario. Tiene movilidad reducida y no ataca
+a ninguna pieza en particular
+
+Como idea general, quieres que tus piezas sean activas, e intercambiar tus
+malas piezas. También es una buena idea restringir las piezas del rival y hacer
+que sean tan malas como sea posible
+
+Las buenas piezas controlan muchas casillas del rival. Cuanto más controlen, mejor
+será esa pieza
+
 ### Jugar una mala posición
 ### Cuando estás perdiendo
 ### Ganar el juego ganado
