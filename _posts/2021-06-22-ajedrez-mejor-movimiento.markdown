@@ -72,6 +72,20 @@ Las buenas piezas controlan muchas casillas del rival. Cuanto más controlen, me
 será esa pieza
 
 ### Jugar una mala posición
+
+Las malas posiciones no tienen por qué ser posiciones perdedoras
+
+Sé tenaz y evita crear nuevas debilidades. Normalmente, una sola debilidad no 
+es suficiente para costarte una partida
+
+A la vez, intenta encontrar alguna contrapartida activa. Consigue que tu oponente
+se defienda de tus ideas de forma que no se pueda concentrar solamente en atacar
+tu posición
+
+En malas posiciones, hay que ser creativo, incluso probar movimientos que a priori
+parecen malos o feos. Quizá funcionen, y si lo hacen, adelante con ellos.
+¡¡Imaginación!!
+
 ### Cuando estás perdiendo
 ### Ganar el juego ganado
 ### Sobrellevar tus emociones
