@@ -87,6 +87,22 @@ parecen malos o feos. Quizá funcionen, y si lo hacen, adelante con ellos.
 ¡¡Imaginación!!
 
 ### Cuando estás perdiendo
+
+Una posición perdedora no siempre significa que esté perdida del todo. Mantén
+una actitud positiva y busca tus oportunidades. Pero sobre todo, no te rindas
+demasiado pronto
+
+Intenta hacer la posición un poco más complicada, y evita hacer intercambios
+justos, así evitas simplificar la posición y tu contrincante lo tendrá más
+difícil
+
+Si estás perdiendo con tu mejor juego, merece la pena intentar algunas celadas,
+aunque no sean muy seguras, quizá tu contrincante pique
+
+Otra idea si estás perdiendo, es buscar un *jaque perpetuo*, es decir, llegar a
+tablas porque haces jaque, y jaque, y jaque, y tu contrincante no puede salir de
+ese bucle
+
 ### Ganar el juego ganado
 ### Sobrellevar tus emociones
 
