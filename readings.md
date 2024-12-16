@@ -18,12 +18,25 @@ Así que aquí está mi Lista de Lectura:
 ## Estoy leyendo
 
 - [Fundamentals of software architecture](https://amzn.to/49EqQGh), de Mark Richards & Neal Ford, conseguido en el trabajo
+- [Your money or your life](https://amzn.to/2KdrJxN), de Robin/Dominguez, 
+recomendado por J.B.Rainsberger: *cambió cómo entiendo el propósito del dinero 
+y el trabajo*
+- [Modernizing Legacy Applications In PHP](https://leanpub.com/mlaphp),
+de Paul M. Jones,
+recomendado por [Jesús L.C.](https://twitter.com/jeslopcru) 
+- [Pragmatic thinking and learning](https://amzn.to/2IOfDHe), de Andy Hunt,
+recomendado por [Rachel M. Carmena](https://rachelcarmena.github.io/) en un
+[tweet](https://twitter.com/bberrycarmen/status/1140883917651755009)
 
 ## Tengo pensado leer
 
 - [Domain Modelling Made Functional](https://amzn.to/3BF0Yxp), de Scott Wlaschin, otra recomendación de [Ricardo Borillo](https://x.com/borillo/status/1866950754482925792) por Twitter. También recomienda las charlas del autor 
 - [Diarios de las estrellas](https://amzn.to/2yPChxB), de Stanislaw Lem, recomendado por [Ricardo Borillo](https://twitter.com/borillo) por Twitter
 - [Pragmatic thinking and learning](https://amzn.to/2IOfDHe), de Andy Hunt, recomendado por [Rachel M. Carmena](https://rachelcarmena.github.io/) en un [tweet](https://twitter.com/bberrycarmen/status/1140883917651755009)
+- [Code that fits in your head](https://blog.ploeh.dk/2021/06/14/new-book-code-that-fits-in-your-head/), de Mark Seeman, recomendado por varias personas por Twitter, el último [retwiteado](https://twitter.com/stilkov/status/1480616319422713864) por [Manuel Rivero](http://garajeando.blogspot.com/)
+- [Sapiens](https://amzn.to/2V9f4SF), de Yuval Noah Harari, también recomendado por [Rachel M. Carmena](https://rachelcarmena.github.io/) en el mismo [tweet](https://twitter.com/bberrycarmen/status/1140883917651755009)
+- [Diarios de las estrellas](https://amzn.to/2yPChxB), de 	Stanislaw Lem, recomendado por [Ricardo Borillo](https://twitter.com/borillo) por Twitter
+- [Planning eXtreme programming](https://amzn.to/2HKycNs), de Kent Beck y Martin Fowler, visto por ahí, y si los autores son estos dos semidioses, no hay razón para no leerlo
 - [Friendly command line](https://hellowebbooks.com/learn-command-line/), de Tracy Osborn, libro gratuito, descargable, imprimible y de todo, con unas ilustraciones muy curiosas
 - [Rapid development](https://amzn.to/2W2nTrX), de Steve McConnell, recomendado por [Javier Garzás](http://www.javiergarzas.com/2013/02/dijkstra-secret.html)
 - [DDD, first 15 years](https://leanpub.com/ddd_first_15_years), de DDD Europe Community, recomendado por [Rafael Luque](https://twitter.com/rafael_luque/status/1092387872404111360), colección gratuita de artículos (viejos y nuevos) sobre DDD
@@ -40,6 +53,7 @@ Así que aquí está mi Lista de Lectura:
 - [Cómo invertir en bolsa a largo plazo, partiendo de 0](http://www.invertirenbolsa.info/Tienda-de-Invertirenbolsa.info/tienda.html), de Gregorio Hernández. Recomendado por varios ZetaMoneys, uno de ellos, el flipao que está estudiando la bolsa a tope (y que habla de hacer un 12% anual con opciones y futuros), publicó un resumen
 - [The millionaire fastlane](https://amzn.to/2O1uKPP), de M.J. DeMarco, recomendado por John Sonmez en uno de sus vídeos sobre [ingresos pasivos](https://www.youtube.com/watch?v=PBgoiQXZsrg)
 - [Design it! From programmer to architect](https://amzn.to/2OaApDa), de Kicahel Keeling, parece que le ha gustado a [Dani Latorre](https://twitter.com/dani_latorre/status/1087088765598875653), aunque dice que le ha parecido algo durillo, pero... aprender a diseñar software? tiene buena pinta
+- [100 finales que debes conocer](https://forwardchess.com/product/100-endgames-you-must-know%284th-edition%29), de Jesús de la Villa, encontrado por [chess.com], por si quiero profundizar en el ajedrez
 - [Mas cosas sobre la bolsa](http://www.invertirenbolsa.info/Tienda-de-Invertirenbolsa.info/tienda.html), de Gregorio Hernández, supongo que seá la parte 2 del libro 2.
 - [Analisis técnico y velas japonesas....](http://www.invertirenbolsa.info/Tienda-de-Invertirenbolsa.info/tienda.html), de Gregorio Hernández, hmmm, sabidurida
 - [Opciones y futuros](http://www.invertirenbolsa.info/Tienda-de-Invertirenbolsa.info/tienda.html), de Gregorio Hernández, aquí llega la chicha
