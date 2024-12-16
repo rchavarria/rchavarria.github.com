@@ -18,20 +18,12 @@ Así que aquí está mi Lista de Lectura:
 ## Estoy leyendo
 
 - [Fundamentals of software architecture](https://amzn.to/49EqQGh), de Mark Richards & Neal Ford, conseguido en el trabajo
-- [Your money or your life](https://amzn.to/2KdrJxN), de Robin/Dominguez, 
-recomendado por J.B.Rainsberger: *cambió cómo entiendo el propósito del dinero 
-y el trabajo*
-- [Modernizing Legacy Applications In PHP](https://leanpub.com/mlaphp),
-de Paul M. Jones,
-recomendado por [Jesús L.C.](https://twitter.com/jeslopcru) 
-- [Pragmatic thinking and learning](https://amzn.to/2IOfDHe), de Andy Hunt,
-recomendado por [Rachel M. Carmena](https://rachelcarmena.github.io/) en un
-[tweet](https://twitter.com/bberrycarmen/status/1140883917651755009)
 
 ## Tengo pensado leer
 
 - [Domain Modelling Made Functional](https://amzn.to/3BF0Yxp), de Scott Wlaschin, otra recomendación de [Ricardo Borillo](https://x.com/borillo/status/1866950754482925792) por Twitter. También recomienda las charlas del autor 
 - [Diarios de las estrellas](https://amzn.to/2yPChxB), de Stanislaw Lem, recomendado por [Ricardo Borillo](https://twitter.com/borillo) por Twitter
+- [Modernizing Legacy Applications In PHP](https://leanpub.com/mlaphp), de Paul M. Jones, recomendado por [Jesús L.C.](https://twitter.com/jeslopcru)
 - [Pragmatic thinking and learning](https://amzn.to/2IOfDHe), de Andy Hunt, recomendado por [Rachel M. Carmena](https://rachelcarmena.github.io/) en un [tweet](https://twitter.com/bberrycarmen/status/1140883917651755009)
 - [Code that fits in your head](https://blog.ploeh.dk/2021/06/14/new-book-code-that-fits-in-your-head/), de Mark Seeman, recomendado por varias personas por Twitter, el último [retwiteado](https://twitter.com/stilkov/status/1480616319422713864) por [Manuel Rivero](http://garajeando.blogspot.com/)
 - [Sapiens](https://amzn.to/2V9f4SF), de Yuval Noah Harari, también recomendado por [Rachel M. Carmena](https://rachelcarmena.github.io/) en el mismo [tweet](https://twitter.com/bberrycarmen/status/1140883917651755009)
@@ -92,7 +84,6 @@ recomendado por [Rachel M. Carmena](https://rachelcarmena.github.io/) en un
 - [Las reglas no escritas para triunfar en la empresa](http://www.amazon.es/escritas-triunfar-empresa-Inform%C3%A1tica-Profesional/dp/8492650435), de Roberto Canales (disponible en tu drive, conseguido gratuitamente gracias a Autentia)
 - [Galileo's middle finger](https://www.amazon.es/Galileos-Middle-Finger-Alice-Dreger/dp/1594206082?SubscriptionId=AKIAILSHYYTFIVPWUY6Q&tag=duc0d-21&linkCode=xm2&camp=2025&creative=165953&creativeASIN=1594206082), de Alice Dreger, libro que recomendaron a [Robert C. Martin](https://twitter.com/unclebobmartin/status/759165130349305857) y le gustó
 - [Guía de supervivencia: puntos historia](http://www.javiergarzas.com/2015/10/nueva-guia-de-supervivencia-agil-estimacion-con-puntos-historia-si-gratis.html), de Javier Garzás
-- [Pragmatic thinking and learning](https://pragprog.com/book/ahptl/pragmatic-thinking-and-learning), de Andy Hunt, recomendado por [Alvaro García](http://alvarogarcia7.github.io/blog/2015/12/31/books-read-in-2015q4/) en su blog
 - [Object thinking](http://www.amazon.com/dp/0735619654), de David West, recomendado por [Avdi Grimm](http://devblog.avdi.org/), en [Developer on Fire #108](http://developeronfire.com/episode-108-avdi-grimm-your-passion-is-yours-and-yours-alone)
 - [Thing explainer](http://www.amazon.es/gp/product/1473620910/), de [Randall Munroe (xkcd.com)](http://xkcd.com), recomendado por Microsiervos varias veces
 - [57 exercises for programmers](https://pragprog.com/book/bhwb/exercises-for-programmers), de Brian P. Hogan
@@ -145,7 +136,6 @@ recomendado por [Rachel M. Carmena](https://rachelcarmena.github.io/) en un
 - [Fearless change](http://www.amazon.com/Fearless-Change-Patterns-Introducing-Ideas/dp/0201741571), de Mary Lynn Manns y Linda Rising
 - [Antifrágil](http://www.amazon.es/gp/product/8449328640/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=8449328640&linkCode=as2&tag=viviralmaximo-21), de Nassim Taleb, recomendado por Vivir al máximo y Joan Tubau. Habla de cómo salir reforzado de las crisis
 - [La lógica oculta de la vida](http://www.amazon.es/gp/product/8484607399/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=8484607399&linkCode=as2&tag=viviralmaximo-21), de Tim Harford, recomendado por Vivir al máximo y Joan Tubau
-- [Your money or your life](http://www.amazon.com/Your-Money-Life-Transforming-Relationship/dp/0143115766), de Vicki Robin y Joe Dominguez, recomendado por J. B. Rainsberger
 - [Software for your head](http://www.amazon.com/Software-Your-Head-Protocols-Maintaining/dp/0201604566), de Jim y Michele McCarthy, recomendado por el podcast [Ideas ágile](http://www.ideasagiles.com/podcast/)
 - [Una breve historia de casi todo](http://www.microsiervos.com/archivo/libros/una-breve-historia-de-casi-todo.html), de Bill Bryson, recomendado por Microsiervos
 - [Hipérbole y media](http://www.amazon.es/gp/product/8416223076), de Allie Brosh, recomendado por Bill Gates
