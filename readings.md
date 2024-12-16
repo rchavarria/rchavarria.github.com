@@ -17,6 +17,8 @@ Así que aquí está mi Lista de Lectura:
 
 ## Estoy leyendo
 
+- [Fundamentals of software architecture](https://amzn.to/49EqQGh), de Mark Richards & Neal Ford, conseguido en el trabajo
+
 ## Tengo pensado leer
 
 - [Diarios de las estrellas](https://amzn.to/2yPChxB), de Stanislaw Lem, recomendado por [Ricardo Borillo](https://twitter.com/borillo) por Twitter
