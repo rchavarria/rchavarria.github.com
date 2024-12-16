@@ -21,6 +21,7 @@ Así que aquí está mi Lista de Lectura:
 
 ## Tengo pensado leer
 
+- [Domain Modelling Made Functional](https://amzn.to/3BF0Yxp), de Scott Wlaschin, otra recomendación de [Ricardo Borillo](https://x.com/borillo/status/1866950754482925792) por Twitter. También recomienda las charlas del autor 
 - [Diarios de las estrellas](https://amzn.to/2yPChxB), de Stanislaw Lem, recomendado por [Ricardo Borillo](https://twitter.com/borillo) por Twitter
 - [Pragmatic thinking and learning](https://amzn.to/2IOfDHe), de Andy Hunt, recomendado por [Rachel M. Carmena](https://rachelcarmena.github.io/) en un [tweet](https://twitter.com/bberrycarmen/status/1140883917651755009)
 - [Friendly command line](https://hellowebbooks.com/learn-command-line/), de Tracy Osborn, libro gratuito, descargable, imprimible y de todo, con unas ilustraciones muy curiosas
