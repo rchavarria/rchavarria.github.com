@@ -17,18 +17,14 @@ Así que aquí está mi Lista de Lectura:
 
 ## Estoy leyendo
 
-- [Your money or your life](https://amzn.to/2KdrJxN), de Robin/Dominguez, 
-recomendado por J.B.Rainsberger: *cambió cómo entiendo el propósito del dinero 
-y el trabajo*
-- [Modernizing Legacy Applications In PHP](https://leanpub.com/mlaphp),
-de Paul M. Jones,
-recomendado por [Jesús L.C.](https://twitter.com/jeslopcru) 
-- [Pragmatic thinking and learning](https://amzn.to/2IOfDHe), de Andy Hunt,
-recomendado por [Rachel M. Carmena](https://rachelcarmena.github.io/) en un
-[tweet](https://twitter.com/bberrycarmen/status/1140883917651755009)
+- [Fundamentals of software architecture](https://amzn.to/49EqQGh), de Mark Richards & Neal Ford, conseguido en el trabajo
 
 ## Tengo pensado leer
 
+- [Domain Modelling Made Functional](https://amzn.to/3BF0Yxp), de Scott Wlaschin, otra recomendación de [Ricardo Borillo](https://x.com/borillo/status/1866950754482925792) por Twitter. También recomienda las charlas del autor 
+- [Diarios de las estrellas](https://amzn.to/2yPChxB), de Stanislaw Lem, recomendado por [Ricardo Borillo](https://twitter.com/borillo) por Twitter
+- [Modernizing Legacy Applications In PHP](https://leanpub.com/mlaphp), de Paul M. Jones, recomendado por [Jesús L.C.](https://twitter.com/jeslopcru)
+- [Pragmatic thinking and learning](https://amzn.to/2IOfDHe), de Andy Hunt, recomendado por [Rachel M. Carmena](https://rachelcarmena.github.io/) en un [tweet](https://twitter.com/bberrycarmen/status/1140883917651755009)
 - [Code that fits in your head](https://blog.ploeh.dk/2021/06/14/new-book-code-that-fits-in-your-head/), de Mark Seeman, recomendado por varias personas por Twitter, el último [retwiteado](https://twitter.com/stilkov/status/1480616319422713864) por [Manuel Rivero](http://garajeando.blogspot.com/)
 - [Sapiens](https://amzn.to/2V9f4SF), de Yuval Noah Harari, también recomendado por [Rachel M. Carmena](https://rachelcarmena.github.io/) en el mismo [tweet](https://twitter.com/bberrycarmen/status/1140883917651755009)
 - [Diarios de las estrellas](https://amzn.to/2yPChxB), de 	Stanislaw Lem, recomendado por [Ricardo Borillo](https://twitter.com/borillo) por Twitter
@@ -38,7 +34,6 @@ recomendado por [Rachel M. Carmena](https://rachelcarmena.github.io/) en un
 - [DDD, first 15 years](https://leanpub.com/ddd_first_15_years), de DDD Europe Community, recomendado por [Rafael Luque](https://twitter.com/rafael_luque/status/1092387872404111360), colección gratuita de artículos (viejos y nuevos) sobre DDD
 - [Una breve historia de casi todo](https://amzn.to/2HwdLE2), de Bill Bryson, Álvaro García Loaisa dice de él: [Posiblemente el mejor libro de divulgación científica que me he leído](https://twitter.com/aloaisa/status/1020955449905082369/photo/1)
 - [On writing well](https://amzn.to/2Y63aWj), de William Zinsser, recomendado por [Nacho Coloma](https://twitter.com/nachocoloma/status/1102564787802779648), *ha cambiado la forma en la que escribo, explicando algunas cosas que pasan en una buena revisión*
-- [Educación financiera avanzada partiendo de cero](https://www.amazon.es/Educaci%C3%B3n-Financiera-partiendo-gestionar-transformar-ebook/dp/B00COMQOM0/), de Gregorio Hernández, recomendado por un usuario en el Telegram de ZetaMoney. Parece algo básico, pero podría estar bien hacer una lectura rápida. Algo sacaré
 - [Becoming a technical leader](https://amzn.to/2CkVo1m), de Gerald Weinberg, recomendado por Gonzalo @gzpunkt a Raúl Villares por twitter
 - [Refactoring for Software Design Smells](https://www.amazon.co.uk/Refactoring-Software-Design-Smells-Technical/dp/0128013974/), de Girish Suryanarayana, Ganesh Samarthyam y Tushar Sharma, me recuerda mucho a los libros de Sandi Metz (refactorizaiones y demás)
 - [Agile technical practices distilled](https://leanpub.com/agiletechnicalpracticesdistilled/), de Pedro Moreira Santos y otros
@@ -89,7 +84,6 @@ recomendado por [Rachel M. Carmena](https://rachelcarmena.github.io/) en un
 - [Las reglas no escritas para triunfar en la empresa](http://www.amazon.es/escritas-triunfar-empresa-Inform%C3%A1tica-Profesional/dp/8492650435), de Roberto Canales (disponible en tu drive, conseguido gratuitamente gracias a Autentia)
 - [Galileo's middle finger](https://www.amazon.es/Galileos-Middle-Finger-Alice-Dreger/dp/1594206082?SubscriptionId=AKIAILSHYYTFIVPWUY6Q&tag=duc0d-21&linkCode=xm2&camp=2025&creative=165953&creativeASIN=1594206082), de Alice Dreger, libro que recomendaron a [Robert C. Martin](https://twitter.com/unclebobmartin/status/759165130349305857) y le gustó
 - [Guía de supervivencia: puntos historia](http://www.javiergarzas.com/2015/10/nueva-guia-de-supervivencia-agil-estimacion-con-puntos-historia-si-gratis.html), de Javier Garzás
-- [Pragmatic thinking and learning](https://pragprog.com/book/ahptl/pragmatic-thinking-and-learning), de Andy Hunt, recomendado por [Alvaro García](http://alvarogarcia7.github.io/blog/2015/12/31/books-read-in-2015q4/) en su blog
 - [Object thinking](http://www.amazon.com/dp/0735619654), de David West, recomendado por [Avdi Grimm](http://devblog.avdi.org/), en [Developer on Fire #108](http://developeronfire.com/episode-108-avdi-grimm-your-passion-is-yours-and-yours-alone)
 - [Thing explainer](http://www.amazon.es/gp/product/1473620910/), de [Randall Munroe (xkcd.com)](http://xkcd.com), recomendado por Microsiervos varias veces
 - [57 exercises for programmers](https://pragprog.com/book/bhwb/exercises-for-programmers), de Brian P. Hogan
@@ -142,7 +136,6 @@ recomendado por [Rachel M. Carmena](https://rachelcarmena.github.io/) en un
 - [Fearless change](http://www.amazon.com/Fearless-Change-Patterns-Introducing-Ideas/dp/0201741571), de Mary Lynn Manns y Linda Rising
 - [Antifrágil](http://www.amazon.es/gp/product/8449328640/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=8449328640&linkCode=as2&tag=viviralmaximo-21), de Nassim Taleb, recomendado por Vivir al máximo y Joan Tubau. Habla de cómo salir reforzado de las crisis
 - [La lógica oculta de la vida](http://www.amazon.es/gp/product/8484607399/ref=as_li_ss_tl?ie=UTF8&camp=3626&creative=24822&creativeASIN=8484607399&linkCode=as2&tag=viviralmaximo-21), de Tim Harford, recomendado por Vivir al máximo y Joan Tubau
-- [Your money or your life](http://www.amazon.com/Your-Money-Life-Transforming-Relationship/dp/0143115766), de Vicki Robin y Joe Dominguez, recomendado por J. B. Rainsberger
 - [Software for your head](http://www.amazon.com/Software-Your-Head-Protocols-Maintaining/dp/0201604566), de Jim y Michele McCarthy, recomendado por el podcast [Ideas ágile](http://www.ideasagiles.com/podcast/)
 - [Una breve historia de casi todo](http://www.microsiervos.com/archivo/libros/una-breve-historia-de-casi-todo.html), de Bill Bryson, recomendado por Microsiervos
 - [Hipérbole y media](http://www.amazon.es/gp/product/8416223076), de Allie Brosh, recomendado por Bill Gates
@@ -152,8 +145,13 @@ recomendado por [Rachel M. Carmena](https://rachelcarmena.github.io/) en un
 
 ## He leído
 
+- [Your money or your life]({{ site.baseurl }}{% post_url 2020-10-20-your-money-your-life %}), de de Vicki Robin, Joe Dominguez y Monique Tilford, recomendado por J.B.Rainsberger: *cambió cómo entiendo el propósito del dinero y el trabajo* ~ *Octubre 2020*
 - [Ajedrez y su enseñanza: libro de aperturas]({{ site.baseurl }}{% post_url 2019-10-21-ajedrez-ensenanza-libro-aperturas %}), de Ajedrez Eureka ~ *Octubre 2019*
+- [Educación financiera avanzada partiendo de cero]({{ site.baseurl }}{% post_url 2018-12-29-educacion-financiera-avanzada-cero %}), de Gregorio Hernández, recomendado por un usuario en el Telegram de ZetaMoney. Parece algo básico, pero podría estar bien hacer una lectura rápida ~ *Diciembre 2018*
+- [Stop being lazy]({{ site.baseurl }}{% post_url 2018-11-02-stop-being-lazy %}), de John Sonmez ~ *Noviembre 2018*
+- [Planning eXtreme programming]({{ site.baseurl }}{% post_url 2018-05-18-planning-extreme-programming %}), de Kent Beck y Martin Fowler, visto por ahí, y si los autores son estos dos semidioses, no hay razón para no leerlo
 - [Down and out in the magic kindom]({{ site.baseurl }}{% post_url 2018-03-23-down-out-magic-kingdom %}), de Cory Doctorow ~ *Marzo 2018*
+- [You are your own gym]({{ site.baseurl }}{% post_url 2018-01-19-yayog %}), de Mark Lauren ~ *Enero 2018*
 - [Practical object-oriented design with Ruby (POODR)]({{ site.baseurl }}{% post_url 2018-01-17-practical-object-oriented-design-in-ruby %}), de Sandi Metz, visto en el blog de [Carlos Blé](https://twitter.com/carlosble) ~ *Enero 2018*
 - [Ego is the enemy]({{ site.baseurl }}{% post_url 2017-12-13-ego-is-enemy %}), de Ryan Holiday, recomendado una y otra vez por [Derek Sivers](https://sivers.org/) ~ *Diciembre 2017*
 - [Seveneves (7 Evas)]({{ site.baseurl }}{% post_url 2017-10-30-seveneves %}), de Neal Stephenson ~ *Octubre 2017*
