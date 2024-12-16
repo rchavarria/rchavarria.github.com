@@ -13,6 +13,7 @@ It's been migrated from Octopress to plain Jekyll, and it's using the
     2. how could I create a link to show all posts within a single category, this way, I could
     create links to a single category in the `archives.md` page
 - [ ] Improve header UI
+- [ ] Improve footer UI, specially Libre Counter logo
 - [ ] ¿Quiero habilitar los comentarios con disquss?
 
 # DONEs
