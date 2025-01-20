@@ -21,6 +21,7 @@ Así que aquí está mi Lista de Lectura:
 
 ## Tengo pensado leer
 
+- [Debugging](https://amzn.to/4jkXukR), de David J. Agans, recomendado por [David A. Wheeler](https://dwheeler.com), encontrado en Hacker News 
 - [Domain Modelling Made Functional](https://amzn.to/3BF0Yxp), de Scott Wlaschin, otra recomendación de [Ricardo Borillo](https://x.com/borillo/status/1866950754482925792) por Twitter. También recomienda las charlas del autor 
 - [Diarios de las estrellas](https://amzn.to/2yPChxB), de Stanislaw Lem, recomendado por [Ricardo Borillo](https://twitter.com/borillo) por Twitter
 - [Modernizing Legacy Applications In PHP](https://leanpub.com/mlaphp), de Paul M. Jones, recomendado por [Jesús L.C.](https://twitter.com/jeslopcru)
