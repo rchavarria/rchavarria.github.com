@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Stop being lazy"
-date: 201-11-02 22:11
+date: 2010-11-02 22:11
 author: Ruben Chavarria
 categories:
 - Reseñas
@@ -20,6 +20,8 @@ categories:
 ### Qué he aprendido
 
 ### Frases que me gustaría recordar
+
+<!-- more -->
 
 ## Notas tomadas
 
