@@ -21,6 +21,8 @@ categories:
 
 ### Frases que me gustaría recordar
 
+<!-- more -->
+
 ## Notas tomadas
 
 #### Prólogo
