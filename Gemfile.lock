@@ -44,6 +44,7 @@ GEM
       logger
     faraday-net_http (3.4.0)
       net-http (>= 0.5.0)
+    ffi (1.17.0-x86_64-linux-gnu)
     ffi (1.17.0-x86_64-linux-musl)
     forwardable-extended (2.6.0)
     gemoji (4.1.0)
@@ -266,10 +267,11 @@ GEM
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (1.8.0)
-    uri (1.0.2)
+    uri (1.0.3)
     webrick (1.9.1)
 
 PLATFORMS
+  x86_64-linux
   x86_64-linux-musl
 
 DEPENDENCIES
