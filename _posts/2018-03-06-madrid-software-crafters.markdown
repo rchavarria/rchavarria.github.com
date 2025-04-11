@@ -22,8 +22,8 @@ con las que tuve el placer de compartir el día
 
 ![MadSWCraft]({{ site.baseurl }}/assets/images/2018/madswcraft.jpg)
 
-<div style="text-align: center">
-  <span style="font-size: 60%">
+<div class="image-footer">
+    <span>
     <a href="https://twitter.com/madswcraft/status/967447494526488576">Imagen</a> reproducida con permiso de <a href="https://twitter.com/HelderDOliveira">Helder de Oliveira</a>, autor de la misma. Gracias!!
   </span>
 </div>

@@ -28,8 +28,8 @@ Sigo aprendiendo siguiendo el método descrito en el post sobre [aprender Elixir
 
 ![Third fight]({{ site.baseurl }}/assets/images/2016/third-fight.png)
 
-<div style="text-align: center">
-  <span style="font-size: 60%">
+<div class="image-footer">
+    <span>
 Imagen basada en <a href="https://flic.kr/p/c9bWJA">3rd fight</a> de <a href="https://www.flickr.com/photos/takfoto/">Tomasz Krawczak</a>, <a href="https://creativecommons.org/licenses/by-nc/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by-nc/2.0/legalcode">CC BY-NC 2.0</a>
   </span>
 </div>
@@ -231,4 +231,3 @@ Aquí está, este post, mis notas, mis pensamientos, mis dudas y mi código. Has
 [exercise-02-round-03.exs]: https://github.com/rchavarria/learning-elixir/blob/master/code/round-03/exercise-02-round-03.exs
 [lists-and-recursion-5.exs]: https://github.com/rchavarria/learning-elixir/blob/master/code/round-03/lists-and-recursion-5.exs
 [lists-and-recursion-6.exs]: https://github.com/rchavarria/learning-elixir/blob/master/code/round-03/lists-and-recursion-6.exs
-

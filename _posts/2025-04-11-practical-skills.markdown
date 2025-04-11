@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Vídeo: Practical Vs Thinking skills"
-date: 2025-04-11 06:06
+date: 2025-04-11 01:23
 author: Ruben Chavarria
 categories:
 - Reviews
@@ -44,8 +44,8 @@ vídeo:
 
 ![Taxonomía de competencias de Hartman]({{ site.baseurl }}/assets/images/2025/hartman-proficiency-taxonomy.png)
 
-<div style="text-align: center; margin-bottom: 1em; margin-top: -1em;">
-    <span style="font-size: 60%">
+<div class="image-footer">
+    <span>
         Taxonomía de competencias de Hartman, imagen tomada del vídeo        
     </span>
 </div>

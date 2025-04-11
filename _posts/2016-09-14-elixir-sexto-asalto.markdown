@@ -28,8 +28,8 @@ Sigo con la metodología de aprendizaje explicada en el [primer post sobre Elixi
 
 ![Sixth]({{ site.baseurl }}/assets/images/2016/more-gladiators.png)
 
-<div style="text-align: center">
-  <span style="font-size: 60%">
+<div class="image-footer">
+    <span>
 Imagen basada en <a href="https://flic.kr/p/6xvcMz">More gladiators</a> de <a href="https://www.flickr.com/photos/archeon/">Hans Splinter</a>, <a href="https://creativecommons.org/licenses/by-nd/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>
   </span>
 </div>

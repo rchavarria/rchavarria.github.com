@@ -24,8 +24,8 @@ Todo esto, siguiendo el [método de aprendizaje] con el que comenzé la serie:
 
 ![Eighth]({{ site.baseurl }}/assets/images/2016/risk.jpg)
 
-<div style="text-align: center">
-  <span style="font-size: 60%">
+<div class="image-footer">
+    <span>
 Imagen basada en <a href="https://flic.kr/p/3pUVs">Risk</a> de <a href="https://www.flickr.com/photos/benstephenson/">Ben Stephenson</a>, <a href="https://creativecommons.org/licenses/by/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>
   </span>
 </div>
@@ -157,4 +157,3 @@ el siguiente asalto.
 [método de aprendizaje]: {{ site.baseurl }}{% post_url 2016-01-17-aprendiendo-elixir %}
 [ticker.ex]: https://github.com/rchavarria/learning-elixir/blob/master/code/round-08/ticker.ex
 [ring_ticker.ex]: https://github.com/rchavarria/learning-elixir/blob/master/code/round-08/ring_ticker.ex
-

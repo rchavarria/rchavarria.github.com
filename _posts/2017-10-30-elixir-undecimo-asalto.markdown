@@ -28,8 +28,8 @@ Todo esto, siguiendo el [método de aprendizaje] con el que comenzé la serie:
 
 ![Eleventh]({{ site.baseurl }}/assets/images/2017/fingers.jpg)
 
-<div style="text-align: center">
-  <span style="font-size: 60%">
+<div class="image-footer">
+    <span>
 Imagen basada en <a href="https://flic.kr/p/9cXZUG">Asaltos</a> de <a href="https://www.flickr.com/photos/antoniobugarin/">Antonio Bugarin</a>, <a href="https://creativecommons.org/licenses/by/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>
   </span>
 </div>

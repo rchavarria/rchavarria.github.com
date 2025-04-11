@@ -20,8 +20,8 @@ cuanto hay un nuevo valor presente en el flujo asíncrono.
 
 ![Bees]({{ site.baseurl }}/assets/images/2018/bees.jpg)
 
-<div style="text-align: center">
-  <span style="font-size: 60%">
+<div class="image-footer">
+    <span>
 Imagen basada en <a href="https://flic.kr/p/JXSQNN">Bees</a> de <a href="https://www.flickr.com/photos/kbphoto/">Keith</a>, <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/">CC BY-NC-ND 2.0</a>
   </span>
 </div>
@@ -49,8 +49,8 @@ Observable.from([ 1, 2, 3 ])
 // 3
 ```
 
-<div style="text-align: center">
-  <span style="font-size: 60%">
+<div class="image-footer">
+    <span>
     Hay una versión ejecutable de este código en GitHub, en el fichero <a href="https://github.com/rchavarria/reactive-programming-rxjs/blob/master/02-arrays-vs-observables/01-array-vs-observable.js">01-array-vs-observable.js</a>
   </span>
 </div>
@@ -90,8 +90,8 @@ Observable.from([ 1, 2, 3, ])
 // Completed!
 ```
 
-<div style="text-align: center">
-  <span style="font-size: 60%">
+<div class="image-footer">
+    <span>
     Hay una versión ejecutable de este código en GitHub, en el fichero <a href="https://github.com/rchavarria/reactive-programming-rxjs/blob/master/02-arrays-vs-observables/02-next-error-complete.js">02-next-error-complete.js</a>
   </span>
 </div>
@@ -118,8 +118,8 @@ Observable.from([ 1, 2, 3, ])
 // Completed!
 ```
 
-<div style="text-align: center">
-  <span style="font-size: 60%">
+<div class="image-footer">
+    <span>
     Hay una versión ejecutable de este código en GitHub, en el fichero <a href="https://github.com/rchavarria/reactive-programming-rxjs/blob/master/02-arrays-vs-observables/03-first-observer.js">03-first-observer.js</a>
   </span>
 </div>

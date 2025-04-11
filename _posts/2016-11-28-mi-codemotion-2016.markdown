@@ -16,14 +16,10 @@ presentación. Es el evento técnico más grande en España: dos días completos
 más de 2000 asistentes, 150 charlas y talleres. Una auténtica monstruosidad. Y
 llena de monstruos de la industria.
 
-<div style="background-image: url('/images/2016/codemotion-2016.jpg');
-            width: 100%;
-            height: 14em;
-            background-position: center 0;
-            background-size: cover;"></div>
+![Codemotion 2016]({{ site.baseurl }}/assets/images/2016/codemotion-2016.jpg)
 
-<div style="text-align: center">
-  <span style="font-size: 60%">
+<div class="image-footer">
+    <span>
 Foto: <a href="https://flic.kr/p/NjN8Hv">_MG_1926</a> de <a href="https://www.flickr.com/photos/78483623@N07/">Codemotion Madrid</a>, &copy; Todos los derechos reservados, reproducida con <a href="https://twitter.com/codemotion_es/status/803259905213952000">permiso explícito</a>
   </span>
 </div>
@@ -151,8 +147,8 @@ problema, podemos ayudarnos de todas estas técnicas de análisis:
 
 ![Analisis]({{ site.baseurl }}/assets/images/2016/carlosble-analisis.png)
 
-<div style="text-align: center">
-  <span style="font-size: 60%">
+<div class="image-footer">
+    <span>
 Slide #15 de <a href="http://www.slideshare.net/carlosble/distinguir-entre-problema-y-solucin">Distinguir entre problema y solución</a> de <a href="http://www.slideshare.net/carlosble">Carlos Blé</a>, reproducida con permiso del autor
   </span>
 </div>
@@ -187,8 +183,8 @@ testeable:
 
 ![Design smells]({{ site.baseurl }}/assets/images/2016/non-testable-design-smells.png)
 
-<div style="text-align: center">
-  <span style="font-size: 60%">
+<div class="image-footer">
+    <span>
 Slide #66 de <a href="http://www.slideshare.net/delr3ves/lo-que-deberas-saber-sobre-testing-para-irte-de-caas-con-pedrogs-y-no-empezar-con-resaca">#codemotion2016: Everything you should know about testing to go with @pedro_g_s, @flipper83 & @kinisoftware avoiding the hangover</a> de <a href="http://www.slideshare.net/delr3ves">Sergio Arroyo</a>, <a href="https://creativecommons.org/licenses/by/4.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
   </span>
 </div>
@@ -352,4 +348,3 @@ Aparte de todas las presentaciones a las que asistí, he escaneado [las notas qu
 [Data! Data! Data!]: https://2016.codemotion.es/agenda.html#5716304078045184/83544008
 [Yo soy tu madre]: http://yosoytumadre.es
 [las notas que tomé]: https://github.com/rchavarria/rchavarria.github.com/tree/master/images/2016/codemotion
-
