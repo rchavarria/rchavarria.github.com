@@ -61,7 +61,7 @@ que en el de producción
 Refactorizar te da como un cerebro externo (exobrain).
 Cada uno de nosotros podemos retener una cantidad finita de detalles en la
 memoria (me recuerda al post de J.B.Rainsberger
-[Your tests are dragging you down]). Programar es sobretodo, mantener en
+[Your tests are dragging you down]). Programar es sobre todo, mantener en
 mente todos esos detalles. Nuestra memoria trabaja peor bajo condiciones
 de miedo o estrés. Refactorizar pone a salvo muchos de estos detalles,
 permitiéndonos trabajar más relajadamente y más confiados en que estamos

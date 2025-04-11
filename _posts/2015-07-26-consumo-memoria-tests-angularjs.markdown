@@ -72,7 +72,7 @@ se reserva memoria y el consumo aumenta, pasado un pequeño espacio de tiempo,
 objetos en memoria se dejan de usar y ésta es liberada, que es cuando la gráfica
 baja de golpe). Pero la mala noticia es que el consumo va cada vez a más, no se
 libera la misma cantidad que se reserva, lo que indica que hay muchas referencias
-a objectos que no se eliminan correctamente. Incluso después de haber terminado
+a objetos que no se eliminan correctamente. Incluso después de haber terminado
 la ejecución de los tests, el navegador no considera que deba liberar memoria.
 
 ## Módulo pequeño
