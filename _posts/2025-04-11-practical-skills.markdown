@@ -1,14 +1,14 @@
 ---
 layout: post
 title: "Vídeo: Practical Vs Thinking skills"
-date: 2025-04-11 11:11
+date: 2025-04-11 06:06
 author: Ruben Chavarria
 categories:
 - Reviews
 - Videos
 ---
 
-En el siguiente vídeo, [Emile Bache] habla de dos formas distintas
+En el siguiente vídeo, [Emily Bache] habla de dos formas distintas
 de obtener habilidades. Hay ocasiones en las que necesitamos aprender
 teoría. Y hay ocasiones en las que necesitamos práctica.
 
@@ -17,11 +17,15 @@ pero los programadores, durante nuestra carrera profesional,
 adquirimos la mayoría de nuestras habilidades en el trabajo y,
 sobre todo, mediante formación práctica.
 
-<iframe width="560"
-        height="315"
-        src="https://youtu.be/qAFo8JiN92g"
-        frameborder="0"
-        allowfullscreen></iframe>
+<div style="text-align: center">
+        <iframe width="560"
+                height="315"
+                src="https://www.youtube.com/embed/qAFo8JiN92g"
+                title="Why Some Developers Advance Faster - How Coding Skill Acquisition Happens" 
+                allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen></iframe>
+</div>
 
 Según Emily:
 
@@ -40,7 +44,7 @@ vídeo:
 
 ![Taxonomía de competencias de Hartman]({{ site.baseurl }}/assets/images/2025/hartman-proficiency-taxonomy.png)
 
-<div style="text-align: center">
+<div style="text-align: center; margin-bottom: 1em; margin-top: -1em;">
     <span style="font-size: 60%">
         Taxonomía de competencias de Hartman, imagen tomada del vídeo        
     </span>
@@ -69,10 +73,10 @@ coaching técnico en el trabajo
 
 ### Referencias
 
+- [Emily Bache]
 - [Taxonomía de Bloom][1]
 - [Taxonomía de Hartman][2]
 - [Hartman proficiency models](https://marianhartman.com/hartman-models)
-- [Emily Bache]
 
 [Emily Bache]: https://www.linkedin.com/in/emilybache
 [1]: https://en.wikipedia.org/wiki/Bloom%27s_taxonomy
