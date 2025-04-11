@@ -45,8 +45,8 @@ con el resto de elementos. De esta forma, la lista `[1, 2, 3]`, en realidad es
 `[1 | [2 | [3 | [] ] ] ]` (al final se concatena una lista vacía).
 
 Como las listas son recursivas, muchas funciones que manipulan listas lo son.
-Elixir hace super sencilla la recursividad. Mezclando recursividad y pattern
-matching, se pueden hacer virgerías. Super fácil implementar el cifrado César
+Elixir hace supersencilla la recursividad. Mezclando recursividad y pattern
+matching, se pueden hacer virgerías. Superfácil implementar el cifrado César
 (ver [exercise-04-round-02.exs]).
 
 **Diccionarios**
@@ -262,4 +262,3 @@ Aquí está, este post, mis notas, mis pensamientos, mis dudas y mi código. Has
 [exercise-03-round-02.exs]: https://github.com/rchavarria/learning-elixir/blob/master/code/round-02/exercise-03-round-02.exs
 [exercise-04-round-02.exs]: https://github.com/rchavarria/learning-elixir/blob/master/code/round-02/exercise-04-round-02.exs
 [exercise-05-round-02.exs]: https://github.com/rchavarria/learning-elixir/blob/master/code/round-02/exercise-05-round-02.exs
-

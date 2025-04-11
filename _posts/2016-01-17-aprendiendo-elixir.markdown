@@ -13,7 +13,7 @@ sidebar: true
 
 ![Elixir]({{ site.baseurl }}/assets/images/2016/elixir.png)
 
-No es una propósito de año nuevo ni nada, pero me apetece aprender un lenguaje
+No es un propósito de año nuevo ni nada, pero me apetece aprender un lenguaje
 puramente funcional por el simple hecho de aprender. He estado dudando entre
 Clojure y Elixir. Al final me he decidido por Elixir porque lo *venden* como
 divertido y porque sigo a varias personas en Twitter que están haciendo lo

@@ -14,7 +14,7 @@ sidebar: true
 
 ![Prácticas de eXtreme Programming]({{ site.baseurl }}/assets/images/2014/xppractices.jpg)
 
-Recientemente he dado una charla en el trabajo acerca de [eXtreme Programming].
+Recientemente, he dado una charla en el trabajo acerca de [eXtreme Programming].
 No es nada del otro mundo, tampoco pretendo dar lecciones a nadie y tampoco
 he descubierto nada que no estuviera escrito ya. Pero al hacer la charla he
 reunido un poco de información de aquí y de allá, y ya que he hecho ese
@@ -263,4 +263,3 @@ tareas.
 - [Extreme programming explained](http://www.amazon.com/Extreme-Programming-Explained-Embrace-Edition/dp/0321278658)
 
 [eXtreme Programming]: http://www.extremeprogramming.org
-

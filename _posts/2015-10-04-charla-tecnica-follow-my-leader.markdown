@@ -44,9 +44,9 @@ usuarios pueden crear sus mapeos sin interferir con Vim
 - En lugar de usar `leader`, algunos plugins, como los que escribe [Tim Pope]
 siguen otro patrón. hay teclas que son *operadores*, por ejemplo la **d**
 para borrar, o la **y** para copiar. a estos operadores le puede seguir el
-mismo operador o una movimiento. Teclas que producen un movimiento son **j**
+mismo operador o un movimiento. Teclas que producen un movimiento son **j**
 para ir hacia abajo, **$** para ir al final de la línea, ... Pero, qué pasa si
-despues de un operador pulsamos una tecla de *no movimiento*? No pasa nada. Y
+después de un operador pulsamos una tecla de *no movimiento*? No pasa nada. Y
 ahí están las combinaciones de teclas dsiponibles para tus plugins.
 - En la imagen de la [chuleta de Vim], los naranjas son operadores, los
 verdes movimientos y los amarillos son comandos.
@@ -54,7 +54,7 @@ verdes movimientos y los amarillos son comandos.
 ![Vim cheat sheet]({{ site.baseurl }}/assets/images/2015/tiny-vi-vim-cheat-sheet.gif)
 
 - El plugin [unimpaired.vim] añade mapeos como `con` para habilitar/deshabilitar los
-nuḿeros de línea, o `cos` para habilitar/deshabilitar el chequeo ortográfico.
+números de línea, o `cos` para habilitar/deshabilitar el chequeo ortográfico.
 Son `c` + `o` + otras teclas
 - También hay disponibles combinaciones como operador + operador : `d` + `c`
 - Los *text objects* (`i` y `a`) también tienen vacantes.
