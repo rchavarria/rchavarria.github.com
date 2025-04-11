@@ -13,7 +13,7 @@ Curso de Coursera [Learning how to learn](https://www.coursera.org/learn/learnin
 
 ### Focused versus Diffuse thinking
 
-#### Video: Introducton to the Focused and Difuse modes
+#### Video: Introduction to the Focused and Diffused modes
 
 Enfocado: Es cuando te concentras intencionadamente en algo que estás intentando aprender o entender.
 
@@ -461,4 +461,3 @@ Respirar profundamente, con el vientre, ayuda a tranquilizarse. Puedes practicar
 - metaphors, analogies
 - change your thoughts and you'll change your life
 - repasa tus respuestas en los exámenes, o si no, no estarás utilizando todo tu cerebro
-
