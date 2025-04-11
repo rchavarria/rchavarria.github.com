@@ -28,8 +28,8 @@ partiendo del post [aprendiendo Elixir]:
 
 ![Fifth fight]({{ site.baseurl }}/assets/images/2016/fight-II-harc-II.jpg)
 
-<div style="text-align: center">
-  <span style="font-size: 60%">
+<div class="image-footer">
+    <span>
 Imagen basada en <a href="https://flic.kr/p/6bQhPq">Fight II / Harc II</a> de <a href="https://www.flickr.com/photos/silangel/">silangel</a>, <a href="https://creativecommons.org/licenses/by-nc/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>
   </span>
 </div>
@@ -136,4 +136,3 @@ el siguiente asalto.
 [aprendiendo Elixir]: {{ site.baseurl }}{% post_url 2016-01-17-aprendiendo-elixir %}
 [exercise-01-round-04.exs]: https://github.com/rchavarria/learning-elixir/blob/master/code/round-05/exercise-01-round-05.exs
 [exercise-02-round-04.exs]: https://github.com/rchavarria/learning-elixir/blob/master/code/round-05/exercise-02-round-05.exs
-

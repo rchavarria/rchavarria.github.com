@@ -26,8 +26,8 @@ En estos asaltos, intentaré seguir los siguientes pasos:
 
 ![Touch gloves]({{ site.baseurl }}/assets/images/2016/touch-gloves-derived-small.png)
 
-<div style="text-align: center">
-  <span style="font-size: 60%">
+<div class="image-footer">
+    <span>
 Imagen basada en <a href="https://flic.kr/p/awy1vc">Touch Gloves</a> de <a href="https://www.flickr.com/photos/kaiban/">Jack Zallum</a>, <a href="https://creativecommons.org/licenses/by-nc/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by-nc/2.0/legalcode">CC BY-NC 2.0</a>
   </span>
 </div>

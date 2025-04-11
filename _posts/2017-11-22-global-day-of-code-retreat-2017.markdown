@@ -27,8 +27,8 @@ una pequeña retrospectiva. Y así es como fue nuestro [día].
 
 ![GDCR 2017]({{ site.baseurl }}/assets/images/2017/gdcr2017.jpg)
 
-<div style="text-align: center">
-  <span style="font-size: 60%">
+<div class="image-footer">
+    <span>
 Imagen propiedad de <a href="https://twitter.com/HelderDOliveira">Helder</a>, reproducida con su permiso
   </span>
 </div>

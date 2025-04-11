@@ -25,8 +25,8 @@ Por supuesto, sigo aprendiendo con el método descrito en el post sobre [aprende
 
 ![Fourth fight]({{ site.baseurl }}/assets/images/2016/fourth-fight.jpg)
 
-<div style="text-align: center">
-  <span style="font-size: 60%">
+<div class="image-footer">
+    <span>
 Imagen basada en <a href="https://flic.kr/p/5yHK4Y">Muñeco de Gohan y Bu peleando</a> de <a href="https://www.flickr.com/photos/alotor/">Alonso Javier Torres</a>, <a href="https://creativecommons.org/licenses/by-nc/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>
   </span>
 </div>
@@ -176,4 +176,3 @@ Aquí está, este post, mis notas, mis pensamientos, mis dudas y mi código. Has
 [exercise-04-round-04.exs]: https://github.com/rchavarria/learning-elixir/blob/master/code/round-04/exercise-04-round-04.exs
 [exercise-05-round-04.exs]: https://github.com/rchavarria/learning-elixir/blob/master/code/round-04/exercise-05-round-04.exs
 [exercise-06-round-04.exs]: https://github.com/rchavarria/learning-elixir/blob/master/code/round-04/exercise-06-round-04.exs
-

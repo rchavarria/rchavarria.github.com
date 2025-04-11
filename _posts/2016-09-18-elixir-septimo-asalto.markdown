@@ -25,8 +25,8 @@ Sin olvidar del método de aprendizaje con el que [comenzé]:
 
 ![Seventh]({{ site.baseurl }}/assets/images/2016/you-gotta-fight-for-your-right-to-eat.jpg)
 
-<div style="text-align: center">
-  <span style="font-size: 60%">
+<div class="image-footer">
+    <span>
 Imagen basada en <a href="https://flic.kr/p/4rvPED">You gotta fight for your right to... eat</a> de <a href="https://www.flickr.com/photos/r2wk/">ldjpg</a>, <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/">CC BY NC ND 2.0</a>
   </span>
 </div>
@@ -220,4 +220,3 @@ el siguiente asalto.
 [exercise-05-round-07.exs]: https://github.com/rchavarria/learning-elixir/blob/master/code/round-07/exercise-05-round-07.exs
 [exercise-06-round-07.exs]: https://github.com/rchavarria/learning-elixir/blob/master/code/round-07/exercise-06-round-07.exs
 [exercise-07-round-07.exs]: https://github.com/rchavarria/learning-elixir/blob/master/code/round-07/exercise-07-round-07.exs
-

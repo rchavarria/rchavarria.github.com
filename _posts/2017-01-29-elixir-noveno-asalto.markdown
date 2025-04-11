@@ -24,8 +24,8 @@ Todo esto, siguiendo el [método de aprendizaje] con el que comenzé la serie:
 
 ![Ninth round]({{ site.baseurl }}/assets/images/2017/us-air-force.jpg)
 
-<div style="text-align: center">
-  <span style="font-size: 60%">
+<div class="image-footer">
+    <span>
 Imagen basada en <a href="https://flic.kr/p/R7mJ4M">160324-F-XK483-042</a> de <a href="https://www.flickr.com/photos/usairforce/">US Air Force</a>, <a href="https://creativecommons.org/licenses/by-nc/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by-nc/2.0/">CC BY NC 2.0</a>
   </span>
 </div>
@@ -170,4 +170,3 @@ el siguiente asalto.
 [Ejercicio 01]: https://github.com/rchavarria/learning-elixir/tree/master/code/round-09/stack
 [Ejercicio 02]: https://github.com/rchavarria/learning-elixir/tree/master/code/round-09/stack2
 [Ejercicio 03]: https://github.com/rchavarria/learning-elixir/tree/master/code/round-09/stack3
-

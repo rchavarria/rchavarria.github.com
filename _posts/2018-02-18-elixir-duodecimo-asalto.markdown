@@ -25,8 +25,8 @@ sea muchísimo más fácil.
 
 ![Twelveth]({{ site.baseurl }}/assets/images/2018/down-the-board.jpg)
 
-<div style="text-align: center">
-  <span style="font-size: 60%">
+<div class="image-footer">
+    <span>
 Imagen basada en <a href="https://flic.kr/p/majY5a">Down the board</a> de <a href="https://www.flickr.com/photos/erinthomaswilson/">Erin</a>, <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/">algunos derechos reservados</a>, licencia: <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/">CC BY-NC-ND 2.0</a>
   </span>
 </div>
