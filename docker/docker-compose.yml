@@ -4,7 +4,7 @@ services:
     image: jekyll/jekyll:4.4.1
     container_name: blog
     ports:
-      - 4000:4000
+      - "4000:4000"
     volumes:
       - ..:/srv/jekyll      # share local source files with the container
       - ../vendor/bundle:/usr/local/bundle     # cache ruby gems
