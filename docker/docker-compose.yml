@@ -1,7 +1,7 @@
 services:
   # a container to serve the blog
   blog:
-    image: jekyll/jekyll:4.2.2
+    image: jekyll/jekyll:4.4.1
     container_name: blog
     ports:
       - 4000:4000
